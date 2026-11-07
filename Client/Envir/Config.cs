@@ -66,6 +66,8 @@ namespace Client.Envir
         public static bool RightClickDeTarget { get; set; } = true;
         public static bool MonsterBoxExpanded { get; set; } = true;
         public static bool MonsterBoxVisible { get; set; } = true;
+        public static bool MonsterBoxShowHealth { get; set; } = false;
+        public static bool MonsterBoxShowPercentage { get; set; } = false;
         public static bool QuestTrackerVisible { get; set; } = true;
         public static bool LogChat { get; set; } = true;
         public static int RankingClass { get; set; } = (int)RequiredClass.All;

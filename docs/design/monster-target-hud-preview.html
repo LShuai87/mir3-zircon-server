@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>顶部怪物血条 · 暗黑风格设计草案</title>
+<style>
+:root{color-scheme:dark;--ink:#e7ddca;--muted:#a69b89;--gold:#d7bc80;--blood:#8b0000}
+*{box-sizing:border-box}body{margin:0;background:#111210;color:var(--ink);font-family:"Microsoft YaHei",sans-serif}main{max-width:1080px;margin:auto;padding:40px 32px 32px}header{display:flex;justify-content:space-between;gap:20px;align-items:flex-end;margin-bottom:26px}.eyebrow{font-size:11px;letter-spacing:3px;color:#b69b6c;margin:0 0 12px}h1{font-family:"SimSun",serif;font-weight:500;letter-spacing:3px;font-size:28px;margin:0}header small{font-size:12px;color:var(--muted);white-space:nowrap}.stage{position:relative;aspect-ratio:16/8.5;overflow:hidden;border:1px solid #3f3a30;background:#20251f}.world{width:100%;height:100%;display:block}.stage:after{content:"";position:absolute;inset:0;pointer-events:none;box-shadow:inset 0 0 100px 35px #070b07a6}.hud{position:absolute;z-index:2;top:24px;left:50%;transform:translateX(-50%);width:min(360px,calc(100% - 48px));pointer-events:none;text-align:center}.bar{position:relative;height:28px;background:#17100f;border:1px solid #77624b;box-shadow:0 2px 6px #0009,inset 0 0 0 1px #080605}.fill{position:absolute;left:1px;top:1px;bottom:1px;width:72%;background:#8b0000;box-shadow:inset 0 1px #a52a22}.bar:before,.bar:after{content:"";position:absolute;z-index:3;top:8px;width:9px;height:9px;background:#43382b;border:1px solid #8a7556;transform:rotate(45deg);box-shadow:0 1px 3px #000}.bar:before{left:-6px}.bar:after{right:-6px}.name{position:absolute;inset:0;display:block;font:16px/26px "SimSun",serif;font-weight:700;letter-spacing:2px;color:#e7ddca;text-shadow:1px 1px #000,-1px -1px #000,1px -1px #000,-1px 1px #000,0 2px 3px #000;padding:0 18px;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}.hud.boss .name{color:#d7bc80}.rank{font:12px/18px "SimSun",serif;margin-top:3px;letter-spacing:4px;color:#d7bc80;text-shadow:0 1px 3px #000}.scene-note{position:absolute;z-index:2;bottom:18px;left:22px;font-size:11px;letter-spacing:2px;color:#b6b49b}.corner{position:absolute;bottom:18px;right:20px;font-size:11px;color:#969581;z-index:2}.foot{display:flex;justify-content:space-between;gap:12px;padding-top:13px;font-size:12px;color:var(--muted)}.controls{display:flex;gap:24px;flex-wrap:wrap;align-items:end;margin-top:28px;padding:22px 0;border-top:1px solid #35362f;border-bottom:1px solid #35362f}label{display:flex;flex-direction:column;gap:10px;font-size:12px;color:#b5ad9d}select,button{height:36px;background:#1c1e19;border:1px solid #55503e;color:var(--ink);padding:0 12px;font:13px "Microsoft YaHei",sans-serif;border-radius:0}select:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid #d7bc80;outline-offset:4px}select{min-width:190px}button{cursor:pointer}button:hover{background:#333126}input[type=range]{width:200px;accent-color:#a14232;margin:6px 0;height:24px}.range-line{display:flex;align-items:center;gap:14px}output{min-width:35px;color:var(--ink);font-variant-numeric:tabular-nums}.toggle{margin-left:auto}.explanation{display:grid;grid-template-columns:1fr 1fr 1fr;gap:28px;margin-top:24px}.explanation b{font-size:13px;font-weight:500;color:#cabb9c}.explanation p{font-size:12px;line-height:1.8;color:var(--muted);margin:7px 0 0}a{color:#d7bc80}footer{margin-top:26px;font-size:11px;color:#898779;line-height:1.8}[hidden]{display:none!important}@media(max-width:640px){main{padding:24px 16px}header{align-items:start;flex-direction:column;gap:12px}h1{font-size:22px}.stage{aspect-ratio:4/3}.world{width:150%;max-width:none;position:absolute;left:-25%}.controls{gap:18px}.toggle{margin-left:0}.explanation{grid-template-columns:1fr;gap:14px}.foot{flex-direction:column}.name{letter-spacing:1px}.corner{display:none}}@media(max-width:360px){.bar:before,.bar:after{display:none}.name{font-size:14px}}
+</style>
+</head>
+<body>
+<main>
+<header><div><p class="eyebrow">ZIRCON / COMBAT INTERFACE</p><h1>把注意力留给战斗</h1></div><small>顶部怪物血条 · 设计草案 01</small></header>
+<section class="stage" aria-label="游戏场景中的目标血条设计示意">
+<svg class="world" viewBox="0 0 1000 530" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+<defs>
+<pattern id="soil" width="70" height="50" patternUnits="userSpaceOnUse"><rect width="70" height="50" fill="#242a22"/><path d="M4 12l12-4m28 28l13 3M18 45l9-3M56 12l7-2" stroke="#343a2a" stroke-width="2"/><path d="M30 18l3 2M5 38l5 2" stroke="#151e16" stroke-width="3"/></pattern>
+<pattern id="stone" width="110" height="70" patternUnits="userSpaceOnUse" patternTransform="rotate(-20)"><rect width="110" height="70" fill="#45473a"/><path d="M0 0H110V70H0zM55 0V35M0 35H110M28 35V70M84 35V70" stroke="#252d23" stroke-width="3"/></pattern>
+<radialGradient id="light"><stop stop-color="#9d9b6a" stop-opacity=".12"/><stop offset="1" stop-color="#101b10" stop-opacity="0"/></radialGradient>
+<g id="tree"><ellipse cy="18" rx="35" ry="17" fill="#0e170e" opacity=".6"/><path d="M-4 20L0-61 6 19" fill="#403b2a"/><path d="M0-115L-29-64-14-66-40-23-13-29-45 8 0-4 42 10 17-26 35-20 15-65 28-59z" fill="#13241b"/><path d="M0-110L-21-63-10-62-27-28-6-32-27-2 0-11" fill="#2a3b29"/></g>
+<g id="rock"><path d="M-25 8L-30-9-12-27 13-25 30-8 25 9 0 16z" fill="#343b31" stroke="#1a241c" stroke-width="2"/><path d="M-30-9L-8-7 13-25M-8-7L0 16" fill="none" stroke="#515342" stroke-width="2"/></g>
+<g id="skeleton"><ellipse cy="22" rx="17" ry="6" fill="#050a07" opacity=".65"/><path d="M-5 8l-7 16M4 8l8 16M-6-11l-11 15M6-11l12 5" fill="none" stroke="#aea58b" stroke-width="4"/><path d="M-8-15L8-15 6 10-5 10z" fill="#655e49"/><path d="M-6-9h12M-6-3h12M0-14V9" stroke="#b0a78d" stroke-width="2"/><circle cy="-23" r="8" fill="#c2b99e"/><path d="M-5-24h3m4 0h3" stroke="#27271d" stroke-width="3"/><path d="M18-13v29" stroke="#a9a694" stroke-width="3"/></g>
+</defs>
+<rect width="1000" height="530" fill="url(#soil)"/><path d="M390-30L572-30 680 560 445 560z" fill="url(#stone)" opacity=".66"/><path d="M160 0L200 530M850 0L760 530" stroke="#34432d" stroke-width="16" opacity=".25"/>
+<ellipse cx="520" cy="290" rx="340" ry="260" fill="url(#light)"/>
+<use href="#tree" x="130" y="175"/><use href="#tree" x="205" y="138"/><use href="#tree" x="80" y="275"/><use href="#tree" x="839" y="195"/><use href="#tree" x="906" y="271"/><use href="#tree" x="820" y="397"/><use href="#tree" x="164" y="480"/>
+<use href="#rock" x="299" y="210"/><use href="#rock" x="735" y="310"/><use href="#rock" x="260" y="410"/><use href="#rock" x="705" y="143"/>
+<g opacity=".9"><use href="#skeleton" x="547" y="253"/><use href="#skeleton" x="674" y="246" opacity=".5"/><use href="#skeleton" x="611" y="175" opacity=".6"/></g>
+<ellipse cx="476" cy="364" rx="21" ry="8" fill="#080e0a"/><path d="M464 330L486 330 489 359 461 359z" fill="#656b61"/><path d="M466 359l-5 17M482 359l8 17" stroke="#343d3b" stroke-width="7"/><circle cx="475" cy="321" r="9" fill="#ac9b7d"/><path d="M487 338l20-19" stroke="#878b81" stroke-width="5"/><path d="M505 321l14-22" stroke="#d3d0b2" stroke-width="3"/><path d="M462 337l-9 15" stroke="#676b60" stroke-width="7"/>
+<ellipse cx="548" cy="276" rx="21" ry="8" fill="none" stroke="#a36d4f" opacity=".65"/>
+</svg>
+<div id="target-hud" class="hud"><div class="bar"><div id="health-fill" class="fill"></div><div id="monster-name" class="name">骷髅战士</div></div><div id="boss-rank" class="rank" hidden>首领</div></div>
+<div class="scene-note">场景为设计示意</div><div class="corner">顶部居中 / 360 × 28</div>
+</section>
+<div class="foot"><span>名称固定居中 · 暗红色血量 · 全区域鼠标穿透</span><span id="state" role="status" aria-live="polite">普通怪物 · 血量 72%</span></div>
+<div class="controls">
+<label>目标类型<select id="preset"><option value="normal">普通怪物 · 骷髅战士</option><option value="boss">首领 · 赤月恶魔</option><option value="long">超长名称 · 边界示意</option></select></label>
+<label>模拟血量<div class="range-line"><input id="health" type="range" min="0" max="100" value="72" aria-label="模拟怪物剩余血量"><output id="health-output" for="health">72%</output></div></label>
+<button id="toggle" class="toggle" type="button" aria-pressed="false">模拟目标离场</button>
+</div>
+<div class="explanation"><div><b>只保留战斗所需</b><p>名称叠在血条上，首领补一行小字。等级、攻防、抗性与展开按钮从此处移除。</p></div><div><b>延续目标操作习惯</b><p>指向怪物时临时展示；移开后回到已点击目标。没有有效目标时自动隐藏。</p></div><div><b>克制的暗色金属</b><p>细铜边、方角、微弱高光。名称不随剩余血量移动，不加入发光、抖动或血量拖尾。</p></div></div>
+<footer>这是独立设计预览，名称、血量与场景均为示意数据。尚未接入客户端或网络数据；实际字体、比例与鼠标穿透需在游戏内验收。<br><a href="monster-target-hud-design.md">查看完整设计与交互规则 →</a></footer>
+</main>
+<script>
+const presets={normal:{name:'骷髅战士',boss:false,label:'普通怪物'},boss:{name:'赤月恶魔',boss:true,label:'首领'},long:{name:'被远古诅咒唤醒的黑暗深渊骷髅军团守卫队长',boss:false,label:'超长名称'}};
+const hud=document.getElementById('target-hud'),fill=document.getElementById('health-fill'),nameLabel=document.getElementById('monster-name'),rank=document.getElementById('boss-rank'),preset=document.getElementById('preset'),health=document.getElementById('health'),healthOutput=document.getElementById('health-output'),toggle=document.getElementById('toggle'),state=document.getElementById('state');let absent=false;
+function update(){const selected=presets[preset.value],value=Number(health.value);hud.classList.toggle('boss',selected.boss);nameLabel.textContent=selected.name;rank.hidden=!selected.boss;fill.style.width=`calc((100% - 2px) * ${value/100})`;hud.hidden=absent||value===0;healthOutput.value=`${value}%`;toggle.textContent=absent?'恢复目标展示':'模拟目标离场';toggle.setAttribute('aria-pressed',String(absent));state.textContent=absent?'目标已离场 · 隐藏':value===0?'目标已死亡 · 隐藏':`${selected.label} · 血量 ${value}%`;}
+preset.addEventListener('change',update);health.addEventListener('input',update);toggle.addEventListener('click',()=>{absent=!absent;update()});update();
+</script>
+</body>
+</html>

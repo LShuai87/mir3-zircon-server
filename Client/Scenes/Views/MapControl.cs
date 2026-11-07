@@ -467,6 +467,7 @@ namespace Client.Scenes.Views
         {
 
             base.OnMouseDown(e);
+            GameScene.Game.MonsterBox.Resume();
 
             if (GameScene.Game.Observer) return;
 

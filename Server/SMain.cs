@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
+using System.IO;
 using System.Net;
 using System.Runtime.InteropServices;
 using System.Security;
@@ -213,6 +214,16 @@ namespace Server
 
         private void StartServerButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            string systemDatabasePath = Path.GetFullPath(@".\Database\System.db");
+            if (!File.Exists(systemDatabasePath))
+            {
+                string message = "System database not found: " + systemDatabasePath +
+                                 Environment.NewLine + "Copy a populated System.db into this directory before starting the server.";
+                SEnvir.Log(message);
+                XtraMessageBox.Show(this, message, "Missing System Database", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             InterfaceTimer.Enabled = true;
             SEnvir.StartServer();
             UpdateInterface();

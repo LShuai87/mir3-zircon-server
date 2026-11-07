@@ -239,23 +239,17 @@ namespace Client.Scenes
         public List<String> HightLightItemList = new List<String>();
         public void SaveAutoPickUpItemList()
         {
-            FileStream fs = new FileStream(Config.PickUpListFile, FileMode.Truncate, FileAccess.ReadWrite);
-            fs.Close();
-            File.AppendAllLines(Config.PickUpListFile, GameScene.Game.AutoPickUpItemList);
+            ItemListStorage.Save(Config.PickUpListFile, AutoPickUpItemList);
             // 传到服务端
             CEnvir.Enqueue(new C.AutoPickUpItemListChanged { AutoPickUpItemList = GameScene.Game.AutoPickUpItemList });
         }
         public void SaveDisplayNameItemList()
         {
-            FileStream fs = new FileStream(Config.DisplayNameItemListFile, FileMode.Truncate, FileAccess.ReadWrite);
-            fs.Close();
-            File.AppendAllLines(Config.DisplayNameItemListFile, GameScene.Game.DisplayNameItemList);
+            ItemListStorage.Save(Config.DisplayNameItemListFile, DisplayNameItemList);
         }
         public void SaveHightLightItemList()
         {
-            FileStream fs = new FileStream(Config.HightLightItemListFile, FileMode.Truncate, FileAccess.ReadWrite);
-            fs.Close();
-            File.AppendAllLines(Config.HightLightItemListFile, GameScene.Game.HightLightItemList);
+            ItemListStorage.Save(Config.HightLightItemListFile, HightLightItemList);
         }
         #endregion
 
@@ -678,19 +672,10 @@ namespace Client.Scenes
                 window.LoadSettings();
 
             // feature 拾取过滤 在创建GameScene的时候第一次加载
-            foreach (string str in System.IO.File.ReadAllLines(Config.PickUpListFile, Encoding.UTF8))
-            {
-                AutoPickUpItemList.Add(str);
-            }
+            AutoPickUpItemList.AddRange(ItemListStorage.Load(Config.PickUpListFile));
             SaveAutoPickUpItemList();
-            foreach (string str in System.IO.File.ReadAllLines(Config.DisplayNameItemListFile, Encoding.UTF8))
-            {
-                DisplayNameItemList.Add(str);
-            }
-            foreach (string str in System.IO.File.ReadAllLines(Config.HightLightItemListFile, Encoding.UTF8))
-            {
-                HightLightItemList.Add(str);
-            }
+            DisplayNameItemList.AddRange(ItemListStorage.Load(Config.DisplayNameItemListFile));
+            HightLightItemList.AddRange(ItemListStorage.Load(Config.HightLightItemListFile));
 
         }
 
@@ -761,7 +746,7 @@ namespace Client.Scenes
 
             BlockBox.Location = new Point((Size.Width - BlockBox.Size.Width) / 2, (Size.Height - BlockBox.Size.Height) / 2);
 
-            MonsterBox.Location = new Point((Size.Width - MonsterBox.Size.Width) / 2, 50);
+            MonsterBox.LayoutForViewport(Size.Width);
 
             EditCharacterBox.Location = new Point((Size.Width - EditCharacterBox.Size.Width) / 2, (Size.Height - EditCharacterBox.Size.Height) / 2);
 
@@ -1165,20 +1150,27 @@ namespace Client.Scenes
             }
 
 
-            MonsterObject mob = MouseObject as MonsterObject;
-
-            if (mob != null && mob.CompanionObject == null)
-                MonsterBox.Monster = mob;
+            if (DXTextBox.ActiveTextBox != null || ConfigBox.IsVisible || ConfigBox.KeyBindWindow.IsVisible ||
+                Controls.Any(control => control.IsVisible && control.Modal))
+                MonsterBox.ReleaseDetails();
+            if (CEnvir.Connection == null || CEnvir.Connection.Disconnecting)
+                MonsterBox.Clear();
             else
-            {
-                mob = FocusObject as MonsterObject;
-                if (mob != null && mob.CompanionObject == null && !FocusObject.Dead)
-                    MonsterBox.Monster = mob;
-            }
+                MonsterBox.UpdateTarget(MouseObject, FocusObject);
+        }
+
+        public override void OnKeyUp(KeyEventArgs e)
+        {
+            // Release before child dispatch: a modal/text box may consume this event.
+            MonsterBox.UpdateDetailKey(e.KeyData, true);
+            base.OnKeyUp(e);
         }
 
         public override void OnKeyDown(KeyEventArgs e)
         {
+            MonsterBox.UpdateDetailKey(e.KeyData, false);
+            if (e.KeyCode == Keys.Escape)
+                MonsterBox.Suppress(MouseObject, FocusObject);
             base.OnKeyDown(e);
 
             if (e.Handled) return;
@@ -1186,7 +1178,6 @@ namespace Client.Scenes
             switch (e.KeyCode)
             {
                 case Keys.Escape:
-                    MonsterBox.Monster = null;
                     e.Handled = true;
                     break;
             }
@@ -1195,6 +1186,10 @@ namespace Client.Scenes
             {
                 switch (action)
                 {
+                    case KeyBindAction.MonsterHealthDetails:
+                        if (DXTextBox.ActiveTextBox == null && !ConfigBox.IsVisible && !ConfigBox.KeyBindWindow.IsVisible)
+                            MonsterBox.BeginDetails(e.KeyData);
+                        break;
                     case KeyBindAction.ConfigWindow:
                         ConfigBox.Visible = !ConfigBox.Visible;
                         break;

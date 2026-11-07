@@ -46,6 +46,7 @@ namespace Client.Envir
         public override void Disconnect()
         {
             base.Disconnect();
+            GameScene.Game?.MonsterBox?.Clear();
 
             if (CEnvir.Connection == this)
             {
@@ -72,6 +73,7 @@ namespace Client.Envir
         public void Process(G.Disconnect p)
         {
             Disconnecting = true;
+            GameScene.Game?.MonsterBox?.Clear();
 
             LoginScene scene = DXControl.ActiveScene as LoginScene;
 
@@ -776,6 +778,7 @@ namespace Client.Envir
         }
         public void Process(S.MapChanged p)
         {
+            GameScene.Game.MonsterBox.Suppress(GameScene.Game.MouseObject, GameScene.Game.FocusObject);
             GameScene.Game.MapControl.MapInfo = Globals.MapInfoList.Binding.FirstOrDefault(x => x.Index == p.MapIndex);
 
             MapObject.User.NameChanged();
@@ -1182,6 +1185,8 @@ namespace Client.Envir
                 if (ob.ObjectID != p.ObjectID) continue;
 
                 ob.Dead = true;
+                if (GameScene.Game.MonsterBox.Monster == ob)
+                    GameScene.Game.MonsterBox.RefreshHealth();
                 ob.ActionQueue.Add(new ObjectAction(MirAction.Die, p.Direction, p.Location));
 
                 if (ob == MapObject.User)
@@ -3877,6 +3882,8 @@ namespace Client.Envir
             if (!GameScene.Game.DataDictionary.TryGetValue(p.ObjectID, out data)) return;
             
             GameScene.Game.DataDictionary.Remove(p.ObjectID);
+            if (GameScene.Game.MonsterBox.Monster?.ObjectID == p.ObjectID)
+                GameScene.Game.MonsterBox.RefreshHealth();
 
             GameScene.Game.BigMapBox.Remove(data);
             GameScene.Game.MiniMapBox.Remove(data);
@@ -3902,15 +3909,14 @@ namespace Client.Envir
             data.Health = p.Health;
             data.Mana = p.Mana;
 
-            if (GameScene.Game.MonsterBox.Monster != null && GameScene.Game.MonsterBox.Monster.ObjectID == p.ObjectID)
-                GameScene.Game.MonsterBox.RefreshHealth();
-
             if (data.Dead != p.Dead)
             {
                 data.Dead = p.Dead;
                 GameScene.Game.BigMapBox.Update(data);
                 GameScene.Game.MiniMapBox.Update(data);
             }
+            if (GameScene.Game.MonsterBox.Monster != null && GameScene.Game.MonsterBox.Monster.ObjectID == p.ObjectID)
+                GameScene.Game.MonsterBox.RefreshHealth();
         }
         public void Process(S.DataObjectMaxHealthMana p)
         {

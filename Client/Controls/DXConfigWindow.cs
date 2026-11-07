@@ -31,6 +31,7 @@ namespace Client.Controls
         //Game 
         public DXTab GameTab;
         private DXCheckBox ItemNameCheckBox, MonsterNameCheckBox, PlayerNameCheckBox, UserHealthCheckBox, MonsterHealthCheckBox, DamageNumbersCheckBox, EscapeCloseAllCheckBox, ShiftOpenChatCheckBox, RightClickDeTargetCheckBox, MonsterBoxVisibleCheckBox, LogChatCheckBox, DrawEffectsCheckBox;
+        private DXCheckBox MonsterBoxHealthCheckBox, MonsterBoxPercentageCheckBox;
         public DXButton KeyBindButton;
 
         //Network
@@ -82,6 +83,8 @@ namespace Client.Controls
             ShiftOpenChatCheckBox.Checked = Config.ShiftOpenChat;
             RightClickDeTargetCheckBox.Checked = Config.RightClickDeTarget;
             MonsterBoxVisibleCheckBox.Checked = Config.MonsterBoxVisible;
+            MonsterBoxHealthCheckBox.Checked = Config.MonsterBoxShowHealth;
+            MonsterBoxPercentageCheckBox.Checked = Config.MonsterBoxShowPercentage;
             LogChatCheckBox.Checked = Config.LogChat;
             DrawEffectsCheckBox.Checked = Config.DrawEffects;
 
@@ -115,7 +118,7 @@ namespace Client.Controls
         {
             ActiveConfig = this;
 
-            Size = new Size(300, 305);
+            Size = new Size(300, 330);
             TitleLabel.Text = "系统设置";
             HasFooter = true;
 
@@ -432,10 +435,25 @@ namespace Client.Controls
             };
             DrawEffectsCheckBox.Location = new Point(270 - DrawEffectsCheckBox.Size.Width, 135);
 
+            MonsterBoxHealthCheckBox = new DXCheckBox
+            {
+                Parent = GameTab,
+                Label = { Text = "顶部血量数值:" },
+                Hint = "显示当前血量 / 最大血量；按住血量详情快捷键可临时显示。"
+            };
+            MonsterBoxHealthCheckBox.Location = new Point(120 - MonsterBoxHealthCheckBox.Size.Width, 160);
+            MonsterBoxPercentageCheckBox = new DXCheckBox
+            {
+                Parent = GameTab,
+                Label = { Text = "顶部血量百分比:" },
+                Hint = "显示剩余血量百分比；快捷键可在按键绑定中修改，默认 H。"
+            };
+            MonsterBoxPercentageCheckBox.Location = new Point(270 - MonsterBoxPercentageCheckBox.Size.Width, 160);
+
             KeyBindButton = new DXButton
             {
                 Parent = GameTab,
-                Location = new Point(190, 160),
+                Location = new Point(190, 190),
                 Size = new Size(80, SmallButtonHeight),
                 ButtonType = ButtonType.SmallButton,
                 Label = { Text = "按键绑定" }
@@ -840,6 +858,8 @@ namespace Client.Controls
             Config.ShiftOpenChat = ShiftOpenChatCheckBox.Checked;
             Config.RightClickDeTarget = RightClickDeTargetCheckBox.Checked;
             Config.MonsterBoxVisible = MonsterBoxVisibleCheckBox.Checked;
+            Config.MonsterBoxShowHealth = MonsterBoxHealthCheckBox.Checked;
+            Config.MonsterBoxShowPercentage = MonsterBoxPercentageCheckBox.Checked;
             Config.LogChat = LogChatCheckBox.Checked;
             Config.DrawEffects = DrawEffectsCheckBox.Checked;
 
@@ -1183,6 +1203,11 @@ namespace Client.Controls
                     RightClickDeTargetCheckBox = null;
                 }
                 
+                MonsterBoxHealthCheckBox?.Dispose();
+                MonsterBoxHealthCheckBox = null;
+                MonsterBoxPercentageCheckBox?.Dispose();
+                MonsterBoxPercentageCheckBox = null;
+
                 if (MonsterBoxVisibleCheckBox != null)
                 {
                     if (!MonsterBoxVisibleCheckBox.IsDisposed)

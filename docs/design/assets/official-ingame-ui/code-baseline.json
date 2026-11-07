@@ -1,0 +1,27 @@
+{
+  "checkedAtLocalDate": "2026-11-07",
+  "worktree": "E:\\workspace\\mir3-zircon-server",
+  "head": "6691aa65902c229dad9cdcfed02d876e730ec0c4",
+  "includesUncommittedWorktreeContents": true,
+  "note": "用于识别方案引用的工作区版本，不证明这些文件均属于本次任务；实施前重新核对差异。",
+  "files": {
+    "Library/Enum.cs": "c08f31eb7cb590eab4a0622305461535f7b2f0d0faf8dfc8d039378f711d70cb",
+    "Library/Functions.cs": "1ca6188f7d5e3cd47af31d220fa1fcb7ab0bc5a565b6425f9070a6c46dceb3b8",
+    "Library/Globals.cs": "41411461b19989c6a51fb04d30b4b5fa2ea20d9c66ad09a97d244815cae611a8",
+    "Client/Scenes/Views/CharacterDialog.cs": "5ec5b69f2c644eaf3a53c9d6615df7e39144c07f606df17a6f33f2e58b0f2894",
+    "Client/Scenes/Views/NPCDialog.cs": "ad706bbd920d091455cada87917bb011082a61e1548b2b88d37eef3d52a7872c",
+    "Client/Controls/DXWindow.cs": "9a23fd4ca10c94aa1495d22d9c0316a7050174fb42649e901fa9059784c768e6",
+    "Client/Scenes/GameScene.cs": "2a663876bfe103bd55e52afaf74f370b87f2c0ece99e3505b61dfd82dcc56ee4",
+    "Client/Controls/DXItemCell.cs": "f43425809de39640b391f4dbf299d57837aa1330a87a2f43afb84d96ab880b55",
+    "Client/Controls/DXItemGrid.cs": "2b013cc45d0290dcf55faeb12beea8efaa9ba714d7df64bfa8465d8d9fc73ab4",
+    "Client/Scenes/Views/InventoryDialog.cs": "295a994be1178575ccd12b09739e679a0ee5c2aaca26772a82d845162176b81b",
+    "Client/Scenes/Views/BeltDialog.cs": "3382474612ce2a72603e0762627f6ab05b91fb54cce3691a86b2819163ffb5fb",
+    "Client/Scenes/Views/StorageDialog.cs": "ef6cdf86e06e62dcd270a3f3cd89c8313a6fd11a11f8d9745f7151ca65cf8f99",
+    "Client/Models/MirLibrary.cs": "e7efe67be49704986460dd06913192c2c0efccb7f64de0aaf4b1252f84665d00",
+    "Client/Controls/DXImageControl.cs": "0f2c08a95cdad1312ff2a3876dd66fb8cf0090c94408d8df6a10295ad6949726",
+    "Client/Controls/DXButton.cs": "a58123680ffbe1b4f7211c24b363ec71019f67f005be26e7f51a877a00f26b85",
+    "ImageManager/WTLLibrary.cs": "4e799b42881c7abafaa28d237da5f424fed20559646be1eac763a2ba8d13ded7",
+    "ImageManager/Mir3Library.cs": "9b08f5c8344364db9275fb608086bf112404c72f16df4cd245e8a49ca4c61d67",
+    "build/Setup-ClientAssets.ps1": "ceb00dde1a78bd24c17d63c6b54b3799e959becc449cdf59541fe7d92bb90e4c"
+  }
+}

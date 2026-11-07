@@ -327,6 +327,8 @@ namespace Client.UserModels
         ToggleItemLock,
 
         [Description("财富界面")]
-        FortuneWindow
+        FortuneWindow,
+        [Description("按住显示怪物血量详情")]
+        MonsterHealthDetails
     }
 }

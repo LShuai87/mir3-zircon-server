@@ -1,701 +1,186 @@
-﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
 using Client.Controls;
 using Client.Envir;
 using Client.Models;
-using Client.UserModels;
 using Library;
 
-//Cleaned
 namespace Client.Scenes.Views
 {
-    public sealed class MonsterDialog : DXWindow
+    // A passive overlay, deliberately outside DXWindow's saved positions and Escape handlers.
+    public sealed class MonsterDialog : DXControl
     {
-        #region Properties
-
-        #region Monster
+        private readonly DXControl bar, slot, fill, highlight;
+        private readonly DXLabel nameLabel, detailLabel;
+        private readonly MonsterHudSelection<MapObject> selection = new MonsterHudSelection<MapObject>();
+        private readonly MonsterHudDetailHold detailHold = new MonsterHudDetailHold();
+        private readonly System.Predicate<MapObject> validTarget;
+        private MonsterObject monster;
+        private int lastHealth = -1, lastMaxHealth = -1;
+        private bool lastBoss, lastShowHealth, lastShowPercentage;
+        private string lastName;
 
         public MonsterObject Monster
         {
-            get => _Monster;
+            get => monster;
             set
             {
-                if (_Monster == value) return;
-
-                MonsterObject oldValue = _Monster;
-                _Monster = value;
-
-                OnMonsterChanged(oldValue, value);
+                if (monster != value)
+                {
+                    monster = value;
+                    lastHealth = -1;
+                }
+                RefreshHealth();
             }
         }
-        private MonsterObject _Monster;
-        public event EventHandler<EventArgs> MonsterChanged;
-        public void OnMonsterChanged(MonsterObject oValue, MonsterObject nValue)
-        {
-            Visible = Monster != null && Config.MonsterBoxVisible;
-
-            if (Monster == null) return;
-
-            NameLabel.Text = Monster.MonsterInfo.MonsterName;
-            LevelLabel.Text = Monster.MonsterInfo.Level.ToString();
-
-            RefreshStats();
-
-            MonsterChanged?.Invoke(this, EventArgs.Empty);
-        }
-
-        #endregion
-
-        #region Expanded
-
-        public bool Expanded
-        {
-            get => _Expanded;
-            set
-            {
-                if (_Expanded == value) return;
-
-                bool oldValue = _Expanded;
-                _Expanded = value;
-
-                OnExpandedChanged(oldValue, value);
-            }
-        }
-        private bool _Expanded;
-        public event EventHandler<EventArgs> ExpandedChanged;
-        public void OnExpandedChanged(bool oValue, bool nValue)
-        {
-            ExpandButton.Index = Expanded ? 44 : 46;
-
-            Size = Expanded ? new Size(Size.Width, 150) : new Size(Size.Width, 54);
-            Config.MonsterBoxExpanded = Expanded;
-
-            ExpandedChanged?.Invoke(this, EventArgs.Empty);
-        }
-
-        #endregion
-        
-        public DXImageControl AttackIcon;
-
-        public DXLabel LevelLabel, NameLabel, HealthLabel, ACLabel, MRLabel, DCLabel;
-        public DXLabel FireResistLabel, IceResistLabel, LightningResistLabel, WindResistLabel, HolyResistLabel, DarkResistLabel, PhantomResistLabel, PhysicalResistLabel;
-        public DXButton ExpandButton;
-
-
-        public override WindowType Type => WindowType.MonsterBox;
-        public override bool CustomSize => false;
-        public override bool AutomaticVisiblity => false;
-        #endregion
 
         public MonsterDialog()
         {
-            HasTitle = false;
-            HasFooter = false;
-            HasTopBorder = false;
-            TitleLabel.Visible = false;
-            CloseButton.Visible = false;
-            Opacity = 0.3F;
-
-            Size = new Size(186, 54);
-            Location = new Point(250, 50);
-            DXControl panel = new DXControl
-            {
-                Size = new Size(31, 20),
-                Location = new Point(5, 5),
-                Border = true,
-                BorderColour = Color.FromArgb(198, 166, 99),
-                BackColour = Color.Black,
-                Parent = this,
-                Opacity = 0.6F,
-                DrawTexture = true,
-                IsControl = false
-            };
-
-            LevelLabel = new DXLabel
-            {
-                AutoSize = false,
-                Size = new Size(30,18),
-                Location = new Point(0,0),
-                Border = true,
-                Parent = panel,
-                ForeColour = Color.White,
-                DrawFormat = TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter,
-                IsControl = false
-            };
-
-            panel = new DXControl
-            {
-                Size = new Size(140, 20),
-                Location = new Point(41, 5),
-                Border = true,
-                BorderColour = Color.FromArgb(198, 166, 99),
-                BackColour = Color.Black,
-                Parent = this,
-                Opacity = 0.6F,
-                DrawTexture = true,
-                IsControl = false
-            };
-
-            NameLabel = new DXLabel
-            {
-                AutoSize = false,
-                Size = new Size(139, 18),
-                Location = new Point(0, 0),
-                Border = true,
-                Parent = panel,
-                ForeColour = Color.White,
-                DrawFormat = TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter,
-                IsControl = false
-            };
-
-            panel = new DXControl
-            {
-                Size = new Size(121, 16),
-                Location = new Point(41, 32),
-                Border = true,
-                BorderColour = Color.FromArgb(198, 166, 99),
-                BackColour = Color.Black,
-                Parent = this,
-                Opacity = 0.6F,
-                DrawTexture = true,
-                IsControl = false
-            };
-
-            HealthLabel = new DXLabel
-            {
-                AutoSize = false,
-                Size = new Size(120, 18),
-                Location = new Point(41, 30),
-                Border = true,
-                Parent = this,
-                ForeColour = Color.White,
-                DrawFormat = TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter,
-                IsControl = false
-            };
-
-            panel.AfterDraw += (o, e) =>
-            {
-                if (Monster == null) return;
-
-                MirLibrary lib;
-
-                if (!CEnvir.LibraryList.TryGetValue(LibraryFile.GameInter, out lib)) return;
-
-
-                ClientObjectData data;
-                GameScene.Game.DataDictionary.TryGetValue(Monster.ObjectID, out data);
-
-                float percent = Monster.CompanionObject != null ? 1 : 0;
-                //if (MapObject.User.Stats[Stat.Health] == 0) return;
-
-                if (data != null && data.MaxHealth > 0)
-                    percent = Math.Min(1, Math.Max(0, data.Health / (float)data.MaxHealth));// MapObject.User.CurrentHP / (float)MapObject.User.Stats[Stat.Health]));
-
-                if (percent == 0) return;
-
-                MirImage image = lib.CreateImage(5430, ImageType.Image);
-
-                if (image == null) return;
-                
-                PresentTexture(image.Image, this, new Rectangle(panel.DisplayArea.X, panel.DisplayArea.Y + 2, (int)(image.Width * percent), image.Height), Color.White, panel);
-            };
-
-
-            DXControl panel2 = new DXControl
-            {
-                Size = new Size(31, 20),
-                Location = new Point(5, 30),
-                Border = true,
-                BorderColour = Color.FromArgb(198, 166, 99),
-                BackColour = Color.Black,
-                Parent = this,
-                Opacity = 0.6F,
-                DrawTexture = true,
-                PassThrough =  true,
-            };
-
-            AttackIcon = new DXImageControl
-            {
-                Parent = panel2,
-                LibraryFile = LibraryFile.GameInter,
-                Opacity = 0.7F,
-                Location =  new Point(5,0),
-                IsControl = false
-
-            };
-
-            ExpandButton = new DXButton
-            {
-                Parent = this,
-                Location = new Point(167, 34),
-                LibraryFile = LibraryFile.Interface,
-                Index = 46
-            };
-            ExpandButton.MouseClick += (o, e) => Expanded = !Expanded;
-
-            panel2 = new DXControl
-            {
-                Size = new Size(Size.Width - 10, 85),
-                Location = new Point(5, 60),
-                Border = true,
-                BorderColour = Color.FromArgb(198, 166, 99),
-                BackColour = Color.Black,
-                Parent = this,
-                Opacity = 0.6F,
-                DrawTexture = true,
-                PassThrough = true,
-            };
-
-            DXLabel label = new DXLabel
-            {
-                Parent = panel2,
-                IsControl = false,
-                Text = "防御:"
-            };
-            label.Location = new Point(36 - label.Size.Width, 5);
-
-            ACLabel = new DXLabel
-            {
-                Parent = panel2,
-                Location = new Point(36, 5),
-                ForeColour = Color.White,
-            };
-
-            label = new DXLabel
-            {
-                Parent = panel2,
-                IsControl = false,
-                Text = "魔防:"
-            };
-            label.Location = new Point(125 - label.Size.Width, 5);
-
-            MRLabel = new DXLabel
-            {
-                Parent = panel2,
-                Location = new Point(125, 5),
-                ForeColour = Color.White,
-            };
-            label = new DXLabel
-            {
-                Parent = panel2,
-                IsControl = false,
-                Text = "攻击:"
-            };
-            label.Location = new Point(36 - label.Size.Width, 22);
-
-            DCLabel = new DXLabel
-            {
-                Parent = panel2,
-                Location = new Point(36, 22),
-                ForeColour = Color.White,
-            };
-
-            DXImageControl icon = new DXImageControl
-            {
-                Parent = panel2,
-                LibraryFile = LibraryFile.GameInter,
-                Index = 1510,
-                Location = new Point(5, 39),
-                Hint = "火"
-            };
-
-            FireResistLabel = new DXLabel
-            {
-                Parent = panel2,
-                Location = new Point(icon.Location.X + icon.Size.Width, 41),
-                Tag = icon,
-            };
-
-            icon = new DXImageControl
-            {
-                Parent = panel2,
-                LibraryFile = LibraryFile.GameInter,
-                Index = 1511,
-                Location = new Point(icon.Location.X + 43, 39),
-                Hint = "冰"
-            };
-
-            IceResistLabel = new DXLabel
-            {
-                Parent = panel2,
-                Location = new Point(icon.Location.X + icon.Size.Width, 41),
-                Tag = icon,
-            };
-
-            icon = new DXImageControl
-            {
-                Parent = panel2,
-                LibraryFile = LibraryFile.GameInter,
-                Index = 1512,
-                Location = new Point(icon.Location.X + 43, 39),
-                Hint = "电"
-            };
-
-            LightningResistLabel = new DXLabel
-            {
-                Parent = panel2,
-                Location = new Point(icon.Location.X + icon.Size.Width, 41),
-                Tag = icon,
-            };
-
-            icon = new DXImageControl
-            {
-                Parent = panel2,
-                LibraryFile = LibraryFile.GameInter,
-                Index = 1513,
-                Location = new Point(icon.Location.X + 43, 39),
-                Hint = "风"
-            };
-
-            WindResistLabel = new DXLabel
-            {
-                Parent = panel2,
-                Location = new Point(icon.Location.X + icon.Size.Width, 41),
-                Tag = icon,
-            };
-
-
-            icon = new DXImageControl
-            {
-                Parent = panel2,
-                LibraryFile = LibraryFile.GameInter,
-                Index = 1514,
-                Location = new Point(5, 63),
-                Hint = "神圣",
-            };
-
-            HolyResistLabel = new DXLabel
-            {
-                Parent = panel2,
-                Location = new Point(icon.Location.X + icon.Size.Width, 65),
-                Tag = icon,
-            };
-
-            icon = new DXImageControl
-            {
-                Parent = panel2,
-                LibraryFile = LibraryFile.GameInter,
-                Index = 1515,
-                Location = new Point(icon.Location.X + 43, 63),
-                Hint = "黑暗",
-            };
-
-            DarkResistLabel = new DXLabel
-            {
-                Parent = panel2,
-                Location = new Point(icon.Location.X + icon.Size.Width, 65),
-                Tag = icon,
-            };
-
-            icon = new DXImageControl
-            {
-                Parent = panel2,
-                LibraryFile = LibraryFile.GameInter,
-                Index = 1516,
-                Location = new Point(icon.Location.X + 43, 63),
-                Hint = "幻影",
-            };
-
-            PhantomResistLabel = new DXLabel
-            {
-                Parent = panel2,
-                Location = new Point(icon.Location.X + icon.Size.Width, 65),
-                Tag = icon,
-            };
-
-            icon = new DXImageControl
-            {
-                Parent = panel2,
-                LibraryFile = LibraryFile.GameInter,
-                Index = 1517,
-                Location = new Point(icon.Location.X + 43, 63),
-                Hint = "物理"
-            };
-
-            PhysicalResistLabel = new DXLabel
-            {
-                Parent = panel2,
-                Location = new Point(icon.Location.X + icon.Size.Width, 65),
-                Tag = icon,
-            };
-
-            Expanded = Config.MonsterBoxExpanded;
+            IsControl = false;
+            PassThrough = true;
+            DrawTexture = false;
+            Visible = false;
+            Size = new Size(360, 52);
+            validTarget = IsValidTarget;
+            bar = new DXControl { Parent = this, IsControl = false, DrawTexture = false, Size = new Size(360, 32) };
+            // Extend beneath the opaque ornaments to cover every opening in the frame.
+            slot = new DXControl { Parent = bar, IsControl = false, DrawTexture = true,
+                BackColour = Color.FromArgb(0x17, 0x10, 0x0F), Location = new Point(15, 8), Size = new Size(329, 18) };
+            fill = new DXControl { Parent = slot, IsControl = false, DrawTexture = true,
+                BackColour = Color.DarkRed, Size = slot.Size };
+            highlight = new DXControl { Parent = fill, IsControl = false, DrawTexture = true,
+                BackColour = Color.FromArgb(0xA5, 0x2A, 0x22), Size = new Size(329, 1) };
+            bar.AfterDraw += DrawFrame;
+            nameLabel = MakeLabel(bar, 12F, new Point(24, 4), new Size(312, 26));
+            detailLabel = MakeLabel(this, 9F, new Point(0, 34), new Size(360, 18));
+            detailLabel.ForeColour = Color.FromArgb(0xD7, 0xBC, 0x80);
         }
 
-        #region Methods
-        private void PopulateLabel(Stat stat, DXLabel label, Stats stats)
+        private static DXLabel MakeLabel(DXControl parent, float fontSize, Point location, Size size)
         {
-            label.Text = $"x{Math.Abs(stats[stat]):0}";
-
-            if (stats[stat] == 0)
-                label.ForeColour = Color.White;
-            else if (stats[stat] > 0)
-                label.ForeColour = Color.Lime;
-            else if (stats[stat] < 0)
-                label.ForeColour = Color.IndianRed;
+            var label = new DXLabel
+            {
+                Parent = parent, IsControl = false, AutoSize = false, Location = location, Size = size,
+                DrawFormat = TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter |
+                    TextFormatFlags.SingleLine | TextFormatFlags.EndEllipsis | TextFormatFlags.NoPrefix
+            };
+            Font oldFont = label.Font;
+            label.Font = new Font(Config.FontName, CEnvir.FontSize(fontSize));
+            oldFont.Dispose();
+            return label;
         }
-        
+
+        public void LayoutForViewport(int width)
+        {
+            int barWidth = System.Math.Max(0, System.Math.Min(360, width - 48));
+            Location = new Point((width - barWidth) / 2, 24);
+            Size = new Size(barWidth, 52);
+            bar.Size = new Size(barWidth, 32);
+            slot.Size = new Size(System.Math.Max(0, barWidth - 31), 18);
+            nameLabel.Size = new Size(System.Math.Max(0, barWidth - 48), 26);
+            detailLabel.Size = new Size(barWidth, 18);
+            lastHealth = -1;
+            RefreshHealth();
+        }
+
+        // GameInter #327: original 24px ornaments, with only the uniform middle cropped.
+        // Use the shared library cache; never open resource files or allocate textures here.
+        private void DrawFrame(object sender, System.EventArgs e)
+        {
+            MirLibrary library;
+            if (bar.Size.Width < 72 || !CEnvir.LibraryList.TryGetValue(LibraryFile.GameInter, out library) ||
+                library.GetSize(327) != new Size(456, 32)) return;
+
+            Point origin = bar.DisplayArea.Location;
+            Color tint = Color.FromArgb(0xB8, 0xA0, 0x80);
+            library.Draw(327, origin.X, origin.Y, tint, new Rectangle(0, 0, 24, 32), 1F, ImageType.Image);
+            library.Draw(327, origin.X + 24, origin.Y, tint,
+                new Rectangle(24, 0, bar.Size.Width - 48, 32), 1F, ImageType.Image);
+            library.Draw(327, origin.X + bar.Size.Width - 24, origin.Y, tint,
+                new Rectangle(432, 0, 24, 32), 1F, ImageType.Image);
+        }
+
+        private bool IsValidTarget(MapObject candidate)
+        {
+            var mob = candidate as MonsterObject;
+            var scene = GameScene.Game;
+            ClientObjectData data;
+            return mob != null && scene?.MapControl?.MapInfo != null && mob.Visible && !mob.Dead &&
+                mob.CompanionObject == null && string.IsNullOrEmpty(mob.PetOwner) && mob.MonsterInfo != null &&
+                mob.MonsterInfo.AI >= 0 && scene.MapControl.Objects.Contains(mob) &&
+                scene.DataDictionary.TryGetValue(mob.ObjectID, out data) && !data.Dead &&
+                data.MapIndex == scene.MapControl.MapInfo.Index && data.MaxHealth > 0 && data.Health > 0;
+        }
+
+        public void UpdateTarget(MapObject hover, MapObject focus)
+        {
+            Monster = selection.Select(hover, focus, validTarget) as MonsterObject;
+        }
+
+        public void Suppress(MapObject hover, MapObject focus)
+        {
+            selection.Suppress(hover, focus);
+            ReleaseDetails();
+            Monster = null;
+        }
+
+        public void Resume() { selection.Reset(); }
+        public void Clear()
+        {
+            selection.Reset();
+            ReleaseDetails();
+            Monster = null;
+        }
+        public void BeginDetails(Keys keyData) { detailHold.Begin(keyData); RefreshHealth(); }
+        public void UpdateDetailKey(Keys keyData, bool released) { detailHold.Update(keyData, released); RefreshHealth(); }
+        public void ReleaseDetails() { detailHold.Clear(); RefreshHealth(); }
+
+        public void RefreshStats() { RefreshHealth(); }
         public void RefreshHealth()
         {
-            ClientObjectData data;
-            HealthLabel.Text = !GameScene.Game.DataDictionary.TryGetValue(Monster.ObjectID, out data) ? string.Empty : $"{data.Health} / {data.MaxHealth}";
-        }
-
-        public void RefreshStats()
-        {
-            ClientObjectData data;
-            if (!GameScene.Game.DataDictionary.TryGetValue(Monster.ObjectID, out data) || data.Stats == null)
+            if (!Config.MonsterBoxVisible || !IsValidTarget(monster))
             {
-                HealthLabel.Text = string.Empty;
-
-                ACLabel.Text = $"{Monster.MonsterInfo.Stats[Stat.MinAC]} - {Monster.MonsterInfo.Stats[Stat.MaxAC]}";
-                MRLabel.Text = $"{Monster.MonsterInfo.Stats[Stat.MinMR]} - {Monster.MonsterInfo.Stats[Stat.MaxMR]}";
-                DCLabel.Text = $"{Monster.MonsterInfo.Stats[Stat.MinDC]} - {Monster.MonsterInfo.Stats[Stat.MaxDC]}";
-
-                PopulateLabel(Stat.FireResistance, FireResistLabel, Monster.MonsterInfo.Stats);
-                PopulateLabel(Stat.IceResistance, IceResistLabel, Monster.MonsterInfo.Stats);
-                PopulateLabel(Stat.LightningResistance, LightningResistLabel, Monster.MonsterInfo.Stats);
-                PopulateLabel(Stat.WindResistance, WindResistLabel, Monster.MonsterInfo.Stats);
-                PopulateLabel(Stat.HolyResistance, HolyResistLabel, Monster.MonsterInfo.Stats);
-                PopulateLabel(Stat.DarkResistance, DarkResistLabel, Monster.MonsterInfo.Stats);
-                PopulateLabel(Stat.PhantomResistance, PhantomResistLabel, Monster.MonsterInfo.Stats);
-                PopulateLabel(Stat.PhysicalResistance, PhysicalResistLabel, Monster.MonsterInfo.Stats);
-
-
-
-                switch (Monster.Stats.GetAffinityElement())
-                {
-                    case Element.None:
-                        AttackIcon.Index = 1517;
-                        AttackIcon.Hint = "物理";
-                        break;
-                    case Element.Fire:
-                        AttackIcon.Index = 1510;
-                        AttackIcon.Hint = "火";
-                        break;
-                    case Element.Ice:
-                        AttackIcon.Index = 1511;
-                        AttackIcon.Hint = "冰";
-                        break;
-                    case Element.Lightning:
-                        AttackIcon.Index = 1512;
-                        AttackIcon.Hint = "电";
-                        break;
-                    case Element.Wind:
-                        AttackIcon.Index = 1513;
-                        AttackIcon.Hint = "风";
-                        break;
-                    case Element.Holy:
-                        AttackIcon.Index = 1514;
-                        AttackIcon.Hint = "神圣";
-                        break;
-                    case Element.Dark:
-                        AttackIcon.Index = 1515;
-                        AttackIcon.Hint = "黑暗";
-                        break;
-                    case Element.Phantom:
-                        AttackIcon.Index = 1516;
-                        AttackIcon.Hint = "幻影";
-                        break;
-                }
+                Visible = false;
+                monster = null;
+                lastHealth = -1;
+                if (nameLabel != null) nameLabel.Text = string.Empty;
+                if (detailLabel != null) detailLabel.Text = string.Empty;
+                return;
             }
-            else
-            {
-                HealthLabel.Text = $"{data.Health} / {data.MaxHealth}";
 
+            ClientObjectData data = GameScene.Game.DataDictionary[monster.ObjectID];
+            bool showHealth = Config.MonsterBoxShowHealth || detailHold.Active;
+            bool showPercentage = Config.MonsterBoxShowPercentage || detailHold.Active;
+            bool boss = monster.MonsterInfo.IsBoss;
+            string name = monster.MonsterInfo.MonsterName;
+            Visible = Size.Width >= 72;
+            if (lastHealth == data.Health && lastMaxHealth == data.MaxHealth && lastBoss == boss &&
+                lastShowHealth == showHealth && lastShowPercentage == showPercentage && lastName == name) return;
 
-                ACLabel.Text = $"{data.Stats[Stat.MinAC]} - {data.Stats[Stat.MaxAC]}";
-                MRLabel.Text = $"{data.Stats[Stat.MinMR]} - {data.Stats[Stat.MaxMR]}";
-                DCLabel.Text = $"{data.Stats[Stat.MinDC]} - {data.Stats[Stat.MaxDC]}";
-
-
-                PopulateLabel(Stat.FireResistance, FireResistLabel, data.Stats);
-                PopulateLabel(Stat.IceResistance, IceResistLabel, data.Stats);
-                PopulateLabel(Stat.LightningResistance, LightningResistLabel, data.Stats);
-                PopulateLabel(Stat.WindResistance, WindResistLabel, data.Stats);
-                PopulateLabel(Stat.HolyResistance, HolyResistLabel, data.Stats);
-                PopulateLabel(Stat.DarkResistance, DarkResistLabel, data.Stats);
-                PopulateLabel(Stat.PhantomResistance, PhantomResistLabel, data.Stats);
-                PopulateLabel(Stat.PhysicalResistance, PhysicalResistLabel, data.Stats);
-
-
-                switch (data.Stats.GetAffinityElement())
-                {
-                    case Element.None:
-                        AttackIcon.Index = 1517;
-                        AttackIcon.Hint = "物理";
-                        break;
-                    case Element.Fire:
-                        AttackIcon.Index = 1510;
-                        AttackIcon.Hint = "火";
-                        break;
-                    case Element.Ice:
-                        AttackIcon.Index = 1511;
-                        AttackIcon.Hint = "冰";
-                        break;
-                    case Element.Lightning:
-                        AttackIcon.Index = 1512;
-                        AttackIcon.Hint = "电";
-                        break;
-                    case Element.Wind:
-                        AttackIcon.Index = 1513;
-                        AttackIcon.Hint = "风";
-                        break;
-                    case Element.Holy:
-                        AttackIcon.Index = 1514;
-                        AttackIcon.Hint = "神圣";
-                        break;
-                    case Element.Dark:
-                        AttackIcon.Index = 1515;
-                        AttackIcon.Hint = "黑暗";
-                        break;
-                    case Element.Phantom:
-                        AttackIcon.Index = 1516;
-                        AttackIcon.Hint = "幻影";
-                        break;
-                }
-            }
+            nameLabel.Text = name;
+            nameLabel.ForeColour = boss ? Color.FromArgb(0xD7, 0xBC, 0x80) : Color.FromArgb(0xE7, 0xDD, 0xCA);
+            int width = MonsterHudPresentation.FillWidth(data.Health, data.MaxHealth, slot.Size.Width);
+            fill.Size = new Size(width, slot.Size.Height);
+            highlight.Size = new Size(width, 1);
+            detailLabel.Text = MonsterHudPresentation.Details(boss, data.Health, data.MaxHealth, showHealth, showPercentage);
+            detailLabel.Visible = detailLabel.Text.Length > 0;
+            lastHealth = data.Health;
+            lastMaxHealth = data.MaxHealth;
+            lastBoss = boss;
+            lastShowHealth = showHealth;
+            lastShowPercentage = showPercentage;
+            lastName = name;
         }
-        #endregion
-
-        #region IDisposable
 
         protected override void Dispose(bool disposing)
         {
-            base.Dispose(disposing);
-
             if (disposing)
             {
-                _Monster = null;
-                MonsterChanged = null;
-
-                _Expanded = false;
-                ExpandedChanged = null;
-                
-                if (AttackIcon != null)
-                {
-                    if (!AttackIcon.IsDisposed)
-                        AttackIcon.Dispose();
-
-                    AttackIcon = null;
-                }
-
-                if (LevelLabel != null)
-                {
-                    if (!LevelLabel.IsDisposed)
-                        LevelLabel.Dispose();
-
-                    LevelLabel = null;
-                }
-
-                if (NameLabel != null)
-                {
-                    if (!NameLabel.IsDisposed)
-                        NameLabel.Dispose();
-
-                    NameLabel = null;
-                }
-
-                if (HealthLabel != null)
-                {
-                    if (!HealthLabel.IsDisposed)
-                        HealthLabel.Dispose();
-
-                    HealthLabel = null;
-                }
-
-                if (ACLabel != null)
-                {
-                    if (!ACLabel.IsDisposed)
-                        ACLabel.Dispose();
-
-                    ACLabel = null;
-                }
-
-                if (MRLabel != null)
-                {
-                    if (!MRLabel.IsDisposed)
-                        MRLabel.Dispose();
-
-                    MRLabel = null;
-                }
-
-                if (DCLabel != null)
-                {
-                    if (!DCLabel.IsDisposed)
-                        DCLabel.Dispose();
-
-                    DCLabel = null;
-                }
-
-                if (FireResistLabel != null)
-                {
-                    if (!FireResistLabel.IsDisposed)
-                        FireResistLabel.Dispose();
-
-                    FireResistLabel = null;
-                }
-
-                if (IceResistLabel != null)
-                {
-                    if (!IceResistLabel.IsDisposed)
-                        IceResistLabel.Dispose();
-
-                    IceResistLabel = null;
-                }
-
-                if (LightningResistLabel != null)
-                {
-                    if (!LightningResistLabel.IsDisposed)
-                        LightningResistLabel.Dispose();
-
-                    LightningResistLabel = null;
-                }
-
-                if (WindResistLabel != null)
-                {
-                    if (!WindResistLabel.IsDisposed)
-                        WindResistLabel.Dispose();
-
-                    WindResistLabel = null;
-                }
-
-                if (HolyResistLabel != null)
-                {
-                    if (!HolyResistLabel.IsDisposed)
-                        HolyResistLabel.Dispose();
-
-                    HolyResistLabel = null;
-                }
-
-                if (DarkResistLabel != null)
-                {
-                    if (!DarkResistLabel.IsDisposed)
-                        DarkResistLabel.Dispose();
-
-                    DarkResistLabel = null;
-                }
-
-                if (PhantomResistLabel != null)
-                {
-                    if (!PhantomResistLabel.IsDisposed)
-                        PhantomResistLabel.Dispose();
-
-                    PhantomResistLabel = null;
-                }
-
-                if (ExpandButton != null)
-                {
-                    if (!ExpandButton.IsDisposed)
-                        ExpandButton.Dispose();
-
-                    ExpandButton = null;
-                }
-
+                selection.Reset();
+                detailHold.Clear();
+                monster = null;
             }
+            base.Dispose(disposing);
         }
-
-        #endregion
     }
 }

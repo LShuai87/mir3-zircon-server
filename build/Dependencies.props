@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <!-- Override with /p:DevExpressAssemblyPath=... when installed elsewhere. -->
+    <DevExpressAssemblyPath Condition="'$(DevExpressAssemblyPath)' == '' and Exists('$(MSBuildProgramFiles32)\DevExpress 24.2\Components\Bin\Framework')">$(MSBuildProgramFiles32)\DevExpress 24.2\Components\Bin\Framework</DevExpressAssemblyPath>
+    <DevExpressAssemblyPath Condition="'$(DevExpressAssemblyPath)' == '' and Exists('$(ProgramW6432)\DevExpress 24.2\Components\Bin\Framework')">$(ProgramW6432)\DevExpress 24.2\Components\Bin\Framework</DevExpressAssemblyPath>
+    <DevExpressAssemblyPath Condition="'$(DevExpressAssemblyPath)' == '' and Exists('D:\Program Files\DevExpress 24.2\Components\Bin\Framework')">D:\Program Files\DevExpress 24.2\Components\Bin\Framework</DevExpressAssemblyPath>
+  </PropertyGroup>
+</Project>

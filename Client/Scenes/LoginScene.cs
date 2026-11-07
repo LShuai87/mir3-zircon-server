@@ -97,7 +97,7 @@ namespace Client.Scenes
         public RequestActivationKeyDialog RequestActivationBox;
         public RankingDialog RankingBox;
         
-        private TcpClient ConnectingClient;
+        private ClientConnectionAttempt ConnectingClient;
         private DateTime ConnectionTime;
 
         #endregion
@@ -273,11 +273,7 @@ namespace Client.Scenes
 
             if (CEnvir.WrongVersion)
             {
-                if (ConnectingClient != null)
-                {
-                    ConnectingClient.Close();
-                    ConnectingClient = null;
-                }
+                CancelConnectionAttempt();
 
                 if (ConnectionBox == null) return;
 
@@ -288,15 +284,45 @@ namespace Client.Scenes
                 return;
             }
             
-            if (CEnvir.Connection != null && CEnvir.Connection.ServerConnected) return;
+            if (CEnvir.Connection != null && CEnvir.Connection.ServerConnected)
+            {
+                CancelConnectionAttempt();
+                return;
+            }
+
+            if (ConnectingClient != null && ConnectingClient.IsCompleted)
+            {
+                using (ClientConnectionAttempt attempt = ConnectingClient)
+                {
+                    ConnectingClient = null;
+                    TcpClient client = attempt.TakeClient();
+                    if (client != null)
+                    {
+                        CEnvir.Connection?.Disconnect();
+                        try
+                        {
+                            CEnvir.Connection = new CConnection(client);
+                        }
+                        catch
+                        {
+                            client.Close();
+                            throw;
+                        }
+
+                        ConnectionTime = CEnvir.Now.AddSeconds(5); // Allow time for the handshake.
+                        return;
+                    }
+
+                    System.Diagnostics.Debug.WriteLine($"Connection failed: {attempt.Error}");
+                }
+            }
+
             if (CEnvir.Now < ConnectionTime) return;
 
-            ConnectingClient?.Close();
-            ConnectingClient = new TcpClient();
-            if (Config.UseNetworkConfig)
-                ConnectingClient.BeginConnect(Config.IPAddress, Config.Port, Connecting, ConnectingClient);
-            else
-                ConnectingClient.BeginConnect(Config.DefaultIPAddress, Config.DefaultPort, Connecting, ConnectingClient);
+            CancelConnectionAttempt();
+            ConnectingClient = Config.UseNetworkConfig
+                ? new ClientConnectionAttempt(Config.IPAddress, Config.Port)
+                : new ClientConnectionAttempt(Config.DefaultIPAddress, Config.DefaultPort);
 
             ConnectionTime = CEnvir.Now.AddSeconds(5);
             ConnectionAttempt++;
@@ -325,28 +351,10 @@ namespace Client.Scenes
             }
         }
 
-        private void Connecting(IAsyncResult result)
+        private void CancelConnectionAttempt()
         {
-            try
-            {
-                TcpClient client = (TcpClient)result.AsyncState;
-                client.EndConnect(result);
-
-                if (!client.Connected) return;
-
-                if (client != ConnectingClient)
-                {
-                    ConnectingClient = null;
-                    client.Close();
-                    return;
-                }
-
-                ConnectionTime = CEnvir.Now.AddSeconds(5); //Add 5 more seconds to timeout for delayed HandShake
-                ConnectingClient = null;
-
-                CEnvir.Connection = new CConnection(client);
-            }
-            catch { }
+            ConnectingClient?.Dispose();
+            ConnectingClient = null;
         }
 
         public void ShowLogin()
@@ -358,7 +366,7 @@ namespace Client.Scenes
         {
             _ConnectionAttempt = 0;
             ConnectionTime = DateTime.MinValue;
-            ConnectingClient = null;
+            CancelConnectionAttempt();
 
 
             if (LoginBox != null) LoginBox.LoginAttempted = false;
@@ -378,6 +386,8 @@ namespace Client.Scenes
         #region IDisposable
         protected override void Dispose(bool disposing)
         {
+            if (disposing) CancelConnectionAttempt();
+
             base.Dispose(disposing);
 
             if (disposing)
@@ -469,7 +479,6 @@ namespace Client.Scenes
                     RankingBox = null;
                 }
 
-                ConnectingClient = null;
                 _ConnectionAttempt = 0;
                 ConnectionTime = DateTime.MinValue;
 

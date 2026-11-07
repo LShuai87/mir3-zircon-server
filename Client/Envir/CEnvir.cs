@@ -757,6 +757,10 @@ namespace Client.Envir
                 case KeyBindAction.SpellUse24:
                     bind.Category = "Magic";
                     break;
+                case KeyBindAction.MonsterHealthDetails:
+                    bind.Category = "Functions";
+                    bind.Key1 = Keys.H;
+                    break;
                 case KeyBindAction.FortuneWindow:
                     bind.Category = "Windows";
                     bind.Key1 = Keys.W;

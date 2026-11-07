@@ -2,7 +2,7 @@
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{96CA9837-F7B2-4835-BCF9-40D8C8D4981E}</ProjectGuid>
@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Client</RootNamespace>
     <AssemblyName>Zircon</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -36,6 +36,7 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup>
+    <StartWorkingDirectory>$(MSBuildProjectDirectory)\$(OutputPath)</StartWorkingDirectory>
     <ApplicationIcon>Zircon.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
@@ -46,7 +47,10 @@
     </AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="SlimDX, Version=4.0.13.43, Culture=neutral, PublicKeyToken=b1b0c32fd1ffe4f9, processorArchitecture=x86" />
+    <Reference Include="SlimDX, Version=4.0.13.43, Culture=neutral, PublicKeyToken=b1b0c32fd1ffe4f9, processorArchitecture=x86">
+      <HintPath>..\Components\SlimDX\x86\SlimDX.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -72,6 +76,8 @@
     <Compile Include="Controls\DXListBox.cs" />
     <Compile Include="Controls\DXNumberTextBox.cs" />
     <Compile Include="Controls\DXVScrollBar.cs" />
+    <Compile Include="Envir\ClientConnectionAttempt.cs" />
+    <Compile Include="Envir\ItemListStorage.cs" />
     <Compile Include="Envir\CConnection.cs" />
     <Compile Include="Envir\CEnvir.cs" />
     <Compile Include="Envir\Config.cs" />
@@ -88,6 +94,7 @@
     <Compile Include="Models\MirEffect.cs" />
     <Compile Include="Models\MirProjectile.cs" />
     <Compile Include="Models\MonsterObject.cs" />
+    <Compile Include="Models\MonsterHudState.cs" />
     <Compile Include="Models\NPCObject.cs" />
     <Compile Include="Models\ObjectAction.cs" />
     <Compile Include="Models\PlayerObject.cs" />

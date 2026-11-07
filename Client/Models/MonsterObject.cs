@@ -2274,7 +2274,7 @@ namespace Client.Models
 
             Size size = library.GetSize(79);
 
-            Color color = !string.IsNullOrEmpty(PetOwner) ? Color.Yellow : Color.FromArgb(0, 200, 74);
+            Color color = !string.IsNullOrEmpty(PetOwner) ? Color.Yellow : Color.DarkRed;
 
             library.Draw(80, DrawX, DrawY - 55, Color.White, false, 1F, ImageType.Image);
             library.Draw(79, DrawX + 1, DrawY - 55 + 1, color, new Rectangle(0, 0, (int) (size.Width*percent), size.Height), 1F, ImageType.Image);

@@ -42,6 +42,8 @@ namespace Client
             if (GameScene.Game != null)
                 GameScene.Game.MapControl.MapButtons = MouseButtons.None;
 
+            GameScene.Game?.MonsterBox?.ReleaseDetails();
+
             CEnvir.Shift = false;
             CEnvir.Alt = false;
             CEnvir.Ctrl = false;

@@ -1,0 +1,25 @@
+{
+  "checkedAtLocalDate": "2026-11-07",
+  "title": "装备介绍",
+  "publishedAt": "2018-09-07 16:15:01",
+  "pageUrl": "https://mir3.web.sdo.com/web7/news_con.html?id=297843",
+  "contentApiUrl": "https://chuanqi.web.sdo.com/cms/newscontent.asp?ApplicationCode=30&Article=297843&Type=json",
+  "retrieval": "正文来自页面 trains() 实际调用的官方 JSON 接口；图片已实际查看。",
+  "images": [
+    {
+      "local": "official-equipment-1.jpg",
+      "source": "http://fu2.sdo.com/31/31/1110/20/84/1177_10893984.JPG",
+      "retrievedViaHttps": true,
+      "sha256": "a399796a32dcd2fac48fa1c214efd48b47e7f89ed6bf088eb8ed9e131cbfa989",
+      "bytes": 56821
+    },
+    {
+      "local": "official-equipment-2.jpg",
+      "source": "http://fu2.sdo.com/31/31/1110/20/90/3691_10894090.JPG",
+      "retrievedViaHttps": true,
+      "sha256": "07da4402516b4baef4f23cd539c090f7f39dda690ce3c777e7062d2085c72925",
+      "bytes": 11654
+    }
+  ],
+  "scope": "历史官网参考，不能作为本地 1.9.3.137 客户端全部规则或当前最新版本的证明。"
+}
