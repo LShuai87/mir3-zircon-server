@@ -1,0 +1,70 @@
+{
+  "checkedAt": "2026-11-07T08:20:06.384428+00:00",
+  "checks": [
+    {
+      "id": "01-overview",
+      "sha256": "d5912e87139eb0264edd4ce5949fa5bc3f88e097a554999708270b58380679b1",
+      "width": 1026,
+      "height": 795,
+      "format": "JPEG",
+      "result": "pass"
+    },
+    {
+      "id": "02-character",
+      "sha256": "571e96dbafabedb997d454e6ce7a3768e2ddd5f7dd3357d8c6f69537671c6274",
+      "width": 1026,
+      "height": 795,
+      "format": "JPEG",
+      "result": "pass"
+    },
+    {
+      "id": "03-character-inventory",
+      "sha256": "11ac2f41784e123da471b799fd0d6aab7cf44deec36186248e14f3f696a09436",
+      "width": 1026,
+      "height": 795,
+      "format": "JPEG",
+      "result": "pass"
+    },
+    {
+      "id": "04-equipment-tooltip",
+      "sha256": "939e94172ae916a04787c1086a6958e2b5e9ca43f8dbb33ddae4e3b628f17f3a",
+      "width": 1026,
+      "height": 795,
+      "format": "JPEG",
+      "result": "pass"
+    },
+    {
+      "id": "05-npc-dialog-shop-inventory",
+      "sha256": "55aa95d6399d190ad832efcb81a4ef620d4a6ed1cb39e5252b6004cb030567bb",
+      "width": 1026,
+      "height": 795,
+      "format": "JPEG",
+      "result": "pass"
+    },
+    {
+      "id": "06-chat-chinese-input",
+      "sha256": "69b96babce26f036862ce232a9d1e43a37002a9ded9eb71004829f7cc96c5ca4",
+      "width": 1026,
+      "height": 795,
+      "format": "JPEG",
+      "result": "pass"
+    }
+  ],
+  "coveredViews": [
+    "character",
+    "chat",
+    "inventory",
+    "minimap",
+    "npc-dialog",
+    "npc-service",
+    "overview",
+    "tooltip"
+  ],
+  "taskStatus": "in_progress",
+  "g0_1": "not_closed",
+  "limitations": [
+    "目标窗口实际DPI尚未确认；系统AppliedDPI=96不能替代目标窗口测量。",
+    "客户区矩形与1024×768为图像目测值，尚未完成独立确认。",
+    "当前UI/GameInter/ProgUse与旧转存基线不一致；需使用新快照重做解码与素材索引比对，截图与历史源库关联仍未冻结。"
+  ]
+}

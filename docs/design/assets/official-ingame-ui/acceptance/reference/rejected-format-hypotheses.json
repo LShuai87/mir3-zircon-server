@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "kind": "unverified-record-format-hypotheses",
+  "checkedAt": "2026-11-07T09:16:30.545731+00:00",
+  "productionBindingAllowed": false,
+  "strictDecoderModified": false,
+  "buildable": false,
+  "sourceEvidenceSnapshot": "E:\\workspace\\mir3-ui-work\\runtime-reference-20261107\\RejectedFormatStudy-v2\\source-evidence.json",
+  "sourceEvidenceSha256": "44bbf8bf6df7ebc51c5e00a81666b4ffe8211840df899c430cfdf58807c95cce",
+  "toolSha256": "1c6dfe2f75423d9baf03ca04a2ba48a18aa78f38abfde4911b55f284bbf87d4e",
+  "limitations": [
+    "Splitting 2112 + 528 bytes is a hypothesis, not a published format contract.",
+    "Both nibble orders are rendered; no candidate is selected as verified.",
+    "The proposed mask contains intermediate alpha values; do not silently quantize to DXT1.",
+    "Arrow appearance suggests a minimap control, but runtime association and states remain unverified."
+  ],
+  "externalReport": "E:\\workspace\\mir3-ui-work\\runtime-reference-20261107\\RejectedFormatStudy-v2\\analysis.json",
+  "externalReportSha256": "d9ad0e7feccd431f5cf9f7a47275429ba219ed22dc14e61ea924c9ae46d4c5cf",
+  "tool": "Analyze-RejectedRecords.py",
+  "records": [
+    {
+      "index": 5059,
+      "rawRecordSha256": "2d8fef6e97924c4074edcc95a2232414a84da6d85bbdec8e569322be7777dfc1",
+      "proposedRgbPlaneBytes": 2112,
+      "proposedMaskPlaneBytes": 528,
+      "proposedMaskNibbleHistogram": {
+        "0": 199,
+        "7": 8,
+        "13": 1,
+        "14": 7,
+        "15": 841
+      }
+    },
+    {
+      "index": 5060,
+      "rawRecordSha256": "17f3207ba27eac75ba4220cb3afc454028d2df2a1684d65e5670eb782b9db384",
+      "proposedRgbPlaneBytes": 2112,
+      "proposedMaskPlaneBytes": 528,
+      "proposedMaskNibbleHistogram": {
+        "0": 199,
+        "7": 8,
+        "13": 1,
+        "14": 7,
+        "15": 841
+      }
+    },
+    {
+      "index": 5061,
+      "rawRecordSha256": "04392b93c60379bfb4112ad328694dbc766cf79c18750275d25b23e96b04a03d",
+      "proposedRgbPlaneBytes": 2112,
+      "proposedMaskPlaneBytes": 528,
+      "proposedMaskNibbleHistogram": {
+        "0": 199,
+        "7": 8,
+        "13": 1,
+        "14": 7,
+        "15": 841
+      }
+    },
+    {
+      "index": 5062,
+      "rawRecordSha256": "7cb8f73decc6379c4d01fa26afd12403801b08a7a8434e3832e9f0d429357aa1",
+      "proposedRgbPlaneBytes": 2112,
+      "proposedMaskPlaneBytes": 528,
+      "proposedMaskNibbleHistogram": {
+        "0": 199,
+        "7": 8,
+        "13": 1,
+        "14": 7,
+        "15": 841
+      }
+    },
+    {
+      "index": 5063,
+      "rawRecordSha256": "1c7290a2416f326ede92e938f2ea63a6776f8be0e05fa45893c7b79e4c3fa643",
+      "proposedRgbPlaneBytes": 2112,
+      "proposedMaskPlaneBytes": 528,
+      "proposedMaskNibbleHistogram": {
+        "0": 199,
+        "7": 8,
+        "13": 1,
+        "14": 7,
+        "15": 841
+      }
+    }
+  ]
+}

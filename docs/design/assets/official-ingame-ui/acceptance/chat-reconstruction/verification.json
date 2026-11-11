@@ -1,0 +1,624 @@
+{
+  "schemaVersion": 1,
+  "kind": "native-chat-explicit-reconstruction-lifecycle-verification",
+  "checkedAtLocalDate": "2026-11-08",
+  "referenceResolution": [
+    1024,
+    768
+  ],
+  "releaseAccepted": false,
+  "results": {
+    "windowSetChecks": 168514,
+    "chatGeometryChecks": 940,
+    "fullSceneChecks": 180,
+    "nativeOperations": 18,
+    "officialResolutionRows": 54,
+    "legacyOperationRows": 9,
+    "faultCases": 2,
+    "disposition": "Reproduced stale borrowed input after native reset; fixed reset/load transaction lifecycle."
+  },
+  "fixes": [
+    {
+      "rootCause": "Native reset or empty load replaces ChatTextBox while Official adapter still borrows the disposed input; successful load exposes half-built group topology to the old adapter.",
+      "change": "Detach adapters before explicit native reconstruction; install against the current input/groups after it completes; refresh WinForms bounds once; preserve existing scene fault/package ownership containment."
+    }
+  ],
+  "verifiedBehaviors": [
+    "Native reset/reload buttons and Yes/No confirmation handlers run unchanged native dialogs; cancel preserves input/tabs.",
+    "Three repeated cycles per style cover reset, saved two-page reload and resolution without saved settings. Reset/empty reload replace native input; successful reload retains it.",
+    "Saved native page names, filters, transparency, alert and selected page restore; reset/load do not write native Users.db.",
+    "Official current input and history dock correctly at six resolutions; resize retains HWND, draft, selection, messages, tabs and one topology subscription; temporary empty groups do not survive.",
+    "Injected native action failure and resize reentry require restart without releasing the borrowed package; scene disposal releases all tabs/adapters/listeners.",
+    "Three normal GameScene constructors and seven explicit Device.Reset calls pass the existing offline full-scene suite."
+  ],
+  "sourceChanges": [
+    {
+      "path": "Client/Envir/GameUiOfficialV1WindowSet.cs",
+      "beforeSha256": "3c550824a1182664f13f2cbc4f18d66210c1aac2ccce5c50d814fe497c120dff",
+      "afterSha256": "a3fafcb71a8c9d374be8f63107725b7b82db434540c74a5a462409b50fe5ba3c"
+    },
+    {
+      "path": "Client/Scenes/GameScene.cs",
+      "beforeSha256": "ae37a6cf4168b827bab48353921aa6b6681e5babb6d4e49ca4a69af974580516",
+      "afterSha256": "429a2e77659b244fcf5044916a0ff776b21b368f49b2320516d17ad56737d311"
+    },
+    {
+      "path": "tests/Run-GameUiWindowSetTests.ps1",
+      "beforeSha256": "86217a3f4a202bf13226aaa4c74dc5af0a0bc0b359e8d85427d4b274903c1dbb",
+      "afterSha256": "361a374755a34b5d1b51ec12db7f7f6cf3569f81fac32d80f4082d9cf36af0d2"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiSceneStartupTests.cs",
+      "beforeSha256": "83feb9af3b15bcec864dd15948915fdd1ac322243c8f261592a5959b0925e5a7",
+      "afterSha256": "f2966092d5098e321ab79cdd81ca7af36982d7fa320e193316b787568a6d7807"
+    }
+  ],
+  "newlyTrackedSources": [
+    {
+      "path": "Client/Scenes/Views/ChatOptionsDialog.cs",
+      "beforeSha256": "0c442d014a8c55d28e69dd64b2e855f91fda2afd47a7550d0a6046c847d0ae65",
+      "afterSha256": "8609c62af0f8c78a55f6c8c60c8e45b833c12c7b79bb7cd88ec6efaa67b93355"
+    }
+  ],
+  "sourceHashes": [
+    {
+      "path": "Client/Envir/GameUiOfficialV1WindowSet.cs",
+      "sha256": "a3fafcb71a8c9d374be8f63107725b7b82db434540c74a5a462409b50fe5ba3c"
+    },
+    {
+      "path": "Client/Scenes/GameScene.cs",
+      "sha256": "429a2e77659b244fcf5044916a0ff776b21b368f49b2320516d17ad56737d311"
+    },
+    {
+      "path": "Client/Scenes/Views/ChatOptionsDialog.cs",
+      "sha256": "8609c62af0f8c78a55f6c8c60c8e45b833c12c7b79bb7cd88ec6efaa67b93355"
+    },
+    {
+      "path": "tests/Run-GameUiWindowSetTests.ps1",
+      "sha256": "361a374755a34b5d1b51ec12db7f7f6cf3569f81fac32d80f4082d9cf36af0d2"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiSceneStartupTests.cs",
+      "sha256": "f2966092d5098e321ab79cdd81ca7af36982d7fa320e193316b787568a6d7807"
+    }
+  ],
+  "commands": [
+    {
+      "command": [
+        "C:/Users/shuai/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+        "docs/design/assets/official-ingame-ui/acceptance/chat-reconstruction/audit-history.py",
+        "--output",
+        "docs/design/assets/official-ingame-ui/acceptance/chat-reconstruction/audit-history.json"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/chat-reconstruction/audit-history.log",
+      "logSha256": "dfa7192eb8f62f7d33edff1af2792a6447fb1046f9a401aad3443b3e2a792da5"
+    },
+    {
+      "command": [
+        "D:/Program Files/Microsoft Visual Studio/2022/Enterprise/MSBuild/Current/Bin/MSBuild.exe",
+        "Client/Client.csproj",
+        "/t:Build",
+        "/p:Configuration=Debug",
+        "/p:Platform=AnyCPU",
+        "/v:minimal",
+        "/nologo"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/chat-reconstruction/build-debug.log",
+      "logSha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "command": [
+        "D:/Program Files/Microsoft Visual Studio/2022/Enterprise/MSBuild/Current/Bin/MSBuild.exe",
+        "Client/Client.csproj",
+        "/t:Build",
+        "/p:Configuration=Release",
+        "/p:Platform=AnyCPU",
+        "/v:minimal",
+        "/nologo"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/chat-reconstruction/build-release.log",
+      "logSha256": "c9e24428be1e56c8408af17aacfea3413de3953bfe426d10eb768782f5005ebc"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiChatLayoutTests.ps1"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/chat-reconstruction/chat-layout.log",
+      "logSha256": "f4063b620e7293bcea213b3fd6c7924dbcb33554ffda03d44690dbdd7ba051e2"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiFullSceneTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/chat-reconstruction-full-scene-20261108-v1"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/chat-reconstruction/full-scene.log",
+      "logSha256": "0d85d4de7905eb608acc989200b5dfcc19842b35b62586889490caf606d4a988"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "build/game-ui/New-GameUiReleaseManifest.ps1",
+        "-ClientDirectory",
+        "E:/workspace/Debug/Client",
+        "-ResourceRoot",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/staged-resources",
+        "-OutputPath",
+        "E:/workspace/mir3-zircon-server/docs/design/assets/official-ingame-ui/acceptance/chat-reconstruction/debug-build.json"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/chat-reconstruction/manifest-debug.log",
+      "logSha256": "98a4e135ea7025762beefe22475ae2cfb678ec8e09b0ee0470c7b0dace3fc387"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "build/game-ui/New-GameUiReleaseManifest.ps1",
+        "-ClientDirectory",
+        "E:/workspace/Release/Client",
+        "-ResourceRoot",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/staged-resources",
+        "-OutputPath",
+        "E:/workspace/mir3-zircon-server/docs/design/assets/official-ingame-ui/acceptance/chat-reconstruction/release-build.json"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/chat-reconstruction/manifest-release.log",
+      "logSha256": "2991de403a05dd71350964a036eda5b29e9267d5c14cfb5f870edf1da4fae68d"
+    },
+    {
+      "command": [
+        "C:/Users/shuai/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+        "build/game-ui/Validate-UiTasks.py"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/chat-reconstruction/tasks.log",
+      "logSha256": "90e3ddffa807ef19523e77855653984be659ff7ab47ec66f04d41348c4cb85b3"
+    },
+    {
+      "command": [
+        "C:/Users/shuai/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+        "docs/design/assets/official-ingame-ui/acceptance/chat-reconstruction/check-whitespace.py"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/chat-reconstruction/whitespace.log",
+      "logSha256": "b6a16a3c0a091e9f45772d937fbe26db8c39e96efcb9dfd71cf5a6609e874bef"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiWindowSetTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/chat-reconstruction-20261108-v2"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/chat-reconstruction/window-set-final.log",
+      "logSha256": "5f39a6c6be132336d540978871fccac1ada08b72a2463be7a10d99cde7b56f4c"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiWindowSetTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/chat-reconstruction-20261108-v1"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/chat-reconstruction/window-set.log",
+      "logSha256": "b28b874c9a5b4476eb58b4d7c97106983efa4a2b4879f3eef5ce9b1ce8f088f6"
+    }
+  ],
+  "failedAttempts": [
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiWindowSetTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl"
+      ],
+      "result": "fail",
+      "exitCode": 1,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/chat-reconstruction/reproduction.log",
+      "logSha256": "c95f91066867627133234abe16ab0c386730078da8384d0bead5d1b14a69694f"
+    }
+  ],
+  "regressionBaselineRuntime": {
+    "report": "docs/design/assets/official-ingame-ui/acceptance/layout-persistence-reentry/verification.json",
+    "builds": {
+      "debug": {
+        "buildId": "gameui-e72bf339f656ac5ed8c1e4e7c5ce51a511c08d7f4080090a1b476908a81fda73",
+        "client": {
+          "path": "Zircon.exe",
+          "length": 1367040,
+          "sha256": "30e2766c08896d7e8498e6369a8de4761e3b322a51fd90d36572b773a04f1e08"
+        }
+      },
+      "release": {
+        "buildId": "gameui-edd47d1608c0226d618a6986cbf92c749351e564fa86af39efbb1f13ad2478c6",
+        "client": {
+          "path": "Zircon.exe",
+          "length": 1263104,
+          "sha256": "5eef19c45b1f56eda1df0b7b3626a765f5ece271705d2cd6525aefd605783653"
+        }
+      }
+    },
+    "testedRuntime": [
+      {
+        "name": "Zircon.exe",
+        "sha256": "30e2766c08896d7e8498e6369a8de4761e3b322a51fd90d36572b773a04f1e08"
+      },
+      {
+        "name": "Library.dll",
+        "sha256": "557ba4f45f3cb2db8bbbbb2a336289b0d3d535959190f86ec7efc2bfdd0b0c5b"
+      },
+      {
+        "name": "SlimDX.dll",
+        "sha256": "f23ec20aeaec149ba963d1fb03af3ea1585ccdf1ac207f315361a80ceaadcc05"
+      }
+    ]
+  },
+  "builds": {
+    "debug": {
+      "buildId": "gameui-e4e1fa72467d0ee78233cf3de0f3c200f8500fe6f2e593a714a68ff7eed516e9",
+      "client": {
+        "path": "Zircon.exe",
+        "length": 1368064,
+        "sha256": "02775cf7641e2dca6d0411d47185553973ae1870e290bdf41bdd6be3e93ce555"
+      }
+    },
+    "release": {
+      "buildId": "gameui-7875294352edaad55d2dcf0726baea8a33fa2be2f2dae45ac4e219d4487186c6",
+      "client": {
+        "path": "Zircon.exe",
+        "length": 1264128,
+        "sha256": "eaace0ad05384ae43572e519e1e88368b7f27e35edb94c7c48d7a6210daefc97"
+      }
+    }
+  },
+  "runtimeRebuiltThisTurn": true,
+  "package": {
+    "path": "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+    "frameCount": 94,
+    "sha256": "dd45cbf51d976a69d28269ee0d27a985def1ee1693cab2b509b74ae347a880a4"
+  },
+  "candidate": {
+    "path": "E:/workspace/mir3-ui-work/warehouse-assets-20261108-v1/zl-v2/OfficialV1.Zl",
+    "frameCount": 1,
+    "sha256": "471169dfa093b521f3c700c5a993e4e763aa17a45b2e16f440d961c0c7bf4cec"
+  },
+  "sourcePlanSha256": "f8c0a002b3821fabb54993792c354c4eff35eec51f9cfdc418535017c13069e9",
+  "limitations": [
+    "Explicit reset/load intentionally rebuild native tabs and may clear their messages as before. Ordinary Official resize does not rebuild or clear chat.",
+    "The 65-row new lifecycle/fault matrix uses SceneFixture with real native config/options/input/tab controls, DB serialization, buttons and confirmation handlers; socket/world construction is bypassed. The separate 180-check suite uses normal constructors and synthetic data.",
+    "Style-isolated chat saving is still open: SaveChatTabs currently shares native chat DB records. This report does not claim Official save-all preserves Legacy chat geometry or that floating Official geometry persists across relogin.",
+    "No networking, message rendering, filter schema, NPC cards, secondary popup styles, display settings, resource package or server rules changed.",
+    "Live return-to-login/reconnect, real storage/services, remaining field/equipment semantics, hardware/fonts/IME and final visual acceptance remain open.",
+    "Legacy remains default; RuntimeReady=false, productionBindingAllowed=false, releaseAccepted=false. No commit, push or deployment; official installation remains read-only."
+  ],
+  "evidenceHashes": [
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-reconstruction-20261108-v1/button-hitmask-cpu.txt",
+      "sha256": "8c02ba0d543cdf1f7ebeb48c8e6f52a83dde10de6fcca3b43899d8982e666927"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-reconstruction-20261108-v1/chat-reconstruction-results.txt",
+      "sha256": "b3b530f2c75e5a52e86ede6ebe0472b1081e23a4c8a355cff06a46f98a0d4338"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-reconstruction-20261108-v1/layout-persistence-legacy.db",
+      "sha256": "4d9e4e960d7ba8fce0a0912793f12675ed4ff77db13ae823b0d7b53c943d2918"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-reconstruction-20261108-v1/layout-persistence-results.txt",
+      "sha256": "ed11120c29f9eaa7a195223529c6f68ee13aaa60138b01b3d69f9bb274d6bf31"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-reconstruction-20261108-v1/layout-persistence-saved.json",
+      "sha256": "b0326ef274ff5d8e6ded212ddcedf694c77a6eccfd0425458d7e20c3ccfae93a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-reconstruction-20261108-v1/legacy-glyph-restored.png",
+      "sha256": "0a53fff02c059efc67e4808ccfbd669c8560f8a164c6da2f2f6970301adcf2ff"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-reconstruction-20261108-v1/legacy-glyph-suppressed.png",
+      "sha256": "5a739a1abe0ce2f11461d1c429810d6256b07eabeb58321d7f9ba821f84b2cab"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-reconstruction-20261108-v2/button-hitmask-cpu.txt",
+      "sha256": "8c02ba0d543cdf1f7ebeb48c8e6f52a83dde10de6fcca3b43899d8982e666927"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-reconstruction-20261108-v2/chat-reconstruction-results.txt",
+      "sha256": "6c2f662715d829f457c148575f558d2d7dbdf15a96b7fb910e78a8d89715f77b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-reconstruction-20261108-v2/layout-persistence-legacy.db",
+      "sha256": "4d9e4e960d7ba8fce0a0912793f12675ed4ff77db13ae823b0d7b53c943d2918"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-reconstruction-20261108-v2/layout-persistence-results.txt",
+      "sha256": "ed11120c29f9eaa7a195223529c6f68ee13aaa60138b01b3d69f9bb274d6bf31"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-reconstruction-20261108-v2/layout-persistence-saved.json",
+      "sha256": "b0326ef274ff5d8e6ded212ddcedf694c77a6eccfd0425458d7e20c3ccfae93a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-reconstruction-20261108-v2/legacy-glyph-restored.png",
+      "sha256": "0a53fff02c059efc67e4808ccfbd669c8560f8a164c6da2f2f6970301adcf2ff"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-reconstruction-20261108-v2/legacy-glyph-suppressed.png",
+      "sha256": "5a739a1abe0ce2f11461d1c429810d6256b07eabeb58321d7f9ba821f84b2cab"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-reconstruction-full-scene-20261108-v1/legacy-hud.png",
+      "sha256": "5fa69de2c6da4336331e9f837cd0ded6c24f9b714dda1e36432e8880dc050a09"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-reconstruction-full-scene-20261108-v1/legacy-panels.png",
+      "sha256": "d0723781ce5debe099e9ba58f4e2c999706872006bb0ec1594c651cea1634a46"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-reconstruction-full-scene-20261108-v1/legacy-resources.txt",
+      "sha256": "47713d590a1b9214abdef7a0fc33d6c28a2b5a73a0cff9794375a5083020b498"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-reconstruction-full-scene-20261108-v1/official-CharacterTab.png",
+      "sha256": "43a1af56f6c3bfd96763e2bdc70b81fcda2ad9bddce1aa09a95ffa0b5055eac8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-reconstruction-full-scene-20261108-v1/official-extraEquipmentTab.png",
+      "sha256": "fd2f77d0befc66bba22a81f66c6636dd2b169066f24bb721f5170886176243ca"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-reconstruction-full-scene-20261108-v1/official-HermitTab.png",
+      "sha256": "4f638a46988d05fdf41f695893510dc4b19dc85b5ca24a8ef781e63a17fe6348"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-reconstruction-full-scene-20261108-v1/official-hud.png",
+      "sha256": "0d72ce7b9c9ed1d0c807333ef4c62517a0f9d90d6f49015ba946f1b0882384ac"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-reconstruction-full-scene-20261108-v1/official-panels.png",
+      "sha256": "43a1af56f6c3bfd96763e2bdc70b81fcda2ad9bddce1aa09a95ffa0b5055eac8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-reconstruction-full-scene-20261108-v1/official-reentry-hud.png",
+      "sha256": "39be0066510de06ba2465cc008c6379ffbc4c556c67be4870b3a750f99696f4b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-reconstruction-full-scene-20261108-v1/official-reentry-panels.png",
+      "sha256": "8a0a2644ac845d99ab8104c3cc9acdd0573cdff950c0706b3a8b1a2bd2d4d2a8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-reconstruction-full-scene-20261108-v1/official-reset-1024x768.png",
+      "sha256": "43a1af56f6c3bfd96763e2bdc70b81fcda2ad9bddce1aa09a95ffa0b5055eac8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-reconstruction-full-scene-20261108-v1/official-reset-1280x800.png",
+      "sha256": "6da4d263d19f1aae323e49c0f41f848bd9fb075cb94dafb02df4e2f0749ef8a4"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-reconstruction-full-scene-20261108-v1/official-reset-1366x768.png",
+      "sha256": "bccd5d8071878413408790dbe90b5d5a1ea48d880be4cec00c916469bc30f495"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-reconstruction-full-scene-20261108-v1/official-reset-1440x900.png",
+      "sha256": "1b0be5742da74968aba14f74293e474a1324d346421cab3b9692607f90f43a06"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-reconstruction-full-scene-20261108-v1/official-reset-1600x900.png",
+      "sha256": "ddc79b57cfef144f95511d28a92a7ad2351a7a8d74ed73ca4e19a4a5f8f44ba7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-reconstruction-full-scene-20261108-v1/official-reset-1920x1080.png",
+      "sha256": "686e3cc1df80daea96d79cdb643655e960d5a1d3d48b39e03ad3ecfcac005f7a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-reconstruction-full-scene-20261108-v1/official-StatsTab.png",
+      "sha256": "dc665d7ec9343b3bdbdd2fd5bbc16f245d961d0ab217de3d7af7e82be17d8664"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-reconstruction-full-scene-20261108-v1/reset-pixel-probes.txt",
+      "sha256": "2c236cd844574b74b6d502b13ffed99b5cb29783fc53ea00587ca1543a18ac67"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-reconstruction-full-scene-20261108-v1/tested-runtime.json",
+      "sha256": "9b01a6bc0b4cadb121c68ee74d4225d00754450c6683d4ffdc328a7caa007b13"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-reconstruction/audit-history.json",
+      "sha256": "dfa7192eb8f62f7d33edff1af2792a6447fb1046f9a401aad3443b3e2a792da5"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-reconstruction/audit-history.log",
+      "sha256": "dfa7192eb8f62f7d33edff1af2792a6447fb1046f9a401aad3443b3e2a792da5"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-reconstruction/audit-history.py",
+      "sha256": "43b3dd93e1bb748275abd80d37a7d986d4016b83b72bd6cf2e0ed3bac1c1fd92"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-reconstruction/audit-history.receipt.json",
+      "sha256": "5850c1b8c0f57dab02c0b73fe18951e03f5aa60679227ca35415d182d9eddf52"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-reconstruction/build-debug.log",
+      "sha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-reconstruction/build-debug.receipt.json",
+      "sha256": "effb2ee4ac817a8978be0a329d4181a3a97a4b32bbcae9425ec158dba7400dd1"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-reconstruction/build-release.log",
+      "sha256": "c9e24428be1e56c8408af17aacfea3413de3953bfe426d10eb768782f5005ebc"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-reconstruction/build-release.receipt.json",
+      "sha256": "a291dc12fed8a8565668368bd40d7a123380986321b4d2c70b1f1944a44f60cc"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-reconstruction/chat-layout.log",
+      "sha256": "f4063b620e7293bcea213b3fd6c7924dbcb33554ffda03d44690dbdd7ba051e2"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-reconstruction/chat-layout.receipt.json",
+      "sha256": "ff21c811ab74f83400f5a89437dbb4363cd4627ce38a1f31ddc4827cd49796dd"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-reconstruction/check-whitespace.py",
+      "sha256": "b0a86f69a0f4d2d1028cf29ec177b27a0b21d80f60d2f17ed9eaf8f84c6a104f"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-reconstruction/debug-build.json",
+      "sha256": "95976bffd356ed8834809b32e629055642133c4958c09fac5666720138d56913"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-reconstruction/full-scene.log",
+      "sha256": "0d85d4de7905eb608acc989200b5dfcc19842b35b62586889490caf606d4a988"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-reconstruction/full-scene.receipt.json",
+      "sha256": "54bcf4c1bdf71ed9fbbf587fe169db62e5b0022ce1647b4fe8ba23d6210287d3"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-reconstruction/manifest-debug.log",
+      "sha256": "98a4e135ea7025762beefe22475ae2cfb678ec8e09b0ee0470c7b0dace3fc387"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-reconstruction/manifest-debug.receipt.json",
+      "sha256": "8a02394d8a95f2f7857810f610168271fd49f5382d54ceff057546f3cbe19665"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-reconstruction/manifest-release.log",
+      "sha256": "2991de403a05dd71350964a036eda5b29e9267d5c14cfb5f870edf1da4fae68d"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-reconstruction/manifest-release.receipt.json",
+      "sha256": "d59b4fe29f9ca573bfd5badcbaa3ebe9b97fdd5c8dbb297abb196043ee1ebcab"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-reconstruction/prepare-report.py",
+      "sha256": "0d0f6e36870d8538a6e18969e6c3ea31b63569d7fe08586677f3ab33ae336ed8"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-reconstruction/README.md",
+      "sha256": "c6da3e2d0e86d5fb4112f4fa35a24e5288e94b491f4dff6e6ca5e713448afca9"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-reconstruction/release-build.json",
+      "sha256": "614f7117a6cd7f89b7ed51fdfdc95441b985ae0fa1abdefca03428563f455349"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-reconstruction/reproduction.log",
+      "sha256": "c95f91066867627133234abe16ab0c386730078da8384d0bead5d1b14a69694f"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-reconstruction/reproduction.receipt.json",
+      "sha256": "6bcd355c495b76f1d43eb41975ede1c4014650a552cef0d60dc96f614c81deec"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-reconstruction/run-check.py",
+      "sha256": "8cea69f8c28d781722ec26876840ea3e6bb44ae5ed37e2d213fdab62d1a7c943"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-reconstruction/source-before/Client/Envir/GameUiOfficialV1WindowSet.cs",
+      "sha256": "3c550824a1182664f13f2cbc4f18d66210c1aac2ccce5c50d814fe497c120dff"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-reconstruction/source-before/Client/Scenes/GameScene.cs",
+      "sha256": "ae37a6cf4168b827bab48353921aa6b6681e5babb6d4e49ca4a69af974580516"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-reconstruction/source-before/Client/Scenes/Views/ChatOptionsDialog.cs",
+      "sha256": "0c442d014a8c55d28e69dd64b2e855f91fda2afd47a7550d0a6046c847d0ae65"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-reconstruction/source-before/tests/game-ui/OfficialUiSceneStartupTests.cs",
+      "sha256": "83feb9af3b15bcec864dd15948915fdd1ac322243c8f261592a5959b0925e5a7"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-reconstruction/source-before/tests/Run-GameUiWindowSetTests.ps1",
+      "sha256": "86217a3f4a202bf13226aaa4c74dc5af0a0bc0b359e8d85427d4b274903c1dbb"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-reconstruction/source-before.json",
+      "sha256": "2f8682646f026faddf6c21b1b6d31f5bbefda304c2c5ad031919952e25bf90eb"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-reconstruction/tasks.log",
+      "sha256": "90e3ddffa807ef19523e77855653984be659ff7ab47ec66f04d41348c4cb85b3"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-reconstruction/tasks.receipt.json",
+      "sha256": "e9390e92a27a47e56a2cdc37a025f0769abd3641169dbf22e1a9eef954cfaef5"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-reconstruction/tested-runtime.json",
+      "sha256": "9b01a6bc0b4cadb121c68ee74d4225d00754450c6683d4ffdc328a7caa007b13"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-reconstruction/whitespace.log",
+      "sha256": "b6a16a3c0a091e9f45772d937fbe26db8c39e96efcb9dfd71cf5a6609e874bef"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-reconstruction/whitespace.receipt.json",
+      "sha256": "2107004282d8601a9c3bad5abf2c19c81066c271306739c4ae3e0bef94f407df"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-reconstruction/window-set-final.log",
+      "sha256": "5f39a6c6be132336d540978871fccac1ada08b72a2463be7a10d99cde7b56f4c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-reconstruction/window-set-final.receipt.json",
+      "sha256": "d90562575b05bc6080ae88e1e6e1e25df48023f0b9d5650e0a95192b92003232"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-reconstruction/window-set.log",
+      "sha256": "b28b874c9a5b4476eb58b4d7c97106983efa4a2b4879f3eef5ce9b1ce8f088f6"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-reconstruction/window-set.receipt.json",
+      "sha256": "8f24b882abf28e23c550a815a89f697e7fe3676db0d733721fb2ee35ddf6816f"
+    }
+  ]
+}

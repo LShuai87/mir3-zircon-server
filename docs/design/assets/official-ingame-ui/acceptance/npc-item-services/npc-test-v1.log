@@ -1,0 +1,6 @@
+System.Exception: legacy: storage fixture provides remaining 21 original sources
+   在 OfficialUiFullSceneTests.Check(Boolean condition, String message)
+   在 OfficialUiFullSceneTests.NpcCheck(Boolean condition, String message)
+   在 OfficialUiFullSceneTests.ExerciseNpcItemServices(GameScene scene, CConnection connection, Boolean official, String evidence, String style, List`1 trace)
+   在 OfficialUiFullSceneTests.ExerciseNpc(GameUiStartupSession owner, MapInfo map, String evidence, String style)
+   在 OfficialUiFullSceneTests.RunNpc(String[] args)

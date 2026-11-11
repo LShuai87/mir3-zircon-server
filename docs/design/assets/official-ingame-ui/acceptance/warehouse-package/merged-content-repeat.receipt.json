@@ -1,0 +1,11 @@
+{
+  "command": [
+    "python",
+    "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/verify-merged-package.py",
+    "--repeat",
+    "--output",
+    "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/merged-content-repeat.json"
+  ],
+  "exitCode": 0,
+  "log": "E:/workspace/mir3-zircon-server/docs/design/assets/official-ingame-ui/acceptance/warehouse-package/merged-content-repeat.log"
+}

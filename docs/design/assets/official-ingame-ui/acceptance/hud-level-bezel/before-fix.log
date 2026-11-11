@@ -1,0 +1,11 @@
+System.Exception: Level moved outside source-art bezel
+   在 OfficialUiHudLayoutTests.Check(Boolean condition, String detail)
+   在 OfficialUiHudLayoutTests.Geometry(String file)
+   在 OfficialUiHudLayoutTests.Main(String[] args)
+HUD layout tests failed.
+At E:\workspace\mir3-zircon-server\tests\Run-GameUiHudLayoutTests.ps1:33 char:127
++ ... re }; if ($LASTEXITCODE -ne 0) { throw 'HUD layout tests failed.' } }
++                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (HUD layout tests failed.:String) [], RuntimeException
+    + FullyQualifiedErrorId : HUD layout tests failed.
+ 

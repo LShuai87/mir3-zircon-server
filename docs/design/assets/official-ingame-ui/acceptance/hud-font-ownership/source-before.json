@@ -1,0 +1,10 @@
+[
+  {
+    "path": "Client/Scenes/Views/MainPanel.GameUi.cs",
+    "sha256": "8089b4024b2d8c677bcbe9f24b4a05ec3b9cabc6a12650e14808a05eb06891aa"
+  },
+  {
+    "path": "tests/game-ui/OfficialUiHudLayoutTests.cs",
+    "sha256": "4bfe87610772b753d9ed840997590e4dc389765130505b346963cbb17d141e34"
+  }
+]

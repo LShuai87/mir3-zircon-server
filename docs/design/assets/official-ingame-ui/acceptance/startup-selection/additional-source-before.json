@@ -1,0 +1,10 @@
+[
+  {
+    "path": "Client/Envir/Config.cs",
+    "sha256": "4f80311179d82ddd5e1f8799417d19e841154db9cb929ef154c86cfca135d752"
+  },
+  {
+    "path": "Client/Program.cs",
+    "sha256": "8b38ba6531f471b001cd3da1623631e1b774feef6fe60a6ce547fb5197e055e1"
+  }
+]

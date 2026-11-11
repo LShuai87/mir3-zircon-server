@@ -1,0 +1,14 @@
+{
+  "command": [
+    "C:\\Users\\shuai\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "build/game-ui/Compose-OfficialUi.py",
+    "--decoded",
+    "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/decoded",
+    "--output",
+    "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/art-repeat",
+    "--recipe",
+    "build/game-ui/warehouse-combined-composition-recipe.json"
+  ],
+  "exitCode": 0,
+  "log": "E:/workspace/mir3-zircon-server/docs/design/assets/official-ingame-ui/acceptance/warehouse-package/compose-repeat.log"
+}

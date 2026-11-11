@@ -1,0 +1,3472 @@
+legacy|OnMouseMove does not fault startup
+legacy|held source hit
+legacy|OnMouseDown does not fault startup
+legacy|OnMouseMove does not fault startup
+legacy|OnMouseUp does not fault startup
+legacy|held source/release alone does not move or select
+legacy|held source/release emits nothing
+legacy|click target visible/enabled DXItemCell/0
+legacy|click target inside viewport Inventory/0
+legacy|coordinate hit Inventory/0 actual=DXItemCell
+legacy|input did not fault startup session
+legacy|OnMouseMove does not fault startup
+legacy|OnMouseUp does not fault startup
+legacy|moving/releasing selected item retains click selection
+legacy|selected item held move/release emits nothing
+legacy|click target visible/enabled DXItemCell/48
+legacy|click target inside viewport Inventory/48
+legacy|coordinate hit Inventory/48 actual=DXItemCell
+legacy|input did not fault startup session
+legacy|one expected packet ItemMove
+legacy|no duplicate packet ItemMove
+legacy|next actual click transfers to destination
+legacy|click target visible/enabled DXItemCell/48
+legacy|click target inside viewport Inventory/48
+legacy|coordinate hit Inventory/48 actual=DXItemCell
+legacy|input did not fault startup session
+legacy|click target visible/enabled DXItemCell/48
+legacy|click target inside viewport Inventory/48
+legacy|coordinate hit Inventory/48 actual=DXItemCell
+legacy|input did not fault startup session
+legacy|right button cancels selection without using selected item
+legacy|selection cancel no use/drop
+legacy|click target visible/enabled DXItemCell/0
+legacy|click target inside viewport Inventory/0
+legacy|coordinate hit Inventory/0 actual=DXItemCell
+legacy|input did not fault startup session
+legacy|OnMouseMove does not fault startup
+legacy|map target is original map control
+legacy|OnMouseDown does not fault startup
+legacy|OnMouseUp does not fault startup
+legacy|release clears held map buttons
+legacy|one expected packet ItemDrop
+legacy|no duplicate packet ItemDrop
+legacy|exact original drop ID/count 0
+legacy|drop pending locks without speculative removal 0
+legacy|drop rejection unlocks and retains identity/count 0
+legacy|click target visible/enabled DXItemCell/1
+legacy|click target inside viewport Inventory/1
+legacy|coordinate hit Inventory/1 actual=DXItemCell
+legacy|input did not fault startup session
+legacy|OnMouseMove does not fault startup
+legacy|map target is original map control
+legacy|OnMouseDown does not fault startup
+legacy|OnMouseUp does not fault startup
+legacy|release clears held map buttons
+legacy|one expected packet ItemDrop
+legacy|no duplicate packet ItemDrop
+legacy|exact original drop ID/count 1
+legacy|drop pending locks without speculative removal 1
+legacy|drop rejection unlocks and retains identity/count 1
+legacy|click target visible/enabled DXItemCell/2
+legacy|click target inside viewport Inventory/2
+legacy|coordinate hit Inventory/2 actual=DXItemCell
+legacy|input did not fault startup session
+legacy|OnMouseMove does not fault startup
+legacy|map target is original map control
+legacy|OnMouseDown does not fault startup
+legacy|OnMouseUp does not fault startup
+legacy|release clears held map buttons
+legacy|one expected packet ItemDrop
+legacy|no duplicate packet ItemDrop
+legacy|exact original drop ID/count 2
+legacy|drop pending locks without speculative removal 2
+legacy|drop rejection unlocks and retains identity/count 2
+legacy|click target visible/enabled DXItemCell/3
+legacy|click target inside viewport Inventory/3
+legacy|coordinate hit Inventory/3 actual=DXItemCell
+legacy|input did not fault startup session
+legacy|OnMouseMove does not fault startup
+legacy|map target is original map control
+legacy|OnMouseDown does not fault startup
+legacy|OnMouseUp does not fault startup
+legacy|release clears held map buttons
+legacy|one expected packet ItemDrop
+legacy|no duplicate packet ItemDrop
+legacy|exact original drop ID/count 3
+legacy|drop pending locks without speculative removal 3
+legacy|drop rejection unlocks and retains identity/count 3
+legacy|click target visible/enabled DXItemCell/4
+legacy|click target inside viewport Inventory/4
+legacy|coordinate hit Inventory/4 actual=DXItemCell
+legacy|input did not fault startup session
+legacy|OnMouseMove does not fault startup
+legacy|map target is original map control
+legacy|OnMouseDown does not fault startup
+legacy|OnMouseUp does not fault startup
+legacy|release clears held map buttons
+legacy|one expected packet ItemDrop
+legacy|no duplicate packet ItemDrop
+legacy|exact original drop ID/count 4
+legacy|drop pending locks without speculative removal 4
+legacy|drop rejection unlocks and retains identity/count 4
+legacy|click target visible/enabled DXItemCell/5
+legacy|click target inside viewport Inventory/5
+legacy|coordinate hit Inventory/5 actual=DXItemCell
+legacy|input did not fault startup session
+legacy|OnMouseMove does not fault startup
+legacy|map target is original map control
+legacy|OnMouseDown does not fault startup
+legacy|OnMouseUp does not fault startup
+legacy|release clears held map buttons
+legacy|one expected packet ItemDrop
+legacy|no duplicate packet ItemDrop
+legacy|exact original drop ID/count 5
+legacy|drop pending locks without speculative removal 5
+legacy|drop rejection unlocks and retains identity/count 5
+legacy|click target visible/enabled DXItemCell/6
+legacy|click target inside viewport Inventory/6
+legacy|coordinate hit Inventory/6 actual=DXItemCell
+legacy|input did not fault startup session
+legacy|OnMouseMove does not fault startup
+legacy|map target is original map control
+legacy|OnMouseDown does not fault startup
+legacy|OnMouseUp does not fault startup
+legacy|release clears held map buttons
+legacy|one expected packet ItemDrop
+legacy|no duplicate packet ItemDrop
+legacy|exact original drop ID/count 6
+legacy|drop pending locks without speculative removal 6
+legacy|drop rejection unlocks and retains identity/count 6
+legacy|click target visible/enabled DXItemCell/7
+legacy|click target inside viewport Inventory/7
+legacy|coordinate hit Inventory/7 actual=DXItemCell
+legacy|input did not fault startup session
+legacy|OnMouseMove does not fault startup
+legacy|map target is original map control
+legacy|OnMouseDown does not fault startup
+legacy|OnMouseUp does not fault startup
+legacy|release clears held map buttons
+legacy|one expected packet ItemDrop
+legacy|no duplicate packet ItemDrop
+legacy|exact original drop ID/count 7
+legacy|drop pending locks without speculative removal 7
+legacy|drop rejection unlocks and retains identity/count 7
+legacy|click target visible/enabled DXItemCell/8
+legacy|click target inside viewport Inventory/8
+legacy|coordinate hit Inventory/8 actual=DXItemCell
+legacy|input did not fault startup session
+legacy|OnMouseMove does not fault startup
+legacy|map target is original map control
+legacy|OnMouseDown does not fault startup
+legacy|OnMouseUp does not fault startup
+legacy|release clears held map buttons
+legacy|one expected packet ItemDrop
+legacy|no duplicate packet ItemDrop
+legacy|exact original drop ID/count 8
+legacy|drop pending locks without speculative removal 8
+legacy|drop rejection unlocks and retains identity/count 8
+legacy|click target visible/enabled DXItemCell/9
+legacy|click target inside viewport Inventory/9
+legacy|coordinate hit Inventory/9 actual=DXItemCell
+legacy|input did not fault startup session
+legacy|OnMouseMove does not fault startup
+legacy|map target is original map control
+legacy|OnMouseDown does not fault startup
+legacy|OnMouseUp does not fault startup
+legacy|release clears held map buttons
+legacy|one expected packet ItemDrop
+legacy|no duplicate packet ItemDrop
+legacy|exact original drop ID/count 9
+legacy|drop pending locks without speculative removal 9
+legacy|drop rejection unlocks and retains identity/count 9
+legacy|click target visible/enabled DXItemCell/10
+legacy|click target inside viewport Inventory/10
+legacy|coordinate hit Inventory/10 actual=DXItemCell
+legacy|input did not fault startup session
+legacy|OnMouseMove does not fault startup
+legacy|map target is original map control
+legacy|OnMouseDown does not fault startup
+legacy|OnMouseUp does not fault startup
+legacy|release clears held map buttons
+legacy|one expected packet ItemDrop
+legacy|no duplicate packet ItemDrop
+legacy|exact original drop ID/count 10
+legacy|drop pending locks without speculative removal 10
+legacy|drop rejection unlocks and retains identity/count 10
+legacy|click target visible/enabled DXItemCell/11
+legacy|click target inside viewport Inventory/11
+legacy|coordinate hit Inventory/11 actual=DXItemCell
+legacy|input did not fault startup session
+legacy|OnMouseMove does not fault startup
+legacy|map target is original map control
+legacy|OnMouseDown does not fault startup
+legacy|OnMouseUp does not fault startup
+legacy|release clears held map buttons
+legacy|one expected packet ItemDrop
+legacy|no duplicate packet ItemDrop
+legacy|exact original drop ID/count 11
+legacy|drop pending locks without speculative removal 11
+legacy|drop rejection unlocks and retains identity/count 11
+legacy|click target visible/enabled DXItemCell/12
+legacy|click target inside viewport Inventory/12
+legacy|coordinate hit Inventory/12 actual=DXItemCell
+legacy|input did not fault startup session
+legacy|OnMouseMove does not fault startup
+legacy|map target is original map control
+legacy|OnMouseDown does not fault startup
+legacy|OnMouseUp does not fault startup
+legacy|release clears held map buttons
+legacy|one expected packet ItemDrop
+legacy|no duplicate packet ItemDrop
+legacy|exact original drop ID/count 12
+legacy|drop pending locks without speculative removal 12
+legacy|drop rejection unlocks and retains identity/count 12
+legacy|click target visible/enabled DXItemCell/13
+legacy|click target inside viewport Inventory/13
+legacy|coordinate hit Inventory/13 actual=DXItemCell
+legacy|input did not fault startup session
+legacy|OnMouseMove does not fault startup
+legacy|map target is original map control
+legacy|OnMouseDown does not fault startup
+legacy|OnMouseUp does not fault startup
+legacy|release clears held map buttons
+legacy|one expected packet ItemDrop
+legacy|no duplicate packet ItemDrop
+legacy|exact original drop ID/count 13
+legacy|drop pending locks without speculative removal 13
+legacy|drop rejection unlocks and retains identity/count 13
+legacy|click target visible/enabled DXItemCell/14
+legacy|click target inside viewport Inventory/14
+legacy|coordinate hit Inventory/14 actual=DXItemCell
+legacy|input did not fault startup session
+legacy|OnMouseMove does not fault startup
+legacy|map target is original map control
+legacy|OnMouseDown does not fault startup
+legacy|OnMouseUp does not fault startup
+legacy|release clears held map buttons
+legacy|one expected packet ItemDrop
+legacy|no duplicate packet ItemDrop
+legacy|exact original drop ID/count 14
+legacy|drop pending locks without speculative removal 14
+legacy|drop rejection unlocks and retains identity/count 14
+legacy|click target visible/enabled DXItemCell/15
+legacy|click target inside viewport Inventory/15
+legacy|coordinate hit Inventory/15 actual=DXItemCell
+legacy|input did not fault startup session
+legacy|OnMouseMove does not fault startup
+legacy|map target is original map control
+legacy|OnMouseDown does not fault startup
+legacy|OnMouseUp does not fault startup
+legacy|release clears held map buttons
+legacy|one expected packet ItemDrop
+legacy|no duplicate packet ItemDrop
+legacy|exact original drop ID/count 15
+legacy|drop pending locks without speculative removal 15
+legacy|drop rejection unlocks and retains identity/count 15
+legacy|click target visible/enabled DXItemCell/16
+legacy|click target inside viewport Inventory/16
+legacy|coordinate hit Inventory/16 actual=DXItemCell
+legacy|input did not fault startup session
+legacy|OnMouseMove does not fault startup
+legacy|map target is original map control
+legacy|OnMouseDown does not fault startup
+legacy|OnMouseUp does not fault startup
+legacy|release clears held map buttons
+legacy|one expected packet ItemDrop
+legacy|no duplicate packet ItemDrop
+legacy|exact original drop ID/count 16
+legacy|drop pending locks without speculative removal 16
+legacy|drop rejection unlocks and retains identity/count 16
+legacy|click target visible/enabled DXItemCell/17
+legacy|click target inside viewport Inventory/17
+legacy|coordinate hit Inventory/17 actual=DXItemCell
+legacy|input did not fault startup session
+legacy|OnMouseMove does not fault startup
+legacy|map target is original map control
+legacy|OnMouseDown does not fault startup
+legacy|OnMouseUp does not fault startup
+legacy|release clears held map buttons
+legacy|one expected packet ItemDrop
+legacy|no duplicate packet ItemDrop
+legacy|exact original drop ID/count 17
+legacy|drop pending locks without speculative removal 17
+legacy|drop rejection unlocks and retains identity/count 17
+legacy|click target visible/enabled DXItemCell/18
+legacy|click target inside viewport Inventory/18
+legacy|coordinate hit Inventory/18 actual=DXItemCell
+legacy|input did not fault startup session
+legacy|OnMouseMove does not fault startup
+legacy|map target is original map control
+legacy|OnMouseDown does not fault startup
+legacy|OnMouseUp does not fault startup
+legacy|release clears held map buttons
+legacy|one expected packet ItemDrop
+legacy|no duplicate packet ItemDrop
+legacy|exact original drop ID/count 18
+legacy|drop pending locks without speculative removal 18
+legacy|drop rejection unlocks and retains identity/count 18
+legacy|click target visible/enabled DXItemCell/19
+legacy|click target inside viewport Inventory/19
+legacy|coordinate hit Inventory/19 actual=DXItemCell
+legacy|input did not fault startup session
+legacy|OnMouseMove does not fault startup
+legacy|map target is original map control
+legacy|OnMouseDown does not fault startup
+legacy|OnMouseUp does not fault startup
+legacy|release clears held map buttons
+legacy|one expected packet ItemDrop
+legacy|no duplicate packet ItemDrop
+legacy|exact original drop ID/count 19
+legacy|drop pending locks without speculative removal 19
+legacy|drop rejection unlocks and retains identity/count 19
+legacy|click target visible/enabled DXItemCell/20
+legacy|click target inside viewport Inventory/20
+legacy|coordinate hit Inventory/20 actual=DXItemCell
+legacy|input did not fault startup session
+legacy|OnMouseMove does not fault startup
+legacy|map target is original map control
+legacy|OnMouseDown does not fault startup
+legacy|OnMouseUp does not fault startup
+legacy|release clears held map buttons
+legacy|one expected packet ItemDrop
+legacy|no duplicate packet ItemDrop
+legacy|exact original drop ID/count 20
+legacy|drop pending locks without speculative removal 20
+legacy|drop rejection unlocks and retains identity/count 20
+legacy|click target visible/enabled DXItemCell/21
+legacy|click target inside viewport Inventory/21
+legacy|coordinate hit Inventory/21 actual=DXItemCell
+legacy|input did not fault startup session
+legacy|OnMouseMove does not fault startup
+legacy|map target is original map control
+legacy|OnMouseDown does not fault startup
+legacy|OnMouseUp does not fault startup
+legacy|release clears held map buttons
+legacy|one expected packet ItemDrop
+legacy|no duplicate packet ItemDrop
+legacy|exact original drop ID/count 21
+legacy|drop pending locks without speculative removal 21
+legacy|drop rejection unlocks and retains identity/count 21
+legacy|click target visible/enabled DXItemCell/22
+legacy|click target inside viewport Inventory/22
+legacy|coordinate hit Inventory/22 actual=DXItemCell
+legacy|input did not fault startup session
+legacy|OnMouseMove does not fault startup
+legacy|map target is original map control
+legacy|OnMouseDown does not fault startup
+legacy|OnMouseUp does not fault startup
+legacy|release clears held map buttons
+legacy|one expected packet ItemDrop
+legacy|no duplicate packet ItemDrop
+legacy|exact original drop ID/count 22
+legacy|drop pending locks without speculative removal 22
+legacy|drop rejection unlocks and retains identity/count 22
+legacy|click target visible/enabled DXItemCell/23
+legacy|click target inside viewport Inventory/23
+legacy|coordinate hit Inventory/23 actual=DXItemCell
+legacy|input did not fault startup session
+legacy|OnMouseMove does not fault startup
+legacy|map target is original map control
+legacy|OnMouseDown does not fault startup
+legacy|OnMouseUp does not fault startup
+legacy|release clears held map buttons
+legacy|one expected packet ItemDrop
+legacy|no duplicate packet ItemDrop
+legacy|exact original drop ID/count 23
+legacy|drop pending locks without speculative removal 23
+legacy|drop rejection unlocks and retains identity/count 23
+legacy|click target visible/enabled DXItemCell/24
+legacy|click target inside viewport Inventory/24
+legacy|coordinate hit Inventory/24 actual=DXItemCell
+legacy|input did not fault startup session
+legacy|OnMouseMove does not fault startup
+legacy|map target is original map control
+legacy|OnMouseDown does not fault startup
+legacy|OnMouseUp does not fault startup
+legacy|release clears held map buttons
+legacy|one expected packet ItemDrop
+legacy|no duplicate packet ItemDrop
+legacy|exact original drop ID/count 24
+legacy|drop pending locks without speculative removal 24
+legacy|drop rejection unlocks and retains identity/count 24
+legacy|click target visible/enabled DXItemCell/25
+legacy|click target inside viewport Inventory/25
+legacy|coordinate hit Inventory/25 actual=DXItemCell
+legacy|input did not fault startup session
+legacy|OnMouseMove does not fault startup
+legacy|map target is original map control
+legacy|OnMouseDown does not fault startup
+legacy|OnMouseUp does not fault startup
+legacy|release clears held map buttons
+legacy|one expected packet ItemDrop
+legacy|no duplicate packet ItemDrop
+legacy|exact original drop ID/count 25
+legacy|drop pending locks without speculative removal 25
+legacy|drop rejection unlocks and retains identity/count 25
+legacy|click target visible/enabled DXItemCell/26
+legacy|click target inside viewport Inventory/26
+legacy|coordinate hit Inventory/26 actual=DXItemCell
+legacy|input did not fault startup session
+legacy|OnMouseMove does not fault startup
+legacy|map target is original map control
+legacy|OnMouseDown does not fault startup
+legacy|OnMouseUp does not fault startup
+legacy|release clears held map buttons
+legacy|one expected packet ItemDrop
+legacy|no duplicate packet ItemDrop
+legacy|exact original drop ID/count 26
+legacy|drop pending locks without speculative removal 26
+legacy|drop rejection unlocks and retains identity/count 26
+legacy|click target visible/enabled DXItemCell/27
+legacy|click target inside viewport Inventory/27
+legacy|coordinate hit Inventory/27 actual=DXItemCell
+legacy|input did not fault startup session
+legacy|OnMouseMove does not fault startup
+legacy|map target is original map control
+legacy|OnMouseDown does not fault startup
+legacy|OnMouseUp does not fault startup
+legacy|release clears held map buttons
+legacy|one expected packet ItemDrop
+legacy|no duplicate packet ItemDrop
+legacy|exact original drop ID/count 27
+legacy|drop pending locks without speculative removal 27
+legacy|drop rejection unlocks and retains identity/count 27
+legacy|click target visible/enabled DXItemCell/28
+legacy|click target inside viewport Inventory/28
+legacy|coordinate hit Inventory/28 actual=DXItemCell
+legacy|input did not fault startup session
+legacy|OnMouseMove does not fault startup
+legacy|map target is original map control
+legacy|OnMouseDown does not fault startup
+legacy|OnMouseUp does not fault startup
+legacy|release clears held map buttons
+legacy|one expected packet ItemDrop
+legacy|no duplicate packet ItemDrop
+legacy|exact original drop ID/count 28
+legacy|drop pending locks without speculative removal 28
+legacy|drop rejection unlocks and retains identity/count 28
+legacy|click target visible/enabled DXItemCell/29
+legacy|click target inside viewport Inventory/29
+legacy|coordinate hit Inventory/29 actual=DXItemCell
+legacy|input did not fault startup session
+legacy|OnMouseMove does not fault startup
+legacy|map target is original map control
+legacy|OnMouseDown does not fault startup
+legacy|OnMouseUp does not fault startup
+legacy|release clears held map buttons
+legacy|one expected packet ItemDrop
+legacy|no duplicate packet ItemDrop
+legacy|exact original drop ID/count 29
+legacy|drop pending locks without speculative removal 29
+legacy|drop rejection unlocks and retains identity/count 29
+legacy|click target visible/enabled DXItemCell/30
+legacy|click target inside viewport Inventory/30
+legacy|coordinate hit Inventory/30 actual=DXItemCell
+legacy|input did not fault startup session
+legacy|OnMouseMove does not fault startup
+legacy|map target is original map control
+legacy|OnMouseDown does not fault startup
+legacy|OnMouseUp does not fault startup
+legacy|release clears held map buttons
+legacy|one expected packet ItemDrop
+legacy|no duplicate packet ItemDrop
+legacy|exact original drop ID/count 30
+legacy|drop pending locks without speculative removal 30
+legacy|drop rejection unlocks and retains identity/count 30
+legacy|click target visible/enabled DXItemCell/31
+legacy|click target inside viewport Inventory/31
+legacy|coordinate hit Inventory/31 actual=DXItemCell
+legacy|input did not fault startup session
+legacy|OnMouseMove does not fault startup
+legacy|map target is original map control
+legacy|OnMouseDown does not fault startup
+legacy|OnMouseUp does not fault startup
+legacy|release clears held map buttons
+legacy|one expected packet ItemDrop
+legacy|no duplicate packet ItemDrop
+legacy|exact original drop ID/count 31
+legacy|drop pending locks without speculative removal 31
+legacy|drop rejection unlocks and retains identity/count 31
+legacy|click target visible/enabled DXItemCell/32
+legacy|click target inside viewport Inventory/32
+legacy|coordinate hit Inventory/32 actual=DXItemCell
+legacy|input did not fault startup session
+legacy|OnMouseMove does not fault startup
+legacy|map target is original map control
+legacy|OnMouseDown does not fault startup
+legacy|OnMouseUp does not fault startup
+legacy|release clears held map buttons
+legacy|one expected packet ItemDrop
+legacy|no duplicate packet ItemDrop
+legacy|exact original drop ID/count 32
+legacy|drop pending locks without speculative removal 32
+legacy|drop rejection unlocks and retains identity/count 32
+legacy|click target visible/enabled DXItemCell/33
+legacy|click target inside viewport Inventory/33
+legacy|coordinate hit Inventory/33 actual=DXItemCell
+legacy|input did not fault startup session
+legacy|OnMouseMove does not fault startup
+legacy|map target is original map control
+legacy|OnMouseDown does not fault startup
+legacy|OnMouseUp does not fault startup
+legacy|release clears held map buttons
+legacy|one expected packet ItemDrop
+legacy|no duplicate packet ItemDrop
+legacy|exact original drop ID/count 33
+legacy|drop pending locks without speculative removal 33
+legacy|drop rejection unlocks and retains identity/count 33
+legacy|click target visible/enabled DXItemCell/34
+legacy|click target inside viewport Inventory/34
+legacy|coordinate hit Inventory/34 actual=DXItemCell
+legacy|input did not fault startup session
+legacy|OnMouseMove does not fault startup
+legacy|map target is original map control
+legacy|OnMouseDown does not fault startup
+legacy|OnMouseUp does not fault startup
+legacy|release clears held map buttons
+legacy|one expected packet ItemDrop
+legacy|no duplicate packet ItemDrop
+legacy|exact original drop ID/count 34
+legacy|drop pending locks without speculative removal 34
+legacy|drop rejection unlocks and retains identity/count 34
+legacy|click target visible/enabled DXItemCell/35
+legacy|click target inside viewport Inventory/35
+legacy|coordinate hit Inventory/35 actual=DXItemCell
+legacy|input did not fault startup session
+legacy|OnMouseMove does not fault startup
+legacy|map target is original map control
+legacy|OnMouseDown does not fault startup
+legacy|OnMouseUp does not fault startup
+legacy|release clears held map buttons
+legacy|one expected packet ItemDrop
+legacy|no duplicate packet ItemDrop
+legacy|exact original drop ID/count 35
+legacy|drop pending locks without speculative removal 35
+legacy|drop rejection unlocks and retains identity/count 35
+legacy|click target visible/enabled DXItemCell/36
+legacy|click target inside viewport Inventory/36
+legacy|coordinate hit Inventory/36 actual=DXItemCell
+legacy|input did not fault startup session
+legacy|OnMouseMove does not fault startup
+legacy|map target is original map control
+legacy|OnMouseDown does not fault startup
+legacy|OnMouseUp does not fault startup
+legacy|release clears held map buttons
+legacy|one expected packet ItemDrop
+legacy|no duplicate packet ItemDrop
+legacy|exact original drop ID/count 36
+legacy|drop pending locks without speculative removal 36
+legacy|drop rejection unlocks and retains identity/count 36
+legacy|click target visible/enabled DXItemCell/37
+legacy|click target inside viewport Inventory/37
+legacy|coordinate hit Inventory/37 actual=DXItemCell
+legacy|input did not fault startup session
+legacy|OnMouseMove does not fault startup
+legacy|map target is original map control
+legacy|OnMouseDown does not fault startup
+legacy|OnMouseUp does not fault startup
+legacy|release clears held map buttons
+legacy|one expected packet ItemDrop
+legacy|no duplicate packet ItemDrop
+legacy|exact original drop ID/count 37
+legacy|drop pending locks without speculative removal 37
+legacy|drop rejection unlocks and retains identity/count 37
+legacy|click target visible/enabled DXItemCell/38
+legacy|click target inside viewport Inventory/38
+legacy|coordinate hit Inventory/38 actual=DXItemCell
+legacy|input did not fault startup session
+legacy|OnMouseMove does not fault startup
+legacy|map target is original map control
+legacy|OnMouseDown does not fault startup
+legacy|OnMouseUp does not fault startup
+legacy|release clears held map buttons
+legacy|one expected packet ItemDrop
+legacy|no duplicate packet ItemDrop
+legacy|exact original drop ID/count 38
+legacy|drop pending locks without speculative removal 38
+legacy|drop rejection unlocks and retains identity/count 38
+legacy|click target visible/enabled DXItemCell/39
+legacy|click target inside viewport Inventory/39
+legacy|coordinate hit Inventory/39 actual=DXItemCell
+legacy|input did not fault startup session
+legacy|OnMouseMove does not fault startup
+legacy|map target is original map control
+legacy|OnMouseDown does not fault startup
+legacy|OnMouseUp does not fault startup
+legacy|release clears held map buttons
+legacy|one expected packet ItemDrop
+legacy|no duplicate packet ItemDrop
+legacy|exact original drop ID/count 39
+legacy|drop pending locks without speculative removal 39
+legacy|drop rejection unlocks and retains identity/count 39
+legacy|click target visible/enabled DXItemCell/40
+legacy|click target inside viewport Inventory/40
+legacy|coordinate hit Inventory/40 actual=DXItemCell
+legacy|input did not fault startup session
+legacy|OnMouseMove does not fault startup
+legacy|map target is original map control
+legacy|OnMouseDown does not fault startup
+legacy|OnMouseUp does not fault startup
+legacy|release clears held map buttons
+legacy|one expected packet ItemDrop
+legacy|no duplicate packet ItemDrop
+legacy|exact original drop ID/count 40
+legacy|drop pending locks without speculative removal 40
+legacy|drop rejection unlocks and retains identity/count 40
+legacy|click target visible/enabled DXItemCell/41
+legacy|click target inside viewport Inventory/41
+legacy|coordinate hit Inventory/41 actual=DXItemCell
+legacy|input did not fault startup session
+legacy|OnMouseMove does not fault startup
+legacy|map target is original map control
+legacy|OnMouseDown does not fault startup
+legacy|OnMouseUp does not fault startup
+legacy|release clears held map buttons
+legacy|one expected packet ItemDrop
+legacy|no duplicate packet ItemDrop
+legacy|exact original drop ID/count 41
+legacy|drop pending locks without speculative removal 41
+legacy|drop rejection unlocks and retains identity/count 41
+legacy|click target visible/enabled DXItemCell/42
+legacy|click target inside viewport Inventory/42
+legacy|coordinate hit Inventory/42 actual=DXItemCell
+legacy|input did not fault startup session
+legacy|OnMouseMove does not fault startup
+legacy|map target is original map control
+legacy|OnMouseDown does not fault startup
+legacy|OnMouseUp does not fault startup
+legacy|release clears held map buttons
+legacy|one expected packet ItemDrop
+legacy|no duplicate packet ItemDrop
+legacy|exact original drop ID/count 42
+legacy|drop pending locks without speculative removal 42
+legacy|drop rejection unlocks and retains identity/count 42
+legacy|click target visible/enabled DXItemCell/43
+legacy|click target inside viewport Inventory/43
+legacy|coordinate hit Inventory/43 actual=DXItemCell
+legacy|input did not fault startup session
+legacy|OnMouseMove does not fault startup
+legacy|map target is original map control
+legacy|OnMouseDown does not fault startup
+legacy|OnMouseUp does not fault startup
+legacy|release clears held map buttons
+legacy|one expected packet ItemDrop
+legacy|no duplicate packet ItemDrop
+legacy|exact original drop ID/count 43
+legacy|drop pending locks without speculative removal 43
+legacy|drop rejection unlocks and retains identity/count 43
+legacy|click target visible/enabled DXItemCell/44
+legacy|click target inside viewport Inventory/44
+legacy|coordinate hit Inventory/44 actual=DXItemCell
+legacy|input did not fault startup session
+legacy|OnMouseMove does not fault startup
+legacy|map target is original map control
+legacy|OnMouseDown does not fault startup
+legacy|OnMouseUp does not fault startup
+legacy|release clears held map buttons
+legacy|one expected packet ItemDrop
+legacy|no duplicate packet ItemDrop
+legacy|exact original drop ID/count 44
+legacy|drop pending locks without speculative removal 44
+legacy|drop rejection unlocks and retains identity/count 44
+legacy|click target visible/enabled DXItemCell/45
+legacy|click target inside viewport Inventory/45
+legacy|coordinate hit Inventory/45 actual=DXItemCell
+legacy|input did not fault startup session
+legacy|OnMouseMove does not fault startup
+legacy|map target is original map control
+legacy|OnMouseDown does not fault startup
+legacy|OnMouseUp does not fault startup
+legacy|release clears held map buttons
+legacy|one expected packet ItemDrop
+legacy|no duplicate packet ItemDrop
+legacy|exact original drop ID/count 45
+legacy|drop pending locks without speculative removal 45
+legacy|drop rejection unlocks and retains identity/count 45
+legacy|click target visible/enabled DXItemCell/46
+legacy|click target inside viewport Inventory/46
+legacy|coordinate hit Inventory/46 actual=DXItemCell
+legacy|input did not fault startup session
+legacy|OnMouseMove does not fault startup
+legacy|map target is original map control
+legacy|OnMouseDown does not fault startup
+legacy|OnMouseUp does not fault startup
+legacy|release clears held map buttons
+legacy|one expected packet ItemDrop
+legacy|no duplicate packet ItemDrop
+legacy|exact original drop ID/count 46
+legacy|drop pending locks without speculative removal 46
+legacy|drop rejection unlocks and retains identity/count 46
+legacy|click target visible/enabled DXItemCell/47
+legacy|click target inside viewport Inventory/47
+legacy|coordinate hit Inventory/47 actual=DXItemCell
+legacy|input did not fault startup session
+legacy|OnMouseMove does not fault startup
+legacy|map target is original map control
+legacy|OnMouseDown does not fault startup
+legacy|OnMouseUp does not fault startup
+legacy|release clears held map buttons
+legacy|one expected packet ItemDrop
+legacy|no duplicate packet ItemDrop
+legacy|exact original drop ID/count 47
+legacy|drop pending locks without speculative removal 47
+legacy|drop rejection unlocks and retains identity/count 47
+legacy|click target visible/enabled DXItemCell/48
+legacy|click target inside viewport Inventory/48
+legacy|coordinate hit Inventory/48 actual=DXItemCell
+legacy|input did not fault startup session
+legacy|OnMouseMove does not fault startup
+legacy|map target is original map control
+legacy|OnMouseDown does not fault startup
+legacy|OnMouseUp does not fault startup
+legacy|release clears held map buttons
+legacy|one expected packet ItemDrop
+legacy|no duplicate packet ItemDrop
+legacy|exact original drop ID/count 48
+legacy|drop pending locks without speculative removal 48
+legacy|drop rejection unlocks and retains identity/count 48
+legacy|click target visible/enabled DXItemCell/48
+legacy|click target inside viewport Inventory/48
+legacy|coordinate hit Inventory/48 actual=DXItemCell
+legacy|input did not fault startup session
+legacy|OnMouseMove does not fault startup
+legacy|map target is original map control
+legacy|OnMouseDown does not fault startup
+legacy|OnMouseUp does not fault startup
+legacy|release clears held map buttons
+legacy|one expected packet ItemDrop
+legacy|no duplicate packet ItemDrop
+legacy|authoritative remaining count applied
+legacy|click target visible/enabled DXItemCell/48
+legacy|click target inside viewport Inventory/48
+legacy|coordinate hit Inventory/48 actual=DXItemCell
+legacy|input did not fault startup session
+legacy|OnMouseMove does not fault startup
+legacy|map target is original map control
+legacy|OnMouseDown does not fault startup
+legacy|OnMouseUp does not fault startup
+legacy|release clears held map buttons
+legacy|one expected packet ItemDrop
+legacy|no duplicate packet ItemDrop
+legacy|repeat drop uses authoritative remaining count
+legacy|accepted full drop empties/unlocks cell
+legacy|click target visible/enabled DXItemCell/0
+legacy|click target inside viewport Inventory/0
+legacy|coordinate hit Inventory/0 actual=DXItemCell
+legacy|input did not fault startup session
+legacy|OnMouseMove does not fault startup
+legacy|map target is original map control
+legacy|OnMouseDown does not fault startup
+legacy|OnMouseUp does not fault startup
+legacy|release clears held map buttons
+legacy|flag-locked item refuses map drop
+legacy|flag-locked item no drop
+legacy|click target visible/enabled DXItemCell/0
+legacy|click target inside viewport Equipment/0
+legacy|coordinate hit Equipment/0 actual=DXItemCell
+legacy|input did not fault startup session
+legacy|OnMouseMove does not fault startup
+legacy|map target is original map control
+legacy|OnMouseDown does not fault startup
+legacy|OnMouseUp does not fault startup
+legacy|release clears held map buttons
+legacy|equipped item refuses direct map drop
+legacy|equipment cannot bypass unequip
+legacy|click target visible/enabled DXItemCell/0
+legacy|click target inside viewport Inventory/0
+legacy|coordinate hit Inventory/0 actual=DXItemCell
+legacy|input did not fault startup session
+legacy|click target visible/enabled DXItemCell/0
+legacy|click target inside viewport Belt/0
+legacy|coordinate hit Belt/0 actual=DXItemCell
+legacy|input did not fault startup session
+legacy|one expected packet BeltLinkChanged
+legacy|no duplicate packet BeltLinkChanged
+legacy|click target visible/enabled DXItemCell/0
+legacy|click target inside viewport Belt/0
+legacy|coordinate hit Belt/0 actual=DXItemCell
+legacy|input did not fault startup session
+legacy|OnMouseMove does not fault startup
+legacy|map target is original map control
+legacy|OnMouseDown does not fault startup
+legacy|OnMouseUp does not fault startup
+legacy|release clears held map buttons
+legacy|one expected packet BeltLinkChanged
+legacy|no duplicate packet BeltLinkChanged
+legacy|belt map drop only clears link
+legacy|belt unlink retains bag identity/count/unlocked
+legacy|click target visible/enabled DXLabel/
+legacy|click target inside viewport /
+legacy|coordinate hit / actual=DXLabel
+legacy|input did not fault startup session
+legacy|gold label selects positive gold
+legacy|click target visible/enabled DXLabel/
+legacy|click target inside viewport /
+legacy|coordinate hit / actual=DXLabel
+legacy|input did not fault startup session
+legacy|right button cancels gold selection
+legacy|gold selection/cancel local only
+legacy|click target visible/enabled DXLabel/
+legacy|click target inside viewport /
+legacy|coordinate hit / actual=DXLabel
+legacy|input did not fault startup session
+legacy|OnMouseMove does not fault startup
+legacy|map target is original map control
+legacy|OnMouseDown does not fault startup
+legacy|OnMouseUp does not fault startup
+legacy|release clears held map buttons
+legacy|original amount window and max gold retained
+legacy|gold popup opening sends nothing
+legacy|click target visible/enabled DXButton/
+legacy|click target inside viewport /
+legacy|coordinate hit / actual=DXButton
+legacy|input did not fault startup session
+legacy|gold popup close cancels
+legacy|gold close does not deduct
+legacy|click target visible/enabled DXLabel/
+legacy|click target inside viewport /
+legacy|coordinate hit / actual=DXLabel
+legacy|input did not fault startup session
+legacy|OnMouseMove does not fault startup
+legacy|map target is original map control
+legacy|OnMouseDown does not fault startup
+legacy|OnMouseUp does not fault startup
+legacy|release clears held map buttons
+legacy|zero gold confirmation disabled
+legacy|click target visible/enabled DXButton/
+legacy|click target inside viewport /
+legacy|coordinate hit / actual=DXButton
+legacy|input did not fault startup session
+legacy|one expected packet GoldDrop
+legacy|no duplicate packet GoldDrop
+legacy|confirm sends exact gold without speculative deduction
+legacy|gold response applies authoritative total
+legacy|click target visible/enabled DXLabel/
+legacy|click target inside viewport /
+legacy|coordinate hit / actual=DXLabel
+legacy|input did not fault startup session
+legacy|zero balance cannot pick up gold
+legacy|zero balance no request
+legacy|click target visible/enabled DXButton/
+legacy|click target inside viewport /
+legacy|coordinate hit / actual=DXButton
+legacy|input did not fault startup session
+legacy|button opens same original unskinned popup RemoteSellButton
+legacy|opened popup fits viewport RemoteSellButton bounds={X=0,Y=377,Width=264,Height=342}
+legacy|preserve preferred position except viewport overflow RemoteSellButton
+legacy|popup opening does not submit item operation RemoteSellButton
+legacy|OnMouseMove does not fault startup
+legacy|click target visible/enabled DXButton/
+legacy|click target inside viewport /
+legacy|coordinate hit / actual=DXButton
+legacy|input did not fault startup session
+legacy|popup close retains original object RemoteSellButton
+legacy|popup close no item submission RemoteSellButton
+legacy|click target visible/enabled DXButton/
+legacy|click target inside viewport /
+legacy|coordinate hit / actual=DXButton
+legacy|input did not fault startup session
+legacy|button opens same original unskinned popup RemoteFragmentButton
+legacy|opened popup fits viewport RemoteFragmentButton bounds={X=0,Y=377,Width=264,Height=202}
+legacy|preserve preferred position except viewport overflow RemoteFragmentButton
+legacy|popup opening does not submit item operation RemoteFragmentButton
+legacy|OnMouseMove does not fault startup
+legacy|click target visible/enabled DXButton/
+legacy|click target inside viewport /
+legacy|coordinate hit / actual=DXButton
+legacy|input did not fault startup session
+legacy|popup close retains original object RemoteFragmentButton
+legacy|popup close no item submission RemoteFragmentButton
+legacy|click target visible/enabled DXButton/
+legacy|click target inside viewport /
+legacy|coordinate hit / actual=DXButton
+legacy|input did not fault startup session
+legacy|button opens same original unskinned popup MonsterDropListButton
+legacy|opened popup fits viewport MonsterDropListButton bounds={X=500,Y=372,Width=368,Height=396}
+legacy|preserve preferred position except viewport overflow MonsterDropListButton
+legacy|popup opening does not submit item operation MonsterDropListButton
+legacy|OnMouseMove does not fault startup
+legacy|click target visible/enabled DXButton/
+legacy|click target inside viewport /
+legacy|coordinate hit / actual=DXButton
+legacy|input did not fault startup session
+legacy|popup close retains original object MonsterDropListButton
+legacy|popup close no item submission MonsterDropListButton
+legacy|click target visible/enabled DXButton/
+legacy|click target inside viewport /
+legacy|coordinate hit / actual=DXButton
+legacy|input did not fault startup session
+legacy|button opens same original unskinned popup RemoteSellButton
+legacy|opened popup fits viewport RemoteSellButton bounds={X=0,Y=377,Width=264,Height=342}
+legacy|preserve preferred position except viewport overflow RemoteSellButton
+legacy|popup opening does not submit item operation RemoteSellButton
+legacy|OnMouseMove does not fault startup
+legacy|click target visible/enabled DXButton/
+legacy|click target inside viewport /
+legacy|coordinate hit / actual=DXButton
+legacy|input did not fault startup session
+legacy|popup close retains original object RemoteSellButton
+legacy|popup close no item submission RemoteSellButton
+legacy|click target visible/enabled DXButton/
+legacy|click target inside viewport /
+legacy|coordinate hit / actual=DXButton
+legacy|input did not fault startup session
+legacy|button opens same original unskinned popup RemoteFragmentButton
+legacy|opened popup fits viewport RemoteFragmentButton bounds={X=0,Y=377,Width=264,Height=202}
+legacy|preserve preferred position except viewport overflow RemoteFragmentButton
+legacy|popup opening does not submit item operation RemoteFragmentButton
+legacy|OnMouseMove does not fault startup
+legacy|click target visible/enabled DXButton/
+legacy|click target inside viewport /
+legacy|coordinate hit / actual=DXButton
+legacy|input did not fault startup session
+legacy|popup close retains original object RemoteFragmentButton
+legacy|popup close no item submission RemoteFragmentButton
+legacy|click target visible/enabled DXButton/
+legacy|click target inside viewport /
+legacy|coordinate hit / actual=DXButton
+legacy|input did not fault startup session
+legacy|button opens same original unskinned popup MonsterDropListButton
+legacy|opened popup fits viewport MonsterDropListButton bounds={X=500,Y=372,Width=368,Height=396}
+legacy|preserve preferred position except viewport overflow MonsterDropListButton
+legacy|popup opening does not submit item operation MonsterDropListButton
+legacy|OnMouseMove does not fault startup
+legacy|click target visible/enabled DXButton/
+legacy|click target inside viewport /
+legacy|coordinate hit / actual=DXButton
+legacy|input did not fault startup session
+legacy|popup close retains original object MonsterDropListButton
+legacy|popup close no item submission MonsterDropListButton
+legacy|click target visible/enabled DXButton/
+legacy|click target inside viewport /
+legacy|coordinate hit / actual=DXButton
+legacy|input did not fault startup session
+legacy|button opens same original unskinned popup RemoteSellButton
+legacy|opened popup fits viewport RemoteSellButton bounds={X=0,Y=377,Width=264,Height=342}
+legacy|preserve preferred position except viewport overflow RemoteSellButton
+legacy|popup opening does not submit item operation RemoteSellButton
+legacy|OnMouseMove does not fault startup
+legacy|click target visible/enabled DXButton/
+legacy|click target inside viewport /
+legacy|coordinate hit / actual=DXButton
+legacy|input did not fault startup session
+legacy|popup close retains original object RemoteSellButton
+legacy|popup close no item submission RemoteSellButton
+legacy|click target visible/enabled DXButton/
+legacy|click target inside viewport /
+legacy|coordinate hit / actual=DXButton
+legacy|input did not fault startup session
+legacy|button opens same original unskinned popup RemoteFragmentButton
+legacy|opened popup fits viewport RemoteFragmentButton bounds={X=0,Y=377,Width=264,Height=202}
+legacy|preserve preferred position except viewport overflow RemoteFragmentButton
+legacy|popup opening does not submit item operation RemoteFragmentButton
+legacy|OnMouseMove does not fault startup
+legacy|click target visible/enabled DXButton/
+legacy|click target inside viewport /
+legacy|coordinate hit / actual=DXButton
+legacy|input did not fault startup session
+legacy|popup close retains original object RemoteFragmentButton
+legacy|popup close no item submission RemoteFragmentButton
+legacy|click target visible/enabled DXButton/
+legacy|click target inside viewport /
+legacy|coordinate hit / actual=DXButton
+legacy|input did not fault startup session
+legacy|button opens same original unskinned popup MonsterDropListButton
+legacy|opened popup fits viewport MonsterDropListButton bounds={X=500,Y=372,Width=368,Height=396}
+legacy|preserve preferred position except viewport overflow MonsterDropListButton
+legacy|popup opening does not submit item operation MonsterDropListButton
+legacy|OnMouseMove does not fault startup
+legacy|click target visible/enabled DXButton/
+legacy|click target inside viewport /
+legacy|coordinate hit / actual=DXButton
+legacy|input did not fault startup session
+legacy|popup close retains original object MonsterDropListButton
+legacy|popup close no item submission MonsterDropListButton
+legacy|click target visible/enabled DXButton/
+legacy|click target inside viewport /
+legacy|coordinate hit / actual=DXButton
+legacy|input did not fault startup session
+legacy|button opens same original unskinned popup RemoteSellButton
+legacy|opened popup fits viewport RemoteSellButton bounds={X=0,Y=377,Width=264,Height=342}
+legacy|preserve preferred position except viewport overflow RemoteSellButton
+legacy|popup opening does not submit item operation RemoteSellButton
+legacy|OnMouseMove does not fault startup
+legacy|click target visible/enabled DXButton/
+legacy|click target inside viewport /
+legacy|coordinate hit / actual=DXButton
+legacy|input did not fault startup session
+legacy|popup close retains original object RemoteSellButton
+legacy|popup close no item submission RemoteSellButton
+legacy|click target visible/enabled DXButton/
+legacy|click target inside viewport /
+legacy|coordinate hit / actual=DXButton
+legacy|input did not fault startup session
+legacy|button opens same original unskinned popup RemoteFragmentButton
+legacy|opened popup fits viewport RemoteFragmentButton bounds={X=0,Y=377,Width=264,Height=202}
+legacy|preserve preferred position except viewport overflow RemoteFragmentButton
+legacy|popup opening does not submit item operation RemoteFragmentButton
+legacy|OnMouseMove does not fault startup
+legacy|click target visible/enabled DXButton/
+legacy|click target inside viewport /
+legacy|coordinate hit / actual=DXButton
+legacy|input did not fault startup session
+legacy|popup close retains original object RemoteFragmentButton
+legacy|popup close no item submission RemoteFragmentButton
+legacy|click target visible/enabled DXButton/
+legacy|click target inside viewport /
+legacy|coordinate hit / actual=DXButton
+legacy|input did not fault startup session
+legacy|button opens same original unskinned popup MonsterDropListButton
+legacy|opened popup fits viewport MonsterDropListButton bounds={X=500,Y=372,Width=368,Height=396}
+legacy|preserve preferred position except viewport overflow MonsterDropListButton
+legacy|popup opening does not submit item operation MonsterDropListButton
+legacy|OnMouseMove does not fault startup
+legacy|click target visible/enabled DXButton/
+legacy|click target inside viewport /
+legacy|coordinate hit / actual=DXButton
+legacy|input did not fault startup session
+legacy|popup close retains original object MonsterDropListButton
+legacy|popup close no item submission MonsterDropListButton
+legacy|click target visible/enabled DXButton/
+legacy|click target inside viewport /
+legacy|coordinate hit / actual=DXButton
+legacy|input did not fault startup session
+legacy|button opens same original unskinned popup RemoteSellButton
+legacy|opened popup fits viewport RemoteSellButton bounds={X=0,Y=377,Width=264,Height=342}
+legacy|preserve preferred position except viewport overflow RemoteSellButton
+legacy|popup opening does not submit item operation RemoteSellButton
+legacy|OnMouseMove does not fault startup
+legacy|click target visible/enabled DXButton/
+legacy|click target inside viewport /
+legacy|coordinate hit / actual=DXButton
+legacy|input did not fault startup session
+legacy|popup close retains original object RemoteSellButton
+legacy|popup close no item submission RemoteSellButton
+legacy|click target visible/enabled DXButton/
+legacy|click target inside viewport /
+legacy|coordinate hit / actual=DXButton
+legacy|input did not fault startup session
+legacy|button opens same original unskinned popup RemoteFragmentButton
+legacy|opened popup fits viewport RemoteFragmentButton bounds={X=0,Y=377,Width=264,Height=202}
+legacy|preserve preferred position except viewport overflow RemoteFragmentButton
+legacy|popup opening does not submit item operation RemoteFragmentButton
+legacy|OnMouseMove does not fault startup
+legacy|click target visible/enabled DXButton/
+legacy|click target inside viewport /
+legacy|coordinate hit / actual=DXButton
+legacy|input did not fault startup session
+legacy|popup close retains original object RemoteFragmentButton
+legacy|popup close no item submission RemoteFragmentButton
+legacy|click target visible/enabled DXButton/
+legacy|click target inside viewport /
+legacy|coordinate hit / actual=DXButton
+legacy|input did not fault startup session
+legacy|button opens same original unskinned popup MonsterDropListButton
+legacy|opened popup fits viewport MonsterDropListButton bounds={X=500,Y=372,Width=368,Height=396}
+legacy|preserve preferred position except viewport overflow MonsterDropListButton
+legacy|popup opening does not submit item operation MonsterDropListButton
+legacy|OnMouseMove does not fault startup
+legacy|click target visible/enabled DXButton/
+legacy|click target inside viewport /
+legacy|coordinate hit / actual=DXButton
+legacy|input did not fault startup session
+legacy|popup close retains original object MonsterDropListButton
+legacy|popup close no item submission MonsterDropListButton
+legacy|click target visible/enabled DXButton/
+legacy|click target inside viewport /
+legacy|coordinate hit / actual=DXButton
+legacy|input did not fault startup session
+legacy|button opens same original unskinned popup RemoteSellButton
+legacy|opened popup fits viewport RemoteSellButton bounds={X=0,Y=377,Width=264,Height=342}
+legacy|preserve preferred position except viewport overflow RemoteSellButton
+legacy|popup opening does not submit item operation RemoteSellButton
+legacy|OnMouseMove does not fault startup
+legacy|click target visible/enabled DXButton/
+legacy|click target inside viewport /
+legacy|coordinate hit / actual=DXButton
+legacy|input did not fault startup session
+legacy|popup close retains original object RemoteSellButton
+legacy|popup close no item submission RemoteSellButton
+legacy|click target visible/enabled DXButton/
+legacy|click target inside viewport /
+legacy|coordinate hit / actual=DXButton
+legacy|input did not fault startup session
+legacy|button opens same original unskinned popup RemoteFragmentButton
+legacy|opened popup fits viewport RemoteFragmentButton bounds={X=0,Y=377,Width=264,Height=202}
+legacy|preserve preferred position except viewport overflow RemoteFragmentButton
+legacy|popup opening does not submit item operation RemoteFragmentButton
+legacy|OnMouseMove does not fault startup
+legacy|click target visible/enabled DXButton/
+legacy|click target inside viewport /
+legacy|coordinate hit / actual=DXButton
+legacy|input did not fault startup session
+legacy|popup close retains original object RemoteFragmentButton
+legacy|popup close no item submission RemoteFragmentButton
+legacy|click target visible/enabled DXButton/
+legacy|click target inside viewport /
+legacy|coordinate hit / actual=DXButton
+legacy|input did not fault startup session
+legacy|button opens same original unskinned popup MonsterDropListButton
+legacy|opened popup fits viewport MonsterDropListButton bounds={X=500,Y=372,Width=368,Height=396}
+legacy|preserve preferred position except viewport overflow MonsterDropListButton
+legacy|popup opening does not submit item operation MonsterDropListButton
+legacy|OnMouseMove does not fault startup
+legacy|click target visible/enabled DXButton/
+legacy|click target inside viewport /
+legacy|coordinate hit / actual=DXButton
+legacy|input did not fault startup session
+legacy|popup close retains original object MonsterDropListButton
+legacy|popup close no item submission MonsterDropListButton
+legacy|click target visible/enabled DXButton/
+legacy|click target inside viewport /
+legacy|coordinate hit / actual=DXButton
+legacy|input did not fault startup session
+legacy|button opens same original unskinned popup RemoteSellButton
+legacy|opened popup fits viewport RemoteSellButton bounds={X=0,Y=377,Width=264,Height=342}
+legacy|preserve preferred position except viewport overflow RemoteSellButton
+legacy|popup opening does not submit item operation RemoteSellButton
+legacy|OnMouseMove does not fault startup
+legacy|click target visible/enabled DXButton/
+legacy|click target inside viewport /
+legacy|coordinate hit / actual=DXButton
+legacy|input did not fault startup session
+legacy|popup close retains original object RemoteSellButton
+legacy|popup close no item submission RemoteSellButton
+legacy|click target visible/enabled DXButton/
+legacy|click target inside viewport /
+legacy|coordinate hit / actual=DXButton
+legacy|input did not fault startup session
+legacy|button opens same original unskinned popup RemoteFragmentButton
+legacy|opened popup fits viewport RemoteFragmentButton bounds={X=0,Y=377,Width=264,Height=202}
+legacy|preserve preferred position except viewport overflow RemoteFragmentButton
+legacy|popup opening does not submit item operation RemoteFragmentButton
+legacy|OnMouseMove does not fault startup
+legacy|click target visible/enabled DXButton/
+legacy|click target inside viewport /
+legacy|coordinate hit / actual=DXButton
+legacy|input did not fault startup session
+legacy|popup close retains original object RemoteFragmentButton
+legacy|popup close no item submission RemoteFragmentButton
+legacy|click target visible/enabled DXButton/
+legacy|click target inside viewport /
+legacy|coordinate hit / actual=DXButton
+legacy|input did not fault startup session
+legacy|button opens same original unskinned popup MonsterDropListButton
+legacy|opened popup fits viewport MonsterDropListButton bounds={X=500,Y=372,Width=368,Height=396}
+legacy|preserve preferred position except viewport overflow MonsterDropListButton
+legacy|popup opening does not submit item operation MonsterDropListButton
+legacy|OnMouseMove does not fault startup
+legacy|click target visible/enabled DXButton/
+legacy|click target inside viewport /
+legacy|coordinate hit / actual=DXButton
+legacy|input did not fault startup session
+legacy|popup close retains original object MonsterDropListButton
+legacy|popup close no item submission MonsterDropListButton
+legacy|drop scene teardown clears controls
+legacy|test-only package accepted
+official|OnMouseMove does not fault startup
+official|held source hit
+official|OnMouseDown does not fault startup
+official|OnMouseMove does not fault startup
+official|OnMouseUp does not fault startup
+official|held source/release alone does not move or select
+official|held source/release emits nothing
+official|click target visible/enabled DXItemCell/0
+official|click target inside viewport Inventory/0
+official|coordinate hit Inventory/0 actual=DXItemCell
+official|input did not fault startup session
+official|OnMouseMove does not fault startup
+official|OnMouseUp does not fault startup
+official|moving/releasing selected item retains click selection
+official|selected item held move/release emits nothing
+official|click target visible/enabled DXItemCell/48
+official|click target inside viewport Inventory/48
+official|coordinate hit Inventory/48 actual=DXItemCell
+official|input did not fault startup session
+official|one expected packet ItemMove
+official|no duplicate packet ItemMove
+official|next actual click transfers to destination
+official|click target visible/enabled DXItemCell/48
+official|click target inside viewport Inventory/48
+official|coordinate hit Inventory/48 actual=DXItemCell
+official|input did not fault startup session
+official|click target visible/enabled DXItemCell/48
+official|click target inside viewport Inventory/48
+official|coordinate hit Inventory/48 actual=DXItemCell
+official|input did not fault startup session
+official|right button cancels selection without using selected item
+official|selection cancel no use/drop
+official|click target visible/enabled DXItemCell/0
+official|click target inside viewport Inventory/0
+official|coordinate hit Inventory/0 actual=DXItemCell
+official|input did not fault startup session
+official|OnMouseMove does not fault startup
+official|map target is original map control
+official|OnMouseDown does not fault startup
+official|OnMouseUp does not fault startup
+official|release clears held map buttons
+official|one expected packet ItemDrop
+official|no duplicate packet ItemDrop
+official|exact original drop ID/count 0
+official|drop pending locks without speculative removal 0
+official|drop rejection unlocks and retains identity/count 0
+official|click target visible/enabled DXItemCell/1
+official|click target inside viewport Inventory/1
+official|coordinate hit Inventory/1 actual=DXItemCell
+official|input did not fault startup session
+official|OnMouseMove does not fault startup
+official|map target is original map control
+official|OnMouseDown does not fault startup
+official|OnMouseUp does not fault startup
+official|release clears held map buttons
+official|one expected packet ItemDrop
+official|no duplicate packet ItemDrop
+official|exact original drop ID/count 1
+official|drop pending locks without speculative removal 1
+official|drop rejection unlocks and retains identity/count 1
+official|click target visible/enabled DXItemCell/2
+official|click target inside viewport Inventory/2
+official|coordinate hit Inventory/2 actual=DXItemCell
+official|input did not fault startup session
+official|OnMouseMove does not fault startup
+official|map target is original map control
+official|OnMouseDown does not fault startup
+official|OnMouseUp does not fault startup
+official|release clears held map buttons
+official|one expected packet ItemDrop
+official|no duplicate packet ItemDrop
+official|exact original drop ID/count 2
+official|drop pending locks without speculative removal 2
+official|drop rejection unlocks and retains identity/count 2
+official|click target visible/enabled DXItemCell/3
+official|click target inside viewport Inventory/3
+official|coordinate hit Inventory/3 actual=DXItemCell
+official|input did not fault startup session
+official|OnMouseMove does not fault startup
+official|map target is original map control
+official|OnMouseDown does not fault startup
+official|OnMouseUp does not fault startup
+official|release clears held map buttons
+official|one expected packet ItemDrop
+official|no duplicate packet ItemDrop
+official|exact original drop ID/count 3
+official|drop pending locks without speculative removal 3
+official|drop rejection unlocks and retains identity/count 3
+official|click target visible/enabled DXItemCell/4
+official|click target inside viewport Inventory/4
+official|coordinate hit Inventory/4 actual=DXItemCell
+official|input did not fault startup session
+official|OnMouseMove does not fault startup
+official|map target is original map control
+official|OnMouseDown does not fault startup
+official|OnMouseUp does not fault startup
+official|release clears held map buttons
+official|one expected packet ItemDrop
+official|no duplicate packet ItemDrop
+official|exact original drop ID/count 4
+official|drop pending locks without speculative removal 4
+official|drop rejection unlocks and retains identity/count 4
+official|click target visible/enabled DXItemCell/5
+official|click target inside viewport Inventory/5
+official|coordinate hit Inventory/5 actual=DXItemCell
+official|input did not fault startup session
+official|OnMouseMove does not fault startup
+official|map target is original map control
+official|OnMouseDown does not fault startup
+official|OnMouseUp does not fault startup
+official|release clears held map buttons
+official|one expected packet ItemDrop
+official|no duplicate packet ItemDrop
+official|exact original drop ID/count 5
+official|drop pending locks without speculative removal 5
+official|drop rejection unlocks and retains identity/count 5
+official|click target visible/enabled DXItemCell/6
+official|click target inside viewport Inventory/6
+official|coordinate hit Inventory/6 actual=DXItemCell
+official|input did not fault startup session
+official|OnMouseMove does not fault startup
+official|map target is original map control
+official|OnMouseDown does not fault startup
+official|OnMouseUp does not fault startup
+official|release clears held map buttons
+official|one expected packet ItemDrop
+official|no duplicate packet ItemDrop
+official|exact original drop ID/count 6
+official|drop pending locks without speculative removal 6
+official|drop rejection unlocks and retains identity/count 6
+official|click target visible/enabled DXItemCell/7
+official|click target inside viewport Inventory/7
+official|coordinate hit Inventory/7 actual=DXItemCell
+official|input did not fault startup session
+official|OnMouseMove does not fault startup
+official|map target is original map control
+official|OnMouseDown does not fault startup
+official|OnMouseUp does not fault startup
+official|release clears held map buttons
+official|one expected packet ItemDrop
+official|no duplicate packet ItemDrop
+official|exact original drop ID/count 7
+official|drop pending locks without speculative removal 7
+official|drop rejection unlocks and retains identity/count 7
+official|click target visible/enabled DXItemCell/8
+official|click target inside viewport Inventory/8
+official|coordinate hit Inventory/8 actual=DXItemCell
+official|input did not fault startup session
+official|OnMouseMove does not fault startup
+official|map target is original map control
+official|OnMouseDown does not fault startup
+official|OnMouseUp does not fault startup
+official|release clears held map buttons
+official|one expected packet ItemDrop
+official|no duplicate packet ItemDrop
+official|exact original drop ID/count 8
+official|drop pending locks without speculative removal 8
+official|drop rejection unlocks and retains identity/count 8
+official|click target visible/enabled DXItemCell/9
+official|click target inside viewport Inventory/9
+official|coordinate hit Inventory/9 actual=DXItemCell
+official|input did not fault startup session
+official|OnMouseMove does not fault startup
+official|map target is original map control
+official|OnMouseDown does not fault startup
+official|OnMouseUp does not fault startup
+official|release clears held map buttons
+official|one expected packet ItemDrop
+official|no duplicate packet ItemDrop
+official|exact original drop ID/count 9
+official|drop pending locks without speculative removal 9
+official|drop rejection unlocks and retains identity/count 9
+official|click target visible/enabled DXItemCell/10
+official|click target inside viewport Inventory/10
+official|coordinate hit Inventory/10 actual=DXItemCell
+official|input did not fault startup session
+official|OnMouseMove does not fault startup
+official|map target is original map control
+official|OnMouseDown does not fault startup
+official|OnMouseUp does not fault startup
+official|release clears held map buttons
+official|one expected packet ItemDrop
+official|no duplicate packet ItemDrop
+official|exact original drop ID/count 10
+official|drop pending locks without speculative removal 10
+official|drop rejection unlocks and retains identity/count 10
+official|click target visible/enabled DXItemCell/11
+official|click target inside viewport Inventory/11
+official|coordinate hit Inventory/11 actual=DXItemCell
+official|input did not fault startup session
+official|OnMouseMove does not fault startup
+official|map target is original map control
+official|OnMouseDown does not fault startup
+official|OnMouseUp does not fault startup
+official|release clears held map buttons
+official|one expected packet ItemDrop
+official|no duplicate packet ItemDrop
+official|exact original drop ID/count 11
+official|drop pending locks without speculative removal 11
+official|drop rejection unlocks and retains identity/count 11
+official|click target visible/enabled DXItemCell/12
+official|click target inside viewport Inventory/12
+official|coordinate hit Inventory/12 actual=DXItemCell
+official|input did not fault startup session
+official|OnMouseMove does not fault startup
+official|map target is original map control
+official|OnMouseDown does not fault startup
+official|OnMouseUp does not fault startup
+official|release clears held map buttons
+official|one expected packet ItemDrop
+official|no duplicate packet ItemDrop
+official|exact original drop ID/count 12
+official|drop pending locks without speculative removal 12
+official|drop rejection unlocks and retains identity/count 12
+official|click target visible/enabled DXItemCell/13
+official|click target inside viewport Inventory/13
+official|coordinate hit Inventory/13 actual=DXItemCell
+official|input did not fault startup session
+official|OnMouseMove does not fault startup
+official|map target is original map control
+official|OnMouseDown does not fault startup
+official|OnMouseUp does not fault startup
+official|release clears held map buttons
+official|one expected packet ItemDrop
+official|no duplicate packet ItemDrop
+official|exact original drop ID/count 13
+official|drop pending locks without speculative removal 13
+official|drop rejection unlocks and retains identity/count 13
+official|click target visible/enabled DXItemCell/14
+official|click target inside viewport Inventory/14
+official|coordinate hit Inventory/14 actual=DXItemCell
+official|input did not fault startup session
+official|OnMouseMove does not fault startup
+official|map target is original map control
+official|OnMouseDown does not fault startup
+official|OnMouseUp does not fault startup
+official|release clears held map buttons
+official|one expected packet ItemDrop
+official|no duplicate packet ItemDrop
+official|exact original drop ID/count 14
+official|drop pending locks without speculative removal 14
+official|drop rejection unlocks and retains identity/count 14
+official|click target visible/enabled DXItemCell/15
+official|click target inside viewport Inventory/15
+official|coordinate hit Inventory/15 actual=DXItemCell
+official|input did not fault startup session
+official|OnMouseMove does not fault startup
+official|map target is original map control
+official|OnMouseDown does not fault startup
+official|OnMouseUp does not fault startup
+official|release clears held map buttons
+official|one expected packet ItemDrop
+official|no duplicate packet ItemDrop
+official|exact original drop ID/count 15
+official|drop pending locks without speculative removal 15
+official|drop rejection unlocks and retains identity/count 15
+official|click target visible/enabled DXItemCell/16
+official|click target inside viewport Inventory/16
+official|coordinate hit Inventory/16 actual=DXItemCell
+official|input did not fault startup session
+official|OnMouseMove does not fault startup
+official|map target is original map control
+official|OnMouseDown does not fault startup
+official|OnMouseUp does not fault startup
+official|release clears held map buttons
+official|one expected packet ItemDrop
+official|no duplicate packet ItemDrop
+official|exact original drop ID/count 16
+official|drop pending locks without speculative removal 16
+official|drop rejection unlocks and retains identity/count 16
+official|click target visible/enabled DXItemCell/17
+official|click target inside viewport Inventory/17
+official|coordinate hit Inventory/17 actual=DXItemCell
+official|input did not fault startup session
+official|OnMouseMove does not fault startup
+official|map target is original map control
+official|OnMouseDown does not fault startup
+official|OnMouseUp does not fault startup
+official|release clears held map buttons
+official|one expected packet ItemDrop
+official|no duplicate packet ItemDrop
+official|exact original drop ID/count 17
+official|drop pending locks without speculative removal 17
+official|drop rejection unlocks and retains identity/count 17
+official|click target visible/enabled DXItemCell/18
+official|click target inside viewport Inventory/18
+official|coordinate hit Inventory/18 actual=DXItemCell
+official|input did not fault startup session
+official|OnMouseMove does not fault startup
+official|map target is original map control
+official|OnMouseDown does not fault startup
+official|OnMouseUp does not fault startup
+official|release clears held map buttons
+official|one expected packet ItemDrop
+official|no duplicate packet ItemDrop
+official|exact original drop ID/count 18
+official|drop pending locks without speculative removal 18
+official|drop rejection unlocks and retains identity/count 18
+official|click target visible/enabled DXItemCell/19
+official|click target inside viewport Inventory/19
+official|coordinate hit Inventory/19 actual=DXItemCell
+official|input did not fault startup session
+official|OnMouseMove does not fault startup
+official|map target is original map control
+official|OnMouseDown does not fault startup
+official|OnMouseUp does not fault startup
+official|release clears held map buttons
+official|one expected packet ItemDrop
+official|no duplicate packet ItemDrop
+official|exact original drop ID/count 19
+official|drop pending locks without speculative removal 19
+official|drop rejection unlocks and retains identity/count 19
+official|click target visible/enabled DXItemCell/20
+official|click target inside viewport Inventory/20
+official|coordinate hit Inventory/20 actual=DXItemCell
+official|input did not fault startup session
+official|OnMouseMove does not fault startup
+official|map target is original map control
+official|OnMouseDown does not fault startup
+official|OnMouseUp does not fault startup
+official|release clears held map buttons
+official|one expected packet ItemDrop
+official|no duplicate packet ItemDrop
+official|exact original drop ID/count 20
+official|drop pending locks without speculative removal 20
+official|drop rejection unlocks and retains identity/count 20
+official|click target visible/enabled DXItemCell/21
+official|click target inside viewport Inventory/21
+official|coordinate hit Inventory/21 actual=DXItemCell
+official|input did not fault startup session
+official|OnMouseMove does not fault startup
+official|map target is original map control
+official|OnMouseDown does not fault startup
+official|OnMouseUp does not fault startup
+official|release clears held map buttons
+official|one expected packet ItemDrop
+official|no duplicate packet ItemDrop
+official|exact original drop ID/count 21
+official|drop pending locks without speculative removal 21
+official|drop rejection unlocks and retains identity/count 21
+official|click target visible/enabled DXItemCell/22
+official|click target inside viewport Inventory/22
+official|coordinate hit Inventory/22 actual=DXItemCell
+official|input did not fault startup session
+official|OnMouseMove does not fault startup
+official|map target is original map control
+official|OnMouseDown does not fault startup
+official|OnMouseUp does not fault startup
+official|release clears held map buttons
+official|one expected packet ItemDrop
+official|no duplicate packet ItemDrop
+official|exact original drop ID/count 22
+official|drop pending locks without speculative removal 22
+official|drop rejection unlocks and retains identity/count 22
+official|click target visible/enabled DXItemCell/23
+official|click target inside viewport Inventory/23
+official|coordinate hit Inventory/23 actual=DXItemCell
+official|input did not fault startup session
+official|OnMouseMove does not fault startup
+official|map target is original map control
+official|OnMouseDown does not fault startup
+official|OnMouseUp does not fault startup
+official|release clears held map buttons
+official|one expected packet ItemDrop
+official|no duplicate packet ItemDrop
+official|exact original drop ID/count 23
+official|drop pending locks without speculative removal 23
+official|drop rejection unlocks and retains identity/count 23
+official|click target visible/enabled DXItemCell/24
+official|click target inside viewport Inventory/24
+official|coordinate hit Inventory/24 actual=DXItemCell
+official|input did not fault startup session
+official|OnMouseMove does not fault startup
+official|map target is original map control
+official|OnMouseDown does not fault startup
+official|OnMouseUp does not fault startup
+official|release clears held map buttons
+official|one expected packet ItemDrop
+official|no duplicate packet ItemDrop
+official|exact original drop ID/count 24
+official|drop pending locks without speculative removal 24
+official|drop rejection unlocks and retains identity/count 24
+official|click target visible/enabled DXItemCell/25
+official|click target inside viewport Inventory/25
+official|coordinate hit Inventory/25 actual=DXItemCell
+official|input did not fault startup session
+official|OnMouseMove does not fault startup
+official|map target is original map control
+official|OnMouseDown does not fault startup
+official|OnMouseUp does not fault startup
+official|release clears held map buttons
+official|one expected packet ItemDrop
+official|no duplicate packet ItemDrop
+official|exact original drop ID/count 25
+official|drop pending locks without speculative removal 25
+official|drop rejection unlocks and retains identity/count 25
+official|click target visible/enabled DXItemCell/26
+official|click target inside viewport Inventory/26
+official|coordinate hit Inventory/26 actual=DXItemCell
+official|input did not fault startup session
+official|OnMouseMove does not fault startup
+official|map target is original map control
+official|OnMouseDown does not fault startup
+official|OnMouseUp does not fault startup
+official|release clears held map buttons
+official|one expected packet ItemDrop
+official|no duplicate packet ItemDrop
+official|exact original drop ID/count 26
+official|drop pending locks without speculative removal 26
+official|drop rejection unlocks and retains identity/count 26
+official|click target visible/enabled DXItemCell/27
+official|click target inside viewport Inventory/27
+official|coordinate hit Inventory/27 actual=DXItemCell
+official|input did not fault startup session
+official|OnMouseMove does not fault startup
+official|map target is original map control
+official|OnMouseDown does not fault startup
+official|OnMouseUp does not fault startup
+official|release clears held map buttons
+official|one expected packet ItemDrop
+official|no duplicate packet ItemDrop
+official|exact original drop ID/count 27
+official|drop pending locks without speculative removal 27
+official|drop rejection unlocks and retains identity/count 27
+official|click target visible/enabled DXItemCell/28
+official|click target inside viewport Inventory/28
+official|coordinate hit Inventory/28 actual=DXItemCell
+official|input did not fault startup session
+official|OnMouseMove does not fault startup
+official|map target is original map control
+official|OnMouseDown does not fault startup
+official|OnMouseUp does not fault startup
+official|release clears held map buttons
+official|one expected packet ItemDrop
+official|no duplicate packet ItemDrop
+official|exact original drop ID/count 28
+official|drop pending locks without speculative removal 28
+official|drop rejection unlocks and retains identity/count 28
+official|click target visible/enabled DXItemCell/29
+official|click target inside viewport Inventory/29
+official|coordinate hit Inventory/29 actual=DXItemCell
+official|input did not fault startup session
+official|OnMouseMove does not fault startup
+official|map target is original map control
+official|OnMouseDown does not fault startup
+official|OnMouseUp does not fault startup
+official|release clears held map buttons
+official|one expected packet ItemDrop
+official|no duplicate packet ItemDrop
+official|exact original drop ID/count 29
+official|drop pending locks without speculative removal 29
+official|drop rejection unlocks and retains identity/count 29
+official|click target visible/enabled DXItemCell/30
+official|click target inside viewport Inventory/30
+official|coordinate hit Inventory/30 actual=DXItemCell
+official|input did not fault startup session
+official|OnMouseMove does not fault startup
+official|map target is original map control
+official|OnMouseDown does not fault startup
+official|OnMouseUp does not fault startup
+official|release clears held map buttons
+official|one expected packet ItemDrop
+official|no duplicate packet ItemDrop
+official|exact original drop ID/count 30
+official|drop pending locks without speculative removal 30
+official|drop rejection unlocks and retains identity/count 30
+official|click target visible/enabled DXItemCell/31
+official|click target inside viewport Inventory/31
+official|coordinate hit Inventory/31 actual=DXItemCell
+official|input did not fault startup session
+official|OnMouseMove does not fault startup
+official|map target is original map control
+official|OnMouseDown does not fault startup
+official|OnMouseUp does not fault startup
+official|release clears held map buttons
+official|one expected packet ItemDrop
+official|no duplicate packet ItemDrop
+official|exact original drop ID/count 31
+official|drop pending locks without speculative removal 31
+official|drop rejection unlocks and retains identity/count 31
+official|click target visible/enabled DXItemCell/32
+official|click target inside viewport Inventory/32
+official|coordinate hit Inventory/32 actual=DXItemCell
+official|input did not fault startup session
+official|OnMouseMove does not fault startup
+official|map target is original map control
+official|OnMouseDown does not fault startup
+official|OnMouseUp does not fault startup
+official|release clears held map buttons
+official|one expected packet ItemDrop
+official|no duplicate packet ItemDrop
+official|exact original drop ID/count 32
+official|drop pending locks without speculative removal 32
+official|drop rejection unlocks and retains identity/count 32
+official|click target visible/enabled DXItemCell/33
+official|click target inside viewport Inventory/33
+official|coordinate hit Inventory/33 actual=DXItemCell
+official|input did not fault startup session
+official|OnMouseMove does not fault startup
+official|map target is original map control
+official|OnMouseDown does not fault startup
+official|OnMouseUp does not fault startup
+official|release clears held map buttons
+official|one expected packet ItemDrop
+official|no duplicate packet ItemDrop
+official|exact original drop ID/count 33
+official|drop pending locks without speculative removal 33
+official|drop rejection unlocks and retains identity/count 33
+official|click target visible/enabled DXItemCell/34
+official|click target inside viewport Inventory/34
+official|coordinate hit Inventory/34 actual=DXItemCell
+official|input did not fault startup session
+official|OnMouseMove does not fault startup
+official|map target is original map control
+official|OnMouseDown does not fault startup
+official|OnMouseUp does not fault startup
+official|release clears held map buttons
+official|one expected packet ItemDrop
+official|no duplicate packet ItemDrop
+official|exact original drop ID/count 34
+official|drop pending locks without speculative removal 34
+official|drop rejection unlocks and retains identity/count 34
+official|click target visible/enabled DXItemCell/35
+official|click target inside viewport Inventory/35
+official|coordinate hit Inventory/35 actual=DXItemCell
+official|input did not fault startup session
+official|OnMouseMove does not fault startup
+official|map target is original map control
+official|OnMouseDown does not fault startup
+official|OnMouseUp does not fault startup
+official|release clears held map buttons
+official|one expected packet ItemDrop
+official|no duplicate packet ItemDrop
+official|exact original drop ID/count 35
+official|drop pending locks without speculative removal 35
+official|drop rejection unlocks and retains identity/count 35
+official|click target visible/enabled DXItemCell/36
+official|click target inside viewport Inventory/36
+official|coordinate hit Inventory/36 actual=DXItemCell
+official|input did not fault startup session
+official|OnMouseMove does not fault startup
+official|map target is original map control
+official|OnMouseDown does not fault startup
+official|OnMouseUp does not fault startup
+official|release clears held map buttons
+official|one expected packet ItemDrop
+official|no duplicate packet ItemDrop
+official|exact original drop ID/count 36
+official|drop pending locks without speculative removal 36
+official|drop rejection unlocks and retains identity/count 36
+official|click target visible/enabled DXItemCell/37
+official|click target inside viewport Inventory/37
+official|coordinate hit Inventory/37 actual=DXItemCell
+official|input did not fault startup session
+official|OnMouseMove does not fault startup
+official|map target is original map control
+official|OnMouseDown does not fault startup
+official|OnMouseUp does not fault startup
+official|release clears held map buttons
+official|one expected packet ItemDrop
+official|no duplicate packet ItemDrop
+official|exact original drop ID/count 37
+official|drop pending locks without speculative removal 37
+official|drop rejection unlocks and retains identity/count 37
+official|click target visible/enabled DXItemCell/38
+official|click target inside viewport Inventory/38
+official|coordinate hit Inventory/38 actual=DXItemCell
+official|input did not fault startup session
+official|OnMouseMove does not fault startup
+official|map target is original map control
+official|OnMouseDown does not fault startup
+official|OnMouseUp does not fault startup
+official|release clears held map buttons
+official|one expected packet ItemDrop
+official|no duplicate packet ItemDrop
+official|exact original drop ID/count 38
+official|drop pending locks without speculative removal 38
+official|drop rejection unlocks and retains identity/count 38
+official|click target visible/enabled DXItemCell/39
+official|click target inside viewport Inventory/39
+official|coordinate hit Inventory/39 actual=DXItemCell
+official|input did not fault startup session
+official|OnMouseMove does not fault startup
+official|map target is original map control
+official|OnMouseDown does not fault startup
+official|OnMouseUp does not fault startup
+official|release clears held map buttons
+official|one expected packet ItemDrop
+official|no duplicate packet ItemDrop
+official|exact original drop ID/count 39
+official|drop pending locks without speculative removal 39
+official|drop rejection unlocks and retains identity/count 39
+official|click target visible/enabled DXItemCell/40
+official|click target inside viewport Inventory/40
+official|coordinate hit Inventory/40 actual=DXItemCell
+official|input did not fault startup session
+official|OnMouseMove does not fault startup
+official|map target is original map control
+official|OnMouseDown does not fault startup
+official|OnMouseUp does not fault startup
+official|release clears held map buttons
+official|one expected packet ItemDrop
+official|no duplicate packet ItemDrop
+official|exact original drop ID/count 40
+official|drop pending locks without speculative removal 40
+official|drop rejection unlocks and retains identity/count 40
+official|click target visible/enabled DXItemCell/41
+official|click target inside viewport Inventory/41
+official|coordinate hit Inventory/41 actual=DXItemCell
+official|input did not fault startup session
+official|OnMouseMove does not fault startup
+official|map target is original map control
+official|OnMouseDown does not fault startup
+official|OnMouseUp does not fault startup
+official|release clears held map buttons
+official|one expected packet ItemDrop
+official|no duplicate packet ItemDrop
+official|exact original drop ID/count 41
+official|drop pending locks without speculative removal 41
+official|drop rejection unlocks and retains identity/count 41
+official|click target visible/enabled DXItemCell/42
+official|click target inside viewport Inventory/42
+official|coordinate hit Inventory/42 actual=DXItemCell
+official|input did not fault startup session
+official|OnMouseMove does not fault startup
+official|map target is original map control
+official|OnMouseDown does not fault startup
+official|OnMouseUp does not fault startup
+official|release clears held map buttons
+official|one expected packet ItemDrop
+official|no duplicate packet ItemDrop
+official|exact original drop ID/count 42
+official|drop pending locks without speculative removal 42
+official|drop rejection unlocks and retains identity/count 42
+official|click target visible/enabled DXItemCell/43
+official|click target inside viewport Inventory/43
+official|coordinate hit Inventory/43 actual=DXItemCell
+official|input did not fault startup session
+official|OnMouseMove does not fault startup
+official|map target is original map control
+official|OnMouseDown does not fault startup
+official|OnMouseUp does not fault startup
+official|release clears held map buttons
+official|one expected packet ItemDrop
+official|no duplicate packet ItemDrop
+official|exact original drop ID/count 43
+official|drop pending locks without speculative removal 43
+official|drop rejection unlocks and retains identity/count 43
+official|click target visible/enabled DXItemCell/44
+official|click target inside viewport Inventory/44
+official|coordinate hit Inventory/44 actual=DXItemCell
+official|input did not fault startup session
+official|OnMouseMove does not fault startup
+official|map target is original map control
+official|OnMouseDown does not fault startup
+official|OnMouseUp does not fault startup
+official|release clears held map buttons
+official|one expected packet ItemDrop
+official|no duplicate packet ItemDrop
+official|exact original drop ID/count 44
+official|drop pending locks without speculative removal 44
+official|drop rejection unlocks and retains identity/count 44
+official|click target visible/enabled DXItemCell/45
+official|click target inside viewport Inventory/45
+official|coordinate hit Inventory/45 actual=DXItemCell
+official|input did not fault startup session
+official|OnMouseMove does not fault startup
+official|map target is original map control
+official|OnMouseDown does not fault startup
+official|OnMouseUp does not fault startup
+official|release clears held map buttons
+official|one expected packet ItemDrop
+official|no duplicate packet ItemDrop
+official|exact original drop ID/count 45
+official|drop pending locks without speculative removal 45
+official|drop rejection unlocks and retains identity/count 45
+official|click target visible/enabled DXItemCell/46
+official|click target inside viewport Inventory/46
+official|coordinate hit Inventory/46 actual=DXItemCell
+official|input did not fault startup session
+official|OnMouseMove does not fault startup
+official|map target is original map control
+official|OnMouseDown does not fault startup
+official|OnMouseUp does not fault startup
+official|release clears held map buttons
+official|one expected packet ItemDrop
+official|no duplicate packet ItemDrop
+official|exact original drop ID/count 46
+official|drop pending locks without speculative removal 46
+official|drop rejection unlocks and retains identity/count 46
+official|click target visible/enabled DXItemCell/47
+official|click target inside viewport Inventory/47
+official|coordinate hit Inventory/47 actual=DXItemCell
+official|input did not fault startup session
+official|OnMouseMove does not fault startup
+official|map target is original map control
+official|OnMouseDown does not fault startup
+official|OnMouseUp does not fault startup
+official|release clears held map buttons
+official|one expected packet ItemDrop
+official|no duplicate packet ItemDrop
+official|exact original drop ID/count 47
+official|drop pending locks without speculative removal 47
+official|drop rejection unlocks and retains identity/count 47
+official|click target visible/enabled DXItemCell/48
+official|click target inside viewport Inventory/48
+official|coordinate hit Inventory/48 actual=DXItemCell
+official|input did not fault startup session
+official|OnMouseMove does not fault startup
+official|map target is original map control
+official|OnMouseDown does not fault startup
+official|OnMouseUp does not fault startup
+official|release clears held map buttons
+official|one expected packet ItemDrop
+official|no duplicate packet ItemDrop
+official|exact original drop ID/count 48
+official|drop pending locks without speculative removal 48
+official|drop rejection unlocks and retains identity/count 48
+official|click target visible/enabled DXItemCell/48
+official|click target inside viewport Inventory/48
+official|coordinate hit Inventory/48 actual=DXItemCell
+official|input did not fault startup session
+official|OnMouseMove does not fault startup
+official|map target is original map control
+official|OnMouseDown does not fault startup
+official|OnMouseUp does not fault startup
+official|release clears held map buttons
+official|one expected packet ItemDrop
+official|no duplicate packet ItemDrop
+official|authoritative remaining count applied
+official|click target visible/enabled DXItemCell/48
+official|click target inside viewport Inventory/48
+official|coordinate hit Inventory/48 actual=DXItemCell
+official|input did not fault startup session
+official|OnMouseMove does not fault startup
+official|map target is original map control
+official|OnMouseDown does not fault startup
+official|OnMouseUp does not fault startup
+official|release clears held map buttons
+official|one expected packet ItemDrop
+official|no duplicate packet ItemDrop
+official|repeat drop uses authoritative remaining count
+official|accepted full drop empties/unlocks cell
+official|click target visible/enabled DXItemCell/0
+official|click target inside viewport Inventory/0
+official|coordinate hit Inventory/0 actual=DXItemCell
+official|input did not fault startup session
+official|OnMouseMove does not fault startup
+official|map target is original map control
+official|OnMouseDown does not fault startup
+official|OnMouseUp does not fault startup
+official|release clears held map buttons
+official|flag-locked item refuses map drop
+official|flag-locked item no drop
+official|click target visible/enabled DXItemCell/0
+official|click target inside viewport Equipment/0
+official|coordinate hit Equipment/0 actual=DXItemCell
+official|input did not fault startup session
+official|OnMouseMove does not fault startup
+official|map target is original map control
+official|OnMouseDown does not fault startup
+official|OnMouseUp does not fault startup
+official|release clears held map buttons
+official|equipped item refuses direct map drop
+official|equipment cannot bypass unequip
+official|click target visible/enabled DXItemCell/0
+official|click target inside viewport Inventory/0
+official|coordinate hit Inventory/0 actual=DXItemCell
+official|input did not fault startup session
+official|click target visible/enabled DXItemCell/0
+official|click target inside viewport Belt/0
+official|coordinate hit Belt/0 actual=DXItemCell
+official|input did not fault startup session
+official|one expected packet BeltLinkChanged
+official|no duplicate packet BeltLinkChanged
+official|click target visible/enabled DXItemCell/0
+official|click target inside viewport Belt/0
+official|coordinate hit Belt/0 actual=DXItemCell
+official|input did not fault startup session
+official|OnMouseMove does not fault startup
+official|map target is original map control
+official|OnMouseDown does not fault startup
+official|OnMouseUp does not fault startup
+official|release clears held map buttons
+official|one expected packet BeltLinkChanged
+official|no duplicate packet BeltLinkChanged
+official|belt map drop only clears link
+official|belt unlink retains bag identity/count/unlocked
+official|click target visible/enabled DXLabel/
+official|click target inside viewport /
+official|coordinate hit / actual=DXLabel
+official|input did not fault startup session
+official|gold label selects positive gold
+official|click target visible/enabled DXLabel/
+official|click target inside viewport /
+official|coordinate hit / actual=DXLabel
+official|input did not fault startup session
+official|right button cancels gold selection
+official|gold selection/cancel local only
+official|click target visible/enabled DXLabel/
+official|click target inside viewport /
+official|coordinate hit / actual=DXLabel
+official|input did not fault startup session
+official|OnMouseMove does not fault startup
+official|map target is original map control
+official|OnMouseDown does not fault startup
+official|OnMouseUp does not fault startup
+official|release clears held map buttons
+official|original amount window and max gold retained
+official|gold popup opening sends nothing
+official|click target visible/enabled DXButton/
+official|click target inside viewport /
+official|coordinate hit / actual=DXButton
+official|input did not fault startup session
+official|gold popup close cancels
+official|gold close does not deduct
+official|click target visible/enabled DXLabel/
+official|click target inside viewport /
+official|coordinate hit / actual=DXLabel
+official|input did not fault startup session
+official|OnMouseMove does not fault startup
+official|map target is original map control
+official|OnMouseDown does not fault startup
+official|OnMouseUp does not fault startup
+official|release clears held map buttons
+official|zero gold confirmation disabled
+official|click target visible/enabled DXButton/
+official|click target inside viewport /
+official|coordinate hit / actual=DXButton
+official|input did not fault startup session
+official|one expected packet GoldDrop
+official|no duplicate packet GoldDrop
+official|confirm sends exact gold without speculative deduction
+official|gold response applies authoritative total
+official|click target visible/enabled DXLabel/
+official|click target inside viewport /
+official|coordinate hit / actual=DXLabel
+official|input did not fault startup session
+official|zero balance cannot pick up gold
+official|zero balance no request
+official|click target visible/enabled DXButton/
+official|click target inside viewport /
+official|coordinate hit / actual=DXButton
+official|input did not fault startup session
+official|button opens same original unskinned popup RemoteSellButton
+official|opened popup fits viewport RemoteSellButton bounds={X=0,Y=412,Width=264,Height=342}
+official|preserve preferred position except viewport overflow RemoteSellButton
+official|popup opening does not submit item operation RemoteSellButton
+official|OnMouseMove does not fault startup
+official|click target visible/enabled DXButton/
+official|click target inside viewport /
+official|coordinate hit / actual=DXButton
+official|input did not fault startup session
+official|popup close retains original object RemoteSellButton
+official|popup close no item submission RemoteSellButton
+official|click target visible/enabled DXButton/
+official|click target inside viewport /
+official|coordinate hit / actual=DXButton
+official|input did not fault startup session
+official|button opens same original unskinned popup RemoteFragmentButton
+official|opened popup fits viewport RemoteFragmentButton bounds={X=12,Y=412,Width=264,Height=202}
+official|preserve preferred position except viewport overflow RemoteFragmentButton
+official|popup opening does not submit item operation RemoteFragmentButton
+official|OnMouseMove does not fault startup
+official|click target visible/enabled DXButton/
+official|click target inside viewport /
+official|coordinate hit / actual=DXButton
+official|input did not fault startup session
+official|popup close retains original object RemoteFragmentButton
+official|popup close no item submission RemoteFragmentButton
+official|click target visible/enabled DXButton/
+official|click target inside viewport /
+official|coordinate hit / actual=DXButton
+official|input did not fault startup session
+official|button opens same original unskinned popup MonsterDropListButton
+official|opened popup fits viewport MonsterDropListButton bounds={X=500,Y=372,Width=368,Height=396}
+official|preserve preferred position except viewport overflow MonsterDropListButton
+official|popup opening does not submit item operation MonsterDropListButton
+official|OnMouseMove does not fault startup
+official|click target visible/enabled DXButton/
+official|click target inside viewport /
+official|coordinate hit / actual=DXButton
+official|input did not fault startup session
+official|popup close retains original object MonsterDropListButton
+official|popup close no item submission MonsterDropListButton
+official|click target visible/enabled DXButton/
+official|click target inside viewport /
+official|coordinate hit / actual=DXButton
+official|input did not fault startup session
+official|button opens same original unskinned popup RemoteSellButton
+official|opened popup fits viewport RemoteSellButton bounds={X=0,Y=412,Width=264,Height=342}
+official|preserve preferred position except viewport overflow RemoteSellButton
+official|popup opening does not submit item operation RemoteSellButton
+official|OnMouseMove does not fault startup
+official|click target visible/enabled DXButton/
+official|click target inside viewport /
+official|coordinate hit / actual=DXButton
+official|input did not fault startup session
+official|popup close retains original object RemoteSellButton
+official|popup close no item submission RemoteSellButton
+official|click target visible/enabled DXButton/
+official|click target inside viewport /
+official|coordinate hit / actual=DXButton
+official|input did not fault startup session
+official|button opens same original unskinned popup RemoteFragmentButton
+official|opened popup fits viewport RemoteFragmentButton bounds={X=12,Y=412,Width=264,Height=202}
+official|preserve preferred position except viewport overflow RemoteFragmentButton
+official|popup opening does not submit item operation RemoteFragmentButton
+official|OnMouseMove does not fault startup
+official|click target visible/enabled DXButton/
+official|click target inside viewport /
+official|coordinate hit / actual=DXButton
+official|input did not fault startup session
+official|popup close retains original object RemoteFragmentButton
+official|popup close no item submission RemoteFragmentButton
+official|click target visible/enabled DXButton/
+official|click target inside viewport /
+official|coordinate hit / actual=DXButton
+official|input did not fault startup session
+official|button opens same original unskinned popup MonsterDropListButton
+official|opened popup fits viewport MonsterDropListButton bounds={X=500,Y=372,Width=368,Height=396}
+official|preserve preferred position except viewport overflow MonsterDropListButton
+official|popup opening does not submit item operation MonsterDropListButton
+official|OnMouseMove does not fault startup
+official|click target visible/enabled DXButton/
+official|click target inside viewport /
+official|coordinate hit / actual=DXButton
+official|input did not fault startup session
+official|popup close retains original object MonsterDropListButton
+official|popup close no item submission MonsterDropListButton
+official|click target visible/enabled DXButton/
+official|click target inside viewport /
+official|coordinate hit / actual=DXButton
+official|input did not fault startup session
+official|button opens same original unskinned popup RemoteSellButton
+official|opened popup fits viewport RemoteSellButton bounds={X=0,Y=412,Width=264,Height=342}
+official|preserve preferred position except viewport overflow RemoteSellButton
+official|popup opening does not submit item operation RemoteSellButton
+official|OnMouseMove does not fault startup
+official|click target visible/enabled DXButton/
+official|click target inside viewport /
+official|coordinate hit / actual=DXButton
+official|input did not fault startup session
+official|popup close retains original object RemoteSellButton
+official|popup close no item submission RemoteSellButton
+official|click target visible/enabled DXButton/
+official|click target inside viewport /
+official|coordinate hit / actual=DXButton
+official|input did not fault startup session
+official|button opens same original unskinned popup RemoteFragmentButton
+official|opened popup fits viewport RemoteFragmentButton bounds={X=12,Y=412,Width=264,Height=202}
+official|preserve preferred position except viewport overflow RemoteFragmentButton
+official|popup opening does not submit item operation RemoteFragmentButton
+official|OnMouseMove does not fault startup
+official|click target visible/enabled DXButton/
+official|click target inside viewport /
+official|coordinate hit / actual=DXButton
+official|input did not fault startup session
+official|popup close retains original object RemoteFragmentButton
+official|popup close no item submission RemoteFragmentButton
+official|click target visible/enabled DXButton/
+official|click target inside viewport /
+official|coordinate hit / actual=DXButton
+official|input did not fault startup session
+official|button opens same original unskinned popup MonsterDropListButton
+official|opened popup fits viewport MonsterDropListButton bounds={X=500,Y=372,Width=368,Height=396}
+official|preserve preferred position except viewport overflow MonsterDropListButton
+official|popup opening does not submit item operation MonsterDropListButton
+official|OnMouseMove does not fault startup
+official|click target visible/enabled DXButton/
+official|click target inside viewport /
+official|coordinate hit / actual=DXButton
+official|input did not fault startup session
+official|popup close retains original object MonsterDropListButton
+official|popup close no item submission MonsterDropListButton
+official|click target visible/enabled DXButton/
+official|click target inside viewport /
+official|coordinate hit / actual=DXButton
+official|input did not fault startup session
+official|button opens same original unskinned popup RemoteSellButton
+official|opened popup fits viewport RemoteSellButton bounds={X=0,Y=412,Width=264,Height=342}
+official|preserve preferred position except viewport overflow RemoteSellButton
+official|popup opening does not submit item operation RemoteSellButton
+official|OnMouseMove does not fault startup
+official|click target visible/enabled DXButton/
+official|click target inside viewport /
+official|coordinate hit / actual=DXButton
+official|input did not fault startup session
+official|popup close retains original object RemoteSellButton
+official|popup close no item submission RemoteSellButton
+official|click target visible/enabled DXButton/
+official|click target inside viewport /
+official|coordinate hit / actual=DXButton
+official|input did not fault startup session
+official|button opens same original unskinned popup RemoteFragmentButton
+official|opened popup fits viewport RemoteFragmentButton bounds={X=12,Y=412,Width=264,Height=202}
+official|preserve preferred position except viewport overflow RemoteFragmentButton
+official|popup opening does not submit item operation RemoteFragmentButton
+official|OnMouseMove does not fault startup
+official|click target visible/enabled DXButton/
+official|click target inside viewport /
+official|coordinate hit / actual=DXButton
+official|input did not fault startup session
+official|popup close retains original object RemoteFragmentButton
+official|popup close no item submission RemoteFragmentButton
+official|click target visible/enabled DXButton/
+official|click target inside viewport /
+official|coordinate hit / actual=DXButton
+official|input did not fault startup session
+official|button opens same original unskinned popup MonsterDropListButton
+official|opened popup fits viewport MonsterDropListButton bounds={X=500,Y=372,Width=368,Height=396}
+official|preserve preferred position except viewport overflow MonsterDropListButton
+official|popup opening does not submit item operation MonsterDropListButton
+official|OnMouseMove does not fault startup
+official|click target visible/enabled DXButton/
+official|click target inside viewport /
+official|coordinate hit / actual=DXButton
+official|input did not fault startup session
+official|popup close retains original object MonsterDropListButton
+official|popup close no item submission MonsterDropListButton
+official|click target visible/enabled DXButton/
+official|click target inside viewport /
+official|coordinate hit / actual=DXButton
+official|input did not fault startup session
+official|button opens same original unskinned popup RemoteSellButton
+official|opened popup fits viewport RemoteSellButton bounds={X=0,Y=412,Width=264,Height=342}
+official|preserve preferred position except viewport overflow RemoteSellButton
+official|popup opening does not submit item operation RemoteSellButton
+official|OnMouseMove does not fault startup
+official|click target visible/enabled DXButton/
+official|click target inside viewport /
+official|coordinate hit / actual=DXButton
+official|input did not fault startup session
+official|popup close retains original object RemoteSellButton
+official|popup close no item submission RemoteSellButton
+official|click target visible/enabled DXButton/
+official|click target inside viewport /
+official|coordinate hit / actual=DXButton
+official|input did not fault startup session
+official|button opens same original unskinned popup RemoteFragmentButton
+official|opened popup fits viewport RemoteFragmentButton bounds={X=12,Y=412,Width=264,Height=202}
+official|preserve preferred position except viewport overflow RemoteFragmentButton
+official|popup opening does not submit item operation RemoteFragmentButton
+official|OnMouseMove does not fault startup
+official|click target visible/enabled DXButton/
+official|click target inside viewport /
+official|coordinate hit / actual=DXButton
+official|input did not fault startup session
+official|popup close retains original object RemoteFragmentButton
+official|popup close no item submission RemoteFragmentButton
+official|click target visible/enabled DXButton/
+official|click target inside viewport /
+official|coordinate hit / actual=DXButton
+official|input did not fault startup session
+official|button opens same original unskinned popup MonsterDropListButton
+official|opened popup fits viewport MonsterDropListButton bounds={X=500,Y=372,Width=368,Height=396}
+official|preserve preferred position except viewport overflow MonsterDropListButton
+official|popup opening does not submit item operation MonsterDropListButton
+official|OnMouseMove does not fault startup
+official|click target visible/enabled DXButton/
+official|click target inside viewport /
+official|coordinate hit / actual=DXButton
+official|input did not fault startup session
+official|popup close retains original object MonsterDropListButton
+official|popup close no item submission MonsterDropListButton
+official|click target visible/enabled DXButton/
+official|click target inside viewport /
+official|coordinate hit / actual=DXButton
+official|input did not fault startup session
+official|button opens same original unskinned popup RemoteSellButton
+official|opened popup fits viewport RemoteSellButton bounds={X=0,Y=412,Width=264,Height=342}
+official|preserve preferred position except viewport overflow RemoteSellButton
+official|popup opening does not submit item operation RemoteSellButton
+official|OnMouseMove does not fault startup
+official|click target visible/enabled DXButton/
+official|click target inside viewport /
+official|coordinate hit / actual=DXButton
+official|input did not fault startup session
+official|popup close retains original object RemoteSellButton
+official|popup close no item submission RemoteSellButton
+official|click target visible/enabled DXButton/
+official|click target inside viewport /
+official|coordinate hit / actual=DXButton
+official|input did not fault startup session
+official|button opens same original unskinned popup RemoteFragmentButton
+official|opened popup fits viewport RemoteFragmentButton bounds={X=12,Y=412,Width=264,Height=202}
+official|preserve preferred position except viewport overflow RemoteFragmentButton
+official|popup opening does not submit item operation RemoteFragmentButton
+official|OnMouseMove does not fault startup
+official|click target visible/enabled DXButton/
+official|click target inside viewport /
+official|coordinate hit / actual=DXButton
+official|input did not fault startup session
+official|popup close retains original object RemoteFragmentButton
+official|popup close no item submission RemoteFragmentButton
+official|click target visible/enabled DXButton/
+official|click target inside viewport /
+official|coordinate hit / actual=DXButton
+official|input did not fault startup session
+official|button opens same original unskinned popup MonsterDropListButton
+official|opened popup fits viewport MonsterDropListButton bounds={X=500,Y=372,Width=368,Height=396}
+official|preserve preferred position except viewport overflow MonsterDropListButton
+official|popup opening does not submit item operation MonsterDropListButton
+official|OnMouseMove does not fault startup
+official|click target visible/enabled DXButton/
+official|click target inside viewport /
+official|coordinate hit / actual=DXButton
+official|input did not fault startup session
+official|popup close retains original object MonsterDropListButton
+official|popup close no item submission MonsterDropListButton
+official|click target visible/enabled DXButton/
+official|click target inside viewport /
+official|coordinate hit / actual=DXButton
+official|input did not fault startup session
+official|button opens same original unskinned popup RemoteSellButton
+official|opened popup fits viewport RemoteSellButton bounds={X=0,Y=412,Width=264,Height=342}
+official|preserve preferred position except viewport overflow RemoteSellButton
+official|popup opening does not submit item operation RemoteSellButton
+official|OnMouseMove does not fault startup
+official|click target visible/enabled DXButton/
+official|click target inside viewport /
+official|coordinate hit / actual=DXButton
+official|input did not fault startup session
+official|popup close retains original object RemoteSellButton
+official|popup close no item submission RemoteSellButton
+official|click target visible/enabled DXButton/
+official|click target inside viewport /
+official|coordinate hit / actual=DXButton
+official|input did not fault startup session
+official|button opens same original unskinned popup RemoteFragmentButton
+official|opened popup fits viewport RemoteFragmentButton bounds={X=12,Y=412,Width=264,Height=202}
+official|preserve preferred position except viewport overflow RemoteFragmentButton
+official|popup opening does not submit item operation RemoteFragmentButton
+official|OnMouseMove does not fault startup
+official|click target visible/enabled DXButton/
+official|click target inside viewport /
+official|coordinate hit / actual=DXButton
+official|input did not fault startup session
+official|popup close retains original object RemoteFragmentButton
+official|popup close no item submission RemoteFragmentButton
+official|click target visible/enabled DXButton/
+official|click target inside viewport /
+official|coordinate hit / actual=DXButton
+official|input did not fault startup session
+official|button opens same original unskinned popup MonsterDropListButton
+official|opened popup fits viewport MonsterDropListButton bounds={X=500,Y=372,Width=368,Height=396}
+official|preserve preferred position except viewport overflow MonsterDropListButton
+official|popup opening does not submit item operation MonsterDropListButton
+official|OnMouseMove does not fault startup
+official|click target visible/enabled DXButton/
+official|click target inside viewport /
+official|coordinate hit / actual=DXButton
+official|input did not fault startup session
+official|popup close retains original object MonsterDropListButton
+official|popup close no item submission MonsterDropListButton
+official|drop scene teardown clears controls
+official|Legacy/Official ordered semantic packet traces identical
+official-reentry|OnMouseMove does not fault startup
+official-reentry|held source hit
+official-reentry|OnMouseDown does not fault startup
+official-reentry|OnMouseMove does not fault startup
+official-reentry|OnMouseUp does not fault startup
+official-reentry|held source/release alone does not move or select
+official-reentry|held source/release emits nothing
+official-reentry|click target visible/enabled DXItemCell/0
+official-reentry|click target inside viewport Inventory/0
+official-reentry|coordinate hit Inventory/0 actual=DXItemCell
+official-reentry|input did not fault startup session
+official-reentry|OnMouseMove does not fault startup
+official-reentry|OnMouseUp does not fault startup
+official-reentry|moving/releasing selected item retains click selection
+official-reentry|selected item held move/release emits nothing
+official-reentry|click target visible/enabled DXItemCell/48
+official-reentry|click target inside viewport Inventory/48
+official-reentry|coordinate hit Inventory/48 actual=DXItemCell
+official-reentry|input did not fault startup session
+official-reentry|one expected packet ItemMove
+official-reentry|no duplicate packet ItemMove
+official-reentry|next actual click transfers to destination
+official-reentry|click target visible/enabled DXItemCell/48
+official-reentry|click target inside viewport Inventory/48
+official-reentry|coordinate hit Inventory/48 actual=DXItemCell
+official-reentry|input did not fault startup session
+official-reentry|click target visible/enabled DXItemCell/48
+official-reentry|click target inside viewport Inventory/48
+official-reentry|coordinate hit Inventory/48 actual=DXItemCell
+official-reentry|input did not fault startup session
+official-reentry|right button cancels selection without using selected item
+official-reentry|selection cancel no use/drop
+official-reentry|click target visible/enabled DXItemCell/0
+official-reentry|click target inside viewport Inventory/0
+official-reentry|coordinate hit Inventory/0 actual=DXItemCell
+official-reentry|input did not fault startup session
+official-reentry|OnMouseMove does not fault startup
+official-reentry|map target is original map control
+official-reentry|OnMouseDown does not fault startup
+official-reentry|OnMouseUp does not fault startup
+official-reentry|release clears held map buttons
+official-reentry|one expected packet ItemDrop
+official-reentry|no duplicate packet ItemDrop
+official-reentry|exact original drop ID/count 0
+official-reentry|drop pending locks without speculative removal 0
+official-reentry|drop rejection unlocks and retains identity/count 0
+official-reentry|click target visible/enabled DXItemCell/1
+official-reentry|click target inside viewport Inventory/1
+official-reentry|coordinate hit Inventory/1 actual=DXItemCell
+official-reentry|input did not fault startup session
+official-reentry|OnMouseMove does not fault startup
+official-reentry|map target is original map control
+official-reentry|OnMouseDown does not fault startup
+official-reentry|OnMouseUp does not fault startup
+official-reentry|release clears held map buttons
+official-reentry|one expected packet ItemDrop
+official-reentry|no duplicate packet ItemDrop
+official-reentry|exact original drop ID/count 1
+official-reentry|drop pending locks without speculative removal 1
+official-reentry|drop rejection unlocks and retains identity/count 1
+official-reentry|click target visible/enabled DXItemCell/2
+official-reentry|click target inside viewport Inventory/2
+official-reentry|coordinate hit Inventory/2 actual=DXItemCell
+official-reentry|input did not fault startup session
+official-reentry|OnMouseMove does not fault startup
+official-reentry|map target is original map control
+official-reentry|OnMouseDown does not fault startup
+official-reentry|OnMouseUp does not fault startup
+official-reentry|release clears held map buttons
+official-reentry|one expected packet ItemDrop
+official-reentry|no duplicate packet ItemDrop
+official-reentry|exact original drop ID/count 2
+official-reentry|drop pending locks without speculative removal 2
+official-reentry|drop rejection unlocks and retains identity/count 2
+official-reentry|click target visible/enabled DXItemCell/3
+official-reentry|click target inside viewport Inventory/3
+official-reentry|coordinate hit Inventory/3 actual=DXItemCell
+official-reentry|input did not fault startup session
+official-reentry|OnMouseMove does not fault startup
+official-reentry|map target is original map control
+official-reentry|OnMouseDown does not fault startup
+official-reentry|OnMouseUp does not fault startup
+official-reentry|release clears held map buttons
+official-reentry|one expected packet ItemDrop
+official-reentry|no duplicate packet ItemDrop
+official-reentry|exact original drop ID/count 3
+official-reentry|drop pending locks without speculative removal 3
+official-reentry|drop rejection unlocks and retains identity/count 3
+official-reentry|click target visible/enabled DXItemCell/4
+official-reentry|click target inside viewport Inventory/4
+official-reentry|coordinate hit Inventory/4 actual=DXItemCell
+official-reentry|input did not fault startup session
+official-reentry|OnMouseMove does not fault startup
+official-reentry|map target is original map control
+official-reentry|OnMouseDown does not fault startup
+official-reentry|OnMouseUp does not fault startup
+official-reentry|release clears held map buttons
+official-reentry|one expected packet ItemDrop
+official-reentry|no duplicate packet ItemDrop
+official-reentry|exact original drop ID/count 4
+official-reentry|drop pending locks without speculative removal 4
+official-reentry|drop rejection unlocks and retains identity/count 4
+official-reentry|click target visible/enabled DXItemCell/5
+official-reentry|click target inside viewport Inventory/5
+official-reentry|coordinate hit Inventory/5 actual=DXItemCell
+official-reentry|input did not fault startup session
+official-reentry|OnMouseMove does not fault startup
+official-reentry|map target is original map control
+official-reentry|OnMouseDown does not fault startup
+official-reentry|OnMouseUp does not fault startup
+official-reentry|release clears held map buttons
+official-reentry|one expected packet ItemDrop
+official-reentry|no duplicate packet ItemDrop
+official-reentry|exact original drop ID/count 5
+official-reentry|drop pending locks without speculative removal 5
+official-reentry|drop rejection unlocks and retains identity/count 5
+official-reentry|click target visible/enabled DXItemCell/6
+official-reentry|click target inside viewport Inventory/6
+official-reentry|coordinate hit Inventory/6 actual=DXItemCell
+official-reentry|input did not fault startup session
+official-reentry|OnMouseMove does not fault startup
+official-reentry|map target is original map control
+official-reentry|OnMouseDown does not fault startup
+official-reentry|OnMouseUp does not fault startup
+official-reentry|release clears held map buttons
+official-reentry|one expected packet ItemDrop
+official-reentry|no duplicate packet ItemDrop
+official-reentry|exact original drop ID/count 6
+official-reentry|drop pending locks without speculative removal 6
+official-reentry|drop rejection unlocks and retains identity/count 6
+official-reentry|click target visible/enabled DXItemCell/7
+official-reentry|click target inside viewport Inventory/7
+official-reentry|coordinate hit Inventory/7 actual=DXItemCell
+official-reentry|input did not fault startup session
+official-reentry|OnMouseMove does not fault startup
+official-reentry|map target is original map control
+official-reentry|OnMouseDown does not fault startup
+official-reentry|OnMouseUp does not fault startup
+official-reentry|release clears held map buttons
+official-reentry|one expected packet ItemDrop
+official-reentry|no duplicate packet ItemDrop
+official-reentry|exact original drop ID/count 7
+official-reentry|drop pending locks without speculative removal 7
+official-reentry|drop rejection unlocks and retains identity/count 7
+official-reentry|click target visible/enabled DXItemCell/8
+official-reentry|click target inside viewport Inventory/8
+official-reentry|coordinate hit Inventory/8 actual=DXItemCell
+official-reentry|input did not fault startup session
+official-reentry|OnMouseMove does not fault startup
+official-reentry|map target is original map control
+official-reentry|OnMouseDown does not fault startup
+official-reentry|OnMouseUp does not fault startup
+official-reentry|release clears held map buttons
+official-reentry|one expected packet ItemDrop
+official-reentry|no duplicate packet ItemDrop
+official-reentry|exact original drop ID/count 8
+official-reentry|drop pending locks without speculative removal 8
+official-reentry|drop rejection unlocks and retains identity/count 8
+official-reentry|click target visible/enabled DXItemCell/9
+official-reentry|click target inside viewport Inventory/9
+official-reentry|coordinate hit Inventory/9 actual=DXItemCell
+official-reentry|input did not fault startup session
+official-reentry|OnMouseMove does not fault startup
+official-reentry|map target is original map control
+official-reentry|OnMouseDown does not fault startup
+official-reentry|OnMouseUp does not fault startup
+official-reentry|release clears held map buttons
+official-reentry|one expected packet ItemDrop
+official-reentry|no duplicate packet ItemDrop
+official-reentry|exact original drop ID/count 9
+official-reentry|drop pending locks without speculative removal 9
+official-reentry|drop rejection unlocks and retains identity/count 9
+official-reentry|click target visible/enabled DXItemCell/10
+official-reentry|click target inside viewport Inventory/10
+official-reentry|coordinate hit Inventory/10 actual=DXItemCell
+official-reentry|input did not fault startup session
+official-reentry|OnMouseMove does not fault startup
+official-reentry|map target is original map control
+official-reentry|OnMouseDown does not fault startup
+official-reentry|OnMouseUp does not fault startup
+official-reentry|release clears held map buttons
+official-reentry|one expected packet ItemDrop
+official-reentry|no duplicate packet ItemDrop
+official-reentry|exact original drop ID/count 10
+official-reentry|drop pending locks without speculative removal 10
+official-reentry|drop rejection unlocks and retains identity/count 10
+official-reentry|click target visible/enabled DXItemCell/11
+official-reentry|click target inside viewport Inventory/11
+official-reentry|coordinate hit Inventory/11 actual=DXItemCell
+official-reentry|input did not fault startup session
+official-reentry|OnMouseMove does not fault startup
+official-reentry|map target is original map control
+official-reentry|OnMouseDown does not fault startup
+official-reentry|OnMouseUp does not fault startup
+official-reentry|release clears held map buttons
+official-reentry|one expected packet ItemDrop
+official-reentry|no duplicate packet ItemDrop
+official-reentry|exact original drop ID/count 11
+official-reentry|drop pending locks without speculative removal 11
+official-reentry|drop rejection unlocks and retains identity/count 11
+official-reentry|click target visible/enabled DXItemCell/12
+official-reentry|click target inside viewport Inventory/12
+official-reentry|coordinate hit Inventory/12 actual=DXItemCell
+official-reentry|input did not fault startup session
+official-reentry|OnMouseMove does not fault startup
+official-reentry|map target is original map control
+official-reentry|OnMouseDown does not fault startup
+official-reentry|OnMouseUp does not fault startup
+official-reentry|release clears held map buttons
+official-reentry|one expected packet ItemDrop
+official-reentry|no duplicate packet ItemDrop
+official-reentry|exact original drop ID/count 12
+official-reentry|drop pending locks without speculative removal 12
+official-reentry|drop rejection unlocks and retains identity/count 12
+official-reentry|click target visible/enabled DXItemCell/13
+official-reentry|click target inside viewport Inventory/13
+official-reentry|coordinate hit Inventory/13 actual=DXItemCell
+official-reentry|input did not fault startup session
+official-reentry|OnMouseMove does not fault startup
+official-reentry|map target is original map control
+official-reentry|OnMouseDown does not fault startup
+official-reentry|OnMouseUp does not fault startup
+official-reentry|release clears held map buttons
+official-reentry|one expected packet ItemDrop
+official-reentry|no duplicate packet ItemDrop
+official-reentry|exact original drop ID/count 13
+official-reentry|drop pending locks without speculative removal 13
+official-reentry|drop rejection unlocks and retains identity/count 13
+official-reentry|click target visible/enabled DXItemCell/14
+official-reentry|click target inside viewport Inventory/14
+official-reentry|coordinate hit Inventory/14 actual=DXItemCell
+official-reentry|input did not fault startup session
+official-reentry|OnMouseMove does not fault startup
+official-reentry|map target is original map control
+official-reentry|OnMouseDown does not fault startup
+official-reentry|OnMouseUp does not fault startup
+official-reentry|release clears held map buttons
+official-reentry|one expected packet ItemDrop
+official-reentry|no duplicate packet ItemDrop
+official-reentry|exact original drop ID/count 14
+official-reentry|drop pending locks without speculative removal 14
+official-reentry|drop rejection unlocks and retains identity/count 14
+official-reentry|click target visible/enabled DXItemCell/15
+official-reentry|click target inside viewport Inventory/15
+official-reentry|coordinate hit Inventory/15 actual=DXItemCell
+official-reentry|input did not fault startup session
+official-reentry|OnMouseMove does not fault startup
+official-reentry|map target is original map control
+official-reentry|OnMouseDown does not fault startup
+official-reentry|OnMouseUp does not fault startup
+official-reentry|release clears held map buttons
+official-reentry|one expected packet ItemDrop
+official-reentry|no duplicate packet ItemDrop
+official-reentry|exact original drop ID/count 15
+official-reentry|drop pending locks without speculative removal 15
+official-reentry|drop rejection unlocks and retains identity/count 15
+official-reentry|click target visible/enabled DXItemCell/16
+official-reentry|click target inside viewport Inventory/16
+official-reentry|coordinate hit Inventory/16 actual=DXItemCell
+official-reentry|input did not fault startup session
+official-reentry|OnMouseMove does not fault startup
+official-reentry|map target is original map control
+official-reentry|OnMouseDown does not fault startup
+official-reentry|OnMouseUp does not fault startup
+official-reentry|release clears held map buttons
+official-reentry|one expected packet ItemDrop
+official-reentry|no duplicate packet ItemDrop
+official-reentry|exact original drop ID/count 16
+official-reentry|drop pending locks without speculative removal 16
+official-reentry|drop rejection unlocks and retains identity/count 16
+official-reentry|click target visible/enabled DXItemCell/17
+official-reentry|click target inside viewport Inventory/17
+official-reentry|coordinate hit Inventory/17 actual=DXItemCell
+official-reentry|input did not fault startup session
+official-reentry|OnMouseMove does not fault startup
+official-reentry|map target is original map control
+official-reentry|OnMouseDown does not fault startup
+official-reentry|OnMouseUp does not fault startup
+official-reentry|release clears held map buttons
+official-reentry|one expected packet ItemDrop
+official-reentry|no duplicate packet ItemDrop
+official-reentry|exact original drop ID/count 17
+official-reentry|drop pending locks without speculative removal 17
+official-reentry|drop rejection unlocks and retains identity/count 17
+official-reentry|click target visible/enabled DXItemCell/18
+official-reentry|click target inside viewport Inventory/18
+official-reentry|coordinate hit Inventory/18 actual=DXItemCell
+official-reentry|input did not fault startup session
+official-reentry|OnMouseMove does not fault startup
+official-reentry|map target is original map control
+official-reentry|OnMouseDown does not fault startup
+official-reentry|OnMouseUp does not fault startup
+official-reentry|release clears held map buttons
+official-reentry|one expected packet ItemDrop
+official-reentry|no duplicate packet ItemDrop
+official-reentry|exact original drop ID/count 18
+official-reentry|drop pending locks without speculative removal 18
+official-reentry|drop rejection unlocks and retains identity/count 18
+official-reentry|click target visible/enabled DXItemCell/19
+official-reentry|click target inside viewport Inventory/19
+official-reentry|coordinate hit Inventory/19 actual=DXItemCell
+official-reentry|input did not fault startup session
+official-reentry|OnMouseMove does not fault startup
+official-reentry|map target is original map control
+official-reentry|OnMouseDown does not fault startup
+official-reentry|OnMouseUp does not fault startup
+official-reentry|release clears held map buttons
+official-reentry|one expected packet ItemDrop
+official-reentry|no duplicate packet ItemDrop
+official-reentry|exact original drop ID/count 19
+official-reentry|drop pending locks without speculative removal 19
+official-reentry|drop rejection unlocks and retains identity/count 19
+official-reentry|click target visible/enabled DXItemCell/20
+official-reentry|click target inside viewport Inventory/20
+official-reentry|coordinate hit Inventory/20 actual=DXItemCell
+official-reentry|input did not fault startup session
+official-reentry|OnMouseMove does not fault startup
+official-reentry|map target is original map control
+official-reentry|OnMouseDown does not fault startup
+official-reentry|OnMouseUp does not fault startup
+official-reentry|release clears held map buttons
+official-reentry|one expected packet ItemDrop
+official-reentry|no duplicate packet ItemDrop
+official-reentry|exact original drop ID/count 20
+official-reentry|drop pending locks without speculative removal 20
+official-reentry|drop rejection unlocks and retains identity/count 20
+official-reentry|click target visible/enabled DXItemCell/21
+official-reentry|click target inside viewport Inventory/21
+official-reentry|coordinate hit Inventory/21 actual=DXItemCell
+official-reentry|input did not fault startup session
+official-reentry|OnMouseMove does not fault startup
+official-reentry|map target is original map control
+official-reentry|OnMouseDown does not fault startup
+official-reentry|OnMouseUp does not fault startup
+official-reentry|release clears held map buttons
+official-reentry|one expected packet ItemDrop
+official-reentry|no duplicate packet ItemDrop
+official-reentry|exact original drop ID/count 21
+official-reentry|drop pending locks without speculative removal 21
+official-reentry|drop rejection unlocks and retains identity/count 21
+official-reentry|click target visible/enabled DXItemCell/22
+official-reentry|click target inside viewport Inventory/22
+official-reentry|coordinate hit Inventory/22 actual=DXItemCell
+official-reentry|input did not fault startup session
+official-reentry|OnMouseMove does not fault startup
+official-reentry|map target is original map control
+official-reentry|OnMouseDown does not fault startup
+official-reentry|OnMouseUp does not fault startup
+official-reentry|release clears held map buttons
+official-reentry|one expected packet ItemDrop
+official-reentry|no duplicate packet ItemDrop
+official-reentry|exact original drop ID/count 22
+official-reentry|drop pending locks without speculative removal 22
+official-reentry|drop rejection unlocks and retains identity/count 22
+official-reentry|click target visible/enabled DXItemCell/23
+official-reentry|click target inside viewport Inventory/23
+official-reentry|coordinate hit Inventory/23 actual=DXItemCell
+official-reentry|input did not fault startup session
+official-reentry|OnMouseMove does not fault startup
+official-reentry|map target is original map control
+official-reentry|OnMouseDown does not fault startup
+official-reentry|OnMouseUp does not fault startup
+official-reentry|release clears held map buttons
+official-reentry|one expected packet ItemDrop
+official-reentry|no duplicate packet ItemDrop
+official-reentry|exact original drop ID/count 23
+official-reentry|drop pending locks without speculative removal 23
+official-reentry|drop rejection unlocks and retains identity/count 23
+official-reentry|click target visible/enabled DXItemCell/24
+official-reentry|click target inside viewport Inventory/24
+official-reentry|coordinate hit Inventory/24 actual=DXItemCell
+official-reentry|input did not fault startup session
+official-reentry|OnMouseMove does not fault startup
+official-reentry|map target is original map control
+official-reentry|OnMouseDown does not fault startup
+official-reentry|OnMouseUp does not fault startup
+official-reentry|release clears held map buttons
+official-reentry|one expected packet ItemDrop
+official-reentry|no duplicate packet ItemDrop
+official-reentry|exact original drop ID/count 24
+official-reentry|drop pending locks without speculative removal 24
+official-reentry|drop rejection unlocks and retains identity/count 24
+official-reentry|click target visible/enabled DXItemCell/25
+official-reentry|click target inside viewport Inventory/25
+official-reentry|coordinate hit Inventory/25 actual=DXItemCell
+official-reentry|input did not fault startup session
+official-reentry|OnMouseMove does not fault startup
+official-reentry|map target is original map control
+official-reentry|OnMouseDown does not fault startup
+official-reentry|OnMouseUp does not fault startup
+official-reentry|release clears held map buttons
+official-reentry|one expected packet ItemDrop
+official-reentry|no duplicate packet ItemDrop
+official-reentry|exact original drop ID/count 25
+official-reentry|drop pending locks without speculative removal 25
+official-reentry|drop rejection unlocks and retains identity/count 25
+official-reentry|click target visible/enabled DXItemCell/26
+official-reentry|click target inside viewport Inventory/26
+official-reentry|coordinate hit Inventory/26 actual=DXItemCell
+official-reentry|input did not fault startup session
+official-reentry|OnMouseMove does not fault startup
+official-reentry|map target is original map control
+official-reentry|OnMouseDown does not fault startup
+official-reentry|OnMouseUp does not fault startup
+official-reentry|release clears held map buttons
+official-reentry|one expected packet ItemDrop
+official-reentry|no duplicate packet ItemDrop
+official-reentry|exact original drop ID/count 26
+official-reentry|drop pending locks without speculative removal 26
+official-reentry|drop rejection unlocks and retains identity/count 26
+official-reentry|click target visible/enabled DXItemCell/27
+official-reentry|click target inside viewport Inventory/27
+official-reentry|coordinate hit Inventory/27 actual=DXItemCell
+official-reentry|input did not fault startup session
+official-reentry|OnMouseMove does not fault startup
+official-reentry|map target is original map control
+official-reentry|OnMouseDown does not fault startup
+official-reentry|OnMouseUp does not fault startup
+official-reentry|release clears held map buttons
+official-reentry|one expected packet ItemDrop
+official-reentry|no duplicate packet ItemDrop
+official-reentry|exact original drop ID/count 27
+official-reentry|drop pending locks without speculative removal 27
+official-reentry|drop rejection unlocks and retains identity/count 27
+official-reentry|click target visible/enabled DXItemCell/28
+official-reentry|click target inside viewport Inventory/28
+official-reentry|coordinate hit Inventory/28 actual=DXItemCell
+official-reentry|input did not fault startup session
+official-reentry|OnMouseMove does not fault startup
+official-reentry|map target is original map control
+official-reentry|OnMouseDown does not fault startup
+official-reentry|OnMouseUp does not fault startup
+official-reentry|release clears held map buttons
+official-reentry|one expected packet ItemDrop
+official-reentry|no duplicate packet ItemDrop
+official-reentry|exact original drop ID/count 28
+official-reentry|drop pending locks without speculative removal 28
+official-reentry|drop rejection unlocks and retains identity/count 28
+official-reentry|click target visible/enabled DXItemCell/29
+official-reentry|click target inside viewport Inventory/29
+official-reentry|coordinate hit Inventory/29 actual=DXItemCell
+official-reentry|input did not fault startup session
+official-reentry|OnMouseMove does not fault startup
+official-reentry|map target is original map control
+official-reentry|OnMouseDown does not fault startup
+official-reentry|OnMouseUp does not fault startup
+official-reentry|release clears held map buttons
+official-reentry|one expected packet ItemDrop
+official-reentry|no duplicate packet ItemDrop
+official-reentry|exact original drop ID/count 29
+official-reentry|drop pending locks without speculative removal 29
+official-reentry|drop rejection unlocks and retains identity/count 29
+official-reentry|click target visible/enabled DXItemCell/30
+official-reentry|click target inside viewport Inventory/30
+official-reentry|coordinate hit Inventory/30 actual=DXItemCell
+official-reentry|input did not fault startup session
+official-reentry|OnMouseMove does not fault startup
+official-reentry|map target is original map control
+official-reentry|OnMouseDown does not fault startup
+official-reentry|OnMouseUp does not fault startup
+official-reentry|release clears held map buttons
+official-reentry|one expected packet ItemDrop
+official-reentry|no duplicate packet ItemDrop
+official-reentry|exact original drop ID/count 30
+official-reentry|drop pending locks without speculative removal 30
+official-reentry|drop rejection unlocks and retains identity/count 30
+official-reentry|click target visible/enabled DXItemCell/31
+official-reentry|click target inside viewport Inventory/31
+official-reentry|coordinate hit Inventory/31 actual=DXItemCell
+official-reentry|input did not fault startup session
+official-reentry|OnMouseMove does not fault startup
+official-reentry|map target is original map control
+official-reentry|OnMouseDown does not fault startup
+official-reentry|OnMouseUp does not fault startup
+official-reentry|release clears held map buttons
+official-reentry|one expected packet ItemDrop
+official-reentry|no duplicate packet ItemDrop
+official-reentry|exact original drop ID/count 31
+official-reentry|drop pending locks without speculative removal 31
+official-reentry|drop rejection unlocks and retains identity/count 31
+official-reentry|click target visible/enabled DXItemCell/32
+official-reentry|click target inside viewport Inventory/32
+official-reentry|coordinate hit Inventory/32 actual=DXItemCell
+official-reentry|input did not fault startup session
+official-reentry|OnMouseMove does not fault startup
+official-reentry|map target is original map control
+official-reentry|OnMouseDown does not fault startup
+official-reentry|OnMouseUp does not fault startup
+official-reentry|release clears held map buttons
+official-reentry|one expected packet ItemDrop
+official-reentry|no duplicate packet ItemDrop
+official-reentry|exact original drop ID/count 32
+official-reentry|drop pending locks without speculative removal 32
+official-reentry|drop rejection unlocks and retains identity/count 32
+official-reentry|click target visible/enabled DXItemCell/33
+official-reentry|click target inside viewport Inventory/33
+official-reentry|coordinate hit Inventory/33 actual=DXItemCell
+official-reentry|input did not fault startup session
+official-reentry|OnMouseMove does not fault startup
+official-reentry|map target is original map control
+official-reentry|OnMouseDown does not fault startup
+official-reentry|OnMouseUp does not fault startup
+official-reentry|release clears held map buttons
+official-reentry|one expected packet ItemDrop
+official-reentry|no duplicate packet ItemDrop
+official-reentry|exact original drop ID/count 33
+official-reentry|drop pending locks without speculative removal 33
+official-reentry|drop rejection unlocks and retains identity/count 33
+official-reentry|click target visible/enabled DXItemCell/34
+official-reentry|click target inside viewport Inventory/34
+official-reentry|coordinate hit Inventory/34 actual=DXItemCell
+official-reentry|input did not fault startup session
+official-reentry|OnMouseMove does not fault startup
+official-reentry|map target is original map control
+official-reentry|OnMouseDown does not fault startup
+official-reentry|OnMouseUp does not fault startup
+official-reentry|release clears held map buttons
+official-reentry|one expected packet ItemDrop
+official-reentry|no duplicate packet ItemDrop
+official-reentry|exact original drop ID/count 34
+official-reentry|drop pending locks without speculative removal 34
+official-reentry|drop rejection unlocks and retains identity/count 34
+official-reentry|click target visible/enabled DXItemCell/35
+official-reentry|click target inside viewport Inventory/35
+official-reentry|coordinate hit Inventory/35 actual=DXItemCell
+official-reentry|input did not fault startup session
+official-reentry|OnMouseMove does not fault startup
+official-reentry|map target is original map control
+official-reentry|OnMouseDown does not fault startup
+official-reentry|OnMouseUp does not fault startup
+official-reentry|release clears held map buttons
+official-reentry|one expected packet ItemDrop
+official-reentry|no duplicate packet ItemDrop
+official-reentry|exact original drop ID/count 35
+official-reentry|drop pending locks without speculative removal 35
+official-reentry|drop rejection unlocks and retains identity/count 35
+official-reentry|click target visible/enabled DXItemCell/36
+official-reentry|click target inside viewport Inventory/36
+official-reentry|coordinate hit Inventory/36 actual=DXItemCell
+official-reentry|input did not fault startup session
+official-reentry|OnMouseMove does not fault startup
+official-reentry|map target is original map control
+official-reentry|OnMouseDown does not fault startup
+official-reentry|OnMouseUp does not fault startup
+official-reentry|release clears held map buttons
+official-reentry|one expected packet ItemDrop
+official-reentry|no duplicate packet ItemDrop
+official-reentry|exact original drop ID/count 36
+official-reentry|drop pending locks without speculative removal 36
+official-reentry|drop rejection unlocks and retains identity/count 36
+official-reentry|click target visible/enabled DXItemCell/37
+official-reentry|click target inside viewport Inventory/37
+official-reentry|coordinate hit Inventory/37 actual=DXItemCell
+official-reentry|input did not fault startup session
+official-reentry|OnMouseMove does not fault startup
+official-reentry|map target is original map control
+official-reentry|OnMouseDown does not fault startup
+official-reentry|OnMouseUp does not fault startup
+official-reentry|release clears held map buttons
+official-reentry|one expected packet ItemDrop
+official-reentry|no duplicate packet ItemDrop
+official-reentry|exact original drop ID/count 37
+official-reentry|drop pending locks without speculative removal 37
+official-reentry|drop rejection unlocks and retains identity/count 37
+official-reentry|click target visible/enabled DXItemCell/38
+official-reentry|click target inside viewport Inventory/38
+official-reentry|coordinate hit Inventory/38 actual=DXItemCell
+official-reentry|input did not fault startup session
+official-reentry|OnMouseMove does not fault startup
+official-reentry|map target is original map control
+official-reentry|OnMouseDown does not fault startup
+official-reentry|OnMouseUp does not fault startup
+official-reentry|release clears held map buttons
+official-reentry|one expected packet ItemDrop
+official-reentry|no duplicate packet ItemDrop
+official-reentry|exact original drop ID/count 38
+official-reentry|drop pending locks without speculative removal 38
+official-reentry|drop rejection unlocks and retains identity/count 38
+official-reentry|click target visible/enabled DXItemCell/39
+official-reentry|click target inside viewport Inventory/39
+official-reentry|coordinate hit Inventory/39 actual=DXItemCell
+official-reentry|input did not fault startup session
+official-reentry|OnMouseMove does not fault startup
+official-reentry|map target is original map control
+official-reentry|OnMouseDown does not fault startup
+official-reentry|OnMouseUp does not fault startup
+official-reentry|release clears held map buttons
+official-reentry|one expected packet ItemDrop
+official-reentry|no duplicate packet ItemDrop
+official-reentry|exact original drop ID/count 39
+official-reentry|drop pending locks without speculative removal 39
+official-reentry|drop rejection unlocks and retains identity/count 39
+official-reentry|click target visible/enabled DXItemCell/40
+official-reentry|click target inside viewport Inventory/40
+official-reentry|coordinate hit Inventory/40 actual=DXItemCell
+official-reentry|input did not fault startup session
+official-reentry|OnMouseMove does not fault startup
+official-reentry|map target is original map control
+official-reentry|OnMouseDown does not fault startup
+official-reentry|OnMouseUp does not fault startup
+official-reentry|release clears held map buttons
+official-reentry|one expected packet ItemDrop
+official-reentry|no duplicate packet ItemDrop
+official-reentry|exact original drop ID/count 40
+official-reentry|drop pending locks without speculative removal 40
+official-reentry|drop rejection unlocks and retains identity/count 40
+official-reentry|click target visible/enabled DXItemCell/41
+official-reentry|click target inside viewport Inventory/41
+official-reentry|coordinate hit Inventory/41 actual=DXItemCell
+official-reentry|input did not fault startup session
+official-reentry|OnMouseMove does not fault startup
+official-reentry|map target is original map control
+official-reentry|OnMouseDown does not fault startup
+official-reentry|OnMouseUp does not fault startup
+official-reentry|release clears held map buttons
+official-reentry|one expected packet ItemDrop
+official-reentry|no duplicate packet ItemDrop
+official-reentry|exact original drop ID/count 41
+official-reentry|drop pending locks without speculative removal 41
+official-reentry|drop rejection unlocks and retains identity/count 41
+official-reentry|click target visible/enabled DXItemCell/42
+official-reentry|click target inside viewport Inventory/42
+official-reentry|coordinate hit Inventory/42 actual=DXItemCell
+official-reentry|input did not fault startup session
+official-reentry|OnMouseMove does not fault startup
+official-reentry|map target is original map control
+official-reentry|OnMouseDown does not fault startup
+official-reentry|OnMouseUp does not fault startup
+official-reentry|release clears held map buttons
+official-reentry|one expected packet ItemDrop
+official-reentry|no duplicate packet ItemDrop
+official-reentry|exact original drop ID/count 42
+official-reentry|drop pending locks without speculative removal 42
+official-reentry|drop rejection unlocks and retains identity/count 42
+official-reentry|click target visible/enabled DXItemCell/43
+official-reentry|click target inside viewport Inventory/43
+official-reentry|coordinate hit Inventory/43 actual=DXItemCell
+official-reentry|input did not fault startup session
+official-reentry|OnMouseMove does not fault startup
+official-reentry|map target is original map control
+official-reentry|OnMouseDown does not fault startup
+official-reentry|OnMouseUp does not fault startup
+official-reentry|release clears held map buttons
+official-reentry|one expected packet ItemDrop
+official-reentry|no duplicate packet ItemDrop
+official-reentry|exact original drop ID/count 43
+official-reentry|drop pending locks without speculative removal 43
+official-reentry|drop rejection unlocks and retains identity/count 43
+official-reentry|click target visible/enabled DXItemCell/44
+official-reentry|click target inside viewport Inventory/44
+official-reentry|coordinate hit Inventory/44 actual=DXItemCell
+official-reentry|input did not fault startup session
+official-reentry|OnMouseMove does not fault startup
+official-reentry|map target is original map control
+official-reentry|OnMouseDown does not fault startup
+official-reentry|OnMouseUp does not fault startup
+official-reentry|release clears held map buttons
+official-reentry|one expected packet ItemDrop
+official-reentry|no duplicate packet ItemDrop
+official-reentry|exact original drop ID/count 44
+official-reentry|drop pending locks without speculative removal 44
+official-reentry|drop rejection unlocks and retains identity/count 44
+official-reentry|click target visible/enabled DXItemCell/45
+official-reentry|click target inside viewport Inventory/45
+official-reentry|coordinate hit Inventory/45 actual=DXItemCell
+official-reentry|input did not fault startup session
+official-reentry|OnMouseMove does not fault startup
+official-reentry|map target is original map control
+official-reentry|OnMouseDown does not fault startup
+official-reentry|OnMouseUp does not fault startup
+official-reentry|release clears held map buttons
+official-reentry|one expected packet ItemDrop
+official-reentry|no duplicate packet ItemDrop
+official-reentry|exact original drop ID/count 45
+official-reentry|drop pending locks without speculative removal 45
+official-reentry|drop rejection unlocks and retains identity/count 45
+official-reentry|click target visible/enabled DXItemCell/46
+official-reentry|click target inside viewport Inventory/46
+official-reentry|coordinate hit Inventory/46 actual=DXItemCell
+official-reentry|input did not fault startup session
+official-reentry|OnMouseMove does not fault startup
+official-reentry|map target is original map control
+official-reentry|OnMouseDown does not fault startup
+official-reentry|OnMouseUp does not fault startup
+official-reentry|release clears held map buttons
+official-reentry|one expected packet ItemDrop
+official-reentry|no duplicate packet ItemDrop
+official-reentry|exact original drop ID/count 46
+official-reentry|drop pending locks without speculative removal 46
+official-reentry|drop rejection unlocks and retains identity/count 46
+official-reentry|click target visible/enabled DXItemCell/47
+official-reentry|click target inside viewport Inventory/47
+official-reentry|coordinate hit Inventory/47 actual=DXItemCell
+official-reentry|input did not fault startup session
+official-reentry|OnMouseMove does not fault startup
+official-reentry|map target is original map control
+official-reentry|OnMouseDown does not fault startup
+official-reentry|OnMouseUp does not fault startup
+official-reentry|release clears held map buttons
+official-reentry|one expected packet ItemDrop
+official-reentry|no duplicate packet ItemDrop
+official-reentry|exact original drop ID/count 47
+official-reentry|drop pending locks without speculative removal 47
+official-reentry|drop rejection unlocks and retains identity/count 47
+official-reentry|click target visible/enabled DXItemCell/48
+official-reentry|click target inside viewport Inventory/48
+official-reentry|coordinate hit Inventory/48 actual=DXItemCell
+official-reentry|input did not fault startup session
+official-reentry|OnMouseMove does not fault startup
+official-reentry|map target is original map control
+official-reentry|OnMouseDown does not fault startup
+official-reentry|OnMouseUp does not fault startup
+official-reentry|release clears held map buttons
+official-reentry|one expected packet ItemDrop
+official-reentry|no duplicate packet ItemDrop
+official-reentry|exact original drop ID/count 48
+official-reentry|drop pending locks without speculative removal 48
+official-reentry|drop rejection unlocks and retains identity/count 48
+official-reentry|click target visible/enabled DXItemCell/48
+official-reentry|click target inside viewport Inventory/48
+official-reentry|coordinate hit Inventory/48 actual=DXItemCell
+official-reentry|input did not fault startup session
+official-reentry|OnMouseMove does not fault startup
+official-reentry|map target is original map control
+official-reentry|OnMouseDown does not fault startup
+official-reentry|OnMouseUp does not fault startup
+official-reentry|release clears held map buttons
+official-reentry|one expected packet ItemDrop
+official-reentry|no duplicate packet ItemDrop
+official-reentry|authoritative remaining count applied
+official-reentry|click target visible/enabled DXItemCell/48
+official-reentry|click target inside viewport Inventory/48
+official-reentry|coordinate hit Inventory/48 actual=DXItemCell
+official-reentry|input did not fault startup session
+official-reentry|OnMouseMove does not fault startup
+official-reentry|map target is original map control
+official-reentry|OnMouseDown does not fault startup
+official-reentry|OnMouseUp does not fault startup
+official-reentry|release clears held map buttons
+official-reentry|one expected packet ItemDrop
+official-reentry|no duplicate packet ItemDrop
+official-reentry|repeat drop uses authoritative remaining count
+official-reentry|accepted full drop empties/unlocks cell
+official-reentry|click target visible/enabled DXItemCell/0
+official-reentry|click target inside viewport Inventory/0
+official-reentry|coordinate hit Inventory/0 actual=DXItemCell
+official-reentry|input did not fault startup session
+official-reentry|OnMouseMove does not fault startup
+official-reentry|map target is original map control
+official-reentry|OnMouseDown does not fault startup
+official-reentry|OnMouseUp does not fault startup
+official-reentry|release clears held map buttons
+official-reentry|flag-locked item refuses map drop
+official-reentry|flag-locked item no drop
+official-reentry|click target visible/enabled DXItemCell/0
+official-reentry|click target inside viewport Equipment/0
+official-reentry|coordinate hit Equipment/0 actual=DXItemCell
+official-reentry|input did not fault startup session
+official-reentry|OnMouseMove does not fault startup
+official-reentry|map target is original map control
+official-reentry|OnMouseDown does not fault startup
+official-reentry|OnMouseUp does not fault startup
+official-reentry|release clears held map buttons
+official-reentry|equipped item refuses direct map drop
+official-reentry|equipment cannot bypass unequip
+official-reentry|click target visible/enabled DXItemCell/0
+official-reentry|click target inside viewport Inventory/0
+official-reentry|coordinate hit Inventory/0 actual=DXItemCell
+official-reentry|input did not fault startup session
+official-reentry|click target visible/enabled DXItemCell/0
+official-reentry|click target inside viewport Belt/0
+official-reentry|coordinate hit Belt/0 actual=DXItemCell
+official-reentry|input did not fault startup session
+official-reentry|one expected packet BeltLinkChanged
+official-reentry|no duplicate packet BeltLinkChanged
+official-reentry|click target visible/enabled DXItemCell/0
+official-reentry|click target inside viewport Belt/0
+official-reentry|coordinate hit Belt/0 actual=DXItemCell
+official-reentry|input did not fault startup session
+official-reentry|OnMouseMove does not fault startup
+official-reentry|map target is original map control
+official-reentry|OnMouseDown does not fault startup
+official-reentry|OnMouseUp does not fault startup
+official-reentry|release clears held map buttons
+official-reentry|one expected packet BeltLinkChanged
+official-reentry|no duplicate packet BeltLinkChanged
+official-reentry|belt map drop only clears link
+official-reentry|belt unlink retains bag identity/count/unlocked
+official-reentry|click target visible/enabled DXLabel/
+official-reentry|click target inside viewport /
+official-reentry|coordinate hit / actual=DXLabel
+official-reentry|input did not fault startup session
+official-reentry|gold label selects positive gold
+official-reentry|click target visible/enabled DXLabel/
+official-reentry|click target inside viewport /
+official-reentry|coordinate hit / actual=DXLabel
+official-reentry|input did not fault startup session
+official-reentry|right button cancels gold selection
+official-reentry|gold selection/cancel local only
+official-reentry|click target visible/enabled DXLabel/
+official-reentry|click target inside viewport /
+official-reentry|coordinate hit / actual=DXLabel
+official-reentry|input did not fault startup session
+official-reentry|OnMouseMove does not fault startup
+official-reentry|map target is original map control
+official-reentry|OnMouseDown does not fault startup
+official-reentry|OnMouseUp does not fault startup
+official-reentry|release clears held map buttons
+official-reentry|original amount window and max gold retained
+official-reentry|gold popup opening sends nothing
+official-reentry|click target visible/enabled DXButton/
+official-reentry|click target inside viewport /
+official-reentry|coordinate hit / actual=DXButton
+official-reentry|input did not fault startup session
+official-reentry|gold popup close cancels
+official-reentry|gold close does not deduct
+official-reentry|click target visible/enabled DXLabel/
+official-reentry|click target inside viewport /
+official-reentry|coordinate hit / actual=DXLabel
+official-reentry|input did not fault startup session
+official-reentry|OnMouseMove does not fault startup
+official-reentry|map target is original map control
+official-reentry|OnMouseDown does not fault startup
+official-reentry|OnMouseUp does not fault startup
+official-reentry|release clears held map buttons
+official-reentry|zero gold confirmation disabled
+official-reentry|click target visible/enabled DXButton/
+official-reentry|click target inside viewport /
+official-reentry|coordinate hit / actual=DXButton
+official-reentry|input did not fault startup session
+official-reentry|one expected packet GoldDrop
+official-reentry|no duplicate packet GoldDrop
+official-reentry|confirm sends exact gold without speculative deduction
+official-reentry|gold response applies authoritative total
+official-reentry|click target visible/enabled DXLabel/
+official-reentry|click target inside viewport /
+official-reentry|coordinate hit / actual=DXLabel
+official-reentry|input did not fault startup session
+official-reentry|zero balance cannot pick up gold
+official-reentry|zero balance no request
+official-reentry|click target visible/enabled DXButton/
+official-reentry|click target inside viewport /
+official-reentry|coordinate hit / actual=DXButton
+official-reentry|input did not fault startup session
+official-reentry|button opens same original unskinned popup RemoteSellButton
+official-reentry|opened popup fits viewport RemoteSellButton bounds={X=0,Y=412,Width=264,Height=342}
+official-reentry|preserve preferred position except viewport overflow RemoteSellButton
+official-reentry|popup opening does not submit item operation RemoteSellButton
+official-reentry|OnMouseMove does not fault startup
+official-reentry|click target visible/enabled DXButton/
+official-reentry|click target inside viewport /
+official-reentry|coordinate hit / actual=DXButton
+official-reentry|input did not fault startup session
+official-reentry|popup close retains original object RemoteSellButton
+official-reentry|popup close no item submission RemoteSellButton
+official-reentry|click target visible/enabled DXButton/
+official-reentry|click target inside viewport /
+official-reentry|coordinate hit / actual=DXButton
+official-reentry|input did not fault startup session
+official-reentry|button opens same original unskinned popup RemoteFragmentButton
+official-reentry|opened popup fits viewport RemoteFragmentButton bounds={X=12,Y=412,Width=264,Height=202}
+official-reentry|preserve preferred position except viewport overflow RemoteFragmentButton
+official-reentry|popup opening does not submit item operation RemoteFragmentButton
+official-reentry|OnMouseMove does not fault startup
+official-reentry|click target visible/enabled DXButton/
+official-reentry|click target inside viewport /
+official-reentry|coordinate hit / actual=DXButton
+official-reentry|input did not fault startup session
+official-reentry|popup close retains original object RemoteFragmentButton
+official-reentry|popup close no item submission RemoteFragmentButton
+official-reentry|click target visible/enabled DXButton/
+official-reentry|click target inside viewport /
+official-reentry|coordinate hit / actual=DXButton
+official-reentry|input did not fault startup session
+official-reentry|button opens same original unskinned popup MonsterDropListButton
+official-reentry|opened popup fits viewport MonsterDropListButton bounds={X=500,Y=372,Width=368,Height=396}
+official-reentry|preserve preferred position except viewport overflow MonsterDropListButton
+official-reentry|popup opening does not submit item operation MonsterDropListButton
+official-reentry|OnMouseMove does not fault startup
+official-reentry|click target visible/enabled DXButton/
+official-reentry|click target inside viewport /
+official-reentry|coordinate hit / actual=DXButton
+official-reentry|input did not fault startup session
+official-reentry|popup close retains original object MonsterDropListButton
+official-reentry|popup close no item submission MonsterDropListButton
+official-reentry|click target visible/enabled DXButton/
+official-reentry|click target inside viewport /
+official-reentry|coordinate hit / actual=DXButton
+official-reentry|input did not fault startup session
+official-reentry|button opens same original unskinned popup RemoteSellButton
+official-reentry|opened popup fits viewport RemoteSellButton bounds={X=0,Y=412,Width=264,Height=342}
+official-reentry|preserve preferred position except viewport overflow RemoteSellButton
+official-reentry|popup opening does not submit item operation RemoteSellButton
+official-reentry|OnMouseMove does not fault startup
+official-reentry|click target visible/enabled DXButton/
+official-reentry|click target inside viewport /
+official-reentry|coordinate hit / actual=DXButton
+official-reentry|input did not fault startup session
+official-reentry|popup close retains original object RemoteSellButton
+official-reentry|popup close no item submission RemoteSellButton
+official-reentry|click target visible/enabled DXButton/
+official-reentry|click target inside viewport /
+official-reentry|coordinate hit / actual=DXButton
+official-reentry|input did not fault startup session
+official-reentry|button opens same original unskinned popup RemoteFragmentButton
+official-reentry|opened popup fits viewport RemoteFragmentButton bounds={X=12,Y=412,Width=264,Height=202}
+official-reentry|preserve preferred position except viewport overflow RemoteFragmentButton
+official-reentry|popup opening does not submit item operation RemoteFragmentButton
+official-reentry|OnMouseMove does not fault startup
+official-reentry|click target visible/enabled DXButton/
+official-reentry|click target inside viewport /
+official-reentry|coordinate hit / actual=DXButton
+official-reentry|input did not fault startup session
+official-reentry|popup close retains original object RemoteFragmentButton
+official-reentry|popup close no item submission RemoteFragmentButton
+official-reentry|click target visible/enabled DXButton/
+official-reentry|click target inside viewport /
+official-reentry|coordinate hit / actual=DXButton
+official-reentry|input did not fault startup session
+official-reentry|button opens same original unskinned popup MonsterDropListButton
+official-reentry|opened popup fits viewport MonsterDropListButton bounds={X=500,Y=372,Width=368,Height=396}
+official-reentry|preserve preferred position except viewport overflow MonsterDropListButton
+official-reentry|popup opening does not submit item operation MonsterDropListButton
+official-reentry|OnMouseMove does not fault startup
+official-reentry|click target visible/enabled DXButton/
+official-reentry|click target inside viewport /
+official-reentry|coordinate hit / actual=DXButton
+official-reentry|input did not fault startup session
+official-reentry|popup close retains original object MonsterDropListButton
+official-reentry|popup close no item submission MonsterDropListButton
+official-reentry|click target visible/enabled DXButton/
+official-reentry|click target inside viewport /
+official-reentry|coordinate hit / actual=DXButton
+official-reentry|input did not fault startup session
+official-reentry|button opens same original unskinned popup RemoteSellButton
+official-reentry|opened popup fits viewport RemoteSellButton bounds={X=0,Y=412,Width=264,Height=342}
+official-reentry|preserve preferred position except viewport overflow RemoteSellButton
+official-reentry|popup opening does not submit item operation RemoteSellButton
+official-reentry|OnMouseMove does not fault startup
+official-reentry|click target visible/enabled DXButton/
+official-reentry|click target inside viewport /
+official-reentry|coordinate hit / actual=DXButton
+official-reentry|input did not fault startup session
+official-reentry|popup close retains original object RemoteSellButton
+official-reentry|popup close no item submission RemoteSellButton
+official-reentry|click target visible/enabled DXButton/
+official-reentry|click target inside viewport /
+official-reentry|coordinate hit / actual=DXButton
+official-reentry|input did not fault startup session
+official-reentry|button opens same original unskinned popup RemoteFragmentButton
+official-reentry|opened popup fits viewport RemoteFragmentButton bounds={X=12,Y=412,Width=264,Height=202}
+official-reentry|preserve preferred position except viewport overflow RemoteFragmentButton
+official-reentry|popup opening does not submit item operation RemoteFragmentButton
+official-reentry|OnMouseMove does not fault startup
+official-reentry|click target visible/enabled DXButton/
+official-reentry|click target inside viewport /
+official-reentry|coordinate hit / actual=DXButton
+official-reentry|input did not fault startup session
+official-reentry|popup close retains original object RemoteFragmentButton
+official-reentry|popup close no item submission RemoteFragmentButton
+official-reentry|click target visible/enabled DXButton/
+official-reentry|click target inside viewport /
+official-reentry|coordinate hit / actual=DXButton
+official-reentry|input did not fault startup session
+official-reentry|button opens same original unskinned popup MonsterDropListButton
+official-reentry|opened popup fits viewport MonsterDropListButton bounds={X=500,Y=372,Width=368,Height=396}
+official-reentry|preserve preferred position except viewport overflow MonsterDropListButton
+official-reentry|popup opening does not submit item operation MonsterDropListButton
+official-reentry|OnMouseMove does not fault startup
+official-reentry|click target visible/enabled DXButton/
+official-reentry|click target inside viewport /
+official-reentry|coordinate hit / actual=DXButton
+official-reentry|input did not fault startup session
+official-reentry|popup close retains original object MonsterDropListButton
+official-reentry|popup close no item submission MonsterDropListButton
+official-reentry|click target visible/enabled DXButton/
+official-reentry|click target inside viewport /
+official-reentry|coordinate hit / actual=DXButton
+official-reentry|input did not fault startup session
+official-reentry|button opens same original unskinned popup RemoteSellButton
+official-reentry|opened popup fits viewport RemoteSellButton bounds={X=0,Y=412,Width=264,Height=342}
+official-reentry|preserve preferred position except viewport overflow RemoteSellButton
+official-reentry|popup opening does not submit item operation RemoteSellButton
+official-reentry|OnMouseMove does not fault startup
+official-reentry|click target visible/enabled DXButton/
+official-reentry|click target inside viewport /
+official-reentry|coordinate hit / actual=DXButton
+official-reentry|input did not fault startup session
+official-reentry|popup close retains original object RemoteSellButton
+official-reentry|popup close no item submission RemoteSellButton
+official-reentry|click target visible/enabled DXButton/
+official-reentry|click target inside viewport /
+official-reentry|coordinate hit / actual=DXButton
+official-reentry|input did not fault startup session
+official-reentry|button opens same original unskinned popup RemoteFragmentButton
+official-reentry|opened popup fits viewport RemoteFragmentButton bounds={X=12,Y=412,Width=264,Height=202}
+official-reentry|preserve preferred position except viewport overflow RemoteFragmentButton
+official-reentry|popup opening does not submit item operation RemoteFragmentButton
+official-reentry|OnMouseMove does not fault startup
+official-reentry|click target visible/enabled DXButton/
+official-reentry|click target inside viewport /
+official-reentry|coordinate hit / actual=DXButton
+official-reentry|input did not fault startup session
+official-reentry|popup close retains original object RemoteFragmentButton
+official-reentry|popup close no item submission RemoteFragmentButton
+official-reentry|click target visible/enabled DXButton/
+official-reentry|click target inside viewport /
+official-reentry|coordinate hit / actual=DXButton
+official-reentry|input did not fault startup session
+official-reentry|button opens same original unskinned popup MonsterDropListButton
+official-reentry|opened popup fits viewport MonsterDropListButton bounds={X=500,Y=372,Width=368,Height=396}
+official-reentry|preserve preferred position except viewport overflow MonsterDropListButton
+official-reentry|popup opening does not submit item operation MonsterDropListButton
+official-reentry|OnMouseMove does not fault startup
+official-reentry|click target visible/enabled DXButton/
+official-reentry|click target inside viewport /
+official-reentry|coordinate hit / actual=DXButton
+official-reentry|input did not fault startup session
+official-reentry|popup close retains original object MonsterDropListButton
+official-reentry|popup close no item submission MonsterDropListButton
+official-reentry|click target visible/enabled DXButton/
+official-reentry|click target inside viewport /
+official-reentry|coordinate hit / actual=DXButton
+official-reentry|input did not fault startup session
+official-reentry|button opens same original unskinned popup RemoteSellButton
+official-reentry|opened popup fits viewport RemoteSellButton bounds={X=0,Y=412,Width=264,Height=342}
+official-reentry|preserve preferred position except viewport overflow RemoteSellButton
+official-reentry|popup opening does not submit item operation RemoteSellButton
+official-reentry|OnMouseMove does not fault startup
+official-reentry|click target visible/enabled DXButton/
+official-reentry|click target inside viewport /
+official-reentry|coordinate hit / actual=DXButton
+official-reentry|input did not fault startup session
+official-reentry|popup close retains original object RemoteSellButton
+official-reentry|popup close no item submission RemoteSellButton
+official-reentry|click target visible/enabled DXButton/
+official-reentry|click target inside viewport /
+official-reentry|coordinate hit / actual=DXButton
+official-reentry|input did not fault startup session
+official-reentry|button opens same original unskinned popup RemoteFragmentButton
+official-reentry|opened popup fits viewport RemoteFragmentButton bounds={X=12,Y=412,Width=264,Height=202}
+official-reentry|preserve preferred position except viewport overflow RemoteFragmentButton
+official-reentry|popup opening does not submit item operation RemoteFragmentButton
+official-reentry|OnMouseMove does not fault startup
+official-reentry|click target visible/enabled DXButton/
+official-reentry|click target inside viewport /
+official-reentry|coordinate hit / actual=DXButton
+official-reentry|input did not fault startup session
+official-reentry|popup close retains original object RemoteFragmentButton
+official-reentry|popup close no item submission RemoteFragmentButton
+official-reentry|click target visible/enabled DXButton/
+official-reentry|click target inside viewport /
+official-reentry|coordinate hit / actual=DXButton
+official-reentry|input did not fault startup session
+official-reentry|button opens same original unskinned popup MonsterDropListButton
+official-reentry|opened popup fits viewport MonsterDropListButton bounds={X=500,Y=372,Width=368,Height=396}
+official-reentry|preserve preferred position except viewport overflow MonsterDropListButton
+official-reentry|popup opening does not submit item operation MonsterDropListButton
+official-reentry|OnMouseMove does not fault startup
+official-reentry|click target visible/enabled DXButton/
+official-reentry|click target inside viewport /
+official-reentry|coordinate hit / actual=DXButton
+official-reentry|input did not fault startup session
+official-reentry|popup close retains original object MonsterDropListButton
+official-reentry|popup close no item submission MonsterDropListButton
+official-reentry|click target visible/enabled DXButton/
+official-reentry|click target inside viewport /
+official-reentry|coordinate hit / actual=DXButton
+official-reentry|input did not fault startup session
+official-reentry|button opens same original unskinned popup RemoteSellButton
+official-reentry|opened popup fits viewport RemoteSellButton bounds={X=0,Y=412,Width=264,Height=342}
+official-reentry|preserve preferred position except viewport overflow RemoteSellButton
+official-reentry|popup opening does not submit item operation RemoteSellButton
+official-reentry|OnMouseMove does not fault startup
+official-reentry|click target visible/enabled DXButton/
+official-reentry|click target inside viewport /
+official-reentry|coordinate hit / actual=DXButton
+official-reentry|input did not fault startup session
+official-reentry|popup close retains original object RemoteSellButton
+official-reentry|popup close no item submission RemoteSellButton
+official-reentry|click target visible/enabled DXButton/
+official-reentry|click target inside viewport /
+official-reentry|coordinate hit / actual=DXButton
+official-reentry|input did not fault startup session
+official-reentry|button opens same original unskinned popup RemoteFragmentButton
+official-reentry|opened popup fits viewport RemoteFragmentButton bounds={X=12,Y=412,Width=264,Height=202}
+official-reentry|preserve preferred position except viewport overflow RemoteFragmentButton
+official-reentry|popup opening does not submit item operation RemoteFragmentButton
+official-reentry|OnMouseMove does not fault startup
+official-reentry|click target visible/enabled DXButton/
+official-reentry|click target inside viewport /
+official-reentry|coordinate hit / actual=DXButton
+official-reentry|input did not fault startup session
+official-reentry|popup close retains original object RemoteFragmentButton
+official-reentry|popup close no item submission RemoteFragmentButton
+official-reentry|click target visible/enabled DXButton/
+official-reentry|click target inside viewport /
+official-reentry|coordinate hit / actual=DXButton
+official-reentry|input did not fault startup session
+official-reentry|button opens same original unskinned popup MonsterDropListButton
+official-reentry|opened popup fits viewport MonsterDropListButton bounds={X=500,Y=372,Width=368,Height=396}
+official-reentry|preserve preferred position except viewport overflow MonsterDropListButton
+official-reentry|popup opening does not submit item operation MonsterDropListButton
+official-reentry|OnMouseMove does not fault startup
+official-reentry|click target visible/enabled DXButton/
+official-reentry|click target inside viewport /
+official-reentry|coordinate hit / actual=DXButton
+official-reentry|input did not fault startup session
+official-reentry|popup close retains original object MonsterDropListButton
+official-reentry|popup close no item submission MonsterDropListButton
+official-reentry|click target visible/enabled DXButton/
+official-reentry|click target inside viewport /
+official-reentry|coordinate hit / actual=DXButton
+official-reentry|input did not fault startup session
+official-reentry|button opens same original unskinned popup RemoteSellButton
+official-reentry|opened popup fits viewport RemoteSellButton bounds={X=0,Y=412,Width=264,Height=342}
+official-reentry|preserve preferred position except viewport overflow RemoteSellButton
+official-reentry|popup opening does not submit item operation RemoteSellButton
+official-reentry|OnMouseMove does not fault startup
+official-reentry|click target visible/enabled DXButton/
+official-reentry|click target inside viewport /
+official-reentry|coordinate hit / actual=DXButton
+official-reentry|input did not fault startup session
+official-reentry|popup close retains original object RemoteSellButton
+official-reentry|popup close no item submission RemoteSellButton
+official-reentry|click target visible/enabled DXButton/
+official-reentry|click target inside viewport /
+official-reentry|coordinate hit / actual=DXButton
+official-reentry|input did not fault startup session
+official-reentry|button opens same original unskinned popup RemoteFragmentButton
+official-reentry|opened popup fits viewport RemoteFragmentButton bounds={X=12,Y=412,Width=264,Height=202}
+official-reentry|preserve preferred position except viewport overflow RemoteFragmentButton
+official-reentry|popup opening does not submit item operation RemoteFragmentButton
+official-reentry|OnMouseMove does not fault startup
+official-reentry|click target visible/enabled DXButton/
+official-reentry|click target inside viewport /
+official-reentry|coordinate hit / actual=DXButton
+official-reentry|input did not fault startup session
+official-reentry|popup close retains original object RemoteFragmentButton
+official-reentry|popup close no item submission RemoteFragmentButton
+official-reentry|click target visible/enabled DXButton/
+official-reentry|click target inside viewport /
+official-reentry|coordinate hit / actual=DXButton
+official-reentry|input did not fault startup session
+official-reentry|button opens same original unskinned popup MonsterDropListButton
+official-reentry|opened popup fits viewport MonsterDropListButton bounds={X=500,Y=372,Width=368,Height=396}
+official-reentry|preserve preferred position except viewport overflow MonsterDropListButton
+official-reentry|popup opening does not submit item operation MonsterDropListButton
+official-reentry|OnMouseMove does not fault startup
+official-reentry|click target visible/enabled DXButton/
+official-reentry|click target inside viewport /
+official-reentry|coordinate hit / actual=DXButton
+official-reentry|input did not fault startup session
+official-reentry|popup close retains original object MonsterDropListButton
+official-reentry|popup close no item submission MonsterDropListButton
+official-reentry|drop scene teardown clears controls
+official-reentry|reentry ordered semantic packet traces identical
+official-reentry|production readiness remains false

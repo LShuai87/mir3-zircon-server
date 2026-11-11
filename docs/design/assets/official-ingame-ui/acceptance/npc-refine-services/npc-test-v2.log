@@ -1,0 +1,7 @@
+System.Exception: official: complete cell within window and 1024x768 viewport 0
+   在 OfficialUiFullSceneTests.Check(Boolean condition, String message)
+   在 OfficialUiFullSceneTests.NpcCheck(Boolean condition, String message)
+   在 OfficialUiFullSceneTests.CheckServiceGrid(GameScene scene, DXWindow window, DXItemGrid grid, Size capacity)
+   在 OfficialUiFullSceneTests.ExerciseNpcRefineServices(GameScene scene, CConnection connection, Boolean official, String evidence, String style, List`1 trace)
+   在 OfficialUiFullSceneTests.ExerciseNpc(GameUiStartupSession owner, MapInfo map, String evidence, String style)
+   在 OfficialUiFullSceneTests.RunNpc(String[] args)

@@ -1,0 +1,183 @@
+{
+  "schemaVersion": 1,
+  "kind": "effective-scope-asset-usage-contract-verification",
+  "checkedAtLocalDate": "2026-11-08",
+  "releaseAccepted": false,
+  "referenceResolution": [
+    1024,
+    768
+  ],
+  "results": {
+    "effectiveSurfaces": 9,
+    "sceneReferencedFrames": 51,
+    "compositionOnlyFrames": 2,
+    "uninstalledButtonFrames": 40,
+    "packageFrames": 93,
+    "selectedSourcePngs": 30,
+    "outputPngs": 93,
+    "verifiedBc1Payloads": 93,
+    "binaryAlphaFrames": 93,
+    "opaqueBlackPixels": 4262,
+    "transparentPixels": 154387,
+    "failureControlTests": 18,
+    "pythonSuiteTests": 159,
+    "requireCompleteRejected": true,
+    "runtimeClientChanged": false,
+    "packageChanged": false,
+    "runtimeReady": false,
+    "productionBindingAllowed": false,
+    "gateClosureAllowed": false
+  },
+  "sourceChanges": [],
+  "sourceHashes": [
+    {
+      "path": "build/game-ui/asset-usage-official-v1.json",
+      "sha256": "c41ddd7ba21d28bfbf72431ba8308683535025cf2b5a36e30a946e1384fb7d49"
+    },
+    {
+      "path": "build/game-ui/Validate-OfficialUiAssets.py",
+      "sha256": "e2772653be066d6373b6baa0f617ad4323dc71aaf63d1c1e59c1ddf850bf890e"
+    },
+    {
+      "path": "tests/game-ui/test_official_ui_asset_usage.py",
+      "sha256": "7fe20fa059a613f56e9acb3ce498a2058260480b14b7a480ba3f2108ec25f23b"
+    }
+  ],
+  "commands": [
+    {
+      "command": "python build/game-ui/Validate-OfficialUiAssets.py --artifacts E:/workspace/mir3-ui-work/npc-shop-assets-20261108-v1 --output docs/design/assets/official-ingame-ui/acceptance/asset-usage-contract/asset-audit-final.json",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/asset-usage-contract/asset-audit-final.log",
+      "logSha256": "5bef1b0a8bf69218064c4e96dfa70b2e76899ca94e8abbc11978c1bf7d9c1d92"
+    },
+    {
+      "command": "python -m unittest discover -s tests/game-ui -p 'test_*.py'",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/asset-usage-contract/python-suite.log",
+      "logSha256": "d13761dfc2ab3f20d468519ee5e6d236af802faeca2430582a3c3070e95b7783"
+    },
+    {
+      "command": "git -c core.whitespace=cr-at-eol diff --check -- changed paths; explicit whitespace scan of new and modified sources/documents",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/asset-usage-contract/whitespace.log",
+      "logSha256": "db53005211e4f36df65d95778f31c0a5a49b9cac5eaf535dab22a42093d8ba62"
+    },
+    {
+      "command": "python build/game-ui/Validate-UiTasks.py",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/asset-usage-contract/task-validation-final.log",
+      "logSha256": "90e3ddffa807ef19523e77855653984be659ff7ab47ec66f04d41348c4cb85b3"
+    },
+    {
+      "command": "Independent foundational and 50 supplemental report, command, evidence and current source hash audit",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/asset-usage-contract/history-audit.log",
+      "logSha256": "8a9a0972e82da63d613299428e5c4e4b51c1ef61e7ef64cbdc8ece34d7a192ce"
+    }
+  ],
+  "failedAttempts": [
+    {
+      "log": "docs/design/assets/official-ingame-ui/acceptance/asset-usage-contract/asset-audit-attempt1.log",
+      "reason": "Initial tool resolved renamed composition output by sourceRole; corrected to use output role before sourceRole."
+    },
+    {
+      "log": "docs/design/assets/official-ingame-ui/acceptance/asset-usage-contract/asset-audit-attempt2.log",
+      "reason": "Initial tool expected normal state string; current format uses null for normal; corrected and guarded by tests."
+    },
+    {
+      "log": "docs/design/assets/official-ingame-ui/acceptance/asset-usage-contract/task-validation-attempt1-error.log",
+      "reason": "Rerun redirected into its own already-hashed log, truncating it before validation; preserved the error, restored the hash-identical earlier success output and changed rerun output to a separate file."
+    }
+  ],
+  "limitations": [
+    "Static entrypoint inventory and artifact integrity only; existing C# sources and candidate package are unchanged.",
+    "Warehouse background source and composition remain unresolved; no role or gate completion is claimed.",
+    "Reused control anchors are provenance, not proof of complete field/action/live packet coverage.",
+    "No new GPU, live game, IME, server, final visual or release/rollback acceptance.",
+    "BC1 remains lossy; integrity hashes do not establish PNG/Zl colour equality."
+  ],
+  "sourcePlanSha256": "f8c0a002b3821fabb54993792c354c4eff35eec51f9cfdc418535017c13069e9",
+  "evidenceHashes": [
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/asset-usage-contract/asset-audit-attempt1.log",
+      "sha256": "2958febad8663aaaa3f1361cfb8b04ca61f3b44835187054bb561f3761d30350"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/asset-usage-contract/asset-audit-attempt2.log",
+      "sha256": "ba284f4b840fb6ef04daa1c5906560eb3ee618383cebbbcae1e687cd06fbc113"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/asset-usage-contract/asset-audit-final.json",
+      "sha256": "511ce3a6c1b0733ca76a8d206df39e8a24041d49811e4dbcdfa3cabc5638aea4"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/asset-usage-contract/asset-audit-final.log",
+      "sha256": "5bef1b0a8bf69218064c4e96dfa70b2e76899ca94e8abbc11978c1bf7d9c1d92"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/asset-usage-contract/asset-audit.json",
+      "sha256": "511ce3a6c1b0733ca76a8d206df39e8a24041d49811e4dbcdfa3cabc5638aea4"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/asset-usage-contract/asset-audit.log",
+      "sha256": "5bef1b0a8bf69218064c4e96dfa70b2e76899ca94e8abbc11978c1bf7d9c1d92"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/asset-usage-contract/baseline-audit.json",
+      "sha256": "a1f0857ce84ce1a98b268692041791ea0cddb475a9ba155ee6364aa2974ac7db"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/asset-usage-contract/failure-controls.log",
+      "sha256": "de91fa35ccaa0ccf15e92080daa2976bb4b9608a235529587bad2f771cab88fa"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/asset-usage-contract/python-suite.log",
+      "sha256": "d13761dfc2ab3f20d468519ee5e6d236af802faeca2430582a3c3070e95b7783"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/asset-usage-contract/README.md",
+      "sha256": "9db9400e80a8524ad1ca58bc1656c51a7dfe00508cc0e2dba63667525ef8210d"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/asset-usage-contract/source-before/docs/tasks/official-ingame-ui/README.md.snapshot",
+      "sha256": "64d5a90f807b2c15cf9ba6ae8446968d2ae1cd94dc0f2e1b2b75e968f094748f"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/asset-usage-contract/source-before/docs/tasks/official-ingame-ui/tasks.json",
+      "sha256": "7072652d9e82129f12f79c65a747e880dfda4f1188262a1c287d226dda691d08"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/asset-usage-contract/source-before.json",
+      "sha256": "512c40a72411c1bf8f9734f1e6d6846c91fe46bf4b9967c3a191d9c3162b5f76"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/asset-usage-contract/whitespace.log",
+      "sha256": "db53005211e4f36df65d95778f31c0a5a49b9cac5eaf535dab22a42093d8ba62"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/asset-usage-contract/task-validation.log",
+      "sha256": "90e3ddffa807ef19523e77855653984be659ff7ab47ec66f04d41348c4cb85b3"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/asset-usage-contract/history-audit.json",
+      "sha256": "9019ba23301cb31805cdb29b974f63611476bcd7909704e2bcfc9da2ac67897c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/asset-usage-contract/history-audit.log",
+      "sha256": "8a9a0972e82da63d613299428e5c4e4b51c1ef61e7ef64cbdc8ece34d7a192ce"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/asset-usage-contract/task-validation-attempt1-error.log",
+      "sha256": "0a6c3f42fdb7a09ae5df5be52b1eb802d693c4db2d8c9552075da42b13c319fc"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/asset-usage-contract/task-validation-final.log",
+      "sha256": "90e3ddffa807ef19523e77855653984be659ff7ab47ec66f04d41348c4cb85b3"
+    }
+  ]
+}

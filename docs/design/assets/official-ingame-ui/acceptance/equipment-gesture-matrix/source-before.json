@@ -1,0 +1,26 @@
+[
+  {
+    "path": "tests/game-ui/OfficialUiItemInteractionTests.cs",
+    "sha256": "60da0fe623f888c4a75f759301ee02ec7c5995528bae13f6a03efd73afb76cc3"
+  },
+  {
+    "path": "tests/Run-GameUiItemInteractionTests.ps1",
+    "sha256": "bf2896523ee2b1d1c025043a1a104c2cd3d8041d996fa311bfd0c796a91a8645"
+  },
+  {
+    "path": "tests/Run-GameUiItemDropTests.ps1",
+    "sha256": "43cd81f755efbf9e183510b2e27a6620f0975ddc8982672ee930274dfde78b6a"
+  },
+  {
+    "path": "tests/Run-GameUiItemTooltipTests.ps1",
+    "sha256": "9584b9716d024daf9d76f9d783c10f0ad8395b0f62f37231de9682937a88e637"
+  },
+  {
+    "path": "tests/Run-GameUiNpcTests.ps1",
+    "sha256": "9c0c4b3cda994e154c79714a3ed77cff2cf08f20bce4fdd7df0f362265a7b37a"
+  },
+  {
+    "path": "tests/Run-GameUiStorageSceneTests.ps1",
+    "sha256": "3cba6c0c37627b0cdda5ddbc21f8c2c192881545687f774a6b7113d61e90933e"
+  }
+]

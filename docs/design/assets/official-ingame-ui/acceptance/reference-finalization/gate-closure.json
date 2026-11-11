@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "kind": "scoped-runtime-reference-gate-closure",
+  "checkedAtLocalDate": "2026-11-08",
+  "taskId": "UI-02",
+  "gateId": "G0-1",
+  "status": "closed",
+  "completionScope": "有效换肤范围的运行参考资料准备；不含最终素材、布局、业务映射或发布验收。",
+  "criteria": [
+    {
+      "id": "runtime-originals",
+      "result": "pass",
+      "details": "复用01..05五张真实运行原图；保留原文件、哈希、运行程序/启动器版本及源库快照关联。"
+    },
+    {
+      "id": "configured-resolution",
+      "result": "pass",
+      "details": "用户确认1024×768，设置图可见且窗口模式勾选。附件像素另记；DPI和精确客户区未独立测量，明确为空，按用户已确定的显示设置范围处理。"
+    },
+    {
+      "id": "source-correspondence",
+      "result": "pass",
+      "details": "33次局部匹配、92帧候选素材逐张源/输出PNG哈希与尺寸核对；140/1270保留歧义，选140属于明确设计适配。"
+    },
+    {
+      "id": "shape-layer-alpha",
+      "result": "pass",
+      "details": "五张标注图覆盖外形、叠放、动态内容、操作区域和排除区域；逐帧透明像素统计及透明预览用于追溯候选规则。"
+    },
+    {
+      "id": "scope-exclusions",
+      "result": "pass",
+      "details": "忽略06图；聊天保留原绘制；NPC交互卡片与按钮触发的二级弹窗保留原样式。"
+    },
+    {
+      "id": "reproducibility",
+      "result": "pass",
+      "details": "8个文件独立复现一致；43项检查及4类拒绝输入检查通过。"
+    }
+  ],
+  "evidence": [
+    "docs/design/assets/official-ingame-ui/acceptance/reference-finalization/generated/reference-map.json",
+    "docs/design/assets/official-ingame-ui/acceptance/reference-finalization/panel-matching.json",
+    "docs/design/assets/official-ingame-ui/acceptance/reference-finalization/reproduction-validation.json",
+    "docs/design/assets/official-ingame-ui/acceptance/reference/resolution-confirmation.json"
+  ],
+  "boundaries": [
+    "截图坐标含标题栏，不能生成运行控件矩形；G0-3另行冻结。",
+    "候选透明追溯不代表全部必需素材和正式混合/压缩验收；G0-2/G0-5继续未关闭。",
+    "四态调色、7×7包裹及项目属性映射属于显式适配，不宣称正式版业务或状态已采集。"
+  ],
+  "remainingGates": {
+    "G0-2": "not_closed",
+    "G0-3": "not_closed",
+    "G0-4": "not_closed",
+    "G0-5": "not_closed"
+  },
+  "requiredUserAction": null,
+  "runtimeReady": false,
+  "productionBindingAllowed": false,
+  "releaseAccepted": false
+}

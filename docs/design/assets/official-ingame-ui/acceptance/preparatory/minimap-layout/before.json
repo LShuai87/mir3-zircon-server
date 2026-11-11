@@ -1,0 +1,421 @@
+{
+  "schemaVersion": 1,
+  "checkedAtLocalDate": "2026-11-08",
+  "kind": "official-ui-minimap-before",
+  "sourceHashes": [
+    {
+      "path": "Client/Client.csproj",
+      "sha256": "5310f52443490fe1cc19fe334cc44aa3625d918625ae09ce31a8ba1960b5526b"
+    },
+    {
+      "path": "Client/Controls/DXButton.cs",
+      "sha256": "77476c7f1bfa9babeff53d792953f06b4df05b2f08c0ca11163bb244577bd61d"
+    },
+    {
+      "path": "Client/Controls/DXImageControl.cs",
+      "sha256": "6b7ca4935f09f8f6759ae07aaa7ba83806ba83f003cec48f4693b8e0d5806d00"
+    },
+    {
+      "path": "Client/Controls/DXWindow.cs",
+      "sha256": "9d8159ed7621b473ca15b054907a0cff5f7ed62cb70381e8ed3b42d376eaf95f"
+    },
+    {
+      "path": "Client/Controls/GameUiWindowSkin.cs",
+      "sha256": "a726e51780eaffbf97f36a4544ff5724f4dff24033b74a2d60dac872b9a1d9cb"
+    },
+    {
+      "path": "Client/Envir/GameUiLayoutStore.cs",
+      "sha256": "8d3d6ef94823fbc3578a6cdcb24a4048c75a8e840e716cfbed31fc5c3e50ae22"
+    },
+    {
+      "path": "Client/Models/MirLibrary.cs",
+      "sha256": "aaf76ebf99818c22b63a6fb55cdb3147b1e63956388297e53f378fcbf03b23aa"
+    },
+    {
+      "path": "ImageManager/ImageManager.csproj",
+      "sha256": "aa0ceb689bdca5391e0463e88a087cf19f4dc5467249776d510ae5de1437c997"
+    },
+    {
+      "path": "ImageManager/Program.cs",
+      "sha256": "25d4c4e33583f1303512db36e97e9d73ba6b6a06c8e8bf46a253d3b390f42c60"
+    },
+    {
+      "path": "ImageManager/WTLLibrary.cs",
+      "sha256": "a2466b559e174f5f1a43b2975fa019448f2dcf80ca7960010e81654723b3ba19"
+    },
+    {
+      "path": "ImageManager/OfficialUiBuilder.cs",
+      "sha256": "5f19d0887376113b25c9fa6feac197408d6e841b787180bed4545d93b05c176e"
+    },
+    {
+      "path": "build/game-ui/Build-OfficialUi.ps1",
+      "sha256": "1a8222746cba30266ab43116f828e80b53305c7709f4e64d8f431e6136ece848"
+    },
+    {
+      "path": "build/game-ui/Decode-OfficialUi.py",
+      "sha256": "a45f4b0aae081ff9e329212410cc08d146e1ab55fa46eea65a0ebb559dcc691d"
+    },
+    {
+      "path": "build/game-ui/Capture-UiBaseline.py",
+      "sha256": "891aa51285e4c97480be01520f1eb8f01ae306d42d184b6e715b72c742ae4bba"
+    },
+    {
+      "path": "build/game-ui/source-libraries.json",
+      "sha256": "70780b5b723aec7b7e37c7f9c8b4423971a2295cff2d8ccf974b91f6acd2dec1"
+    },
+    {
+      "path": "tests/Run-GameUiTests.ps1",
+      "sha256": "1add9cce0da936e5272db6dbb98c4fa449d77b72a597514c31e01d36a27e859a"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiAssetTests.cs",
+      "sha256": "29ec3b2e04e80672af74f3e23f33ddb9ff8ab5762aaedf3a2ff6b0b9c9515f80"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiControlTests.cs",
+      "sha256": "0fb8561d8042ffa13577b13b3c4e62cbc4a118c1a940463f141ece6c71968f78"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiLayoutTests.cs",
+      "sha256": "865cea3117e27d60608fd8f059f5f291cc8e94ffa112ec89c78a587f570236b6"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiRenderTests.cs",
+      "sha256": "0099b2ff0afe62103da64eacdaa2d1144a2fd977d3548342be0a62fba5b66956"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiWindowTests.cs",
+      "sha256": "78c4be4532ef680774853a97cc81486eb5da135df56714860610dc6dcf9fe567"
+    },
+    {
+      "path": "tests/game-ui/test_decoder.py",
+      "sha256": "da00335a1ca1b5108d4ade095f34ceb3d0698c610325d9072bee4511d793769a"
+    },
+    {
+      "path": "Client/Models/GameUi/GameUiFillGeometry.cs",
+      "sha256": "2fa3c8228cd7b5bb7468e717e9c6c2fe15bc28c939c4d3acea18d64cc013be9b"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiFillTests.cs",
+      "sha256": "5558a395b8e91b3b16255af531b87e1bf81988ac7f99392771c84d9c0a8aae3a"
+    },
+    {
+      "path": "tests/Run-GameUiFillTests.ps1",
+      "sha256": "de611659f22ef970933b3662619a3460a55c21c6bba16258f2aff1b6d6890009"
+    },
+    {
+      "path": "build/game-ui/Validate-UiTasks.py",
+      "sha256": "86edc974a9c235790e750bcca71458bba844e93430695ffc2703fa4d7667adfb"
+    },
+    {
+      "path": "build/game-ui/Prepare-UiCatalog.py",
+      "sha256": "aa4978fc3034581b97274b749d839bb8d260f4aa04d98870590110d155c05bc2"
+    },
+    {
+      "path": "tests/game-ui/test_ui_catalog.py",
+      "sha256": "fa729845e6c6e504dae029ffee01f6f48a0a1f630d028d967cd3b1985474d8c2"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiCatalogFixture.cs",
+      "sha256": "5817a1c5eba37dcfa80937d5e10c4d07f125ddc05c24b052d5a79a0259df9663"
+    },
+    {
+      "path": "ImageManager/Mir3Library.cs",
+      "sha256": "9b08f5c8344364db9275fb608086bf112404c72f16df4cd245e8a49ca4c61d67"
+    },
+    {
+      "path": "Client/Envir/GameUiLayoutCoordinator.cs",
+      "sha256": "f518ef9319e67b377f182e2232845dbfde0a3818f2fa596b6d8f051222166718"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiCoordinatorTests.cs",
+      "sha256": "e9fa597515b2331349761f96268a779d079324cf5aab30035ad2fee1a16e7a6d"
+    },
+    {
+      "path": "tests/Run-GameUiCoordinatorTests.ps1",
+      "sha256": "91a6f3e6ead61adb38e6aad1f760c3eab1d6caabcb91aeeae86e9001c1645dfa"
+    },
+    {
+      "path": "tests/game-ui/test_ui_task_history.py",
+      "sha256": "1a2067af18052606a8e3aa2ab36a8770155780824ddba7ba8eca826161432eb6"
+    },
+    {
+      "path": "build/game-ui/Select-OfficialUi.py",
+      "sha256": "63c673827654d93298dca024d3d31ce3854603d905d1854ada8c438f78332fc0"
+    },
+    {
+      "path": "build/game-ui/reference-selection.json",
+      "sha256": "a011cced373a12186898e5043c00dad1ef8b87b3aa81150c678267018db9f928"
+    },
+    {
+      "path": "build/game-ui/selection-source-libraries.json",
+      "sha256": "902153e43cb89d82e2d41ecb9ad3f77df5d3a1cd7a3a5ce0a460c11a1222037c"
+    },
+    {
+      "path": "tests/game-ui/test_selected_ui.py",
+      "sha256": "5b5e984c26d405a457966877267e53d210d78c8bea415c4ed8aec3f08f8ef33c"
+    },
+    {
+      "path": "ImageManager/OfficialUiAssetBuilder.cs",
+      "sha256": "4d1ebb40c8668c1c1914a27a6710d0c5f532db4d229e53d810755b475ea36239"
+    },
+    {
+      "path": "build/game-ui/Compose-OfficialUi.py",
+      "sha256": "5220ed3c13122fcc8ba36f70a99e04832ab916c1ce412f147e2d53c8e1422763"
+    },
+    {
+      "path": "build/game-ui/composition-recipe.json",
+      "sha256": "d463a781d3bac90fa4ec09d0301a0dcf0f645b6630e99082a5d820448ed2e956"
+    },
+    {
+      "path": "tests/game-ui/test_composed_ui.py",
+      "sha256": "1b9e98f21685d5a6d405cd0f4310a4f2f4e6159804e2d8e6564f0694b2ce2788"
+    },
+    {
+      "path": "tests/game-ui/test_prepared_ui.py",
+      "sha256": "597e9165e67a90ab4d1b936b374824df0040299fe716d375ab13382d57bb0195"
+    },
+    {
+      "path": "tests/game-ui/Verify-ComposedUi.py",
+      "sha256": "f6191b23a313fe146d3a0b9d7c706bda0b642f8cd4e6ff12dd063dca4fb43100"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiComposedRenderTests.cs",
+      "sha256": "24c25bb5e978bad56c5027475f67471db27076efbaf971170cad91d0c26df843"
+    },
+    {
+      "path": "tests/Run-GameUiComposedRenderTests.ps1",
+      "sha256": "3d367433467c8f5487aaf71adf883f9bac3ad29ccf77d55d57fb8a0aab286537"
+    },
+    {
+      "path": "Client/Envir/GameUiSceneLayoutHost.cs",
+      "sha256": "a95698fbbf404040bb6ca74f4d6a45fe485027503ac0b571b243c1e024a2c465"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiSceneLayoutHostTests.cs",
+      "sha256": "05ae88c2023069dde8f51a55f17be5de6de6693faee82a82503d85b4d441acab"
+    },
+    {
+      "path": "tests/Run-GameUiSceneLayoutHostTests.ps1",
+      "sha256": "3bf9f402f676b1626569f71acb83e8ebceac85b35254af102a9f15c9c7b2f194"
+    },
+    {
+      "path": "build/game-ui/layout-official-v1.json",
+      "sha256": "b39fa17ba46f9424a7c5b713a1c77cf7d16b31570a1320232f747239ccd8f509"
+    },
+    {
+      "path": "build/game-ui/Validate-OfficialUiLayout.py",
+      "sha256": "b587840abf96fbe55f7580f99379054ebb7794f5fe34f622a6103ddc85ab55cf"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiLayoutContractTests.cs",
+      "sha256": "941de006dcc75c8e8d54bc4eb9c16a0bd37be769c85fb023822a9f8827562e3f"
+    },
+    {
+      "path": "tests/Run-GameUiLayoutContractTests.ps1",
+      "sha256": "7347b52ce89d8be1057383f3353dc02281df9e55e58d864155fa4b78d7edfbe7"
+    },
+    {
+      "path": "Client/Envir/GameUiChatLayout.cs",
+      "sha256": "856f0b0d378b8557faacb84c542618056f172459bb544c5e5c8d203589e90e16"
+    },
+    {
+      "path": "Client/Scenes/Views/ChatTab.cs",
+      "sha256": "a9a9b55062b26f227a3be6a1b0009c501b5c5be650eb1654249000c7f9765268"
+    },
+    {
+      "path": "Client/Scenes/Views/ChatTextBox.cs",
+      "sha256": "b934fa791772a81651bd3bc82c73e10a89e94086dafc67c7985c402d1ee06ab4"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiChatLayoutTests.cs",
+      "sha256": "77e861cde2e7270dfb1e881c5296c1b4d29d07340bf8a1b688712b093f88fe77"
+    },
+    {
+      "path": "tests/Run-GameUiChatLayoutTests.ps1",
+      "sha256": "07f3586315a2999f959f07ed6986d71689eaaa1f3d4d2ef2113453df27ce9674"
+    },
+    {
+      "path": "Client/Scenes/Views/CharacterDialog.cs",
+      "sha256": "0f54e5c8b45e7ccd5391e05964b75f55f27a597528f62ef5c6c6b06ad0c6ce7a"
+    },
+    {
+      "path": "build/game-ui/Prepare-CharacterBindings.py",
+      "sha256": "df644aa520b89ac153958682ec853f49080ef0ab66c1caa3c6ce496b7426fa55"
+    },
+    {
+      "path": "Client/Envir/GameUiCharacterReadouts.cs",
+      "sha256": "44074bba0e2d2f4ef6eea9bec2d1f0987dd00bf17e2a54dba5d9f11fa23d355b"
+    },
+    {
+      "path": "Client/Scenes/Views/MainPanel.cs",
+      "sha256": "9dc5d908e47aba577e12f8f3b45c5f0fd920c021ce8731769b5655c557f17df2"
+    },
+    {
+      "path": "Client/Scenes/GameScene.cs",
+      "sha256": "2a663876bfe103bd55e52afaf74f370b87f2c0ece99e3505b61dfd82dcc56ee4"
+    },
+    {
+      "path": "Client/Models/UserObject.cs",
+      "sha256": "62ea8a130ab9567f803ef1420b0865aed99cc8ddcf6f76b42c4cafef2ae06abc"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiCharacterReadoutTests.cs",
+      "sha256": "54dd50ad317797d8a2b4a86e1f9216227a4c6c7b6bd5057b87de6769f8f6955a"
+    },
+    {
+      "path": "tests/Run-GameUiCharacterReadoutTests.ps1",
+      "sha256": "405ddcbadab6a97075892aee58d32bd3403af1964fa08db61b9e93dd255cc026"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-readouts/character-bindings.draft.json",
+      "sha256": "a69bf7e1c6df2edeed1c7f7286d000f74900035fdbf58d00c84865dfcb7c4930"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-readouts/binding-validation.json",
+      "sha256": "c7b586ade0a6c8e29bed80dd9e308f20f48f3eaa5dca7808b1c89292b3c64035"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-readouts/generated-layout/OfficialUiLayout.Generated.cs",
+      "sha256": "089030af278db8d7dd9470909c5441c73a6eaca7d0234010b6c98ce04407defc"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-readouts/generated-layout/validation.json",
+      "sha256": "84cec80bb41f645ca2fdbfa456625a2fd587dace9c5a43c49ffb05abc11fd1d7"
+    },
+    {
+      "path": "Client/Controls/DXTabControl.cs",
+      "sha256": "4682cc0df089564b768be676312309ce5bf05409a5a1cf770ee78534aa4fb624"
+    },
+    {
+      "path": "Client/Envir/GameUiCharacterEquipmentLayout.cs",
+      "sha256": "26b4b94e2bd15a853b9af0f41ee7eedd84f9ce529d43c56a452a2ea3b330d7af"
+    },
+    {
+      "path": "Client/Scenes/Views/CharacterDialog.GameUi.cs",
+      "sha256": "2e99c11d5fefa480a83d3c9ec4363c296f8ae647b412637b8720f25dc6223413"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-pages/character-bindings.draft.json",
+      "sha256": "a54680479b018d2340e5fc5f621b791b773fdd47c0514f55e9a970aff04475e7"
+    },
+    {
+      "path": "tests/Run-GameUiCharacterPageTests.ps1",
+      "sha256": "93e448f72f5d0c01ac03ff2c66df89a6115a0ad3f04a5a0a24aba73b38b64d96"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiCharacterPageTests.cs",
+      "sha256": "7a76b1a93530249c165ae5c52fd5743b8560e975bed98b8261f417600c6f0a98"
+    },
+    {
+      "path": "Client/Envir/GameUiCharacterAttributeLayout.cs",
+      "sha256": "07912f4730181ed887976e93e5f4cf5306b73d6b0af98b0f3cb4fb00e6ba6d40"
+    },
+    {
+      "path": "Client/Scenes/Views/CharacterDialog.GameUiAttributes.cs",
+      "sha256": "94bed40261e7248095af13238b7a88e543f86fe7d13e60c0dbe9c9b7e5fe0aa1"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-attributes/character-bindings.draft.json",
+      "sha256": "735380625b686771a3d48267899d1d709937ab4ec57e482c1640bdaf831cd9cc"
+    },
+    {
+      "path": "tests/Run-GameUiCharacterAttributeTests.ps1",
+      "sha256": "e9aea36737fb029f857ed6bc7038b0dc943eb53aac73125b426e662014e49d37"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiCharacterAttributeTests.cs",
+      "sha256": "d6b5d458683da0a771bbe1cc83beb145d2627fc0cf7f53311dc22c53d361fc6d"
+    },
+    {
+      "path": "Client/Controls/DXCheckBox.cs",
+      "sha256": "3ae0a9bd1f6b4a16d9de1a8f5da82f98ce32c8df96266271dbc78d2f037e0e5c"
+    },
+    {
+      "path": "Client/Scenes/Views/CharacterDialog.GameUiControls.cs",
+      "sha256": "7f8b58cc43a56eb959995b9c3da1517d073fe6118204d3f4d300738a7612d78f"
+    },
+    {
+      "path": "Client/Envir/GameUiCharacterControlLayout.cs",
+      "sha256": "a6fa656244e9aa3f9876e8684f045308eb55a1ea9fda334462482cf0fb3ac5b3"
+    },
+    {
+      "path": "tests/Run-GameUiCharacterControlTests.ps1",
+      "sha256": "c64f3421fefd1ece132559626a9f6e89505486a587f2a1a21accb850a41aa64a"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiCharacterControlTests.cs",
+      "sha256": "fbc8c7092ce709c4cb34344096ae067f01f129dd260f9e3f5628059fc7498798"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-controls/character-bindings.draft.json",
+      "sha256": "d3f5c7918cab37398c8ed1b719c52cbb0510b6caad995cc9e4d4c55cf7ae794b"
+    },
+    {
+      "path": "Client/Envir/GameUiCharacterCompositionLayout.cs",
+      "sha256": "a66aef6f86acfec07f0ce6cd6400c59c9eb96498a208e78b6b166f63cda51d09"
+    },
+    {
+      "path": "Client/Scenes/Views/CharacterDialog.GameUiComposition.cs",
+      "sha256": "321de6d9f6b4622bb8a45ca67ff2a277f18b825e49f6895921539fcf1a09582a"
+    },
+    {
+      "path": "tests/Run-GameUiCharacterCompositionTests.ps1",
+      "sha256": "40bc02ba08a0bacd99c3edfe827132e8e9a4678bc09bbc50e4aed6e2cb1bd34c"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiCharacterCompositionTests.cs",
+      "sha256": "1e92829333fcd401e1a75022443c9319d882acde222e8e54ed8e97a8a8a77ea0"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-composition/character-bindings.draft.json",
+      "sha256": "8a6a9a2aff584018f65c23e0a373c8dd653e0ee6872a8fa3e797e7e5d0cd2ace"
+    },
+    {
+      "path": "Client/Scenes/Views/InventoryDialog.cs",
+      "sha256": "8c334156b799f495e8a4dba263330c6aef9433917c76d45303921f64a5171f14"
+    },
+    {
+      "path": "Client/Envir/GameUiInventoryLayout.cs",
+      "sha256": "30fcacabdd70fb7829ffdafe5586223a6bff966f4e64dd9e5ed0b2b5d476a6f2"
+    },
+    {
+      "path": "Client/Scenes/Views/InventoryDialog.GameUi.cs",
+      "sha256": "3e7790d4dd1fd8158d9b29cf07fc83d7b4b9bb6819ca4db1f18d07cd4accdf79"
+    },
+    {
+      "path": "tests/Run-GameUiInventoryLayoutTests.ps1",
+      "sha256": "7908a603a6690a890d3847cb729bb8a7330cb799dc869ceadbaf7c08bd2418c0"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiInventoryLayoutTests.cs",
+      "sha256": "b728aaad0022234a425ac5d5ee6352bf916770305dac00035e5b039c4bd25d02"
+    },
+    {
+      "path": "Client/Scenes/Views/BeltDialog.cs",
+      "sha256": "d8d1435ec5fbd4b41352851e61eb44950f39d116e936f830d5512e7ad696f7b4"
+    },
+    {
+      "path": "Client/Envir/GameUiBeltLayout.cs",
+      "sha256": "1b170a8ae25fe479dc619923513b96754a495fddd4fba42bfb85bb4e85598fa4"
+    },
+    {
+      "path": "Client/Scenes/Views/BeltDialog.GameUi.cs",
+      "sha256": "c2129626e0db12897cc4bb17d10998eeac6b8a0ae768e587c0d5cc56f2d93ac7"
+    },
+    {
+      "path": "tests/Run-GameUiBeltLayoutTests.ps1",
+      "sha256": "4aea444895cef0160fa8d91579efef20e0ff7c33ed4ce27e160cde1873ab545a"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiBeltLayoutTests.cs",
+      "sha256": "c4f11e9448bd2ac552aee54b5dc22d8210934262e3794701b21adef609222733"
+    }
+  ],
+  "priorUnregisteredSources": [
+    {
+      "path": "Client/Scenes/Views/MiniMapDialog.cs",
+      "sha256": "bfa3fcee860c19afc3e9f4e32fa38fdbdd1428270d2a0e47789e5ac30e244791"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Zircon.exe",
+    "sha256": "1b0fae9d2b5722960065f9901a25892e9a358aeb2144065031071438b6087f7d"
+  },
+  {
+    "name": "Library.dll",
+    "sha256": "557ba4f45f3cb2db8bbbbb2a336289b0d3d535959190f86ec7efc2bfdd0b0c5b"
+  },
+  {
+    "name": "SlimDX.dll",
+    "sha256": "f23ec20aeaec149ba963d1fb03af3ea1585ccdf1ac207f315361a80ceaadcc05"
+  }
+]

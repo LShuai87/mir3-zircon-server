@@ -1,0 +1,5 @@
+Client Debug: build succeeded
+Inventory layout: 6415 checks passed, actual D3D9 atlas/feedback/four-state button and close/readout probes
+Window-set integration: 284355 checks passed; no full-scene/live-game/IME acceptance
+Footer and close embedded art: pinned source and byte-for-byte reproduction checks passed
+Prepare-GameUiPreview -ValidateOnly: passed; 94 frames, RuntimeReady=false

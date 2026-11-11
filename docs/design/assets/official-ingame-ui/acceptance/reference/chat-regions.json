@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "captureId": "06-chat-chinese-input",
+  "imageRelativePath": "captures/06-chat-chinese-input.jpg",
+  "coordinateSpace": "original screenshot pixels; origin top-left; bounds use x,y,width,height",
+  "precision": "manual visual estimates for locating reference regions only; not implementation coordinates or hitboxes",
+  "regions": [
+    {
+      "id": "chat-shell",
+      "bounds": {
+        "x": 188,
+        "y": 653,
+        "width": 613,
+        "height": 130
+      },
+      "appearance": "金棕色细边框，中央深色消息区，左侧竖向按钮，右侧滚动条"
+    },
+    {
+      "id": "message-area",
+      "bounds": {
+        "x": 229,
+        "y": 658,
+        "width": 554,
+        "height": 102
+      },
+      "appearance": "多色消息文本，左侧带频道标签；颜色和文字内容随消息变化"
+    },
+    {
+      "id": "channel-buttons",
+      "bounds": {
+        "x": 191,
+        "y": 658,
+        "width": 32,
+        "height": 120
+      },
+      "appearance": "左侧竖排小型图标按钮；用途仅凭截图未逐项确认"
+    },
+    {
+      "id": "scrollbar",
+      "bounds": {
+        "x": 783,
+        "y": 658,
+        "width": 18,
+        "height": 122
+      },
+      "appearance": "右边窄滚动条及上下箭头"
+    },
+    {
+      "id": "input",
+      "bounds": {
+        "x": 228,
+        "y": 760,
+        "width": 555,
+        "height": 20
+      },
+      "appearance": "独立横向深色输入栏、白字；[普通]: 界面样式测试"
+    }
+  ],
+  "constraints": [
+    "输入框内文字可见；未操作发送。",
+    "静态截图不能验证IME组合、候选窗、焦点/快捷键冲突或文本截断边界。",
+    "正式版聊天区布局用于视觉参考，项目频道语义和消息处理不变。"
+  ]
+}

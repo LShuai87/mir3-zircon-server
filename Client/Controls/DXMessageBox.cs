@@ -53,9 +53,21 @@ namespace Client.Controls
                 HiddenBox = DXTextBox.ActiveTextBox;
                 DXTextBox.ActiveTextBox = null;
             }
-            else if (HiddenBox != null)
-                DXTextBox.ActiveTextBox = HiddenBox;
+            else
+                RestoreHiddenBox();
 
+        }
+
+        private void RestoreHiddenBox()
+        {
+            DXTextBox previous = HiddenBox;
+            HiddenBox = null;
+            if (previous == null || previous.IsDisposed || previous.TextBox == null || previous.TextBox.IsDisposed) return;
+            // Scene disposal can release the editor before the modal. Do not restore
+            // focus into a control tree that is already being torn down.
+            for (DXControl owner = previous.Parent; owner != null; owner = owner.Parent)
+                if (owner.IsDisposed) return;
+            DXTextBox.ActiveTextBox = previous;
         }
 
         public override WindowType Type => WindowType.MessageBox;
@@ -242,11 +254,7 @@ namespace Client.Controls
                     YesButton = null;
                 }
 
-                if (HiddenBox != null)
-                {
-                    DXTextBox.ActiveTextBox = HiddenBox;
-                    HiddenBox = null;
-                }
+                RestoreHiddenBox();
 
                 Buttons = DXMessageBoxButtons.None;
                 MessageBoxList.Remove(this);

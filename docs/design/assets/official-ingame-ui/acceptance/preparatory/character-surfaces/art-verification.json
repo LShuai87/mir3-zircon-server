@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "kind": "official-ui-character-surfaces-art-verification",
+  "releaseAccepted": false,
+  "deterministicArtFiles": 121,
+  "deterministicPackageFiles": 2,
+  "unchangedPriorFrames": 86,
+  "frames": 88,
+  "character": {
+    "size": [
+      412,
+      562
+    ],
+    "repaintedPixels": 182556,
+    "unchangedChromePixels": 48988,
+    "unchangedAlphaPixels": 231544,
+    "sourceLibrary": "UI",
+    "sourceIndex": 2765,
+    "sourcePatch": [
+      24,
+      452,
+      56,
+      72
+    ],
+    "targets": [
+      [
+        8,
+        90,
+        396,
+        461
+      ]
+    ],
+    "pngSha256": "991c354c61cf451d95048556917e83797e33363144eaed36537e773fdd4ed021"
+  },
+  "equipmentFrame": {
+    "size": [
+      36,
+      36
+    ],
+    "nativePixelsChecked": 1296,
+    "sourceLibrary": "UI",
+    "sourceIndex": 120,
+    "pngSha256": "a5f2303dd387e62dc8c0ca4f5e8a58cf33cd5680c0f443ee8946aa894ed27ff9"
+  },
+  "equipmentCells": 16,
+  "equipmentPageCounts": {
+    "character": 9,
+    "extraEquipment": 7,
+    "status": 0,
+    "hermit": 0
+  },
+  "zlSha256": "de28e3ce0a84aa670e10b913f3a45a3745a9172fae999ce544bd780a2ab97af4"
+}

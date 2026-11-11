@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 1,
+  "kind": "official-ui-character-binding-contract",
+  "checkedAtLocalDate": "2026-11-08",
+  "referenceResolution": [
+    1024,
+    768
+  ],
+  "releaseAccepted": false,
+  "sourceChanges": [],
+  "sourceHashes": [
+    {
+      "path": "build/game-ui/Assemble-CharacterBindings.py",
+      "sha256": "9f788de8792f1b1f9944d3f4f9d0ecd9fb69c35f65e26c1aafc295832f1a5154"
+    },
+    {
+      "path": "build/game-ui/character-bindings.json",
+      "sha256": "61046ce9b47b0a055872d62a3a466c434b4f32b52caa170de15ed009c17fd244"
+    },
+    {
+      "path": "tests/game-ui/test_character_binding_contract.py",
+      "sha256": "daf06c30da705c56b480b0f0b046b567b9f0b041217940df346c43cddae1651c"
+    }
+  ],
+  "commands": [
+    {
+      "command": "python build/game-ui/Assemble-CharacterBindings.py",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/character-binding-contract/assemble.log",
+      "logSha256": "5932bc5269e5c6e34910ecd3f36fca9797c3ba463775aafeaf2ec6cd4131e437"
+    },
+    {
+      "command": "python -m unittest discover -s tests/game-ui -p test_character_binding_contract.py -v",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/character-binding-contract/python-tests.log",
+      "logSha256": "d91bbb3588eca4ae214bc6724d020f633cacc94dea6de2f10330dfacae0b4ca8"
+    },
+    {
+      "command": "python build/game-ui/Assemble-CharacterBindings.py --check",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/character-binding-contract/check.log",
+      "logSha256": "5932bc5269e5c6e34910ecd3f36fca9797c3ba463775aafeaf2ec6cd4131e437"
+    },
+    {
+      "command": "tests/Run-GameUiCharacterPageTests.ps1",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/character-binding-contract/equipment-pages.log",
+      "logSha256": "cdb79d2442b3f9f86e1d6b30427f5a19d04fb2025a0e06da162eae4d28475a0a"
+    },
+    {
+      "command": "tests/Run-GameUiCharacterAttributeTests.ps1",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/character-binding-contract/attributes.log",
+      "logSha256": "6da292fea3083b92f96bce1cf1b16c1ebc49bc0847d4d87377a09e9371fa5d43"
+    },
+    {
+      "command": "tests/Run-GameUiCharacterControlTests.ps1",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/character-binding-contract/controls.log",
+      "logSha256": "5a2eac24053bc7181ae10c8c9b1a6cdcf74225c78528f8ffa8d0727f60f23214"
+    },
+    {
+      "command": "tests/Run-GameUiCharacterCompositionTests.ps1",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/character-binding-contract/composition.log",
+      "logSha256": "3b3c9390ac1ba8c55eb56f5f88e0b1dedd6e713a0cb5ebc5f3300179a5956581"
+    },
+    {
+      "command": "git -c core.whitespace=cr-at-eol diff --check",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/character-binding-contract/diff-check.log",
+      "logSha256": "79d6e102d3342502fc80ca42def8ff97f6642ce33398d5219dc2f3e921c23f6f"
+    }
+  ],
+  "evidenceHashes": [
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-binding-contract/before.json",
+      "sha256": "f2ac74afb733f2cdddbd420bb80d67b9c3afa7c546cbc0c3804fd02ba6499fe7"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-binding-contract/README.md",
+      "sha256": "408eba3a4dd71d4e86af6e3e32c1b0f4bc6a55154b1081575acd2221a6b0c9bd"
+    }
+  ],
+  "results": {
+    "priorSourceHashesVerified": 126,
+    "equipmentCells": 16,
+    "statLabels": 57,
+    "namedControls": 8,
+    "hudMirrors": 4,
+    "packetActions": 9,
+    "characterGeometryNodes": 127,
+    "resolutionPlacements": 6,
+    "pythonTestMethods": 5,
+    "rejectedMutationCases": 13,
+    "equipmentPageAssertions": 17248,
+    "attributeAssertions": 19302,
+    "controlAssertions": 4584,
+    "compositionAssertions": 2115,
+    "runtimeReady": false
+  },
+  "limitations": [
+    "Build-time mapping only; no runtime C# or adapter changes in this batch. All activation/freeze/acceptance flags remain false.",
+    "Original title/name and marriage control targetTab denotes semantic routing, not compiled Chrome visibility; installer must follow existing adapters.",
+    "Historical character-composition draft is stale; it was not overwritten and its diagnostic is not a passing check.",
+    "Local packet queues and layout-generated fixtures do not constitute live network or art acceptance. No optional GPU, IME, device Reset, performance, deployment or rollback acceptance in this batch.",
+    "All five G0 gates and task completion counts remain unchanged; Legacy remains default. NPC cards, secondary popups and display settings retain current behavior."
+  ]
+}

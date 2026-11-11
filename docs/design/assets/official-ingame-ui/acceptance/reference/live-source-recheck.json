@@ -1,0 +1,548 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-07T09:08:39.833677+00:00",
+  "kind": "source-record-recheck",
+  "baselinePath": "runtime-source-libraries.json",
+  "baselineSha256": "1ab7914a73b4266ebe2ab402e714d027743ffc9589889b0612d56ece14dc5570",
+  "snapshotDirectory": "E:\\workspace\\mir3-ui-work\\runtime-reference-20261107\\SourceRecheck-090839",
+  "files": [
+    {
+      "library": "UI",
+      "name": "UI.MIX",
+      "path": "E:\\Program Files\\ShengquGames\\Mir3\\Data\\UI.MIX",
+      "snapshotPath": "E:\\workspace\\mir3-ui-work\\runtime-reference-20261107\\SourceRecheck-090839\\UI.MIX",
+      "bytes": 22720,
+      "sha256": "79cee0111d7f6308ec0b278023f881b5f74d15c53282fa95b65c79335e550f38",
+      "baselineSha256": "0c065bb6af826689704de5ef5cabec6768703fcc71dc82574f68b7822b617ea2",
+      "matchesBaseline": false
+    },
+    {
+      "library": "UI",
+      "name": "UI.MIZ",
+      "path": "E:\\Program Files\\ShengquGames\\Mir3\\Data\\UI.MIZ",
+      "snapshotPath": "E:\\workspace\\mir3-ui-work\\runtime-reference-20261107\\SourceRecheck-090839\\UI.MIZ",
+      "bytes": 26154150,
+      "sha256": "28446e7a78b3821ee229cafe6730e4ba4beb3df08ec5ae990b07e928666964fa",
+      "baselineSha256": "6adab7f361cdd76d91d025821bddeba20d5d5e588e09cb6fa19f5106caec7201",
+      "matchesBaseline": false
+    },
+    {
+      "library": "Interface",
+      "name": "Interface.MIX",
+      "path": "E:\\Program Files\\ShengquGames\\Mir3\\Data\\Interface.MIX",
+      "snapshotPath": "E:\\workspace\\mir3-ui-work\\runtime-reference-20261107\\SourceRecheck-090839\\Interface.MIX",
+      "bytes": 1704,
+      "sha256": "7c44f857fbc614e7ba9a5a52c1882e097a1157c6819697a37617952c7053d912",
+      "baselineSha256": "7c44f857fbc614e7ba9a5a52c1882e097a1157c6819697a37617952c7053d912",
+      "matchesBaseline": true
+    },
+    {
+      "library": "Interface",
+      "name": "Interface.MIZ",
+      "path": "E:\\Program Files\\ShengquGames\\Mir3\\Data\\Interface.MIZ",
+      "snapshotPath": "E:\\workspace\\mir3-ui-work\\runtime-reference-20261107\\SourceRecheck-090839\\Interface.MIZ",
+      "bytes": 3271088,
+      "sha256": "f4a726ec4a1e95428548de676fcccb32b84487b616c891a8c1070d8ffed1494e",
+      "baselineSha256": "f4a726ec4a1e95428548de676fcccb32b84487b616c891a8c1070d8ffed1494e",
+      "matchesBaseline": true
+    },
+    {
+      "library": "GameInter",
+      "name": "GameInter.MIX",
+      "path": "E:\\Program Files\\ShengquGames\\Mir3\\Data\\GameInter.MIX",
+      "snapshotPath": "E:\\workspace\\mir3-ui-work\\runtime-reference-20261107\\SourceRecheck-090839\\GameInter.MIX",
+      "bytes": 760,
+      "sha256": "7e42a6007b393ddfa2478ad47f5253192b8a5990d7d34baf11a87a1f48f058ce",
+      "baselineSha256": "7e42a6007b393ddfa2478ad47f5253192b8a5990d7d34baf11a87a1f48f058ce",
+      "matchesBaseline": true
+    },
+    {
+      "library": "GameInter",
+      "name": "GameInter.MIZ",
+      "path": "E:\\Program Files\\ShengquGames\\Mir3\\Data\\GameInter.MIZ",
+      "snapshotPath": "E:\\workspace\\mir3-ui-work\\runtime-reference-20261107\\SourceRecheck-090839\\GameInter.MIZ",
+      "bytes": 38179,
+      "sha256": "69a74d00a21b62f3441e4f455e195b33ceba4f90fffe5a582e17daef10af6305",
+      "baselineSha256": "69a74d00a21b62f3441e4f455e195b33ceba4f90fffe5a582e17daef10af6305",
+      "matchesBaseline": true
+    },
+    {
+      "library": "ProgUse",
+      "name": "ProgUse.MIX",
+      "path": "E:\\Program Files\\ShengquGames\\Mir3\\Data\\ProgUse.MIX",
+      "snapshotPath": "E:\\workspace\\mir3-ui-work\\runtime-reference-20261107\\SourceRecheck-090839\\ProgUse.MIX",
+      "bytes": 10648,
+      "sha256": "900b55c2053da277635c0ea2e825d4de009e0e99d54328296f3de55d1781ef9e",
+      "baselineSha256": "900b55c2053da277635c0ea2e825d4de009e0e99d54328296f3de55d1781ef9e",
+      "matchesBaseline": true
+    },
+    {
+      "library": "ProgUse",
+      "name": "ProgUse.MIZ",
+      "path": "E:\\Program Files\\ShengquGames\\Mir3\\Data\\ProgUse.MIZ",
+      "snapshotPath": "E:\\workspace\\mir3-ui-work\\runtime-reference-20261107\\SourceRecheck-090839\\ProgUse.MIZ",
+      "bytes": 13955210,
+      "sha256": "4fe6978a46b2e8af3a1b64115e339664c6fbd30e12caec6e8a2c225d6a4c1f71",
+      "baselineSha256": "4fe6978a46b2e8af3a1b64115e339664c6fbd30e12caec6e8a2c225d6a4c1f71",
+      "matchesBaseline": true
+    }
+  ],
+  "libraries": [
+    {
+      "name": "UI",
+      "baselineSlots": 5674,
+      "currentSlots": 5674,
+      "baselineRecords": 1207,
+      "currentRecords": 1209,
+      "addedIndices": [
+        2241,
+        3963
+      ],
+      "removedIndices": [],
+      "changedRecordIndices": []
+    },
+    {
+      "name": "Interface",
+      "baselineSlots": 420,
+      "currentSlots": 420,
+      "baselineRecords": 349,
+      "currentRecords": 349,
+      "addedIndices": [],
+      "removedIndices": [],
+      "changedRecordIndices": []
+    },
+    {
+      "name": "GameInter",
+      "baselineSlots": 184,
+      "currentSlots": 184,
+      "baselineRecords": 112,
+      "currentRecords": 112,
+      "addedIndices": [],
+      "removedIndices": [],
+      "changedRecordIndices": []
+    },
+    {
+      "name": "ProgUse",
+      "baselineSlots": 2656,
+      "currentSlots": 2656,
+      "baselineRecords": 572,
+      "currentRecords": 572,
+      "addedIndices": [],
+      "removedIndices": [],
+      "changedRecordIndices": []
+    }
+  ],
+  "matchingCandidateRecords": [
+    {
+      "report": "panel-matching.json",
+      "role": "character",
+      "index": 2765,
+      "library": "UI",
+      "rawRecordSha256": "2ba69fdd0dc743cc3964228911a25fd938b627a28453b5d51eb3391f9546b503",
+      "currentSourceOffset": 26058732,
+      "matchesBaselineRecord": true
+    },
+    {
+      "report": "panel-matching.json",
+      "role": "character",
+      "index": 1830,
+      "library": "UI",
+      "rawRecordSha256": "341703be2ac9383b1f23527de74488aa0b68473a2b3b7b76852f0c1dfc8b38c2",
+      "currentSourceOffset": 18292301,
+      "matchesBaselineRecord": true
+    },
+    {
+      "report": "panel-matching.json",
+      "role": "character",
+      "index": 1530,
+      "library": "UI",
+      "rawRecordSha256": "63b18f04306086020cfc1eebfeac459b2ccb2aeb4186245bb4dc588cf878e532",
+      "currentSourceOffset": 12368647,
+      "matchesBaselineRecord": true
+    },
+    {
+      "report": "panel-matching.json",
+      "role": "character",
+      "index": 1720,
+      "library": "UI",
+      "rawRecordSha256": "52821c4950dcd48af825f1f9b3c1ca60694735567f5eebc4dffcc514b490ccff",
+      "currentSourceOffset": 16285218,
+      "matchesBaselineRecord": true
+    },
+    {
+      "report": "panel-matching.json",
+      "role": "character",
+      "index": 100,
+      "library": "UI",
+      "rawRecordSha256": "daad806ba1e82bc5fa6a1c634bf893574498b8db59446a8d5007cc5d34d0d95b",
+      "currentSourceOffset": 165579,
+      "matchesBaselineRecord": true
+    },
+    {
+      "report": "panel-matching.json",
+      "role": "character",
+      "index": 2765,
+      "library": "UI",
+      "rawRecordSha256": "2ba69fdd0dc743cc3964228911a25fd938b627a28453b5d51eb3391f9546b503",
+      "currentSourceOffset": 26058732,
+      "matchesBaselineRecord": true
+    },
+    {
+      "report": "panel-matching.json",
+      "role": "character",
+      "index": 2765,
+      "library": "UI",
+      "rawRecordSha256": "2ba69fdd0dc743cc3964228911a25fd938b627a28453b5d51eb3391f9546b503",
+      "currentSourceOffset": 26058732,
+      "matchesBaselineRecord": true
+    },
+    {
+      "report": "panel-matching.json",
+      "role": "inventory",
+      "index": 120,
+      "library": "UI",
+      "rawRecordSha256": "5ad0141203f05ebbc7ace24394bd697619929359b7612bc53d9eb4ef301117d8",
+      "currentSourceOffset": 293333,
+      "matchesBaselineRecord": true
+    },
+    {
+      "report": "panel-matching.json",
+      "role": "inventory",
+      "index": 125,
+      "library": "UI",
+      "rawRecordSha256": "b8482ca38a21be8c4a84106ab70982ff2476f50e7806db8c2f739c6b4fcf7811",
+      "currentSourceOffset": 387290,
+      "matchesBaselineRecord": true
+    },
+    {
+      "report": "panel-matching.json",
+      "role": "inventory",
+      "index": 122,
+      "library": "UI",
+      "rawRecordSha256": "2ce307e4a90b91bc83e25781944bd535621f6d56841e6eaf020271fd91bbba1f",
+      "currentSourceOffset": 343187,
+      "matchesBaselineRecord": true
+    },
+    {
+      "report": "panel-matching.json",
+      "role": "inventory",
+      "index": 120,
+      "library": "UI",
+      "rawRecordSha256": "5ad0141203f05ebbc7ace24394bd697619929359b7612bc53d9eb4ef301117d8",
+      "currentSourceOffset": 293333,
+      "matchesBaselineRecord": true
+    },
+    {
+      "report": "panel-matching.json",
+      "role": "inventory",
+      "index": 120,
+      "library": "UI",
+      "rawRecordSha256": "5ad0141203f05ebbc7ace24394bd697619929359b7612bc53d9eb4ef301117d8",
+      "currentSourceOffset": 293333,
+      "matchesBaselineRecord": true
+    },
+    {
+      "report": "panel-matching.json",
+      "role": "inventory",
+      "index": 125,
+      "library": "UI",
+      "rawRecordSha256": "b8482ca38a21be8c4a84106ab70982ff2476f50e7806db8c2f739c6b4fcf7811",
+      "currentSourceOffset": 387290,
+      "matchesBaselineRecord": true
+    },
+    {
+      "report": "panel-matching.json",
+      "role": "inventory",
+      "index": 122,
+      "library": "UI",
+      "rawRecordSha256": "2ce307e4a90b91bc83e25781944bd535621f6d56841e6eaf020271fd91bbba1f",
+      "currentSourceOffset": 343187,
+      "matchesBaselineRecord": true
+    },
+    {
+      "report": "panel-matching.json",
+      "role": "npc-dialog",
+      "index": 510,
+      "library": "UI",
+      "rawRecordSha256": "ed2162fc0c50fb2d6c534eb39ab1121110d761179268e6b67d956eccd1421f1b",
+      "currentSourceOffset": 836533,
+      "matchesBaselineRecord": true
+    },
+    {
+      "report": "panel-matching.json",
+      "role": "npc-dialog",
+      "index": 518,
+      "library": "UI",
+      "rawRecordSha256": "9c770eca068661973b91b7f203ed0595ad386d03f7225ddb0deacaa635147db5",
+      "currentSourceOffset": 999085,
+      "matchesBaselineRecord": true
+    },
+    {
+      "report": "panel-matching.json",
+      "role": "npc-dialog",
+      "index": 517,
+      "library": "UI",
+      "rawRecordSha256": "e89b9aef7b0b50f9e097bd54689e86fe4dc95082412b8550e3811563c526c171",
+      "currentSourceOffset": 960398,
+      "matchesBaselineRecord": true
+    },
+    {
+      "report": "panel-matching.json",
+      "role": "npc-shop",
+      "index": 511,
+      "library": "UI",
+      "rawRecordSha256": "fbc0c6c2e06ffa01ae686716f5f4eab020aae0b0667b9d364e628daffcc377e8",
+      "currentSourceOffset": 864296,
+      "matchesBaselineRecord": true
+    },
+    {
+      "report": "panel-matching.json",
+      "role": "hud-orb-shell",
+      "index": 141,
+      "library": "UI",
+      "rawRecordSha256": "9574b8fdf850012701d6b1e8155d2a85e6be900f9f135ba566d2f1a4b192ba77",
+      "currentSourceOffset": 503689,
+      "matchesBaselineRecord": true
+    },
+    {
+      "report": "panel-matching.json",
+      "role": "quickbar-base",
+      "index": 430,
+      "library": "UI",
+      "rawRecordSha256": "15c7b75b8356627564c3ef9e7d4abe1762eeffa24df101a76b3c5ca448fb86a2",
+      "currentSourceOffset": 688567,
+      "matchesBaselineRecord": true
+    },
+    {
+      "report": "panel-matching.json",
+      "role": "minimap-frame",
+      "index": 342,
+      "library": "UI",
+      "rawRecordSha256": "e3f3165e3cf1089197d8382d8f16e0c36b9e1acc2d2d011cdb0579f78c75a1bb",
+      "currentSourceOffset": 627829,
+      "matchesBaselineRecord": true
+    },
+    {
+      "report": "panel-matching.json",
+      "role": "chat-speaker-icon",
+      "index": 210,
+      "library": "UI",
+      "rawRecordSha256": "0131046c2754380645af669e3cdd1d6a915ecf7c5074311e8687966133cedac8",
+      "currentSourceOffset": 571201,
+      "matchesBaselineRecord": true
+    },
+    {
+      "report": "panel-matching.json",
+      "role": "chat-two-person-icon",
+      "index": 220,
+      "library": "UI",
+      "rawRecordSha256": "15467fc4b8991dd8dd57aafe8bb49399cb5b72f7dbd88f72aea3bc38b4ed48f0",
+      "currentSourceOffset": 574359,
+      "matchesBaselineRecord": true
+    },
+    {
+      "report": "panel-matching.json",
+      "role": "chat-person-icon",
+      "index": 200,
+      "library": "UI",
+      "rawRecordSha256": "e24f6a020550a89123f1956810aed00a69d7a39792b6702d53ec25a29b23d407",
+      "currentSourceOffset": 567926,
+      "matchesBaselineRecord": true
+    },
+    {
+      "report": "panel-matching.json",
+      "role": "chat-group-icon",
+      "index": 240,
+      "library": "UI",
+      "rawRecordSha256": "de89007e4fd1a7a7ce3f7168f997ce45bc23134f4d3d5897965d6587ad6226dd",
+      "currentSourceOffset": 581144,
+      "matchesBaselineRecord": true
+    },
+    {
+      "report": "panel-matching.json",
+      "role": "chat-flag-icon",
+      "index": 230,
+      "library": "UI",
+      "rawRecordSha256": "e59ba06b56ff7dde14247849091147539bf228c4f690fe0c377d2e0e61130dcd",
+      "currentSourceOffset": 577656,
+      "matchesBaselineRecord": true
+    },
+    {
+      "report": "panel-matching.json",
+      "role": "minimap-collapse-button",
+      "index": 290,
+      "library": "UI",
+      "rawRecordSha256": "3caf721c748ff0b1a17d9831e6c2cef1145f2abb22bcc794b2ef5a6df0fa98d8",
+      "currentSourceOffset": 617487,
+      "matchesBaselineRecord": true
+    },
+    {
+      "report": "panel-matching.json",
+      "role": "minimap-zoom-in-button",
+      "index": 320,
+      "library": "UI",
+      "rawRecordSha256": "acc5ad48cce965b7303d29b85dc4b287ad57c9a4c7a8ea2f6db9a365bc61bbd1",
+      "currentSourceOffset": 620221,
+      "matchesBaselineRecord": true
+    },
+    {
+      "report": "panel-matching.json",
+      "role": "minimap-mountain-button",
+      "index": 330,
+      "library": "UI",
+      "rawRecordSha256": "f26114eaaf4e2ba3df0bdbaa3c97c0cbef676cb4db438c48fe279fb7ce3d1a62",
+      "currentSourceOffset": 621515,
+      "matchesBaselineRecord": true
+    },
+    {
+      "report": "panel-matching.json",
+      "role": "hud-shop-icon",
+      "index": 280,
+      "library": "UI",
+      "rawRecordSha256": "325d399286fd26d499275119ca728d3c7138500b5bb556ebcb306597c90d8932",
+      "currentSourceOffset": 609786,
+      "matchesBaselineRecord": true
+    },
+    {
+      "report": "panel-matching.json",
+      "role": "hud-command-center",
+      "index": 380,
+      "library": "UI",
+      "rawRecordSha256": "f4e7cfd0a33f0b1203e961b2a7009b0cc43f1b8835fadec1459f56b1e75d303f",
+      "currentSourceOffset": 649918,
+      "matchesBaselineRecord": true
+    },
+    {
+      "report": "panel-matching.json",
+      "role": "hud-command-top",
+      "index": 350,
+      "library": "UI",
+      "rawRecordSha256": "2165c4c5f97008795d6f0f5849b30acefe27261809b4b5637c74e26596f0d4df",
+      "currentSourceOffset": 630327,
+      "matchesBaselineRecord": true
+    },
+    {
+      "report": "panel-matching.json",
+      "role": "hud-command-upper-left",
+      "index": 360,
+      "library": "UI",
+      "rawRecordSha256": "7df28f2034d25e423e14c074b61087560267731e03bb871099e3b5e2398520fc",
+      "currentSourceOffset": 637211,
+      "matchesBaselineRecord": true
+    },
+    {
+      "report": "panel-matching.json",
+      "role": "hud-command-upper-right",
+      "index": 370,
+      "library": "UI",
+      "rawRecordSha256": "c5949a21f0f2ba6a293c102734667e223ed97a91a1406c48607135258017701e",
+      "currentSourceOffset": 643448,
+      "matchesBaselineRecord": true
+    },
+    {
+      "report": "panel-matching.json",
+      "role": "hud-command-lower-left",
+      "index": 390,
+      "library": "UI",
+      "rawRecordSha256": "999449d0c62a2ebbacf659b3681a19a9180e59256a55cafe19db3aee63a045da",
+      "currentSourceOffset": 663364,
+      "matchesBaselineRecord": true
+    },
+    {
+      "report": "panel-matching.json",
+      "role": "hud-command-lower-right",
+      "index": 400,
+      "library": "UI",
+      "rawRecordSha256": "ad353a0bdf27bb90b61a53880a6478a023b4e6ef2a4cd6ddda0c26b2f581354d",
+      "currentSourceOffset": 670038,
+      "matchesBaselineRecord": true
+    },
+    {
+      "report": "panel-matching.json",
+      "role": "hud-command-bottom",
+      "index": 410,
+      "library": "UI",
+      "rawRecordSha256": "d2dcd514ab8106794db1d8a2097f5a67d6366709773258b6b984b358b91b25f4",
+      "currentSourceOffset": 676729,
+      "matchesBaselineRecord": true
+    },
+    {
+      "report": "panel-matching.json",
+      "role": "hud-horse-icon",
+      "index": 180,
+      "library": "UI",
+      "rawRecordSha256": "2ae4e16d255a3c603f9839e1db9dcad691611c37a432432c8193a839826b6a41",
+      "currentSourceOffset": 560890,
+      "matchesBaselineRecord": true
+    },
+    {
+      "report": "panel-matching.json",
+      "role": "hud-handshake-icon",
+      "index": 190,
+      "library": "UI",
+      "rawRecordSha256": "2951e9b8f06d09f0c81b3af826a74189c7a019d8dfc7bdb9b72ee50f1a2df513",
+      "currentSourceOffset": 564418,
+      "matchesBaselineRecord": true
+    },
+    {
+      "report": "panel-matching.json",
+      "role": "hud-exit-icon",
+      "index": 160,
+      "library": "UI",
+      "rawRecordSha256": "fc7f66995ad2373e287e3d02fb2731358c0079dfa0cfce0b2cd15ff21d219293",
+      "currentSourceOffset": 556005,
+      "matchesBaselineRecord": true
+    },
+    {
+      "report": "panel-matching.json",
+      "role": "bottom-segmented-frame",
+      "index": 422,
+      "library": "UI",
+      "rawRecordSha256": "8dde2140376d6845bbd27310bed9ae805674d32880a2e0ef7b8ffac3330664e1",
+      "currentSourceOffset": 685364,
+      "matchesBaselineRecord": true
+    },
+    {
+      "report": "unresolved-matching.json",
+      "role": "hud-hp-fill",
+      "index": 142,
+      "library": "UI",
+      "rawRecordSha256": "b8ed354aacd52807a8cb0d46c2092553f52f9533d3cc5c4bfb6e1fd2d6cf31a8",
+      "currentSourceOffset": 536395,
+      "matchesBaselineRecord": true
+    },
+    {
+      "report": "unresolved-matching.json",
+      "role": "hud-mp-fill",
+      "index": 143,
+      "library": "UI",
+      "rawRecordSha256": "378023adf43540c52ccd9bbb06a247469da8e598308ade4141714b52b7d79927",
+      "currentSourceOffset": 540053,
+      "matchesBaselineRecord": true
+    },
+    {
+      "report": "unresolved-matching.json",
+      "role": "hud-command-shell",
+      "index": 1270,
+      "library": "UI",
+      "rawRecordSha256": "b615589b7d3939559f1f15d15a9133e6e6267201aab8775a6215cf19417988d9",
+      "currentSourceOffset": 7232773,
+      "matchesBaselineRecord": true
+    },
+    {
+      "report": "unresolved-matching.json",
+      "role": "hud-command-shell",
+      "index": 140,
+      "library": "UI",
+      "rawRecordSha256": "4e96c8e9b76bb35f904a896ae8436b033d2368705d525ac51f26a459573d057f",
+      "currentSourceOffset": 472449,
+      "matchesBaselineRecord": true
+    }
+  ],
+  "allMatchingCandidateRecordsUnchanged": true,
+  "limitations": [
+    "The UI library acquired two additional records; the process that wrote them is not established.",
+    "Byte identity of current records supports source continuity, but does not prove historical source identity at each screenshot timestamp.",
+    "No new records were decoded or approved for production by this comparison."
+  ]
+}

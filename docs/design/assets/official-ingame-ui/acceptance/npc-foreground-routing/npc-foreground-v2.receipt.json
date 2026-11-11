@@ -1,0 +1,14 @@
+{
+  "command": [
+    "pwsh",
+    "-NoProfile",
+    "-File",
+    "tests/Run-GameUiNpcTests.ps1",
+    "-PackagePath",
+    "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+    "-EvidenceDirectory",
+    "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2"
+  ],
+  "exitCode": 0,
+  "log": "E:/workspace/mir3-zircon-server/docs/design/assets/official-ingame-ui/acceptance/npc-foreground-routing/npc-foreground-v2.log"
+}

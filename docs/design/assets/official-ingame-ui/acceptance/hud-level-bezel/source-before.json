@@ -1,0 +1,22 @@
+[
+  {
+    "path": "Client/Envir/GameUiHudLayout.cs",
+    "sha256": "19d1606bead9f098913863e9ffe6454fb614321597797360b3b94557972f442b"
+  },
+  {
+    "path": "build/game-ui/layout-official-v1.json",
+    "sha256": "da4f31ddeafb449b0312e3331ede61368a203aa2cc766b561e96910475481caf"
+  },
+  {
+    "path": "build/game-ui/Validate-OfficialUiLayout.py",
+    "sha256": "f081127a00a44626de23ac6630f9384dbf1217cc3c40d2cda5fb1d2119b55620"
+  },
+  {
+    "path": "tests/game-ui/OfficialUiHudLayoutTests.cs",
+    "sha256": "35c2206fa9817f81911a52a8408d398a1169a20bdb075549e696d8c54114ca6e"
+  },
+  {
+    "path": "Client/Scenes/Views/MainPanel.GameUi.cs",
+    "sha256": "df5fed0e440c3e8e155d87332a7a18c55da47b89c29543c1bd896a99ed38efc9"
+  }
+]

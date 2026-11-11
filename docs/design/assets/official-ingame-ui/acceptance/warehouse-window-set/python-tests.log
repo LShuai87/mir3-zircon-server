@@ -1,0 +1,25 @@
+.F..F.......................................................................................................................................................................
+======================================================================
+FAIL: test_deterministic_publication_and_stale_refusal (test_character_binding_contract.CharacterContractTests.test_deterministic_publication_and_stale_refusal)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\workspace\mir3-zircon-server\tests\game-ui\test_character_binding_contract.py", line 101, in test_deterministic_publication_and_stale_refusal
+    self.assertEqual(content, (ROOT / assembler.OUTPUT).read_bytes())
+AssertionError: b'{\n[1671 chars]6": "ae37a6cf4168b827bab48353921aa6b6681e5babb[142976 chars]n}\n' != b'{\n[1671 chars]6": "89df6b08cf454fd022e3a0a909aa385f0d7ff55f8[142976 chars]n}\n'
+
+======================================================================
+FAIL: test_sources_and_complete_join (test_character_binding_contract.CharacterContractTests.test_sources_and_complete_join)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\workspace\mir3-zircon-server\tests\game-ui\test_character_binding_contract.py", line 35, in test_sources_and_complete_join
+    self.assertEqual(result, json.loads((ROOT / assembler.OUTPUT).read_text(encoding='utf-8')))
+AssertionError: {'sch[1248 chars]6': 'ae37a6cf4168b827bab48353921aa6b6681e5babb[93474 chars]20'}} != {'sch[1248 chars]6': '89df6b08cf454fd022e3a0a909aa385f0d7ff55f8[93474 chars]20'}}
+Diff is 164207 characters long. Set self.maxDiff to None to see it.
+
+----------------------------------------------------------------------
+Ran 172 tests in 9.915s
+
+FAILED (failures=2)
+Compiled catalog checks passed: 51
+Binary/alpha negative cases passed: 12
+Manifest negative cases passed: 34

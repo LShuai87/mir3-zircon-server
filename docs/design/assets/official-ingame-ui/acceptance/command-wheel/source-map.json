@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "checkedAtLocalDate": "2026-11-08",
+  "referenceClientSize": [
+    1024,
+    768
+  ],
+  "referenceMode": "windowed; confirmed configuration; existing screenshots reused",
+  "role": "hud-command-frame",
+  "decision": "Replace temporary border derived from UI[422] with explicit native-art adaptation using UI[140].",
+  "sourceLibrary": "UI",
+  "sourceIndex": 140,
+  "sourceSize": [
+    225,
+    175
+  ],
+  "sourceOffset": [
+    -112,
+    -87
+  ],
+  "sourcePngSha256": "a22ce21539d63f2b050fe7c026abc0f2789376efa0fd56d2dfafb3e7fc9fbfd0",
+  "outputSize": [
+    225,
+    202
+  ],
+  "origin": [
+    0,
+    0
+  ],
+  "outputOffset": [
+    0,
+    0
+  ],
+  "mask": "edge-connected exact RGB black becomes transparent; other source RGBA retained",
+  "transform": "transparent canvas only; no scaling or clipping",
+  "sceneOwnerBoundsAt1024": [
+    799,
+    566,
+    225,
+    202
+  ],
+  "interactiveContract": "nine original buttons plus two original mode readouts retain geometry and native control instances; decorative remainder passes through",
+  "sourceAmbiguity": {
+    "reference": "docs/design/assets/official-ingame-ui/acceptance/reference/unresolved-matching.json",
+    "candidates": [
+      140,
+      1270
+    ],
+    "uniqueSourceConfirmed": false,
+    "note": "Both candidates have similar wheel art and are occluded by controls in captures. UI[140] is a declared adaptation, not a uniquely identified original frame."
+  },
+  "limitations": [
+    "Native wheel art does not establish exact official button positions, window-client crop or DPI.",
+    "Existing nonoverlapping rectangular hit regions are retained; final visual acceptance remains open."
+  ],
+  "releaseAccepted": false
+}

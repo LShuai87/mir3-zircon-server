@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "sourceLibrary": "UI",
+  "sourceFileVersion": "1.15.0.7269",
+  "capturedAt": "2026-11-10",
+  "mixSha256": "f35e10788b025359ecb35291d17608cd16d2f86414368569481239896261d819",
+  "mizSha256": "9142a25182b48469faa5120a94db73f02b2a17e4161ebf8c3e12804d4ca7af5c",
+  "sourceSize": [
+    69,
+    24
+  ],
+  "targetSize": [
+    78,
+    22
+  ],
+  "slicePadding": 3,
+  "frames": [
+    {
+      "state": "normal",
+      "sourceIndex": 30,
+      "pngSha256": "40a30f4b930b3f49566aa2eaa902c8e947964c0df2e691219cb163c6abe37b1e"
+    },
+    {
+      "state": "hover",
+      "sourceIndex": 31,
+      "pngSha256": "af9e4ceedc2e087053b0970d3d584ae907b38bf8f62737dd1449ea5450101d55"
+    },
+    {
+      "state": "pressed",
+      "sourceIndex": 32,
+      "pngSha256": "cf54bd166cebd54c2a7de4bb520298ee6b1cdde72392d7065f7b3faf4d2a992d"
+    },
+    {
+      "state": "disabled",
+      "sourceIndex": 33,
+      "pngSha256": "ba7c9802464bc85be9b9fb618edb398896543c44639feb9791342a38d04ca243"
+    }
+  ],
+  "reference": "reference/captures/03-character-inventory.jpg: sort button at (929,486), border match UI[30]",
+  "output": "Client/Resources/GameUi/inventory-button.png"
+}

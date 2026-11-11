@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "name": "existing-output",
+      "result": "pass",
+      "message": "Output must be a new directory: E:\\workspace\\mir3-ui-work\\reference-build-v1"
+    },
+    {
+      "name": "runtime-not-ready",
+      "result": "pass",
+      "message": "Runtime packaging is unavailable until G0-1..G0-5, semantic roles and layouts are frozen. Reference packages cannot be deployed as OfficialV1.Zl."
+    },
+    {
+      "name": "source-overlap",
+      "result": "pass",
+      "message": "Source and output directories must be disjoint."
+    },
+    "{\"output\": \"E:\\\\workspace\\\\mir3-ui-work\\\\.guard-failure-ba59142414e74d7bb1e1db52cfb97f86.staging-c5213480543c4ef18e680f5c30a8417a\\\\Decoded\", \"libraries\": 4, \"slots\": 4276, \"present\": 2208}",
+    {
+      "name": "builder-process-failure",
+      "result": "pass",
+      "message": "Reference Zl conversion failed (exit 2): Unknown option: --official-ui\r\nusage: C:\\Users\\shuai\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe [option] ... [-c cmd | -m mod | file | -] [arg] ...\r\nTry `python -h' for more information.\r\n"
+    }
+  ],
+  "failedOutputAbsent": true,
+  "failureStagingRemoved": true,
+  "previousBuildMetadataUnchanged": true
+}

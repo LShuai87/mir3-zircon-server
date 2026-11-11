@@ -1,0 +1,299 @@
+{
+  "schemaVersion": 1,
+  "kind": "warehouse-isolated-candidate-verification",
+  "checkedAtLocalDate": "2026-11-08",
+  "releaseAccepted": false,
+  "referenceResolution": [
+    1024,
+    768
+  ],
+  "results": {
+    "isolatedFrames": 1,
+    "windowSize": [
+      508,
+      480
+    ],
+    "gridSize": [
+      456,
+      351
+    ],
+    "columns": 13,
+    "visibleRows": 10,
+    "alphaPixelsChecked": 243840,
+    "transparentPixels": 5222,
+    "pythonSuiteTests": 164,
+    "focusedTests": 5,
+    "failureControls": 4,
+    "runtimeClientChanged": false,
+    "activePackageChanged": false,
+    "runtimeReady": false,
+    "productionBindingAllowed": false,
+    "layoutFrozen": false,
+    "gateClosureAllowed": false
+  },
+  "sourceChanges": [
+    {
+      "path": "build/game-ui/Compose-OfficialUi.py",
+      "beforeSha256": "8203e17b7e2bdac72f47614ff6f843f43356b79d4b55feb38b8170849f9cacb0",
+      "afterSha256": "01d6ea0aa10872a7a2e052468b8b0dc90579aec45f221d40a4ddf51d9a24081f"
+    }
+  ],
+  "sourceHashes": [
+    {
+      "path": "build/game-ui/Compose-OfficialUi.py",
+      "sha256": "01d6ea0aa10872a7a2e052468b8b0dc90579aec45f221d40a4ddf51d9a24081f"
+    },
+    {
+      "path": "build/game-ui/warehouse-selection.json",
+      "sha256": "c212a2c7b246e01fd3cce6506b4d04596e2e683a24185806f3758bcb703bfd27"
+    },
+    {
+      "path": "build/game-ui/warehouse-composition-recipe.json",
+      "sha256": "45d7df4cbaed0eb9dc2f1eac35b36db8c60bd700c6ac520525ac4a51fbb157ec"
+    },
+    {
+      "path": "build/game-ui/warehouse-layout-candidate.json",
+      "sha256": "c3e93f8465539941cb59311b48833dc774567df8325ccb85edab751ba4029107"
+    },
+    {
+      "path": "tests/game-ui/test_warehouse_candidate.py",
+      "sha256": "cd1bb89ca60d2553d87a473a8e89732fa79a8a2e2f4570df5895bcece9fa0a93"
+    },
+    {
+      "path": "tests/game-ui/Verify-WarehouseCandidate.py",
+      "sha256": "9906995b60779b97152e1992b0b54af14fc42edcb9db7dc9f20ae4b0773b2705"
+    }
+  ],
+  "commands": [
+    {
+      "command": "python build/game-ui/Compose-OfficialUi.py --decoded E:/workspace/mir3-ui-work/warehouse-assets-20261108-v1/decoded --output E:/workspace/mir3-ui-work/warehouse-assets-20261108-v1/art-v2 --recipe build/game-ui/warehouse-composition-recipe.json",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/warehouse-candidate/compose-final.log",
+      "logSha256": "779ceb9212828e42341288a59c02763104429d6195b1fb75a3577bfb247f1066"
+    },
+    {
+      "command": "ImageManager --official-ui prepared E:/workspace/mir3-ui-work/warehouse-assets-20261108-v1/art-v2 E:/workspace/mir3-ui-work/warehouse-assets-20261108-v1/zl-v2 E:/workspace/mir3-ui-work/warehouse-assets-20261108-v1/art-v2/composed-manifest.json",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/warehouse-candidate/package-result.log",
+      "logSha256": "4d94b5f1449dfacce939b8b81caac9e14535e424e5158dfe7118332a94085f98"
+    },
+    {
+      "command": "python tests/game-ui/Verify-WarehouseCandidate.py --work E:/workspace/mir3-ui-work/warehouse-assets-20261108-v1 --output docs/design/assets/official-ingame-ui/acceptance/warehouse-candidate/artifact-audit.json",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/warehouse-candidate/artifact-audit-final.log",
+      "logSha256": "c156ed561e3bb810f8e69eb67d7600e26d65538eaa0e1a2fe43e5cadcf351aa7"
+    },
+    {
+      "command": "python -m unittest discover -s tests/game-ui -p test_warehouse_candidate.py",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/warehouse-candidate/focused-tests-final.log",
+      "logSha256": "970596b861026dd1013bc3c489ecb55817d0a390bf94da264efd5f67ba376fe0"
+    },
+    {
+      "command": "python -m unittest discover -s tests/game-ui -p 'test_*.py'",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/warehouse-candidate/python-suite-final.log",
+      "logSha256": "8aaa154475c617345b16cb3aff429ca4386892ea46f7e0c2ebff0eed30fdcddb"
+    },
+    {
+      "command": "python docs/design/assets/official-ingame-ui/acceptance/warehouse-candidate/check-failures.py",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/warehouse-candidate/failure-controls.log",
+      "logSha256": "5386a0d1e2923624c82c76a78213772cc67facbd0ae6add09a8828691f82c658"
+    },
+    {
+      "command": "python build/game-ui/Validate-OfficialUiAssets.py --artifacts E:/workspace/mir3-ui-work/npc-shop-assets-20261108-v1 --output docs/design/assets/official-ingame-ui/acceptance/warehouse-candidate/existing-package-audit.json",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/warehouse-candidate/existing-package-audit.log",
+      "logSha256": "5bef1b0a8bf69218064c4e96dfa70b2e76899ca94e8abbc11978c1bf7d9c1d92"
+    },
+    {
+      "command": "Repeat Compose-OfficialUi.py to art-repeat and compare every generated file byte for byte against art-v2",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/warehouse-candidate/reproduction.log",
+      "logSha256": "7ead8a9e7b88c7d4ca039316c984bafe66a72291e6c8a01545e798ee91464f7b"
+    },
+    {
+      "command": "git diff --check and explicit new source/document whitespace checks",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/warehouse-candidate/whitespace.log",
+      "logSha256": "82e3734e374e351e9c0f655e4ad2ab755aece4dd211979a4f8163f1639f34fde"
+    },
+    {
+      "command": "python build/game-ui/Validate-UiTasks.py",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/warehouse-candidate/task-validation.log",
+      "logSha256": "90e3ddffa807ef19523e77855653984be659ff7ab47ec66f04d41348c4cb85b3"
+    },
+    {
+      "command": "Independent foundational and 51 supplemental report, command, evidence and current source hash audit",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/warehouse-candidate/history-audit.log",
+      "logSha256": "005028d4faa700270d44f6e4d16b2cc00e37166954413e7f1f731fc15a6d4bc8"
+    }
+  ],
+  "limitations": [
+    "Explicit reuse of shop trim, not a screenshot identification of native warehouse art.",
+    "Candidate package contains only one frame; not compatible as a replacement for the active 93-frame package.",
+    "No original warehouse controls or runtime scene changed; geometry and reversible adapter still pending.",
+    "PNG-to-BC1 maximum channel error 47, mean 0.8961; no GPU or final visual acceptance.",
+    "No live storage, server, combination, deployment or rollback acceptance.",
+    "All existing gates and task statuses retained."
+  ],
+  "failedAttempts": [
+    {
+      "log": "docs/design/assets/official-ingame-ui/acceptance/warehouse-candidate/artifact-audit-attempt1-error.log",
+      "reason": "Current Python lacks numpy; final verifier replaced this dependency with pure Python BC1 decoding."
+    }
+  ],
+  "sourcePlanSha256": "f8c0a002b3821fabb54993792c354c4eff35eec51f9cfdc418535017c13069e9",
+  "evidenceHashes": [
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-candidate/artifact-audit-attempt1-error.log",
+      "sha256": "57738ca9a0ebae4aa9d74fb39f3cd1298b27f9675ae89602723bb94383c71346"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-candidate/artifact-audit-final.log",
+      "sha256": "c156ed561e3bb810f8e69eb67d7600e26d65538eaa0e1a2fe43e5cadcf351aa7"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-candidate/artifact-audit.json",
+      "sha256": "ce7aae20ae190cdaa15f142c8e6011cca891d5f63e3eda94236feee263a380b4"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-candidate/baseline-audit.json",
+      "sha256": "0cbd69b6d55d198b1fc2bbdcc90853f67eaa0291c0c31ceea0e682d8a4da64e9"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-candidate/check-failures.py",
+      "sha256": "83676bb571d5890607faf8b283afdffa3b3eb1f717a0848594f08ba99830200c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-candidate/compose-final.log",
+      "sha256": "779ceb9212828e42341288a59c02763104429d6195b1fb75a3577bfb247f1066"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-candidate/compose-repeat.log",
+      "sha256": "779ceb9212828e42341288a59c02763104429d6195b1fb75a3577bfb247f1066"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-candidate/compose.log",
+      "sha256": "779ceb9212828e42341288a59c02763104429d6195b1fb75a3577bfb247f1066"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-candidate/composed-manifest.json",
+      "sha256": "fbfd29fe575002d48aa1d37957585db1ef8d1eea9db57a6aa3e0119ea40df699"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-candidate/existing-package-audit.json",
+      "sha256": "511ce3a6c1b0733ca76a8d206df39e8a24041d49811e4dbcdfa3cabc5638aea4"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-candidate/existing-package-audit.log",
+      "sha256": "5bef1b0a8bf69218064c4e96dfa70b2e76899ca94e8abbc11978c1bf7d9c1d92"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-candidate/failure-controls.log",
+      "sha256": "5386a0d1e2923624c82c76a78213772cc67facbd0ae6add09a8828691f82c658"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-candidate/focused-tests-final.log",
+      "sha256": "970596b861026dd1013bc3c489ecb55817d0a390bf94da264efd5f67ba376fe0"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-candidate/focused-tests.log",
+      "sha256": "d76d05acc7f72df42319add0ab287a16ae39750b1d84e7945275d62afdd83edf"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-candidate/package-final.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-candidate/package-final.stdout.log",
+      "sha256": "fab67f4fca4c09ac61c0309fd4230e8917b7085c12560eeedaada127542fb48c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-candidate/package-result.log",
+      "sha256": "4d94b5f1449dfacce939b8b81caac9e14535e424e5158dfe7118332a94085f98"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-candidate/package.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-candidate/package.stdout.log",
+      "sha256": "b5d29dd47e1605eebb4e41c52c6d29dc04b494a73da4fb7cd46715c4d5637aeb"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-candidate/prepared-manifest.json",
+      "sha256": "f3f0a9a0e105473ea110eabf3e21504ed30e3dce165353059e337c9d58923e60"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-candidate/python-suite-final.log",
+      "sha256": "8aaa154475c617345b16cb3aff429ca4386892ea46f7e0c2ebff0eed30fdcddb"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-candidate/python-suite.log",
+      "sha256": "c92749729c211c7ff55c1991e6ca575519701062f29c34c8079f2d3d061e02f3"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-candidate/README.md",
+      "sha256": "78904921092caf58a4c7ff869cac9e6306891ba545204a7e72ad9356a6863331"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-candidate/reproduction.log",
+      "sha256": "7ead8a9e7b88c7d4ca039316c984bafe66a72291e6c8a01545e798ee91464f7b"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-candidate/source-before/build/game-ui/Compose-OfficialUi.py",
+      "sha256": "8203e17b7e2bdac72f47614ff6f843f43356b79d4b55feb38b8170849f9cacb0"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-candidate/source-before/docs/tasks/official-ingame-ui/README.md.snapshot",
+      "sha256": "6979ba9fc092af0596b250ec1f4e2ba009cda3f76ee119df03674f78e65c7e6d"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-candidate/source-before/docs/tasks/official-ingame-ui/tasks.json",
+      "sha256": "958ff7a3b4aa23626a4eeff4267caf5b12c97c90125c4918337b2829bebd5943"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-candidate/source-before.json",
+      "sha256": "da18a171ef996dff4883db879042f1883e2820074326fc62885368f82c9f3378"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-candidate/warehouse-background.png",
+      "sha256": "363e83de884dbd0346c7bd1f5924965c4c3f385bb8646772d215bed60039fa38"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-candidate/warehouse-geometry-preview.png",
+      "sha256": "7ca597a94a61431812a93e7d7ece5727bd6debfb3129ba6ae1ffec0c0c6ffbe1"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-candidate/whitespace.log",
+      "sha256": "82e3734e374e351e9c0f655e4ad2ab755aece4dd211979a4f8163f1639f34fde"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-candidate/task-validation.log",
+      "sha256": "90e3ddffa807ef19523e77855653984be659ff7ab47ec66f04d41348c4cb85b3"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-candidate/history-audit.json",
+      "sha256": "42cb8a252c1005819b65c6857876294717a142b2a552dd3dcdaeccb440e5c1d8"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-candidate/history-audit.log",
+      "sha256": "005028d4faa700270d44f6e4d16b2cc00e37166954413e7f1f731fc15a6d4bc8"
+    }
+  ]
+}

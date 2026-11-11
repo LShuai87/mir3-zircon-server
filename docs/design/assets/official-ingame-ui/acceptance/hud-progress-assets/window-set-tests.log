@@ -1,0 +1,1 @@
+Window-set integration: 6472 checks passed with real catalog package, six placements, identity/chat retention, actual GameScene resize/disposal, late rollback, ownership and teardown. Two glyph-path GPU probes only; no full-scene/live-game/IME acceptance.

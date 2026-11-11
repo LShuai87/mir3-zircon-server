@@ -1,0 +1,11 @@
+System.Exception: Normal level clips in source-art bezel: 999; font=[Font: Name=Microsoft Sans Serif, Size=10, Units=3, GdiCharSet=1, GdiVerticalFont=False]; glyphs={Width=32, Height=17}; bounds={Width=28, Height=26}
+   在 OfficialUiHudLayoutTests.Check(Boolean condition, String detail)
+   在 OfficialUiHudLayoutTests.Adapt(TestScene root, GameScene scene, UserObject user)
+   在 OfficialUiHudLayoutTests.Main(String[] args)
+HUD layout tests failed.
+At E:\workspace\mir3-zircon-server\tests\Run-GameUiHudLayoutTests.ps1:33 char:127
++ ... re }; if ($LASTEXITCODE -ne 0) { throw 'HUD layout tests failed.' } }
++                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (HUD layout tests failed.:String) [], RuntimeException
+    + FullyQualifiedErrorId : HUD layout tests failed.
+ 

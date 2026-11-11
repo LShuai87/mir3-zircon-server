@@ -1,0 +1,560 @@
+{
+  "schemaVersion": 1,
+  "kind": "official-ui-reference-selection",
+  "productionBindingAllowed": false,
+  "baselineSha256": "902153e43cb89d82e2d41ecb9ad3f77df5d3a1cd7a3a5ce0a460c11a1222037c",
+  "scope": "Logged-in candidate assets plus independently agreed NPC goods main window; NPC interaction card and secondary popups excluded.",
+  "assets": [
+    {
+      "role": "character",
+      "sourceLibrary": "UI",
+      "sourceIndex": 2765,
+      "logicalSize": [
+        412,
+        562
+      ],
+      "sourceOffset": [
+        0,
+        0
+      ],
+      "pngSha256": "98efced4a423a11ebef3b97d1f851bc9570053b8dbc48c046a136e4d98c5ccc3",
+      "identification": "existing-screenshot-local-match",
+      "captureId": "02-character",
+      "alphaVerified": false
+    },
+    {
+      "role": "inventory",
+      "sourceLibrary": "UI",
+      "sourceIndex": 120,
+      "logicalSize": [
+        276,
+        494
+      ],
+      "sourceOffset": [
+        0,
+        0
+      ],
+      "pngSha256": "80c4f90370c17c01879a86a61b4f8114684a3e29cf87810f44ff11ba1ee8f53a",
+      "identification": "existing-screenshot-local-match",
+      "captureId": "03-character-inventory",
+      "alphaVerified": false
+    },
+    {
+      "role": "hud-orb-shell",
+      "sourceLibrary": "UI",
+      "sourceIndex": 141,
+      "logicalSize": [
+        225,
+        202
+      ],
+      "sourceOffset": [
+        -112,
+        -101
+      ],
+      "pngSha256": "0db64d4ba0cfa505e876ff3a4a55a29ea3577cb8793c2485f9fa9e092314581e",
+      "identification": "existing-screenshot-local-match",
+      "captureId": "01-overview",
+      "alphaVerified": false
+    },
+    {
+      "role": "quickbar-base",
+      "sourceLibrary": "UI",
+      "sourceIndex": 430,
+      "logicalSize": [
+        518,
+        44
+      ],
+      "sourceOffset": [
+        0,
+        0
+      ],
+      "pngSha256": "b5a5b7fd81a9e59092c3d205a3c020a8b184275d0d5dd9f9f274d2d1bfad579b",
+      "identification": "existing-screenshot-local-match",
+      "captureId": "01-overview",
+      "alphaVerified": false
+    },
+    {
+      "role": "minimap-frame",
+      "sourceLibrary": "UI",
+      "sourceIndex": 342,
+      "logicalSize": [
+        166,
+        198
+      ],
+      "sourceOffset": [
+        0,
+        0
+      ],
+      "pngSha256": "a29c643cb7148e085b4bc63246ae07132890356fd4e556f319e78160cc9d162b",
+      "identification": "existing-screenshot-local-match",
+      "captureId": "01-overview",
+      "alphaVerified": false
+    },
+    {
+      "role": "chat-speaker-icon",
+      "sourceLibrary": "UI",
+      "sourceIndex": 210,
+      "logicalSize": [
+        31,
+        24
+      ],
+      "sourceOffset": [
+        0,
+        0
+      ],
+      "pngSha256": "428d2a1584b74128bc298620bb4c997fea3a924b7a477dc5f00ece11a8e4fa2b",
+      "identification": "existing-screenshot-local-match",
+      "captureId": "01-overview",
+      "alphaVerified": false
+    },
+    {
+      "role": "chat-two-person-icon",
+      "sourceLibrary": "UI",
+      "sourceIndex": 220,
+      "logicalSize": [
+        31,
+        24
+      ],
+      "sourceOffset": [
+        0,
+        0
+      ],
+      "pngSha256": "378f901cf4ea81d5501b0fb597d7b9c772bd29b2950e666726c9f5bb372d89bb",
+      "identification": "existing-screenshot-local-match",
+      "captureId": "01-overview",
+      "alphaVerified": false
+    },
+    {
+      "role": "chat-person-icon",
+      "sourceLibrary": "UI",
+      "sourceIndex": 200,
+      "logicalSize": [
+        31,
+        24
+      ],
+      "sourceOffset": [
+        0,
+        0
+      ],
+      "pngSha256": "4335c3a1de2e9ca9f84832a210ddd785ec12487e53cc2054f3a3a911b1d3fb84",
+      "identification": "existing-screenshot-local-match",
+      "captureId": "01-overview",
+      "alphaVerified": false
+    },
+    {
+      "role": "chat-group-icon",
+      "sourceLibrary": "UI",
+      "sourceIndex": 240,
+      "logicalSize": [
+        31,
+        24
+      ],
+      "sourceOffset": [
+        0,
+        0
+      ],
+      "pngSha256": "eacee10ab1771bffc843d76cdc5143cd4b18c33615075a43b7a2ca249bc98f0a",
+      "identification": "existing-screenshot-local-match",
+      "captureId": "01-overview",
+      "alphaVerified": false
+    },
+    {
+      "role": "chat-flag-icon",
+      "sourceLibrary": "UI",
+      "sourceIndex": 230,
+      "logicalSize": [
+        31,
+        24
+      ],
+      "sourceOffset": [
+        0,
+        0
+      ],
+      "pngSha256": "02da1e28c5881907b87f23d290a9329b5dba0237f5444e71865a1657d28496ad",
+      "identification": "existing-screenshot-local-match",
+      "captureId": "01-overview",
+      "alphaVerified": false
+    },
+    {
+      "role": "minimap-collapse-button",
+      "sourceLibrary": "UI",
+      "sourceIndex": 290,
+      "logicalSize": [
+        20,
+        16
+      ],
+      "sourceOffset": [
+        0,
+        0
+      ],
+      "pngSha256": "3e6101cbdb894fe6837a30e486ebd02dac261c9fb4d31cb491e3235d80c28915",
+      "identification": "existing-screenshot-local-match",
+      "captureId": "01-overview",
+      "alphaVerified": false
+    },
+    {
+      "role": "minimap-zoom-in-button",
+      "sourceLibrary": "UI",
+      "sourceIndex": 320,
+      "logicalSize": [
+        20,
+        16
+      ],
+      "sourceOffset": [
+        0,
+        0
+      ],
+      "pngSha256": "b445e0e98f9af596ac667cdb418a69eb7b21a74e8516d8c2e27b3b50a898903c",
+      "identification": "existing-screenshot-local-match",
+      "captureId": "01-overview",
+      "alphaVerified": false
+    },
+    {
+      "role": "minimap-mountain-button",
+      "sourceLibrary": "UI",
+      "sourceIndex": 330,
+      "logicalSize": [
+        20,
+        16
+      ],
+      "sourceOffset": [
+        0,
+        0
+      ],
+      "pngSha256": "b079683191095bcf57657d6aa0b22dde55a25662b4e2f2d03d22e7e2efc235bc",
+      "identification": "existing-screenshot-local-match",
+      "captureId": "01-overview",
+      "alphaVerified": false
+    },
+    {
+      "role": "hud-shop-icon",
+      "sourceLibrary": "UI",
+      "sourceIndex": 280,
+      "logicalSize": [
+        40,
+        40
+      ],
+      "sourceOffset": [
+        0,
+        0
+      ],
+      "pngSha256": "087979259ce5299d75824c076f43a4dd3debe8ca0b939a0de4d8eb0e5ccb63a2",
+      "identification": "existing-screenshot-local-match",
+      "captureId": "01-overview",
+      "alphaVerified": false
+    },
+    {
+      "role": "hud-command-center",
+      "sourceLibrary": "UI",
+      "sourceIndex": 380,
+      "logicalSize": [
+        58,
+        58
+      ],
+      "sourceOffset": [
+        0,
+        0
+      ],
+      "pngSha256": "081003bba8f10baa5e8084c05ec586a2fbcc224c7f27c4e0619e515d4e4729b4",
+      "identification": "existing-screenshot-local-match",
+      "captureId": "01-overview",
+      "alphaVerified": false
+    },
+    {
+      "role": "hud-command-top",
+      "sourceLibrary": "UI",
+      "sourceIndex": 350,
+      "logicalSize": [
+        54,
+        32
+      ],
+      "sourceOffset": [
+        0,
+        0
+      ],
+      "pngSha256": "9d39186fb139255652fc576c144479fc8ce93626896e63a8f1c915b504786e2e",
+      "identification": "existing-screenshot-local-match",
+      "captureId": "01-overview",
+      "alphaVerified": false
+    },
+    {
+      "role": "hud-command-upper-left",
+      "sourceLibrary": "UI",
+      "sourceIndex": 360,
+      "logicalSize": [
+        42,
+        50
+      ],
+      "sourceOffset": [
+        0,
+        0
+      ],
+      "pngSha256": "2228f572ddf6eefa1bdb4344b6bbe9f325f3b26ffa4efbccced28891e57e878d",
+      "identification": "existing-screenshot-local-match",
+      "captureId": "01-overview",
+      "alphaVerified": false
+    },
+    {
+      "role": "hud-command-upper-right",
+      "sourceLibrary": "UI",
+      "sourceIndex": 370,
+      "logicalSize": [
+        42,
+        50
+      ],
+      "sourceOffset": [
+        0,
+        0
+      ],
+      "pngSha256": "9409eaa3f6b5339a5ba0c107f459443e871f81c0781b6ba7c67770862eed90c7",
+      "identification": "existing-screenshot-local-match",
+      "captureId": "01-overview",
+      "alphaVerified": false
+    },
+    {
+      "role": "hud-command-lower-left",
+      "sourceLibrary": "UI",
+      "sourceIndex": 390,
+      "logicalSize": [
+        42,
+        50
+      ],
+      "sourceOffset": [
+        0,
+        0
+      ],
+      "pngSha256": "38672b7c06a8ceb579a355400c37378803d3d7ec177e22077492f875c881fbfa",
+      "identification": "existing-screenshot-local-match",
+      "captureId": "01-overview",
+      "alphaVerified": false
+    },
+    {
+      "role": "hud-command-lower-right",
+      "sourceLibrary": "UI",
+      "sourceIndex": 400,
+      "logicalSize": [
+        42,
+        50
+      ],
+      "sourceOffset": [
+        0,
+        0
+      ],
+      "pngSha256": "1284984c415429350daa2978125f4f8689e68410a54a6aee7b5be00f35630d03",
+      "identification": "existing-screenshot-local-match",
+      "captureId": "01-overview",
+      "alphaVerified": false
+    },
+    {
+      "role": "hud-command-bottom",
+      "sourceLibrary": "UI",
+      "sourceIndex": 410,
+      "logicalSize": [
+        54,
+        32
+      ],
+      "sourceOffset": [
+        0,
+        0
+      ],
+      "pngSha256": "c86a5c9c4777a0531136c3213a75228cad0ab45bdc0783026afbf715894e5143",
+      "identification": "existing-screenshot-local-match",
+      "captureId": "01-overview",
+      "alphaVerified": false
+    },
+    {
+      "role": "hud-horse-icon",
+      "sourceLibrary": "UI",
+      "sourceIndex": 180,
+      "logicalSize": [
+        31,
+        24
+      ],
+      "sourceOffset": [
+        0,
+        0
+      ],
+      "pngSha256": "b1cff4ae6f3f3e4e7c5d672b105ca84b72090dc24b710202794f36515ec620e5",
+      "identification": "existing-screenshot-local-match",
+      "captureId": "01-overview",
+      "alphaVerified": false
+    },
+    {
+      "role": "hud-handshake-icon",
+      "sourceLibrary": "UI",
+      "sourceIndex": 190,
+      "logicalSize": [
+        31,
+        24
+      ],
+      "sourceOffset": [
+        0,
+        0
+      ],
+      "pngSha256": "90c3e882470ad58e0862db1b39568fadbe623ccb7671bea533db8c7b5267b456",
+      "identification": "existing-screenshot-local-match",
+      "captureId": "01-overview",
+      "alphaVerified": false
+    },
+    {
+      "role": "hud-exit-icon",
+      "sourceLibrary": "UI",
+      "sourceIndex": 160,
+      "logicalSize": [
+        22,
+        18
+      ],
+      "sourceOffset": [
+        0,
+        0
+      ],
+      "pngSha256": "690427c7d319b9bd31bbf7218af885523dedb9d333b765a21af50d2bf8dfeff6",
+      "identification": "existing-screenshot-local-match",
+      "captureId": "01-overview",
+      "alphaVerified": false
+    },
+    {
+      "role": "bottom-segmented-frame",
+      "sourceLibrary": "UI",
+      "sourceIndex": 422,
+      "logicalSize": [
+        611,
+        10
+      ],
+      "sourceOffset": [
+        0,
+        0
+      ],
+      "pngSha256": "c3620274c9b6fd141ddc310b67877b0930b44d3cb6b6eb02c0b56b637bfb1470",
+      "identification": "existing-screenshot-local-match",
+      "captureId": "01-overview",
+      "alphaVerified": false
+    },
+    {
+      "role": "hud-hp-fill",
+      "sourceLibrary": "UI",
+      "sourceIndex": 142,
+      "logicalSize": [
+        53,
+        101
+      ],
+      "sourceOffset": [
+        -69,
+        -26
+      ],
+      "pngSha256": "7f7450264ed93b428641cddfac7d9cdaecf299b7935f5b086f5b07636343de60",
+      "identification": "existing-screenshot-local-match",
+      "captureId": "01-overview",
+      "alphaVerified": false
+    },
+    {
+      "role": "hud-mp-fill",
+      "sourceLibrary": "UI",
+      "sourceIndex": 143,
+      "logicalSize": [
+        48,
+        101
+      ],
+      "sourceOffset": [
+        -16,
+        -26
+      ],
+      "pngSha256": "89e3d84dbbd1dc19d5c0333780f73610d79cbeb6edfc307fd3ae6618ccb13a54",
+      "identification": "existing-screenshot-local-match",
+      "captureId": "01-overview",
+      "alphaVerified": false
+    },
+    {
+      "role": "bottom-segmented-fill",
+      "sourceLibrary": "UI",
+      "sourceIndex": 423,
+      "logicalSize": [
+        611,
+        10
+      ],
+      "sourceOffset": [
+        0,
+        0
+      ],
+      "pngSha256": "cf2cad90505f7ff53e76f49a7d844a3d9d9d4c27c8418e673640a8c1e8583be9",
+      "identification": "paired-source-art-candidate",
+      "captureId": "01-overview",
+      "alphaVerified": false
+    },
+    {
+      "role": "hud-command-shell",
+      "sourceLibrary": "UI",
+      "sourceIndex": 140,
+      "logicalSize": [
+        225,
+        175
+      ],
+      "sourceOffset": [
+        -112,
+        -87
+      ],
+      "pngSha256": "a22ce21539d63f2b050fe7c026abc0f2789376efa0fd56d2dfafb3e7fc9fbfd0",
+      "identification": "explicit-adaptation-of-native-wheel-not-unique-screenshot-identification",
+      "captureId": "01-overview",
+      "alphaVerified": false
+    },
+    {
+      "role": "npc-shop",
+      "sourceLibrary": "UI",
+      "sourceIndex": 511,
+      "logicalSize": [
+        344,
+        438
+      ],
+      "sourceOffset": [
+        0,
+        0
+      ],
+      "pngSha256": "f574ddf094e5f1a0b4d78ccd31da1f9e9b3402ec6be8f9fb9b025358239c85d1",
+      "identification": "existing-screenshot-local-match",
+      "captureId": "05-npc-dialog-shop-inventory",
+      "alphaVerified": false
+    },
+    {
+      "role": "character-companion",
+      "sourceLibrary": "UI",
+      "sourceIndex": 130,
+      "logicalSize": [
+        296,
+        436
+      ],
+      "sourceOffset": [
+        0,
+        0
+      ],
+      "pngSha256": "5d012ff49a7e1347c5f9cef68bdc22da00d5cc0f1f0c85f5cdae256cf326710f",
+      "identification": "read-only-native-library-review",
+      "captureId": "character-companion",
+      "alphaVerified": false
+    },
+    {
+      "role": "character-companion-button",
+      "sourceLibrary": "UI",
+      "sourceIndex": 3304,
+      "logicalSize": [
+        57,
+        24
+      ],
+      "sourceOffset": [
+        -28,
+        -12
+      ],
+      "pngSha256": "c141eb9f14701fcdf4f0c75959492b9322db55d4f939eb90636c06299e61fdfe",
+      "identification": "read-only-native-library-review",
+      "captureId": "character-companion",
+      "alphaVerified": false
+    }
+  ],
+  "unresolved": [
+    "HUD command shell: UI[140] vs UI[1270] requires composition decision.",
+    "Chat background, input and scroll frame require separate mapping.",
+    "Alpha, fill pivots, button states, hitboxes and final layout are not accepted by this reference selection."
+  ],
+  "note": "Only selected supported records are converted. Unselected records are not represented as successfully decoded.",
+  "baselineNote": "Current source files differ from the earlier runtime baseline. Every selected PNG must still match the earlier screenshot-matched PNG SHA256."
+}

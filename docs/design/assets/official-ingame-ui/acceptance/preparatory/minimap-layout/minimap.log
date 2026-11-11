@@ -1,0 +1,2 @@
+Minimap GPU viewport: 206040 pixel comparisons passed across 2 placements and 3 map states; native Draw path, opaque frame, original image, black backdrop and ancestor clipping. Synthetic artwork only.
+Minimap layout: 538 checks passed; native viewport/markers/pan/close, live coordinates, geometry, map-subscriber transitions, rollback and disposal. No real map loading, packets or final-art/game acceptance.

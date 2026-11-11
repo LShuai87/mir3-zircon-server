@@ -1,0 +1,9 @@
+System.Exception: Skinned title must remain inside the declared title rectangle: {X=-297,Y=1,Width=742,Height=19}
+   在 OfficialUiMiniMapLayoutTests.Check(Boolean value, String detail)
+   在 OfficialUiMiniMapLayoutTests.WindowTitles(TestScene root, MirLibrary library)
+   在 OfficialUiMiniMapLayoutTests.Main(String[] args)
+Exception: E:\workspace\mir3-zircon-server\tests\Run-GameUiMiniMapLayoutTests.ps1:32
+Line |
+  32 |  … ; if ($LASTEXITCODE -ne 0) { throw 'Minimap layout tests failed.' } }
+     |                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Minimap layout tests failed.

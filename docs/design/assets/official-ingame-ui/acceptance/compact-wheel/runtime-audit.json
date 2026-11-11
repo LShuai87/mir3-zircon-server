@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "checkedAtLocalDate": "2026-11-08",
+  "releaseAccepted": false,
+  "package": {
+    "path": "E:/workspace/mir3-ui-work/compact-wheel-20261108-v1/zl/OfficialV1.Zl",
+    "sha256": "b469289d105e2404361033c81869b610399d7610edee5143dd7e62d1803ccfa7",
+    "frameCount": 92,
+    "bytes": 457400,
+    "changedArtRoles": [
+      "hud-command-frame"
+    ],
+    "unchangedArtFrames": 91
+  },
+  "builds": [
+    {
+      "configuration": "debug",
+      "clientPath": "E:/workspace/Debug/Client/Zircon.exe",
+      "clientSha256": "65fd3fba2c70f671229aecd4f775215dc9a21eb25f1feee425afe902cb670e8f",
+      "releaseManifest": "release-debug.json",
+      "dependencyCount": 11,
+      "buildId": "gameui-d227aa7be139b0ba6d6c696f70ade037e81098316e069271ccb376fbff474cce"
+    },
+    {
+      "configuration": "release",
+      "clientPath": "E:/workspace/Release/Client/Zircon.exe",
+      "clientSha256": "c2db2d07fb6fddfc0a8623953be8e8135a3771bed1c8aad2c897ba51f6eeecbf",
+      "releaseManifest": "release-release.json",
+      "dependencyCount": 11,
+      "buildId": "gameui-ececdfea7a0a768f835c6122196ed59edeeafcef82c4414ae4976d3ced1e787b"
+    }
+  ],
+  "runtimeReady": false,
+  "legacyDefault": true,
+  "limitations": [
+    "Inspection manifests only; no production install performed.",
+    "Real login, server behavior, live IME, final visual acceptance and complete deployment/rollback remain pending."
+  ]
+}

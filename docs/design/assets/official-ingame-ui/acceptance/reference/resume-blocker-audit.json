@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-07T12:24:22.587Z",
+  "objective": "按上述方案开始实施",
+  "previousGoalTurnClassification": "no_progress",
+  "currentRuntime": {
+    "method": "@oai/sky list_apps/get_window/get_window_state",
+    "window": {
+      "app": "process:E:\\Program Files\\ShengquGames\\Mir3\\Mir3.dat",
+      "id": 41289804,
+      "title": "传奇3"
+    },
+    "observedState": "server_selection_with_connection_lost_dialog",
+    "observedText": "与服务器失去链接...",
+    "postLoginGameUiAvailable": false,
+    "newScreenshotSaved": false
+  },
+  "remainingTasks": [
+    "UI-05",
+    "UI-06",
+    "UI-07",
+    "UI-11",
+    "UI-12",
+    "UI-13",
+    "UI-14",
+    "UI-15",
+    "UI-16",
+    "UI-17",
+    "UI-18",
+    "UI-19",
+    "UI-20",
+    "UI-21",
+    "UI-22",
+    "UI-23",
+    "UI-24",
+    "UI-25",
+    "UI-26",
+    "UI-27",
+    "UI-28"
+  ],
+  "allRemainingTasksDependOnUI02": true,
+  "missingFinalInputs": [
+    "build/game-ui/asset-manifest.json",
+    "build/game-ui/layout-official-v1.json",
+    "Client/Models/GameUi/OfficialUiCatalog.cs"
+  ],
+  "currentInputGates": {
+    "G0-1": "not_closed",
+    "G0-2": "not_closed",
+    "G0-3": "not_closed",
+    "G0-4": "not_closed",
+    "G0-5": "not_closed"
+  },
+  "independentPreparations": "Conversion, reference packaging, controls, layout store, fill geometry, catalog fixture, character binding draft and layout coordinator exist; no additional independent production integration identified without frozen inputs.",
+  "completionProven": false,
+  "requiredUserAction": "恢复正式版连接并进入游戏主界面，保持窗口打开；无需升级或发送聊天。",
+  "noGameInputPerformed": true,
+  "noSourceCodeChangedThisTurn": true
+}

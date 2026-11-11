@@ -1,0 +1,45 @@
+{
+  "date": "2026-11-10",
+  "slotCount": 49,
+  "gridSize": [
+    7,
+    7
+  ],
+  "inventoryChecks": 8419,
+  "windowSetChecks": 284355,
+  "renderBackend": "SlimDX D3D9, real InventoryDialog, actual OfficialV1.Zl; offline, empty item cells",
+  "liveGameAcceptance": false,
+  "runtimeReady": false,
+  "buildPassed": true,
+  "previewValidationPassed": true,
+  "embeddedArtReproductionPassed": true,
+  "reproducedArt": [
+    "inventory-button",
+    "inventory-close",
+    "inventory-gold",
+    "inventory-weight"
+  ],
+  "artSource": "Pinned installed official UI.MIX/UI.MIZ, opened read-only",
+  "artProvenance": [
+    "build/game-ui/inventory-gold-source.json",
+    "build/game-ui/inventory-weight-source.json"
+  ],
+  "files": {
+    "client": {
+      "path": "E:\\workspace\\Debug\\Client\\Zircon.exe",
+      "sha256": "50acdaef4cf473f3b7dfc6005c337c824434c87c36b4a6a4947a65beb5e53b01"
+    },
+    "goldArt": {
+      "path": "E:\\workspace\\mir3-zircon-server\\Client\\Resources\\GameUi\\inventory-gold.png",
+      "sha256": "f0968a3b3978c403539fa62a36a356bc24ca28f3cad5772fd44198a4e83a88f8"
+    },
+    "weightArt": {
+      "path": "E:\\workspace\\mir3-zircon-server\\Client\\Resources\\GameUi\\inventory-weight.png",
+      "sha256": "642122bbd07d44a91bb99ccd0e6b120a7a8d7a4b5134fc3cea3c1fa5cce3084e"
+    },
+    "package": {
+      "path": "E:\\workspace\\Debug\\Client\\Data\\GameUI\\OfficialV1.Zl",
+      "sha256": "dd45cbf51d976a69d28269ee0d27a985def1ee1693cab2b509b74ae347a880a4"
+    }
+  }
+}

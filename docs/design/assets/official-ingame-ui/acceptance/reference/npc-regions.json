@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "coordinateSpace": "original screenshot pixels; origin top-left; bounds use x,y,width,height",
+  "precision": "manual visual estimates for locating reference regions only; not implementation coordinates or input hitboxes",
+  "captureId": "05-npc-dialog-shop-inventory",
+  "imageRelativePath": "captures/05-npc-dialog-shop-inventory.jpg",
+  "regions": [
+    {
+      "id": "npc-dialog",
+      "bounds": {
+        "x": 2,
+        "y": 28,
+        "width": 417,
+        "height": 195
+      },
+      "appearance": "金色纹饰矩形外框、深棕黑底、右上红色关闭按钮",
+      "children": [
+        {
+          "id": "body",
+          "bounds": {
+            "x": 26,
+            "y": 77,
+            "width": 370,
+            "height": 15
+          },
+          "appearance": "白色正文"
+        },
+        {
+          "id": "shop-option",
+          "bounds": {
+            "x": 26,
+            "y": 94,
+            "width": 65,
+            "height": 15
+          },
+          "appearance": "黄色带下划线文字选项"
+        },
+        {
+          "id": "cancel-option",
+          "bounds": {
+            "x": 26,
+            "y": 122,
+            "width": 45,
+            "height": 15
+          },
+          "appearance": "黄色带下划线取消选项"
+        }
+      ]
+    },
+    {
+      "id": "npc-shop",
+      "bounds": {
+        "x": 3,
+        "y": 222,
+        "width": 338,
+        "height": 429
+      },
+      "appearance": "金色纹饰外框、深色列表背景、右侧滚动条、独立右上关闭按钮",
+      "visibleProductLayout": {
+        "columns": 2,
+        "visibleRows": 4,
+        "note": "仅描述本图可见商品排列，不规定项目列表容量"
+      },
+      "children": [
+        {
+          "id": "products",
+          "bounds": {
+            "x": 23,
+            "y": 272,
+            "width": 280,
+            "height": 215
+          },
+          "appearance": "商品图标左置，名称与价格右置"
+        },
+        {
+          "id": "repair",
+          "bounds": {
+            "x": 22,
+            "y": 616,
+            "width": 66,
+            "height": 23
+          },
+          "appearance": "金边深底文本按钮"
+        },
+        {
+          "id": "buy",
+          "bounds": {
+            "x": 163,
+            "y": 616,
+            "width": 67,
+            "height": 23
+          },
+          "appearance": "金边深底文本按钮"
+        }
+      ]
+    },
+    {
+      "id": "inventory",
+      "bounds": {
+        "x": 426,
+        "y": 117,
+        "width": 274,
+        "height": 485
+      },
+      "appearance": "独立浮动窗口，与NPC上下两卡组合并排；正式版48格仅作视觉参考，项目保留49格"
+    }
+  ],
+  "layering": [
+    "NPC主卡与商品窗独立关闭，截图仅证明分别存在关闭控件，不证明关闭联动行为。",
+    "对话位于商品窗上方；包裹位于右侧，无主要内容重叠。",
+    "黑色与棕色像素的透明度无法仅从单张截图可靠推断；UI-05需对源素材与实绘验证。"
+  ],
+  "unresolved": [
+    "未采集悬停/按下/禁用态。",
+    "未采集数量/确认弹框。",
+    "未验证真实交互与发包。"
+  ]
+}

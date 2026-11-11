@@ -1,0 +1,369 @@
+{
+  "description": "Original four-state channel/scroll controls and UI[115] nine-slice border. Black interior is rendered by the client; no full chat background asset was found in the decoded inventory.",
+  "atlasSha256": "6c940da9a8b2296c4a302978481819ab59ce9285e9a0f6642930248ae1ef5025",
+  "sources": [
+    {
+      "library": "UI",
+      "index": 210,
+      "sha256": "428d2a1584b74128bc298620bb4c997fea3a924b7a477dc5f00ece11a8e4fa2b",
+      "rectangle": [
+        0,
+        0,
+        31,
+        24
+      ]
+    },
+    {
+      "library": "UI",
+      "index": 211,
+      "sha256": "8043e5a1c0a00350b54014187dde684940b11acc501890d63778b20367e786ca",
+      "rectangle": [
+        0,
+        24,
+        31,
+        24
+      ]
+    },
+    {
+      "library": "UI",
+      "index": 212,
+      "sha256": "620c2f9cfd4e653a5d26e3f49cb127c36868c1aff8ae6b65bd711661fe9962e7",
+      "rectangle": [
+        0,
+        48,
+        31,
+        24
+      ]
+    },
+    {
+      "library": "UI",
+      "index": 213,
+      "sha256": "09bbd5b167993839b9a9b21f684355da1cb06457bc4e612432e307108f03e79f",
+      "rectangle": [
+        0,
+        72,
+        31,
+        24
+      ]
+    },
+    {
+      "library": "UI",
+      "index": 220,
+      "sha256": "378f901cf4ea81d5501b0fb597d7b9c772bd29b2950e666726c9f5bb372d89bb",
+      "rectangle": [
+        0,
+        96,
+        31,
+        24
+      ]
+    },
+    {
+      "library": "UI",
+      "index": 221,
+      "sha256": "b323d6486d682544840b660167ce38b0f178c3e002825e9349e34fa1f9be1571",
+      "rectangle": [
+        0,
+        120,
+        31,
+        24
+      ]
+    },
+    {
+      "library": "UI",
+      "index": 222,
+      "sha256": "ccee88e1f00e593180d08da1ded26962db821a42ec554898d4ea9468c1ba5b0f",
+      "rectangle": [
+        0,
+        144,
+        31,
+        24
+      ]
+    },
+    {
+      "library": "UI",
+      "index": 223,
+      "sha256": "2f3add5932bf138d78a6f899c17adf7c4b0e34a1e6e1e0c6fe83da4a11490f0f",
+      "rectangle": [
+        0,
+        168,
+        31,
+        24
+      ]
+    },
+    {
+      "library": "UI",
+      "index": 200,
+      "sha256": "4335c3a1de2e9ca9f84832a210ddd785ec12487e53cc2054f3a3a911b1d3fb84",
+      "rectangle": [
+        0,
+        192,
+        31,
+        24
+      ]
+    },
+    {
+      "library": "UI",
+      "index": 201,
+      "sha256": "321e4db56bdf556de8b7356bf0a93427c8ba96069a9f886cfb6321c346e03f73",
+      "rectangle": [
+        0,
+        216,
+        31,
+        24
+      ]
+    },
+    {
+      "library": "UI",
+      "index": 202,
+      "sha256": "0e538a20f8584d4875b934cf27688937b945c5dbe91a8d3d32fcea1dd6bc6ecf",
+      "rectangle": [
+        0,
+        240,
+        31,
+        24
+      ]
+    },
+    {
+      "library": "UI",
+      "index": 203,
+      "sha256": "7142eaabdc2561d5e9d4f4018e5a6b5a32b7d602b3c700eb4b47e33281df6ba7",
+      "rectangle": [
+        0,
+        264,
+        31,
+        24
+      ]
+    },
+    {
+      "library": "UI",
+      "index": 240,
+      "sha256": "eacee10ab1771bffc843d76cdc5143cd4b18c33615075a43b7a2ca249bc98f0a",
+      "rectangle": [
+        0,
+        288,
+        31,
+        24
+      ]
+    },
+    {
+      "library": "UI",
+      "index": 241,
+      "sha256": "867e65f04968f3dc889dff6c9cffb8acfc4390623f387c3a7cb40b9ccfa2b428",
+      "rectangle": [
+        0,
+        312,
+        31,
+        24
+      ]
+    },
+    {
+      "library": "UI",
+      "index": 242,
+      "sha256": "699f1010ec9bf2a1ae619552fec465e386a9d10e41aaca55263629d8ba698565",
+      "rectangle": [
+        0,
+        336,
+        31,
+        24
+      ]
+    },
+    {
+      "library": "UI",
+      "index": 243,
+      "sha256": "a7c92089ae6f7acab32b1927b67c6b3b60b17b8ee98d652b25d8927ab1c77062",
+      "rectangle": [
+        0,
+        360,
+        31,
+        24
+      ]
+    },
+    {
+      "library": "UI",
+      "index": 230,
+      "sha256": "02da1e28c5881907b87f23d290a9329b5dba0237f5444e71865a1657d28496ad",
+      "rectangle": [
+        0,
+        384,
+        31,
+        24
+      ]
+    },
+    {
+      "library": "UI",
+      "index": 231,
+      "sha256": "8aa8a93dea2867592469a7e3897d80af1a6be655642bbca7ca76532d77cf8e0b",
+      "rectangle": [
+        0,
+        408,
+        31,
+        24
+      ]
+    },
+    {
+      "library": "UI",
+      "index": 232,
+      "sha256": "84a18b9007ca46abe7677bfbcbf42fdc5cdfe621ab0a56811fc5390a2247475d",
+      "rectangle": [
+        0,
+        432,
+        31,
+        24
+      ]
+    },
+    {
+      "library": "UI",
+      "index": 233,
+      "sha256": "c6e72637dc4f419f7e46937818869866cb6d639ece88b03c29da106c70c33c2c",
+      "rectangle": [
+        0,
+        456,
+        31,
+        24
+      ]
+    },
+    {
+      "library": "UI",
+      "index": 70,
+      "sha256": "36a1135a151be3429c66154fd9fc1de460ec0c4bdce9b49e8bc5af090231c82c",
+      "rectangle": [
+        0,
+        480,
+        18,
+        18
+      ]
+    },
+    {
+      "library": "UI",
+      "index": 71,
+      "sha256": "52dfb5e831dd095acdeb80373621171b01cddaee3c37aa6960e051b430da624b",
+      "rectangle": [
+        0,
+        504,
+        18,
+        18
+      ]
+    },
+    {
+      "library": "UI",
+      "index": 72,
+      "sha256": "cc2fbdb20daee0b901990b39a338b1a4494a73896ace13b6b205911fb8f4d157",
+      "rectangle": [
+        0,
+        528,
+        18,
+        18
+      ]
+    },
+    {
+      "library": "UI",
+      "index": 73,
+      "sha256": "5b7457d723b2a74fac6e435ec960a846ba408238997b416843d571dac529303e",
+      "rectangle": [
+        0,
+        552,
+        18,
+        18
+      ]
+    },
+    {
+      "library": "UI",
+      "index": 74,
+      "sha256": "8706388ba3311c1447e79cb704cfc845fe692eb907a04b8f6318cb67553681f4",
+      "rectangle": [
+        0,
+        576,
+        18,
+        18
+      ]
+    },
+    {
+      "library": "UI",
+      "index": 75,
+      "sha256": "060af76a12cf991ee695c1d68c4dd33d06746ff287181b31f3ad0cf10a14c8bd",
+      "rectangle": [
+        0,
+        600,
+        18,
+        18
+      ]
+    },
+    {
+      "library": "UI",
+      "index": 76,
+      "sha256": "ceadd61bed05d3ede0e323fa2dedc79a6dda8f10d35225f84d61d0e8292ea6ae",
+      "rectangle": [
+        0,
+        624,
+        18,
+        18
+      ]
+    },
+    {
+      "library": "UI",
+      "index": 77,
+      "sha256": "699372178d8d14cfa9c106146a21dbbb3a24495326b84d163d6aab57dd23da46",
+      "rectangle": [
+        0,
+        648,
+        18,
+        18
+      ]
+    },
+    {
+      "library": "UI",
+      "index": 50,
+      "sha256": "aa1adb7711c3faed9e012d98aa7aa5d5f558af754e6390c2d0e75c5c80819fc9",
+      "rectangle": [
+        0,
+        672,
+        18,
+        12
+      ]
+    },
+    {
+      "library": "UI",
+      "index": 51,
+      "sha256": "969c27a2f268466107d5e57946ee3952cbfba42ffcff61d9b6199b96053ea28e",
+      "rectangle": [
+        0,
+        696,
+        18,
+        12
+      ]
+    },
+    {
+      "library": "UI",
+      "index": 52,
+      "sha256": "7affafd0a08176c62d68588e4ffa8639c0e86c202c9cd9bd74a189498951830b",
+      "rectangle": [
+        0,
+        720,
+        18,
+        12
+      ]
+    },
+    {
+      "library": "UI",
+      "index": 53,
+      "sha256": "e97e30f52f3daa7507025f34e95c0aca405a64d8224f1a38e81b0938276f1c9c",
+      "rectangle": [
+        0,
+        744,
+        18,
+        12
+      ]
+    },
+    {
+      "library": "UI",
+      "index": 115,
+      "sha256": "a4abf55d1bbf007f6727f6d9f75fd2bd21b1f5c9176b3db6d98ca9dbc643d6a4",
+      "rectangle": [
+        0,
+        768,
+        134,
+        14
+      ]
+    }
+  ]
+}

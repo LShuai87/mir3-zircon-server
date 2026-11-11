@@ -1,0 +1,2 @@
+tests\game-ui\OfficialUiNpcRefineTests.cs(33,33): error CS1503: 参数 1: 无法从“Client.Controls.DXItemCell”转换为“Client.Controls.DXItemGrid”
+tests\game-ui\OfficialUiNpcRefineTests.cs(69,29): error CS1503: 参数 1: 无法从“Client.Controls.DXItemCell”转换为“Client.Controls.DXItemGrid”

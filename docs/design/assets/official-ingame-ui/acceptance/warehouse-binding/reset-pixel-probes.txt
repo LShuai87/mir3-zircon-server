@@ -1,0 +1,2 @@
+name|x|y|width|height|identicalPixels
+warehouse candidate|8|8|508|480|243840

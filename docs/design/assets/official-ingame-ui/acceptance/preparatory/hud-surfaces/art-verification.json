@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "kind": "official-ui-hud-surfaces-verification",
+  "releaseAccepted": false,
+  "deterministicArtFiles": 119,
+  "deterministicPackageFiles": 2,
+  "unchangedPriorFrames": 84,
+  "frames": 87,
+  "transparentInteriorPixelsChecked": 115528,
+  "surfaces": [
+    {
+      "role": "chat-history-frame",
+      "owner": "chat",
+      "size": [
+        574,
+        106
+      ],
+      "transparentInteriorPixelsChecked": 59488,
+      "pngSha256": "93acd55c74de189fe6e9f6d61123dc0d40f7cbfeb4d44ca0a64e6632471128a0"
+    },
+    {
+      "role": "chat-input-frame",
+      "owner": "chatInput",
+      "size": [
+        574,
+        22
+      ],
+      "transparentInteriorPixelsChecked": 11440,
+      "pngSha256": "60f8004d6459e653b2dc24318b85a36a5938d00de8557a6e1b9c77a7a1f73965"
+    },
+    {
+      "role": "hud-command-frame",
+      "owner": "commands",
+      "size": [
+        225,
+        202
+      ],
+      "transparentInteriorPixelsChecked": 44600,
+      "pngSha256": "13dc26ab04f2e7f208ba792e70502622100f9c8d039f28fd8e8b0f1e8590952a"
+    }
+  ],
+  "zlSha256": "fb97489bb3a2d2edb52e7b0c2f6fb67b98c9183eff6eb69c25e5fd610cdcc2d4"
+}

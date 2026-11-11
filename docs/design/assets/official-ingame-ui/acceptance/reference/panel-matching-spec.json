@@ -1,0 +1,590 @@
+{
+  "schemaVersion": 1,
+  "inventorySha256": "fb4c3c90a9e48d76451b45fee625a848588b1c0f52353e58ffdb16a4a1444f71",
+  "sampleStep": 3,
+  "borderPixels": 8,
+  "topPixels": 30,
+  "minSourceMaxChannel": 28,
+  "excludeCloseWidth": 34,
+  "excludeCloseHeight": 36,
+  "matches": [
+    {
+      "role": "character",
+      "captureId": "02-character",
+      "library": "UI",
+      "indices": [
+        2765,
+        100,
+        1530,
+        1720,
+        1830
+      ],
+      "xRange": [
+        1,
+        24
+      ],
+      "yRange": [
+        66,
+        91
+      ]
+    },
+    {
+      "role": "character",
+      "captureId": "03-character-inventory",
+      "library": "UI",
+      "indices": [
+        2765
+      ],
+      "xRange": [
+        7,
+        16
+      ],
+      "yRange": [
+        72,
+        81
+      ]
+    },
+    {
+      "role": "character",
+      "captureId": "04-equipment-tooltip",
+      "library": "UI",
+      "indices": [
+        2765
+      ],
+      "xRange": [
+        7,
+        16
+      ],
+      "yRange": [
+        72,
+        81
+      ]
+    },
+    {
+      "role": "inventory",
+      "captureId": "03-character-inventory",
+      "library": "UI",
+      "indices": [
+        120,
+        122,
+        125
+      ],
+      "xRange": [
+        734,
+        745
+      ],
+      "yRange": [
+        100,
+        112
+      ]
+    },
+    {
+      "role": "inventory",
+      "captureId": "04-equipment-tooltip",
+      "library": "UI",
+      "indices": [
+        120
+      ],
+      "xRange": [
+        734,
+        745
+      ],
+      "yRange": [
+        100,
+        112
+      ]
+    },
+    {
+      "role": "inventory",
+      "captureId": "05-npc-dialog-shop-inventory",
+      "library": "UI",
+      "indices": [
+        120,
+        122,
+        125
+      ],
+      "xRange": [
+        421,
+        435
+      ],
+      "yRange": [
+        103,
+        120
+      ]
+    },
+    {
+      "role": "npc-dialog",
+      "captureId": "05-npc-dialog-shop-inventory",
+      "library": "UI",
+      "indices": [
+        510,
+        517,
+        518
+      ],
+      "xRange": [
+        0,
+        8
+      ],
+      "yRange": [
+        26,
+        34
+      ]
+    },
+    {
+      "role": "npc-shop",
+      "captureId": "05-npc-dialog-shop-inventory",
+      "library": "UI",
+      "indices": [
+        511
+      ],
+      "xRange": [
+        0,
+        12
+      ],
+      "yRange": [
+        210,
+        231
+      ]
+    },
+    {
+      "role": "hud-orb-shell",
+      "captureId": "06-chat-chinese-input",
+      "library": "UI",
+      "indices": [
+        141
+      ],
+      "xRange": [
+        0,
+        8
+      ],
+      "yRange": [
+        574,
+        594
+      ],
+      "sampling": "artwork",
+      "minSourceMaxChannel": 40,
+      "excludeRects": [
+        [
+          186,
+          0,
+          39,
+          202
+        ],
+        [
+          34,
+          72,
+          120,
+          115
+        ]
+      ]
+    },
+    {
+      "role": "quickbar-base",
+      "captureId": "06-chat-chinese-input",
+      "library": "UI",
+      "indices": [
+        430
+      ],
+      "xRange": [
+        250,
+        285
+      ],
+      "yRange": [
+        605,
+        619
+      ],
+      "sampling": "artwork",
+      "minSourceMaxChannel": 40
+    },
+    {
+      "role": "minimap-frame",
+      "captureId": "06-chat-chinese-input",
+      "library": "UI",
+      "indices": [
+        342
+      ],
+      "xRange": [
+        854,
+        868
+      ],
+      "yRange": [
+        26,
+        33
+      ],
+      "excludeRects": [
+        [
+          7,
+          14,
+          152,
+          169
+        ],
+        [
+          27,
+          1,
+          110,
+          13
+        ]
+      ]
+    },
+    {
+      "role": "chat-speaker-icon",
+      "captureId": "06-chat-chinese-input",
+      "library": "UI",
+      "indices": [
+        210
+      ],
+      "xRange": [
+        188,
+        197
+      ],
+      "yRange": [
+        653,
+        768
+      ],
+      "sampling": "artwork",
+      "minSourceMaxChannel": 40
+    },
+    {
+      "role": "chat-two-person-icon",
+      "captureId": "06-chat-chinese-input",
+      "library": "UI",
+      "indices": [
+        220
+      ],
+      "xRange": [
+        188,
+        197
+      ],
+      "yRange": [
+        653,
+        768
+      ],
+      "sampling": "artwork",
+      "minSourceMaxChannel": 40
+    },
+    {
+      "role": "chat-person-icon",
+      "captureId": "06-chat-chinese-input",
+      "library": "UI",
+      "indices": [
+        200
+      ],
+      "xRange": [
+        188,
+        197
+      ],
+      "yRange": [
+        653,
+        768
+      ],
+      "sampling": "artwork",
+      "minSourceMaxChannel": 40
+    },
+    {
+      "role": "chat-group-icon",
+      "captureId": "06-chat-chinese-input",
+      "library": "UI",
+      "indices": [
+        240
+      ],
+      "xRange": [
+        188,
+        197
+      ],
+      "yRange": [
+        653,
+        768
+      ],
+      "sampling": "artwork",
+      "minSourceMaxChannel": 40
+    },
+    {
+      "role": "chat-flag-icon",
+      "captureId": "06-chat-chinese-input",
+      "library": "UI",
+      "indices": [
+        230
+      ],
+      "xRange": [
+        188,
+        197
+      ],
+      "yRange": [
+        653,
+        768
+      ],
+      "sampling": "artwork",
+      "minSourceMaxChannel": 40
+    },
+    {
+      "role": "minimap-collapse-button",
+      "captureId": "06-chat-chinese-input",
+      "library": "UI",
+      "indices": [
+        290
+      ],
+      "xRange": [
+        1000,
+        1006
+      ],
+      "yRange": [
+        27,
+        33
+      ],
+      "sampling": "artwork",
+      "minSourceMaxChannel": 40
+    },
+    {
+      "role": "minimap-zoom-in-button",
+      "captureId": "06-chat-chinese-input",
+      "library": "UI",
+      "indices": [
+        320
+      ],
+      "xRange": [
+        1000,
+        1006
+      ],
+      "yRange": [
+        200,
+        208
+      ],
+      "sampling": "artwork",
+      "minSourceMaxChannel": 40
+    },
+    {
+      "role": "minimap-mountain-button",
+      "captureId": "06-chat-chinese-input",
+      "library": "UI",
+      "indices": [
+        330
+      ],
+      "xRange": [
+        860,
+        868
+      ],
+      "yRange": [
+        200,
+        208
+      ],
+      "sampling": "artwork",
+      "minSourceMaxChannel": 40
+    },
+    {
+      "role": "hud-shop-icon",
+      "captureId": "06-chat-chinese-input",
+      "library": "UI",
+      "indices": [
+        280
+      ],
+      "xRange": [
+        977,
+        986
+      ],
+      "yRange": [
+        612,
+        624
+      ],
+      "sampling": "artwork",
+      "minSourceMaxChannel": 40
+    },
+    {
+      "role": "hud-command-center",
+      "captureId": "06-chat-chinese-input",
+      "library": "UI",
+      "indices": [
+        380
+      ],
+      "xRange": [
+        882,
+        891
+      ],
+      "yRange": [
+        682,
+        691
+      ],
+      "sampling": "artwork",
+      "minSourceMaxChannel": 40
+    },
+    {
+      "role": "hud-command-top",
+      "captureId": "06-chat-chinese-input",
+      "library": "UI",
+      "indices": [
+        350
+      ],
+      "xRange": [
+        885,
+        894
+      ],
+      "yRange": [
+        656,
+        666
+      ],
+      "sampling": "artwork",
+      "minSourceMaxChannel": 40
+    },
+    {
+      "role": "hud-command-upper-left",
+      "captureId": "06-chat-chinese-input",
+      "library": "UI",
+      "indices": [
+        360
+      ],
+      "xRange": [
+        850,
+        862
+      ],
+      "yRange": [
+        663,
+        674
+      ],
+      "sampling": "artwork",
+      "minSourceMaxChannel": 40
+    },
+    {
+      "role": "hud-command-upper-right",
+      "captureId": "06-chat-chinese-input",
+      "library": "UI",
+      "indices": [
+        370
+      ],
+      "xRange": [
+        925,
+        937
+      ],
+      "yRange": [
+        661,
+        672
+      ],
+      "sampling": "artwork",
+      "minSourceMaxChannel": 40
+    },
+    {
+      "role": "hud-command-lower-left",
+      "captureId": "06-chat-chinese-input",
+      "library": "UI",
+      "indices": [
+        390
+      ],
+      "xRange": [
+        851,
+        863
+      ],
+      "yRange": [
+        713,
+        724
+      ],
+      "sampling": "artwork",
+      "minSourceMaxChannel": 40
+    },
+    {
+      "role": "hud-command-lower-right",
+      "captureId": "06-chat-chinese-input",
+      "library": "UI",
+      "indices": [
+        400
+      ],
+      "xRange": [
+        926,
+        938
+      ],
+      "yRange": [
+        712,
+        723
+      ],
+      "sampling": "artwork",
+      "minSourceMaxChannel": 40
+    },
+    {
+      "role": "hud-command-bottom",
+      "captureId": "06-chat-chinese-input",
+      "library": "UI",
+      "indices": [
+        410
+      ],
+      "xRange": [
+        885,
+        894
+      ],
+      "yRange": [
+        738,
+        750
+      ],
+      "sampling": "artwork",
+      "minSourceMaxChannel": 40
+    },
+    {
+      "role": "hud-horse-icon",
+      "captureId": "06-chat-chinese-input",
+      "library": "UI",
+      "indices": [
+        180
+      ],
+      "xRange": [
+        799,
+        812
+      ],
+      "yRange": [
+        675,
+        687
+      ],
+      "sampling": "artwork",
+      "minSourceMaxChannel": 40
+    },
+    {
+      "role": "hud-handshake-icon",
+      "captureId": "06-chat-chinese-input",
+      "library": "UI",
+      "indices": [
+        190
+      ],
+      "xRange": [
+        799,
+        812
+      ],
+      "yRange": [
+        699,
+        711
+      ],
+      "sampling": "artwork",
+      "minSourceMaxChannel": 40
+    },
+    {
+      "role": "hud-exit-icon",
+      "captureId": "06-chat-chinese-input",
+      "library": "UI",
+      "indices": [
+        160
+      ],
+      "xRange": [
+        980,
+        1004
+      ],
+      "yRange": [
+        748,
+        771
+      ],
+      "sampling": "artwork",
+      "minSourceMaxChannel": 40
+    },
+    {
+      "role": "bottom-segmented-frame",
+      "captureId": "06-chat-chinese-input",
+      "library": "UI",
+      "indices": [
+        422
+      ],
+      "xRange": [
+        184,
+        193
+      ],
+      "yRange": [
+        779,
+        786
+      ],
+      "sampling": "artwork",
+      "minSourceMaxChannel": 40
+    }
+  ]
+}

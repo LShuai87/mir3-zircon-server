@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "result": "pass",
+  "kind": "static-character-binding-draft-validation",
+  "toolSha256": "af6c6b66572e6f3ed885d87bb30f56211b94d4fcc95db14301fb6074dea8a437",
+  "manifestSha256": "e8dda15d91424a6b13a4258fa9f2c26de0858a73437d7e5def313d728e706b2e",
+  "equipmentCount": 16,
+  "mainSlots": [
+    0,
+    1,
+    2,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "extraSlots": [
+    3,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "statBindingCount": 57,
+  "statCountsByTab": {
+    "character": 30,
+    "status": 13,
+    "hermit": 14
+  },
+  "existingControlCount": 8,
+  "additionalBindingCount": 4,
+  "retainedPacketActionCount": 9,
+  "productionBindingAllowed": false,
+  "gameAcceptanceExecuted": false,
+  "layoutFrozen": false
+}

@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "checkedAtLocalDate": "2026-11-08",
+  "releaseAccepted": false,
+  "planSha256": "f8c0a002b3821fabb54993792c354c4eff35eec51f9cfdc418535017c13069e9",
+  "package": {
+    "path": "E:/workspace/mir3-ui-work/command-shell-20261108-v1/zl/OfficialV1.Zl",
+    "length": 457400,
+    "sha256": "29c580d3ccf3eef9196fa098e0f45ff7239b314085f520eaa81f2fa6562eb756"
+  },
+  "builds": [
+    {
+      "configuration": "debug",
+      "buildId": "gameui-62d08f9568e10ece6f869c989d080261ba5ae27b81ad66141c40f2c4dce76fc9",
+      "client": {
+        "path": "Zircon.exe",
+        "length": 1323008,
+        "sha256": "0696c5d38d45d2d279a9b6e9d8f60019f214ad9dc8e4d0117846b0e57512bc79"
+      },
+      "catalogContractSha256": "3f255681803d6772b3012cd3a01981334010b899d00fff2cef6759c31a60885e",
+      "dependenciesChecked": 11,
+      "runtimeReady": false
+    },
+    {
+      "configuration": "release",
+      "buildId": "gameui-01d63b94f77537bd01453b207a90df24bb139592da2d9f59fcc77ab6ad10e61d",
+      "client": {
+        "path": "Zircon.exe",
+        "length": 1221632,
+        "sha256": "2438474fbc4eafaf48ba4d87470ac5736670be9fb3c7e75244ed7af821694005"
+      },
+      "catalogContractSha256": "3f255681803d6772b3012cd3a01981334010b899d00fff2cef6759c31a60885e",
+      "dependenciesChecked": 11,
+      "runtimeReady": false
+    }
+  ]
+}

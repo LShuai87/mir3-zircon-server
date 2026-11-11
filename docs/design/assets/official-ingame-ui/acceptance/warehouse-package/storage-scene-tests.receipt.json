@@ -1,0 +1,16 @@
+{
+  "command": [
+    "pwsh",
+    "-NoProfile",
+    "-File",
+    "tests/Run-GameUiStorageSceneTests.ps1",
+    "-CandidatePath",
+    "E:/workspace/mir3-ui-work/warehouse-assets-20261108-v1/zl-v2/OfficialV1.Zl",
+    "-PackagePath",
+    "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+    "-EvidenceDirectory",
+    "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/storage-scene-evidence"
+  ],
+  "exitCode": 0,
+  "log": "E:/workspace/mir3-zircon-server/docs/design/assets/official-ingame-ui/acceptance/warehouse-package/storage-scene-tests.log"
+}

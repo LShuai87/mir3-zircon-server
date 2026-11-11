@@ -1,0 +1,139 @@
+{
+  "schemaVersion": 1,
+  "kind": "character-preview-reference-alignment",
+  "previousPivot": [
+    124,
+    220
+  ],
+  "pivot": [
+    88,
+    234
+  ],
+  "viewport": [
+    54,
+    96,
+    134,
+    198
+  ],
+  "moveFromPrevious": [
+    -36,
+    14
+  ],
+  "moveFromOriginal": [
+    -36,
+    -46
+  ],
+  "referenceImage": "C:/Users/shuai/AppData/Local/Temp/codex-clipboard-9be90f4a-a927-42b1-8069-5c8e58cd34d6.png",
+  "referenceImageSha256": "277149fcb46501605109be5762073150ee54b9cbc8e5e81fab17f7b5252f8856",
+  "sourcePath": "E:\\workspace\\Debug\\Client\\Data\\ProgUse.Zl",
+  "sourceSha256": "3aa4cbb9bacf61d2c182451d88156160f07e49bb8cf5f29727c2caaf0763a53f",
+  "naturalBodyFrames": [
+    {
+      "frame": 0,
+      "gender": "male",
+      "imageSize": [
+        84,
+        178
+      ],
+      "offset": [
+        -22,
+        -123
+      ],
+      "bounds": [
+        66,
+        111,
+        84,
+        178
+      ],
+      "bottomClearance": 5
+    },
+    {
+      "frame": 1,
+      "gender": "female",
+      "imageSize": [
+        80,
+        182
+      ],
+      "offset": [
+        -22,
+        -122
+      ],
+      "bounds": [
+        66,
+        112,
+        80,
+        182
+      ],
+      "bottomClearance": 0
+    }
+  ],
+  "equipmentCount": 16,
+  "equipmentPage": "character",
+  "overlappingEquipmentCells": 0,
+  "scope": "Native body frames fit in full without scaling; actual screenshot and offline checks recorded after rendering.",
+  "result": "pass",
+  "checks": [
+    {
+      "name": "Debug build",
+      "result": "pass",
+      "logPath": "E:\\workspace\\mir3-ui-work\\character-align-20261110\\build-debug-final.log",
+      "logSha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c",
+      "summary": "  Client -> E:\\workspace\\Debug\\Client\\Zircon.exe"
+    },
+    {
+      "name": "Release build",
+      "result": "pass",
+      "logPath": "E:\\workspace\\mir3-ui-work\\character-align-20261110\\build-release-final.log",
+      "logSha256": "c9e24428be1e56c8408af17aacfea3413de3953bfe426d10eb768782f5005ebc",
+      "summary": "  Client -> E:\\workspace\\Release\\Client\\Zircon.exe"
+    },
+    {
+      "name": "Character composition",
+      "result": "pass",
+      "logPath": "E:\\workspace\\mir3-ui-work\\character-align-20261110\\test-composition-final.log",
+      "logSha256": "72655d0740928e92af5f3112f6bb682426ac6cc9584e52012616cc9d40db0426",
+      "summary": "Character composition: 1923 checks passed; compiled JSON geometry, 300 clip cases, live HUD mirrors, six placements, eight cycles, cross-layout rejection and teardown. No rendering/network/game acceptance."
+    },
+    {
+      "name": "Offline full scene",
+      "result": "pass",
+      "logPath": "E:\\workspace\\mir3-ui-work\\character-align-20261110\\test-fullscene-final.log",
+      "logSha256": "9c9bfc1c543fd6489f098b825ea26befab2302c840cf522d400a669e1f184008",
+      "summary": "Full-scene offline integration: 4386 checks passed; 27 real constructors, 47 presented frames, 9 explicit Device.Reset calls; 690512 identical panel pixels. Real legacy resources, synthetic user/map, three character pages, six resolutions, scene reentry, cell/chat/native-input retention. Synthetic loopback covers native login/scene dispatch; no real account login, server behavior, hardware device-loss, live IME or final visual acceptance."
+    }
+  ],
+  "screenshot": {
+    "path": "character-aligned-runtime.png",
+    "sourcePath": "E:\\workspace\\mir3-ui-work\\character-align-20261110\\fullscene-final\\official-refresh-CharacterTab.png",
+    "crop": [
+      8,
+      4,
+      412,
+      562
+    ],
+    "scope": "Actual offline rendering with synthetic user/world."
+  },
+  "runtime": [
+    {
+      "configuration": "Debug",
+      "clientDirectory": "E:\\workspace\\Debug\\Client",
+      "executableSha256": "9bdd3cca99ede2c8f05df16a469ef8a348b66d092c1758a3702fdf31f176f8e3",
+      "packageSha256": "639a5b6762f22dfc6cd837d2765ff0a558068ffa5c89f1b58194f66003baba5d",
+      "previousPackageSha256": "3c5fce4902b679dd2b86c5678048cd6c21e5170fa84211b346507aedaf2ce05f",
+      "backupFile": "E:\\workspace\\mir3-ui-work\\character-native2765-20261110\\runtime-backup-20261110-170253\\Debug\\OfficialV1.Zl",
+      "previewLauncher": "E:\\workspace\\Debug\\Client\\Start-OfficialUiPreview.cmd"
+    },
+    {
+      "configuration": "Release",
+      "clientDirectory": "E:\\workspace\\Release\\Client",
+      "executableSha256": "6398c6f253a5cfe9573a36a0179ca1346c2859ee16c54e80df7095bba3dde702",
+      "packageSha256": "639a5b6762f22dfc6cd837d2765ff0a558068ffa5c89f1b58194f66003baba5d",
+      "previousPackageSha256": "dd45cbf51d976a69d28269ee0d27a985def1ee1693cab2b509b74ae347a880a4",
+      "backupFile": "E:\\workspace\\mir3-ui-work\\character-native2765-20261110\\runtime-backup-20261110-170253\\Release\\OfficialV1.Zl",
+      "previewLauncher": "E:\\workspace\\Release\\Client\\Start-OfficialUiPreview.cmd"
+    }
+  ],
+  "limitations": [
+    "Offline rendering with synthetic account/world; no real server acceptance."
+  ]
+}

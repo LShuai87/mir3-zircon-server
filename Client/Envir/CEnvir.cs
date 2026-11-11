@@ -29,6 +29,10 @@ namespace Client.Envir
     public static class CEnvir
     {
         public static TargetForm Target;
+        internal static GameUiStartupSession GameUiSession { get; set; }
+        internal static bool GameUiOperationsBlocked => GameUiSession?.RequiresRestart == true;
+        internal static bool HandleGameUiFailure(Exception error)
+            => GameUiSession?.HandleSceneFailure(DXControl.ActiveScene as GameScene, error) == true;
         public static Random Random = new Random();
 
         private static DateTime _FPSTime;
@@ -149,7 +153,10 @@ namespace Client.Envir
         private static void UpdateGame()
         {
             Now = Time.Now;
-            DXControl.ActiveScene?.OnMouseMove(new MouseEventArgs(MouseButtons.None, 0, MouseLocation.X, MouseLocation.Y, 0));
+            if (GameUiOperationsBlocked) { Connection?.Process(); return; }
+            try { DXControl.ActiveScene?.OnMouseMove(new MouseEventArgs(MouseButtons.None, 0, MouseLocation.X, MouseLocation.Y, 0)); }
+            catch (Exception error) { if (!HandleGameUiFailure(error)) throw; }
+            if (GameUiOperationsBlocked) { Connection?.Process(); return; }
 
             if (Time.Now >= _FPSTime)
             {
@@ -162,9 +169,17 @@ namespace Client.Envir
             }
 
             Connection?.Process();
-          //  DXControl.ActiveScene?.Process();
-            DXControl.ActiveScene?.Process();
+            if (GameUiOperationsBlocked) return;
+            try { DXControl.ActiveScene?.Process(); }
+            catch (Exception error) { if (!HandleGameUiFailure(error)) throw; }
+            if (GameUiOperationsBlocked) return;
 
+            try { UpdateGameLabels(); }
+            catch (Exception error) { if (!HandleGameUiFailure(error)) throw; }
+        }
+
+        private static void UpdateGameLabels()
+        {
             string debugText = $"FPS: {FPSCount}";
 
             if (DXControl.MouseControl != null)
@@ -243,6 +258,7 @@ namespace Client.Envir
         }
         private static void RenderGame()
         {
+            if (GameUiOperationsBlocked) return;
             try
             {
                 if (Target.ClientSize.Width == 0 || Target.ClientSize.Height == 0)
@@ -270,13 +286,20 @@ namespace Client.Envir
                 DXManager.Device.Present();
                 FPSCounter++;
             }
-            catch (Direct3D9Exception)
+            catch (Direct3D9Exception error)
             {
-                DXManager.DeviceLost = true;
+                // Device loss follows the existing reset path. Other D3D faults in
+                // an installed Official scene require the same stop/restart policy.
+                if (error.ResultCode.Code == ResultCode.DeviceLost.Code || error.ResultCode.Code == ResultCode.DeviceNotReset.Code)
+                    DXManager.DeviceLost = true;
+                else if (HandleGameUiFailure(error))
+                    DXManager.AttemptRecovery();
+                else
+                    DXManager.DeviceLost = true;
             }
             catch (Exception ex)
             {
-                SaveError(ex.ToString());
+                if (!HandleGameUiFailure(ex)) SaveError(ex.ToString());
 
                 DXManager.AttemptRecovery();
             }
@@ -384,6 +407,8 @@ namespace Client.Envir
         }
         public static void Enqueue(Packet packet)
         {
+            // Direct connection heartbeat/response processing remains available.
+            if (GameUiOperationsBlocked) return;
             Connection?.Enqueue(packet);
         }
 

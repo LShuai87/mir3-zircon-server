@@ -1,0 +1,7 @@
+{
+  "Client/Scenes/GameScene.cs": "0e5d459554122c26de60fd1759bcb947f856a3024bb5e05555a4ab09b0b1e3c1",
+  "Client/Envir/GameUiItemTooltipLayout.cs": "2ec73ef44da1d00f0e82238ba4d9403af6b9c67ce1ed22102826350c772ce5f9",
+  "tests/game-ui/OfficialUiItemTooltipTests.cs": "f08447ff77886d7dfcc67e1fb01161e648ec7f874d60379696c46d4a30775828",
+  "build/game-ui/README.md": "6e80731cc6c927bac0130f32fe790f247d129a8ebba030d79ad4f561cfc029cd",
+  "build/game-ui/character-bindings.json": "44ca2531bd4237aef514a0876a72d64d740c08ce2a5c07757c5065e3345a6632"
+}

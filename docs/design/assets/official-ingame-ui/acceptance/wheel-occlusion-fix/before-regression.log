@@ -1,0 +1,14 @@
+CPU button masks: 17256 checks; 0 source PNG alpha comparisons; no GPU uploads.
+Button mask checks including real controls: 111539; hover, pressed, disabled, hide/restore, PassThrough, invalid rebind and Legacy reset.
+System.Exception: Command artwork is occluded at {X=141,Y=75}: QuestButton,InventoryButton
+   在 OfficialUiWindowSetTests.Check(Boolean value, String detail)
+   在 OfficialUiWindowSetTests.CompactCommandOwnership(MainPanel hud)
+   在 OfficialUiWindowSetTests.Exercise(TestScene root, GameScene game, GameUiVerifiedPackage package, String directory)
+   在 OfficialUiWindowSetTests.Main(String[] args)
+WindowSet tests failed.
+At E:\workspace\mir3-zircon-server\tests\Run-GameUiWindowSetTests.ps1:40 char:36
++         if ($LASTEXITCODE -ne 0) { throw 'WindowSet tests failed.' }
++                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (WindowSet tests failed.:String) [], RuntimeException
+    + FullyQualifiedErrorId : WindowSet tests failed.
+ 

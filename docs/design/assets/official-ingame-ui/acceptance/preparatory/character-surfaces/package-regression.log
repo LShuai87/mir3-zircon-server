@@ -1,0 +1,21 @@
+test_corrupt_png_rejected (test_prepared_ui.PreparedTests.test_corrupt_png_rejected) ... ok
+test_deterministic_package (test_prepared_ui.PreparedTests.test_deterministic_package) ... ok
+test_duplicate_role_rejected (test_prepared_ui.PreparedTests.test_duplicate_role_rejected) ... ok
+test_existing_output_untouched (test_prepared_ui.PreparedTests.test_existing_output_untouched) ... ok
+test_fractional_alpha_rejected_even_with_matching_hashes (test_prepared_ui.PreparedTests.test_fractional_alpha_rejected_even_with_matching_hashes) ... ok
+test_invalid_grid_rejected (test_prepared_ui.PreparedTests.test_invalid_grid_rejected) ... ok
+test_missing_button_state_rejected (test_prepared_ui.PreparedTests.test_missing_button_state_rejected) ... ok
+test_noncontiguous_index_rejected (test_prepared_ui.PreparedTests.test_noncontiguous_index_rejected) ... ok
+test_nonzero_offset_rejected (test_prepared_ui.PreparedTests.test_nonzero_offset_rejected) ... ok
+test_rgba_hash_rejected (test_prepared_ui.PreparedTests.test_rgba_hash_rejected) ... ok
+test_runtime_acceptance_flags_are_not_implicit_or_true (test_prepared_ui.PreparedTests.test_runtime_acceptance_flags_are_not_implicit_or_true) ... ok
+test_unbound_state_rejected (test_prepared_ui.PreparedTests.test_unbound_state_rejected) ... ok
+test_unsafe_path_rejected (test_prepared_ui.PreparedTests.test_unsafe_path_rejected) ... ok
+test_unsupported_mode_rejected (test_prepared_ui.PreparedTests.test_unsupported_mode_rejected) ... ok
+test_wrong_kind_rejected (test_prepared_ui.PreparedTests.test_wrong_kind_rejected) ... ok
+test_wrong_texture_size_rejected (test_prepared_ui.PreparedTests.test_wrong_texture_size_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 5.091s
+
+OK

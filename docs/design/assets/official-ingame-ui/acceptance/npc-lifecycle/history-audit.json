@@ -1,0 +1,10 @@
+{
+  "reportCount": 62,
+  "commandReceipts": 581,
+  "evidenceDigests": 3491,
+  "sourceTransitions": 228,
+  "currentSources": 209,
+  "mismatches": [],
+  "releaseAccepted": false,
+  "note": "Receipt covers the history at execution time; later attachment of this receipt is checked by a subsequent stdout audit."
+}

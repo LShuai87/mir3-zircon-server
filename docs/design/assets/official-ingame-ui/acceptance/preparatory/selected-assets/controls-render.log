@@ -1,0 +1,4 @@
+Official UI window skin: 60 checks passed.
+Official UI SlimDX render: 14 checks passed; output=E:\workspace\mir3-ui-work\selected-reference-20261107-v1-render
+Official UI GPU reference payloads: 27 textures uploaded and read back byte-identically.
+Official UI controls/reader: 5756 checks passed.

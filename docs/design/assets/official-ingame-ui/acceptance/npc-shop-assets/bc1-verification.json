@@ -1,0 +1,478 @@
+{
+  "kind": "official-ui-bc1-verification",
+  "releaseAccepted": false,
+  "frames": 93,
+  "logicalAlphaPixelsChecked": 1044977,
+  "transparentPaddingPixelsChecked": 16383,
+  "opaqueBlackInteriorPixelsPreserved": 4262,
+  "buttonStateSets": 19,
+  "sourceManifestSha256": "4e345e6a12e5c90836952e98c22f1e2db0aa76d99de1739237f0885e18c17264",
+  "zlSha256": "50ec53a62c5b564c3e1bf736c5be01e6d86ebbd2cd08994578aafeb7ce031ddb",
+  "rgbCompressionError": [
+    {
+      "role": "character",
+      "meanAbsoluteRgbError": 1.0771,
+      "maxChannelError": 41
+    },
+    {
+      "role": "inventory",
+      "meanAbsoluteRgbError": 1.7252,
+      "maxChannelError": 47
+    },
+    {
+      "role": "hud-orb-shell",
+      "meanAbsoluteRgbError": 3.7677,
+      "maxChannelError": 77
+    },
+    {
+      "role": "quickbar-base",
+      "meanAbsoluteRgbError": 2.3519,
+      "maxChannelError": 65
+    },
+    {
+      "role": "minimap-frame",
+      "meanAbsoluteRgbError": 2.5557,
+      "maxChannelError": 42
+    },
+    {
+      "role": "chat-speaker-icon",
+      "meanAbsoluteRgbError": 7.3189,
+      "maxChannelError": 88
+    },
+    {
+      "role": "chat-speaker-icon-hover",
+      "meanAbsoluteRgbError": 8.5991,
+      "maxChannelError": 94
+    },
+    {
+      "role": "chat-speaker-icon-pressed",
+      "meanAbsoluteRgbError": 5.7495,
+      "maxChannelError": 65
+    },
+    {
+      "role": "chat-speaker-icon-disabled",
+      "meanAbsoluteRgbError": 3.0617,
+      "maxChannelError": 16
+    },
+    {
+      "role": "chat-two-person-icon",
+      "meanAbsoluteRgbError": 8.6261,
+      "maxChannelError": 69
+    },
+    {
+      "role": "chat-two-person-icon-hover",
+      "meanAbsoluteRgbError": 10.159,
+      "maxChannelError": 80
+    },
+    {
+      "role": "chat-two-person-icon-pressed",
+      "meanAbsoluteRgbError": 6.6541,
+      "maxChannelError": 51
+    },
+    {
+      "role": "chat-two-person-icon-disabled",
+      "meanAbsoluteRgbError": 3.7608,
+      "maxChannelError": 17
+    },
+    {
+      "role": "chat-person-icon",
+      "meanAbsoluteRgbError": 8.1779,
+      "maxChannelError": 69
+    },
+    {
+      "role": "chat-person-icon-hover",
+      "meanAbsoluteRgbError": 9.5311,
+      "maxChannelError": 80
+    },
+    {
+      "role": "chat-person-icon-pressed",
+      "meanAbsoluteRgbError": 6.3905,
+      "maxChannelError": 51
+    },
+    {
+      "role": "chat-person-icon-disabled",
+      "meanAbsoluteRgbError": 3.3842,
+      "maxChannelError": 17
+    },
+    {
+      "role": "chat-group-icon",
+      "meanAbsoluteRgbError": 8.0595,
+      "maxChannelError": 50
+    },
+    {
+      "role": "chat-group-icon-hover",
+      "meanAbsoluteRgbError": 9.5167,
+      "maxChannelError": 56
+    },
+    {
+      "role": "chat-group-icon-pressed",
+      "meanAbsoluteRgbError": 6.2982,
+      "maxChannelError": 40
+    },
+    {
+      "role": "chat-group-icon-disabled",
+      "meanAbsoluteRgbError": 3.509,
+      "maxChannelError": 14
+    },
+    {
+      "role": "chat-flag-icon",
+      "meanAbsoluteRgbError": 7.9104,
+      "maxChannelError": 90
+    },
+    {
+      "role": "chat-flag-icon-hover",
+      "meanAbsoluteRgbError": 9.2644,
+      "maxChannelError": 110
+    },
+    {
+      "role": "chat-flag-icon-pressed",
+      "meanAbsoluteRgbError": 6.1559,
+      "maxChannelError": 65
+    },
+    {
+      "role": "chat-flag-icon-disabled",
+      "meanAbsoluteRgbError": 3.4482,
+      "maxChannelError": 14
+    },
+    {
+      "role": "minimap-collapse-button",
+      "meanAbsoluteRgbError": 2.0886,
+      "maxChannelError": 29
+    },
+    {
+      "role": "minimap-collapse-button-hover",
+      "meanAbsoluteRgbError": 3.0728,
+      "maxChannelError": 32
+    },
+    {
+      "role": "minimap-collapse-button-pressed",
+      "meanAbsoluteRgbError": 2.1361,
+      "maxChannelError": 23
+    },
+    {
+      "role": "minimap-collapse-button-disabled",
+      "meanAbsoluteRgbError": 1.7816,
+      "maxChannelError": 14
+    },
+    {
+      "role": "minimap-zoom-in-button",
+      "meanAbsoluteRgbError": 4.5549,
+      "maxChannelError": 33
+    },
+    {
+      "role": "minimap-zoom-in-button-hover",
+      "meanAbsoluteRgbError": 5.5833,
+      "maxChannelError": 37
+    },
+    {
+      "role": "minimap-zoom-in-button-pressed",
+      "meanAbsoluteRgbError": 3.7922,
+      "maxChannelError": 25
+    },
+    {
+      "role": "minimap-zoom-in-button-disabled",
+      "meanAbsoluteRgbError": 2.9072,
+      "maxChannelError": 14
+    },
+    {
+      "role": "minimap-mountain-button",
+      "meanAbsoluteRgbError": 4.0042,
+      "maxChannelError": 33
+    },
+    {
+      "role": "minimap-mountain-button-hover",
+      "meanAbsoluteRgbError": 5.2025,
+      "maxChannelError": 37
+    },
+    {
+      "role": "minimap-mountain-button-pressed",
+      "meanAbsoluteRgbError": 3.5496,
+      "maxChannelError": 23
+    },
+    {
+      "role": "minimap-mountain-button-disabled",
+      "meanAbsoluteRgbError": 2.6392,
+      "maxChannelError": 14
+    },
+    {
+      "role": "hud-shop-icon",
+      "meanAbsoluteRgbError": 7.2689,
+      "maxChannelError": 71
+    },
+    {
+      "role": "hud-shop-icon-hover",
+      "meanAbsoluteRgbError": 8.4103,
+      "maxChannelError": 85
+    },
+    {
+      "role": "hud-shop-icon-pressed",
+      "meanAbsoluteRgbError": 5.8769,
+      "maxChannelError": 53
+    },
+    {
+      "role": "hud-shop-icon-disabled",
+      "meanAbsoluteRgbError": 3.6231,
+      "maxChannelError": 21
+    },
+    {
+      "role": "hud-command-center",
+      "meanAbsoluteRgbError": 5.7392,
+      "maxChannelError": 69
+    },
+    {
+      "role": "hud-command-center-hover",
+      "meanAbsoluteRgbError": 6.6659,
+      "maxChannelError": 88
+    },
+    {
+      "role": "hud-command-center-pressed",
+      "meanAbsoluteRgbError": 4.6083,
+      "maxChannelError": 54
+    },
+    {
+      "role": "hud-command-center-disabled",
+      "meanAbsoluteRgbError": 3.3183,
+      "maxChannelError": 21
+    },
+    {
+      "role": "hud-command-top",
+      "meanAbsoluteRgbError": 6.3789,
+      "maxChannelError": 74
+    },
+    {
+      "role": "hud-command-top-hover",
+      "meanAbsoluteRgbError": 7.5303,
+      "maxChannelError": 90
+    },
+    {
+      "role": "hud-command-top-pressed",
+      "meanAbsoluteRgbError": 5.1351,
+      "maxChannelError": 60
+    },
+    {
+      "role": "hud-command-top-disabled",
+      "meanAbsoluteRgbError": 3.7508,
+      "maxChannelError": 25
+    },
+    {
+      "role": "hud-command-upper-left",
+      "meanAbsoluteRgbError": 5.6925,
+      "maxChannelError": 82
+    },
+    {
+      "role": "hud-command-upper-left-hover",
+      "meanAbsoluteRgbError": 6.7941,
+      "maxChannelError": 97
+    },
+    {
+      "role": "hud-command-upper-left-pressed",
+      "meanAbsoluteRgbError": 4.6782,
+      "maxChannelError": 61
+    },
+    {
+      "role": "hud-command-upper-left-disabled",
+      "meanAbsoluteRgbError": 3.6881,
+      "maxChannelError": 22
+    },
+    {
+      "role": "hud-command-upper-right",
+      "meanAbsoluteRgbError": 5.3005,
+      "maxChannelError": 50
+    },
+    {
+      "role": "hud-command-upper-right-hover",
+      "meanAbsoluteRgbError": 6.2773,
+      "maxChannelError": 70
+    },
+    {
+      "role": "hud-command-upper-right-pressed",
+      "meanAbsoluteRgbError": 4.3404,
+      "maxChannelError": 41
+    },
+    {
+      "role": "hud-command-upper-right-disabled",
+      "meanAbsoluteRgbError": 3.5152,
+      "maxChannelError": 24
+    },
+    {
+      "role": "hud-command-lower-left",
+      "meanAbsoluteRgbError": 5.4798,
+      "maxChannelError": 63
+    },
+    {
+      "role": "hud-command-lower-left-hover",
+      "meanAbsoluteRgbError": 6.5664,
+      "maxChannelError": 65
+    },
+    {
+      "role": "hud-command-lower-left-pressed",
+      "meanAbsoluteRgbError": 4.4809,
+      "maxChannelError": 43
+    },
+    {
+      "role": "hud-command-lower-left-disabled",
+      "meanAbsoluteRgbError": 3.5509,
+      "maxChannelError": 24
+    },
+    {
+      "role": "hud-command-lower-right",
+      "meanAbsoluteRgbError": 5.6855,
+      "maxChannelError": 74
+    },
+    {
+      "role": "hud-command-lower-right-hover",
+      "meanAbsoluteRgbError": 6.7491,
+      "maxChannelError": 89
+    },
+    {
+      "role": "hud-command-lower-right-pressed",
+      "meanAbsoluteRgbError": 4.6339,
+      "maxChannelError": 56
+    },
+    {
+      "role": "hud-command-lower-right-disabled",
+      "meanAbsoluteRgbError": 3.5728,
+      "maxChannelError": 21
+    },
+    {
+      "role": "hud-command-bottom",
+      "meanAbsoluteRgbError": 5.5621,
+      "maxChannelError": 65
+    },
+    {
+      "role": "hud-command-bottom-hover",
+      "meanAbsoluteRgbError": 6.6493,
+      "maxChannelError": 73
+    },
+    {
+      "role": "hud-command-bottom-pressed",
+      "meanAbsoluteRgbError": 4.5905,
+      "maxChannelError": 51
+    },
+    {
+      "role": "hud-command-bottom-disabled",
+      "meanAbsoluteRgbError": 3.3683,
+      "maxChannelError": 17
+    },
+    {
+      "role": "hud-horse-icon",
+      "meanAbsoluteRgbError": 8.2856,
+      "maxChannelError": 69
+    },
+    {
+      "role": "hud-horse-icon-hover",
+      "meanAbsoluteRgbError": 9.8401,
+      "maxChannelError": 84
+    },
+    {
+      "role": "hud-horse-icon-pressed",
+      "meanAbsoluteRgbError": 6.441,
+      "maxChannelError": 53
+    },
+    {
+      "role": "hud-horse-icon-disabled",
+      "meanAbsoluteRgbError": 3.3212,
+      "maxChannelError": 16
+    },
+    {
+      "role": "hud-handshake-icon",
+      "meanAbsoluteRgbError": 8.2991,
+      "maxChannelError": 55
+    },
+    {
+      "role": "hud-handshake-icon-hover",
+      "meanAbsoluteRgbError": 9.5752,
+      "maxChannelError": 66
+    },
+    {
+      "role": "hud-handshake-icon-pressed",
+      "meanAbsoluteRgbError": 6.4221,
+      "maxChannelError": 43
+    },
+    {
+      "role": "hud-handshake-icon-disabled",
+      "meanAbsoluteRgbError": 3.4586,
+      "maxChannelError": 14
+    },
+    {
+      "role": "hud-exit-icon",
+      "meanAbsoluteRgbError": 3.5833,
+      "maxChannelError": 33
+    },
+    {
+      "role": "hud-exit-icon-hover",
+      "meanAbsoluteRgbError": 4.6313,
+      "maxChannelError": 32
+    },
+    {
+      "role": "hud-exit-icon-pressed",
+      "meanAbsoluteRgbError": 3.1431,
+      "maxChannelError": 27
+    },
+    {
+      "role": "hud-exit-icon-disabled",
+      "meanAbsoluteRgbError": 2.4966,
+      "maxChannelError": 13
+    },
+    {
+      "role": "bottom-segmented-frame",
+      "meanAbsoluteRgbError": 1.3589,
+      "maxChannelError": 49
+    },
+    {
+      "role": "hud-hp-fill",
+      "meanAbsoluteRgbError": 1.7156,
+      "maxChannelError": 33
+    },
+    {
+      "role": "hud-mp-fill",
+      "meanAbsoluteRgbError": 1.9024,
+      "maxChannelError": 58
+    },
+    {
+      "role": "bottom-segmented-fill",
+      "meanAbsoluteRgbError": 2.6124,
+      "maxChannelError": 26
+    },
+    {
+      "role": "character-main-background",
+      "meanAbsoluteRgbError": 0.9909,
+      "maxChannelError": 25
+    },
+    {
+      "role": "hud-command-frame",
+      "meanAbsoluteRgbError": 3.4166,
+      "maxChannelError": 65
+    },
+    {
+      "role": "npc-shop",
+      "meanAbsoluteRgbError": 1.1037,
+      "maxChannelError": 47
+    },
+    {
+      "role": "chat-history-frame",
+      "meanAbsoluteRgbError": 0.0334,
+      "maxChannelError": 1
+    },
+    {
+      "role": "chat-input-frame",
+      "meanAbsoluteRgbError": 0.1616,
+      "maxChannelError": 16
+    },
+    {
+      "role": "equipment-cell-frame",
+      "meanAbsoluteRgbError": 1.6708,
+      "maxChannelError": 16
+    },
+    {
+      "role": "hud-experience-track",
+      "meanAbsoluteRgbError": 4.6295,
+      "maxChannelError": 49
+    },
+    {
+      "role": "hud-experience-fill",
+      "meanAbsoluteRgbError": 0.6315,
+      "maxChannelError": 16
+    }
+  ]
+}

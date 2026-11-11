@@ -1,0 +1,2 @@
+tests\game-ui\OfficialUiWindowSetTests.cs(223,27): error CS0103: 当前上下文中不存在名称“hud”
+tests\game-ui\OfficialUiWindowSetTests.cs(223,54): error CS0103: 当前上下文中不存在名称“hud”

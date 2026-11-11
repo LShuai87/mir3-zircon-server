@@ -1,0 +1,9 @@
+{
+  "command": [
+    "C:\\Users\\shuai\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "build/game-ui/Assemble-CharacterBindings.py",
+    "--check"
+  ],
+  "exitCode": 0,
+  "log": "E:/workspace/mir3-zircon-server/docs/design/assets/official-ingame-ui/acceptance/warehouse-window-set/bindings-check.log"
+}

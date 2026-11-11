@@ -1,0 +1,351 @@
+{
+  "schemaVersion": 1,
+  "kind": "official-ingame-ui-normal-alpha-button-hitmask",
+  "checkedAtLocalDate": "2026-11-08",
+  "releaseAccepted": false,
+  "referenceResolution": [
+    1024,
+    768
+  ],
+  "sourceChanges": [
+    {
+      "path": "Client/Client.csproj",
+      "beforeSha256": "2e7d6e3ee852ca293b35d4e2c64a46e5e558dff1565f71136f73254c6995cca0",
+      "afterSha256": "0c2d6b407c62ad02f43eb11a1eeae23567d14bba0e3a441465d945c0775b7124"
+    },
+    {
+      "path": "Client/Controls/DXButton.cs",
+      "beforeSha256": "77476c7f1bfa9babeff53d792953f06b4df05b2f08c0ca11163bb244577bd61d",
+      "afterSha256": "19b34ff8728932712778d1d1f8a431615fa4039ce43f570ed389357d1c5cd3aa"
+    },
+    {
+      "path": "Client/Models/MirLibrary.cs",
+      "beforeSha256": "aaf76ebf99818c22b63a6fb55cdb3147b1e63956388297e53f378fcbf03b23aa",
+      "afterSha256": "46025307c85e77a1b5a826cff9d0f4a86d3ba6eb172a06eb7cf2b5efc79f1dbc"
+    },
+    {
+      "path": "Client/Envir/GameUiOfficialV1WindowSet.cs",
+      "beforeSha256": "fdb7739afcd983bc6351b6348319baaa24a1a3f1229f7fc060febee4c004abde",
+      "afterSha256": "f555a572dc937f0349d45b95c7214fa0e4607805e1eb530a7d00b98a46ebe598"
+    },
+    {
+      "path": "Client/Scenes/Views/MainPanel.GameUi.cs",
+      "beforeSha256": "b5dd21f1831bb7a96ca08aff570cb1708887ede4e46c3c21534d1481b6267b14",
+      "afterSha256": "9ff120d6ad9844fe44ca75eab269a678d560a254300b9890fe6f9178600ac634"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiWindowSetTests.cs",
+      "beforeSha256": "c1bde1e3d77b96e04552ee87bfb0240cccaa7a34262408636eac86b4a4e9d2b2",
+      "afterSha256": "734b7e6dd7a1d6b8f6ad60a97506e87f0e6a96c9518e17328ac9c0e7f226b26a"
+    },
+    {
+      "path": "tests/Run-GameUiWindowSetTests.ps1",
+      "beforeSha256": "f60132e18012376bae6228bcabfafb89a5e1032e57f50c8c0d85fa603089a8fa",
+      "afterSha256": "6171d5bdb5af8ccc842f333da6245e7e360f422fb5f80819e0e0befc9cbff341"
+    }
+  ],
+  "sourceHashes": [
+    {
+      "path": "Client/Client.csproj",
+      "sha256": "0c2d6b407c62ad02f43eb11a1eeae23567d14bba0e3a441465d945c0775b7124"
+    },
+    {
+      "path": "Client/Controls/DXButton.cs",
+      "sha256": "19b34ff8728932712778d1d1f8a431615fa4039ce43f570ed389357d1c5cd3aa"
+    },
+    {
+      "path": "Client/Models/MirLibrary.cs",
+      "sha256": "46025307c85e77a1b5a826cff9d0f4a86d3ba6eb172a06eb7cf2b5efc79f1dbc"
+    },
+    {
+      "path": "Client/Envir/GameUiOfficialV1WindowSet.cs",
+      "sha256": "f555a572dc937f0349d45b95c7214fa0e4607805e1eb530a7d00b98a46ebe598"
+    },
+    {
+      "path": "Client/Scenes/Views/MainPanel.GameUi.cs",
+      "sha256": "9ff120d6ad9844fe44ca75eab269a678d560a254300b9890fe6f9178600ac634"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiWindowSetTests.cs",
+      "sha256": "734b7e6dd7a1d6b8f6ad60a97506e87f0e6a96c9518e17328ac9c0e7f226b26a"
+    },
+    {
+      "path": "tests/Run-GameUiWindowSetTests.ps1",
+      "sha256": "6171d5bdb5af8ccc842f333da6245e7e360f422fb5f80819e0e0befc9cbff341"
+    },
+    {
+      "path": "Client/Envir/GameUiButtonHitMask.cs",
+      "sha256": "a755e9d452ce235def3cec159d5c808bae848e429d83e0c296a520a29ceba9d1"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiButtonHitMaskTests.cs",
+      "sha256": "39c5625db31db5ea4c71c0b38bc43e068d709f8e3eea3c602c748a65af3ad92f"
+    }
+  ],
+  "commands": [
+    {
+      "command": "MSBuild Client/Client.csproj /t:Build /p:Configuration=Debug /p:Platform=AnyCPU /nologo /v:minimal",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/button-hitmask/build-debug.log",
+      "logSha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "command": "MSBuild Client/Client.csproj /t:Build /p:Configuration=Release /p:Platform=AnyCPU /nologo /v:minimal",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/button-hitmask/build-release.log",
+      "logSha256": "c9e24428be1e56c8408af17aacfea3413de3953bfe426d10eb768782f5005ebc"
+    },
+    {
+      "command": "tests/Run-GameUiWindowSetTests.ps1 -PackagePath E:/workspace/mir3-ui-work/command-shell-20261108-v1/zl/OfficialV1.Zl -AlphaReferencePath E:/workspace/mir3-ui-work/command-shell-20261108-v1/art/Assets -EvidenceDirectory E:/workspace/mir3-ui-work/button-hitmask-20261108-v1/window-set-verified",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/button-hitmask/window-set.log",
+      "logSha256": "309cce91aa62111b9c1027b0328fd7d8115f1161016da7cb0a2c0fe5b886dbb5"
+    },
+    {
+      "command": "tests/Run-GameUiFullSceneTests.ps1 -PackagePath E:/workspace/mir3-ui-work/command-shell-20261108-v1/zl/OfficialV1.Zl -EvidenceDirectory E:/workspace/mir3-ui-work/button-hitmask-20261108-v1/scene",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/button-hitmask/full-scene.log",
+      "logSha256": "0d85d4de7905eb608acc989200b5dfcc19842b35b62586889490caf606d4a988"
+    },
+    {
+      "command": "tests/Run-GameUiTests.ps1",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/button-hitmask/foundations.log",
+      "logSha256": "0d1bb2712bbaed9eae2a73bf3cafee6b9aa6be7b3e14582e591906bf3bb37faf"
+    },
+    {
+      "command": "tests/Run-GameUiHudLayoutTests.ps1 -RenderPath E:/workspace/mir3-ui-work/button-hitmask-20261108-v1/hud-render",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/button-hitmask/hud.log",
+      "logSha256": "27c8500d9bf95cf81287b164d82e727cd1f7fd49027273a8cd9de955f6cb20a3"
+    },
+    {
+      "command": "tests/Run-GameUiPackagePreflightTests.ps1",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/button-hitmask/package-preflight.log",
+      "logSha256": "9ff6563b70a6999cbfdfdc7a39dd5ce86ce024413bbfe40650a8b969081930ea"
+    },
+    {
+      "command": "python -m unittest discover -s tests/game-ui -p test_*.py",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/button-hitmask/python.log",
+      "logSha256": "faae46f58b3dbbe299008641cb3b33667ad1a45560ffd49cc2f147bd46305c6d"
+    },
+    {
+      "command": "x86 WindowsPowerShell build/game-ui/New-GameUiReleaseManifest.ps1 -ClientDirectory E:/workspace/Debug/Client -ResourceRoot E:/workspace/mir3-ui-work/button-hitmask-20261108-v1/resources -OutputPath E:/workspace/mir3-ui-work/button-hitmask-20261108-v1/release-debug.json",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/button-hitmask/release-debug.log",
+      "logSha256": "6c50388e68098699e900caf0cd30e5085aa7d626d03f7973e0afe1f8e0f280bc"
+    },
+    {
+      "command": "x86 WindowsPowerShell build/game-ui/New-GameUiReleaseManifest.ps1 -ClientDirectory E:/workspace/Release/Client -ResourceRoot E:/workspace/mir3-ui-work/button-hitmask-20261108-v1/resources -OutputPath E:/workspace/mir3-ui-work/button-hitmask-20261108-v1/release-release.json",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/button-hitmask/release-release.log",
+      "logSha256": "2f2eb2b1c312bb46577479bf0d596c4bd436e7e90501773aebda1935c9f8f62e"
+    },
+    {
+      "command": "python E:/workspace/mir3-ui-work/button-hitmask-20261108-v1/make-study.py",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/button-hitmask/overlap-study.log",
+      "logSha256": "285d5d0b23da71f2c2862b9894102fd48ab6a1fc01ce79d3f7d20247dea67f19"
+    },
+    {
+      "command": "git -c core.whitespace=cr-at-eol diff --check",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/button-hitmask/whitespace.log",
+      "logSha256": "79d6e102d3342502fc80ca42def8ff97f6642ce33398d5219dc2f3e921c23f6f"
+    }
+  ],
+  "results": {
+    "cpuMaskChecks": 34084,
+    "sourcePngAlphaComparisons": 16820,
+    "maskAndRealControlChecks": 128367,
+    "windowSetChecks": 150644,
+    "commandRootCoordinatesAcrossSixResolutions": 272700,
+    "fullSceneChecks": 180,
+    "deviceResetCalls": 7,
+    "pythonTests": 141,
+    "packagePreflightChecks": 418,
+    "packageGpuPixelComparisons": 288,
+    "hudChecks": 803,
+    "hudSyntheticGpuPixelComparisons": 812688,
+    "sourcePackageUnchanged": true,
+    "compactWheelLayoutApplied": false
+  },
+  "limitations": [
+    "Candidate input capability only; wheel coordinates remain unchanged.",
+    "Five pairwise opaque source overlaps remain under approximate screenshot matching; edge ownership is not accepted.",
+    "Offline synthetic scene does not prove real login/server/IME/final visual acceptance.",
+    "Legacy remains default; RuntimeReady=false; G0 gates and task completion unchanged."
+  ],
+  "evidenceHashes": [
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/button-hitmask/README.md",
+      "sha256": "b73ce0204fbf6bcc1fcebe4e98b1036befd526d9f2501bdb3a7af55611dc9a90"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/button-hitmask/build-debug.log",
+      "sha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/button-hitmask/build-release.log",
+      "sha256": "c9e24428be1e56c8408af17aacfea3413de3953bfe426d10eb768782f5005ebc"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/button-hitmask/button-hitmask-cpu.txt",
+      "sha256": "2ca5575631441b197252c45dc86de3997cd0d8f6bc6fe6502ebf8c5f7e8b85b5"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/button-hitmask/current-button-masks.png",
+      "sha256": "7873151ce36f2ca151be38f4bb3ddedafcd160326e00ce4c6be101898fdd33ce"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/button-hitmask/foundations.log",
+      "sha256": "0d1bb2712bbaed9eae2a73bf3cafee6b9aa6be7b3e14582e591906bf3bb37faf"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/button-hitmask/full-scene.log",
+      "sha256": "0d85d4de7905eb608acc989200b5dfcc19842b35b62586889490caf606d4a988"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/button-hitmask/hud.log",
+      "sha256": "27c8500d9bf95cf81287b164d82e727cd1f7fd49027273a8cd9de955f6cb20a3"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/button-hitmask/make-study.py",
+      "sha256": "91141919b3ae9f8469511662966d31473d33978e09d178e3d72f4fb3d1d78cb4"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/button-hitmask/overlap-study.log",
+      "sha256": "285d5d0b23da71f2c2862b9894102fd48ab6a1fc01ce79d3f7d20247dea67f19"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/button-hitmask/package-preflight.log",
+      "sha256": "9ff6563b70a6999cbfdfdc7a39dd5ce86ce024413bbfe40650a8b969081930ea"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/button-hitmask/python.log",
+      "sha256": "faae46f58b3dbbe299008641cb3b33667ad1a45560ffd49cc2f147bd46305c6d"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/button-hitmask/reference-overlap-study.json",
+      "sha256": "4e53ce44a29dbf1cdcb48ea17f038e2fd347ca7bad0ba2670b7e6be0b0130a3c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/button-hitmask/release-debug.json",
+      "sha256": "b8e1008c31981219477c0d406bac0b65164f7f2db3868f3213e047e14e6b3e4d"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/button-hitmask/release-debug.log",
+      "sha256": "6c50388e68098699e900caf0cd30e5085aa7d626d03f7973e0afe1f8e0f280bc"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/button-hitmask/release-release.json",
+      "sha256": "96c9665f5ec0a8269d6b909a794cdb48fd1053a0af25f22daf1a3277993e6fed"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/button-hitmask/release-release.log",
+      "sha256": "2f2eb2b1c312bb46577479bf0d596c4bd436e7e90501773aebda1935c9f8f62e"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/button-hitmask/runtime-audit.json",
+      "sha256": "7224c3eea161ecb758e1b3039db79b8363da67974abee3e2e8392e129770fc98"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/button-hitmask/scene/legacy-hud.png",
+      "sha256": "a4baa304a5426cd071242025959b43b21a817620df350b453d486460f7ac08af"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/button-hitmask/scene/legacy-panels.png",
+      "sha256": "7539d2eff4ea7c7d6e59a24f471bf09be726baf5283d86ffadd258bad67a40c4"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/button-hitmask/scene/legacy-resources.txt",
+      "sha256": "47713d590a1b9214abdef7a0fc33d6c28a2b5a73a0cff9794375a5083020b498"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/button-hitmask/scene/official-CharacterTab.png",
+      "sha256": "e699103f79397ce6e8fa79f2cf26bd2c3fc72cfbf0094f00d6c0779099b8a0d1"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/button-hitmask/scene/official-HermitTab.png",
+      "sha256": "aa9c3878b1477cea21f3ccff6e852c6f4d903badf232c704ad202c3c87534ef9"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/button-hitmask/scene/official-StatsTab.png",
+      "sha256": "190f98a27d13a859d8d7e9b112262cc51c3ca9691b928ff5846768a5d181a581"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/button-hitmask/scene/official-extraEquipmentTab.png",
+      "sha256": "b40f986aa824cdb2d97e843b0b7e1a9a4b39e76db609b5e7e982652c7ba66477"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/button-hitmask/scene/official-hud.png",
+      "sha256": "193013a281eccf62e2c5944d85abfc13c3f2285fb6198b65f8d9073ea027d995"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/button-hitmask/scene/official-panels.png",
+      "sha256": "e699103f79397ce6e8fa79f2cf26bd2c3fc72cfbf0094f00d6c0779099b8a0d1"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/button-hitmask/scene/official-reentry-hud.png",
+      "sha256": "af126032f6ab0e7e671843642fe373b21160982c27549d5fc616f79bb67a465b"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/button-hitmask/scene/official-reentry-panels.png",
+      "sha256": "04d1c0343d6185ac3dc16d769cbc82496df795096e79b4ba6285c35dca2adf45"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/button-hitmask/scene/official-reset-1024x768.png",
+      "sha256": "4cc7e496a03bf8626e17fbe0008f15830b616c2d4be7a915a9541acb5b136329"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/button-hitmask/scene/official-reset-1280x800.png",
+      "sha256": "9d5f5c4630386bef95881e47f8997735c2c1ffbd211ea4c01d83eaad3fea5a51"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/button-hitmask/scene/official-reset-1366x768.png",
+      "sha256": "b572cae09ee9797eab690509f768f22db716e58081b134aeaebb005aa8eb7213"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/button-hitmask/scene/official-reset-1440x900.png",
+      "sha256": "6ee3c30740665159dc572cec5b179c040f748c451390cc50a3072807cc590f7a"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/button-hitmask/scene/official-reset-1600x900.png",
+      "sha256": "3aa85f1bc8eb3ec646617d619d318b722ebf12f2c2e603ad0322d6795513379b"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/button-hitmask/scene/official-reset-1920x1080.png",
+      "sha256": "a85b9f568cf3171bc6ad728e9b91c11442841a41f9c743ac9bfed1e3c2620193"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/button-hitmask/scene/reset-pixel-probes.txt",
+      "sha256": "2c236cd844574b74b6d502b13ffed99b5cb29783fc53ea00587ca1543a18ac67"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/button-hitmask/scene/tested-runtime.json",
+      "sha256": "ef57a585c567a75a9dbc43e9511c6cadedd4d463382f3c5d0502e8e733641c87"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/button-hitmask/whitespace.log",
+      "sha256": "79d6e102d3342502fc80ca42def8ff97f6642ce33398d5219dc2f3e921c23f6f"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/button-hitmask/window-set.log",
+      "sha256": "309cce91aa62111b9c1027b0328fd7d8115f1161016da7cb0a2c0fe5b886dbb5"
+    }
+  ]
+}

@@ -1,0 +1,438 @@
+{
+  "schemaVersion": 1,
+  "result": "pass",
+  "source": "E:\\workspace\\mir3-zircon-server\\docs\\design\\assets\\official-ingame-ui\\character-material-reselection-20261110\\raw\\UI\\2765.png",
+  "sourceSha256": "1f0ab01dbcf954fcfe4b26199ac1020f4884f3f0a3572ebaf0b09c4842631486",
+  "explanation": "36px controls inset by 1px inside native 38px frames; native upper rows use 49px pitch. All icon/hit rectangles match.",
+  "nativeFramesVerified": 15,
+  "supplementalWeaponFrames": 1,
+  "slots": [
+    {
+      "slot": "Weapon",
+      "slotId": 0,
+      "before": [
+        16,
+        98,
+        36,
+        36
+      ],
+      "after": [
+        15,
+        97,
+        36,
+        36
+      ],
+      "delta": [
+        -1,
+        -1
+      ],
+      "nativeFrame": null,
+      "pixelEdgeVerified": false
+    },
+    {
+      "slot": "Armour",
+      "slotId": 1,
+      "before": [
+        104,
+        340,
+        36,
+        36
+      ],
+      "after": [
+        103,
+        339,
+        36,
+        36
+      ],
+      "delta": [
+        -1,
+        -1
+      ],
+      "nativeFrame": [
+        102,
+        338,
+        38,
+        38
+      ],
+      "pixelEdgeVerified": true
+    },
+    {
+      "slot": "Helmet",
+      "slotId": 2,
+      "before": [
+        192,
+        148,
+        36,
+        36
+      ],
+      "after": [
+        191,
+        146,
+        36,
+        36
+      ],
+      "delta": [
+        -1,
+        -2
+      ],
+      "nativeFrame": [
+        190,
+        145,
+        38,
+        38
+      ],
+      "pixelEdgeVerified": true
+    },
+    {
+      "slot": "Torch",
+      "slotId": 3,
+      "before": [
+        60,
+        294,
+        36,
+        36
+      ],
+      "after": [
+        59,
+        293,
+        36,
+        36
+      ],
+      "delta": [
+        -1,
+        -1
+      ],
+      "nativeFrame": [
+        58,
+        292,
+        38,
+        38
+      ],
+      "pixelEdgeVerified": true
+    },
+    {
+      "slot": "Necklace",
+      "slotId": 4,
+      "before": [
+        192,
+        98,
+        36,
+        36
+      ],
+      "after": [
+        191,
+        97,
+        36,
+        36
+      ],
+      "delta": [
+        -1,
+        -1
+      ],
+      "nativeFrame": [
+        190,
+        96,
+        38,
+        38
+      ],
+      "pixelEdgeVerified": true
+    },
+    {
+      "slot": "BraceletL",
+      "slotId": 5,
+      "before": [
+        16,
+        198,
+        36,
+        36
+      ],
+      "after": [
+        15,
+        195,
+        36,
+        36
+      ],
+      "delta": [
+        -1,
+        -3
+      ],
+      "nativeFrame": [
+        14,
+        194,
+        38,
+        38
+      ],
+      "pixelEdgeVerified": true
+    },
+    {
+      "slot": "BraceletR",
+      "slotId": 6,
+      "before": [
+        192,
+        198,
+        36,
+        36
+      ],
+      "after": [
+        191,
+        195,
+        36,
+        36
+      ],
+      "delta": [
+        -1,
+        -3
+      ],
+      "nativeFrame": [
+        190,
+        194,
+        38,
+        38
+      ],
+      "pixelEdgeVerified": true
+    },
+    {
+      "slot": "RingL",
+      "slotId": 7,
+      "before": [
+        16,
+        248,
+        36,
+        36
+      ],
+      "after": [
+        15,
+        244,
+        36,
+        36
+      ],
+      "delta": [
+        -1,
+        -4
+      ],
+      "nativeFrame": [
+        14,
+        243,
+        38,
+        38
+      ],
+      "pixelEdgeVerified": true
+    },
+    {
+      "slot": "RingR",
+      "slotId": 8,
+      "before": [
+        192,
+        248,
+        36,
+        36
+      ],
+      "after": [
+        191,
+        244,
+        36,
+        36
+      ],
+      "delta": [
+        -1,
+        -4
+      ],
+      "nativeFrame": [
+        190,
+        243,
+        38,
+        38
+      ],
+      "pixelEdgeVerified": true
+    },
+    {
+      "slot": "Shoes",
+      "slotId": 9,
+      "before": [
+        16,
+        294,
+        36,
+        36
+      ],
+      "after": [
+        15,
+        293,
+        36,
+        36
+      ],
+      "delta": [
+        -1,
+        -1
+      ],
+      "nativeFrame": [
+        14,
+        292,
+        38,
+        38
+      ],
+      "pixelEdgeVerified": true
+    },
+    {
+      "slot": "Poison",
+      "slotId": 10,
+      "before": [
+        148,
+        294,
+        36,
+        36
+      ],
+      "after": [
+        147,
+        293,
+        36,
+        36
+      ],
+      "delta": [
+        -1,
+        -1
+      ],
+      "nativeFrame": [
+        146,
+        292,
+        38,
+        38
+      ],
+      "pixelEdgeVerified": true
+    },
+    {
+      "slot": "Amulet",
+      "slotId": 11,
+      "before": [
+        148,
+        340,
+        36,
+        36
+      ],
+      "after": [
+        147,
+        339,
+        36,
+        36
+      ],
+      "delta": [
+        -1,
+        -1
+      ],
+      "nativeFrame": [
+        146,
+        338,
+        38,
+        38
+      ],
+      "pixelEdgeVerified": true
+    },
+    {
+      "slot": "Flower",
+      "slotId": 12,
+      "before": [
+        192,
+        294,
+        36,
+        36
+      ],
+      "after": [
+        191,
+        293,
+        36,
+        36
+      ],
+      "delta": [
+        -1,
+        -1
+      ],
+      "nativeFrame": [
+        190,
+        292,
+        38,
+        38
+      ],
+      "pixelEdgeVerified": true
+    },
+    {
+      "slot": "HorseArmour",
+      "slotId": 13,
+      "before": [
+        104,
+        294,
+        36,
+        36
+      ],
+      "after": [
+        103,
+        293,
+        36,
+        36
+      ],
+      "delta": [
+        -1,
+        -1
+      ],
+      "nativeFrame": [
+        102,
+        292,
+        38,
+        38
+      ],
+      "pixelEdgeVerified": true
+    },
+    {
+      "slot": "Emblem",
+      "slotId": 14,
+      "before": [
+        192,
+        340,
+        36,
+        36
+      ],
+      "after": [
+        191,
+        339,
+        36,
+        36
+      ],
+      "delta": [
+        -1,
+        -1
+      ],
+      "nativeFrame": [
+        190,
+        338,
+        38,
+        38
+      ],
+      "pixelEdgeVerified": true
+    },
+    {
+      "slot": "Shield",
+      "slotId": 15,
+      "before": [
+        60,
+        340,
+        36,
+        36
+      ],
+      "after": [
+        59,
+        339,
+        36,
+        36
+      ],
+      "delta": [
+        -1,
+        -1
+      ],
+      "nativeFrame": [
+        58,
+        338,
+        38,
+        38
+      ],
+      "pixelEdgeVerified": true
+    }
+  ]
+}

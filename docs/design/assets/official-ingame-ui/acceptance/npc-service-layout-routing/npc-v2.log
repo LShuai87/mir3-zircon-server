@@ -1,0 +1,14 @@
+System.InvalidOperationException: Layout resolution must match the active game configuration.
+   在 Client.Envir.GameUiSceneLayoutHost.ControlParticipant.DescribeLayout(Size resolution)
+   在 Client.Envir.GameUiLayoutCoordinator.Apply(Size resolution, Rectangle safeArea)
+   在 Client.Envir.GameUiOfficialV1WindowSet.Apply(Size resolution)
+   在 Client.Scenes.GameScene.OnSizeChanged(Size oValue, Size nValue)
+   在 Client.Controls.DXControl.set_Size(Size value)
+   在 Client.Controls.DXScene.set_Size(Size value)
+   在 OfficialUiFullSceneTests.ExerciseNpc(GameUiStartupSession owner, MapInfo map, String evidence, String style)
+   在 OfficialUiFullSceneTests.RunNpc(String[] args)
+Exception: E:\workspace\mir3-zircon-server\tests\Run-GameUiNpcTests.ps1:33
+Line |
+  33 |          if ($LASTEXITCODE -ne 0) { throw 'Npc tests failed.' }
+     |                                     ~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Npc tests failed.

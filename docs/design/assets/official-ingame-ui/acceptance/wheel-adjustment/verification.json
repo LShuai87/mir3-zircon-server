@@ -1,0 +1,60 @@
+{
+  "date": "2026-11-10",
+  "releaseAccepted": false,
+  "supersedes": "wheel-occlusion-fix geometry and visible quest badge placement",
+  "changes": {
+    "questBadges": "Both quest icons retain state but DrawImage=false in candidate HUD; native snapshot restores flags on Legacy rollback.",
+    "InventoryButton": {
+      "before": [
+        87,
+        63,
+        54,
+        32
+      ],
+      "after": [
+        87,
+        65,
+        54,
+        32
+      ]
+    },
+    "CharacterButton": {
+      "before": [
+        85,
+        94,
+        58,
+        58
+      ],
+      "after": [
+        85,
+        96,
+        58,
+        58
+      ]
+    }
+  },
+  "results": {
+    "hudChecks": 800,
+    "windowIntegrationChecks": 284355,
+    "sharedOpaquePixels": 0,
+    "visiblePixelRoutingChecks": 11897,
+    "debugBuild": "passed",
+    "releaseBuild": "passed",
+    "layoutValidationAnd16Guards": "passed",
+    "characterBindingsCheck": "passed",
+    "previewValidateOnly": "passed"
+  },
+  "sha256": {
+    "Client/Envir/GameUiHudLayout.cs": "1b1224993601b88bc4b47b4f5e8cc77cdf67e4b9361882047c2ec8c099047600",
+    "Client/Scenes/Views/MainPanel.GameUi.cs": "1f1607b6dfbf36d7c4dd4b11b9cdcf436b87e9c8700112cb8a37a3cf60af32ab",
+    "build/game-ui/layout-official-v1.json": "eda2522b2423042370e175e331853082c88dd93243479f8c70ecd7f6a921831f",
+    "build/game-ui/character-bindings.json": "f54dcfb5ff90dc71fa83f97b021ff487dd8ee10f5dac4b0d9046a511061f2421",
+    "tests/game-ui/OfficialUiHudLayoutTests.cs": "2a80db0e0b6be2360a66860a92c71a30e2c3a3950de35c9be35fcf2de3293aaf",
+    "tests/game-ui/OfficialUiWindowSetTests.cs": "e5160d66af2b8ba481ce02973f5aefc812d24d072046c03c989c7728e215ecb1",
+    "E:/workspace/Debug/Client/Zircon.exe": "5052308c7791428b9118b84d8c0159523eb13299db50c7234a5031fac61dc103",
+    "E:/workspace/Release/Client/Zircon.exe": "d1e13ba52b11628ac3d0cd999947d2a122a4de5ee3cd5cc5043e9fed798c9e19"
+  },
+  "limitations": [
+    "No fresh full-scene capture or live account verification for this adjustment."
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "sourceLibrary": "UI",
+  "sourceFileVersion": "1.15.0.7269",
+  "capturedAt": "2026-11-07",
+  "mixSha256": "79cee0111d7f6308ec0b278023f881b5f74d15c53282fa95b65c79335e550f38",
+  "mizSha256": "28446e7a78b3821ee229cafe6730e4ba4beb3df08ec5ae990b07e928666964fa",
+  "sourceSize": [
+    225,
+    202
+  ],
+  "targetSize": [
+    225,
+    202
+  ],
+  "slicePadding": 3,
+  "frames": [
+    {
+      "state": "foreground",
+      "sourceIndex": 145,
+      "pngSha256": "f784ba992bcd0b489295e067c67adf0c71ac2f56a17f741725c4e427867a69f0"
+    }
+  ],
+  "reference": "UI[145] native orb foreground over UI[141..143], aligned at (0,0) in the 225x202 orb canvas; edge-connected black becomes transparent.",
+  "output": "Client/Resources/GameUi/hud-orb-overlay.png"
+}

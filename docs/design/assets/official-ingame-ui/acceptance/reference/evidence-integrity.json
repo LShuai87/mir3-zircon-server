@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-07T09:09:14.515917+00:00",
+  "result": "pass",
+  "scope": "saved evidence integrity only; no DPI, alpha, behavior or game acceptance claim",
+  "sourceRecheckSha256": "0fb56ea24d31f7d788e6436995fe0634c73fa6aa417364985416e76027080a29",
+  "verifierSha256": "e2c2fba39f591c6d0c1f4b32837ceac25ebb62735f0be1d59625e2921b0b5056",
+  "repeatReport": "E:\\workspace\\mir3-ui-work\\runtime-reference-20261107\\panel-matching-expanded-v2-repeat.json",
+  "originalJpegCount": 6,
+  "decodedPngCount": 2235,
+  "matchingRecords": 31,
+  "mappedRoles": 27,
+  "deferredMatchingRecords": 3,
+  "preservedRejectedRecords": 5,
+  "uibFiles": 5,
+  "checkCount": 2553,
+  "detailedReport": "E:\\workspace\\mir3-ui-work\\runtime-reference-20261107\\evidence-integrity-review.json",
+  "detailedReportSha256": "dda1433c3cd9eb19d8d20c773967527cd3ea41e2d9e8d675035a3235191d19b8",
+  "verifier": "Verify-ReferenceEvidence.py",
+  "checks": [
+    "Six original JPEG hashes, dimensions, format and capture-request links match.",
+    "All 2235 decoded PNG hashes match the pinned diagnostic inventory.",
+    "Both match reports link to pinned source PNGs, tools, specifications and captures.",
+    "Repeated 31-record match report is byte-identical to the saved report.",
+    "All five rejected raw records match their pinned snapshot bytes.",
+    "Eight original source files and eight recheck snapshot files match their own saved hashes.",
+    "Current source files match the recheck; all 45 matching candidate references retain identical raw records.",
+    "Five UIB snapshots and current files match; all remain excluded startup images."
+  ]
+}

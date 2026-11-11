@@ -258,3 +258,27 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\tests\Run-ItemListStor
 测试直接编译并使用生产 ItemListStorage，实现验证三份缺失列表、创建保存、中文 UTF-8、读取不改文件、覆盖旧内容、清空列表、父目录创建及其他 I/O 错误透出。Debug 和 Release 客户端均编译成功。已在正在运行的服务端点击 Check Version，并用实际协议验证新 Debug 客户端获得 GoodVersion、错误哈希仍返回 WrongVersion；本次 Debug EXE MD5 为 BEA7B7817FD1F099328FA5581FB0C40D。
 
 重新启动 Debug 客户端后，已实际观察到角色进入“比奇县”，场景、角色、NPC、小地图及状态栏正常显示。此验证覆盖本次进入地图，不代表所有职业、地图及装备资源均已验证。Release 已编译，但本次运行数据补充与进入地图验证限于 Debug。
+
+## 14. 登录后 UI 部署清单与版本校验（2026-11-08）
+
+资源部署默认使用 Legacy，旧命令继续有效，无需 OfficialV1.Zl。显式指定 OfficialV1 时必须提供清单；脚本核对全部目标后才复制资产，不写入客户端样式配置。客户端普通启动默认使用 OfficialV1，并按启动配置执行完整资源预检；失败回退 Legacy。`Start-LegacyUi.cmd` 或 `--game-ui-legacy` 可强制旧 UI，显式 `GameUiStyle=Legacy` 配置也继续生效。编译目录的 RuntimeReady 单独约束正式发布部署。
+
+先将经过审核的包放入资源暂存根目录的 Data\GameUI\OfficialV1.Zl，再从实际编译输出生成清单。暂存根目录应是独立副本；正式版安装目录只读。以下使用示例暂存路径，运行前需具备对应文件：
+
+~~~powershell
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\build\game-ui\New-GameUiReleaseManifest.ps1 -ClientDirectory 'E:\workspace\Release\Client' -ResourceRoot 'E:\workspace\mir3-ui-work\release-assets' -OutputPath 'E:\workspace\mir3-ui-work\OfficialV1-release-manifest.json'
+~~~
+
+输出路径必须是尚不存在的 .json 文件。生成器在独立 x86 Windows PowerShell 进程中读取目标 EXE 的实际编译目录，调用同一 EXE 的 CPU 包预检，验证完整 Zl 结构、几何、包及逐帧哈希，不启动游戏或创建 D3D 设备。清单记录 EXE、同目录全部 DLL、Zircon.exe.config（如存在）、Zl 的长度及 SHA256，以及目录来源哈希、91 帧和19组按钮的当前资源契约。buildId 根据这些内容生成，同一输入在 Windows PowerShell 5.1 与 PowerShell 7 得到相同标识。
+
+当前 RuntimeReady=false 时仍可生成只用于检查的清单，但 OfficialV1 部署会拒绝；没有跳过门禁的参数。Build-OfficialUi.ps1 的 Runtime 模式继续阻止尚未验收的资源发布。G0及游戏验收完成、客户端编译目录就绪后，部署命令为：
+
+~~~powershell
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\build\Setup-ClientAssets.ps1 -ResourceRoot 'E:\workspace\mir3-ui-work\release-assets' -OutputDirectories 'E:\workspace\Release\Client' -GameUiStyle OfficialV1 -ReleaseManifestPath 'E:\workspace\mir3-ui-work\OfficialV1-release-manifest.json'
+~~~
+
+部署前，目标目录必须已有匹配的 Zircon.exe 和完整依赖；此脚本只部署资源，不替换 EXE/DLL。缺少清单或资源、目标 EXE/DLL 版本不同、依赖清单缺项、资源哈希不同或实际编译目录未就绪都会失败。执行期间持有包、清单及程序文件的只读租约，避免这些输入在核对后被写入或替换。源与目标必须互不包含，拒绝目录联接或符号链接。
+
+递归复制及用户设置/数据库保留规则沿用原脚本。复制后再次核对目标 UI 包 SHA256，再原子更新目标的 GameUiReleaseManifest.json；运行时不读取此 JSON。多目标的预检全部完成后才开始复制；复制阶段发生磁盘等错误仍可能留下部分资产，应停止启动并重新部署完整匹配包。这不是整目录原子升级或旧整包回退验收。
+
+[部署验证记录](design/assets/official-ingame-ui/acceptance/deployment/README.md)区分实际未就绪客户端的拒绝路径与隔离测试宿主的成功路径；后者不能代替正式游戏发布验收。

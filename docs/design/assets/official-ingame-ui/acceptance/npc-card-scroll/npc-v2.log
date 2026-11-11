@@ -1,0 +1,5 @@
+Exception: E:\workspace\mir3-zircon-server\tests\Run-GameUiNpcTests.ps1:33
+Line |
+  33 |          if ($LASTEXITCODE -ne 0) { throw 'Npc tests failed.' }
+     |                                     ~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Npc tests failed.

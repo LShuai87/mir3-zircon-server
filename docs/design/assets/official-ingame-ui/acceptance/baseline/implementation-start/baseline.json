@@ -1,0 +1,2861 @@
+{
+  "schemaVersion": 1,
+  "capturedAtLocalDate": "2026-11-07",
+  "kind": "official-ui-source-baseline",
+  "head": "fc581d5cf96a81b49c557a15675a7386efac8825",
+  "worktreeStatus": "M .gitignore\n M Client/Client.csproj\n M Client/Controls/DXButton.cs\n M Client/Controls/DXImageControl.cs\n M Client/Controls/DXWindow.cs\n M Client/Models/MirLibrary.cs\n M ImageManager/ImageManager.csproj\n M ImageManager/Program.cs\n M ImageManager/WTLLibrary.cs\n?? Client/Controls/GameUiWindowSkin.cs\n?? Client/Envir/GameUiLayoutStore.cs\n?? ImageManager/OfficialUiBuilder.cs\n?? System.db\n?? build/game-ui/\n?? build/hud-assets/\n?? data/\n?? docs/tasks/\n?? tests/Run-GameUiTests.ps1\n?? tests/game-ui/",
+  "captureTiming": "Captured after foundation implementation; original task-generation HEAD and historical source hashes remain unchanged. This is not a pristine before-code runtime snapshot.",
+  "historicalBaseline": {
+    "path": "docs/design/assets/official-ingame-ui/code-baseline.json",
+    "head": "6691aa65902c229dad9cdcfed02d876e730ec0c4",
+    "sha256": "fdfce7b72c7d0c77337f756f7c1ecd6f4eca238ca99978652476a3971e6bcf2b"
+  },
+  "sourceComparisons": [
+    {
+      "path": "Library/Enum.cs",
+      "historicalSha256": "c08f31eb7cb590eab4a0622305461535f7b2f0d0faf8dfc8d039378f711d70cb",
+      "currentSha256": "c08f31eb7cb590eab4a0622305461535f7b2f0d0faf8dfc8d039378f711d70cb",
+      "matchesHistorical": true,
+      "explanation": "unchanged"
+    },
+    {
+      "path": "Library/Functions.cs",
+      "historicalSha256": "1ca6188f7d5e3cd47af31d220fa1fcb7ab0bc5a565b6425f9070a6c46dceb3b8",
+      "currentSha256": "1ca6188f7d5e3cd47af31d220fa1fcb7ab0bc5a565b6425f9070a6c46dceb3b8",
+      "matchesHistorical": true,
+      "explanation": "unchanged"
+    },
+    {
+      "path": "Library/Globals.cs",
+      "historicalSha256": "41411461b19989c6a51fb04d30b4b5fa2ea20d9c66ad09a97d244815cae611a8",
+      "currentSha256": "41411461b19989c6a51fb04d30b4b5fa2ea20d9c66ad09a97d244815cae611a8",
+      "matchesHistorical": true,
+      "explanation": "unchanged"
+    },
+    {
+      "path": "Client/Scenes/Views/CharacterDialog.cs",
+      "historicalSha256": "5ec5b69f2c644eaf3a53c9d6615df7e39144c07f606df17a6f33f2e58b0f2894",
+      "currentSha256": "5ec5b69f2c644eaf3a53c9d6615df7e39144c07f606df17a6f33f2e58b0f2894",
+      "matchesHistorical": true,
+      "explanation": "unchanged"
+    },
+    {
+      "path": "Client/Scenes/Views/NPCDialog.cs",
+      "historicalSha256": "ad706bbd920d091455cada87917bb011082a61e1548b2b88d37eef3d52a7872c",
+      "currentSha256": "ad706bbd920d091455cada87917bb011082a61e1548b2b88d37eef3d52a7872c",
+      "matchesHistorical": true,
+      "explanation": "unchanged"
+    },
+    {
+      "path": "Client/Controls/DXWindow.cs",
+      "historicalSha256": "9a23fd4ca10c94aa1495d22d9c0316a7050174fb42649e901fa9059784c768e6",
+      "currentSha256": "5aa71251b1d268bb8c1bf5f04ac1d7e29887ea7e411dd8b14f82979e89197b42",
+      "matchesHistorical": false,
+      "explanation": "UI-09 optional skin drawing/geometry/input and UI-10 opt-in layout persistence; null skin/store retains Legacy route."
+    },
+    {
+      "path": "Client/Scenes/GameScene.cs",
+      "historicalSha256": "2a663876bfe103bd55e52afaf74f370b87f2c0ece99e3505b61dfd82dcc56ee4",
+      "currentSha256": "2a663876bfe103bd55e52afaf74f370b87f2c0ece99e3505b61dfd82dcc56ee4",
+      "matchesHistorical": true,
+      "explanation": "unchanged"
+    },
+    {
+      "path": "Client/Controls/DXItemCell.cs",
+      "historicalSha256": "f43425809de39640b391f4dbf299d57837aa1330a87a2f43afb84d96ab880b55",
+      "currentSha256": "f43425809de39640b391f4dbf299d57837aa1330a87a2f43afb84d96ab880b55",
+      "matchesHistorical": true,
+      "explanation": "unchanged"
+    },
+    {
+      "path": "Client/Controls/DXItemGrid.cs",
+      "historicalSha256": "2b013cc45d0290dcf55faeb12beea8efaa9ba714d7df64bfa8465d8d9fc73ab4",
+      "currentSha256": "2b013cc45d0290dcf55faeb12beea8efaa9ba714d7df64bfa8465d8d9fc73ab4",
+      "matchesHistorical": true,
+      "explanation": "unchanged"
+    },
+    {
+      "path": "Client/Scenes/Views/InventoryDialog.cs",
+      "historicalSha256": "295a994be1178575ccd12b09739e679a0ee5c2aaca26772a82d845162176b81b",
+      "currentSha256": "295a994be1178575ccd12b09739e679a0ee5c2aaca26772a82d845162176b81b",
+      "matchesHistorical": true,
+      "explanation": "unchanged"
+    },
+    {
+      "path": "Client/Scenes/Views/BeltDialog.cs",
+      "historicalSha256": "3382474612ce2a72603e0762627f6ab05b91fb54cce3691a86b2819163ffb5fb",
+      "currentSha256": "3382474612ce2a72603e0762627f6ab05b91fb54cce3691a86b2819163ffb5fb",
+      "matchesHistorical": true,
+      "explanation": "unchanged"
+    },
+    {
+      "path": "Client/Scenes/Views/StorageDialog.cs",
+      "historicalSha256": "ef6cdf86e06e62dcd270a3f3cd89c8313a6fd11a11f8d9745f7151ca65cf8f99",
+      "currentSha256": "ef6cdf86e06e62dcd270a3f3cd89c8313a6fd11a11f8d9745f7151ca65cf8f99",
+      "matchesHistorical": true,
+      "explanation": "unchanged"
+    },
+    {
+      "path": "Client/Models/MirLibrary.cs",
+      "historicalSha256": "e7efe67be49704986460dd06913192c2c0efccb7f64de0aaf4b1252f84665d00",
+      "currentSha256": "aaf76ebf99818c22b63a6fb55cdb3147b1e63956388297e53f378fcbf03b23aa",
+      "matchesHistorical": false,
+      "explanation": "UI-04 reference-reader validation support: safe disposal of sparse/unread libraries; no format change."
+    },
+    {
+      "path": "Client/Controls/DXImageControl.cs",
+      "historicalSha256": "0f2c08a95cdad1312ff2a3876dd66fb8cf0090c94408d8df6a10295ad6949726",
+      "currentSha256": "6b7ca4935f09f8f6759ae07aaa7ba83806ba83f003cec48f4693b8e0d5806d00",
+      "matchesHistorical": false,
+      "explanation": "UI-08 atomic Library/Index binding updates geometry and invalidates textures."
+    },
+    {
+      "path": "Client/Controls/DXButton.cs",
+      "historicalSha256": "a58123680ffbe1b4f7211c24b363ec71019f67f005be26e7f51a877a00f26b85",
+      "currentSha256": "77476c7f1bfa9babeff53d792953f06b4df05b2f08c0ca11163bb244577bd61d",
+      "matchesHistorical": false,
+      "explanation": "UI-08 explicit four-state frames, stable hit rectangle and validated state binding; default Legacy branch retained."
+    },
+    {
+      "path": "ImageManager/WTLLibrary.cs",
+      "historicalSha256": "4e799b42881c7abafaa28d237da5f424fed20559646be1eac763a2ba8d13ded7",
+      "currentSha256": "a2466b559e174f5f1a43b2975fa019448f2dcf80ca7960010e81654723b3ba19",
+      "matchesHistorical": false,
+      "explanation": "UI-04 explicit opaque/binary-mask DXT1 encoder; original WTL overload retained and fixture hash checked."
+    },
+    {
+      "path": "ImageManager/Mir3Library.cs",
+      "historicalSha256": "9b08f5c8344364db9275fb608086bf112404c72f16df4cd245e8a49ca4c61d67",
+      "currentSha256": "9b08f5c8344364db9275fb608086bf112404c72f16df4cd245e8a49ca4c61d67",
+      "matchesHistorical": true,
+      "explanation": "unchanged"
+    },
+    {
+      "path": "build/Setup-ClientAssets.ps1",
+      "historicalSha256": "ceb00dde1a78bd24c17d63c6b54b3799e959becc449cdf59541fe7d92bb90e4c",
+      "currentSha256": "ceb00dde1a78bd24c17d63c6b54b3799e959becc449cdf59541fe7d92bb90e4c",
+      "matchesHistorical": true,
+      "explanation": "unchanged"
+    }
+  ],
+  "equipment": [
+    {
+      "id": 0,
+      "name": "Weapon",
+      "label": "武器",
+      "targetPage": "角色",
+      "validation": "UI-17/18 assert Grid[id], drag/drop, equip/unequip and packets retain slot ID"
+    },
+    {
+      "id": 1,
+      "name": "Armour",
+      "label": "盔甲",
+      "targetPage": "角色",
+      "validation": "UI-17/18 assert Grid[id], drag/drop, equip/unequip and packets retain slot ID"
+    },
+    {
+      "id": 2,
+      "name": "Helmet",
+      "label": "头盔",
+      "targetPage": "角色",
+      "validation": "UI-17/18 assert Grid[id], drag/drop, equip/unequip and packets retain slot ID"
+    },
+    {
+      "id": 3,
+      "name": "Torch",
+      "label": "火把",
+      "targetPage": "扩展装备",
+      "validation": "UI-17/18 assert Grid[id], drag/drop, equip/unequip and packets retain slot ID"
+    },
+    {
+      "id": 4,
+      "name": "Necklace",
+      "label": "项链",
+      "targetPage": "角色",
+      "validation": "UI-17/18 assert Grid[id], drag/drop, equip/unequip and packets retain slot ID"
+    },
+    {
+      "id": 5,
+      "name": "BraceletL",
+      "label": "左手镯",
+      "targetPage": "角色",
+      "validation": "UI-17/18 assert Grid[id], drag/drop, equip/unequip and packets retain slot ID"
+    },
+    {
+      "id": 6,
+      "name": "BraceletR",
+      "label": "右手镯",
+      "targetPage": "角色",
+      "validation": "UI-17/18 assert Grid[id], drag/drop, equip/unequip and packets retain slot ID"
+    },
+    {
+      "id": 7,
+      "name": "RingL",
+      "label": "左戒指",
+      "targetPage": "角色",
+      "validation": "UI-17/18 assert Grid[id], drag/drop, equip/unequip and packets retain slot ID"
+    },
+    {
+      "id": 8,
+      "name": "RingR",
+      "label": "右戒指",
+      "targetPage": "角色",
+      "validation": "UI-17/18 assert Grid[id], drag/drop, equip/unequip and packets retain slot ID"
+    },
+    {
+      "id": 9,
+      "name": "Shoes",
+      "label": "鞋子",
+      "targetPage": "角色",
+      "validation": "UI-17/18 assert Grid[id], drag/drop, equip/unequip and packets retain slot ID"
+    },
+    {
+      "id": 10,
+      "name": "Poison",
+      "label": "药品",
+      "targetPage": "扩展装备",
+      "validation": "UI-17/18 assert Grid[id], drag/drop, equip/unequip and packets retain slot ID"
+    },
+    {
+      "id": 11,
+      "name": "Amulet",
+      "label": "护符",
+      "targetPage": "扩展装备",
+      "validation": "UI-17/18 assert Grid[id], drag/drop, equip/unequip and packets retain slot ID"
+    },
+    {
+      "id": 12,
+      "name": "Flower",
+      "label": "鲜花",
+      "targetPage": "扩展装备",
+      "validation": "UI-17/18 assert Grid[id], drag/drop, equip/unequip and packets retain slot ID"
+    },
+    {
+      "id": 13,
+      "name": "HorseArmour",
+      "label": "马护甲",
+      "targetPage": "扩展装备",
+      "validation": "UI-17/18 assert Grid[id], drag/drop, equip/unequip and packets retain slot ID"
+    },
+    {
+      "id": 14,
+      "name": "Emblem",
+      "label": "徽章",
+      "targetPage": "扩展装备",
+      "validation": "UI-17/18 assert Grid[id], drag/drop, equip/unequip and packets retain slot ID"
+    },
+    {
+      "id": 15,
+      "name": "Shield",
+      "label": "盾牌",
+      "targetPage": "扩展装备",
+      "validation": "UI-17/18 assert Grid[id], drag/drop, equip/unequip and packets retain slot ID"
+    }
+  ],
+  "characterStatBindings": [
+    {
+      "binding": "DisplayStats",
+      "stat": "MaxAC",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 345,
+      "targetPage": "角色",
+      "validation": "UI-18 binding/formatter comparison; preserve current Stats/HermitStats source and sign/color behavior"
+    },
+    {
+      "binding": "DisplayStats",
+      "stat": "MaxMR",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 360,
+      "targetPage": "角色",
+      "validation": "UI-18 binding/formatter comparison; preserve current Stats/HermitStats source and sign/color behavior"
+    },
+    {
+      "binding": "DisplayStats",
+      "stat": "MaxDC",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 375,
+      "targetPage": "角色",
+      "validation": "UI-18 binding/formatter comparison; preserve current Stats/HermitStats source and sign/color behavior"
+    },
+    {
+      "binding": "DisplayStats",
+      "stat": "MaxMC",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 390,
+      "targetPage": "角色",
+      "validation": "UI-18 binding/formatter comparison; preserve current Stats/HermitStats source and sign/color behavior"
+    },
+    {
+      "binding": "DisplayStats",
+      "stat": "MaxSC",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 405,
+      "targetPage": "角色",
+      "validation": "UI-18 binding/formatter comparison; preserve current Stats/HermitStats source and sign/color behavior"
+    },
+    {
+      "binding": "DisplayStats",
+      "stat": "Accuracy",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 421,
+      "targetPage": "角色",
+      "validation": "UI-18 binding/formatter comparison; preserve current Stats/HermitStats source and sign/color behavior"
+    },
+    {
+      "binding": "DisplayStats",
+      "stat": "Agility",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 437,
+      "targetPage": "角色",
+      "validation": "UI-18 binding/formatter comparison; preserve current Stats/HermitStats source and sign/color behavior"
+    },
+    {
+      "binding": "DisplayStats",
+      "stat": "AttackSpeed",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 484,
+      "targetPage": "状态",
+      "validation": "UI-18 binding/formatter comparison; preserve current Stats/HermitStats source and sign/color behavior"
+    },
+    {
+      "binding": "DisplayStats",
+      "stat": "Luck",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 500,
+      "targetPage": "角色",
+      "validation": "UI-18 binding/formatter comparison; preserve current Stats/HermitStats source and sign/color behavior"
+    },
+    {
+      "binding": "DisplayStats",
+      "stat": "Comfort",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 515,
+      "targetPage": "角色",
+      "validation": "UI-18 binding/formatter comparison; preserve current Stats/HermitStats source and sign/color behavior"
+    },
+    {
+      "binding": "DisplayStats",
+      "stat": "LifeSteal",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 532,
+      "targetPage": "状态",
+      "validation": "UI-18 binding/formatter comparison; preserve current Stats/HermitStats source and sign/color behavior"
+    },
+    {
+      "binding": "DisplayStats",
+      "stat": "GoldRate",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 547,
+      "targetPage": "状态",
+      "validation": "UI-18 binding/formatter comparison; preserve current Stats/HermitStats source and sign/color behavior"
+    },
+    {
+      "binding": "DisplayStats",
+      "stat": "CriticalChance",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 562,
+      "targetPage": "状态",
+      "validation": "UI-18 binding/formatter comparison; preserve current Stats/HermitStats source and sign/color behavior"
+    },
+    {
+      "binding": "DisplayStats",
+      "stat": "DropRate",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 577,
+      "targetPage": "状态",
+      "validation": "UI-18 binding/formatter comparison; preserve current Stats/HermitStats source and sign/color behavior"
+    },
+    {
+      "binding": "DisplayStats",
+      "stat": "PickUpRadius",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 592,
+      "targetPage": "状态",
+      "validation": "UI-18 binding/formatter comparison; preserve current Stats/HermitStats source and sign/color behavior"
+    },
+    {
+      "binding": "DisplayStats",
+      "stat": "ExperienceRate",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 608,
+      "targetPage": "状态",
+      "validation": "UI-18 binding/formatter comparison; preserve current Stats/HermitStats source and sign/color behavior"
+    },
+    {
+      "binding": "DisplayStats",
+      "stat": "CriticalDamage",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 623,
+      "targetPage": "状态",
+      "validation": "UI-18 binding/formatter comparison; preserve current Stats/HermitStats source and sign/color behavior"
+    },
+    {
+      "binding": "DisplayStats",
+      "stat": "Rebirth",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 639,
+      "targetPage": "状态",
+      "validation": "UI-18 binding/formatter comparison; preserve current Stats/HermitStats source and sign/color behavior"
+    },
+    {
+      "binding": "DisplayStats",
+      "stat": "BlockChance",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 654,
+      "targetPage": "状态",
+      "validation": "UI-18 binding/formatter comparison; preserve current Stats/HermitStats source and sign/color behavior"
+    },
+    {
+      "binding": "DisplayStats",
+      "stat": "EvasionChance",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 670,
+      "targetPage": "状态",
+      "validation": "UI-18 binding/formatter comparison; preserve current Stats/HermitStats source and sign/color behavior"
+    },
+    {
+      "binding": "AttackStats",
+      "stat": "FireAttack",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 699,
+      "targetPage": "角色",
+      "validation": "UI-18 binding/formatter comparison; preserve current Stats/HermitStats source and sign/color behavior"
+    },
+    {
+      "binding": "AttackStats",
+      "stat": "IceAttack",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 718,
+      "targetPage": "角色",
+      "validation": "UI-18 binding/formatter comparison; preserve current Stats/HermitStats source and sign/color behavior"
+    },
+    {
+      "binding": "AttackStats",
+      "stat": "LightningAttack",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 737,
+      "targetPage": "角色",
+      "validation": "UI-18 binding/formatter comparison; preserve current Stats/HermitStats source and sign/color behavior"
+    },
+    {
+      "binding": "AttackStats",
+      "stat": "WindAttack",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 756,
+      "targetPage": "角色",
+      "validation": "UI-18 binding/formatter comparison; preserve current Stats/HermitStats source and sign/color behavior"
+    },
+    {
+      "binding": "AttackStats",
+      "stat": "HolyAttack",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 775,
+      "targetPage": "角色",
+      "validation": "UI-18 binding/formatter comparison; preserve current Stats/HermitStats source and sign/color behavior"
+    },
+    {
+      "binding": "AttackStats",
+      "stat": "DarkAttack",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 794,
+      "targetPage": "角色",
+      "validation": "UI-18 binding/formatter comparison; preserve current Stats/HermitStats source and sign/color behavior"
+    },
+    {
+      "binding": "AttackStats",
+      "stat": "PhantomAttack",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 813,
+      "targetPage": "角色",
+      "validation": "UI-18 binding/formatter comparison; preserve current Stats/HermitStats source and sign/color behavior"
+    },
+    {
+      "binding": "AdvantageStats",
+      "stat": "FireResistance",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 845,
+      "targetPage": "角色",
+      "validation": "UI-18 binding/formatter comparison; preserve current Stats/HermitStats source and sign/color behavior"
+    },
+    {
+      "binding": "AdvantageStats",
+      "stat": "IceResistance",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 864,
+      "targetPage": "角色",
+      "validation": "UI-18 binding/formatter comparison; preserve current Stats/HermitStats source and sign/color behavior"
+    },
+    {
+      "binding": "AdvantageStats",
+      "stat": "LightningResistance",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 883,
+      "targetPage": "角色",
+      "validation": "UI-18 binding/formatter comparison; preserve current Stats/HermitStats source and sign/color behavior"
+    },
+    {
+      "binding": "AdvantageStats",
+      "stat": "WindResistance",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 902,
+      "targetPage": "角色",
+      "validation": "UI-18 binding/formatter comparison; preserve current Stats/HermitStats source and sign/color behavior"
+    },
+    {
+      "binding": "AdvantageStats",
+      "stat": "HolyResistance",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 921,
+      "targetPage": "角色",
+      "validation": "UI-18 binding/formatter comparison; preserve current Stats/HermitStats source and sign/color behavior"
+    },
+    {
+      "binding": "AdvantageStats",
+      "stat": "DarkResistance",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 940,
+      "targetPage": "角色",
+      "validation": "UI-18 binding/formatter comparison; preserve current Stats/HermitStats source and sign/color behavior"
+    },
+    {
+      "binding": "AdvantageStats",
+      "stat": "PhantomResistance",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 959,
+      "targetPage": "角色",
+      "validation": "UI-18 binding/formatter comparison; preserve current Stats/HermitStats source and sign/color behavior"
+    },
+    {
+      "binding": "AdvantageStats",
+      "stat": "PhysicalResistance",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 978,
+      "targetPage": "状态",
+      "validation": "UI-18 binding/formatter comparison; preserve current Stats/HermitStats source and sign/color behavior"
+    },
+    {
+      "binding": "DisadvantageStats",
+      "stat": "FireResistance",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 1009,
+      "targetPage": "角色",
+      "validation": "UI-18 binding/formatter comparison; preserve current Stats/HermitStats source and sign/color behavior"
+    },
+    {
+      "binding": "DisadvantageStats",
+      "stat": "IceResistance",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 1028,
+      "targetPage": "角色",
+      "validation": "UI-18 binding/formatter comparison; preserve current Stats/HermitStats source and sign/color behavior"
+    },
+    {
+      "binding": "DisadvantageStats",
+      "stat": "LightningResistance",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 1047,
+      "targetPage": "角色",
+      "validation": "UI-18 binding/formatter comparison; preserve current Stats/HermitStats source and sign/color behavior"
+    },
+    {
+      "binding": "DisadvantageStats",
+      "stat": "WindResistance",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 1066,
+      "targetPage": "角色",
+      "validation": "UI-18 binding/formatter comparison; preserve current Stats/HermitStats source and sign/color behavior"
+    },
+    {
+      "binding": "DisadvantageStats",
+      "stat": "HolyResistance",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 1085,
+      "targetPage": "角色",
+      "validation": "UI-18 binding/formatter comparison; preserve current Stats/HermitStats source and sign/color behavior"
+    },
+    {
+      "binding": "DisadvantageStats",
+      "stat": "DarkResistance",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 1104,
+      "targetPage": "角色",
+      "validation": "UI-18 binding/formatter comparison; preserve current Stats/HermitStats source and sign/color behavior"
+    },
+    {
+      "binding": "DisadvantageStats",
+      "stat": "PhantomResistance",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 1123,
+      "targetPage": "角色",
+      "validation": "UI-18 binding/formatter comparison; preserve current Stats/HermitStats source and sign/color behavior"
+    },
+    {
+      "binding": "DisadvantageStats",
+      "stat": "PhysicalResistance",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 1142,
+      "targetPage": "状态",
+      "validation": "UI-18 binding/formatter comparison; preserve current Stats/HermitStats source and sign/color behavior"
+    },
+    {
+      "binding": "HermitDisplayStats",
+      "stat": "MaxAC",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 1162,
+      "targetPage": "修炼",
+      "validation": "UI-18 binding/formatter comparison; preserve current Stats/HermitStats source and sign/color behavior"
+    },
+    {
+      "binding": "HermitDisplayStats",
+      "stat": "MaxMR",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 1177,
+      "targetPage": "修炼",
+      "validation": "UI-18 binding/formatter comparison; preserve current Stats/HermitStats source and sign/color behavior"
+    },
+    {
+      "binding": "HermitDisplayStats",
+      "stat": "MaxDC",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 1192,
+      "targetPage": "修炼",
+      "validation": "UI-18 binding/formatter comparison; preserve current Stats/HermitStats source and sign/color behavior"
+    },
+    {
+      "binding": "HermitDisplayStats",
+      "stat": "MaxMC",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 1207,
+      "targetPage": "修炼",
+      "validation": "UI-18 binding/formatter comparison; preserve current Stats/HermitStats source and sign/color behavior"
+    },
+    {
+      "binding": "HermitDisplayStats",
+      "stat": "MaxSC",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 1222,
+      "targetPage": "修炼",
+      "validation": "UI-18 binding/formatter comparison; preserve current Stats/HermitStats source and sign/color behavior"
+    },
+    {
+      "binding": "HermitDisplayStats",
+      "stat": "Health",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 1237,
+      "targetPage": "修炼",
+      "validation": "UI-18 binding/formatter comparison; preserve current Stats/HermitStats source and sign/color behavior"
+    },
+    {
+      "binding": "HermitDisplayStats",
+      "stat": "Mana",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 1252,
+      "targetPage": "修炼",
+      "validation": "UI-18 binding/formatter comparison; preserve current Stats/HermitStats source and sign/color behavior"
+    },
+    {
+      "binding": "HermitAttackStats",
+      "stat": "FireAttack",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 1280,
+      "targetPage": "修炼",
+      "validation": "UI-18 binding/formatter comparison; preserve current Stats/HermitStats source and sign/color behavior"
+    },
+    {
+      "binding": "HermitAttackStats",
+      "stat": "IceAttack",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 1299,
+      "targetPage": "修炼",
+      "validation": "UI-18 binding/formatter comparison; preserve current Stats/HermitStats source and sign/color behavior"
+    },
+    {
+      "binding": "HermitAttackStats",
+      "stat": "LightningAttack",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 1318,
+      "targetPage": "修炼",
+      "validation": "UI-18 binding/formatter comparison; preserve current Stats/HermitStats source and sign/color behavior"
+    },
+    {
+      "binding": "HermitAttackStats",
+      "stat": "WindAttack",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 1337,
+      "targetPage": "修炼",
+      "validation": "UI-18 binding/formatter comparison; preserve current Stats/HermitStats source and sign/color behavior"
+    },
+    {
+      "binding": "HermitAttackStats",
+      "stat": "HolyAttack",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 1356,
+      "targetPage": "修炼",
+      "validation": "UI-18 binding/formatter comparison; preserve current Stats/HermitStats source and sign/color behavior"
+    },
+    {
+      "binding": "HermitAttackStats",
+      "stat": "DarkAttack",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 1375,
+      "targetPage": "修炼",
+      "validation": "UI-18 binding/formatter comparison; preserve current Stats/HermitStats source and sign/color behavior"
+    },
+    {
+      "binding": "HermitAttackStats",
+      "stat": "PhantomAttack",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 1394,
+      "targetPage": "修炼",
+      "validation": "UI-18 binding/formatter comparison; preserve current Stats/HermitStats source and sign/color behavior"
+    }
+  ],
+  "capacities": {
+    "inventory": 49,
+    "inventoryGrid": [
+      7,
+      7
+    ],
+    "beltLinks": 10,
+    "equipment": 16,
+    "cellSize": [
+      36,
+      36
+    ],
+    "cellStride": 35,
+    "inventoryGridPixels": [
+      246,
+      246
+    ]
+  },
+  "capacityEvidence": [
+    {
+      "kind": "capacity-constant",
+      "source": "Library/Globals.cs",
+      "line": 73,
+      "text": "MaxBeltCount = 10"
+    },
+    {
+      "kind": "capacity-constant",
+      "source": "Library/Globals.cs",
+      "line": 380,
+      "text": "InventorySize = 49"
+    },
+    {
+      "kind": "capacity-constant",
+      "source": "Library/Globals.cs",
+      "line": 381,
+      "text": "EquipmentSize = 16"
+    },
+    {
+      "kind": "capacity-constant",
+      "source": "Library/Globals.cs",
+      "line": 382,
+      "text": "InventorySize = 100"
+    },
+    {
+      "kind": "capacity-constant",
+      "source": "Library/Globals.cs",
+      "line": 383,
+      "text": "EquipmentSize = 4"
+    }
+  ],
+  "npcWindows": [
+    {
+      "class": "NPCDialog",
+      "source": "Client/Scenes/Views/NPCDialog.cs",
+      "line": 22,
+      "ownerTask": "UI-20",
+      "target": "OfficialV1 对应 NPC 服务卡片；业务 handler 原样复用",
+      "packetConstructors": [
+        {
+          "kind": "packet-constructor",
+          "source": "Client/Scenes/Views/NPCDialog.cs",
+          "line": 115,
+          "text": "new C.NPCClose"
+        },
+        {
+          "kind": "packet-constructor",
+          "source": "Client/Scenes/Views/NPCDialog.cs",
+          "line": 330,
+          "text": "new C.NPCButton"
+        }
+      ],
+      "validation": "cancel/confirm/quantity validation and payload comparison with pre-change handler"
+    },
+    {
+      "class": "NPCGoodsDialog",
+      "source": "Client/Scenes/Views/NPCDialog.cs",
+      "line": 539,
+      "ownerTask": "UI-21",
+      "target": "OfficialV1 对应 NPC 服务卡片；业务 handler 原样复用",
+      "packetConstructors": [
+        {
+          "kind": "packet-constructor",
+          "source": "Client/Scenes/Views/NPCDialog.cs",
+          "line": 739,
+          "text": "new C.NPCBuy"
+        },
+        {
+          "kind": "packet-constructor",
+          "source": "Client/Scenes/Views/NPCDialog.cs",
+          "line": 757,
+          "text": "new C.NPCBuy"
+        }
+      ],
+      "validation": "cancel/confirm/quantity validation and payload comparison with pre-change handler"
+    },
+    {
+      "class": "NPCSellDialog",
+      "source": "Client/Scenes/Views/NPCDialog.cs",
+      "line": 1117,
+      "ownerTask": "UI-21",
+      "target": "OfficialV1 对应 NPC 服务卡片；业务 handler 原样复用",
+      "packetConstructors": [
+        {
+          "kind": "packet-constructor",
+          "source": "Client/Scenes/Views/NPCDialog.cs",
+          "line": 1237,
+          "text": "new C.NPCSell"
+        }
+      ],
+      "validation": "cancel/confirm/quantity validation and payload comparison with pre-change handler"
+    },
+    {
+      "class": "NPCRepairDialog",
+      "source": "Client/Scenes/Views/NPCDialog.cs",
+      "line": 1300,
+      "ownerTask": "UI-21",
+      "target": "OfficialV1 对应 NPC 服务卡片；业务 handler 原样复用",
+      "packetConstructors": [
+        {
+          "kind": "packet-constructor",
+          "source": "Client/Scenes/Views/NPCDialog.cs",
+          "line": 1517,
+          "text": "new C.NPCRepair"
+        }
+      ],
+      "validation": "cancel/confirm/quantity validation and payload comparison with pre-change handler"
+    },
+    {
+      "class": "NPCRefineDialog",
+      "source": "Client/Scenes/Views/NPCDialog.cs",
+      "line": 1615,
+      "ownerTask": "UI-21",
+      "target": "OfficialV1 对应 NPC 服务卡片；业务 handler 原样复用",
+      "packetConstructors": [
+        {
+          "kind": "packet-constructor",
+          "source": "Client/Scenes/Views/NPCDialog.cs",
+          "line": 1974,
+          "text": "new C.NPCRefine"
+        }
+      ],
+      "validation": "cancel/confirm/quantity validation and payload comparison with pre-change handler"
+    },
+    {
+      "class": "NPCRefineRetrieveDialog",
+      "source": "Client/Scenes/Views/NPCDialog.cs",
+      "line": 2159,
+      "ownerTask": "UI-21",
+      "target": "OfficialV1 对应 NPC 服务卡片；业务 handler 原样复用",
+      "packetConstructors": [
+        {
+          "kind": "packet-constructor",
+          "source": "Client/Scenes/Views/NPCDialog.cs",
+          "line": 2304,
+          "text": "new C.NPCRefineRetrieve"
+        }
+      ],
+      "validation": "cancel/confirm/quantity validation and payload comparison with pre-change handler"
+    },
+    {
+      "class": "NPCQuestDialog",
+      "source": "Client/Scenes/Views/NPCDialog.cs",
+      "line": 2686,
+      "ownerTask": "UI-22",
+      "target": "OfficialV1 对应 NPC 服务卡片；业务 handler 原样复用",
+      "packetConstructors": [
+        {
+          "kind": "packet-constructor",
+          "source": "Client/Scenes/Views/NPCDialog.cs",
+          "line": 3101,
+          "text": "new C.QuestAccept"
+        },
+        {
+          "kind": "packet-constructor",
+          "source": "Client/Scenes/Views/NPCDialog.cs",
+          "line": 3123,
+          "text": "new C.QuestComplete"
+        }
+      ],
+      "validation": "cancel/confirm/quantity validation and payload comparison with pre-change handler"
+    },
+    {
+      "class": "NPCAdoptCompanionDialog",
+      "source": "Client/Scenes/Views/NPCDialog.cs",
+      "line": 3498,
+      "ownerTask": "UI-23",
+      "target": "OfficialV1 对应 NPC 服务卡片；业务 handler 原样复用",
+      "packetConstructors": [
+        {
+          "kind": "packet-constructor",
+          "source": "Client/Scenes/Views/NPCDialog.cs",
+          "line": 3758,
+          "text": "new C.CompanionAdopt"
+        },
+        {
+          "kind": "packet-constructor",
+          "source": "Client/Scenes/Views/NPCDialog.cs",
+          "line": 3773,
+          "text": "new C.CompanionUnlock"
+        }
+      ],
+      "validation": "cancel/confirm/quantity validation and payload comparison with pre-change handler"
+    },
+    {
+      "class": "NPCCompanionStorageDialog",
+      "source": "Client/Scenes/Views/NPCDialog.cs",
+      "line": 3915,
+      "ownerTask": "UI-23",
+      "target": "OfficialV1 对应 NPC 服务卡片；业务 handler 原样复用",
+      "packetConstructors": [],
+      "validation": "cancel/confirm/quantity validation and payload comparison with pre-change handler"
+    },
+    {
+      "class": "NPCWeddingRingDialog",
+      "source": "Client/Scenes/Views/NPCDialog.cs",
+      "line": 4259,
+      "ownerTask": "UI-23",
+      "target": "OfficialV1 对应 NPC 服务卡片；业务 handler 原样复用",
+      "packetConstructors": [
+        {
+          "kind": "packet-constructor",
+          "source": "Client/Scenes/Views/NPCDialog.cs",
+          "line": 4319,
+          "text": "new C.MarriageMakeRing"
+        }
+      ],
+      "validation": "cancel/confirm/quantity validation and payload comparison with pre-change handler"
+    },
+    {
+      "class": "NPCRefinementStoneDialog",
+      "source": "Client/Scenes/Views/NPCDialog.cs",
+      "line": 4372,
+      "ownerTask": "UI-24",
+      "target": "OfficialV1 对应 NPC 服务卡片；业务 handler 原样复用",
+      "packetConstructors": [
+        {
+          "kind": "packet-constructor",
+          "source": "Client/Scenes/Views/NPCDialog.cs",
+          "line": 4641,
+          "text": "new C.NPCRefinementStone"
+        }
+      ],
+      "validation": "cancel/confirm/quantity validation and payload comparison with pre-change handler"
+    },
+    {
+      "class": "NPCItemFragmentDialog",
+      "source": "Client/Scenes/Views/NPCDialog.cs",
+      "line": 4755,
+      "ownerTask": "UI-24",
+      "target": "OfficialV1 对应 NPC 服务卡片；业务 handler 原样复用",
+      "packetConstructors": [
+        {
+          "kind": "packet-constructor",
+          "source": "Client/Scenes/Views/NPCDialog.cs",
+          "line": 4870,
+          "text": "new C.NPCFragment"
+        }
+      ],
+      "validation": "cancel/confirm/quantity validation and payload comparison with pre-change handler"
+    },
+    {
+      "class": "NPCMasterRefineDialog",
+      "source": "Client/Scenes/Views/NPCDialog.cs",
+      "line": 4936,
+      "ownerTask": "UI-24",
+      "target": "OfficialV1 对应 NPC 服务卡片；业务 handler 原样复用",
+      "packetConstructors": [
+        {
+          "kind": "packet-constructor",
+          "source": "Client/Scenes/Views/NPCDialog.cs",
+          "line": 5323,
+          "text": "new C.NPCMasterRefineEvaluate"
+        },
+        {
+          "kind": "packet-constructor",
+          "source": "Client/Scenes/Views/NPCDialog.cs",
+          "line": 5425,
+          "text": "new C.NPCMasterRefine"
+        }
+      ],
+      "validation": "cancel/confirm/quantity validation and payload comparison with pre-change handler"
+    },
+    {
+      "class": "NPCAccessoryUpgradeDialog",
+      "source": "Client/Scenes/Views/NPCDialog.cs",
+      "line": 5567,
+      "ownerTask": "UI-24",
+      "target": "OfficialV1 对应 NPC 服务卡片；业务 handler 原样复用",
+      "packetConstructors": [
+        {
+          "kind": "packet-constructor",
+          "source": "Client/Scenes/Views/NPCDialog.cs",
+          "line": 5987,
+          "text": "new C.NPCAccessoryUpgrade"
+        }
+      ],
+      "validation": "cancel/confirm/quantity validation and payload comparison with pre-change handler"
+    },
+    {
+      "class": "NPCAccessoryLevelDialog",
+      "source": "Client/Scenes/Views/NPCDialog.cs",
+      "line": 6148,
+      "ownerTask": "UI-24",
+      "target": "OfficialV1 对应 NPC 服务卡片；业务 handler 原样复用",
+      "packetConstructors": [
+        {
+          "kind": "packet-constructor",
+          "source": "Client/Scenes/Views/NPCDialog.cs",
+          "line": 6295,
+          "text": "new C.NPCAccessoryLevelUp"
+        }
+      ],
+      "validation": "cancel/confirm/quantity validation and payload comparison with pre-change handler"
+    },
+    {
+      "class": "NPCAccessoryResetDialog",
+      "source": "Client/Scenes/Views/NPCDialog.cs",
+      "line": 6358,
+      "ownerTask": "UI-24",
+      "target": "OfficialV1 对应 NPC 服务卡片；业务 handler 原样复用",
+      "packetConstructors": [
+        {
+          "kind": "packet-constructor",
+          "source": "Client/Scenes/Views/NPCDialog.cs",
+          "line": 6449,
+          "text": "new C.NPCAccessoryReset"
+        }
+      ],
+      "validation": "cancel/confirm/quantity validation and payload comparison with pre-change handler"
+    },
+    {
+      "class": "NPCWeaponCraftWindow",
+      "source": "Client/Scenes/Views/NPCDialog.cs",
+      "line": 6491,
+      "ownerTask": "UI-24",
+      "target": "OfficialV1 对应 NPC 服务卡片；业务 handler 原样复用",
+      "packetConstructors": [
+        {
+          "kind": "packet-constructor",
+          "source": "Client/Scenes/Views/NPCDialog.cs",
+          "line": 6847,
+          "text": "new C.NPCWeaponCraft"
+        }
+      ],
+      "validation": "cancel/confirm/quantity validation and payload comparison with pre-change handler"
+    }
+  ],
+  "keybindings": [
+    {
+      "action": "None",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 403,
+      "defaultDefinition": "case KeyBindAction.None:\n                        break;",
+      "routes": [],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "ConfigWindow",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 421,
+      "defaultDefinition": "case KeyBindAction.ConfigWindow:\n                    bind.Category = \"Windows\";\n                    bind.Key1 = Keys.O;\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1193,
+          "handler": "case KeyBindAction.ConfigWindow:\n                        ConfigBox.Visible = !ConfigBox.Visible;\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "CharacterWindow",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 425,
+      "defaultDefinition": "case KeyBindAction.CharacterWindow:\n                    bind.Category = \"Windows\";\n                    bind.Key1 = Keys.Q;\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1199,
+          "handler": "case KeyBindAction.CharacterWindow:\n                        CharacterBox.Visible = !CharacterBox.Visible;\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "InventoryWindow",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 429,
+      "defaultDefinition": "case KeyBindAction.InventoryWindow:\n                    bind.Category = \"Windows\";\n                    bind.Key1 = Keys.W;\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1202,
+          "handler": "case KeyBindAction.InventoryWindow:\n                        InventoryBox.Visible = !InventoryBox.Visible;\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "MagicWindow",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 433,
+      "defaultDefinition": "case KeyBindAction.MagicWindow:\n                    bind.Category = \"Windows\";\n                    bind.Key1 = Keys.E;\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1208,
+          "handler": "case KeyBindAction.MagicWindow:\n                        MagicBox.Visible = !MagicBox.Visible;\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "MagicBarWindow",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 437,
+      "defaultDefinition": "case KeyBindAction.MagicBarWindow:\n                    bind.Category = \"Windows\";\n                    bind.Key1 = Keys.E;\n                    bind.Control1 = true;\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1211,
+          "handler": "case KeyBindAction.MagicBarWindow:\n                        MagicBarBox.Visible = !MagicBarBox.Visible;\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "RankingWindow",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 442,
+      "defaultDefinition": "case KeyBindAction.RankingWindow:\n                    bind.Category = \"Windows\";\n                    bind.Key1 = Keys.R;\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1196,
+          "handler": "case KeyBindAction.RankingWindow:\n                        RankingBox.Visible = !RankingBox.Visible && CEnvir.Connection != null;\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "GameStoreWindow",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 446,
+      "defaultDefinition": "case KeyBindAction.GameStoreWindow:\n                    bind.Category = \"Windows\";\n                    bind.Key1 = Keys.Y;\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1214,
+          "handler": "case KeyBindAction.GameStoreWindow:\n                        if (MarketPlaceBox.StoreTab.IsVisible)\n                            MarketPlaceBox.Visible = false;\n                        else\n                        {\n                            MarketPlaceBox.Visible = true;\n                            MarketPlaceBox.StoreTab.TabButton.InvokeMouseClick();\n                        }\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "CompanionWindow",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 450,
+      "defaultDefinition": "case KeyBindAction.CompanionWindow:\n                    bind.Category = \"Windows\";\n                    bind.Key1 = Keys.U;\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1223,
+          "handler": "case KeyBindAction.CompanionWindow:\n                        CompanionBox.Visible = !CompanionBox.Visible;\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "GroupWindow",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 454,
+      "defaultDefinition": "case KeyBindAction.GroupWindow:\n                    bind.Category = \"Windows\";\n                    bind.Key1 = Keys.P;\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1226,
+          "handler": "case KeyBindAction.GroupWindow:\n                        GroupBox.Visible = !GroupBox.Visible;\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "AutoPotionWindow",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 458,
+      "defaultDefinition": "case KeyBindAction.AutoPotionWindow:\n                    bind.Category = \"Windows\";\n                    bind.Key1 = Keys.A;\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1229,
+          "handler": "case KeyBindAction.AutoPotionWindow:\n                        AutoPotionBox.Visible = !AutoPotionBox.Visible;\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "StorageWindow",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 462,
+      "defaultDefinition": "case KeyBindAction.StorageWindow:\n                    bind.Category = \"Windows\";\n                    bind.Key1 = Keys.S;\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1232,
+          "handler": "case KeyBindAction.StorageWindow:\n                        StorageBox.Visible = !StorageBox.Visible;\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "BlockListWindow",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 466,
+      "defaultDefinition": "case KeyBindAction.BlockListWindow:\n                    bind.Category = \"Windows\";\n                    bind.Key1 = Keys.F;\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1235,
+          "handler": "case KeyBindAction.BlockListWindow:\n                        BlockBox.Visible = !BlockBox.Visible;\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "GuildWindow",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 470,
+      "defaultDefinition": "case KeyBindAction.GuildWindow:\n                    bind.Category = \"Windows\";\n                    bind.Key1 = Keys.G;\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1238,
+          "handler": "case KeyBindAction.GuildWindow:\n                        GuildBox.Visible = !GuildBox.Visible;\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "QuestLogWindow",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 474,
+      "defaultDefinition": "case KeyBindAction.QuestLogWindow:\n                    bind.Category = \"Windows\";\n                    bind.Key1 = Keys.J;\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1241,
+          "handler": "case KeyBindAction.QuestLogWindow:\n                        QuestBox.Visible = !QuestBox.Visible;\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "QuestTrackerWindow",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 478,
+      "defaultDefinition": "case KeyBindAction.QuestTrackerWindow:\n                    bind.Category = \"Windows\";\n                    bind.Key1 = Keys.L;\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1244,
+          "handler": "case KeyBindAction.QuestTrackerWindow:\n                        QuestBox.CurrentTab.ShowTrackerBox.Checked = !QuestBox.CurrentTab.ShowTrackerBox.Checked;\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "BeltWindow",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 482,
+      "defaultDefinition": "case KeyBindAction.BeltWindow:\n                    bind.Category = \"Windows\";\n                    bind.Key1 = Keys.Z;\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1247,
+          "handler": "case KeyBindAction.BeltWindow:\n                        BeltBox.Visible = !BeltBox.Visible;\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "MarketPlaceWindow",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 486,
+      "defaultDefinition": "case KeyBindAction.MarketPlaceWindow:\n                    bind.Category = \"Windows\";\n                    bind.Key1 = Keys.C;\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1250,
+          "handler": "case KeyBindAction.MarketPlaceWindow:\n                        if (MarketPlaceBox.ConsignTab.IsVisible || MarketPlaceBox.SearchTab.IsVisible)\n                            MarketPlaceBox.Visible = false;\n                        else\n                        {\n                            MarketPlaceBox.Visible = true;\n                            MarketPlaceBox.SearchTab.TabButton.InvokeMouseClick();\n                        }\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "MapMiniWindow",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 490,
+      "defaultDefinition": "case KeyBindAction.MapMiniWindow:\n                    bind.Category = \"Windows\";\n                    bind.Key1 = Keys.V;\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1259,
+          "handler": "case KeyBindAction.MapMiniWindow:\n                        if (!MiniMapBox.Visible)\n                        {\n                            MiniMapBox.Opacity = 1F;\n                            MiniMapBox.Visible = true;\n                            return;\n                        }\n\n                        if (MiniMapBox.Opacity == 1F)\n                        {\n                            MiniMapBox.Opacity = 0.5F;\n                            return;\n                        }\n\n                        MiniMapBox.Visible = false;\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "MapBigWindow",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 494,
+      "defaultDefinition": "case KeyBindAction.MapBigWindow:\n                    bind.Category = \"Windows\";\n                    bind.Key1 = Keys.B;\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1275,
+          "handler": "case KeyBindAction.MapBigWindow:\n                        if (!BigMapBox.Visible)\n                        {\n                            BigMapBox.Opacity = 1F;\n                            BigMapBox.Visible = true;\n                            return;\n                        }\n\n                        if (BigMapBox.Opacity == 1F)\n                        {\n                            BigMapBox.Opacity = 0.5F;\n                            return;\n                        }\n\n                        BigMapBox.Visible = false;\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "MailBoxWindow",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 498,
+      "defaultDefinition": "case KeyBindAction.MailBoxWindow:\n                    bind.Category = \"Windows\";\n                    bind.Key1 = Keys.Oemcomma;\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1291,
+          "handler": "case KeyBindAction.MailBoxWindow:\n                        if (Observer) continue;\n                        MailBox.Visible = !MailBox.Visible;\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "MailSendWindow",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 502,
+      "defaultDefinition": "case KeyBindAction.MailSendWindow:\n                    bind.Category = \"Windows\";\n                    bind.Key1 = Keys.OemPeriod;\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1295,
+          "handler": "case KeyBindAction.MailSendWindow:\n                        if (Observer) continue;\n                        SendMailBox.Visible = !SendMailBox.Visible;\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "ChatOptionsWindow",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 506,
+      "defaultDefinition": "case KeyBindAction.ChatOptionsWindow:\n                    bind.Category = \"Windows\";\n                    bind.Key1 = Keys.O;\n                    bind.Control1 = true;\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1299,
+          "handler": "case KeyBindAction.ChatOptionsWindow:\n                        ChatOptionsBox.Visible = !ChatOptionsBox.Visible;\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "ExitGameWindow",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 511,
+      "defaultDefinition": "case KeyBindAction.ExitGameWindow:\n                    bind.Category = \"Windows\";\n                    bind.Key1 = Keys.Q;\n                    bind.Alt1 = true;\n                    bind.Key2 = Keys.X;\n                    bind.Alt2 = true;\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1302,
+          "handler": "case KeyBindAction.ExitGameWindow:\n                        ExitBox.Visible = true;\n                        ExitBox.BringToFront();\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "ChangeAttackMode",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 518,
+      "defaultDefinition": "case KeyBindAction.ChangeAttackMode:\n                    bind.Category = \"Functions\";\n                    bind.Key1 = Keys.H;\n                    bind.Control1 = true;\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1306,
+          "handler": "case KeyBindAction.ChangeAttackMode:\n                        if (Observer) continue;\n                        User.AttackMode = (AttackMode) (((int) User.AttackMode + 1) % 5);\n                        CEnvir.Enqueue(new C.ChangeAttackMode { Mode = User.AttackMode });\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "ChangePetMode",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 523,
+      "defaultDefinition": "case KeyBindAction.ChangePetMode:\n                    bind.Category = \"Functions\";\n                    bind.Key1 = Keys.A;\n                    bind.Control1 = true;\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1311,
+          "handler": "case KeyBindAction.ChangePetMode:\n                        if (Observer) continue;\n\n                        User.PetMode = (PetMode) (((int) User.PetMode + 1) % 5);\n                        CEnvir.Enqueue(new C.ChangePetMode { Mode = User.PetMode });\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "GroupAllowSwitch",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 528,
+      "defaultDefinition": "case KeyBindAction.GroupAllowSwitch:\n                    bind.Category = \"Functions\";\n                    bind.Key1 = Keys.P;\n                    bind.Alt1 = true;\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1317,
+          "handler": "case KeyBindAction.GroupAllowSwitch:\n                        if (Observer) continue;\n\n                        GroupBox.AllowGroupButton.InvokeMouseClick();\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "GroupTarget",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 533,
+      "defaultDefinition": "case KeyBindAction.GroupTarget:\n                    bind.Category = \"Functions\";\n                    bind.Key1 = Keys.G;\n                    bind.Control1 = true;\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1322,
+          "handler": "case KeyBindAction.GroupTarget:\n                        if (Observer) continue;\n\n                        if (MouseObject == null || MouseObject.Race != ObjectType.Player) continue;\n\n                        CEnvir.Enqueue(new C.GroupInvite { Name = MouseObject.Name });\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "TradeRequest",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 538,
+      "defaultDefinition": "case KeyBindAction.TradeRequest:\n                    bind.Category = \"Functions\";\n                    bind.Key1 = Keys.T;\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1329,
+          "handler": "case KeyBindAction.TradeRequest:\n                        if (Observer) continue;\n\n                        CEnvir.Enqueue(new C.TradeRequest());\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "TradeAllowSwitch",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 542,
+      "defaultDefinition": "case KeyBindAction.TradeAllowSwitch:\n                    bind.Category = \"Functions\";\n                    bind.Key1 = Keys.T;\n                    bind.Control1 = true;\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1334,
+          "handler": "case KeyBindAction.TradeAllowSwitch:\n                        if (Observer) continue;\n\n                        CEnvir.Enqueue(new C.Chat { Text = \"@AllowTrade\" });\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "MountToggle",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 547,
+      "defaultDefinition": "case KeyBindAction.MountToggle:\n                    bind.Category = \"Functions\";\n                    bind.Key1 = Keys.M;\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1356,
+          "handler": "case KeyBindAction.MountToggle:\n                        if (Observer) continue;\n\n                        if (CEnvir.Now < User.NextActionTime || User.ActionQueue.Count > 0) return;\n                        if (CEnvir.Now < User.ServerTime) return; //Next Server response Time.\n\n                        User.ServerTime = CEnvir.Now.AddSeconds(5);\n                        CEnvir.Enqueue(new C.Mount());\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "AutoRunToggle",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 551,
+      "defaultDefinition": "case KeyBindAction.AutoRunToggle:\n                    bind.Category = \"Functions\";\n                    bind.Key1 = Keys.D;\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1365,
+          "handler": "case KeyBindAction.AutoRunToggle:\n                        if (Observer) continue;\n\n                        AutoRun = !AutoRun;\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "ChangeChatMode",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 555,
+      "defaultDefinition": "case KeyBindAction.ChangeChatMode:\n                    bind.Category = \"Functions\";\n                    bind.Key1 = Keys.K;\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1339,
+          "handler": "case KeyBindAction.ChangeChatMode:\n                        ChatTextBox.ChatModeButton.InvokeMouseClick();\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "ItemPickUp",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 559,
+      "defaultDefinition": "case KeyBindAction.ItemPickUp:\n                    bind.Category = \"Items\";\n                    bind.Key1 = Keys.Tab;\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1342,
+          "handler": "case KeyBindAction.ItemPickUp:\n                        if (Observer) continue;\n\n                        if (CEnvir.Now > PickUpTime)\n                        {\n                            CEnvir.Enqueue(new C.PickUp());\n                            PickUpTime = CEnvir.Now.AddMilliseconds(250);\n                        }\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "PartnerTeleport",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 563,
+      "defaultDefinition": "case KeyBindAction.PartnerTeleport:\n                    bind.Category = \"Items\";\n                    bind.Key1 = Keys.Z;\n                    bind.Shift1 = true;\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1351,
+          "handler": "case KeyBindAction.PartnerTeleport:\n                        if (Observer) continue;\n\n                        CEnvir.Enqueue(new C.MarriageTeleport());\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "ToggleItemLock",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 568,
+      "defaultDefinition": "case KeyBindAction.ToggleItemLock:\n                    bind.Category = \"Items\";\n                    bind.Key1 = Keys.Scroll;\n                    break;",
+      "routes": [],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "UseBelt01",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 572,
+      "defaultDefinition": "case KeyBindAction.UseBelt01:\n                    bind.Category = \"Items\";\n                    bind.Key1 = Keys.D1;\n                    bind.Key2 = Keys.D1;\n                    bind.Shift2 = true;\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1370,
+          "handler": "case KeyBindAction.UseBelt01:\n                        if (Observer) continue;\n\n                        if (BeltBox.Grid.Grid.Length > 0)\n                        {\n                            if (SelectedCell != null)\n                                SelectedCell.MoveItem(BeltBox.Grid.Grid[0]);\n                            else\n                                BeltBox.Grid.Grid[0].UseItem();\n                        }\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "UseBelt02",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 578,
+      "defaultDefinition": "case KeyBindAction.UseBelt02:\n                    bind.Category = \"Items\";\n                    bind.Key1 = Keys.D2;\n                    bind.Key2 = Keys.D2;\n                    bind.Shift2 = true;\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1381,
+          "handler": "case KeyBindAction.UseBelt02:\n                        if (Observer) continue;\n\n                        if (BeltBox.Grid.Grid.Length > 1)\n                        {\n                            if (SelectedCell != null)\n                                SelectedCell.MoveItem(BeltBox.Grid.Grid[1]);\n                            else\n                                BeltBox.Grid.Grid[1].UseItem();\n                        }\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "UseBelt03",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 584,
+      "defaultDefinition": "case KeyBindAction.UseBelt03:\n                    bind.Category = \"Items\";\n                    bind.Key1 = Keys.D3;\n                    bind.Key2 = Keys.D3;\n                    bind.Shift2 = true;\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1392,
+          "handler": "case KeyBindAction.UseBelt03:\n                        if (Observer) continue;\n\n                        if (BeltBox.Grid.Grid.Length > 2)\n                        {\n                            if (SelectedCell != null)\n                                SelectedCell.MoveItem(BeltBox.Grid.Grid[2]);\n                            else\n                                BeltBox.Grid.Grid[2].UseItem();\n                        }\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "UseBelt04",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 590,
+      "defaultDefinition": "case KeyBindAction.UseBelt04:\n                    bind.Category = \"Items\";\n                    bind.Key1 = Keys.D4;\n                    bind.Key2 = Keys.D4;\n                    bind.Shift2 = true;\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1403,
+          "handler": "case KeyBindAction.UseBelt04:\n                        if (Observer) continue;\n\n\n                        if (BeltBox.Grid.Grid.Length > 3)\n                        {\n                            if (SelectedCell != null)\n                                SelectedCell.MoveItem(BeltBox.Grid.Grid[3]);\n                            else\n                                BeltBox.Grid.Grid[3].UseItem();\n                        }\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "UseBelt05",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 596,
+      "defaultDefinition": "case KeyBindAction.UseBelt05:\n                    bind.Category = \"Items\";\n                    bind.Key1 = Keys.D5;\n                    bind.Key2 = Keys.D5;\n                    bind.Shift2 = true;\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1415,
+          "handler": "case KeyBindAction.UseBelt05:\n                        if (Observer) continue;\n\n\n                        if (BeltBox.Grid.Grid.Length > 4)\n                        {\n                            if (SelectedCell != null)\n                                SelectedCell.MoveItem(BeltBox.Grid.Grid[4]);\n                            else\n                                BeltBox.Grid.Grid[4].UseItem();\n                        }\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "UseBelt06",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 602,
+      "defaultDefinition": "case KeyBindAction.UseBelt06:\n                    bind.Category = \"Items\";\n                    bind.Key1 = Keys.D6;\n                    bind.Key2 = Keys.D6;\n                    bind.Shift2 = true;\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1427,
+          "handler": "case KeyBindAction.UseBelt06:\n                        if (Observer) continue;\n\n\n                        if (BeltBox.Grid.Grid.Length > 5)\n                        {\n                            if (SelectedCell != null)\n                                SelectedCell.MoveItem(BeltBox.Grid.Grid[5]);\n                            else\n                                BeltBox.Grid.Grid[5].UseItem();\n                        }\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "UseBelt07",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 608,
+      "defaultDefinition": "case KeyBindAction.UseBelt07:\n                    bind.Category = \"Items\";\n                    bind.Key1 = Keys.D7;\n                    bind.Key2 = Keys.D7;\n                    bind.Shift2 = true;\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1439,
+          "handler": "case KeyBindAction.UseBelt07:\n                        if (Observer) continue;\n\n\n                        if (BeltBox.Grid.Grid.Length > 6)\n                        {\n                            if (SelectedCell != null)\n                                SelectedCell.MoveItem(BeltBox.Grid.Grid[6]);\n                            else\n                                BeltBox.Grid.Grid[6].UseItem();\n                        }\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "UseBelt08",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 614,
+      "defaultDefinition": "case KeyBindAction.UseBelt08:\n                    bind.Category = \"Items\";\n                    bind.Key1 = Keys.D8;\n                    bind.Key2 = Keys.D8;\n                    bind.Shift2 = true;\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1451,
+          "handler": "case KeyBindAction.UseBelt08:\n                        if (Observer) continue;\n\n\n                        if (BeltBox.Grid.Grid.Length > 7)\n                        {\n                            if (SelectedCell != null)\n                                SelectedCell.MoveItem(BeltBox.Grid.Grid[7]);\n                            else\n                                BeltBox.Grid.Grid[7].UseItem();\n                        }\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "UseBelt09",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 620,
+      "defaultDefinition": "case KeyBindAction.UseBelt09:\n                    bind.Category = \"Items\";\n                    bind.Key1 = Keys.D9;\n                    bind.Key2 = Keys.D9;\n                    bind.Shift2 = true;\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1463,
+          "handler": "case KeyBindAction.UseBelt09:\n                        if (Observer) continue;\n\n\n                        if (BeltBox.Grid.Grid.Length > 8)\n                        {\n                            if (SelectedCell != null)\n                                SelectedCell.MoveItem(BeltBox.Grid.Grid[8]);\n                            else\n                                BeltBox.Grid.Grid[8].UseItem();\n                        }\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "UseBelt10",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 626,
+      "defaultDefinition": "case KeyBindAction.UseBelt10:\n                    bind.Category = \"Items\";\n                    bind.Key1 = Keys.D0;\n                    bind.Key2 = Keys.D0;\n                    bind.Shift2 = true;\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1475,
+          "handler": "case KeyBindAction.UseBelt10:\n                        if (Observer) continue;\n\n\n                        if (BeltBox.Grid.Grid.Length > 9)\n                        {\n                            if (SelectedCell != null)\n                                SelectedCell.MoveItem(BeltBox.Grid.Grid[9]);\n                            else\n                                BeltBox.Grid.Grid[9].UseItem();\n                        }\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "SpellSet01",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 632,
+      "defaultDefinition": "case KeyBindAction.SpellSet01:\n                    bind.Category = \"Magic\";\n                    bind.Key1 = Keys.F1;\n                    bind.Control1 = true;\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1488,
+          "handler": "case KeyBindAction.SpellSet01:\n                        MagicBarBox.SpellSet = 1;\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "SpellSet02",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 637,
+      "defaultDefinition": "case KeyBindAction.SpellSet02:\n                    bind.Category = \"Magic\";\n                    bind.Key1 = Keys.F2;\n                    bind.Control1 = true;\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1491,
+          "handler": "case KeyBindAction.SpellSet02:\n                        MagicBarBox.SpellSet = 2;\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "SpellSet03",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 642,
+      "defaultDefinition": "case KeyBindAction.SpellSet03:\n                    bind.Category = \"Magic\";\n                    bind.Key1 = Keys.F3;\n                    bind.Control1 = true;\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1494,
+          "handler": "case KeyBindAction.SpellSet03:\n                        MagicBarBox.SpellSet = 3;\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "SpellSet04",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 647,
+      "defaultDefinition": "case KeyBindAction.SpellSet04:\n                    bind.Category = \"Magic\";\n                    bind.Key1 = Keys.F4;\n                    bind.Control1 = true;\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1497,
+          "handler": "case KeyBindAction.SpellSet04:\n                        MagicBarBox.SpellSet = 4;\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "SpellUse01",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 652,
+      "defaultDefinition": "case KeyBindAction.SpellUse01:\n                    bind.Category = \"Magic\";\n                    bind.Key1 = Keys.F1;\n                    bind.Key2 = Keys.F1;\n                    bind.Shift2 = true;\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1501,
+          "handler": "case KeyBindAction.SpellUse01:\n                        if (Observer) continue;\n\n                        UseMagic(SpellKey.Spell01);\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "SpellUse02",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 658,
+      "defaultDefinition": "case KeyBindAction.SpellUse02:\n                    bind.Category = \"Magic\";\n                    bind.Key1 = Keys.F2;\n                    bind.Key2 = Keys.F2;\n                    bind.Shift2 = true;\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1506,
+          "handler": "case KeyBindAction.SpellUse02:\n                        if (Observer) continue;\n\n                        UseMagic(SpellKey.Spell02);\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "SpellUse03",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 664,
+      "defaultDefinition": "case KeyBindAction.SpellUse03:\n                    bind.Category = \"Magic\";\n                    bind.Key1 = Keys.F3;\n                    bind.Key2 = Keys.F3;\n                    bind.Shift2 = true;\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1511,
+          "handler": "case KeyBindAction.SpellUse03:\n                        if (Observer) continue;\n\n                        UseMagic(SpellKey.Spell03);\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "SpellUse04",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 670,
+      "defaultDefinition": "case KeyBindAction.SpellUse04:\n                    bind.Category = \"Magic\";\n                    bind.Key1 = Keys.F4;\n                    bind.Key2 = Keys.F4;\n                    bind.Shift2 = true;\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1516,
+          "handler": "case KeyBindAction.SpellUse04:\n                        if (Observer) continue;\n\n                        UseMagic(SpellKey.Spell04);\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "SpellUse05",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 676,
+      "defaultDefinition": "case KeyBindAction.SpellUse05:\n                    bind.Category = \"Magic\";\n                    bind.Key1 = Keys.F5;\n                    bind.Key2 = Keys.F5;\n                    bind.Shift2 = true;\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1521,
+          "handler": "case KeyBindAction.SpellUse05:\n                        if (Observer) continue;\n\n                        UseMagic(SpellKey.Spell05);\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "SpellUse06",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 682,
+      "defaultDefinition": "case KeyBindAction.SpellUse06:\n                    bind.Category = \"Magic\";\n                    bind.Key1 = Keys.F6;\n                    bind.Key2 = Keys.F6;\n                    bind.Shift2 = true;\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1526,
+          "handler": "case KeyBindAction.SpellUse06:\n                        if (Observer) continue;\n\n                        UseMagic(SpellKey.Spell06);\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "SpellUse07",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 688,
+      "defaultDefinition": "case KeyBindAction.SpellUse07:\n                    bind.Category = \"Magic\";\n                    bind.Key1 = Keys.F7;\n                    bind.Key2 = Keys.F7;\n                    bind.Shift2 = true;\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1531,
+          "handler": "case KeyBindAction.SpellUse07:\n                        if (Observer) continue;\n\n                        UseMagic(SpellKey.Spell07);\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "SpellUse08",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 694,
+      "defaultDefinition": "case KeyBindAction.SpellUse08:\n                    bind.Category = \"Magic\";\n                    bind.Key1 = Keys.F8;\n                    bind.Key2 = Keys.F8;\n                    bind.Shift2 = true;\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1536,
+          "handler": "case KeyBindAction.SpellUse08:\n                        if (Observer) continue;\n\n                        UseMagic(SpellKey.Spell08);\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "SpellUse09",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 700,
+      "defaultDefinition": "case KeyBindAction.SpellUse09:\n                    bind.Category = \"Magic\";\n                    bind.Key1 = Keys.F9;\n                    bind.Key2 = Keys.F9;\n                    bind.Shift2 = true;\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1541,
+          "handler": "case KeyBindAction.SpellUse09:\n                        if (Observer) continue;\n\n                        UseMagic(SpellKey.Spell09);\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "SpellUse10",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 706,
+      "defaultDefinition": "case KeyBindAction.SpellUse10:\n                    bind.Category = \"Magic\";\n                    bind.Key1 = Keys.F10;\n                    bind.Key2 = Keys.F10;\n                    bind.Shift2 = true;\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1546,
+          "handler": "case KeyBindAction.SpellUse10:\n                        if (Observer) continue;\n\n                        UseMagic(SpellKey.Spell10);\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "SpellUse11",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 712,
+      "defaultDefinition": "case KeyBindAction.SpellUse11:\n                    bind.Category = \"Magic\";\n                    bind.Key1 = Keys.F11;\n                    bind.Key2 = Keys.F11;\n                    bind.Shift2 = true;\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1551,
+          "handler": "case KeyBindAction.SpellUse11:\n                        if (Observer) continue;\n\n                        UseMagic(SpellKey.Spell11);\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "SpellUse12",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 718,
+      "defaultDefinition": "case KeyBindAction.SpellUse12:\n                    bind.Category = \"Magic\";\n                    bind.Key1 = Keys.F12;\n                    bind.Key2 = Keys.F12;\n                    bind.Shift2 = true;\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1556,
+          "handler": "case KeyBindAction.SpellUse12:\n                        if (Observer) continue;\n\n                        UseMagic(SpellKey.Spell12);\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "SpellUse13",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 724,
+      "defaultDefinition": "case KeyBindAction.SpellUse13:\n                    bind.Category = \"Magic\";\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1561,
+          "handler": "case KeyBindAction.SpellUse13:\n                        if (Observer) continue;\n\n                        UseMagic(SpellKey.Spell13);\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "SpellUse14",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 727,
+      "defaultDefinition": "case KeyBindAction.SpellUse14:\n                    bind.Category = \"Magic\";\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1566,
+          "handler": "case KeyBindAction.SpellUse14:\n                        if (Observer) continue;\n\n                        UseMagic(SpellKey.Spell14);\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "SpellUse15",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 730,
+      "defaultDefinition": "case KeyBindAction.SpellUse15:\n                    bind.Category = \"Magic\";\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1571,
+          "handler": "case KeyBindAction.SpellUse15:\n                        if (Observer) continue;\n\n                        UseMagic(SpellKey.Spell15);\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "SpellUse16",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 733,
+      "defaultDefinition": "case KeyBindAction.SpellUse16:\n                    bind.Category = \"Magic\";\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1576,
+          "handler": "case KeyBindAction.SpellUse16:\n                        if (Observer) continue;\n\n                        UseMagic(SpellKey.Spell16);\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "SpellUse17",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 736,
+      "defaultDefinition": "case KeyBindAction.SpellUse17:\n                    bind.Category = \"Magic\";\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1581,
+          "handler": "case KeyBindAction.SpellUse17:\n                        if (Observer) continue;\n\n                        UseMagic(SpellKey.Spell17);\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "SpellUse18",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 739,
+      "defaultDefinition": "case KeyBindAction.SpellUse18:\n                    bind.Category = \"Magic\";\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1586,
+          "handler": "case KeyBindAction.SpellUse18:\n                        if (Observer) continue;\n\n                        UseMagic(SpellKey.Spell18);\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "SpellUse19",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 742,
+      "defaultDefinition": "case KeyBindAction.SpellUse19:\n                    bind.Category = \"Magic\";\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1591,
+          "handler": "case KeyBindAction.SpellUse19:\n                        if (Observer) continue;\n\n                        UseMagic(SpellKey.Spell19);\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "SpellUse20",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 745,
+      "defaultDefinition": "case KeyBindAction.SpellUse20:\n                    bind.Category = \"Magic\";\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1596,
+          "handler": "case KeyBindAction.SpellUse20:\n                        if (Observer) continue;\n\n                        UseMagic(SpellKey.Spell20);\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "SpellUse21",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 748,
+      "defaultDefinition": "case KeyBindAction.SpellUse21:\n                    bind.Category = \"Magic\";\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1601,
+          "handler": "case KeyBindAction.SpellUse21:\n                        if (Observer) continue;\n\n                        UseMagic(SpellKey.Spell21);\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "SpellUse22",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 751,
+      "defaultDefinition": "case KeyBindAction.SpellUse22:\n                    bind.Category = \"Magic\";\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1606,
+          "handler": "case KeyBindAction.SpellUse22:\n                        if (Observer) continue;\n\n                        UseMagic(SpellKey.Spell22);\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "SpellUse23",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 754,
+      "defaultDefinition": "case KeyBindAction.SpellUse23:\n                    bind.Category = \"Magic\";\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1611,
+          "handler": "case KeyBindAction.SpellUse23:\n                        if (Observer) continue;\n\n                        UseMagic(SpellKey.Spell23);\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "SpellUse24",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 757,
+      "defaultDefinition": "case KeyBindAction.SpellUse24:\n                    bind.Category = \"Magic\";\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1616,
+          "handler": "case KeyBindAction.SpellUse24:\n                        if (Observer) continue;\n\n                        UseMagic(SpellKey.Spell24);\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "MonsterHealthDetails",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 760,
+      "defaultDefinition": "case KeyBindAction.MonsterHealthDetails:\n                    bind.Category = \"Functions\";\n                    bind.Key1 = Keys.H;\n                    break;",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1189,
+          "handler": "case KeyBindAction.MonsterHealthDetails:\n                        if (DXTextBox.ActiveTextBox == null && !ConfigBox.IsVisible && !ConfigBox.KeyBindWindow.IsVisible)\n                            MonsterBox.BeginDetails(e.KeyData);\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    },
+    {
+      "action": "FortuneWindow",
+      "source": "Client/Envir/CEnvir.cs",
+      "line": 764,
+      "defaultDefinition": "case KeyBindAction.FortuneWindow:\n                    bind.Category = \"Windows\";\n                    bind.Key1 = Keys.W;\n                    bind.Control1 = true;\n                    break;\n            }\n        }\n\n        public static float FontSize(float size)\n        {\n            return (size - Config.FontSizeMod) * (96F / DXManager.Graphics.DpiX);\n        }\n\n        public static int ErrorCount;\n        private static string LastError;\n        public static void SaveError(string ex)\n        {\n            try\n            {\n                if (++ErrorCount > 20 || String.Compare(ex, LastError, StringComparison.OrdinalIgnoreCase) == 0) return;\n\n                const string LogPath = @\".\\Errors\\\";\n\n                LastError = ex;\n                string state = $\"State = {Target?.DisplayRectangle}\"; \n\n                if (!Directory.Exists(LogPath))\n                    Directory.CreateDirectory(LogPath);\n\n                File.AppendAllText($\"{LogPath}{Now.Year}-{Now.Month}-{Now.Day}.txt\", LastError + Environment.NewLine + state + Environment.NewLine);\n            }\n            catch\n            { }\n        }\n\n        public static void Unload()\n        {\n            CConnection con = Connection;\n\n            Connection = null;\n\n            con?.Disconnect();\n        }\n        public static KeyBindInfo GetKeyBind(KeyBindAction action)\n        {\n            return KeyBinds.Binding.FirstOrDefault(x => x.Action == action);\n        }\n        public static string GetText(Keys key)\n        {\n            switch (key)\n            {\n                case Keys.None:\n                    return string.Empty;\n                case Keys.Back:\n                    return \"Backspace\";\n                case Keys.Capital:\n                    return \"Cap Lock\";\n                case Keys.Scroll:\n                    return \"Scroll Lock\";\n                case Keys.NumLock:\n                    return \"Num Lock\";\n                case Keys.Prior:\n                    return \"Page Up\";\n                case Keys.Next:\n                    return \"Page Down\";\n                case Keys.Multiply:\n                    return \"Num Pad *\";\n                case Keys.Add:\n                    return \"Num Pad +\";\n                case Keys.Subtract:\n                    return \"Num Pad -\";\n                case Keys.Decimal:\n                    return \"Num Pad .\";\n                case Keys.Divide:\n                    return \"Num Pad /\";\n                case Keys.OemSemicolon:\n                    return \";\";\n                case Keys.Oemplus:\n                    return \"=\";\n                case Keys.Oemcomma:\n                    return \",\";\n                case Keys.OemMinus:\n                    return \"-\";\n                case Keys.OemPeriod:\n                    return \".\";\n                case Keys.OemQuestion:\n                    return \"/\";\n                case Keys.Oemtilde:\n                    return \"'\";\n                case Keys.OemOpenBrackets:\n                    return \"[\";\n                case Keys.OemCloseBrackets:\n                    return \"]\";\n                case Keys.OemQuotes:\n                    return \"#\";\n                case Keys.Oem8:\n                    return \"`\";\n                case Keys.OemBackslash:\n                    return \"\\\\\";\n                case Keys.D1:\n                    return \"1\";\n                case Keys.D2:\n                    return \"2\";\n                case Keys.D3:\n                    return \"3\";\n                case Keys.D4:\n                    return \"4\";\n                case Keys.D5:\n                    return \"5\";\n                case Keys.D6:\n                    return \"6\";\n                case Keys.D7:\n                    return \"7\";\n                case Keys.D8:\n                    return \"8\";\n                case Keys.D9:\n                    return \"9\";\n                case Keys.D0:\n                    return \"0\";",
+      "routes": [
+        {
+          "source": "Client/Scenes/GameScene.cs",
+          "line": 1205,
+          "handler": "case KeyBindAction.FortuneWindow:\n                        FortuneCheckerBox.Visible = !FortuneCheckerBox.Visible;\n                        break;"
+        }
+      ],
+      "target": "Existing action routing and configured KeyBinds retained; OfficialV1 only changes UI placement",
+      "validation": "UI-13..16/27 execute configured action, not a hardcoded replacement key"
+    }
+  ],
+  "publicUiBindings": [
+    {
+      "kind": "public-ui-binding",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 20,
+      "text": "public DXLabel CharacterNameLabel, GuildNameLabel, GuildRankLabel;"
+    },
+    {
+      "kind": "public-ui-binding",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 21,
+      "text": "public DXImageControl MarriageIcon;"
+    },
+    {
+      "kind": "public-ui-binding",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 25,
+      "text": "public DXCheckBox ShowHelmetBox;"
+    },
+    {
+      "kind": "public-ui-binding",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 27,
+      "text": "public DXLabel WearWeightLabel, HandWeightLabel;"
+    },
+    {
+      "kind": "public-ui-binding",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 36,
+      "text": "public DXLabel RemainingLabel;"
+    },
+    {
+      "kind": "public-ui-binding",
+      "source": "Client/Scenes/Views/InventoryDialog.cs",
+      "line": 17,
+      "text": "public DXLabel GoldLabel, WeightLabel;"
+    },
+    {
+      "kind": "public-ui-binding",
+      "source": "Client/Scenes/Views/MainPanel.cs",
+      "line": 15,
+      "text": "public DXImageControl ExperienceBar, NewMailIcon, CompletedQuestIcon, AvailableQuestIcon;"
+    },
+    {
+      "kind": "public-ui-binding",
+      "source": "Client/Scenes/Views/MainPanel.cs",
+      "line": 17,
+      "text": "public DXLabel ClassLabel, LevelLabel, ACLabel, MRLabel, DCLabel, MCLabel, SCLabel, AccuracyLabel, AgilityLabel, HealthLabel, ManaLabel, ExperienceLabel, AttackModeLabel, PetModeLabel;"
+    },
+    {
+      "kind": "public-ui-binding",
+      "source": "Client/Scenes/Views/NPCDialog.cs",
+      "line": 28,
+      "text": "public DXLabel PageText;"
+    },
+    {
+      "kind": "public-ui-binding",
+      "source": "Client/Scenes/Views/NPCDialog.cs",
+      "line": 573,
+      "text": "public DXCheckBox GuildCheckBox;"
+    },
+    {
+      "kind": "public-ui-binding",
+      "source": "Client/Scenes/Views/NPCDialog.cs",
+      "line": 949,
+      "text": "public DXImageControl GoldIcon;"
+    },
+    {
+      "kind": "public-ui-binding",
+      "source": "Client/Scenes/Views/NPCDialog.cs",
+      "line": 951,
+      "text": "public DXLabel ItemNameLabel, RequirementLabel, CostLabel;"
+    },
+    {
+      "kind": "public-ui-binding",
+      "source": "Client/Scenes/Views/NPCDialog.cs",
+      "line": 1123,
+      "text": "public DXLabel GoldLabel;"
+    },
+    {
+      "kind": "public-ui-binding",
+      "source": "Client/Scenes/Views/NPCDialog.cs",
+      "line": 1304,
+      "text": "public DXLabel GoldLabel;"
+    },
+    {
+      "kind": "public-ui-binding",
+      "source": "Client/Scenes/Views/NPCDialog.cs",
+      "line": 1307,
+      "text": "public DXCheckBox SpecialCheckBox;"
+    },
+    {
+      "kind": "public-ui-binding",
+      "source": "Client/Scenes/Views/NPCDialog.cs",
+      "line": 1308,
+      "text": "public DXCheckBox GuildCheckBox;"
+    },
+    {
+      "kind": "public-ui-binding",
+      "source": "Client/Scenes/Views/NPCDialog.cs",
+      "line": 1752,
+      "text": "public DXCheckBox DurabilityCheckBox, DCCheckBox, SPCheckBox, FireCheckBox, IceCheckBox, LightningCheckBox, WindCheckBox, HolyCheckBox, DarkCheckBox, PhantomCheckBox;"
+    },
+    {
+      "kind": "public-ui-binding",
+      "source": "Client/Scenes/Views/NPCDialog.cs",
+      "line": 1757,
+      "text": "public DXLabel DurationLabel;"
+    },
+    {
+      "kind": "public-ui-binding",
+      "source": "Client/Scenes/Views/NPCDialog.cs",
+      "line": 2494,
+      "text": "public DXLabel ItemNameLabel, RefineTypeLabel, ChanceLabel, MaxChanceLabel, RetrieveTimeLabel;"
+    },
+    {
+      "kind": "public-ui-binding",
+      "source": "Client/Scenes/Views/NPCDialog.cs",
+      "line": 2880,
+      "text": "public DXLabel TasksLabel, DescriptionLabel, EndLabel;"
+    },
+    {
+      "kind": "public-ui-binding",
+      "source": "Client/Scenes/Views/NPCDialog.cs",
+      "line": 3425,
+      "text": "public DXLabel QuestNameLabel;"
+    },
+    {
+      "kind": "public-ui-binding",
+      "source": "Client/Scenes/Views/NPCDialog.cs",
+      "line": 3504,
+      "text": "public DXLabel NameLabel, IndexLabel, PriceLabel;"
+    },
+    {
+      "kind": "public-ui-binding",
+      "source": "Client/Scenes/Views/NPCDialog.cs",
+      "line": 4110,
+      "text": "public DXLabel NameLabel, LevelLabel;"
+    },
+    {
+      "kind": "public-ui-binding",
+      "source": "Client/Scenes/Views/NPCDialog.cs",
+      "line": 4761,
+      "text": "public DXLabel CostLabel;"
+    },
+    {
+      "kind": "public-ui-binding",
+      "source": "Client/Scenes/Views/NPCDialog.cs",
+      "line": 5035,
+      "text": "public DXCheckBox DCCheckBox, SPCheckBox, FireCheckBox, IceCheckBox, LightningCheckBox, WindCheckBox, HolyCheckBox, DarkCheckBox, PhantomCheckBox;"
+    },
+    {
+      "kind": "public-ui-binding",
+      "source": "Client/Scenes/Views/NPCDialog.cs",
+      "line": 6155,
+      "text": "public DXLabel CostLabel;"
+    },
+    {
+      "kind": "public-ui-binding",
+      "source": "Client/Controls/DXItemCell.cs",
+      "line": 503,
+      "text": "public DXLabel CountLabel;"
+    }
+  ],
+  "hudEntries": [
+    {
+      "kind": "hud-entry-handler-excerpt",
+      "source": "Client/Scenes/Views/MainPanel.cs",
+      "line": 123,
+      "text": "CharacterButton.MouseClick += (o, e) =>\n            {\n                GameScene.Game.CharacterBox.Visible = !GameScene.Game.CharacterBox.Visible;"
+    },
+    {
+      "kind": "hud-entry-handler-excerpt",
+      "source": "Client/Scenes/Views/MainPanel.cs",
+      "line": 137,
+      "text": "InventoryButton.MouseClick += (o, e) => GameScene.Game.InventoryBox.Visible = !GameScene.Game.InventoryBox.Visible;"
+    },
+    {
+      "kind": "hud-entry-handler-excerpt",
+      "source": "Client/Scenes/Views/MainPanel.cs",
+      "line": 147,
+      "text": "SpellButton.MouseClick += (o, e) => GameScene.Game.MagicBox.Visible = !GameScene.Game.MagicBox.Visible;"
+    },
+    {
+      "kind": "hud-entry-handler-excerpt",
+      "source": "Client/Scenes/Views/MainPanel.cs",
+      "line": 157,
+      "text": "QuestButton.MouseClick += (o, e) => GameScene.Game.QuestBox.Visible = !GameScene.Game.QuestBox.Visible;"
+    },
+    {
+      "kind": "hud-entry-handler-excerpt",
+      "source": "Client/Scenes/Views/MainPanel.cs",
+      "line": 167,
+      "text": "MailButton.MouseClick += (o, e) => GameScene.Game.MailBox.Visible = !GameScene.Game.MailBox.Visible;"
+    },
+    {
+      "kind": "hud-entry-handler-excerpt",
+      "source": "Client/Scenes/Views/MainPanel.cs",
+      "line": 214,
+      "text": "BeltButton.MouseClick += (o, e) => GameScene.Game.BeltBox.Visible = !GameScene.Game.BeltBox.Visible;"
+    },
+    {
+      "kind": "hud-entry-handler-excerpt",
+      "source": "Client/Scenes/Views/MainPanel.cs",
+      "line": 224,
+      "text": "GroupButton.MouseClick += (o,e) => GameScene.Game.GroupBox.Visible = !GameScene.Game.GroupBox.Visible;"
+    },
+    {
+      "kind": "hud-entry-handler-excerpt",
+      "source": "Client/Scenes/Views/MainPanel.cs",
+      "line": 234,
+      "text": "ConfigButton.MouseClick += (o, e) => GameScene.Game.ConfigBox.Visible = !GameScene.Game.ConfigBox.Visible;"
+    },
+    {
+      "kind": "hud-entry-handler-excerpt",
+      "source": "Client/Scenes/Views/MainPanel.cs",
+      "line": 244,
+      "text": "CashShopButton.MouseClick += (o, e) =>\n            {\n                if (GameScene.Game.MarketPlaceBox.StoreTab.IsVisible)\n                    GameScene.Game.MarketPlaceBox.Visible = false;"
+    }
+  ],
+  "packetConstructors": [
+    {
+      "kind": "packet-constructor",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 334,
+      "text": "new C.HelmetToggle"
+    },
+    {
+      "kind": "packet-constructor",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 1447,
+      "text": "new C.Hermit"
+    },
+    {
+      "kind": "packet-constructor",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 1452,
+      "text": "new C.Hermit"
+    },
+    {
+      "kind": "packet-constructor",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 1474,
+      "text": "new C.Hermit"
+    },
+    {
+      "kind": "packet-constructor",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 1479,
+      "text": "new C.Hermit"
+    },
+    {
+      "kind": "packet-constructor",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 1501,
+      "text": "new C.Hermit"
+    },
+    {
+      "kind": "packet-constructor",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 1506,
+      "text": "new C.Hermit"
+    },
+    {
+      "kind": "packet-constructor",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 1528,
+      "text": "new C.Hermit"
+    },
+    {
+      "kind": "packet-constructor",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 1533,
+      "text": "new C.Hermit"
+    },
+    {
+      "kind": "packet-constructor",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 1556,
+      "text": "new C.Hermit"
+    },
+    {
+      "kind": "packet-constructor",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 1561,
+      "text": "new C.Hermit"
+    },
+    {
+      "kind": "packet-constructor",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 1583,
+      "text": "new C.Hermit"
+    },
+    {
+      "kind": "packet-constructor",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 1588,
+      "text": "new C.Hermit"
+    },
+    {
+      "kind": "packet-constructor",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 1610,
+      "text": "new C.Hermit"
+    },
+    {
+      "kind": "packet-constructor",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 1615,
+      "text": "new C.Hermit"
+    },
+    {
+      "kind": "packet-constructor",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 1638,
+      "text": "new C.Hermit"
+    },
+    {
+      "kind": "packet-constructor",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 1643,
+      "text": "new C.Hermit"
+    },
+    {
+      "kind": "packet-constructor",
+      "source": "Client/Scenes/Views/NPCDialog.cs",
+      "line": 115,
+      "text": "new C.NPCClose"
+    },
+    {
+      "kind": "packet-constructor",
+      "source": "Client/Scenes/Views/NPCDialog.cs",
+      "line": 330,
+      "text": "new C.NPCButton"
+    },
+    {
+      "kind": "packet-constructor",
+      "source": "Client/Scenes/Views/NPCDialog.cs",
+      "line": 739,
+      "text": "new C.NPCBuy"
+    },
+    {
+      "kind": "packet-constructor",
+      "source": "Client/Scenes/Views/NPCDialog.cs",
+      "line": 757,
+      "text": "new C.NPCBuy"
+    },
+    {
+      "kind": "packet-constructor",
+      "source": "Client/Scenes/Views/NPCDialog.cs",
+      "line": 1237,
+      "text": "new C.NPCSell"
+    },
+    {
+      "kind": "packet-constructor",
+      "source": "Client/Scenes/Views/NPCDialog.cs",
+      "line": 1517,
+      "text": "new C.NPCRepair"
+    },
+    {
+      "kind": "packet-constructor",
+      "source": "Client/Scenes/Views/NPCDialog.cs",
+      "line": 1974,
+      "text": "new C.NPCRefine"
+    },
+    {
+      "kind": "packet-constructor",
+      "source": "Client/Scenes/Views/NPCDialog.cs",
+      "line": 2304,
+      "text": "new C.NPCRefineRetrieve"
+    },
+    {
+      "kind": "packet-constructor",
+      "source": "Client/Scenes/Views/NPCDialog.cs",
+      "line": 3101,
+      "text": "new C.QuestAccept"
+    },
+    {
+      "kind": "packet-constructor",
+      "source": "Client/Scenes/Views/NPCDialog.cs",
+      "line": 3123,
+      "text": "new C.QuestComplete"
+    },
+    {
+      "kind": "packet-constructor",
+      "source": "Client/Scenes/Views/NPCDialog.cs",
+      "line": 3758,
+      "text": "new C.CompanionAdopt"
+    },
+    {
+      "kind": "packet-constructor",
+      "source": "Client/Scenes/Views/NPCDialog.cs",
+      "line": 3773,
+      "text": "new C.CompanionUnlock"
+    },
+    {
+      "kind": "packet-constructor",
+      "source": "Client/Scenes/Views/NPCDialog.cs",
+      "line": 4166,
+      "text": "new C.CompanionStore"
+    },
+    {
+      "kind": "packet-constructor",
+      "source": "Client/Scenes/Views/NPCDialog.cs",
+      "line": 4171,
+      "text": "new C.CompanionRetrieve"
+    },
+    {
+      "kind": "packet-constructor",
+      "source": "Client/Scenes/Views/NPCDialog.cs",
+      "line": 4319,
+      "text": "new C.MarriageMakeRing"
+    },
+    {
+      "kind": "packet-constructor",
+      "source": "Client/Scenes/Views/NPCDialog.cs",
+      "line": 4641,
+      "text": "new C.NPCRefinementStone"
+    },
+    {
+      "kind": "packet-constructor",
+      "source": "Client/Scenes/Views/NPCDialog.cs",
+      "line": 4870,
+      "text": "new C.NPCFragment"
+    },
+    {
+      "kind": "packet-constructor",
+      "source": "Client/Scenes/Views/NPCDialog.cs",
+      "line": 5323,
+      "text": "new C.NPCMasterRefineEvaluate"
+    },
+    {
+      "kind": "packet-constructor",
+      "source": "Client/Scenes/Views/NPCDialog.cs",
+      "line": 5425,
+      "text": "new C.NPCMasterRefine"
+    },
+    {
+      "kind": "packet-constructor",
+      "source": "Client/Scenes/Views/NPCDialog.cs",
+      "line": 5987,
+      "text": "new C.NPCAccessoryUpgrade"
+    },
+    {
+      "kind": "packet-constructor",
+      "source": "Client/Scenes/Views/NPCDialog.cs",
+      "line": 6295,
+      "text": "new C.NPCAccessoryLevelUp"
+    },
+    {
+      "kind": "packet-constructor",
+      "source": "Client/Scenes/Views/NPCDialog.cs",
+      "line": 6449,
+      "text": "new C.NPCAccessoryReset"
+    },
+    {
+      "kind": "packet-constructor",
+      "source": "Client/Scenes/Views/NPCDialog.cs",
+      "line": 6847,
+      "text": "new C.NPCWeaponCraft"
+    },
+    {
+      "kind": "packet-constructor",
+      "source": "Client/Controls/DXItemCell.cs",
+      "line": 800,
+      "text": "new C.ItemMove"
+    },
+    {
+      "kind": "packet-constructor",
+      "source": "Client/Controls/DXItemCell.cs",
+      "line": 829,
+      "text": "new C.ItemMove"
+    },
+    {
+      "kind": "packet-constructor",
+      "source": "Client/Controls/DXItemCell.cs",
+      "line": 878,
+      "text": "new C.BeltLinkChanged"
+    },
+    {
+      "kind": "packet-constructor",
+      "source": "Client/Controls/DXItemCell.cs",
+      "line": 885,
+      "text": "new C.BeltLinkChanged"
+    },
+    {
+      "kind": "packet-constructor",
+      "source": "Client/Controls/DXItemCell.cs",
+      "line": 917,
+      "text": "new C.BeltLinkChanged"
+    },
+    {
+      "kind": "packet-constructor",
+      "source": "Client/Controls/DXItemCell.cs",
+      "line": 961,
+      "text": "new C.ItemMove"
+    },
+    {
+      "kind": "packet-constructor",
+      "source": "Client/Controls/DXItemCell.cs",
+      "line": 989,
+      "text": "new C.ItemMove"
+    },
+    {
+      "kind": "packet-constructor",
+      "source": "Client/Controls/DXItemCell.cs",
+      "line": 1460,
+      "text": "new C.ItemUse"
+    },
+    {
+      "kind": "packet-constructor",
+      "source": "Client/Controls/DXItemCell.cs",
+      "line": 1472,
+      "text": "new C.ItemUse"
+    },
+    {
+      "kind": "packet-constructor",
+      "source": "Client/Controls/DXItemCell.cs",
+      "line": 1643,
+      "text": "new C.ItemSplit"
+    },
+    {
+      "kind": "packet-constructor",
+      "source": "Client/Controls/DXItemCell.cs",
+      "line": 1656,
+      "text": "new C.ItemLock"
+    },
+    {
+      "kind": "packet-constructor",
+      "source": "Client/Controls/DXItemCell.cs",
+      "line": 2169,
+      "text": "new C.MarriageTeleport"
+    },
+    {
+      "kind": "packet-constructor",
+      "source": "Client/Controls/DXItemCell.cs",
+      "line": 2235,
+      "text": "new C.MarriageTeleport"
+    },
+    {
+      "kind": "packet-constructor",
+      "source": "Client/Controls/DXItemCell.cs",
+      "line": 2259,
+      "text": "new C.ItemLock"
+    },
+    {
+      "kind": "packet-constructor",
+      "source": "Client/Scenes/Views/ChatTextBox.cs",
+      "line": 168,
+      "text": "new C.Chat"
+    }
+  ],
+  "confirmationDialogs": [
+    {
+      "kind": "confirmation-or-input-dialog",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 1443,
+      "text": "new DXMessageBox"
+    },
+    {
+      "kind": "confirmation-or-input-dialog",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 1470,
+      "text": "new DXMessageBox"
+    },
+    {
+      "kind": "confirmation-or-input-dialog",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 1497,
+      "text": "new DXMessageBox"
+    },
+    {
+      "kind": "confirmation-or-input-dialog",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 1524,
+      "text": "new DXMessageBox"
+    },
+    {
+      "kind": "confirmation-or-input-dialog",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 1552,
+      "text": "new DXMessageBox"
+    },
+    {
+      "kind": "confirmation-or-input-dialog",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 1579,
+      "text": "new DXMessageBox"
+    },
+    {
+      "kind": "confirmation-or-input-dialog",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 1606,
+      "text": "new DXMessageBox"
+    },
+    {
+      "kind": "confirmation-or-input-dialog",
+      "source": "Client/Scenes/Views/CharacterDialog.cs",
+      "line": 1634,
+      "text": "new DXMessageBox"
+    },
+    {
+      "kind": "confirmation-or-input-dialog",
+      "source": "Client/Scenes/Views/NPCDialog.cs",
+      "line": 736,
+      "text": "new DXItemAmountWindow"
+    },
+    {
+      "kind": "confirmation-or-input-dialog",
+      "source": "Client/Scenes/Views/NPCDialog.cs",
+      "line": 3768,
+      "text": "new DXMessageBox"
+    },
+    {
+      "kind": "confirmation-or-input-dialog",
+      "source": "Client/Scenes/Views/NPCDialog.cs",
+      "line": 5321,
+      "text": "new DXMessageBox"
+    },
+    {
+      "kind": "confirmation-or-input-dialog",
+      "source": "Client/Controls/DXItemCell.cs",
+      "line": 940,
+      "text": "new DXItemAmountWindow"
+    },
+    {
+      "kind": "confirmation-or-input-dialog",
+      "source": "Client/Controls/DXItemCell.cs",
+      "line": 1029,
+      "text": "new DXItemAmountWindow"
+    },
+    {
+      "kind": "confirmation-or-input-dialog",
+      "source": "Client/Controls/DXItemCell.cs",
+      "line": 1638,
+      "text": "new DXItemAmountWindow"
+    }
+  ],
+  "behaviorContracts": [
+    {
+      "surface": "角色",
+      "target": "角色/扩展装备/状态/修炼",
+      "invariants": "16 fixed slot IDs; all public Grid/label/stat dictionaries remain bindable; keep ShowHelmet/Marriage/Hermit handlers",
+      "verification": "UI-17/18 source mapping plus runtime operations"
+    },
+    {
+      "surface": "包裹/快捷栏",
+      "target": "OfficialV1 inventory and belt",
+      "invariants": "49 cells, 10 link identities; ItemMove/Use/Split/Lock/BeltLinkChanged and current item tooltip paths unchanged",
+      "verification": "UI-14 bindings, hover, drag/drop, split/use/sell/lock and packet comparison"
+    },
+    {
+      "surface": "HUD/聊天/地图",
+      "target": "OfficialV1 HUD/chat/minimap frame",
+      "invariants": "All existing HUD labels/buttons and configured key routes remain available; retain IME/focus and map-coordinate conversion",
+      "verification": "UI-13/15/16/27 six resolutions and real input"
+    },
+    {
+      "surface": "NPC/仓库/弹框",
+      "target": "17 NPC cards and associated StorageDialog/modal controls",
+      "invariants": "Same service preconditions, quantity/confirmation/cancel semantics, payload construction, storage capacities and server close behavior",
+      "verification": "UI-19..25 Bindings/Npc suites and runtime packet traces"
+    }
+  ],
+  "runtimeEvidence": {
+    "legacyScreenshots": "not_collected",
+    "legacyPacketTraces": "not_collected",
+    "officialLoggedInScreenshots": "not_collected",
+    "reason": "No authenticated reference session or reproducible logged-in test fixture has been established.",
+    "effect": "Source baseline is usable for infrastructure; dependent visual/behavior acceptance remains open."
+  }
+}

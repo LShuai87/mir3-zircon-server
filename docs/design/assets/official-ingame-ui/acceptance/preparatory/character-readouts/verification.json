@@ -1,0 +1,176 @@
+{
+  "schemaVersion": 1,
+  "kind": "official-ui-optional-character-readouts-verification",
+  "releaseAccepted": false,
+  "sourceChanges": [
+    {
+      "path": "Client/Client.csproj",
+      "beforeSha256": "91c57d8fd1690a625c414ff0dd1fd0cbc24def2b13d8d7a63a6abc21fbc30568",
+      "afterSha256": "8a928b763ac3bf51de8eb2e4394d4a655d340af7a2d8dd6e2b4f67de145d5f73"
+    },
+    {
+      "path": "build/game-ui/Validate-OfficialUiLayout.py",
+      "beforeSha256": "50f0e316452a146f95a2f86bc365069fe227c612a6a47f60ea46cafcf4cfacb0",
+      "afterSha256": "b587840abf96fbe55f7580f99379054ebb7794f5fe34f622a6103ddc85ab55cf"
+    },
+    {
+      "path": "build/game-ui/layout-official-v1.json",
+      "beforeSha256": "496f406266adb07da791fb677cb456abc499cd395fe43237be297c41bc6833c0",
+      "afterSha256": "176accf796f2616e5fac295490e4d59bc98f56493c1568d9dfdd3e78683e91bf"
+    }
+  ],
+  "priorSourceHashes": [
+    {
+      "path": "Client/Scenes/Views/CharacterDialog.cs",
+      "sha256": "5ec5b69f2c644eaf3a53c9d6615df7e39144c07f606df17a6f33f2e58b0f2894"
+    },
+    {
+      "path": "build/game-ui/Prepare-CharacterBindings.py",
+      "sha256": "af6c6b66572e6f3ed885d87bb30f56211b94d4fcc95db14301fb6074dea8a437"
+    }
+  ],
+  "sourceHashes": [
+    {
+      "path": "Client/Client.csproj",
+      "sha256": "8a928b763ac3bf51de8eb2e4394d4a655d340af7a2d8dd6e2b4f67de145d5f73"
+    },
+    {
+      "path": "Client/Scenes/Views/CharacterDialog.cs",
+      "sha256": "e53e95f2d91dc993479cba60620b1f06f7a93c48705a0b38486f8e0894a2f2ec"
+    },
+    {
+      "path": "build/game-ui/Prepare-CharacterBindings.py",
+      "sha256": "bc8536a8973a74df77843f5948f66f0be43ce90acd695b3bbd7368538913d7d3"
+    },
+    {
+      "path": "build/game-ui/Validate-OfficialUiLayout.py",
+      "sha256": "b587840abf96fbe55f7580f99379054ebb7794f5fe34f622a6103ddc85ab55cf"
+    },
+    {
+      "path": "build/game-ui/layout-official-v1.json",
+      "sha256": "176accf796f2616e5fac295490e4d59bc98f56493c1568d9dfdd3e78683e91bf"
+    },
+    {
+      "path": "Client/Envir/GameUiCharacterReadouts.cs",
+      "sha256": "56fd4c059048078f20332c7f506d9ba5443388fc912749983774603a626df015"
+    },
+    {
+      "path": "Client/Scenes/Views/MainPanel.cs",
+      "sha256": "9dc5d908e47aba577e12f8f3b45c5f0fd920c021ce8731769b5655c557f17df2"
+    },
+    {
+      "path": "Client/Scenes/GameScene.cs",
+      "sha256": "2a663876bfe103bd55e52afaf74f370b87f2c0ece99e3505b61dfd82dcc56ee4"
+    },
+    {
+      "path": "Client/Models/UserObject.cs",
+      "sha256": "62ea8a130ab9567f803ef1420b0865aed99cc8ddcf6f76b42c4cafef2ae06abc"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiCharacterReadoutTests.cs",
+      "sha256": "54dd50ad317797d8a2b4a86e1f9216227a4c6c7b6bd5057b87de6769f8f6955a"
+    },
+    {
+      "path": "tests/Run-GameUiCharacterReadoutTests.ps1",
+      "sha256": "405ddcbadab6a97075892aee58d32bd3403af1964fa08db61b9e93dd255cc026"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiChatLayoutTests.cs",
+      "sha256": "77e861cde2e7270dfb1e881c5296c1b4d29d07340bf8a1b688712b093f88fe77"
+    },
+    {
+      "path": "tests/Run-GameUiChatLayoutTests.ps1",
+      "sha256": "07f3586315a2999f959f07ed6986d71689eaaa1f3d4d2ef2113453df27ce9674"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-readouts/character-bindings.draft.json",
+      "sha256": "a69bf7e1c6df2edeed1c7f7286d000f74900035fdbf58d00c84865dfcb7c4930"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-readouts/binding-validation.json",
+      "sha256": "c7b586ade0a6c8e29bed80dd9e308f20f48f3eaa5dca7808b1c89292b3c64035"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-readouts/generated-layout/OfficialUiLayout.Generated.cs",
+      "sha256": "089030af278db8d7dd9470909c5441c73a6eaca7d0234010b6c98ce04407defc"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-readouts/generated-layout/validation.json",
+      "sha256": "84cec80bb41f645ca2fdbfa456625a2fd587dace9c5a43c49ffb05abc11fd1d7"
+    }
+  ],
+  "commands": [
+    {
+      "command": "MSBuild.exe Client/Client.csproj /t:Build /p:Configuration=Debug /p:Platform=AnyCPU /nologo /v:minimal",
+      "exitCode": 0,
+      "result": "pass",
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-readouts/client-debug-build.log",
+      "logSha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "command": "powershell -NoProfile -File tests/Run-GameUiCharacterReadoutTests.ps1",
+      "exitCode": 0,
+      "result": "pass",
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-readouts/readout-tests.log",
+      "logSha256": "79f9189b1763809c1c6dfbd8abe8578038a9575bd92a0c9017a5299f1e33c06e"
+    },
+    {
+      "command": "powershell -NoProfile -File tests/Run-GameUiChatLayoutTests.ps1",
+      "exitCode": 0,
+      "result": "pass",
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-readouts/chat-regression.log",
+      "logSha256": "ec1b5ab4c410d818409e896d851077dfc45f99b681b2999d87c74211d4fe6c9a"
+    },
+    {
+      "command": "powershell -NoProfile -File tests/Run-GameUiLayoutContractTests.ps1 -PythonPath C:/Users/shuai/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+      "exitCode": 0,
+      "result": "pass",
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-readouts/layout-contract-tests.log",
+      "logSha256": "b7ca638f962514a2a5d2f1f34e133c83e9ab1a4f145660b9600ba68c330f24ba"
+    },
+    {
+      "command": "python build/game-ui/Prepare-CharacterBindings.py",
+      "exitCode": 0,
+      "result": "pass",
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-readouts/binding-check.log",
+      "logSha256": "c7b586ade0a6c8e29bed80dd9e308f20f48f3eaa5dca7808b1c89292b3c64035"
+    },
+    {
+      "command": "MSBuild.exe Client/Client.csproj /t:Build /p:Configuration=Release /p:Platform=AnyCPU /nologo /v:minimal",
+      "exitCode": 0,
+      "result": "pass",
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-readouts/client-release-build.log",
+      "logSha256": "c9e24428be1e56c8408af17aacfea3413de3953bfe426d10eb768782f5005ebc"
+    }
+  ],
+  "results": {
+    "characterReadoutChecks": 2474,
+    "chatRegressionChecks": 895,
+    "sourceCultures": [
+      "zh-CN",
+      "en-US",
+      "de-DE"
+    ],
+    "placements": 6,
+    "rebindCycles": 100,
+    "preservedEquipmentCells": 16,
+    "preservedStatLabels": 57,
+    "additionalOptInReadouts": 4,
+    "layoutNodes": 231,
+    "interactiveNodes": 109,
+    "rejectedLayoutContracts": 11,
+    "generatedFilesByteIdentical": 12,
+    "clientDebugBuild": "pass",
+    "clientReleaseBuild": "pass",
+    "runtimeEnabled": false,
+    "gameAcceptanceExecuted": false
+  },
+  "limitations": [
+    "CharacterDialog.UseGameUiReadouts is compiled and tested but not enabled by GameScene. Complete OfficialV1 skin activation remains pending.",
+    "Real HP/MP/XP setters execute their existing GameScene formatters. Level source text and stat maxima changes are covered; full LevelChanged/StatsChanged processing, packets, rendering and A03/A05 game acceptance were not executed.",
+    "Readout bounds are local to the character tab. Window-local generated rectangles must subtract the actual tab origin at integration; offset conversion is covered in control tests.",
+    "Fixed label bounds ellipsize single-line text; complete HP/MP values use source hints or full source text; XP uses existing raw current/max ExperienceBar.Hint.",
+    "Original dictionaries, equipment cells and action handlers remain in place. New four-tab routing, equipment/pivot layout and final art remain pending.",
+    "1024x768 remains the user-confirmed baseline. NPC cards, secondary popups and display settings stay in their existing scope. No repeat screenshot/login/chat sending requested."
+  ]
+}

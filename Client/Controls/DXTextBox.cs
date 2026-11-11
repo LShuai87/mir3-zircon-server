@@ -507,7 +507,33 @@ namespace Client.Controls
                 Owner = owner;
             }
 
+            protected override void WndProc(ref Message m)
+            {
+                // Native edit HWNDs receive keyboard/IME/paste independently of TargetForm.
+                // Keep text/selection queries, lifecycle and server-driven text updates alive.
+                int message = m.Msg;
+                if (CEnvir.GameUiOperationsBlocked &&
+                    ((message >= 0x100 && message <= 0x109) ||
+                     (message >= 0x10D && message <= 0x10F) ||
+                     (message >= 0x281 && message <= 0x291) ||
+                     (message >= 0x200 && message <= 0x20E) ||
+                     message == 0x7B || message == 0x300 || message == 0x302 ||
+                     message == 0x303 || message == 0x304))
+                {
+                    m.Result = IntPtr.Zero;
+                    return;
+                }
+                try { base.WndProc(ref m); }
+                catch (Exception error) { if (!CEnvir.HandleGameUiFailure(error)) throw; }
+            }
+
             #region Methods
+
+            protected override void OnKeyPress(KeyPressEventArgs e)
+            {
+                if (CEnvir.GameUiOperationsBlocked) { e.Handled = true; return; }
+                base.OnKeyPress(e);
+            }
 
             public void NextTextBox()
             {
@@ -587,6 +613,7 @@ namespace Client.Controls
 
             protected override void OnKeyDown(KeyEventArgs e)
             {
+                if (CEnvir.GameUiOperationsBlocked) { e.Handled = e.SuppressKeyPress = true; return; }
                 base.OnKeyDown(e);
 
                 if (Owner == null) return;
@@ -626,6 +653,7 @@ namespace Client.Controls
             }
             protected override void OnKeyUp(KeyEventArgs e)
             {
+                if (CEnvir.GameUiOperationsBlocked) { e.Handled = e.SuppressKeyPress = true; return; }
                 base.OnKeyUp(e);
 
                 if (Owner == null) return;
@@ -659,6 +687,7 @@ namespace Client.Controls
             }
             protected override void OnPreviewKeyDown(PreviewKeyDownEventArgs e)
             {
+                if (CEnvir.GameUiOperationsBlocked) return;
                 base.OnPreviewKeyDown(e);
 
                 if (Owner?.Parent == null) return;

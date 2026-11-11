@@ -1,0 +1,182 @@
+{
+  "schemaVersion": 1,
+  "kind": "scoped-reference-reproduction-validation",
+  "result": "pass",
+  "checkCount": 43,
+  "checks": [
+    {
+      "id": "matching-repeat-identical",
+      "result": "pass"
+    },
+    {
+      "id": "repeat-file-set",
+      "result": "pass"
+    },
+    {
+      "id": "repeat-identical/01-overview-annotated.png",
+      "result": "pass"
+    },
+    {
+      "id": "repeat-identical/02-character-annotated.png",
+      "result": "pass"
+    },
+    {
+      "id": "repeat-identical/03-character-inventory-annotated.png",
+      "result": "pass"
+    },
+    {
+      "id": "repeat-identical/04-equipment-tooltip-annotated.png",
+      "result": "pass"
+    },
+    {
+      "id": "repeat-identical/05-npc-dialog-shop-inventory-annotated.png",
+      "result": "pass"
+    },
+    {
+      "id": "repeat-identical/candidate-alpha-preview.png",
+      "result": "pass"
+    },
+    {
+      "id": "repeat-identical/reference-map.json",
+      "result": "pass"
+    },
+    {
+      "id": "five-active-originals",
+      "result": "pass"
+    },
+    {
+      "id": "33-local-comparisons",
+      "result": "pass"
+    },
+    {
+      "id": "92-candidate-assets",
+      "result": "pass"
+    },
+    {
+      "id": "all-alpha-counts-valid",
+      "result": "pass"
+    },
+    {
+      "id": "reference-only-activation",
+      "result": "pass"
+    },
+    {
+      "id": "historical-source-plan-unchanged",
+      "result": "pass"
+    },
+    {
+      "id": "original-preserved/02-character",
+      "result": "pass"
+    },
+    {
+      "id": "annotation-preserved/02-character",
+      "result": "pass"
+    },
+    {
+      "id": "original-preserved/03-character-inventory",
+      "result": "pass"
+    },
+    {
+      "id": "annotation-preserved/03-character-inventory",
+      "result": "pass"
+    },
+    {
+      "id": "original-preserved/04-equipment-tooltip",
+      "result": "pass"
+    },
+    {
+      "id": "annotation-preserved/04-equipment-tooltip",
+      "result": "pass"
+    },
+    {
+      "id": "original-preserved/05-npc-dialog-shop-inventory",
+      "result": "pass"
+    },
+    {
+      "id": "annotation-preserved/05-npc-dialog-shop-inventory",
+      "result": "pass"
+    },
+    {
+      "id": "original-preserved/01-overview",
+      "result": "pass"
+    },
+    {
+      "id": "annotation-preserved/01-overview",
+      "result": "pass"
+    },
+    {
+      "id": "input-preserved/docs/design/assets/official-ingame-ui/acceptance/reference-finalization/effective-matching-spec.json",
+      "result": "pass"
+    },
+    {
+      "id": "input-preserved/docs/design/assets/official-ingame-ui/acceptance/reference-finalization/panel-matching.json",
+      "result": "pass"
+    },
+    {
+      "id": "input-preserved/build/game-ui/asset-manifest.json",
+      "result": "pass"
+    },
+    {
+      "id": "input-preserved/build/game-ui/composition-recipe.json",
+      "result": "pass"
+    },
+    {
+      "id": "input-preserved/docs/design/assets/official-ingame-ui/acceptance/reference/resolution-confirmation.json",
+      "result": "pass"
+    },
+    {
+      "id": "input-preserved/docs/design/assets/official-ingame-ui/acceptance/reference/availability.json",
+      "result": "pass"
+    },
+    {
+      "id": "input-preserved/docs/design/assets/official-ingame-ui/acceptance/reference/runtime-source-libraries.json",
+      "result": "pass"
+    },
+    {
+      "id": "input-preserved/docs/design/assets/official-ingame-ui/acceptance/reference/source-comparison.json",
+      "result": "pass"
+    },
+    {
+      "id": "generator-preserved",
+      "result": "pass"
+    },
+    {
+      "id": "default-legacy-retained",
+      "result": "pass"
+    },
+    {
+      "id": "reject-existing-output",
+      "result": "pass"
+    },
+    {
+      "id": "fixture-inside-work",
+      "result": "pass"
+    },
+    {
+      "id": "reject-missing-art",
+      "result": "pass"
+    },
+    {
+      "id": "missing-art-no-partial-output",
+      "result": "pass"
+    },
+    {
+      "id": "reject-ignored-screenshot",
+      "result": "pass"
+    },
+    {
+      "id": "ignored-no-partial-output",
+      "result": "pass"
+    },
+    {
+      "id": "reject-wrong-capture-hash",
+      "result": "pass"
+    },
+    {
+      "id": "wrong-hash-no-partial-output",
+      "result": "pass"
+    }
+  ],
+  "releaseAccepted": false,
+  "runtimeReady": false
+}

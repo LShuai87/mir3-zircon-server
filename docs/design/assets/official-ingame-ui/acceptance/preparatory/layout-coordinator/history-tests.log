@@ -1,0 +1,12 @@
+test_duplicate_entries_rejected (__main__.SourceHistoryTests.test_duplicate_entries_rejected) ... ok
+test_missing_transition_rejected (__main__.SourceHistoryTests.test_missing_transition_rejected) ... ok
+test_new_snapshot_tracked_and_cannot_silently_change (__main__.SourceHistoryTests.test_new_snapshot_tracked_and_cannot_silently_change) ... ok
+test_transition_requires_matching_snapshot (__main__.SourceHistoryTests.test_transition_requires_matching_snapshot) ... ok
+test_unknown_transition_rejected (__main__.SourceHistoryTests.test_unknown_transition_rejected) ... ok
+test_valid_history_does_not_rewrite_earlier_report (__main__.SourceHistoryTests.test_valid_history_does_not_rewrite_earlier_report) ... ok
+test_wrong_before_rejected (__main__.SourceHistoryTests.test_wrong_before_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.001s
+
+OK

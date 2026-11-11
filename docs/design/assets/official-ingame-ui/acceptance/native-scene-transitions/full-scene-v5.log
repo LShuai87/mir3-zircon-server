@@ -1,0 +1,18 @@
+Native transition body failure: System.Reflection.TargetInvocationException: 调用的目标发生了异常。 ---> System.ArgumentOutOfRangeException: 指定的参数已超出有效值的范围。
+   在 Client.Envir.CConnection.Process(Disconnect p)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Library.Network.BaseConnection.Process()
+   在 OfficialUiFullSceneTests.Loopback.Send(Packet packet)
+   在 OfficialUiFullSceneTests.ExerciseNativeTransitions(GameUiStartupSession owner, MapInfo map, String evidence, Boolean official)
+System.Reflection.TargetInvocationException: 调用的目标发生了异常。 ---> System.ArgumentOutOfRangeException: 指定的参数已超出有效值的范围。
+   在 Client.Envir.CConnection.Process(Disconnect p)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Library.Network.BaseConnection.Process()
+   在 OfficialUiFullSceneTests.Loopback.Send(Packet packet)
+   在 OfficialUiFullSceneTests.ExerciseNativeTransitions(GameUiStartupSession owner, MapInfo map, String evidence, Boolean official)
+   在 OfficialUiFullSceneTests.Main(String[] args)
+Exception: E:\workspace\mir3-zircon-server\tests\Run-GameUiFullSceneTests.ps1:33
+Line |
+  33 |          if ($LASTEXITCODE -ne 0) { throw 'FullScene tests failed.' }
+     |                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | FullScene tests failed.

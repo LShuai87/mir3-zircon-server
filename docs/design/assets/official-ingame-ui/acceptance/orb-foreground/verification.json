@@ -1,0 +1,48 @@
+{
+  "date": "2026-11-10",
+  "source": {
+    "library": "UI",
+    "index": 145,
+    "size": [
+      225,
+      202
+    ],
+    "offsetInOrb": [
+      0,
+      0
+    ],
+    "config": "build/game-ui/hud-orb-overlay-source.json"
+  },
+  "validation": {
+    "clientDebugBuild": true,
+    "embeddedArtReproduction": true,
+    "hudLayoutChecks": 832,
+    "windowSetChecks": 557306,
+    "gpuStates": [
+      "empty",
+      "half",
+      "full"
+    ],
+    "gpuAssertions": "Opaque overlay pixels match embedded native art exactly; transparent pixels preserve baseline render in all three states. Render state restored; pointer passthrough; fill < ornament < label order; Legacy disposal/rebind tested.",
+    "liveGameAcceptance": false
+  },
+  "files": {
+    "client": {
+      "path": "E:\\workspace\\Debug\\Client\\Zircon.exe",
+      "sha256": "d6c4e165c4968ef99b2ad856d0cdcb77f883feddd05a58393a8465f117b8fbb8"
+    },
+    "atlas": {
+      "path": "E:\\workspace\\Debug\\Client\\Data\\GameUI\\OfficialV1.Zl",
+      "sha256": "dd45cbf51d976a69d28269ee0d27a985def1ee1693cab2b509b74ae347a880a4"
+    },
+    "overlay": {
+      "path": "E:\\workspace\\mir3-zircon-server\\Client\\Resources\\GameUi\\hud-orb-overlay.png",
+      "sha256": "44ed7e817ce7bbf3a5ec45645dc9a191ff63b4510254bd567369edbc084054ad"
+    }
+  },
+  "layoutValidator": {
+    "passed": false,
+    "error": "ValueError: Binding source outside workspace or hash mismatch",
+    "reason": "Pre-existing character-bindings.draft.json digest mismatch; unrelated source file and recorded digest were not modified."
+  }
+}

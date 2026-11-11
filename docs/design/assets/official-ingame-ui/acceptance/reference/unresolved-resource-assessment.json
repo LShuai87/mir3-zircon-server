@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-07T09:01:49.293293+00:00",
+  "matchingReport": "unresolved-matching.json",
+  "matchingReportSha256": "b996c61077f3c60501e8ef279c227aba2ca75d71e6098e165ad2284d347ee7b6",
+  "productionBindingAllowed": false,
+  "items": [
+    {
+      "role": "hud-hp-fill",
+      "indices": [
+        142
+      ],
+      "status": "deferred",
+      "reason": "Color/shape is consistent, but independent best placements and composition pivots are not verified; fill clipping, level changes and overlays remain untested."
+    },
+    {
+      "role": "hud-mp-fill",
+      "indices": [
+        143
+      ],
+      "status": "deferred",
+      "reason": "Color/shape is consistent, but independent best placements and composition pivots are not verified; fill clipping, level changes and overlays remain untested."
+    },
+    {
+      "role": "hud-command-shell",
+      "indices": [
+        1270,
+        140
+      ],
+      "status": "deferred",
+      "reason": "UI[140] and UI[1270] are too similar in visible areas; left panel and wheel are occluded by controls. No unique source established."
+    }
+  ],
+  "additionalGaps": [
+    "Chat background, input border and scrollbar composition are not mapped.",
+    "Button hover/pressed/disabled semantics are not verified by live transitions.",
+    "Alpha, blend, client-space layout and hit rectangles are not established by screenshot matching."
+  ]
+}

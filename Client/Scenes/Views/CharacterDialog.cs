@@ -12,7 +12,7 @@ using C = Library.Network.ClientPackets;
 //Cleaned
 namespace Client.Scenes.Views
 {
-    public sealed class CharacterDialog : DXWindow
+    public sealed partial class CharacterDialog : DXWindow
     {
         #region Properties
         private DXTabControl TabControl;
@@ -34,6 +34,19 @@ namespace Client.Scenes.Views
         public Dictionary<Stat, DXLabel> HermitDisplayStats = new Dictionary<Stat, DXLabel>();
         public Dictionary<Stat, DXLabel> HermitAttackStats = new Dictionary<Stat, DXLabel>();
         public DXLabel RemainingLabel;
+
+        public GameUiCharacterReadouts GameUiReadouts { get; private set; }
+
+        public void UseGameUiReadouts(MainPanel source, GameUiCharacterReadoutLayout layout)
+        {
+            if (IsDisposed) throw new ObjectDisposedException(nameof(CharacterDialog));
+            if (GameUiCompositionLayout != null)
+                throw new InvalidOperationException("Disable character composition before replacing its readouts.");
+            // Validate/build a replacement first: a rejected layout must leave the active binding intact.
+            var replacement = layout == null ? null : new GameUiCharacterReadouts(CharacterTab, source, layout);
+            GameUiReadouts?.Dispose();
+            GameUiReadouts = replacement;
+        }
 
         public override WindowType Type => WindowType.CharacterBox;
         public override bool CustomSize => false;
@@ -60,6 +73,9 @@ namespace Client.Scenes.Views
                 TabButton = { Label = { Text = "角色" } },
             };
             CharacterTab.BeforeChildrenDraw += CharacterTab_BeforeChildrenDraw;
+            MouseMove += (o, e) => UpdateGameUiPreviewHover(e.Location);
+            MouseLeave += (o, e) => ClearGameUiPreviewHover();
+            CharacterTab.IsVisibleChanged += (o, e) => { if (!CharacterTab.IsVisible) ClearGameUiPreviewHover(); };
             StatsTab = new DXTab
             {
                 Parent = TabControl,
@@ -81,6 +97,7 @@ namespace Client.Scenes.Views
                 Location = new Point((CharacterTab.Size.Width - 150) / 2, 5),
 
             };
+            gameUiNamePanel = namePanel;
             CharacterNameLabel = new DXLabel
             {
                 AutoSize = false,
@@ -179,6 +196,8 @@ namespace Client.Scenes.Views
                 Location = new Point(215, 140),
                 Parent = CharacterTab,
                 FixedBorder = true,
+                Visible = false,
+                ReadOnly = true,
                 Border = true,
                 ItemGrid = GameScene.Game.Equipment,
                 Slot = (int)EquipmentSlot.Torch,
@@ -349,6 +368,7 @@ namespace Client.Scenes.Views
                 ForeColour = Color.White,
                 Text = "0-0"
             };
+            gameUiStatCaptions.Add("DisplayStats.MaxAC", label);
 
             label = new DXLabel
             {
@@ -364,6 +384,7 @@ namespace Client.Scenes.Views
                 ForeColour = Color.White,
                 Text = "0-0"
             };
+            gameUiStatCaptions.Add("DisplayStats.MaxMR", label);
 
             label = new DXLabel
             {
@@ -379,6 +400,7 @@ namespace Client.Scenes.Views
                 ForeColour = Color.White,
                 Text = "0-0"
             };
+            gameUiStatCaptions.Add("DisplayStats.MaxDC", label);
 
             label = new DXLabel
             {
@@ -394,6 +416,7 @@ namespace Client.Scenes.Views
                 ForeColour = Color.White,
                 Text = "0-0"
             };
+            gameUiStatCaptions.Add("DisplayStats.MaxMC", label);
 
             label = new DXLabel
             {
@@ -409,6 +432,7 @@ namespace Client.Scenes.Views
                 ForeColour = Color.White,
                 Text = "0-0"
             };
+            gameUiStatCaptions.Add("DisplayStats.MaxSC", label);
 
 
             label = new DXLabel
@@ -425,6 +449,7 @@ namespace Client.Scenes.Views
                 ForeColour = Color.White,
                 Text = "0"
             };
+            gameUiStatCaptions.Add("DisplayStats.Accuracy", label);
 
 
             label = new DXLabel
@@ -441,6 +466,7 @@ namespace Client.Scenes.Views
                 ForeColour = Color.White,
                 Text = "0"
             };
+            gameUiStatCaptions.Add("DisplayStats.Agility", label);
 
             label = new DXLabel
             {
@@ -449,6 +475,7 @@ namespace Client.Scenes.Views
             };
             label.Location = new Point(StatsTab.Size.Width / 4 - label.Size.Width + 25, y += 20);
 
+            gameUiDetailCaptions.Add("WearWeightLabel", label);
             WearWeightLabel = new DXLabel
             {
                 Parent = StatsTab,
@@ -464,6 +491,7 @@ namespace Client.Scenes.Views
             };
             label.Location = new Point(StatsTab.Size.Width / 4 * 3 - label.Size.Width + 25, y);
 
+            gameUiDetailCaptions.Add("HandWeightLabel", label);
             HandWeightLabel = new DXLabel
             {
                 Parent = StatsTab,
@@ -488,6 +516,7 @@ namespace Client.Scenes.Views
                 ForeColour = Color.White,
                 Text = "0"
             };
+            gameUiStatCaptions.Add("DisplayStats.AttackSpeed", label);
 
 
             label = new DXLabel
@@ -504,6 +533,7 @@ namespace Client.Scenes.Views
                 ForeColour = Color.White,
                 Text = "0"
             };
+            gameUiStatCaptions.Add("DisplayStats.Luck", label);
 
             label = new DXLabel
             {
@@ -519,6 +549,7 @@ namespace Client.Scenes.Views
                 ForeColour = Color.White,
                 Text = "0"
             };
+            gameUiStatCaptions.Add("DisplayStats.Comfort", label);
 
 
 
@@ -536,6 +567,7 @@ namespace Client.Scenes.Views
                 ForeColour = Color.White,
                 Text = "0"
             };
+            gameUiStatCaptions.Add("DisplayStats.LifeSteal", label);
 
             label = new DXLabel
             {
@@ -551,6 +583,7 @@ namespace Client.Scenes.Views
                 ForeColour = Color.White,
                 Text = "0"
             };
+            gameUiStatCaptions.Add("DisplayStats.GoldRate", label);
 
             label = new DXLabel
             {
@@ -566,6 +599,7 @@ namespace Client.Scenes.Views
                 ForeColour = Color.White,
                 Text = "0"
             };
+            gameUiStatCaptions.Add("DisplayStats.CriticalChance", label);
 
             label = new DXLabel
             {
@@ -581,6 +615,7 @@ namespace Client.Scenes.Views
                 ForeColour = Color.White,
                 Text = "0"
             };
+            gameUiStatCaptions.Add("DisplayStats.DropRate", label);
 
             label = new DXLabel
             {
@@ -596,6 +631,7 @@ namespace Client.Scenes.Views
                 ForeColour = Color.White,
                 Text = "0"
             };
+            gameUiStatCaptions.Add("DisplayStats.PickUpRadius", label);
 
 
             label = new DXLabel
@@ -612,6 +648,7 @@ namespace Client.Scenes.Views
                 ForeColour = Color.White,
                 Text = "0"
             };
+            gameUiStatCaptions.Add("DisplayStats.ExperienceRate", label);
 
             label = new DXLabel
             {
@@ -627,6 +664,7 @@ namespace Client.Scenes.Views
                 ForeColour = Color.White,
                 Text = "0"
             };
+            gameUiStatCaptions.Add("DisplayStats.CriticalDamage", label);
 
 
             label = new DXLabel
@@ -643,6 +681,7 @@ namespace Client.Scenes.Views
                 ForeColour = Color.White,
                 Text = "0"
             };
+            gameUiStatCaptions.Add("DisplayStats.Rebirth", label);
 
             label = new DXLabel
             {
@@ -658,6 +697,7 @@ namespace Client.Scenes.Views
                 ForeColour = Color.White,
                 Text = "0"
             };
+            gameUiStatCaptions.Add("DisplayStats.BlockChance", label);
 
 
             label = new DXLabel
@@ -674,6 +714,7 @@ namespace Client.Scenes.Views
                 ForeColour = Color.White,
                 Text = "0"
             };
+            gameUiStatCaptions.Add("DisplayStats.EvasionChance", label);
 
 
             #region Attack
@@ -684,6 +725,7 @@ namespace Client.Scenes.Views
                 Parent = StatsTab,
                 Text = "元素:"
             };
+            gameUiGroupCaptions.Add("AttackStats", label);
             label.Location = new Point(50 - label.Size.Width, 215);
 
             DXImageControl icon = new DXImageControl
@@ -829,6 +871,7 @@ namespace Client.Scenes.Views
                 Parent = StatsTab,
                 Text = "强元素:"
             };
+            gameUiGroupCaptions.Add("AdvantageStats", label);
             label.Location = new Point( 50  - label.Size.Width, 275);
 
 
@@ -994,6 +1037,7 @@ namespace Client.Scenes.Views
                 Parent = StatsTab,
                 Text = "弱元素:"
             };
+            gameUiGroupCaptions.Add("DisadvantageStats", label);
             label.Location = new Point(50 - label.Size.Width, 335);
 
             icon = new DXImageControl
@@ -1166,6 +1210,7 @@ namespace Client.Scenes.Views
                 ForeColour = Color.White,
                 Text = "0-0"
             };
+            gameUiStatCaptions.Add("HermitDisplayStats.MaxAC", label);
 
             label = new DXLabel
             {
@@ -1181,6 +1226,7 @@ namespace Client.Scenes.Views
                 ForeColour = Color.White,
                 Text = "0-0"
             };
+            gameUiStatCaptions.Add("HermitDisplayStats.MaxMR", label);
 
             label = new DXLabel
             {
@@ -1196,6 +1242,7 @@ namespace Client.Scenes.Views
                 ForeColour = Color.White,
                 Text = "0-0"
             };
+            gameUiStatCaptions.Add("HermitDisplayStats.MaxDC", label);
 
             label = new DXLabel
             {
@@ -1211,6 +1258,7 @@ namespace Client.Scenes.Views
                 ForeColour = Color.White,
                 Text = "0-0"
             };
+            gameUiStatCaptions.Add("HermitDisplayStats.MaxMC", label);
 
             label = new DXLabel
             {
@@ -1226,6 +1274,7 @@ namespace Client.Scenes.Views
                 ForeColour = Color.White,
                 Text = "0-0"
             };
+            gameUiStatCaptions.Add("HermitDisplayStats.MaxSC", label);
             
             label = new DXLabel
             {
@@ -1241,6 +1290,7 @@ namespace Client.Scenes.Views
                 ForeColour = Color.White,
                 Text = "0"
             };
+            gameUiStatCaptions.Add("HermitDisplayStats.Health", label);
 
             label = new DXLabel
             {
@@ -1256,6 +1306,7 @@ namespace Client.Scenes.Views
                 ForeColour = Color.White,
                 Text = "0"
             };
+            gameUiStatCaptions.Add("HermitDisplayStats.Mana", label);
 
 
             #region Attack
@@ -1265,6 +1316,7 @@ namespace Client.Scenes.Views
                 Parent = HermitTab,
                 Text = "元素:"
             };
+            gameUiGroupCaptions.Add("HermitAttackStats", label);
             label.Location = new Point(50 - label.Size.Width, 90);
 
             icon = new DXImageControl
@@ -1410,6 +1462,7 @@ namespace Client.Scenes.Views
             };
             label.Location = new Point(HermitTab.Size.Width / 4  * 2- label.Size.Width + 25, 150);
 
+            gameUiDetailCaptions.Add("RemainingLabel", label);
             RemainingLabel = new DXLabel
             {
                 Parent = HermitTab,
@@ -1424,6 +1477,7 @@ namespace Client.Scenes.Views
                 Label = { Text = "二次确认" },
                 Checked = true,
             };
+            gameUiHermitConfirmation = check;
             check.Location = new Point(HermitTab.Size.Width - check.Size.Width - 10, HermitTab.Size.Height - check.Size.Height - 10);
 
             DXButton but = new DXButton
@@ -1434,6 +1488,7 @@ namespace Client.Scenes.Views
                 ButtonType = ButtonType.SmallButton,
                 Size = new Size(80, SmallButtonHeight)
             };
+            gameUiHermitButtons.Add(Stat.MaxAC, but);
             but.MouseClick += (o, e) =>
             {
                 if (MapObject.User.HermitPoints == 0) return;
@@ -1461,6 +1516,7 @@ namespace Client.Scenes.Views
                 ButtonType = ButtonType.SmallButton,
                 Size = new Size(80, SmallButtonHeight),
             };
+            gameUiHermitButtons.Add(Stat.MaxMR, but);
             but.MouseClick += (o, e) =>
             {
                 if (MapObject.User.HermitPoints == 0) return;
@@ -1488,6 +1544,7 @@ namespace Client.Scenes.Views
                 ButtonType = ButtonType.SmallButton,
                 Size = new Size(80, SmallButtonHeight)
             };
+            gameUiHermitButtons.Add(Stat.Health, but);
             but.MouseClick += (o, e) =>
             {
                 if (MapObject.User.HermitPoints == 0) return;
@@ -1515,6 +1572,7 @@ namespace Client.Scenes.Views
                 ButtonType = ButtonType.SmallButton,
                 Size = new Size(80, SmallButtonHeight)
             };
+            gameUiHermitButtons.Add(Stat.Mana, but);
             but.MouseClick += (o, e) =>
             {
                 if (MapObject.User.HermitPoints == 0) return;
@@ -1543,6 +1601,7 @@ namespace Client.Scenes.Views
                 ButtonType = ButtonType.SmallButton,
                 Size = new Size(80, SmallButtonHeight)
             };
+            gameUiHermitButtons.Add(Stat.MaxDC, but);
             but.MouseClick += (o, e) =>
             {
                 if (MapObject.User.HermitPoints == 0) return;
@@ -1570,6 +1629,7 @@ namespace Client.Scenes.Views
                 ButtonType = ButtonType.SmallButton,
                 Size = new Size(80, SmallButtonHeight)
             };
+            gameUiHermitButtons.Add(Stat.MaxMC, but);
             but.MouseClick += (o, e) =>
             {
                 if (MapObject.User.HermitPoints == 0) return;
@@ -1597,6 +1657,7 @@ namespace Client.Scenes.Views
                 ButtonType = ButtonType.SmallButton,
                 Size = new Size(80, SmallButtonHeight)
             };
+            gameUiHermitButtons.Add(Stat.MaxSC, but);
             but.MouseClick += (o, e) =>
             {
                 if (MapObject.User.HermitPoints == 0) return;
@@ -1625,6 +1686,7 @@ namespace Client.Scenes.Views
                 ButtonType = ButtonType.SmallButton,
                 Size = new Size(80, SmallButtonHeight)
             };
+            gameUiHermitButtons.Add(Stat.WeaponElement, but);
             but.MouseClick += (o, e) =>
             {
                 if (MapObject.User.HermitPoints == 0) return;
@@ -1650,6 +1712,10 @@ namespace Client.Scenes.Views
         #region Methods
         public void Draw(DXItemCell cell, int index)
         {
+            // The new frame may be transparent; do not let the old slot glyph bleed through it.
+            if (GameUiEquipmentCellLibrary != null && gameUiFramedEquipmentCells != null &&
+                Array.IndexOf(gameUiFramedEquipmentCells, cell) >= 0) return;
+
             if (InterfaceLibrary == null) return;
 
             if (cell.Item != null) return;
@@ -1663,10 +1729,11 @@ namespace Client.Scenes.Views
         
         private void CharacterTab_BeforeChildrenDraw(object sender, EventArgs e)
         {
+            DrawGameUiCharacterBackdrop();
             MirLibrary library;
 
-            int x = 130;
-            int y = 270;
+            int x = GameUiCompositionLayout?.Pivot.X ?? 130;
+            int y = GameUiCompositionLayout?.Pivot.Y ?? 270;
 
             if (!CEnvir.LibraryList.TryGetValue(LibraryFile.Equip, out library)) return;
 
@@ -1783,11 +1850,12 @@ namespace Client.Scenes.Views
                         bool oldBlend = DXManager.Blending;
                         float oldRate = DXManager.BlendRate;
 
-                        DXManager.SetBlend(true, 0.8F);
-
-                        PresentTexture(image.Image, CharacterTab, new Rectangle(DisplayArea.X + x + image.OffSetX, DisplayArea.Y + y + image.OffSetY, image.Width, image.Height), ForeColour, this);
-
-                        DXManager.SetBlend(oldBlend, oldRate);
+                        try
+                        {
+                            DXManager.SetBlend(true, 0.8F);
+                            DrawGameUiPreviewTexture(image.Image, new Rectangle(DisplayArea.X + x + image.OffSetX, DisplayArea.Y + y + image.OffSetY, image.Width, image.Height), ForeColour);
+                        }
+                        finally { DXManager.SetBlend(oldBlend, oldRate); }
                     }
                 }
             }
@@ -1795,15 +1863,15 @@ namespace Client.Scenes.Views
             if (!CEnvir.LibraryList.TryGetValue(LibraryFile.ProgUse, out library)) return;
 
             if (MapObject.User.Class == MirClass.Assassin && MapObject.User.Gender == MirGender.Female && MapObject.User.HairType == 1 && Grid[(int) EquipmentSlot.Helmet].Item == null)
-                library.Draw(1160, DisplayArea.X + x, DisplayArea.Y + y, MapObject.User.HairColour, true, 1F, ImageType.Image);
+                DrawGameUiPreview(library, 1160, DisplayArea.X + x, DisplayArea.Y + y, MapObject.User.HairColour, ImageType.Image);
 
             switch (MapObject.User.Gender)
             {
                 case MirGender.Male:
-                    library.Draw(0, DisplayArea.X + x, DisplayArea.Y + y, Color.White, true, 1F, ImageType.Image);
+                    DrawGameUiPreview(library, 0, DisplayArea.X + x, DisplayArea.Y + y, Color.White, ImageType.Image);
                     break;
                 case MirGender.Female:
-                    library.Draw(1, DisplayArea.X + x, DisplayArea.Y + y, Color.White, true, 1F, ImageType.Image);
+                    DrawGameUiPreview(library, 1, DisplayArea.X + x, DisplayArea.Y + y, Color.White, ImageType.Image);
                     break;
             }
 
@@ -1821,34 +1889,34 @@ namespace Client.Scenes.Views
                         switch (index)
                         {
                             case 942:
-                                effectLibrary.Draw(700, DisplayArea.X + x, DisplayArea.Y + y, Color.White, true, 1F, ImageType.Image);
+                                DrawGameUiPreview(effectLibrary, 700, DisplayArea.X + x, DisplayArea.Y + y, Color.White, ImageType.Image);
                                 break;
                             case 952:
-                                effectLibrary.Draw(720, DisplayArea.X + x, DisplayArea.Y + y, Color.White, true, 1F, ImageType.Image);
+                                DrawGameUiPreview(effectLibrary, 720, DisplayArea.X + x, DisplayArea.Y + y, Color.White, ImageType.Image);
                                 break;
                         }
                     }
 
 
 
-                    library.Draw(index, DisplayArea.X + x, DisplayArea.Y + y, Color.White, true, 1F, ImageType.Image);
-                    library.Draw(index, DisplayArea.X + x, DisplayArea.Y + y, Grid[(int) EquipmentSlot.Armour].Item.Colour, true, 1F, ImageType.Overlay);
+                    DrawGameUiPreview(library, index, DisplayArea.X + x, DisplayArea.Y + y, Color.White, ImageType.Image);
+                    DrawGameUiPreview(library, index, DisplayArea.X + x, DisplayArea.Y + y, Grid[(int) EquipmentSlot.Armour].Item.Colour, ImageType.Overlay);
                 }
 
                 if (Grid[(int)EquipmentSlot.Weapon].Item != null)
                 {
                     int index = Grid[(int)EquipmentSlot.Weapon].Item.Info.Image;
 
-                    library.Draw(index, DisplayArea.X + x, DisplayArea.Y + y, Color.White, true, 1F, ImageType.Image);
-                    library.Draw(index, DisplayArea.X + x, DisplayArea.Y + y, Grid[(int)EquipmentSlot.Weapon].Item.Colour, true, 1F, ImageType.Overlay);
+                    DrawGameUiPreview(library, index, DisplayArea.X + x, DisplayArea.Y + y, Color.White, ImageType.Image);
+                    DrawGameUiPreview(library, index, DisplayArea.X + x, DisplayArea.Y + y, Grid[(int)EquipmentSlot.Weapon].Item.Colour, ImageType.Overlay);
                 }
 
                 if (Grid[(int)EquipmentSlot.Shield].Item != null)
                 {
                     int index = Grid[(int)EquipmentSlot.Shield].Item.Info.Image;
 
-                    library.Draw(index, DisplayArea.X + x, DisplayArea.Y + y, Color.White, true, 1F, ImageType.Image);
-                    library.Draw(index, DisplayArea.X + x, DisplayArea.Y + y, Grid[(int)EquipmentSlot.Shield].Item.Colour, true, 1F, ImageType.Overlay);
+                    DrawGameUiPreview(library, index, DisplayArea.X + x, DisplayArea.Y + y, Color.White, ImageType.Image);
+                    DrawGameUiPreview(library, index, DisplayArea.X + x, DisplayArea.Y + y, Grid[(int)EquipmentSlot.Shield].Item.Colour, ImageType.Overlay);
                 }
             }
 
@@ -1857,8 +1925,8 @@ namespace Client.Scenes.Views
             {
                 int index = Grid[(int) EquipmentSlot.Helmet].Item.Info.Image;
 
-                library.Draw(index, DisplayArea.X + x, DisplayArea.Y + y, Color.White, true, 1F, ImageType.Image);
-                library.Draw(index, DisplayArea.X + x, DisplayArea.Y + y, Grid[(int) EquipmentSlot.Helmet].Item.Colour, true, 1F, ImageType.Overlay);
+                DrawGameUiPreview(library, index, DisplayArea.X + x, DisplayArea.Y + y, Color.White, ImageType.Image);
+                DrawGameUiPreview(library, index, DisplayArea.X + x, DisplayArea.Y + y, Grid[(int) EquipmentSlot.Helmet].Item.Colour, ImageType.Overlay);
             }
             else if (MapObject.User.HairType > 0)
             {
@@ -1872,10 +1940,10 @@ namespace Client.Scenes.Views
                         switch (MapObject.User.Gender)
                         {
                             case MirGender.Male:
-                                library.Draw(60 + MapObject.User.HairType - 1, DisplayArea.X + x, DisplayArea.Y + y, MapObject.User.HairColour, true, 1F, ImageType.Image);
+                                DrawGameUiPreview(library, 60 + MapObject.User.HairType - 1, DisplayArea.X + x, DisplayArea.Y + y, MapObject.User.HairColour, ImageType.Image);
                                 break;
                             case MirGender.Female:
-                                library.Draw(80 + MapObject.User.HairType - 1, DisplayArea.X + x, DisplayArea.Y + y, MapObject.User.HairColour, true, 1F, ImageType.Image);
+                                DrawGameUiPreview(library, 80 + MapObject.User.HairType - 1, DisplayArea.X + x, DisplayArea.Y + y, MapObject.User.HairColour, ImageType.Image);
                                 break;
                         }
                         break;
@@ -1883,10 +1951,10 @@ namespace Client.Scenes.Views
                         switch (MapObject.User.Gender)
                         {
                             case MirGender.Male:
-                                library.Draw(1100 + MapObject.User.HairType - 1, DisplayArea.X + x, DisplayArea.Y + y, MapObject.User.HairColour, true, 1F, ImageType.Image);
+                                DrawGameUiPreview(library, 1100 + MapObject.User.HairType - 1, DisplayArea.X + x, DisplayArea.Y + y, MapObject.User.HairColour, ImageType.Image);
                                 break;
                             case MirGender.Female:
-                                library.Draw(1120 + MapObject.User.HairType - 1, DisplayArea.X + x, DisplayArea.Y + y, MapObject.User.HairColour, true, 1F, ImageType.Image);
+                                DrawGameUiPreview(library, 1120 + MapObject.User.HairType - 1, DisplayArea.X + x, DisplayArea.Y + y, MapObject.User.HairColour, ImageType.Image);
                                 break;
                         }
                         break;
@@ -1982,6 +2050,12 @@ namespace Client.Scenes.Views
 
         protected override void Dispose(bool disposing)
         {
+            if (disposing)
+            {
+                GameUiReadouts?.Dispose();
+                GameUiReadouts = null;
+                DisableGameUiEquipmentPages();
+            }
             base.Dispose(disposing);
 
             if (disposing)

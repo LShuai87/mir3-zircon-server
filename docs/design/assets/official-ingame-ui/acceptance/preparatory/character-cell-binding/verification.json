@@ -1,0 +1,274 @@
+{
+  "schemaVersion": 1,
+  "kind": "official-ui-character-cell-binding-preparation",
+  "checkedAtLocalDate": "2026-11-08",
+  "referenceResolution": [
+    1024,
+    768
+  ],
+  "releaseAccepted": false,
+  "sourceChanges": [
+    {
+      "path": "Client/Scenes/Views/CharacterDialog.GameUi.cs",
+      "beforeSha256": "2e99c11d5fefa480a83d3c9ec4363c296f8ae647b412637b8720f25dc6223413",
+      "afterSha256": "2711ff4153367e7ce5bc243cb05dca5331904a2a614bc3f244eb3653f0116065"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiCharacterPageTests.cs",
+      "beforeSha256": "7a76b1a93530249c165ae5c52fd5743b8560e975bed98b8261f417600c6f0a98",
+      "afterSha256": "96bd9ffec5ada94c7c50789cfa2b4abf99bbef6e148ee66d2c4dbb43777aa887"
+    },
+    {
+      "path": "tests/Run-GameUiCharacterPageTests.ps1",
+      "beforeSha256": "93e448f72f5d0c01ac03ff2c66df89a6115a0ad3f04a5a0a24aba73b38b64d96",
+      "afterSha256": "4c5d1ff576f676fe57b83707c35261a2473ac0529a838de661f8302d0920cb91"
+    }
+  ],
+  "sourceHashes": [
+    {
+      "path": "Client/Scenes/Views/CharacterDialog.GameUi.cs",
+      "sha256": "2711ff4153367e7ce5bc243cb05dca5331904a2a614bc3f244eb3653f0116065"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiCharacterPageTests.cs",
+      "sha256": "96bd9ffec5ada94c7c50789cfa2b4abf99bbef6e148ee66d2c4dbb43777aa887"
+    },
+    {
+      "path": "tests/Run-GameUiCharacterPageTests.ps1",
+      "sha256": "4c5d1ff576f676fe57b83707c35261a2473ac0529a838de661f8302d0920cb91"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiCharacterCellFrameTests.cs",
+      "sha256": "7e7039d28ca9a667988312488602e67256face462f88a2044b98c51fed01e57a"
+    }
+  ],
+  "commands": [
+    {
+      "command": "MSBuild Client/Client.csproj /t:Build /p:Configuration=Debug /p:Platform=AnyCPU /nologo /v:minimal",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-cell-binding/build-debug.log",
+      "logSha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "command": "powershell -NoProfile -ExecutionPolicy Bypass -File tests/Run-GameUiCharacterPageTests.ps1 -RenderPath E:/workspace/mir3-ui-work/character-cell-binding-d3d-20261108-v3",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-cell-binding/character-pages.log",
+      "logSha256": "c2692f7e960510925d2aff98deb7418012c2d99beb62ac5cf5e1183928620bb7"
+    },
+    {
+      "command": "MSBuild Client/Client.csproj /t:Build /p:Configuration=Release /p:Platform=AnyCPU /nologo /v:minimal",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-cell-binding/build-release.log",
+      "logSha256": "c9e24428be1e56c8408af17aacfea3413de3953bfe426d10eb768782f5005ebc"
+    },
+    {
+      "command": "powershell -NoProfile -ExecutionPolicy Bypass -File tests/Run-GameUiCharacterCompositionTests.ps1",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-cell-binding/character-composition.log",
+      "logSha256": "3b3c9390ac1ba8c55eb56f5f88e0b1dedd6e713a0cb5ebc5f3300179a5956581"
+    },
+    {
+      "command": "git -c core.whitespace=cr-at-eol diff --check",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-cell-binding/diff-check.log",
+      "logSha256": "79d6e102d3342502fc80ca42def8ff97f6642ce33398d5219dc2f3e921c23f6f"
+    }
+  ],
+  "artifactHashes": [
+    {
+      "path": "E:/workspace/mir3-ui-work/character-cell-binding-d3d-20261108-v3/cells-1.png",
+      "sha256": "da84e2126b1d4386025e944281b055ae523e5874c972785ebf91adab1e75ad49"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/character-cell-binding-d3d-20261108-v3/cells-10.png",
+      "sha256": "ee66f68df1d067e10b47b376a39e75251a8c477a2cb03db3c2d837b4847a27c3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/character-cell-binding-d3d-20261108-v3/cells-11.png",
+      "sha256": "ead363ed70885919740a4e070b612444ce6437337513c8f6430f2839635e80da"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/character-cell-binding-d3d-20261108-v3/cells-12.png",
+      "sha256": "bd21852aa5046998b63b13d3e44b995cb02250493d4f975b6f28728685ee651d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/character-cell-binding-d3d-20261108-v3/cells-13.png",
+      "sha256": "75d901fc1929d00d3409b045dab8c7398d29965766e704d1a957744d142886dd"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/character-cell-binding-d3d-20261108-v3/cells-14.png",
+      "sha256": "e59c2fa57da51b0a75ea5812d6c2bafcc3a38523d753b67b53ac7b7c05d11351"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/character-cell-binding-d3d-20261108-v3/cells-15.png",
+      "sha256": "57c4ce83b6ef8ab412843fe4b5fc718edc2fb8111550e01df2798abb8e9b6035"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/character-cell-binding-d3d-20261108-v3/cells-16.png",
+      "sha256": "17daa4f52a4be3972c10db476658928c3380a4c2d89d95d95fa14c771a421a4a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/character-cell-binding-d3d-20261108-v3/cells-17.png",
+      "sha256": "ae579b62323284a4d184ed46322460df80ac87b9c50992a2ee44e6212b582f5d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/character-cell-binding-d3d-20261108-v3/cells-18.png",
+      "sha256": "f6b6aebb7ee9a41bad2c3100faaaf781c4ded69c38b36f7b49b2aace32dc527a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/character-cell-binding-d3d-20261108-v3/cells-19.png",
+      "sha256": "5a739a1abe0ce2f11461d1c429810d6256b07eabeb58321d7f9ba821f84b2cab"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/character-cell-binding-d3d-20261108-v3/cells-2.png",
+      "sha256": "92e4c9f87c7f79ed0fdafed5daf1fafeb61cff149bc11833a2a1b1c10d285af8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/character-cell-binding-d3d-20261108-v3/cells-20.png",
+      "sha256": "5a739a1abe0ce2f11461d1c429810d6256b07eabeb58321d7f9ba821f84b2cab"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/character-cell-binding-d3d-20261108-v3/cells-21.png",
+      "sha256": "5a739a1abe0ce2f11461d1c429810d6256b07eabeb58321d7f9ba821f84b2cab"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/character-cell-binding-d3d-20261108-v3/cells-22.png",
+      "sha256": "5a739a1abe0ce2f11461d1c429810d6256b07eabeb58321d7f9ba821f84b2cab"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/character-cell-binding-d3d-20261108-v3/cells-23.png",
+      "sha256": "5a739a1abe0ce2f11461d1c429810d6256b07eabeb58321d7f9ba821f84b2cab"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/character-cell-binding-d3d-20261108-v3/cells-24.png",
+      "sha256": "5a739a1abe0ce2f11461d1c429810d6256b07eabeb58321d7f9ba821f84b2cab"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/character-cell-binding-d3d-20261108-v3/cells-25.png",
+      "sha256": "5a739a1abe0ce2f11461d1c429810d6256b07eabeb58321d7f9ba821f84b2cab"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/character-cell-binding-d3d-20261108-v3/cells-26.png",
+      "sha256": "5a739a1abe0ce2f11461d1c429810d6256b07eabeb58321d7f9ba821f84b2cab"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/character-cell-binding-d3d-20261108-v3/cells-27.png",
+      "sha256": "5a739a1abe0ce2f11461d1c429810d6256b07eabeb58321d7f9ba821f84b2cab"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/character-cell-binding-d3d-20261108-v3/cells-28.png",
+      "sha256": "5a739a1abe0ce2f11461d1c429810d6256b07eabeb58321d7f9ba821f84b2cab"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/character-cell-binding-d3d-20261108-v3/cells-29.png",
+      "sha256": "5a739a1abe0ce2f11461d1c429810d6256b07eabeb58321d7f9ba821f84b2cab"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/character-cell-binding-d3d-20261108-v3/cells-3.png",
+      "sha256": "a661314da9fc3a22740c34f9a0b2124354c8ca60fa5142543a714a3433fd6de4"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/character-cell-binding-d3d-20261108-v3/cells-30.png",
+      "sha256": "5a739a1abe0ce2f11461d1c429810d6256b07eabeb58321d7f9ba821f84b2cab"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/character-cell-binding-d3d-20261108-v3/cells-31.png",
+      "sha256": "5a739a1abe0ce2f11461d1c429810d6256b07eabeb58321d7f9ba821f84b2cab"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/character-cell-binding-d3d-20261108-v3/cells-32.png",
+      "sha256": "5a739a1abe0ce2f11461d1c429810d6256b07eabeb58321d7f9ba821f84b2cab"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/character-cell-binding-d3d-20261108-v3/cells-33.png",
+      "sha256": "5a739a1abe0ce2f11461d1c429810d6256b07eabeb58321d7f9ba821f84b2cab"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/character-cell-binding-d3d-20261108-v3/cells-34.png",
+      "sha256": "5a739a1abe0ce2f11461d1c429810d6256b07eabeb58321d7f9ba821f84b2cab"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/character-cell-binding-d3d-20261108-v3/cells-35.png",
+      "sha256": "5a739a1abe0ce2f11461d1c429810d6256b07eabeb58321d7f9ba821f84b2cab"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/character-cell-binding-d3d-20261108-v3/cells-36.png",
+      "sha256": "5a739a1abe0ce2f11461d1c429810d6256b07eabeb58321d7f9ba821f84b2cab"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/character-cell-binding-d3d-20261108-v3/cells-4.png",
+      "sha256": "ad9d6c273c86040ed15bac96f036bae5f8f55006bfe4ccd0e6fa36e3f593d8dc"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/character-cell-binding-d3d-20261108-v3/cells-5.png",
+      "sha256": "fa70f399ebcbe337dd676e7e154326ac6e0612541a6ad10d4a1e96221d35533c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/character-cell-binding-d3d-20261108-v3/cells-6.png",
+      "sha256": "cf608a3904b3ed14c2b99ad859bec5284f3663f019029dedae56ae7c4a6ff3c9"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/character-cell-binding-d3d-20261108-v3/cells-7.png",
+      "sha256": "8ddd60a5e7d52e05fe91e037ff1dbe28adeaa8415714f8f7e1f37e096a2d48e8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/character-cell-binding-d3d-20261108-v3/cells-8.png",
+      "sha256": "6a1b57a7d19c773a03a39760739b63eca77302dae848b76497d0fbf8083a93d9"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/character-cell-binding-d3d-20261108-v3/cells-9.png",
+      "sha256": "4b160bbaea76208055d585a8f50734a2bc5635f55d57817d5bbb957ed57a8bf8"
+    },
+    {
+      "path": "E:/workspace/Debug/Client/Zircon.exe",
+      "sha256": "6b354d07b1729582116f99a12d690ccfc4e35bb2d5546197f41dcdf883e4cea5"
+    },
+    {
+      "path": "E:/workspace/Release/Client/Zircon.exe",
+      "sha256": "12f5a5b7f97159a8a239553c22c95d2d85527e7d82aacd358234eaa924291a64"
+    }
+  ],
+  "evidenceHashes": [
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-cell-binding/before.json",
+      "sha256": "487781d9285cfcaceee058272efca04957bf9c6e92b2fedd8ca80541e5dd09d4"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-cell-binding/README.md",
+      "sha256": "32b60cc5393e8ae61288382f64e40d44f6a1c7f74514cf7ca90c0606e7af018d"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-cell-binding/character-pages-failed-01.log",
+      "sha256": "052273134b8a34ecc741727ad7cc20b4e96b06ed39f5a7bf8167cd789ffd52e8"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-cell-binding/character-pages-failed-02.log",
+      "sha256": "343665ee1bcc1d5ffeebcccb80ea1c0b76513a6ee38e5f0c555e5a0e475c40a6"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-cell-binding/character-pages-failed-03.log",
+      "sha256": "ea3231a787eff34a5acf57660cf37a8dabd1f781f2dbeaf34579e6e720a96b2a"
+    }
+  ],
+  "results": {
+    "characterChecks": 17249,
+    "compositionChecks": 2115,
+    "gpuFrames": 36,
+    "pixelComparisons": 4741812,
+    "maximumRgbError": 0,
+    "originalEquipmentCells": 16,
+    "installReplaceDisableCycles": 25,
+    "extraInputControls": 0
+  },
+  "limitations": [
+    "Isolated actual-control and synthetic-art GPU validation; native fixed/selection outline edge pixels are excluded.",
+    "The existing 88-frame art/package is unchanged; no new production catalog or Config/Program/GameScene integration.",
+    "No live-game, packets, IME, device-reset, performance or deployment/rollback acceptance.",
+    "Legacy remains default; task completion counts and the five G0 gates remain unchanged. NPC cards, secondary popups and display settings retain their current scope."
+  ]
+}

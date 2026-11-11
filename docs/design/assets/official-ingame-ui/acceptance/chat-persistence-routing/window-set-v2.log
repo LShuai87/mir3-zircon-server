@@ -1,0 +1,17 @@
+CPU button masks: 17256 checks; 0 source PNG alpha comparisons; no GPU uploads.
+Button mask checks including real controls: 111539; hover, pressed, disabled, hide/restore, PassThrough, invalid rebind and Legacy reset.
+Compact wheel ownership: 228 shared opaque pixels; single click, hidden fallback, disabled blocking and fixed draw order passed.
+System.InvalidOperationException: Dispose the borrowing game scene before releasing its UI startup session.
+   在 Client.Envir.GameUiStartupSession.Dispose()
+   在 OfficialUiWindowSetTests.WithStartupOwner(String package, String directory, Action`1 action)
+   在 OfficialUiWindowSetTests.ExerciseChatPersistence(String package, String directory)
+   在 OfficialUiWindowSetTests.ExerciseStartupSessions(String package, String directory)
+   在 OfficialUiWindowSetTests.Main(String[] args)
+
+
+   由于 Exception.ToString() 失败，因此无法打印异常字符串。
+Exception: E:\workspace\mir3-zircon-server\tests\Run-GameUiWindowSetTests.ps1:40
+Line |
+  40 |          if ($LASTEXITCODE -ne 0) { throw 'WindowSet tests failed.' }
+     |                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | WindowSet tests failed.

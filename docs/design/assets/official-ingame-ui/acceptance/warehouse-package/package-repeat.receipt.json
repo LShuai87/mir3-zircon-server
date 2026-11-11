@@ -1,0 +1,12 @@
+{
+  "command": [
+    "E:/workspace/Debug/ImageManager/ImageManager.exe",
+    "--official-ui",
+    "prepared",
+    "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/art-repeat",
+    "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl-repeat",
+    "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/art-repeat/composed-manifest.json"
+  ],
+  "exitCode": 0,
+  "log": "E:/workspace/mir3-zircon-server/docs/design/assets/official-ingame-ui/acceptance/warehouse-package/package-repeat.log"
+}

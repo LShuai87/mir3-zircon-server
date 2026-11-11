@@ -1,0 +1,23 @@
+test_count_does_not_match_table (test_decoder.DecoderTests.test_count_does_not_match_table) ... ok
+test_existing_output_is_preserved (test_decoder.DecoderTests.test_existing_output_is_preserved) ... ok
+test_hash_mismatch_publishes_nothing (test_decoder.DecoderTests.test_hash_mismatch_publishes_nothing) ... ok
+test_image_offset_outside_miz (test_decoder.DecoderTests.test_image_offset_outside_miz) ... ok
+test_invalid_dimensions (test_decoder.DecoderTests.test_invalid_dimensions) ... ok
+test_invalid_mix_signature (test_decoder.DecoderTests.test_invalid_mix_signature) ... ok
+test_invalid_zlib (test_decoder.DecoderTests.test_invalid_zlib) ... ok
+test_later_library_failure_does_not_publish_partial_set (test_decoder.DecoderTests.test_later_library_failure_does_not_publish_partial_set) ... ok
+test_output_ancestor_of_source_is_rejected (test_decoder.DecoderTests.test_output_ancestor_of_source_is_rejected) ... ok
+test_output_inside_source_is_rejected (test_decoder.DecoderTests.test_output_inside_source_is_rejected) ... ok
+test_payload_truncated (test_decoder.DecoderTests.test_payload_truncated) ... ok
+test_pixels_padding_orientation_offsets_and_empty_slots (test_decoder.DecoderTests.test_pixels_padding_orientation_offsets_and_empty_slots) ... ok
+test_repeat_conversion_is_byte_deterministic (test_decoder.DecoderTests.test_repeat_conversion_is_byte_deterministic) ... ok
+test_trailing_zlib_data_is_rejected (test_decoder.DecoderTests.test_trailing_zlib_data_is_rejected) ... ok
+test_truncated_mix_header (test_decoder.DecoderTests.test_truncated_mix_header) ... ok
+test_unsafe_library_name_is_rejected (test_decoder.DecoderTests.test_unsafe_library_name_is_rejected) ... ok
+test_wrong_uncompressed_length (test_decoder.DecoderTests.test_wrong_uncompressed_length) ... ok
+test_zlib_bomb_is_bounded (test_decoder.DecoderTests.test_zlib_bomb_is_bounded) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.181s
+
+OK

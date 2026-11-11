@@ -1,0 +1,906 @@
+{
+  "schemaVersion": 1,
+  "kind": "official-chat-native-persistence-routing-verification",
+  "checkedAtLocalDate": "2026-11-08",
+  "referenceResolution": [
+    1024,
+    768
+  ],
+  "releaseAccepted": false,
+  "results": {
+    "windowSetChecks": 168890,
+    "chatStoreChecks": 4487,
+    "chatGeometryChecks": 940,
+    "fullSceneChecks": 180,
+    "routingEvidenceRows": 35,
+    "storeEvidenceRows": 59,
+    "nativeSaveRoutingIntegrated": true,
+    "nativeLoadRoutingIntegrated": true,
+    "startupChatRestorationIntegrated": true,
+    "matchingTopologyResizeRestorationIntegrated": true,
+    "nativeDatabaseByteIsolationVerified": true,
+    "realAccountLoginVerified": false,
+    "liveImeVerified": false
+  },
+  "implementation": [
+    "Official save-all captures actual native groups and header order into GameUiChat.OfficialV1.json; Legacy retains native DB save/load code. A failed or busy save returns false and the real button reports failure.",
+    "Group IDs survive six resolution saves. Capture includes names, all 12 native flags, selected header, geometry and primary/floating state; empty topology is explicit.",
+    "After the Official scene owner is installed, matching preferences reconstruct original ChatTab and ChatOptionsPanel types via AddNewTab. Explicit native reload uses the same path. Missing/invalid snapshots use native behavior without rewriting JSON.",
+    "Ordinary resize restores saved geometry only for matching group IDs and ordered names/count; native page instances, current selection/filters/history and the editor/HWND/draft/selection remain live.",
+    "Fixed a real multi-page removal null dereference: native removal now keeps the options panel alive until native tab disposal and selection/layout callbacks finish.",
+    "Restore preserves the valid no-selected-page state across frame refresh and capture, while a native header click selects a page normally. Binding selection handlers are removed on detach.",
+    "Saved reconstruction failure follows existing startup failure containment: restart required, adapters detached, verified package retained until scene disposal."
+  ],
+  "verifiedBehaviors": [
+    "Real save/reload/reset buttons and original confirmation controls; reordered headers, three native pages, two floating groups and all 12 flag bits over six resolutions.",
+    "Six saved-resolution geometry recoveries retain original tabs, histories, editor, HWND, draft and selection range; live filter/selected-page edits are not replayed on resize.",
+    "Rename, header reorder and added page invalidate stale geometry; native update blocks saving without changing bytes.",
+    "Explicit reload reconstructs flags/selection/header order/geometry while preserving input. Cancellation retains pages. No leaked temporary groups or duplicated topology listeners.",
+    "Actual exclusive JSON file lock causes false save result and button failure announcement; previous file remains byte-identical. Corrupt JSON falls back to native DB and is not rewritten; repaired file reloads.",
+    "Empty topology saves and reloads after reset; empty startup works for the same owner and a fresh owner reading disk. Six matching resolutions restore on same-owner scene reentry and fresh-owner disk startup without preference writes.",
+    "Docked primary remains exactly 574x106 at the compiled dock through six resolutions; missing matching resolution uses native defaults without losing the saved entry.",
+    "Valid selected=-1 survives explicit reload, frame refresh and resave; actual native header selection still works.",
+    "An injected saved-topology callback failure retains the startup owner/package, requires restart and cleans up on scene disposal.",
+    "Real native Users.db is seeded using Legacy save. Official save/reset/reload/reentry/disposal followed by Session.Save(true) leaves its bytes unchanged.",
+    "Final Debug binary passed store, chat geometry, window/startup and full offline scene suites; Debug/Release builds and inspection manifests generated."
+  ],
+  "sourceChanges": [
+    {
+      "path": "Client/Envir/GameUiOfficialV1ChatSet.cs",
+      "beforeSha256": "642ad9f11c1ffc6ee057c95298c13cfeb99ca3b6dddcaa26886f6ec1a188f4d0",
+      "afterSha256": "01611900bc742f6258e8408066ca6936ad25b05d21ea734b2ed58717f5b66de9"
+    },
+    {
+      "path": "Client/Envir/GameUiOfficialV1WindowSet.cs",
+      "beforeSha256": "a3fafcb71a8c9d374be8f63107725b7b82db434540c74a5a462409b50fe5ba3c",
+      "afterSha256": "35ada8411ee7c2036ef8759ab268199de73210681b08b780fa5cf285aebdcef2"
+    },
+    {
+      "path": "Client/Envir/GameUiStartupSession.cs",
+      "beforeSha256": "54de8a04f3e195402173ed97726d1e52e102b1afb5017d6c6891d402741765ab",
+      "afterSha256": "d044bd514f839ab2656d433ef0e39f4f84770916803d5fc566e929de9667c40b"
+    },
+    {
+      "path": "Client/Scenes/GameScene.cs",
+      "beforeSha256": "429a2e77659b244fcf5044916a0ff776b21b368f49b2320516d17ad56737d311",
+      "afterSha256": "9e5ab5f140a301c895626a952c19983236ec8434985511aa3f6937a964d0f94e"
+    },
+    {
+      "path": "Client/Scenes/Views/ChatOptionsDialog.cs",
+      "beforeSha256": "8609c62af0f8c78a55f6c8c60c8e45b833c12c7b79bb7cd88ec6efaa67b93355",
+      "afterSha256": "644446d2307d627490d2ad0de9ba0a6ab98b7a8952d81fd35d5c0108b0e295cf"
+    },
+    {
+      "path": "tests/Run-GameUiWindowSetTests.ps1",
+      "beforeSha256": "361a374755a34b5d1b51ec12db7f7f6cf3569f81fac32d80f4082d9cf36af0d2",
+      "afterSha256": "28b89b6548b60728468ee0311ae3fc6b98d6a724dc0a7abb031c5a59327e9c6d"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiSceneStartupTests.cs",
+      "beforeSha256": "f2966092d5098e321ab79cdd81ca7af36982d7fa320e193316b787568a6d7807",
+      "afterSha256": "732ed1f84bbc40a9a093f4d27e03edc63c36b1621caec107105a8a17f8bbeaf7"
+    },
+    {
+      "path": "Client/Envir/GameUiChatGroupBinding.cs",
+      "beforeSha256": "026c094d3dbdf042cf3487499194c8c01acaeba91bea6114ccd82692c0c46d47",
+      "afterSha256": "8ad5dd1769c1dcd75c6b76492af95daf3526768e0accf53e726084e83da6edd4"
+    }
+  ],
+  "newlyTrackedSources": [
+    {
+      "path": "tests/game-ui/OfficialUiChatPersistenceTests.cs",
+      "sha256": "94676535438479ba3788ec0f16a71b5c9ecdd39163d31e81b1b107450d416ebb",
+      "createdThisRound": true
+    }
+  ],
+  "sourceHashes": [
+    {
+      "path": "Client/Envir/GameUiChatStore.cs",
+      "sha256": "a8bc05ceab25ab2a6b345a9d04617d999c240078b3f2a1a7d9598c9cbd53d81e"
+    },
+    {
+      "path": "Client/Envir/GameUiOfficialV1ChatSet.cs",
+      "sha256": "01611900bc742f6258e8408066ca6936ad25b05d21ea734b2ed58717f5b66de9"
+    },
+    {
+      "path": "Client/Envir/GameUiOfficialV1WindowSet.cs",
+      "sha256": "35ada8411ee7c2036ef8759ab268199de73210681b08b780fa5cf285aebdcef2"
+    },
+    {
+      "path": "Client/Envir/GameUiStartupSession.cs",
+      "sha256": "d044bd514f839ab2656d433ef0e39f4f84770916803d5fc566e929de9667c40b"
+    },
+    {
+      "path": "Client/Scenes/GameScene.cs",
+      "sha256": "9e5ab5f140a301c895626a952c19983236ec8434985511aa3f6937a964d0f94e"
+    },
+    {
+      "path": "Client/Scenes/Views/ChatOptionsDialog.cs",
+      "sha256": "644446d2307d627490d2ad0de9ba0a6ab98b7a8952d81fd35d5c0108b0e295cf"
+    },
+    {
+      "path": "tests/Run-GameUiWindowSetTests.ps1",
+      "sha256": "28b89b6548b60728468ee0311ae3fc6b98d6a724dc0a7abb031c5a59327e9c6d"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiSceneStartupTests.cs",
+      "sha256": "732ed1f84bbc40a9a093f4d27e03edc63c36b1621caec107105a8a17f8bbeaf7"
+    },
+    {
+      "path": "Client/Envir/GameUiChatGroupBinding.cs",
+      "sha256": "8ad5dd1769c1dcd75c6b76492af95daf3526768e0accf53e726084e83da6edd4"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiChatPersistenceTests.cs",
+      "sha256": "94676535438479ba3788ec0f16a71b5c9ecdd39163d31e81b1b107450d416ebb"
+    }
+  ],
+  "commands": [
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiChatLayoutTests.ps1"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/chat-geometry.log",
+      "logSha256": "f4063b620e7293bcea213b3fd6c7924dbcb33554ffda03d44690dbdd7ba051e2"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiChatStoreTests.ps1",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/chat-routing-store-20261108-v1"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/chat-store.log",
+      "logSha256": "32cd79ea24bf9c4498cc188f3a1c084fb062eaf00f7a124070ca34c89439a416"
+    },
+    {
+      "command": [
+        "D:/Program Files/Microsoft Visual Studio/2022/Enterprise/MSBuild/Current/Bin/MSBuild.exe",
+        "Client/Client.csproj",
+        "/t:Build",
+        "/p:Configuration=Debug",
+        "/p:Platform=AnyCPU",
+        "/v:minimal",
+        "/nologo"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/debug-build-v2.log",
+      "logSha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "command": [
+        "D:/Program Files/Microsoft Visual Studio/2022/Enterprise/MSBuild/Current/Bin/MSBuild.exe",
+        "Client/Client.csproj",
+        "/t:Build",
+        "/p:Configuration=Debug",
+        "/p:Platform=AnyCPU",
+        "/v:minimal",
+        "/nologo"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/debug-build-v3.log",
+      "logSha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "command": [
+        "D:/Program Files/Microsoft Visual Studio/2022/Enterprise/MSBuild/Current/Bin/MSBuild.exe",
+        "Client/Client.csproj",
+        "/t:Build",
+        "/p:Configuration=Debug",
+        "/p:Platform=AnyCPU",
+        "/v:minimal",
+        "/nologo"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/debug-build.log",
+      "logSha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "build/game-ui/New-GameUiReleaseManifest.ps1",
+        "-ClientDirectory",
+        "E:/workspace/Debug/Client",
+        "-ResourceRoot",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/staged-resources",
+        "-OutputPath",
+        "E:/workspace/mir3-zircon-server/docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/debug-build.json"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/debug-manifest.log",
+      "logSha256": "93722f2e0374393452015bafae0872f7d3093661905cb716c1fb4f7d47ac7051"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiFullSceneTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/chat-routing-full-scene-20261108-v1"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/full-scene.log",
+      "logSha256": "0d85d4de7905eb608acc989200b5dfcc19842b35b62586889490caf606d4a988"
+    },
+    {
+      "command": [
+        "C:/Users/shuai/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+        "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/audit-history.py",
+        "--output",
+        "E:/workspace/mir3-zircon-server/docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/history-audit.json"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/history-audit.log",
+      "logSha256": "06923af1b6bb66bc2920a37beb4b751f9aa81583a1c3c167188ed19904331c88"
+    },
+    {
+      "command": [
+        "D:/Program Files/Microsoft Visual Studio/2022/Enterprise/MSBuild/Current/Bin/MSBuild.exe",
+        "Client/Client.csproj",
+        "/t:Build",
+        "/p:Configuration=Release",
+        "/p:Platform=AnyCPU",
+        "/v:minimal",
+        "/nologo"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/release-build.log",
+      "logSha256": "c9e24428be1e56c8408af17aacfea3413de3953bfe426d10eb768782f5005ebc"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "build/game-ui/New-GameUiReleaseManifest.ps1",
+        "-ClientDirectory",
+        "E:/workspace/Release/Client",
+        "-ResourceRoot",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/staged-resources",
+        "-OutputPath",
+        "E:/workspace/mir3-zircon-server/docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/release-build.json"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/release-manifest.log",
+      "logSha256": "24c82a33ec1decffce68f3a16a3db05daa6f59a8bec1e702974fe517d63f9de8"
+    },
+    {
+      "command": [
+        "C:/Users/shuai/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+        "build/game-ui/Validate-UiTasks.py"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/tasks-validation.log",
+      "logSha256": "90e3ddffa807ef19523e77855653984be659ff7ab47ec66f04d41348c4cb85b3"
+    },
+    {
+      "command": [
+        "C:/Users/shuai/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+        "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/check-whitespace.py"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/whitespace.log",
+      "logSha256": "0a35089d446e53f25d9fd4c36a32065b83fd13816fdee2f0807ba939877cbf6a"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiWindowSetTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/chat-routing-window-set-20261108-final"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/window-set-final.log",
+      "logSha256": "7a6ad5ea9bf68d161c07a4e52fbc2678b80dc996fa5f3672f58132b4fbf4aaaa"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiWindowSetTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/chat-routing-window-set-20261108-v4"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/window-set-v4.log",
+      "logSha256": "7e0d3e2c3d93c5acf9c8923c2d27a11216807ab36865cd26e9fb9ac14888b081"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiWindowSetTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/chat-routing-window-set-20261108-v5"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/window-set-v5.log",
+      "logSha256": "7d8c9ff1852bd88210f7ee58fb5a1719f082750f61a1ec73511394d492f31b44"
+    }
+  ],
+  "failedAttempts": [
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiWindowSetTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/chat-routing-window-set-20261108-v2"
+      ],
+      "result": "fail",
+      "exitCode": 1,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/window-set-v2.log",
+      "logSha256": "a4b874513b39b4f859bcbb916991846cca810aa67bd617110f0e2b81946cf51d"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiWindowSetTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/chat-routing-window-set-20261108-v3"
+      ],
+      "result": "fail",
+      "exitCode": 1,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/window-set-v3.log",
+      "logSha256": "ef173f598be7f1dac676e1524f4fa359aab3874dade6636a9e7aec01d1119a6c"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiWindowSetTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/chat-routing-window-set-20261108-v1"
+      ],
+      "result": "fail",
+      "exitCode": 1,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/window-set.log",
+      "logSha256": "edbe6875cb44fdf374ab2adbb1b9a2f28fb14245daeaeee2e8c5d8b82f2181d2"
+    }
+  ],
+  "regressionBaselineRuntime": {
+    "report": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence/verification.json",
+    "builds": {
+      "debug": {
+        "buildId": "gameui-86c53e267cd37b9670e066f596315eeea4dd80ee5a7021359c32f3f9733b74dc",
+        "client": {
+          "path": "Zircon.exe",
+          "length": 1378304,
+          "sha256": "dc19f89b0dbccb837d5d398af7dc511dd68a0a9bd53e0e6193a8a0bf85b4b9b4"
+        }
+      },
+      "release": {
+        "buildId": "gameui-5ac42ec86decc797445da9d4dd591b6ebcf87bf84b6ba62020ce387e786ac4fb",
+        "client": {
+          "path": "Zircon.exe",
+          "length": 1273344,
+          "sha256": "93fc307441b1f961d376ec8566235c77e822c9b81ccfe1ff4eb8044b9c7cf7eb"
+        }
+      }
+    },
+    "testedRuntime": [
+      {
+        "name": "Zircon.exe",
+        "sha256": "dc19f89b0dbccb837d5d398af7dc511dd68a0a9bd53e0e6193a8a0bf85b4b9b4"
+      },
+      {
+        "name": "Library.dll",
+        "sha256": "557ba4f45f3cb2db8bbbbb2a336289b0d3d535959190f86ec7efc2bfdd0b0c5b"
+      },
+      {
+        "name": "SlimDX.dll",
+        "sha256": "f23ec20aeaec149ba963d1fb03af3ea1585ccdf1ac207f315361a80ceaadcc05"
+      }
+    ]
+  },
+  "builds": {
+    "debug": {
+      "buildId": "gameui-a2bd3a13d0f5ee9ce56309784dcc4e4e6c16840e698d63fa3de21e03374faa8a",
+      "client": {
+        "path": "Zircon.exe",
+        "length": 1385984,
+        "sha256": "4f37b313b37f8d7ed0c40258af868699d7d45d85e58db3f8d03cce238723fbb1"
+      }
+    },
+    "release": {
+      "buildId": "gameui-2a171b65dc456f5bb290f7be81154e74b7a142fd9a693aa84ac52a86bf6124eb",
+      "client": {
+        "path": "Zircon.exe",
+        "length": 1281024,
+        "sha256": "8a153b06d9b65e41ce3cae3dd33ef5d41c3951c18ecf743806df1eb05c884114"
+      }
+    }
+  },
+  "runtimeRebuiltThisTurn": true,
+  "package": {
+    "path": "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+    "frameCount": 94,
+    "sha256": "dd45cbf51d976a69d28269ee0d27a985def1ee1693cab2b509b74ae347a880a4"
+  },
+  "candidate": {
+    "path": "E:/workspace/mir3-ui-work/warehouse-assets-20261108-v1/zl-v2/OfficialV1.Zl",
+    "frameCount": 1,
+    "sha256": "471169dfa093b521f3c700c5a993e4e763aa17a45b2e16f440d961c0c7bf4cec"
+  },
+  "sourcePlanSha256": "f8c0a002b3821fabb54993792c354c4eff35eec51f9cfdc418535017c13069e9",
+  "limitations": [
+    "Native controls and real databases are exercised in isolated processes. Socket/world setup is bypassed in the focused suite; the full-scene suite uses synthetic user/map and legacy resources. These are not real account login or server transaction acceptance.",
+    "Explicit reconstruction follows native behavior and replaces pages/history; ordinary resize retains them. Native reset may replace the editor; explicit saved reload does not.",
+    "The store remains single-owner; independent concurrent instances do not merge external writes. Matching topology uses stable group IDs and ordered page names/count; filter and current selection intentionally do not participate.",
+    "Live return-to-login/disconnect/reconnect, real storage/service transactions, remaining field/equipment semantics, hardware/fonts/IME and final visual acceptance remain open.",
+    "Task counts remain 7 done / 3 in_progress / 18 not_started and G0-2/3/4/5 remain open. Legacy default; RuntimeReady=false, productionBindingAllowed=false, releaseAccepted=false. No commit, push or deployment; official install remains read-only."
+  ],
+  "evidenceHashes": [
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-routing-full-scene-20261108-v1/legacy-hud.png",
+      "sha256": "5fa69de2c6da4336331e9f837cd0ded6c24f9b714dda1e36432e8880dc050a09"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-routing-full-scene-20261108-v1/legacy-panels.png",
+      "sha256": "d0723781ce5debe099e9ba58f4e2c999706872006bb0ec1594c651cea1634a46"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-routing-full-scene-20261108-v1/legacy-resources.txt",
+      "sha256": "47713d590a1b9214abdef7a0fc33d6c28a2b5a73a0cff9794375a5083020b498"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-routing-full-scene-20261108-v1/official-CharacterTab.png",
+      "sha256": "43a1af56f6c3bfd96763e2bdc70b81fcda2ad9bddce1aa09a95ffa0b5055eac8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-routing-full-scene-20261108-v1/official-extraEquipmentTab.png",
+      "sha256": "fd2f77d0befc66bba22a81f66c6636dd2b169066f24bb721f5170886176243ca"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-routing-full-scene-20261108-v1/official-HermitTab.png",
+      "sha256": "4f638a46988d05fdf41f695893510dc4b19dc85b5ca24a8ef781e63a17fe6348"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-routing-full-scene-20261108-v1/official-hud.png",
+      "sha256": "0d72ce7b9c9ed1d0c807333ef4c62517a0f9d90d6f49015ba946f1b0882384ac"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-routing-full-scene-20261108-v1/official-panels.png",
+      "sha256": "43a1af56f6c3bfd96763e2bdc70b81fcda2ad9bddce1aa09a95ffa0b5055eac8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-routing-full-scene-20261108-v1/official-reentry-hud.png",
+      "sha256": "39be0066510de06ba2465cc008c6379ffbc4c556c67be4870b3a750f99696f4b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-routing-full-scene-20261108-v1/official-reentry-panels.png",
+      "sha256": "8a0a2644ac845d99ab8104c3cc9acdd0573cdff950c0706b3a8b1a2bd2d4d2a8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-routing-full-scene-20261108-v1/official-reset-1024x768.png",
+      "sha256": "43a1af56f6c3bfd96763e2bdc70b81fcda2ad9bddce1aa09a95ffa0b5055eac8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-routing-full-scene-20261108-v1/official-reset-1280x800.png",
+      "sha256": "6da4d263d19f1aae323e49c0f41f848bd9fb075cb94dafb02df4e2f0749ef8a4"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-routing-full-scene-20261108-v1/official-reset-1366x768.png",
+      "sha256": "bccd5d8071878413408790dbe90b5d5a1ea48d880be4cec00c916469bc30f495"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-routing-full-scene-20261108-v1/official-reset-1440x900.png",
+      "sha256": "1b0be5742da74968aba14f74293e474a1324d346421cab3b9692607f90f43a06"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-routing-full-scene-20261108-v1/official-reset-1600x900.png",
+      "sha256": "ddc79b57cfef144f95511d28a92a7ad2351a7a8d74ed73ca4e19a4a5f8f44ba7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-routing-full-scene-20261108-v1/official-reset-1920x1080.png",
+      "sha256": "41a4d7849e3d91c630c2910d35900a1143c75b435ca0d252a3b2f9483a83cb33"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-routing-full-scene-20261108-v1/official-StatsTab.png",
+      "sha256": "dc665d7ec9343b3bdbdd2fd5bbc16f245d961d0ab217de3d7af7e82be17d8664"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-routing-full-scene-20261108-v1/reset-pixel-probes.txt",
+      "sha256": "2c236cd844574b74b6d502b13ffed99b5cb29783fc53ea00587ca1543a18ac67"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-routing-full-scene-20261108-v1/tested-runtime.json",
+      "sha256": "d9f7dc740c4d966aa0b2960849d19bc3a8fba31273868a880a1d265998640b96"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-routing-store-20261108-v1/chat-store-results.txt",
+      "sha256": "f6b1cd812c9abb22e0cf2edc69018bcfd03dca197d47c5eee046cafa94bc3ce6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-routing-store-20261108-v1/OfficialUiChatStoreTests.cs",
+      "sha256": "211a2ffe5bd7391897f981b175d8cdfb3f2dddd33c209f8ea12191293278a7c5"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-routing-window-set-20261108-final/button-hitmask-cpu.txt",
+      "sha256": "8c02ba0d543cdf1f7ebeb48c8e6f52a83dde10de6fcca3b43899d8982e666927"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-routing-window-set-20261108-final/chat-persistence-legacy.db",
+      "sha256": "972f5ef9898f2cab38e3248330d31ffe9a69185ac4f66263cec086b8e173bc04"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-routing-window-set-20261108-final/chat-persistence-results.txt",
+      "sha256": "d56bd9b90060c225a2efca1ec18c55fed9c21926f6e860fca5e5bfcea8296afc"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-routing-window-set-20261108-final/chat-persistence-saved.json",
+      "sha256": "2f682c81ba0043130bd5ab3925fdbd8b4eb8b276e74e5d85b8c146a512d6ab61"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-routing-window-set-20261108-final/chat-reconstruction-results.txt",
+      "sha256": "6c2f662715d829f457c148575f558d2d7dbdf15a96b7fb910e78a8d89715f77b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-routing-window-set-20261108-final/layout-persistence-legacy.db",
+      "sha256": "4d9e4e960d7ba8fce0a0912793f12675ed4ff77db13ae823b0d7b53c943d2918"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-routing-window-set-20261108-final/layout-persistence-results.txt",
+      "sha256": "ed11120c29f9eaa7a195223529c6f68ee13aaa60138b01b3d69f9bb274d6bf31"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-routing-window-set-20261108-final/layout-persistence-saved.json",
+      "sha256": "b0326ef274ff5d8e6ded212ddcedf694c77a6eccfd0425458d7e20c3ccfae93a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-routing-window-set-20261108-final/legacy-glyph-restored.png",
+      "sha256": "0a53fff02c059efc67e4808ccfbd669c8560f8a164c6da2f2f6970301adcf2ff"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-routing-window-set-20261108-final/legacy-glyph-suppressed.png",
+      "sha256": "5a739a1abe0ce2f11461d1c429810d6256b07eabeb58321d7f9ba821f84b2cab"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-routing-window-set-20261108-v4/button-hitmask-cpu.txt",
+      "sha256": "8c02ba0d543cdf1f7ebeb48c8e6f52a83dde10de6fcca3b43899d8982e666927"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-routing-window-set-20261108-v4/chat-persistence-legacy.db",
+      "sha256": "972f5ef9898f2cab38e3248330d31ffe9a69185ac4f66263cec086b8e173bc04"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-routing-window-set-20261108-v4/chat-persistence-results.txt",
+      "sha256": "3cf05db3be202ed386a2592e275027ae3d16091e5a463ed507693f01eb178af4"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-routing-window-set-20261108-v4/chat-persistence-saved.json",
+      "sha256": "8a08189e8087735d3b83defeab0d7292b787d99bc71fe0d9314c32ed47595dde"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-routing-window-set-20261108-v4/chat-reconstruction-results.txt",
+      "sha256": "6c2f662715d829f457c148575f558d2d7dbdf15a96b7fb910e78a8d89715f77b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-routing-window-set-20261108-v4/layout-persistence-legacy.db",
+      "sha256": "4d9e4e960d7ba8fce0a0912793f12675ed4ff77db13ae823b0d7b53c943d2918"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-routing-window-set-20261108-v4/layout-persistence-results.txt",
+      "sha256": "ed11120c29f9eaa7a195223529c6f68ee13aaa60138b01b3d69f9bb274d6bf31"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-routing-window-set-20261108-v4/layout-persistence-saved.json",
+      "sha256": "b0326ef274ff5d8e6ded212ddcedf694c77a6eccfd0425458d7e20c3ccfae93a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-routing-window-set-20261108-v4/legacy-glyph-restored.png",
+      "sha256": "0a53fff02c059efc67e4808ccfbd669c8560f8a164c6da2f2f6970301adcf2ff"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-routing-window-set-20261108-v4/legacy-glyph-suppressed.png",
+      "sha256": "5a739a1abe0ce2f11461d1c429810d6256b07eabeb58321d7f9ba821f84b2cab"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-routing-window-set-20261108-v5/button-hitmask-cpu.txt",
+      "sha256": "8c02ba0d543cdf1f7ebeb48c8e6f52a83dde10de6fcca3b43899d8982e666927"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-routing-window-set-20261108-v5/chat-persistence-legacy.db",
+      "sha256": "972f5ef9898f2cab38e3248330d31ffe9a69185ac4f66263cec086b8e173bc04"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-routing-window-set-20261108-v5/chat-persistence-results.txt",
+      "sha256": "696a0526d51f29c1db7faf35e4e9b424756a7ab71f5a31fc6ada42dca500aaa8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-routing-window-set-20261108-v5/chat-persistence-saved.json",
+      "sha256": "32618e75ab44ea23b580017f62ab94c34e87846141364c6a09716a30eec70259"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-routing-window-set-20261108-v5/chat-reconstruction-results.txt",
+      "sha256": "6c2f662715d829f457c148575f558d2d7dbdf15a96b7fb910e78a8d89715f77b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-routing-window-set-20261108-v5/layout-persistence-legacy.db",
+      "sha256": "4d9e4e960d7ba8fce0a0912793f12675ed4ff77db13ae823b0d7b53c943d2918"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-routing-window-set-20261108-v5/layout-persistence-results.txt",
+      "sha256": "ed11120c29f9eaa7a195223529c6f68ee13aaa60138b01b3d69f9bb274d6bf31"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-routing-window-set-20261108-v5/layout-persistence-saved.json",
+      "sha256": "b0326ef274ff5d8e6ded212ddcedf694c77a6eccfd0425458d7e20c3ccfae93a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-routing-window-set-20261108-v5/legacy-glyph-restored.png",
+      "sha256": "0a53fff02c059efc67e4808ccfbd669c8560f8a164c6da2f2f6970301adcf2ff"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/chat-routing-window-set-20261108-v5/legacy-glyph-suppressed.png",
+      "sha256": "5a739a1abe0ce2f11461d1c429810d6256b07eabeb58321d7f9ba821f84b2cab"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/audit-history.py",
+      "sha256": "43b3dd93e1bb748275abd80d37a7d986d4016b83b72bd6cf2e0ed3bac1c1fd92"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/chat-geometry.log",
+      "sha256": "f4063b620e7293bcea213b3fd6c7924dbcb33554ffda03d44690dbdd7ba051e2"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/chat-geometry.receipt.json",
+      "sha256": "296f5b70e0ea4e8262959c8fa4b5ca26d52560c494293cc47cfc5305bfb3848d"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/chat-store.log",
+      "sha256": "32cd79ea24bf9c4498cc188f3a1c084fb062eaf00f7a124070ca34c89439a416"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/chat-store.receipt.json",
+      "sha256": "5babe5eeb473990b545a75f0b298d5fbaef8d3b173c26e2964d5b6e86aecbe5f"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/check-whitespace.py",
+      "sha256": "275e94f0b4d3ccb4f0753c6a04a2ed740a0df791a6ea7579191ba9d139e54896"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/debug-build-v2.log",
+      "sha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/debug-build-v2.receipt.json",
+      "sha256": "bd157b7af0d123f4b09a9ab4a11b843ddfa8bdcfccb1ddd13961f87dd6d33b6e"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/debug-build-v3.log",
+      "sha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/debug-build-v3.receipt.json",
+      "sha256": "3ac7f046f5f4bb8d3056c597bf31df429b74d10b3576d155239869bee98d85da"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/debug-build.json",
+      "sha256": "57473f0ffca396c961a5c5c99ee855878e0bb17f0ad6fab7b5d6fa0bcb8847bc"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/debug-build.log",
+      "sha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/debug-build.receipt.json",
+      "sha256": "ae658bd49dec73cd2c786f3c44056cad6304bb541d027e908f64dd142c8966dc"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/debug-manifest.log",
+      "sha256": "93722f2e0374393452015bafae0872f7d3093661905cb716c1fb4f7d47ac7051"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/debug-manifest.receipt.json",
+      "sha256": "77bd6c6a9d79b885aa27ebf1ed770861afd0931d1e2138798db8e39d24b91313"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/full-scene.log",
+      "sha256": "0d85d4de7905eb608acc989200b5dfcc19842b35b62586889490caf606d4a988"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/full-scene.receipt.json",
+      "sha256": "7696a06487afaea8dcbb2ca043b5616376d31ff1e34b1b0ec3dd3085a042ac4c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/history-audit.json",
+      "sha256": "06923af1b6bb66bc2920a37beb4b751f9aa81583a1c3c167188ed19904331c88"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/history-audit.log",
+      "sha256": "06923af1b6bb66bc2920a37beb4b751f9aa81583a1c3c167188ed19904331c88"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/history-audit.receipt.json",
+      "sha256": "9923940e101c448e7cdf77df6d2b2de093b64f562dc059d16f9fa6c71fc5c75b"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/prepare-report.py",
+      "sha256": "6a81767ee91029ad311871e3724f993b3faec44950d0aef75fb222772ba5fcc2"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/README.md",
+      "sha256": "8c7c0f0d8fff96787324512d7ff70be9dbea6a7d8caba31e338f79d61bc480be"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/release-build.json",
+      "sha256": "269895ddd19c2bc96aac79b113fb9b008ae01fa1df12cfd6890ab7041fbc4373"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/release-build.log",
+      "sha256": "c9e24428be1e56c8408af17aacfea3413de3953bfe426d10eb768782f5005ebc"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/release-build.receipt.json",
+      "sha256": "a4bcf1e7609da9cd8a51c16daa938b71343f92b1b771ceaab3e288db7406e4da"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/release-manifest.log",
+      "sha256": "24c82a33ec1decffce68f3a16a3db05daa6f59a8bec1e702974fe517d63f9de8"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/release-manifest.receipt.json",
+      "sha256": "33fa791505a3d8d23987f56a2d8cfe29b7d642ea7ab7f718610f11062bb97755"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/run-check.py",
+      "sha256": "8cea69f8c28d781722ec26876840ea3e6bb44ae5ed37e2d213fdab62d1a7c943"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/source-before/Client/Envir/GameUiChatGroupBinding.cs",
+      "sha256": "026c094d3dbdf042cf3487499194c8c01acaeba91bea6114ccd82692c0c46d47"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/source-before/Client/Envir/GameUiChatStore.cs",
+      "sha256": "a8bc05ceab25ab2a6b345a9d04617d999c240078b3f2a1a7d9598c9cbd53d81e"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/source-before/Client/Envir/GameUiOfficialV1ChatSet.cs",
+      "sha256": "642ad9f11c1ffc6ee057c95298c13cfeb99ca3b6dddcaa26886f6ec1a188f4d0"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/source-before/Client/Envir/GameUiOfficialV1WindowSet.cs",
+      "sha256": "a3fafcb71a8c9d374be8f63107725b7b82db434540c74a5a462409b50fe5ba3c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/source-before/Client/Envir/GameUiStartupSession.cs",
+      "sha256": "54de8a04f3e195402173ed97726d1e52e102b1afb5017d6c6891d402741765ab"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/source-before/Client/Scenes/GameScene.cs",
+      "sha256": "429a2e77659b244fcf5044916a0ff776b21b368f49b2320516d17ad56737d311"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/source-before/Client/Scenes/Views/ChatOptionsDialog.cs",
+      "sha256": "8609c62af0f8c78a55f6c8c60c8e45b833c12c7b79bb7cd88ec6efaa67b93355"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/source-before/tests/game-ui/OfficialUiSceneStartupTests.cs",
+      "sha256": "f2966092d5098e321ab79cdd81ca7af36982d7fa320e193316b787568a6d7807"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/source-before/tests/Run-GameUiWindowSetTests.ps1",
+      "sha256": "361a374755a34b5d1b51ec12db7f7f6cf3569f81fac32d80f4082d9cf36af0d2"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/source-before.json",
+      "sha256": "d4660659d78acd84f56479c16b7e7aaeea2aad4d6da4a7af77a720695a708769"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/tasks-validation.log",
+      "sha256": "90e3ddffa807ef19523e77855653984be659ff7ab47ec66f04d41348c4cb85b3"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/tasks-validation.receipt.json",
+      "sha256": "65ef6712477a279e852ba4777fcc92fb42b516a3faab48e9cc85fd2a87dbbc35"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/tested-runtime.json",
+      "sha256": "d9f7dc740c4d966aa0b2960849d19bc3a8fba31273868a880a1d265998640b96"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/whitespace.log",
+      "sha256": "0a35089d446e53f25d9fd4c36a32065b83fd13816fdee2f0807ba939877cbf6a"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/whitespace.receipt.json",
+      "sha256": "9e9242c3a6bb0bf6a4be15cbb1690749e1fa08bf4a8a2985dbe64c2958dff959"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/window-set-final.log",
+      "sha256": "7a6ad5ea9bf68d161c07a4e52fbc2678b80dc996fa5f3672f58132b4fbf4aaaa"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/window-set-final.receipt.json",
+      "sha256": "9de11dec963f69c3e937f3b3bcc68c7190806a6eafd84bc95680493391c5d737"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/window-set-v2.log",
+      "sha256": "a4b874513b39b4f859bcbb916991846cca810aa67bd617110f0e2b81946cf51d"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/window-set-v2.receipt.json",
+      "sha256": "7a428f43db1f05c7368909459bf686226da3e509fe316db40c93c0cc387aca94"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/window-set-v3.log",
+      "sha256": "ef173f598be7f1dac676e1524f4fa359aab3874dade6636a9e7aec01d1119a6c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/window-set-v3.receipt.json",
+      "sha256": "eba99bfed61bc630581150afcafbc8326d1153d35b87ceef17fba99032627bce"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/window-set-v4.log",
+      "sha256": "7e0d3e2c3d93c5acf9c8923c2d27a11216807ab36865cd26e9fb9ac14888b081"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/window-set-v4.receipt.json",
+      "sha256": "98a28a8170f61d9655722ea8514793738c864918cb80fb71b22d3e2e2e985f27"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/window-set-v5.log",
+      "sha256": "7d8c9ff1852bd88210f7ee58fb5a1719f082750f61a1ec73511394d492f31b44"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/window-set-v5.receipt.json",
+      "sha256": "38fa926e1babeaa8089ed4c197c40774eb4bc56535042f9ebc8706a60724a166"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/window-set.log",
+      "sha256": "edbe6875cb44fdf374ab2adbb1b9a2f28fb14245daeaeee2e8c5d8b82f2181d2"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/window-set.receipt.json",
+      "sha256": "fe5c04ccb46eb098b001f78a63f103ee2e2f03f07bcd6543ea87b0b5c3c74c7f"
+    }
+  ]
+}

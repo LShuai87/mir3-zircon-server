@@ -1,0 +1,10 @@
+test_deterministic_compilation_and_stale_check (test_official_ui_catalog.CatalogTests.test_deterministic_compilation_and_stale_check) ... ok
+test_duplicate_json_key_and_stale_input_hash (test_official_ui_catalog.CatalogTests.test_duplicate_json_key_and_stale_input_hash) ... ok
+test_output_cannot_replace_build_input (test_official_ui_catalog.CatalogTests.test_output_cannot_replace_build_input) ... ok
+test_reject_invalid_contracts (test_official_ui_catalog.CatalogTests.test_reject_invalid_contracts) ... ok
+test_reject_matching_but_invalid_descriptors (test_official_ui_catalog.CatalogTests.test_reject_matching_but_invalid_descriptors) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.321s
+
+OK

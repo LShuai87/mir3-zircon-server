@@ -1,0 +1,730 @@
+{
+  "schemaVersion": 1,
+  "kind": "npc-service-response-and-official-resize-central-routing-verification",
+  "checkedAtLocalDate": "2026-11-08",
+  "releaseAccepted": false,
+  "referenceResolution": [
+    1024,
+    768
+  ],
+  "results": {
+    "centralizedResponseLocationWrites": 15,
+    "npcChecks": 17247,
+    "npcCoordinateHits": 707,
+    "npcFrames": 48,
+    "npcResets": 33,
+    "identicalNativeNpcPixels": 2399935,
+    "officialServiceReflows": 180,
+    "windowSetChecks": 165781,
+    "fullSceneChecks": 180,
+    "fullSceneFrames": 17,
+    "fullSceneResets": 7,
+    "identicalFullScenePanelPixels": 690512,
+    "pythonTests": 172,
+    "packageFrames": 94
+  },
+  "sourceChanges": [
+    {
+      "path": "Client/Scenes/Views/NPCDialog.cs",
+      "beforeSha256": "7a7c3831f9496ea9425b0d26c49bada34bb482445656cbd59e5df3f669c3b681",
+      "afterSha256": "9f66535700a744a9bc08744057dcfd6b0df6929817397aa8617c9eb5de389fca"
+    },
+    {
+      "path": "Client/Envir/GameUiOfficialV1WindowSet.cs",
+      "beforeSha256": "6a73cbc73a08be5afff0a027ee0f48b56ec21dc92d9268cc89e6ee765ef4732e",
+      "afterSha256": "1d429a9e4bcd4a85cb5beb1972c498395f12ab5f874a9e5e056eabb641d52e7c"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiNpcTests.cs",
+      "beforeSha256": "467d3d3e36dada193d829362122603414deac482d0dcdb9a0cfd22f6355d4a82",
+      "afterSha256": "25d1b23c516544f5db02ff59d1cceaea01257417f949ca01291b60865c375767"
+    }
+  ],
+  "sourceHashes": [
+    {
+      "path": "Client/Scenes/Views/NPCDialog.cs",
+      "sha256": "9f66535700a744a9bc08744057dcfd6b0df6929817397aa8617c9eb5de389fca"
+    },
+    {
+      "path": "Client/Envir/GameUiOfficialV1WindowSet.cs",
+      "sha256": "1d429a9e4bcd4a85cb5beb1972c498395f12ab5f874a9e5e056eabb641d52e7c"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiNpcTests.cs",
+      "sha256": "25d1b23c516544f5db02ff59d1cceaea01257417f949ca01291b60865c375767"
+    }
+  ],
+  "commands": [
+    {
+      "command": [
+        "D:/Program Files/Microsoft Visual Studio/2022/Enterprise/MSBuild/Current/Bin/MSBuild.exe",
+        "Client/Client.csproj",
+        "/t:Build",
+        "/p:Configuration=Debug",
+        "/p:Platform=AnyCPU",
+        "/v:minimal",
+        "/nologo"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-service-layout-routing/build-debug.log",
+      "logSha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "command": [
+        "D:/Program Files/Microsoft Visual Studio/2022/Enterprise/MSBuild/Current/Bin/MSBuild.exe",
+        "Client/Client.csproj",
+        "/t:Build",
+        "/p:Configuration=Release",
+        "/p:Platform=AnyCPU",
+        "/v:minimal",
+        "/nologo"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-service-layout-routing/build-release.log",
+      "logSha256": "c9e24428be1e56c8408af17aacfea3413de3953bfe426d10eb768782f5005ebc"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiFullSceneTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/npc-routing-full-scene-20261108-v1"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-service-layout-routing/full-scene.log",
+      "logSha256": "0d85d4de7905eb608acc989200b5dfcc19842b35b62586889490caf606d4a988"
+    },
+    {
+      "command": [
+        "C:/Users/shuai/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+        "docs/design/assets/official-ingame-ui/acceptance/npc-service-layout-routing/audit-history.py",
+        "--output",
+        "docs/design/assets/official-ingame-ui/acceptance/npc-service-layout-routing/history-audit.json"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-service-layout-routing/history-audit.log",
+      "logSha256": "e64f90197959a8c6a2b67d26d2af83282c5cbefda7425a7ed3bc3518c993877d"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "build/game-ui/New-GameUiReleaseManifest.ps1",
+        "-ClientDirectory",
+        "E:/workspace/Debug/Client",
+        "-ResourceRoot",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/staged-resources",
+        "-OutputPath",
+        "E:/workspace/mir3-zircon-server/docs/design/assets/official-ingame-ui/acceptance/npc-service-layout-routing/release-manifest-debug.json"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-service-layout-routing/manifest-debug.log",
+      "logSha256": "9e04aee89e902e465842ff3d85da81331c4f3a7a4f51da8abbeb305d76a7a6f4"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "build/game-ui/New-GameUiReleaseManifest.ps1",
+        "-ClientDirectory",
+        "E:/workspace/Release/Client",
+        "-ResourceRoot",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/staged-resources",
+        "-OutputPath",
+        "E:/workspace/mir3-zircon-server/docs/design/assets/official-ingame-ui/acceptance/npc-service-layout-routing/release-manifest-release.json"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-service-layout-routing/manifest-release.log",
+      "logSha256": "17130ec23c5b14005cafeb9101302d6c4a80cc575c96a8d95708eba58a8af26f"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiNpcTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/npc-service-layout-routing-20261108-v3"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-service-layout-routing/npc-v3.log",
+      "logSha256": "8d882561290a52de908f40629c05b5819ab62dfd250836aed38ca4d76d604749"
+    },
+    {
+      "command": [
+        "C:/Users/shuai/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests/game-ui",
+        "-p",
+        "test_*.py"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-service-layout-routing/python-tests.log",
+      "logSha256": "799ead030d8cbd6114beae1b0535f356f4a6235bf33185abebe7141a5d0bcaa1"
+    },
+    {
+      "command": [
+        "C:/Users/shuai/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+        "build/game-ui/Validate-UiTasks.py"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-service-layout-routing/task-validation.log",
+      "logSha256": "90e3ddffa807ef19523e77855653984be659ff7ab47ec66f04d41348c4cb85b3"
+    },
+    {
+      "command": [
+        "C:/Users/shuai/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+        "docs/design/assets/official-ingame-ui/acceptance/npc-service-layout-routing/check-whitespace.py"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-service-layout-routing/whitespace.log",
+      "logSha256": "81e74a0a2fffdb23991b4f3aa3655f6adc55557b088f449f55e29a9d2eced42b"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiWindowSetTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-service-layout-routing/window-set.log",
+      "logSha256": "860b2afe88869206b19a210faa5da2e8a6d2e37228115d69edd0377e3ba5c85b"
+    }
+  ],
+  "builds": {
+    "debug": {
+      "buildId": "gameui-9674b3f67b2efe8f958e61993b3d734f5553cacc0cd30cec2a77c17d42fe3c6f",
+      "client": {
+        "path": "Zircon.exe",
+        "length": 1353216,
+        "sha256": "0a27b48682d330f6ffbdacf69b46671605caf3c0212a05e727d30c71ebc50897"
+      }
+    },
+    "release": {
+      "buildId": "gameui-92779dd98f256dab0692730c660c6ed30fc080328c527d607936160414b96990",
+      "client": {
+        "path": "Zircon.exe",
+        "length": 1250304,
+        "sha256": "1402fdbe0a2f0a36b5278723e1a1a74184252bd43316a29fe2dacd42b87d0987"
+      }
+    }
+  },
+  "package": {
+    "path": "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+    "sha256": "dd45cbf51d976a69d28269ee0d27a985def1ee1693cab2b509b74ae347a880a4",
+    "frameCount": 94
+  },
+  "candidate": {
+    "path": "E:/workspace/mir3-ui-work/warehouse-assets-20261108-v1/zl-v2/OfficialV1.Zl",
+    "sha256": "471169dfa093b521f3c700c5a993e4e763aa17a45b2e16f440d961c0c7bf4cec",
+    "frameCount": 1
+  },
+  "limitations": [
+    "This is central routing with preserved native placement rules, not safe-area vertical/horizontal/overlap coordination or final UI-25 acceptance.",
+    "The independently opened quest window keeps its own original packet positioning; long-card real scrolling and fixed close/header reachability remain incomplete.",
+    "No live server storage actions, full service/storage/inventory collision matrix, final visual, hardware device-loss, IME, performance or release/rollback acceptance.",
+    "Default Legacy, RuntimeReady=false and productionBindingAllowed=false remain. All task and gate states remain unchanged."
+  ],
+  "failedAttempts": [
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiNpcTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/npc-service-layout-routing-20261108-v2"
+      ],
+      "result": "fail",
+      "exitCode": 1,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-service-layout-routing/npc-v2.log",
+      "logSha256": "d2d022abae21fd963d15538fe6f055cb6a4940472f6b91d4d913b1e801f9bac0"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiNpcTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/npc-service-layout-routing-20261108-v1"
+      ],
+      "result": "fail",
+      "exitCode": 1,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-service-layout-routing/npc.log",
+      "logSha256": "71b71bd49f7b03c9491352c9d3341ef8aec0ec15d1d2ab8eee627178dabd571e"
+    }
+  ],
+  "sourcePlanSha256": "f8c0a002b3821fabb54993792c354c4eff35eec51f9cfdc418535017c13069e9",
+  "evidenceHashes": [
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-service-layout-routing/audit-history.py",
+      "sha256": "43b3dd93e1bb748275abd80d37a7d986d4016b83b72bd6cf2e0ed3bac1c1fd92"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-service-layout-routing/build-debug.log",
+      "sha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-service-layout-routing/build-debug.receipt.json",
+      "sha256": "917169d22bd5f779446392c5eaa461b30413baa14a529eb7f610ac3a6b22b61e"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-service-layout-routing/build-release.log",
+      "sha256": "c9e24428be1e56c8408af17aacfea3413de3953bfe426d10eb768782f5005ebc"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-service-layout-routing/build-release.receipt.json",
+      "sha256": "9c983ee6d14c62b13857190963b49780492d31296909291a1abaa72c19c7f6f9"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-service-layout-routing/check-whitespace.py",
+      "sha256": "b0a86f69a0f4d2d1028cf29ec177b27a0b21d80f60d2f17ed9eaf8f84c6a104f"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-service-layout-routing/full-scene.log",
+      "sha256": "0d85d4de7905eb608acc989200b5dfcc19842b35b62586889490caf606d4a988"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-service-layout-routing/full-scene.receipt.json",
+      "sha256": "164bb27cd3eb973310bbb1ba67b4d039ba87ce357927ceb4a90619a49665f483"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-service-layout-routing/history-audit.json",
+      "sha256": "e64f90197959a8c6a2b67d26d2af83282c5cbefda7425a7ed3bc3518c993877d"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-service-layout-routing/history-audit.log",
+      "sha256": "e64f90197959a8c6a2b67d26d2af83282c5cbefda7425a7ed3bc3518c993877d"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-service-layout-routing/history-audit.receipt.json",
+      "sha256": "50c5ca3dc7b2497a9af0e4239241ce29edaa91922e613e34a202d361016fe1cd"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-service-layout-routing/manifest-debug.log",
+      "sha256": "9e04aee89e902e465842ff3d85da81331c4f3a7a4f51da8abbeb305d76a7a6f4"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-service-layout-routing/manifest-debug.receipt.json",
+      "sha256": "acf110fd63f3f93d106069679631f418b3bbfb5c01719e29c511a1c8b009f95a"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-service-layout-routing/manifest-release.log",
+      "sha256": "17130ec23c5b14005cafeb9101302d6c4a80cc575c96a8d95708eba58a8af26f"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-service-layout-routing/manifest-release.receipt.json",
+      "sha256": "a3070540873eba89145c8163728d7616f26e6508313a2a56dbbe0fa4244f54b7"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-service-layout-routing/npc-v2.log",
+      "sha256": "d2d022abae21fd963d15538fe6f055cb6a4940472f6b91d4d913b1e801f9bac0"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-service-layout-routing/npc-v2.receipt.json",
+      "sha256": "8fb0b7a065d151710364bedb937ef063720b02284199930cee38da6de1718091"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-service-layout-routing/npc-v3.log",
+      "sha256": "8d882561290a52de908f40629c05b5819ab62dfd250836aed38ca4d76d604749"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-service-layout-routing/npc-v3.receipt.json",
+      "sha256": "b44fda1d1eafc8e9fc2aedaf1cba0a1a98bb2f841cc67d91db717f61a37da4f4"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-service-layout-routing/npc.log",
+      "sha256": "71b71bd49f7b03c9491352c9d3341ef8aec0ec15d1d2ab8eee627178dabd571e"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-service-layout-routing/npc.receipt.json",
+      "sha256": "8617706e8fb390317675dc9c740c92422f09edb024d026beb646710acfffd8bc"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-service-layout-routing/python-tests.log",
+      "sha256": "799ead030d8cbd6114beae1b0535f356f4a6235bf33185abebe7141a5d0bcaa1"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-service-layout-routing/python-tests.receipt.json",
+      "sha256": "a55a96af5325f70e3a50572f55e0585a7e5854ef5cc404f7dd5e6e4ae4fb362e"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-service-layout-routing/README.md",
+      "sha256": "0c35b913c4adc9e0c1953a8dd34213d0c452198f90dd42a52009e86c531bf95c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-service-layout-routing/release-manifest-debug.json",
+      "sha256": "ddd168db8971b1bb13fd7b67b4882489cc4478bfc62cd559e270f864d02d72b7"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-service-layout-routing/release-manifest-release.json",
+      "sha256": "2aa1968ec00c41ac0e4df6a2bdb31ad994bf4a8fe1bb848dd2cc887789398cd7"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-service-layout-routing/run-check.py",
+      "sha256": "8cea69f8c28d781722ec26876840ea3e6bb44ae5ed37e2d213fdab62d1a7c943"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-service-layout-routing/source-before/Client/Envir/GameUiOfficialV1WindowSet.cs",
+      "sha256": "6a73cbc73a08be5afff0a027ee0f48b56ec21dc92d9268cc89e6ee765ef4732e"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-service-layout-routing/source-before/Client/Scenes/Views/NPCDialog.cs",
+      "sha256": "7a7c3831f9496ea9425b0d26c49bada34bb482445656cbd59e5df3f669c3b681"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-service-layout-routing/source-before/tests/game-ui/OfficialUiNpcTests.cs",
+      "sha256": "467d3d3e36dada193d829362122603414deac482d0dcdb9a0cfd22f6355d4a82"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-service-layout-routing/source-before.json",
+      "sha256": "fffe42b084be30cf3dcc795af363e504698c3bced8f9fb13a83c3e638052263d"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-service-layout-routing/task-validation.log",
+      "sha256": "90e3ddffa807ef19523e77855653984be659ff7ab47ec66f04d41348c4cb85b3"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-service-layout-routing/task-validation.receipt.json",
+      "sha256": "a53b04ecc94a2d2d93e395d5033a13187f4ae47774dd209bc1cd21a449b002c2"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-service-layout-routing/tested-runtime.json",
+      "sha256": "432a2c73bb51cd458c7d8da6dd73dfc77c1b59e4000cef3a49f4f8aa539cc689"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-service-layout-routing/whitespace.log",
+      "sha256": "81e74a0a2fffdb23991b4f3aa3655f6adc55557b088f449f55e29a9d2eced42b"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-service-layout-routing/whitespace.receipt.json",
+      "sha256": "48115d4311b49f2ac646f8e8629c5cf8b72205b17a780bcf2c54915be3f472fb"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-service-layout-routing/window-set.log",
+      "sha256": "860b2afe88869206b19a210faa5da2e8a6d2e37228115d69edd0377e3ba5c85b"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-service-layout-routing/window-set.receipt.json",
+      "sha256": "2fe6fe064f83354269ce1be812173a82e1ce782427c9fb265ae8cafa99828bd7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-service-layout-routing-20261108-v3/assertions.txt",
+      "sha256": "71f58596f99d7ea868607e13c7d5f19a58bdb2f15898226d76bca8e345ea3308"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-service-layout-routing-20261108-v3/coordinate-hits.txt",
+      "sha256": "22f382b0dce64d4cf49c1c2bf25af6ea5f8132b84b4c5bdb218c23f10d7c41ba"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-service-layout-routing-20261108-v3/legacy-card.png",
+      "sha256": "bbf533c95e714eb1b384a34ed7dde97083e54d67bca961844f3c9e9c8f2882d6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-service-layout-routing-20261108-v3/legacy-goods-bottom.png",
+      "sha256": "923b0c68e8cf7a6a3c51de563999d0f24bb99b7a8c4382bb02c858b5637a435e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-service-layout-routing-20261108-v3/legacy-goods-quantity.png",
+      "sha256": "203601bf8d8d27d816c2fce39ce93c2fe096e8103c81b8be023e9b3eae45bfc6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-service-layout-routing-20261108-v3/legacy-goods-top.png",
+      "sha256": "771fbf5408ff1edc726b6888249f3c10491bc553f52a0e774199bac882bf60db"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-service-layout-routing-20261108-v3/legacy-refine-retrieve.png",
+      "sha256": "b0ca02edebfb861c3e2375d08a0e4501ea545c975379bf3df9965c22f948cdac"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-service-layout-routing-20261108-v3/legacy-refine.png",
+      "sha256": "0743781638dc75bd0e871ff69a221e7c7cffdabc666ac4ed021bac0a0cae2551"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-service-layout-routing-20261108-v3/legacy-repair-full.png",
+      "sha256": "c7733722ac20d86135c879e46aefd6cd530d80275fe45902c5ebab3fa6065379"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-service-layout-routing-20261108-v3/legacy-reset-1024x768.png",
+      "sha256": "718e52a0df1079d77fab5dff0823b58b2d8d98cb7c5d319a4fb36d5893eaca4d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-service-layout-routing-20261108-v3/legacy-reset-1280x800.png",
+      "sha256": "6ba4420ef13f0c9e3e11e94b0b510f0ef22e92014dd02cadc2da81c2e20918bf"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-service-layout-routing-20261108-v3/legacy-reset-1366x768.png",
+      "sha256": "9307abd4893bee4b08268e04f81e8f8889f09be289f4703c0dd332384e396b42"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-service-layout-routing-20261108-v3/legacy-reset-1440x900.png",
+      "sha256": "5d7a6e9c1c15173e85b1c06b094a5773c037c7c3e7d270d57818628ed4e3abdd"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-service-layout-routing-20261108-v3/legacy-reset-1600x900.png",
+      "sha256": "0270ea3175f839c48f352f53a0057f3c9366895a424af520eddf7709fb8da65f"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-service-layout-routing-20261108-v3/legacy-reset-1920x1080.png",
+      "sha256": "b024b69683e93b115d6d3973a578d2ea688b5090fe5ce983f352af2f1b7d50d3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-service-layout-routing-20261108-v3/legacy-resources.txt",
+      "sha256": "47713d590a1b9214abdef7a0fc33d6c28a2b5a73a0cff9794375a5083020b498"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-service-layout-routing-20261108-v3/legacy-sell-full.png",
+      "sha256": "78b81311bb79aa207b13afd334aeb71de0ef227a133dc7cb331ac6cc1fddb224"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-service-layout-routing-20261108-v3/legacy-trace.txt",
+      "sha256": "935d55ae7f56c801ef0403b2d4b4b150adf70ebee8d8abca7ff2684b8c001c4d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-service-layout-routing-20261108-v3/legacy-wrapped-option.png",
+      "sha256": "ff0659f55ad69307331223cc4612065bd036ee8b8e2442c86a2c9a6a470714a3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-service-layout-routing-20261108-v3/metrics.json",
+      "sha256": "34b5c61ef0c5457a73d54027892e68a1d667804809d5949247df5a4280da8134"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-service-layout-routing-20261108-v3/official-card.png",
+      "sha256": "0f2b78045205403779ab7c33e75a3c5f834e7a635c67aefc7e77d52e3dd92487"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-service-layout-routing-20261108-v3/official-goods-bottom.png",
+      "sha256": "80d24c59f7d0ca610e204e9bc12b15184ce2330377f634153302561dd5c1f48e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-service-layout-routing-20261108-v3/official-goods-quantity.png",
+      "sha256": "773109a5e71bfd2ab4e17fd1ff1d0c31d826c57e20d6e71f679c7239f12510ae"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-service-layout-routing-20261108-v3/official-goods-top.png",
+      "sha256": "a4588dc2e6aff8b200a2956968b06c7ec7f3d7fa50e4cbee9bb6109ff9082330"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-service-layout-routing-20261108-v3/official-reentry-card.png",
+      "sha256": "0f2b78045205403779ab7c33e75a3c5f834e7a635c67aefc7e77d52e3dd92487"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-service-layout-routing-20261108-v3/official-reentry-goods-bottom.png",
+      "sha256": "80d24c59f7d0ca610e204e9bc12b15184ce2330377f634153302561dd5c1f48e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-service-layout-routing-20261108-v3/official-reentry-goods-quantity.png",
+      "sha256": "773109a5e71bfd2ab4e17fd1ff1d0c31d826c57e20d6e71f679c7239f12510ae"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-service-layout-routing-20261108-v3/official-reentry-goods-top.png",
+      "sha256": "a4588dc2e6aff8b200a2956968b06c7ec7f3d7fa50e4cbee9bb6109ff9082330"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-service-layout-routing-20261108-v3/official-reentry-refine-retrieve.png",
+      "sha256": "6a426d5b60771fbe87155f1a6aeb0e9402c9e08d99cb4b60ad1fc77d71009ab8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-service-layout-routing-20261108-v3/official-reentry-refine.png",
+      "sha256": "863191b6bbe505d2d23cc163b0f582bb402f70a2e67296e547a8092a9ef0e3e7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-service-layout-routing-20261108-v3/official-reentry-repair-full.png",
+      "sha256": "4db1938fa4264426979a3a20b2dc46469f5bab70a5d5f85761522f385c998048"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-service-layout-routing-20261108-v3/official-reentry-reset-1024x768.png",
+      "sha256": "914fc17ee2ad5aa305df83f8db2abb5845709319c87f0965f02e6c0b5882bf95"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-service-layout-routing-20261108-v3/official-reentry-reset-1280x800.png",
+      "sha256": "b47a5ef9e7de6846fb320d74e16f9d4cc046e167a157e7b7b65a2b1675fe5bb9"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-service-layout-routing-20261108-v3/official-reentry-reset-1366x768.png",
+      "sha256": "8162077eae9315cc95cbe35c2cf4e5b512e0d9c5a46946c9f1e53dc9c14a274f"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-service-layout-routing-20261108-v3/official-reentry-reset-1440x900.png",
+      "sha256": "8a06bb7bc78f0b62505e29c7ff9dfc51fef6b0cf1e3a4e4a559861001f157cbc"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-service-layout-routing-20261108-v3/official-reentry-reset-1600x900.png",
+      "sha256": "899530229c656fae04903642213ac06b42e95d8ca350f54ec17966a9183449b2"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-service-layout-routing-20261108-v3/official-reentry-reset-1920x1080.png",
+      "sha256": "0731353ff36fc6d6c5dfee50c5c8f09003062be73c7a223ca1bb696b28ecdc99"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-service-layout-routing-20261108-v3/official-reentry-sell-full.png",
+      "sha256": "33f9a26fc2b593c6ef23e98922f8568e3c4ab41547eedc41274f4fd8109bf6e6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-service-layout-routing-20261108-v3/official-reentry-trace.txt",
+      "sha256": "935d55ae7f56c801ef0403b2d4b4b150adf70ebee8d8abca7ff2684b8c001c4d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-service-layout-routing-20261108-v3/official-reentry-wrapped-option.png",
+      "sha256": "d26978a42c5b6bc4e2d0b20a25f3a364e07f877494efb454fb43c77ce64008d9"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-service-layout-routing-20261108-v3/official-refine-retrieve.png",
+      "sha256": "6a426d5b60771fbe87155f1a6aeb0e9402c9e08d99cb4b60ad1fc77d71009ab8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-service-layout-routing-20261108-v3/official-refine.png",
+      "sha256": "863191b6bbe505d2d23cc163b0f582bb402f70a2e67296e547a8092a9ef0e3e7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-service-layout-routing-20261108-v3/official-repair-full.png",
+      "sha256": "4db1938fa4264426979a3a20b2dc46469f5bab70a5d5f85761522f385c998048"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-service-layout-routing-20261108-v3/official-reset-1024x768.png",
+      "sha256": "914fc17ee2ad5aa305df83f8db2abb5845709319c87f0965f02e6c0b5882bf95"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-service-layout-routing-20261108-v3/official-reset-1280x800.png",
+      "sha256": "b47a5ef9e7de6846fb320d74e16f9d4cc046e167a157e7b7b65a2b1675fe5bb9"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-service-layout-routing-20261108-v3/official-reset-1366x768.png",
+      "sha256": "8162077eae9315cc95cbe35c2cf4e5b512e0d9c5a46946c9f1e53dc9c14a274f"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-service-layout-routing-20261108-v3/official-reset-1440x900.png",
+      "sha256": "8a06bb7bc78f0b62505e29c7ff9dfc51fef6b0cf1e3a4e4a559861001f157cbc"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-service-layout-routing-20261108-v3/official-reset-1600x900.png",
+      "sha256": "899530229c656fae04903642213ac06b42e95d8ca350f54ec17966a9183449b2"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-service-layout-routing-20261108-v3/official-reset-1920x1080.png",
+      "sha256": "0731353ff36fc6d6c5dfee50c5c8f09003062be73c7a223ca1bb696b28ecdc99"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-service-layout-routing-20261108-v3/official-sell-full.png",
+      "sha256": "33f9a26fc2b593c6ef23e98922f8568e3c4ab41547eedc41274f4fd8109bf6e6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-service-layout-routing-20261108-v3/official-trace.txt",
+      "sha256": "935d55ae7f56c801ef0403b2d4b4b150adf70ebee8d8abca7ff2684b8c001c4d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-service-layout-routing-20261108-v3/official-wrapped-option.png",
+      "sha256": "d26978a42c5b6bc4e2d0b20a25f3a364e07f877494efb454fb43c77ce64008d9"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-service-layout-routing-20261108-v3/tested-runtime.json",
+      "sha256": "432a2c73bb51cd458c7d8da6dd73dfc77c1b59e4000cef3a49f4f8aa539cc689"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-routing-full-scene-20261108-v1/legacy-hud.png",
+      "sha256": "5fa69de2c6da4336331e9f837cd0ded6c24f9b714dda1e36432e8880dc050a09"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-routing-full-scene-20261108-v1/legacy-panels.png",
+      "sha256": "d0723781ce5debe099e9ba58f4e2c999706872006bb0ec1594c651cea1634a46"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-routing-full-scene-20261108-v1/legacy-resources.txt",
+      "sha256": "47713d590a1b9214abdef7a0fc33d6c28a2b5a73a0cff9794375a5083020b498"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-routing-full-scene-20261108-v1/official-CharacterTab.png",
+      "sha256": "43a1af56f6c3bfd96763e2bdc70b81fcda2ad9bddce1aa09a95ffa0b5055eac8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-routing-full-scene-20261108-v1/official-extraEquipmentTab.png",
+      "sha256": "fd2f77d0befc66bba22a81f66c6636dd2b169066f24bb721f5170886176243ca"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-routing-full-scene-20261108-v1/official-HermitTab.png",
+      "sha256": "4f638a46988d05fdf41f695893510dc4b19dc85b5ca24a8ef781e63a17fe6348"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-routing-full-scene-20261108-v1/official-hud.png",
+      "sha256": "0d72ce7b9c9ed1d0c807333ef4c62517a0f9d90d6f49015ba946f1b0882384ac"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-routing-full-scene-20261108-v1/official-panels.png",
+      "sha256": "43a1af56f6c3bfd96763e2bdc70b81fcda2ad9bddce1aa09a95ffa0b5055eac8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-routing-full-scene-20261108-v1/official-reentry-hud.png",
+      "sha256": "39be0066510de06ba2465cc008c6379ffbc4c556c67be4870b3a750f99696f4b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-routing-full-scene-20261108-v1/official-reentry-panels.png",
+      "sha256": "8a0a2644ac845d99ab8104c3cc9acdd0573cdff950c0706b3a8b1a2bd2d4d2a8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-routing-full-scene-20261108-v1/official-reset-1024x768.png",
+      "sha256": "43a1af56f6c3bfd96763e2bdc70b81fcda2ad9bddce1aa09a95ffa0b5055eac8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-routing-full-scene-20261108-v1/official-reset-1280x800.png",
+      "sha256": "6da4d263d19f1aae323e49c0f41f848bd9fb075cb94dafb02df4e2f0749ef8a4"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-routing-full-scene-20261108-v1/official-reset-1366x768.png",
+      "sha256": "bccd5d8071878413408790dbe90b5d5a1ea48d880be4cec00c916469bc30f495"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-routing-full-scene-20261108-v1/official-reset-1440x900.png",
+      "sha256": "1b0be5742da74968aba14f74293e474a1324d346421cab3b9692607f90f43a06"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-routing-full-scene-20261108-v1/official-reset-1600x900.png",
+      "sha256": "ddc79b57cfef144f95511d28a92a7ad2351a7a8d74ed73ca4e19a4a5f8f44ba7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-routing-full-scene-20261108-v1/official-reset-1920x1080.png",
+      "sha256": "41a4d7849e3d91c630c2910d35900a1143c75b435ca0d252a3b2f9483a83cb33"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-routing-full-scene-20261108-v1/official-StatsTab.png",
+      "sha256": "dc665d7ec9343b3bdbdd2fd5bbc16f245d961d0ab217de3d7af7e82be17d8664"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-routing-full-scene-20261108-v1/reset-pixel-probes.txt",
+      "sha256": "2c236cd844574b74b6d502b13ffed99b5cb29783fc53ea00587ca1543a18ac67"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-routing-full-scene-20261108-v1/tested-runtime.json",
+      "sha256": "432a2c73bb51cd458c7d8da6dd73dfc77c1b59e4000cef3a49f4f8aa539cc689"
+    }
+  ]
+}

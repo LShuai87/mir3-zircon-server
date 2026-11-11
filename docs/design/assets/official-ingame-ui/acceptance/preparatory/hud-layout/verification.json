@@ -1,0 +1,490 @@
+{
+  "schemaVersion": 1,
+  "kind": "official-ui-optional-hud-layout-verification",
+  "checkedAtLocalDate": "2026-11-08",
+  "referenceResolution": [
+    1024,
+    768
+  ],
+  "releaseAccepted": false,
+  "sourceChanges": [
+    {
+      "path": "Client/Client.csproj",
+      "beforeSha256": "6a6ccab684d43a9b64a463669944bdeebdbd64567436c1a9241d67a186abe427",
+      "afterSha256": "f4abc6a5df5ae62d92cfd67e517aeafdac10904e373df408c06a9fef2ed48813"
+    },
+    {
+      "path": "Client/Scenes/Views/MainPanel.cs",
+      "beforeSha256": "9dc5d908e47aba577e12f8f3b45c5f0fd920c021ce8731769b5655c557f17df2",
+      "afterSha256": "0742a40cebe05a59f23cc3bbd1ba9915613c045e99885e97fa9d882ce3ae141f"
+    }
+  ],
+  "sourceHashes": [
+    {
+      "path": "Client/Client.csproj",
+      "sha256": "f4abc6a5df5ae62d92cfd67e517aeafdac10904e373df408c06a9fef2ed48813"
+    },
+    {
+      "path": "Client/Scenes/Views/MainPanel.cs",
+      "sha256": "0742a40cebe05a59f23cc3bbd1ba9915613c045e99885e97fa9d882ce3ae141f"
+    },
+    {
+      "path": "Client/Scenes/Views/MainPanel.GameUi.cs",
+      "sha256": "56f3fc14d72c19593839fcb972a2be12819a02c3831b0a420cfa0189bc4d2d54"
+    },
+    {
+      "path": "Client/Envir/GameUiHudLayout.cs",
+      "sha256": "a6201e2f7f2735b1b3df01bafb6620224a8c65dd88dcb0ce18d73f3a0795034c"
+    },
+    {
+      "path": "Client/Controls/GameUiHudFill.cs",
+      "sha256": "091efad117356c86e57cf3130c778f0f68bb7c6542e5110aa0e0d0d9c814a10d"
+    },
+    {
+      "path": "tests/Run-GameUiHudLayoutTests.ps1",
+      "sha256": "738e4cd3acb1bebc5da9221f3a6d69ba4057de2fb90482eee18b9238b6b8aa0c"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiHudLayoutTests.cs",
+      "sha256": "e2e346ae18e9037bf73d840e4df96e18e31b7ec087979066736f1a4b2c1ef6fb"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiHudRenderTests.cs",
+      "sha256": "930b088ba7620cfbc193949ca88141892442c4518933ef79b0c929f1f9dfc676"
+    },
+    {
+      "path": "build/game-ui/layout-official-v1.json",
+      "sha256": "b39fa17ba46f9424a7c5b713a1c77cf7d16b31570a1320232f747239ccd8f509"
+    }
+  ],
+  "priorSourceHashes": [
+    {
+      "path": "Client/Client.csproj",
+      "sha256": "6a6ccab684d43a9b64a463669944bdeebdbd64567436c1a9241d67a186abe427"
+    },
+    {
+      "path": "Client/Scenes/Views/MainPanel.cs",
+      "sha256": "9dc5d908e47aba577e12f8f3b45c5f0fd920c021ce8731769b5655c557f17df2"
+    }
+  ],
+  "newlyRegisteredSourceChanges": [],
+  "beforeSnapshotClassificationCorrection": "MainPanel.cs was already registered in earlier source history. before.json repeats it under priorUnregisteredSources in error; its digest is correct. This report uses an ordinary registered-source transition for MainPanel.cs and preserves the before snapshot unchanged.",
+  "commands": [
+    {
+      "command": "MSBuild.exe Client/Client.csproj /t:Build /p:Configuration=Debug /p:Platform=AnyCPU /nologo /v:minimal",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/build-debug.log",
+      "logSha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "command": "powershell -NoProfile -File tests/Run-GameUiHudLayoutTests.ps1 -RenderPath E:/workspace/mir3-zircon-server/docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/hud.log",
+      "logSha256": "9e32f6dc231f64fd0ddd42cf2d254d8e80fbb33bc40b71369e4f32fde582521d"
+    },
+    {
+      "command": "powershell -NoProfile -File tests/Run-GameUiCharacterReadoutTests.ps1",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/character-readouts.log",
+      "logSha256": "79f9189b1763809c1c6dfbd8abe8578038a9575bd92a0c9017a5299f1e33c06e"
+    },
+    {
+      "command": "powershell -NoProfile -File tests/Run-GameUiTests.ps1 -Suite Controls -RenderPath E:/workspace/mir3-zircon-server/docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/common-controls",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/controls.log",
+      "logSha256": "1c3a27c06de9d9a55c48a06e47471edd25a783f320bf1029c6835dccbe9564d7"
+    },
+    {
+      "command": "powershell -NoProfile -File tests/Run-GameUiLayoutContractTests.ps1",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/layout-contract.log",
+      "logSha256": "73bbd53121dc7e8a9628ecf8fe0f957dd50c7943e80cf6a1a7bc8c3c50eaa31c"
+    },
+    {
+      "command": "MSBuild.exe Client/Client.csproj /t:Build /p:Configuration=Release /p:Platform=AnyCPU /nologo /v:minimal",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/build-release.log",
+      "logSha256": "c9e24428be1e56c8408af17aacfea3413de3953bfe426d10eb768782f5005ebc"
+    },
+    {
+      "command": "git -c core.whitespace=cr-at-eol diff --check",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/diff-check.log",
+      "logSha256": "79d6e102d3342502fc80ca42def8ff97f6642ce33398d5219dc2f3e921c23f6f"
+    }
+  ],
+  "renderedArtifacts": [
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/fill-1.png",
+      "sha256": "5a739a1abe0ce2f11461d1c429810d6256b07eabeb58321d7f9ba821f84b2cab"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/fill-10.png",
+      "sha256": "5a739a1abe0ce2f11461d1c429810d6256b07eabeb58321d7f9ba821f84b2cab"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/fill-11.png",
+      "sha256": "5a739a1abe0ce2f11461d1c429810d6256b07eabeb58321d7f9ba821f84b2cab"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/fill-12.png",
+      "sha256": "34f50c0cd52042ac99ce779f581e741d092573e8d4f05d54a95f1df8048b580e"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/fill-13.png",
+      "sha256": "3212b72dfcb1d8bae5c4503efea5d5c4647b9f044380fa530f4e40f77b49b94e"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/fill-14.png",
+      "sha256": "38dc29c0b9c4fe0cc89232c5eeaa99e902c0fee7406ec0d6f99428a586d442f6"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/fill-15.png",
+      "sha256": "38dc29c0b9c4fe0cc89232c5eeaa99e902c0fee7406ec0d6f99428a586d442f6"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/fill-16.png",
+      "sha256": "38dc29c0b9c4fe0cc89232c5eeaa99e902c0fee7406ec0d6f99428a586d442f6"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/fill-17.png",
+      "sha256": "5a739a1abe0ce2f11461d1c429810d6256b07eabeb58321d7f9ba821f84b2cab"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/fill-18.png",
+      "sha256": "5a739a1abe0ce2f11461d1c429810d6256b07eabeb58321d7f9ba821f84b2cab"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/fill-19.png",
+      "sha256": "5a739a1abe0ce2f11461d1c429810d6256b07eabeb58321d7f9ba821f84b2cab"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/fill-2.png",
+      "sha256": "5a739a1abe0ce2f11461d1c429810d6256b07eabeb58321d7f9ba821f84b2cab"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/fill-20.png",
+      "sha256": "5a739a1abe0ce2f11461d1c429810d6256b07eabeb58321d7f9ba821f84b2cab"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/fill-21.png",
+      "sha256": "5a739a1abe0ce2f11461d1c429810d6256b07eabeb58321d7f9ba821f84b2cab"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/fill-22.png",
+      "sha256": "d577212ed956c77fac4915ccde931c526f71683ff2dc726a06e97037ac62fa0e"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/fill-23.png",
+      "sha256": "dd0868e88a03d9ba6d6838dd1a2b9a40dc53220689963665595a5d34a4f1818a"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/fill-24.png",
+      "sha256": "dd0868e88a03d9ba6d6838dd1a2b9a40dc53220689963665595a5d34a4f1818a"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/fill-25.png",
+      "sha256": "5a739a1abe0ce2f11461d1c429810d6256b07eabeb58321d7f9ba821f84b2cab"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/fill-26.png",
+      "sha256": "5a739a1abe0ce2f11461d1c429810d6256b07eabeb58321d7f9ba821f84b2cab"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/fill-27.png",
+      "sha256": "5a739a1abe0ce2f11461d1c429810d6256b07eabeb58321d7f9ba821f84b2cab"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/fill-28.png",
+      "sha256": "1eb5405f52208b1df9b9b4ca7a922c03866799d05b7d9c2e680f5a334464d01b"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/fill-29.png",
+      "sha256": "dd4d5302a08225073d75732d3527bf4a9f2441f6f7bd7cd26435a664c89b682e"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/fill-3.png",
+      "sha256": "5a739a1abe0ce2f11461d1c429810d6256b07eabeb58321d7f9ba821f84b2cab"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/fill-30.png",
+      "sha256": "f67f819c8e85f937f6ed28dbefb4a39abf7ad94e35126559b82e5cd7a789e785"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/fill-31.png",
+      "sha256": "673829313361b8d5480e6532c8cef6d224b758ce88dce00df197bfa378b7360d"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/fill-32.png",
+      "sha256": "673829313361b8d5480e6532c8cef6d224b758ce88dce00df197bfa378b7360d"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/fill-33.png",
+      "sha256": "5a739a1abe0ce2f11461d1c429810d6256b07eabeb58321d7f9ba821f84b2cab"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/fill-34.png",
+      "sha256": "5a739a1abe0ce2f11461d1c429810d6256b07eabeb58321d7f9ba821f84b2cab"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/fill-35.png",
+      "sha256": "5a739a1abe0ce2f11461d1c429810d6256b07eabeb58321d7f9ba821f84b2cab"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/fill-36.png",
+      "sha256": "b5b3c6dc4f8f486334c324055656c666b37c49ac3613db60ed347eadd745ff25"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/fill-37.png",
+      "sha256": "31c2da1ba59f33165cfbed07c624cdc6d6440301f229f808de79ec282e6ef7b5"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/fill-38.png",
+      "sha256": "ea6a81bc863245347e18d892e6a24d8b125f68eb5e48bbc5671197acbd2c0f93"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/fill-39.png",
+      "sha256": "ea6a81bc863245347e18d892e6a24d8b125f68eb5e48bbc5671197acbd2c0f93"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/fill-4.png",
+      "sha256": "3dd1e7b2d4af1c072e19a9662a12cb9758979d8a198f50049d46710879331ef2"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/fill-40.png",
+      "sha256": "ea6a81bc863245347e18d892e6a24d8b125f68eb5e48bbc5671197acbd2c0f93"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/fill-41.png",
+      "sha256": "5a739a1abe0ce2f11461d1c429810d6256b07eabeb58321d7f9ba821f84b2cab"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/fill-42.png",
+      "sha256": "5a739a1abe0ce2f11461d1c429810d6256b07eabeb58321d7f9ba821f84b2cab"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/fill-43.png",
+      "sha256": "5a739a1abe0ce2f11461d1c429810d6256b07eabeb58321d7f9ba821f84b2cab"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/fill-44.png",
+      "sha256": "5a739a1abe0ce2f11461d1c429810d6256b07eabeb58321d7f9ba821f84b2cab"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/fill-45.png",
+      "sha256": "5a739a1abe0ce2f11461d1c429810d6256b07eabeb58321d7f9ba821f84b2cab"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/fill-46.png",
+      "sha256": "d577212ed956c77fac4915ccde931c526f71683ff2dc726a06e97037ac62fa0e"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/fill-47.png",
+      "sha256": "dd0868e88a03d9ba6d6838dd1a2b9a40dc53220689963665595a5d34a4f1818a"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/fill-48.png",
+      "sha256": "dd0868e88a03d9ba6d6838dd1a2b9a40dc53220689963665595a5d34a4f1818a"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/fill-49.png",
+      "sha256": "5a739a1abe0ce2f11461d1c429810d6256b07eabeb58321d7f9ba821f84b2cab"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/fill-5.png",
+      "sha256": "5b78ade314df9cba0d6df3664f722b0c224c3302eb5aa9628139ffa37b89d43b"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/fill-50.png",
+      "sha256": "5a739a1abe0ce2f11461d1c429810d6256b07eabeb58321d7f9ba821f84b2cab"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/fill-51.png",
+      "sha256": "5a739a1abe0ce2f11461d1c429810d6256b07eabeb58321d7f9ba821f84b2cab"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/fill-52.png",
+      "sha256": "806d47700956b25d0a318a7a5d17fd59cf9bb8fb93758d2b194fc85094067ec2"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/fill-53.png",
+      "sha256": "2f06c0011b309dceec1b3e37a0ff5955439a0d8261aa1def1885950989f823f3"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/fill-54.png",
+      "sha256": "0fc2494d3a79dc38d12fe3e22e208562af3b22501144257c27f4b60cbe8e4433"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/fill-55.png",
+      "sha256": "c620b6f2d7ce4e3324a93c42ed07078c27c3c75b10e6ce5a58825e123c58895b"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/fill-56.png",
+      "sha256": "c620b6f2d7ce4e3324a93c42ed07078c27c3c75b10e6ce5a58825e123c58895b"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/fill-57.png",
+      "sha256": "5a739a1abe0ce2f11461d1c429810d6256b07eabeb58321d7f9ba821f84b2cab"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/fill-58.png",
+      "sha256": "5a739a1abe0ce2f11461d1c429810d6256b07eabeb58321d7f9ba821f84b2cab"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/fill-59.png",
+      "sha256": "5a739a1abe0ce2f11461d1c429810d6256b07eabeb58321d7f9ba821f84b2cab"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/fill-6.png",
+      "sha256": "e34c2976177d7a9f14c4c47e8d00cbbcc38d734b2a4d3101187be2b6a863c28d"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/fill-60.png",
+      "sha256": "5a739a1abe0ce2f11461d1c429810d6256b07eabeb58321d7f9ba821f84b2cab"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/fill-61.png",
+      "sha256": "5a739a1abe0ce2f11461d1c429810d6256b07eabeb58321d7f9ba821f84b2cab"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/fill-62.png",
+      "sha256": "5a739a1abe0ce2f11461d1c429810d6256b07eabeb58321d7f9ba821f84b2cab"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/fill-63.png",
+      "sha256": "5a739a1abe0ce2f11461d1c429810d6256b07eabeb58321d7f9ba821f84b2cab"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/fill-64.png",
+      "sha256": "5a739a1abe0ce2f11461d1c429810d6256b07eabeb58321d7f9ba821f84b2cab"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/fill-65.png",
+      "sha256": "5a739a1abe0ce2f11461d1c429810d6256b07eabeb58321d7f9ba821f84b2cab"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/fill-66.png",
+      "sha256": "5a739a1abe0ce2f11461d1c429810d6256b07eabeb58321d7f9ba821f84b2cab"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/fill-67.png",
+      "sha256": "5a739a1abe0ce2f11461d1c429810d6256b07eabeb58321d7f9ba821f84b2cab"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/fill-68.png",
+      "sha256": "6fa0a7c0a0f64c32348a1ddae0949205ef43d180e3f8f359964d5247383bffe4"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/fill-69.png",
+      "sha256": "6fa0a7c0a0f64c32348a1ddae0949205ef43d180e3f8f359964d5247383bffe4"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/fill-7.png",
+      "sha256": "88066f3c4234091228f294014d26a69c5b18b011aecf2a8fdef89e18a513b5cb"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/fill-70.png",
+      "sha256": "6fa0a7c0a0f64c32348a1ddae0949205ef43d180e3f8f359964d5247383bffe4"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/fill-71.png",
+      "sha256": "6fa0a7c0a0f64c32348a1ddae0949205ef43d180e3f8f359964d5247383bffe4"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/fill-72.png",
+      "sha256": "6fa0a7c0a0f64c32348a1ddae0949205ef43d180e3f8f359964d5247383bffe4"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/fill-8.png",
+      "sha256": "88066f3c4234091228f294014d26a69c5b18b011aecf2a8fdef89e18a513b5cb"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/fill-9.png",
+      "sha256": "5a739a1abe0ce2f11461d1c429810d6256b07eabeb58321d7f9ba821f84b2cab"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/common-controls/skin-half-opacity.png",
+      "sha256": "b9213208e8034bb29eae7e8ff18a2391830b98e15a206837cbde08d6f87b19e2"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/common-controls/skin-opaque.png",
+      "sha256": "1953e1cd6d0bba3eba88d7ed1c91274eea1d4bc8d68dfeaca01678a11ee8c339"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/common-controls/skin-recreated.png",
+      "sha256": "626bc7a55d12b50deabdb8523a4fc0444fafa9469c51d4ae65fe8ee67063ea89"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/render/common-controls/skin-resized.png",
+      "sha256": "626bc7a55d12b50deabdb8523a4fc0444fafa9469c51d4ae65fe8ee67063ea89"
+    }
+  ],
+  "results": {
+    "hudAssertions": 788,
+    "gpuPixelComparisons": 812688,
+    "gpuFrames": 72,
+    "gpuFillKinds": [
+      "health-bottom",
+      "mana-bottom",
+      "experience-left"
+    ],
+    "gpuFractions": [
+      -1,
+      0,
+      0.001,
+      0.25,
+      0.5,
+      0.999,
+      1,
+      2
+    ],
+    "gpuPlacementCases": [
+      "unclipped",
+      "negative-child-with-ancestor-clip",
+      "scene-bottom-right-clip"
+    ],
+    "originalControlBindings": 26,
+    "originalActionButtons": 9,
+    "independentRoots": 4,
+    "nativeHpMpXpSetterPathsTested": true,
+    "threeCultureLiveValueTests": true,
+    "existingActionDelegatesRetained": true,
+    "foregroundOrderingTested": true,
+    "enabledAndVisiblePropagationTested": true,
+    "originalHierarchyAndExplicitButtonStateRestorationTested": true,
+    "repeatedLayoutReplacementAndDisableTested": true,
+    "initialAndReplacementSingleObserverFailureRollbackTested": true,
+    "externalRootOrFillDisposalRestoresOriginals": true,
+    "rootReparentRestoresOriginals": true,
+    "characterReadoutRegressionAssertions": 2474,
+    "commonWindowSkinAssertions": 60,
+    "commonGpuAssertions": 14,
+    "commonControlsAssertions": 26,
+    "layoutNodeCount": 234,
+    "layoutInteractiveCount": 109,
+    "layoutPlacements": 60,
+    "deterministicGeneratedFiles": 12,
+    "invalidLayoutContractsRejected": 11,
+    "debugBuild": "pass",
+    "releaseBuild": "pass",
+    "runtimeEnabled": false,
+    "gameAcceptanceExecuted": false
+  },
+  "limitations": [
+    "Optional adapter is not called by GameScene; OfficialV1 remains disabled and Legacy is default.",
+    "Real SlimDX D3D9 GPU tests use synthetic DXT1 coordinate-sensitive Zl textures; this does not prove final official-art acceptance, source alpha quality or final HUD composition.",
+    "The 26 primary binding rectangles and 4 owner sizes match compiled layout and build JSON. The three alert declarations are excluded from this exact-geometry comparison: native 2px inset and simultaneous quest-alert separation are retained; final 14x14 alert art and layout alignment remain integration work.",
+    "Original button controls and event delegates are retained; this batch does not exercise end-to-end popup actions, mouse dispatch, audio or network packets. NPC cards and secondary popup styling remain Legacy.",
+    "Experience fill retains native Globals.ExperienceList[level] semantics; native text and tooltip continue to use User.MaxExperience. These intentionally distinct existing sources are covered separately.",
+    "Caption text for compact readouts is supplied through full-value hints; final visible caption artwork and readability require official-art composition review.",
+    "Single injected observer failures are covered; arbitrary external observers that continually throw during restoration are outside this isolated test evidence.",
+    "No live game login, final resource preflight/fallback, resolution persistence, IME, screenshot acceptance, performance or package/rollback acceptance has been completed. All task statuses and five G0 gates remain unchanged."
+  ]
+}

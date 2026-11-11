@@ -18,7 +18,7 @@ namespace Client
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()
+        static void Main(string[] args)
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
@@ -37,18 +37,44 @@ namespace Client
 
             CEnvir.Target = new TargetForm();
             DXManager.Create();
-            DXSoundManager.Create();
-            
-            DXControl.ActiveScene = new LoginScene(Config.IntroSceneSize);
+            try
+            {
+                using (var startupUi = GameUiStartupSession.PrepareForLaunch(Config.GameUiStyle, Application.StartupPath, args))
+                {
+                    CEnvir.GameUiSession = startupUi;
+                    if (startupUi.Diagnostic != null)
+                    {
+                        CEnvir.SaveError("Game UI startup: " + startupUi.Diagnostic);
+                        if (args.Any(a => string.Equals(a, "--game-ui-preview", StringComparison.OrdinalIgnoreCase)))
+                            MessageBox.Show(startupUi.Diagnostic, "Game UI preview unavailable", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    try
+                    {
+                        DXSoundManager.Create();
+                        DXControl.ActiveScene = new LoginScene(Config.IntroSceneSize);
+                        MessagePump.Run(CEnvir.Target, CEnvir.GameLoop);
 
-            MessagePump.Run(CEnvir.Target, CEnvir.GameLoop);
-
-            ConfigReader.Save();
-
-            CEnvir.Session?.Save(true);
-            CEnvir.Unload();
-            DXManager.Unload();
-            DXSoundManager.Unload();
+                        ConfigReader.Save();
+                        CEnvir.Session?.Save(true);
+                    }
+                    finally
+                    {
+                        // Stop scene consumers before the application package lease
+                        // leaves its using scope; D3D remains alive for texture release.
+                        try { DXControl.ActiveScene?.Dispose(); }
+                        finally
+                        {
+                            try { CEnvir.Unload(); }
+                            finally { CEnvir.GameUiSession = null; }
+                        }
+                    }
+                }
+            }
+            finally
+            {
+                try { DXManager.Unload(); }
+                finally { DXSoundManager.Unload(); }
+            }
         }
     }
 }

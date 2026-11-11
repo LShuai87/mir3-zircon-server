@@ -1,0 +1,4 @@
+System.Exception: official: Legacy/Official ordered packets/service geometry/style contract identical
+   在 OfficialUiFullSceneTests.Check(Boolean condition, String message)
+   在 OfficialUiFullSceneTests.NpcCheck(Boolean condition, String message)
+   在 OfficialUiFullSceneTests.RunNpc(String[] args)

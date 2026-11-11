@@ -1,0 +1,106 @@
+{
+  "kind": "official-ui-layout-geometry-validation",
+  "releaseAccepted": false,
+  "sourceSha256": "3e5a0c3039ade8a0a384e4a1afb4437d040b147e0873b5e8fc790e04f03e954d",
+  "results": {
+    "nodeCount": 241,
+    "interactiveCount": 109,
+    "hitPairsChecked": 1757,
+    "equipmentSlots": 16,
+    "inventoryCells": 49,
+    "quickbarCells": 10,
+    "statBindings": 57,
+    "existingControlBindings": 8,
+    "additionalImmediateBindings": 4,
+    "hermitPacketActions": 8,
+    "hudEntries": 9,
+    "resolutionCount": 6
+  },
+  "guardChecks": [
+    {
+      "case": "missing-inventory-cell",
+      "result": "rejected",
+      "reason": "inventory.cell.: missing or duplicate cell"
+    },
+    {
+      "case": "duplicate-equipment-slot",
+      "result": "rejected",
+      "reason": "Must bind each of 16 equipment slots once"
+    },
+    {
+      "case": "missing-existing-stat",
+      "result": "rejected",
+      "reason": "Existing 57 stat bindings must remain complete"
+    },
+    {
+      "case": "overlapping-orb-values",
+      "result": "rejected",
+      "reason": "HUD orb value labels overlap"
+    },
+    {
+      "case": "overlapping-hud-centres",
+      "result": "rejected",
+      "reason": "Overlap outside alpha-tested wheel edges: commands.CharacterButton, commands.InventoryButton"
+    },
+    {
+      "case": "wheel-hit-mode-removed",
+      "result": "rejected",
+      "reason": "Wheel image requires normal-frame alpha: InventoryButton"
+    },
+    {
+      "case": "wheel-opaque-exclusivity-removed",
+      "result": "rejected",
+      "reason": "Explicit command alpha/draw-order policy required"
+    },
+    {
+      "case": "wheel-order-reversed",
+      "result": "rejected",
+      "reason": "Explicit command alpha/draw-order policy required"
+    },
+    {
+      "case": "wheel-overlaps-belt",
+      "result": "rejected",
+      "reason": "Overlap outside alpha-tested wheel edges: commands.CharacterButton, commands.BeltButton"
+    },
+    {
+      "case": "off-screen-window",
+      "result": "rejected",
+      "reason": "inventory: screen bounds/size mismatch"
+    },
+    {
+      "case": "wrong-shared-grid-border",
+      "result": "rejected",
+      "reason": "Overlap outside alpha-tested wheel edges: inventory.cell.0, inventory.cell.1"
+    },
+    {
+      "case": "chat-recreated-on-resize",
+      "result": "rejected",
+      "reason": "Chat preservation policy changed"
+    },
+    {
+      "case": "scope-changed-to-npc",
+      "result": "rejected",
+      "reason": "Scope drift"
+    },
+    {
+      "case": "production-flag-only",
+      "result": "rejected",
+      "reason": "Proposed geometry cannot be promoted by changing a flag"
+    },
+    {
+      "case": "readout-status-drift",
+      "result": "rejected",
+      "reason": "Immediate data implementation status must match binding source"
+    },
+    {
+      "case": "readout-activation-claim",
+      "result": "rejected",
+      "reason": "Immediate data implementation status must match binding source"
+    }
+  ],
+  "limitations": [
+    "Geometry/coverage/overlap checks and design annotations only.",
+    "No actual renderer, preview pivot, native input, event or packet acceptance.",
+    "Generated C# is a proposed candidate, not registered with Client.csproj."
+  ]
+}

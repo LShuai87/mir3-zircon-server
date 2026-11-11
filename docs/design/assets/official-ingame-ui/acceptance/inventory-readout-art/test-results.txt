@@ -1,0 +1,5 @@
+Client Debug MSBuild: passed.
+Inventory layout: 8419 checks passed; 49 original slots, compiled JSON geometry, live data/links/labels, six placements, eight cycles, invalid replacements and rollback. D3D9 atlas, slot-feedback, four-state button and readout probes; no network/live-game acceptance.
+Window-set integration: 284355 checks passed with real catalog package, eight registered participants plus original chat groups/input and six resolutions, identity/chat retention, actual GameScene resize/disposal, startup scene entry/reentry, clean/dirty rollback, render-fault input containment, loopback heartbeat and teardown. Two glyph-path GPU probes only; no full-scene/live-game/IME acceptance.
+Embedded art reproduction: button, square close, gold and weight passed source and output hash checks.
+Preview validation: passed; frameCount=94; runtimeReady=false.

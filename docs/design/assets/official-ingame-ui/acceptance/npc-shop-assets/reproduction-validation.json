@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "kind": "npc-shop-additive-asset-verification",
+  "status": "pass",
+  "releaseAccepted": false,
+  "runtimeReady": false,
+  "productionBindingAllowed": false,
+  "selectedSources": 30,
+  "frames": 93,
+  "buttonStateSets": 19,
+  "existingPngsByteIdentical": 92,
+  "existingBc1PayloadsByteIdentical": 92,
+  "repeatedPngsByteIdentical": 93,
+  "repeatedDecodedFilesByteIdentical": 33,
+  "repeatedPackageByteIdentical": true,
+  "sourceSha256": "f574ddf094e5f1a0b4d78ccd31da1f9e9b3402ec6be8f9fb9b025358239c85d1",
+  "previousPackageSha256": "b469289d105e2404361033c81869b610399d7610edee5143dd7e62d1803ccfa7",
+  "candidatePackageSha256": "50ec53a62c5b564c3e1bf736c5be01e6d86ebbd2cd08994578aafeb7ce031ddb",
+  "sourceLogicalSize": [
+    344,
+    438
+  ],
+  "textureSize": [
+    344,
+    440
+  ],
+  "shopTransparentPixels": 3840,
+  "shopOpaqueBlackInteriorPixels": 0,
+  "indexMigrations": [
+    {
+      "role": "chat-history-frame",
+      "previousIndex": 87,
+      "candidateIndex": 88
+    },
+    {
+      "role": "chat-input-frame",
+      "previousIndex": 88,
+      "candidateIndex": 89
+    },
+    {
+      "role": "equipment-cell-frame",
+      "previousIndex": 89,
+      "candidateIndex": 90
+    },
+    {
+      "role": "hud-experience-track",
+      "previousIndex": 90,
+      "candidateIndex": 91
+    },
+    {
+      "role": "hud-experience-fill",
+      "previousIndex": 91,
+      "candidateIndex": 92
+    }
+  ],
+  "newShopIndex": 87,
+  "oldCatalogCompatible": false,
+  "negativeControls": [
+    "wrong source index",
+    "wrong source digest",
+    "existing compressed payload corruption",
+    "opaque edge leak",
+    "stale 92-frame catalog against 93-frame package"
+  ],
+  "negativeControlsPassed": 5,
+  "note": "93-frame candidate is isolated; active 92-frame manifest and compiled catalog are unchanged. Recompile and validate the catalog before binding this candidate."
+}

@@ -67,7 +67,7 @@ namespace Client.Controls
 
             UpdateClientArea();
             if (TitleLabel == null) return;
-            TitleLabel.Visible = HasTitle;
+            TitleLabel.Visible = HasTitle && (WindowSkin == null || !WindowSkin.TitleArea.IsEmpty);
         }
 
         #endregion
@@ -129,9 +129,94 @@ namespace Client.Controls
         public DXButton CloseButton { get; protected set; }
         public DXLabel TitleLabel { get; protected set; }
 
+        private GameUiWindowSkin _WindowSkin;
+        private MirLibrary _LegacyCloseLibrary;
+        private LibraryFile _LegacyCloseLibraryFile;
+        private int _LegacyCloseIndex;
+        private ButtonImageStates _LegacyCloseImages;
+        private bool _LegacyCloseFixedSize, _LegacyCloseVisible;
+        private Size _LegacyCloseSize, _SkinTextureSize;
+        private bool _LegacyTitleAutoSize;
+        private TextFormatFlags _LegacyTitleDrawFormat;
+        private Size _LegacyTitleSize;
+
+        public GameUiWindowSkin WindowSkin
+        {
+            get => _WindowSkin;
+            set
+            {
+                if (ReferenceEquals(_WindowSkin, value)) return;
+                if (_WindowSkin == null && CloseButton != null)
+                {
+                    _LegacyCloseLibrary = CloseButton.Library;
+                    _LegacyCloseLibraryFile = CloseButton.LibraryFile;
+                    _LegacyCloseIndex = CloseButton.Index;
+                    _LegacyCloseImages = CloseButton.ImageStates;
+                    _LegacyCloseFixedSize = CloseButton.FixedSize;
+                    _LegacyCloseVisible = CloseButton.Visible;
+                    _LegacyCloseSize = CloseButton.Size;
+                }
+                if (_WindowSkin == null && TitleLabel != null)
+                {
+                    _LegacyTitleAutoSize = TitleLabel.AutoSize;
+                    _LegacyTitleDrawFormat = TitleLabel.DrawFormat;
+                    _LegacyTitleSize = TitleLabel.Size;
+                }
+                _WindowSkin = value;
+                if (TitleLabel != null)
+                {
+                    TitleLabel.AutoSize = false;
+                    TitleLabel.DrawFormat = value == null ? _LegacyTitleDrawFormat :
+                        TextFormatFlags.SingleLine | TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter |
+                        TextFormatFlags.EndEllipsis | TextFormatFlags.NoPrefix;
+                    if (value == null)
+                    {
+                        TitleLabel.Size = _LegacyTitleSize;
+                        TitleLabel.AutoSize = _LegacyTitleAutoSize;
+                    }
+                }
+                if (CloseButton != null)
+                {
+                    if (value?.CloseImages != null) CloseButton.BindButtonImages(value.Library, value.CloseImages);
+                    else
+                    {
+                        if (_LegacyCloseImages != null) CloseButton.BindButtonImages(_LegacyCloseLibrary, _LegacyCloseImages);
+                        else if (_LegacyCloseLibrary != null) CloseButton.BindImage(_LegacyCloseLibrary, _LegacyCloseIndex);
+                        else
+                        {
+                            CloseButton.BindImage(null, -1);
+                            CloseButton.LibraryFile = _LegacyCloseLibraryFile;
+                            CloseButton.Index = _LegacyCloseIndex;
+                        }
+                        CloseButton.FixedSize = _LegacyCloseFixedSize;
+                        CloseButton.Size = _LegacyCloseSize;
+                    }
+                    CloseButton.Visible = _LegacyCloseVisible && (value == null || !value.CloseArea.IsEmpty);
+                }
+                if (TitleLabel != null) TitleLabel.Visible = HasTitle && (value == null || !value.TitleArea.IsEmpty);
+                DisposeTexture();
+                if (value != null) Size = value.ConstrainSize(Size);
+                UpdateClientArea();
+                UpdateLocations();
+                OnWindowSkinChanged();
+            }
+        }
+
+        // Derived windows can reapply native control geometry after the skin has
+        // finished updating close-button images, client bounds and title locations.
+        protected virtual void OnWindowSkinChanged() { }
+
+        protected virtual void OnCloseButtonClick() => Visible = false;
+
         public Texture WindowTexture;
         public Surface WindowSurface;
         public bool WindowValid;
+
+        public override Size Size
+        {
+            get => base.Size;
+            set => base.Size = WindowSkin == null ? value : WindowSkin.ConstrainSize(value);
+        }
 
         public override void OnSizeChanged(Size oValue, Size nValue)
         {
@@ -140,7 +225,8 @@ namespace Client.Controls
             UpdateClientArea();
             UpdateLocations();
 
-            if (Settings != null && IsResizing)
+            if (_OfficialLayout != null) { if (IsResizing) SaveOfficialLayout(); return; }
+            if (!AreLayoutWritesSuppressed && Settings != null && IsResizing)
             {
                 Settings.Size = nValue;
                 Settings.Location = Location;
@@ -160,9 +246,12 @@ namespace Client.Controls
         {
             base.OnLocationChanged(oValue, nValue);
 
-            if (Settings != null && IsMoving)
+            if (_OfficialLayout != null) { if (IsMoving) SaveOfficialLayout(); return; }
+            if (!AreLayoutWritesSuppressed && Settings != null && IsMoving)
                 Settings.Location = nValue;
         }
+
+        internal event EventHandler VisibilityApplied;
 
         public override void OnVisibleChanged(bool oValue, bool nValue)
         {
@@ -171,11 +260,98 @@ namespace Client.Controls
             if (IsVisible)
                 BringToFront();
 
-            if (Settings != null && AutomaticVisiblity)
+            if (_OfficialLayout != null) { if (AutomaticVisiblity) SaveOfficialLayout(); }
+            else if (!AreLayoutWritesSuppressed && Settings != null && AutomaticVisiblity)
                 Settings.Visible = nValue;
+            // Layout subscribers run after native visibility and foreground ordering finish.
+            VisibilityApplied?.Invoke(this, EventArgs.Empty);
         }
 
         public WindowSetting Settings;
+        private GameUiLayoutStore _OfficialLayout;
+        internal GameUiLayoutStore OfficialLayoutStore => _OfficialLayout;
+        private int _SuppressLayoutWrites;
+        private bool _OfficialLayoutLoaded;
+
+        [ThreadStatic]
+        private static List<SceneLayoutWriteScope> _SceneLayoutWriteScopes;
+
+        private bool AreLayoutWritesSuppressed
+        {
+            get
+            {
+                if (_SuppressLayoutWrites != 0) return true;
+                if (_SceneLayoutWriteScopes == null) return false;
+                foreach (SceneLayoutWriteScope scope in _SceneLayoutWriteScopes)
+                    for (DXControl control = this; control != null; control = control.Parent)
+                        if (ReferenceEquals(control, scope.Root)) return true;
+                return false;
+            }
+        }
+
+        // Includes windows parented under this scene after the scope starts.
+        // Other scenes and ordinary user changes outside the scope keep their own policy.
+        public static IDisposable SuppressSceneLayoutWrites(DXControl sceneRoot)
+        {
+            if (sceneRoot == null) throw new ArgumentNullException(nameof(sceneRoot));
+            if (sceneRoot.IsDisposed) throw new ObjectDisposedException(nameof(sceneRoot));
+            if (_SceneLayoutWriteScopes == null) _SceneLayoutWriteScopes = new List<SceneLayoutWriteScope>();
+            var scope = new SceneLayoutWriteScope(sceneRoot);
+            _SceneLayoutWriteScopes.Add(scope);
+            return scope;
+        }
+
+        private sealed class SceneLayoutWriteScope : IDisposable
+        {
+            internal DXControl Root { get; private set; }
+            private readonly int ownerThread = System.Threading.Thread.CurrentThread.ManagedThreadId;
+            public SceneLayoutWriteScope(DXControl root) { Root = root; }
+            public void Dispose()
+            {
+                if (Root == null) return;
+                if (ownerThread != System.Threading.Thread.CurrentThread.ManagedThreadId)
+                    throw new InvalidOperationException("Layout write suppression must end on its owning thread.");
+                _SceneLayoutWriteScopes.Remove(this);
+                Root = null;
+            }
+        }
+
+        // Called by the startup style context before any scoped window LoadSettings.
+        public void UseOfficialLayout(GameUiLayoutStore store)
+        {
+            if (store == null) throw new ArgumentNullException(nameof(store));
+            Settings = null;
+            _OfficialLayout = store;
+            _OfficialLayoutLoaded = false;
+        }
+        // Used only when an installation transaction restores its captured Legacy owner.
+        internal void RestoreLegacyLayout(WindowSetting settings)
+        {
+            _OfficialLayout = null;
+            _OfficialLayoutLoaded = false;
+            Settings = settings;
+        }
+        public IDisposable SuppressLayoutWrites()
+        {
+            _SuppressLayoutWrites++;
+            return new LayoutWriteScope(this);
+        }
+        private sealed class LayoutWriteScope : IDisposable
+        {
+            private DXWindow owner;
+            public LayoutWriteScope(DXWindow owner) { this.owner = owner; }
+            public void Dispose()
+            {
+                if (owner == null) return;
+                owner._SuppressLayoutWrites--;
+                owner = null;
+            }
+        }
+        private void SaveOfficialLayout()
+        {
+            if (!_OfficialLayoutLoaded || AreLayoutWritesSuppressed || Type == WindowType.None) return;
+            _OfficialLayout.TrySave(Config.GameSize, Type, new GameUiWindowLayout(Location, Size, AutomaticVisiblity ? (bool?)Visible : null));
+        }
 
         #endregion
         
@@ -196,7 +372,7 @@ namespace Client.Controls
                 Index = 15,
                 LibraryFile = LibraryFile.Interface,
             };
-            CloseButton.MouseClick += (o, e) => Visible = false;
+            CloseButton.MouseClick += (o, e) => OnCloseButtonClick();
 
             TitleLabel = new DXLabel
             {
@@ -209,7 +385,7 @@ namespace Client.Controls
                 Visible = HasTitle,
                 IsControl = false,
             };
-            TitleLabel.SizeChanged += (o, e) => TitleLabel.Location = new Point((Size.Width - TitleLabel.Size.Width) / 2, 8);
+            TitleLabel.SizeChanged += (o, e) => UpdateLocations();
         }
 
         #region Methods
@@ -217,6 +393,7 @@ namespace Client.Controls
         public override void ResolutionChanged()
         {
             Settings = null;
+            _OfficialLayoutLoaded = false;
 
             base.ResolutionChanged();
 
@@ -225,6 +402,21 @@ namespace Client.Controls
 
         protected override void CreateTexture()
         {
+            if (WindowSkin != null)
+            {
+                // Sprite.Begin fixes a projection for the scene backbuffer. Keep the
+                // cache target at that size so one logical pixel remains one texel.
+                Size targetSize = new Size(DXManager.Parameters.BackBufferWidth, DXManager.Parameters.BackBufferHeight);
+                if (WindowTexture == null || _SkinTextureSize != targetSize)
+                {
+                    DisposeTexture();
+                    WindowTexture = new Texture(DXManager.Device, targetSize.Width, targetSize.Height, 1, Usage.RenderTarget, Format.A8R8G8B8, Pool.Default);
+                    WindowSurface = WindowTexture.GetSurfaceLevel(0);
+                    _SkinTextureSize = targetSize;
+                    DXManager.ControlList.Add(this);
+                }
+                return;
+            }
             base.CreateTexture();
 
             if (WindowTexture == null || DisplayArea.Size != TextureSize)
@@ -237,6 +429,8 @@ namespace Client.Controls
         public override void DisposeTexture()
         {
             base.DisposeTexture();
+            _SkinTextureSize = Size.Empty;
+            WindowValid = false;
 
             if (WindowTexture != null)
             {
@@ -258,6 +452,17 @@ namespace Client.Controls
 
         private void UpdateLocations()
         {
+            if (WindowSkin != null)
+            {
+                if (CloseButton != null) CloseButton.Location = WindowSkin.GetCloseArea(Size).Location;
+                Rectangle title = WindowSkin.GetTitleArea(Size);
+                if (TitleLabel != null)
+                {
+                    TitleLabel.Location = title.Location;
+                    TitleLabel.Size = title.Size;
+                }
+                return;
+            }
 
             if (CloseButton != null)
                 CloseButton.Location = new Point(DisplayArea.Width - CloseButton.Size.Width - 5, 5);
@@ -302,6 +507,7 @@ namespace Client.Controls
         }
         public Size GetSize(Size clientSize)
         {
+            if (WindowSkin != null) return WindowSkin.GetWindowSize(clientSize);
             int w = 3 + 6 + 6 + 3; //Border Padding Padding Border
             int h = 6 + 6; //Padding Padding
 
@@ -323,6 +529,7 @@ namespace Client.Controls
 
         public Rectangle GetClientArea(Size size)
         {
+            if (WindowSkin != null) return WindowSkin.GetClientArea(size);
             int x = 6 + 3;
             int y = 6;
 
@@ -350,15 +557,20 @@ namespace Client.Controls
             if (!IsVisible || Size.Width == 0 || Size.Height == 0) return;
 
             OnBeforeDraw();
-            DrawControl();
+            if (WindowSkin == null) DrawControl();
             DrawWindow();
             OnBeforeChildrenDraw();
             DrawChildControls();
-            DrawBorder();
+            if (WindowSkin == null) DrawBorder();
             OnAfterDraw();
         }
         protected void DrawWindow()
         {
+            if (WindowSkin != null)
+            {
+                DrawSkin();
+                return;
+            }
             if (InterfaceLibrary == null) return;
             
             if (!WindowValid)
@@ -382,6 +594,79 @@ namespace Client.Controls
             DXManager.SetOpacity(oldOpacity);
         }
         
+        private void DrawSkin()
+        {
+            CreateTexture();
+            if (!WindowValid)
+            {
+                Surface oldSurface = DXManager.CurrentSurface;
+                SlimDX.Matrix oldTransform = DXManager.Sprite.Transform;
+                try
+                {
+                    DXManager.SetSurface(WindowSurface);
+                    DXManager.Device.Clear(ClearFlags.Target, 0, 0, 0);
+                    foreach (GameUiSkinSlice slice in WindowSkin.GetSlices(Size))
+                    {
+                        Rectangle source = slice.Source, destination = slice.Destination;
+                        DXManager.Sprite.Flush();
+                        DXManager.Sprite.Transform = SlimDX.Matrix.Scaling((float)destination.Width / source.Width, (float)destination.Height / source.Height, 1F) *
+                            SlimDX.Matrix.Translation(destination.X, destination.Y, 0);
+                        WindowSkin.Library.Draw(WindowSkin.FrameIndex, 0, 0, Color.White, source, 1F, ImageType.Image);
+                    }
+                    WindowValid = true;
+                }
+                finally
+                {
+                    DXManager.Sprite.Flush();
+                    DXManager.Sprite.Transform = oldTransform;
+                    DXManager.SetSurface(oldSurface);
+                }
+            }
+            float opacity = DXManager.Opacity;
+            try
+            {
+                // Preserve per-pixel transparency at fractional window opacity.
+                DXManager.SetOpacity(1F);
+                float alpha = float.IsNaN(Opacity) ? 1F : Math.Max(0F, Math.Min(1F, Opacity));
+                Color tint = Color.FromArgb((int)(ForeColour.A * alpha), ForeColour);
+                PresentTexture(WindowTexture, Parent, DisplayArea, tint, this);
+            }
+            finally { DXManager.SetOpacity(opacity); }
+            ExpireTime = CEnvir.Now + Config.CacheDuration;
+        }
+
+        public override Size GetAcceptableResize(Size size)
+        {
+            return WindowSkin == null ? base.GetAcceptableResize(size) : WindowSkin.ConstrainSize(size);
+        }
+        public override bool IsMouseOver(Point point)
+        {
+            if (WindowSkin == null) return base.IsMouseOver(point);
+            if (!IsVisible || !IsControl) return false;
+            if (!DisplayArea.Contains(point)) return Modal;
+            for (int i = Controls.Count - 1; i >= 0; i--)
+                if (Controls[i].IsMouseOver(point)) return true;
+            Point local = new Point(point.X - DisplayArea.X, point.Y - DisplayArea.Y);
+            return !PassThrough && (WindowSkin.GetInputArea(Size).Contains(local) || WindowSkin.GetDragArea(Size).Contains(local));
+        }
+        public override void OnMouseDown(MouseEventArgs e)
+        {
+            if (WindowSkin == null) { base.OnMouseDown(e); return; }
+            bool movable = Movable;
+            Point local = new Point(e.X - DisplayArea.X, e.Y - DisplayArea.Y);
+            try
+            {
+                Movable = movable && WindowSkin.GetDragArea(Size).Contains(local);
+                base.OnMouseDown(e);
+            }
+            finally { Movable = movable; }
+        }
+        public override void OnOpacityChanged(float oldValue, float newValue)
+        {
+            WindowValid = false;
+            base.OnOpacityChanged(oldValue, newValue);
+        }
+
         private void DrawEdges()
         {
             Size s;
@@ -483,6 +768,28 @@ namespace Client.Controls
 
         public void LoadSettings()
         {
+            if (_OfficialLayout != null)
+            {
+                _OfficialLayoutLoaded = false;
+                Settings = null;
+                using (SuppressLayoutWrites())
+                {
+                    GameUiWindowLayout layout;
+                    if (Type != WindowType.None && _OfficialLayout.TryGet(Config.GameSize, Type, out layout))
+                    {
+                        Size restored = CustomSize ? GetAcceptableResize(layout.Size) : Size;
+                        // Skin changes cannot restore an out-of-screen or obsolete minimum size.
+                        if (layout.Location.X + (long)restored.Width <= Config.GameSize.Width && layout.Location.Y + (long)restored.Height <= Config.GameSize.Height)
+                        {
+                            if (CustomSize) Size = restored;
+                            Location = layout.Location;
+                            if (AutomaticVisiblity && layout.Visible.HasValue) Visible = layout.Visible.Value;
+                        }
+                    }
+                }
+                _OfficialLayoutLoaded = true;
+                return;
+            }
             if (Type == WindowType.None || !CEnvir.Loaded) return;
 
             Settings = CEnvir.WindowSettings.Binding.FirstOrDefault(x => x.Resolution == Config.GameSize && x.Window == Type);
@@ -493,6 +800,8 @@ namespace Client.Controls
                 return;
             }
 
+            if (AreLayoutWritesSuppressed) return;
+
             Settings = CEnvir.WindowSettings.CreateNewObject();
             Settings.Resolution = Config.GameSize;
             Settings.Window = Type;
@@ -502,6 +811,7 @@ namespace Client.Controls
         }
         public virtual void ApplySettings()
         {
+            if (_OfficialLayout != null) { LoadSettings(); return; }
             if (Settings == null) return;
 
             Location = Settings.Location;
@@ -522,6 +832,12 @@ namespace Client.Controls
 
             if (disposing)
             {
+                _OfficialLayout = null;
+                _OfficialLayoutLoaded = false;
+                _WindowSkin = null;
+                _LegacyCloseLibrary = null;
+                _LegacyCloseImages = null;
+                _SkinTextureSize = Size.Empty;
                 _HasTopBorder = false;
                 _HasTitle = false;
                 _HasFooter = false;

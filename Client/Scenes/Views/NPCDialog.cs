@@ -30,12 +30,106 @@ namespace Client.Scenes.Views
         public List<DXLabel> Buttons = new List<DXLabel>();
         public bool Opened;
 
+        private readonly Dictionary<DXLabel, Point> buttonOrigins = new Dictionary<DXLabel, Point>();
+        private readonly Dictionary<int, DateTime> nextButtonTimes = new Dictionary<int, DateTime>();
+        private DXVScrollBar pageScroll;
+        private bool updatingPageLayout;
+        internal bool IsResponseLayoutPending { get; private set; }
+        private bool UsesTextViewport => CEnvir.GameUiSession?.EffectiveStyle == GameUiStyle.OfficialV1;
+
+        // Texture dimensions and rendered paragraphs stay bounded by the visible region.
+        private sealed class NPCPageLabel : DXLabel
+        {
+            internal int ContentHeight;
+            private string layoutText, renderText;
+            private string[] paragraphs;
+            private int[] tops;
+            private int layoutWidth, scrollOffset, renderTop, renderHeight;
+            private Font layoutFont;
+            private TextFormatFlags layoutFormat;
+
+            internal void UpdateTextLayout()
+            {
+                if (layoutText == Text && layoutWidth == Size.Width && layoutFont == Font && layoutFormat == DrawFormat) return;
+                layoutText = Text;
+                layoutWidth = Size.Width;
+                layoutFont = Font;
+                layoutFormat = DrawFormat;
+                paragraphs = (Text ?? string.Empty).Split('\n');
+                tops = new int[paragraphs.Length + 1];
+                int lineHeight = TextRenderer.MeasureText(DXManager.Graphics, "A", Font, new Size(Size.Width, int.MaxValue), DrawFormat).Height;
+                for (int i = 0; i < paragraphs.Length; i++)
+                {
+                    // Split on LF retains the CR half of CRLF. Measuring it alone
+                    // adds a second line; the original renderer sees one CRLF break.
+                    // Keep the source string intact for option indices and rendering.
+                    string paragraph = paragraphs[i];
+                    if (i + 1 < paragraphs.Length && paragraph.EndsWith("\r", StringComparison.Ordinal))
+                        paragraph = paragraph.Substring(0, paragraph.Length - 1);
+                    tops[i + 1] = tops[i] + Math.Max(lineHeight, TextRenderer.MeasureText(DXManager.Graphics,
+                        paragraph, Font, new Size(Size.Width, int.MaxValue), DrawFormat).Height);
+                }
+                ContentHeight = string.IsNullOrEmpty(Text) ? 0 : tops[tops.Length - 1];
+            }
+
+            internal int ParagraphTop(int index)
+            {
+                int top = 0;
+                for (int i = 0, start = 0; i < paragraphs.Length && start < index; i++)
+                {
+                    start += paragraphs[i].Length + 1;
+                    top = tops[i + 1];
+                }
+                return top;
+            }
+
+            internal void SetScrollOffset(int value)
+            {
+                scrollOffset = value;
+                if (paragraphs == null) return;
+                int first = Array.BinarySearch(tops, value);
+                if (first < 0) first = ~first - 1;
+                first = Math.Max(0, Math.Min(first, paragraphs.Length - 1));
+                int last = first;
+                while (last + 1 < paragraphs.Length && tops[last + 1] < value + Size.Height) last++;
+                renderTop = tops[first];
+                renderHeight = tops[last + 1] - renderTop;
+                renderText = string.Join("\n", paragraphs, first, last - first + 1);
+                TextureValid = false;
+            }
+
+            protected override string GetRenderText() => paragraphs == null ? Text : renderText;
+            protected override Rectangle GetTextBounds(Rectangle bounds)
+            {
+                if (paragraphs == null) return bounds;
+                bounds.Y += renderTop - scrollOffset;
+                bounds.Height = Math.Max(bounds.Height, renderHeight);
+                return bounds;
+            }
+        }
+
+        private static int MeasurePageHeight(Graphics graphics, string text, Font font, TextFormatFlags flags, int width)
+        {
+            if (string.IsNullOrEmpty(text)) return 0;
+            int lineHeight = TextRenderer.MeasureText(graphics, "A", font, new Size(width, int.MaxValue), flags).Height;
+            int height = 0;
+            foreach (string paragraph in text.Split('\n'))
+                height += Math.Max(lineHeight, TextRenderer.MeasureText(graphics, paragraph, font,
+                    new Size(width, int.MaxValue), flags).Height);
+            return height;
+        }
+
         public override void OnClientAreaChanged(Rectangle oValue, Rectangle nValue)
         {
             base.OnClientAreaChanged(oValue, nValue);
 
 
-            if (PageText == null || IsResizing) return;
+            if (PageText == null || IsResizing || updatingPageLayout) return;
+            if (UsesTextViewport && Page != null)
+            {
+                ApplyTextViewport(Parent?.Size ?? Config.GameSize);
+                return;
+            }
 
             PageText.Location = new Point(ClientArea.X + 10, ClientArea.Y + 10);
             PageText.Size = new Size(ClientArea.Width - 20, ClientArea.Height - 20);
@@ -45,12 +139,17 @@ namespace Client.Scenes.Views
 
         public override void OnIsResizingChanged(bool oValue, bool nValue)
         {
-            PageText.Location = new Point(ClientArea.X + 10, ClientArea.Y + 10);
-            PageText.Size = new Size(ClientArea.Width - 20, ClientArea.Height - 20);
-
-            ProcessText();
-
-
+            if (PageText != null && !updatingPageLayout)
+            {
+                if (UsesTextViewport && Page != null)
+                    ApplyTextViewport(Parent?.Size ?? Config.GameSize);
+                else
+                {
+                    PageText.Location = new Point(ClientArea.X + 10, ClientArea.Y + 10);
+                    PageText.Size = new Size(ClientArea.Width - 20, ClientArea.Height - 20);
+                    ProcessText();
+                }
+            }
             base.OnIsResizingChanged(oValue, nValue);
         }
 
@@ -121,12 +220,14 @@ namespace Client.Scenes.Views
                 if (GameScene.Game.CharacterBox.Location.X < Size.Width)
                     GameScene.Game.CharacterBox.Location = new Point(Size.Width, 0);
 
-                GameScene.Game.StorageBox.Location = new Point(GameScene.Game.Size.Width - GameScene.Game.StorageBox.Size.Width, GameScene.Game.InventoryBox.Size.Height);
+                if (GameScene.Game.StorageBox.GameUiStorageLayout == null)
+                    GameScene.Game.StorageBox.Location = new Point(GameScene.Game.Size.Width - GameScene.Game.StorageBox.Size.Width, GameScene.Game.InventoryBox.Size.Height);
             }
             else if (GameScene.Game.CharacterBox.Location.X == Size.Width)
             {
                 GameScene.Game.CharacterBox.ApplySettings();
-                GameScene.Game.StorageBox.ApplySettings();//.Location = new Point(GameScene.Game.Size.Width - GameScene.Game.StorageBox.Size.Width - GameScene.Game.InventoryBox.Size.Width, 0);
+                if (GameScene.Game.StorageBox.GameUiStorageLayout == null)
+                    GameScene.Game.StorageBox.ApplySettings();
             }
         }
         
@@ -144,7 +245,7 @@ namespace Client.Scenes.Views
             Movable = false;
             SetClientSize(new Size(491, 180));
 
-            PageText = new DXLabel
+            PageText = new NPCPageLabel
             {
                 AutoSize = false,
                 Outline = false,
@@ -153,114 +254,212 @@ namespace Client.Scenes.Views
                 Location = new Point(ClientArea.X + 10, ClientArea.Y + 10),
                 Size = new Size(ClientArea.Width - 20, ClientArea.Height - 20),
             };
+            pageScroll = new DXVScrollBar
+            {
+                Parent = this, Visible = false, Size = new Size(14, 160), Change = 16,
+            };
+            pageScroll.ValueChanged += (o, e) => ApplyTextScroll();
+            PageText.MouseWheel += ScrollPage;
         }
 
         #region Methods
+        private void ScrollPage(object sender, MouseEventArgs e)
+        {
+            if (pageScroll.Visible) pageScroll.DoMouseWheel(sender, e);
+        }
+
+        private void ApplyTextScroll()
+        {
+            var text = (NPCPageLabel)PageText;
+            int offset = pageScroll.Visible ? pageScroll.Value : 0;
+            text.SetScrollOffset(offset);
+            foreach (var entry in buttonOrigins)
+                entry.Key.Location = new Point(entry.Value.X, entry.Value.Y - offset);
+            // A wheel/arrow/drag may move the old hovered option away before the next mouse event.
+            if (!updatingPageLayout && PageText.IsVisible)
+                DXControl.ActiveScene?.OnMouseMove(new MouseEventArgs(MouseButtons.None, 0,
+                    CEnvir.MouseLocation.X, CEnvir.MouseLocation.Y, 0));
+        }
+
+        // Native presentation and original option controls are retained. Only OfficialV1 opts into overflow handling.
+        internal void ApplyTextViewport(Size resolution, bool newPage = false)
+        {
+            if (!UsesTextViewport || Page == null || PageText == null || updatingPageLayout) return;
+            updatingPageLayout = true;
+            try
+            {
+                int fullWidth = Math.Max(1, ClientArea.Width - 20);
+                int availableHeight = Math.Max(GetSize(new Size(ClientArea.Width, 80)).Height,
+                    resolution.Height - 202);
+                int maxClientHeight = GetClientArea(new Size(Size.Width, availableHeight)).Height;
+                int lineHeight = TextRenderer.MeasureText(DXManager.Graphics, "A", PageText.Font,
+                    new Size(fullWidth, int.MaxValue), PageText.DrawFormat).Height;
+                long minimumHeight = ((long)PageText.Text.Count(c => c == '\n') + 1) * lineHeight;
+                // Explicit lines alone can prove overflow; avoid measuring the same long document
+                // again at full width on every device reset before using its cached narrow layout.
+                int fullHeight = minimumHeight > maxClientHeight - 20 ? maxClientHeight
+                    : MeasurePageHeight(DXManager.Graphics, PageText.Text, PageText.Font, PageText.DrawFormat, fullWidth);
+                int clientHeight = Math.Min(maxClientHeight, Math.Max(180, fullHeight + 20));
+                bool scroll = fullHeight > clientHeight - 20;
+                int width = Math.Max(1, fullWidth - (scroll ? 18 : 0));
+                bool rewrap = PageText.Size.Width != width;
+                SetClientSize(new Size(ClientArea.Width, clientHeight));
+                PageText.Location = new Point(ClientArea.X + 10, ClientArea.Y + 10);
+                PageText.Size = new Size(width, Math.Max(1, ClientArea.Height - 20));
+                var text = (NPCPageLabel)PageText;
+                text.UpdateTextLayout();
+                pageScroll.Location = new Point(PageText.Location.X + width + 3, PageText.Location.Y);
+                pageScroll.Size = new Size(14, PageText.Size.Height);
+                pageScroll.Visible = scroll;
+                pageScroll.VisibleSize = PageText.Size.Height;
+                pageScroll.MaxValue = Math.Max(pageScroll.VisibleSize, text.ContentHeight);
+                // VisibleSize does not itself clamp Value in the native scrollbar.
+                pageScroll.Value = newPage || !scroll ? 0 : Math.Min(pageScroll.Value, pageScroll.MaxValue - pageScroll.VisibleSize);
+                if (newPage || rewrap) ProcessText();
+                ApplyTextScroll();
+            }
+            finally { updatingPageLayout = false; }
+        }
         public void Response(S.NPCResponse info)
         {
-            GameScene.Game.NPCID = info.ObjectID;
-            GameScene.Game.NPCBox.Visible = true;
-
-            Page = info.Page;
-            //  RawPageText = info.Page.Say.Replace("\n", "");
-            PageText.Text = R.Replace(Page.Say, @"${Text}");
-
-            int height = DXLabel.GetHeight(PageText, ClientArea.Width).Height;
-            if (height > ClientArea.Height)
-                SetClientSize(new Size(ClientArea.Width, height));
-
-
-            ProcessText();
-
-            Opened = true;
-
-            GameScene.Game.NPCGoodsBox.Visible = false;
-            GameScene.Game.NPCSellBox.Visible = false;
-            GameScene.Game.NPCRepairBox.Visible = false;
-            GameScene.Game.NPCRefineBox.Visible = false;
-            GameScene.Game.NPCRefinementStoneBox.Visible = false;
-            GameScene.Game.NPCRefineRetrieveBox.Visible = false;
-            GameScene.Game.NPCAdoptCompanionBox.Visible = false;
-            GameScene.Game.NPCCompanionStorageBox.Visible = false;
-            GameScene.Game.NPCWeddingRingBox.Visible = false;
-            GameScene.Game.NPCItemFragmentBox.Visible = false;
-            GameScene.Game.NPCAccessoryUpgradeBox.Visible = false;
-            GameScene.Game.NPCAccessoryLevelBox.Visible = false;
-            GameScene.Game.NPCMasterRefineBox.Visible = false;
-            GameScene.Game.NPCAccessoryResetBox.Visible = false;
-            GameScene.Game.NPCWeaponCraftBox.Visible = false;
-
-            switch (info.Page.DialogType)
+            IsResponseLayoutPending = true;
+            try
             {
-                case NPCDialogType.None:
-                    break;
-                case NPCDialogType.BuySell:
-                    GameScene.Game.NPCGoodsBox.Location = new Point(0, Size.Height);
-                    GameScene.Game.NPCGoodsBox.Visible = Page.Goods.Count > 0;
-                    GameScene.Game.NPCGoodsBox.NewGoods(Page.Goods);
-                    GameScene.Game.NPCSellBox.Visible = Page.Types.Count > 0;
-                    GameScene.Game.NPCSellBox.Location = GameScene.Game.NPCGoodsBox.Visible ? new Point(Size.Width - GameScene.Game.NPCSellBox.Size.Width, Size.Height) : new Point(0, Size.Height);
-                    break;
-                case NPCDialogType.Repair:
-                    GameScene.Game.NPCRepairBox.Visible = true;
-                    GameScene.Game.NPCRepairBox.Location = new Point(0, Size.Height);
-                    break;
-                case NPCDialogType.RefinementStone:
-                    GameScene.Game.NPCRefinementStoneBox.Visible = true;
-                    GameScene.Game.NPCRefinementStoneBox.Location = new Point(Size.Width - GameScene.Game.NPCRefinementStoneBox.Size.Width, Size.Height);
-                    break;
-                case NPCDialogType.Refine:
-                    GameScene.Game.NPCRefineBox.Visible = true;
-                    GameScene.Game.NPCRefineBox.Location = new Point(Size.Width - GameScene.Game.NPCRefineBox.Size.Width, Size.Height);
-                    break;
-                case NPCDialogType.MasterRefine:
-                    GameScene.Game.NPCMasterRefineBox.Visible = true;
-                    GameScene.Game.NPCMasterRefineBox.Location = new Point(Size.Width - GameScene.Game.NPCRefineBox.Size.Width, Size.Height);
-                    break;
-                case NPCDialogType.RefineRetrieve:
-                    GameScene.Game.NPCRefineRetrieveBox.Location = new Point(0, Size.Height);
-                    GameScene.Game.NPCRefineRetrieveBox.Visible = true;
-                    GameScene.Game.NPCRefineRetrieveBox.RefreshList();
-                    break;
-                case NPCDialogType.CompanionManage:
-                    GameScene.Game.NPCCompanionStorageBox.Visible = true;
-                    GameScene.Game.NPCCompanionStorageBox.Location = new Point(0, Size.Height);
-                    GameScene.Game.NPCAdoptCompanionBox.Visible = true;
-                    GameScene.Game.NPCAdoptCompanionBox.Location = new Point(Size.Width - GameScene.Game.NPCAdoptCompanionBox.Size.Width, Size.Height);
-                    break;
-                case NPCDialogType.WeddingRing:
-                    GameScene.Game.NPCWeddingRingBox.Visible = true;
-                    GameScene.Game.NPCWeddingRingBox.Location = new Point(Size.Width - GameScene.Game.NPCWeddingRingBox.Size.Width, Size.Height);
-                    break;
-                case NPCDialogType.ItemFragment:
-                    GameScene.Game.NPCItemFragmentBox.Visible = true;
-                    GameScene.Game.NPCItemFragmentBox.Location = new Point(Size.Width - GameScene.Game.NPCItemFragmentBox.Size.Width, Size.Height);
-                    break;
-                case NPCDialogType.AccessoryRefineUpgrade:
-                    GameScene.Game.NPCAccessoryUpgradeBox.Visible = true;
-                    GameScene.Game.NPCAccessoryUpgradeBox.Location = new Point(Size.Width - GameScene.Game.NPCAccessoryUpgradeBox.Size.Width, Size.Height);
-                    break; 
-                case NPCDialogType.AccessoryRefineLevel:
-                    GameScene.Game.NPCAccessoryLevelBox.Visible = true;
-                    GameScene.Game.NPCAccessoryLevelBox.Location = new Point(Size.Width - GameScene.Game.NPCAccessoryLevelBox.Size.Width, Size.Height);
-                    break;
-                case NPCDialogType.AccessoryReset:
-                    GameScene.Game.NPCAccessoryResetBox.Visible = true;
-                    GameScene.Game.NPCAccessoryResetBox.Location = new Point(Size.Width - GameScene.Game.NPCAccessoryResetBox.Size.Width, Size.Height);
-                    break;
-                case NPCDialogType.WeaponCraft:
-                    GameScene.Game.NPCWeaponCraftBox.Visible = true;
-                    GameScene.Game.NPCWeaponCraftBox.Location = new Point(Size.Width - GameScene.Game.NPCWeaponCraftBox.Size.Width, Size.Height);
-                    break;
+                GameScene.Game.NPCID = info.ObjectID;
+                GameScene.Game.NPCBox.Visible = true;
+
+                Page = info.Page;
+                //  RawPageText = info.Page.Say.Replace("\n", "");
+                PageText.Text = R.Replace(Page.Say, @"${Text}");
+
+                nextButtonTimes.Clear();
+                if (UsesTextViewport)
+                    ApplyTextViewport(Parent?.Size ?? Config.GameSize, true);
+                else
+                {
+                    int height = DXLabel.GetHeight(PageText, ClientArea.Width).Height;
+                    if (height > ClientArea.Height)
+                        SetClientSize(new Size(ClientArea.Width, height));
+                    ProcessText();
+                }
+
+                Opened = true;
+
+                GameScene.Game.NPCGoodsBox.Visible = false;
+                GameScene.Game.NPCSellBox.Visible = false;
+                GameScene.Game.NPCRepairBox.Visible = false;
+                GameScene.Game.NPCRefineBox.Visible = false;
+                GameScene.Game.NPCRefinementStoneBox.Visible = false;
+                GameScene.Game.NPCRefineRetrieveBox.Visible = false;
+                GameScene.Game.NPCAdoptCompanionBox.Visible = false;
+                GameScene.Game.NPCCompanionStorageBox.Visible = false;
+                GameScene.Game.NPCWeddingRingBox.Visible = false;
+                GameScene.Game.NPCItemFragmentBox.Visible = false;
+                GameScene.Game.NPCAccessoryUpgradeBox.Visible = false;
+                GameScene.Game.NPCAccessoryLevelBox.Visible = false;
+                GameScene.Game.NPCMasterRefineBox.Visible = false;
+                GameScene.Game.NPCAccessoryResetBox.Visible = false;
+                GameScene.Game.NPCWeaponCraftBox.Visible = false;
+
+                switch (info.Page.DialogType)
+                {
+                    case NPCDialogType.None:
+                        break;
+                    case NPCDialogType.BuySell:
+                        GameScene.Game.NPCGoodsBox.Visible = Page.Goods.Count > 0;
+                        GameScene.Game.NPCGoodsBox.NewGoods(Page.Goods);
+                        GameScene.Game.NPCSellBox.Visible = Page.Types.Count > 0;
+                        break;
+                    case NPCDialogType.Repair:
+                        GameScene.Game.NPCRepairBox.Visible = true;
+                        break;
+                    case NPCDialogType.RefinementStone:
+                        GameScene.Game.NPCRefinementStoneBox.Visible = true;
+                        break;
+                    case NPCDialogType.Refine:
+                        GameScene.Game.NPCRefineBox.Visible = true;
+                        break;
+                    case NPCDialogType.MasterRefine:
+                        GameScene.Game.NPCMasterRefineBox.Visible = true;
+                        break;
+                    case NPCDialogType.RefineRetrieve:
+                        GameScene.Game.NPCRefineRetrieveBox.Visible = true;
+                        GameScene.Game.NPCRefineRetrieveBox.RefreshList();
+                        break;
+                    case NPCDialogType.CompanionManage:
+                        GameScene.Game.NPCCompanionStorageBox.Visible = true;
+                        GameScene.Game.NPCAdoptCompanionBox.Visible = true;
+                        break;
+                    case NPCDialogType.WeddingRing:
+                        GameScene.Game.NPCWeddingRingBox.Visible = true;
+                        break;
+                    case NPCDialogType.ItemFragment:
+                        GameScene.Game.NPCItemFragmentBox.Visible = true;
+                        break;
+                    case NPCDialogType.AccessoryRefineUpgrade:
+                        GameScene.Game.NPCAccessoryUpgradeBox.Visible = true;
+                        break;
+                    case NPCDialogType.AccessoryRefineLevel:
+                        GameScene.Game.NPCAccessoryLevelBox.Visible = true;
+                        break;
+                    case NPCDialogType.AccessoryReset:
+                        GameScene.Game.NPCAccessoryResetBox.Visible = true;
+                        break;
+                    case NPCDialogType.WeaponCraft:
+                        GameScene.Game.NPCWeaponCraftBox.Visible = true;
+                        break;
+                }
+
             }
+            finally { IsResponseLayoutPending = false; }
+
+            // RefreshList/NewGoods may change sizes; position only after the response is complete.
+            ApplyServiceLocations();
         }
         
+        // Positioning only: visibility, content, native styles and packet handlers remain business-owned.
+        // Response and OfficialV1 resize both read current window sizes through this entry point.
+        internal void ApplyServiceLocations()
+        {
+            if (!IsVisible || !(Parent is GameScene game)) return;
+            if (UsesTextViewport)
+            {
+                GameUiNpcGroupLayout.Apply(game, Parent.Size);
+                return;
+            }
+
+            PlaceService(game.NPCGoodsBox, 0);
+            PlaceService(game.NPCSellBox, game.NPCGoodsBox.Visible ? Size.Width - game.NPCSellBox.Size.Width : 0);
+            PlaceService(game.NPCRepairBox, 0);
+            PlaceService(game.NPCRefinementStoneBox, Size.Width - game.NPCRefinementStoneBox.Size.Width);
+            PlaceService(game.NPCRefineBox, Size.Width - game.NPCRefineBox.Size.Width);
+            PlaceService(game.NPCRefineRetrieveBox, 0);
+            PlaceService(game.NPCCompanionStorageBox, 0);
+            PlaceService(game.NPCAdoptCompanionBox, Size.Width - game.NPCAdoptCompanionBox.Size.Width);
+            PlaceService(game.NPCWeddingRingBox, Size.Width - game.NPCWeddingRingBox.Size.Width);
+            // Preserve the native MasterRefine dependency on the Refine window's width.
+            PlaceService(game.NPCMasterRefineBox, Size.Width - game.NPCRefineBox.Size.Width);
+            PlaceService(game.NPCItemFragmentBox, Size.Width - game.NPCItemFragmentBox.Size.Width);
+            PlaceService(game.NPCAccessoryUpgradeBox, Size.Width - game.NPCAccessoryUpgradeBox.Size.Width);
+            PlaceService(game.NPCAccessoryLevelBox, Size.Width - game.NPCAccessoryLevelBox.Size.Width);
+            PlaceService(game.NPCAccessoryResetBox, Size.Width - game.NPCAccessoryResetBox.Size.Width);
+            PlaceService(game.NPCWeaponCraftBox, Size.Width - game.NPCWeaponCraftBox.Size.Width);
+            // Quest placement belongs to its independent packet flow, not NPCResponse.
+        }
+
+        private void PlaceService(DXWindow window, int x)
+        {
+            if (window.IsVisible) window.Location = new Point(x, Size.Height);
+        }
+
         private void ProcessText()
         {
             foreach (DXLabel label in Buttons)
                 label.Dispose();
 
             Buttons.Clear();
+            buttonOrigins.Clear();
+            if (Page == null) return;
             //string rawText = RawPageText.Replace("\n", "");
 
             MatchCollection matches = R.Matches(Page.Say);
@@ -275,7 +474,19 @@ namespace Client.Scenes.Views
 
             for (int i = 0; i < ranges.Count; i++)
             {
-                List<ButtonInfo> buttons = GetWordRegionsNew(DXManager.Graphics, PageText.Text, PageText.Font, PageText.DrawFormat, PageText.Size.Width, ranges[i].First, ranges[i].Length);
+                // Explicit newlines isolate wrapping even when the entire page is short.
+                // Reuse the viewport paragraph offset instead of remeasuring every
+                // preceding word for every action. Legacy keeps its original path.
+                int start = UsesTextViewport && ranges[i].First > 0
+                    ? PageText.Text.LastIndexOf('\n', ranges[i].First - 1) + 1 : 0;
+                List<ButtonInfo> buttons = GetWordRegionsNew(DXManager.Graphics, PageText.Text.Substring(start), PageText.Font,
+                    PageText.DrawFormat, PageText.Size.Width, ranges[i].First - start, ranges[i].Length);
+                if (start > 0)
+                    foreach (var button in buttons)
+                    {
+                        button.Index += start;
+                        button.Region.Y += ((NPCPageLabel)PageText).ParagraphTop(start);
+                    }
 
                 List<DXLabel> labels = new List<DXLabel>();
 
@@ -297,7 +508,6 @@ namespace Client.Scenes.Views
                 }
 
                 int index = i;
-                DateTime NextButtonTime = DateTime.MinValue;
                 foreach (DXLabel label in labels)
                 {
                     label.MouseEnter += (o, e) =>
@@ -323,13 +533,15 @@ namespace Client.Scenes.Views
                             return;
                         }
 
-                        if (CEnvir.Now < NextButtonTime) return;
+                        if (nextButtonTimes.TryGetValue(index, out DateTime nextButtonTime) && CEnvir.Now < nextButtonTime) return;
 
-                        NextButtonTime = CEnvir.Now.AddSeconds(1);
+                        nextButtonTimes[index] = CEnvir.Now.AddSeconds(1);
 
                         CEnvir.Enqueue(new C.NPCButton { ButtonID = int.Parse(matches[index].Groups["ID"].Value) });
                     };
 
+                    label.MouseWheel += ScrollPage;
+                    buttonOrigins.Add(label, label.Location);
                     Buttons.Add(label);
                 }
             }
@@ -338,6 +550,26 @@ namespace Client.Scenes.Views
 
         public static List<ButtonInfo> GetWordRegionsNew(Graphics graphics, string text, Font font, TextFormatFlags flags, int width, int index, int length)
         {
+            // Explicit newlines isolate wrapping. Measure a long prefix once instead of once per word
+            // for every tail option; the appended glyph includes the final otherwise-empty line.
+            if (index > 4096)
+            {
+                int paragraphStart = text.LastIndexOf('\n', index - 1) + 1;
+                if (paragraphStart > 0)
+                {
+                    int lineHeight = TextRenderer.MeasureText(graphics, "A", font, new Size(width, int.MaxValue), flags).Height;
+                    int prefixHeight = MeasurePageHeight(graphics, text.Substring(0, paragraphStart) + "A", font,
+                        flags, width) - lineHeight;
+                    var localRegions = GetWordRegionsNew(graphics, text.Substring(paragraphStart), font, flags,
+                        width, index - paragraphStart, length);
+                    foreach (var region in localRegions)
+                    {
+                        region.Index += paragraphStart;
+                        region.Region.Y += prefixHeight;
+                    }
+                    return localRegions;
+                }
+            }
 
             List<ButtonInfo> regions = new List<ButtonInfo>();
 
@@ -367,7 +599,7 @@ namespace Client.Scenes.Views
             //If Word Wrap enabled.
             foreach (CharacterRange range in ranges)
             {
-                int height = TextRenderer.MeasureText(graphics, text.Substring(0, range.First + range.Length), font, new Size(width, 9999), flags).Height;
+                int height = TextRenderer.MeasureText(graphics, text.Substring(0, range.First + range.Length), font, new Size(width, int.MaxValue), flags).Height;
 
                 if (range.First >= index + length) break;
 
@@ -387,7 +619,7 @@ namespace Client.Scenes.Views
                         {
                             X = 0,
                             Y = height - h,
-                            Width = TextRenderer.MeasureText(graphics, text.Substring(range.First, range.Length), font, new Size(width, 9999), flags).Width,
+                            Width = TextRenderer.MeasureText(graphics, text.Substring(range.First, range.Length), font, new Size(width, int.MaxValue), flags).Width,
                             Height = h,
                         };
                         currentInfo = new ButtonInfo { Region = region, Index = range.First, Length = range.Length };
@@ -406,9 +638,9 @@ namespace Client.Scenes.Views
                         {
                             Rectangle region = new Rectangle
                             {
-                                X = TextRenderer.MeasureText(graphics, text.Substring(lineStart, range.First - lineStart), font, new Size(width, 9999), flags).Width,
+                                X = TextRenderer.MeasureText(graphics, text.Substring(lineStart, range.First - lineStart), font, new Size(width, int.MaxValue), flags).Width,
                                 Y = height - h,
-                                Width = TextRenderer.MeasureText(graphics, text.Substring(range.First, range.Length), font, new Size(width, 9999), flags).Width,
+                                Width = TextRenderer.MeasureText(graphics, text.Substring(range.First, range.Length), font, new Size(width, int.MaxValue), flags).Width,
                                 Height = h,
                             };
 
@@ -421,7 +653,7 @@ namespace Client.Scenes.Views
                         {
                             //Measure Current.Index to range.First + Length
                             currentInfo.Length = (range.First + range.Length) - currentInfo.Index;
-                            currentInfo.Region.Width = TextRenderer.MeasureText(graphics, text.Substring(currentInfo.Index, currentInfo.Length), font, new Size(width, 9999), flags).Width;
+                            currentInfo.Region.Width = TextRenderer.MeasureText(graphics, text.Substring(currentInfo.Index, currentInfo.Length), font, new Size(width, int.MaxValue), flags).Width;
                         }
                         //We need to capture this word.
                         //ADD to any previous rects otherwise create new ?
@@ -434,8 +666,8 @@ namespace Client.Scenes.Views
             /*
             for (int i = 0; i < text.Length; i++)
             {
-                Size size = TextRenderer.MeasureText(graphics, text.Substring(lineStart, i  - lineStart + 1), font, new Size(width, 9999), flags); // +1 Because its pointless measuring a 0 length string.
-                int height = TextRenderer.MeasureText(graphics, text.Substring(0, i + 1), font, new Size(width, 9999), flags).Height;
+                Size size = TextRenderer.MeasureText(graphics, text.Substring(lineStart, i  - lineStart + 1), font, new Size(width, int.MaxValue), flags); // +1 Because its pointless measuring a 0 length string.
+                int height = TextRenderer.MeasureText(graphics, text.Substring(0, i + 1), font, new Size(width, int.MaxValue), flags).Height;
 
                 if (i == text.Length - 1 || i == index + length)
                 {
@@ -450,7 +682,7 @@ namespace Client.Scenes.Views
                     y += lastSize.Height;
                     
                     lineStart = i;
-                    size = TextRenderer.MeasureText(graphics, text.Substring(lineStart, i - lineStart + 1), font, new Size(width, 9999), flags);
+                    size = TextRenderer.MeasureText(graphics, text.Substring(lineStart, i - lineStart + 1), font, new Size(width, int.MaxValue), flags);
                     if (size.Height > h)
                         size = new Size(size.Width, h);
 
@@ -521,6 +753,9 @@ namespace Client.Scenes.Views
                     Buttons = null;
                 }
 
+                buttonOrigins.Clear();
+                nextButtonTimes.Clear();
+                pageScroll = null;
                 Opened = false;
             }
 
@@ -568,6 +803,23 @@ namespace Client.Scenes.Views
         }
 
         #endregion
+
+        private GameUiNpcGoodsBinding gameUiGoods;
+        public bool UsesGameUiGoods => gameUiGoods != null;
+        public void UseGameUiGoods(GameUiWindowSkin skin)
+        {
+            if (skin == null)
+            {
+                gameUiGoods?.Dispose();
+                gameUiGoods = null;
+                UpdateLocations();
+                return;
+            }
+            if (gameUiGoods != null || WindowSkin != null)
+                throw new InvalidOperationException("Goods window already has a layout owner.");
+            gameUiGoods = new GameUiNpcGoodsBinding(this, ScrollBar, BuyButton, RefreshLegacyGoods);
+            gameUiGoods.Install(skin);
+        }
 
         private DXVScrollBar ScrollBar;
         public DXCheckBox GuildCheckBox;
@@ -646,6 +898,8 @@ namespace Client.Scenes.Views
 
         public void NewGoods(IList<NPCGood> goods)
         {
+            if (goods == null) throw new ArgumentNullException(nameof(goods));
+            SelectedCell = null; // A refreshed list must not retain a disposed purchase target.
             foreach (NPCGoodsCell cell in Cells)
                 cell.Dispose();
 
@@ -665,10 +919,15 @@ namespace Client.Scenes.Views
             }
 
 
-            ScrollBar.MaxValue = goods.Count*43 - 2;
+            if (gameUiGoods != null) { gameUiGoods.Refresh(); return; }
+            RefreshLegacyGoods();
+        }
+        private void RefreshLegacyGoods()
+        {
+            ScrollBar.MaxValue = Math.Max(0, Cells.Count * 43 - 2);
             SetClientSize(new Size(ClientArea.Width, Math.Min(ScrollBar.MaxValue, 7*43 - 3) + 1));
             ScrollBar.VisibleSize = ClientArea.Height;
-            ScrollBar.Size = new Size(ScrollBar.Size.Width, ClientArea.Height - 2);
+            ScrollBar.Size = new Size(ScrollBar.Size.Width, Math.Max(0, ClientArea.Height - 2));
 
             BuyButton.Location = new Point(30, Size.Height - 43);
             GuildCheckBox.Location = new Point(120, BuyButton.Location.Y + (BuyButton.Size.Height - GuildCheckBox.Size.Height) / 2);
@@ -677,6 +936,7 @@ namespace Client.Scenes.Views
         }
         private void UpdateLocations()
         {
+            if (gameUiGoods != null) { gameUiGoods.Locate(); return; }
             int y = -ScrollBar.Value + 1;
 
             foreach (NPCGoodsCell cell in Cells)
@@ -766,6 +1026,12 @@ namespace Client.Scenes.Views
         protected override void Dispose(bool disposing)
         {
             base.Dispose(disposing);
+
+            if (disposing)
+            {
+                gameUiGoods?.Dispose();
+                gameUiGoods = null;
+            }
 
             if (disposing)
             {
@@ -2189,6 +2455,21 @@ namespace Client.Scenes.Views
 
         #endregion
 
+        private GameUiNpcRefineRetrieveBinding gameUiRetrieve;
+        public void UseGameUiRefineRetrieve(GameUiWindowSkin skin)
+        {
+            if (skin == null)
+            {
+                gameUiRetrieve?.Dispose();
+                gameUiRetrieve = null;
+                return;
+            }
+            if (gameUiRetrieve != null || WindowSkin != null)
+                throw new InvalidOperationException("Refine results already have a layout owner.");
+            gameUiRetrieve = new GameUiNpcRefineRetrieveBinding(this, ScrollBar, RetrieveButton, RefreshLegacyLayout);
+            gameUiRetrieve.Install(skin);
+        }
+
         public List<ClientRefineInfo> Refines = new List<ClientRefineInfo>();
         private DXVScrollBar ScrollBar;
 
@@ -2275,6 +2556,11 @@ namespace Client.Scenes.Views
             }
 
 
+            if (gameUiRetrieve != null) { gameUiRetrieve.Refresh(); return; }
+            RefreshLegacyLayout();
+        }
+        private void RefreshLegacyLayout()
+        {
             ScrollBar.MaxValue = Refines.Count*43 - 2;
             SetClientSize(new Size(ClientArea.Width, Math.Min(Math.Max(3 * 43 - 2, ScrollBar.MaxValue), 7*43 - 3) + 1));
             ScrollBar.VisibleSize = ClientArea.Height;
@@ -2314,6 +2600,8 @@ namespace Client.Scenes.Views
 
             if (disposing)
             {
+                gameUiRetrieve?.Dispose();
+                gameUiRetrieve = null;
                 _SelectedCell = null;
                 SelectedCellChanged = null;
 
@@ -2736,6 +3024,9 @@ namespace Client.Scenes.Views
             if (oValue != null)
                 oValue.Selected = false;
 
+            HasChoice = false;
+            SelectedCell = null;
+
             foreach (DXItemCell cell in RewardGrid.Grid)
             {
                 cell.Item = null;
@@ -2817,8 +3108,7 @@ namespace Client.Scenes.Views
                 }
             }
 
-            if (HasChoice)
-                SelectedCell = null;
+
 
 
             DescriptionLabel.Text = GameScene.Game.GetQuestText(SelectedQuest.QuestInfo, SelectedQuest.UserQuest, false);
@@ -3130,6 +3420,7 @@ namespace Client.Scenes.Views
         {
             if (NPCInfo == null)
             {
+                SelectedQuest = null;
                 Visible = false;
                 return;
             }
@@ -3168,49 +3459,23 @@ namespace Client.Scenes.Views
 
             Visible = Quests.Count > 0;
 
-            if (Quests.Count == 0) return;
-
-            QuestInfo previousQuest = SelectedQuest?.QuestInfo;
-
-            _SelectedQuest = null;
-
             UpdateScrollBar();
-
-            if (previousQuest != null)
-            {
-                foreach (NPCQuestRow row in Rows)
-                {
-                    if (row.QuestInfo != previousQuest) continue;
-
-                    _SelectedQuest = row;
-                    break;
-                }
-            }
-
-            if (SelectedQuest == null)
-                SelectedQuest = Rows[0];
-
-            if (SelectedQuest?.QuestInfo != null)
-            {
-                DescriptionLabel.Text = GameScene.Game.GetQuestText(SelectedQuest.QuestInfo, SelectedQuest.UserQuest, false);
-                TasksLabel.Text = GameScene.Game.GetTaskText(SelectedQuest.QuestInfo, SelectedQuest.UserQuest);
-
-                AcceptButton.Visible = SelectedQuest.UserQuest == null;
-                CompleteButton.Visible = SelectedQuest.UserQuest != null && SelectedQuest.UserQuest.IsComplete;
-            }
         }
 
         public void UpdateScrollBar()
         {
             ScrollBar.MaxValue = Quests.Count;
-            
+            // Rows are recycled when scrolling. Rebind the selection as a quest identity,
+            // and clear rewards before a row can start representing a different quest.
+            QuestInfo previousQuest = SelectedQuest?.QuestInfo;
+            SelectedQuest = null;
             for (int i = 0; i < Rows.Length; i++)
-            {
                 Rows[i].QuestInfo = i + ScrollBar.Value >= Quests.Count ? null : Quests[i + ScrollBar.Value];
-            }
 
-
+            SelectedQuest = Rows.FirstOrDefault(r => r.QuestInfo != null && r.QuestInfo == previousQuest)
+                ?? Rows.FirstOrDefault(r => r.QuestInfo != null);
         }
+
         #endregion
 
         #region IDisposable
@@ -6368,6 +6633,12 @@ namespace Client.Scenes.Views
 
         #endregion
 
+        public override void OnIsVisibleChanged(bool oValue, bool nValue)
+        {
+            base.OnIsVisibleChanged(oValue, nValue);
+            if (!IsVisible) AccessoryGrid?.ClearLinks();
+        }
+
         public NPCAccessoryResetDialog()
         {
             HasTitle = false;
@@ -6596,6 +6867,20 @@ namespace Client.Scenes.Views
         }
 
         public bool CanCraft => Cost <= GameScene.Game.User.Gold && TemplateCell.Grid[0].Link != null && RequiredClass != RequiredClass.None;
+
+        public override void OnIsVisibleChanged(bool oValue, bool nValue)
+        {
+            base.OnIsVisibleChanged(oValue, nValue);
+            if (IsVisible) return;
+
+            TemplateCell?.ClearLinks();
+            YellowCell?.ClearLinks();
+            BlueCell?.ClearLinks();
+            RedCell?.ClearLinks();
+            PurpleCell?.ClearLinks();
+            GreenCell?.ClearLinks();
+            GreyCell?.ClearLinks();
+        }
 
         public NPCWeaponCraftWindow()
         {

@@ -1,0 +1,10 @@
+{
+  "command": [
+    "C:/Users/shuai/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+    "docs/design/assets/official-ingame-ui/acceptance/equipment-gesture-matrix/audit-history.py",
+    "--output",
+    "docs/design/assets/official-ingame-ui/acceptance/equipment-gesture-matrix/history-audit.json"
+  ],
+  "exitCode": 0,
+  "log": "E:/workspace/mir3-zircon-server/docs/design/assets/official-ingame-ui/acceptance/equipment-gesture-matrix/history-audit.log"
+}

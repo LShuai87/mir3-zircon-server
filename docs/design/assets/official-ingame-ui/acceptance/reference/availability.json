@@ -1,0 +1,49 @@
+{
+  "checkedAt": "2026-11-07T08:19:25.405Z",
+  "officialClientRoot": "E:\\Program Files\\ShengquGames\\Mir3",
+  "officialExecutable": {
+    "path": "E:\\Program Files\\ShengquGames\\Mir3\\Mir3.dat",
+    "fileVersion": "1.15.0.7269",
+    "sha256": "bcde890317a1b1f9e7de7817c15666e2d2ae31e60ed1f12659e84d63f831e943"
+  },
+  "launcherExecutable": {
+    "path": "E:\\Program Files\\ShengquGames\\Mir3\\Mir3.exe",
+    "fileVersion": "1.9.3.137",
+    "sha256": "030dfe11875382d083ba27c70b4b6f897ab4f7d64996f57e24ac715c6a7e025e"
+  },
+  "gameProcesses": [
+    {
+      "pid": 5672,
+      "name": "Mir3.dat",
+      "windowId": 629344752,
+      "title": "传奇3【万马同庆】"
+    },
+    {
+      "pid": 12908,
+      "name": "Mir3.exe"
+    }
+  ],
+  "capturesCollected": 6,
+  "coveredViews": [
+    "overview",
+    "character",
+    "inventory",
+    "tooltip",
+    "minimap",
+    "chat",
+    "npc-dialog",
+    "npc-service"
+  ],
+  "missingViews": [],
+  "conclusion": "已采集6张正式版已登录运行原图，覆盖全部8类参考视图；目标窗口DPI、客户区元数据和当前资源版本映射尚待确认。G0-1未关闭。",
+  "runtimeSourceComparison": "source-comparison.json",
+  "latestRuntimeCheck": {
+    "checkedAt": "2026-11-07T12:18:28.020Z",
+    "processFound": true,
+    "processMetadata": "docs/design/assets/official-ingame-ui/acceptance/reference/process-metadata-check.json",
+    "runtimeObservation": "docs/design/assets/official-ingame-ui/acceptance/reference/runtime-observation-20261107T121828020Z.json",
+    "observedState": "server_selection_with_connection_lost_dialog",
+    "postLoginGameUiAvailable": false,
+    "note": "上方旧PID及采集统计为初始采集历史；当前状态以本字段引用的运行核查为准。"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "kind": "independent-preparatory-implementation",
+  "forTask": "UI-14",
+  "checkedAt": "2026-11-07T09:21:34.324515+00:00",
+  "taskMarkedDone": false,
+  "releaseAccepted": false,
+  "summary": "Bottom-up HP/MP crop geometry; no renderer or scene integration before frozen inputs.",
+  "sourceChanges": [
+    {
+      "path": "Client/Client.csproj",
+      "beforeSha256": "a7ad73209cc2da3d50202093db888e4d4834967173360c2fd00708165815fbee",
+      "afterSha256": "54ad61a5afd72bde09fb066ee933894848a004d02ba9ade5dbf660d754fd1c38"
+    }
+  ],
+  "sourceHashes": [
+    {
+      "path": "Client/Models/GameUi/GameUiFillGeometry.cs",
+      "sha256": "2fa3c8228cd7b5bb7468e717e9c6c2fe15bc28c939c4d3acea18d64cc013be9b"
+    },
+    {
+      "path": "Client/Client.csproj",
+      "sha256": "54ad61a5afd72bde09fb066ee933894848a004d02ba9ade5dbf660d754fd1c38"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiFillTests.cs",
+      "sha256": "5558a395b8e91b3b16255af531b87e1bf81988ac7f99392771c84d9c0a8aae3a"
+    },
+    {
+      "path": "tests/Run-GameUiFillTests.ps1",
+      "sha256": "de611659f22ef970933b3662619a3460a55c21c6bba16258f2aff1b6d6890009"
+    },
+    {
+      "path": "build/game-ui/Validate-UiTasks.py",
+      "sha256": "c7e1e70684410dd0fb7488f97bccbbb80da2656f3bdee6f2ffb0b6617aee7078"
+    }
+  ],
+  "commands": [
+    {
+      "command": "MSBuild Client/Client.csproj /t:Build /p:Configuration=Debug /p:Platform=AnyCPU",
+      "exitCode": 0,
+      "result": "pass",
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/fill-geometry/fill-helper-debug-build.log",
+      "logSha256": "e53851a7485ef3f6d0ffaf3114d383bf00d450c3b1ce1c319af687cf33a27052"
+    },
+    {
+      "command": "MSBuild Client/Client.csproj /t:Build /p:Configuration=Release /p:Platform=AnyCPU",
+      "exitCode": 0,
+      "result": "pass",
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/fill-geometry/fill-helper-release-build.log",
+      "logSha256": "f30cde67ac29f604042ba3a6d468831324b6fbf57bb76c8c8c25091003adbf1b"
+    },
+    {
+      "command": "powershell tests/Run-GameUiFillTests.ps1",
+      "exitCode": 0,
+      "result": "pass",
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/fill-geometry/fill-helper-tests.log",
+      "logSha256": "8ce8026878919d9a3754f6d688d19f48dc0c1b85c422a384e5b38ca6f28a32c7"
+    },
+    {
+      "command": "powershell tests/Run-GameUiTests.ps1 -Suite Layout",
+      "exitCode": 0,
+      "result": "pass",
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/fill-geometry/fill-helper-layout-regression.log",
+      "logSha256": "cf0154f933896b9bf41f685995b9ad2eb9aae9111a98a79030cf026d143eb002"
+    }
+  ],
+  "checks": {
+    "fillGeometry": 32022,
+    "existingLayout": 35
+  },
+  "limitations": [
+    "No HP/MP texture or blend selection is made by this helper.",
+    "No GameScene or HUD drawing integration yet; A08 remains not_run.",
+    "UI-14 remains not_started; only independent geometry preparation is implemented."
+  ]
+}

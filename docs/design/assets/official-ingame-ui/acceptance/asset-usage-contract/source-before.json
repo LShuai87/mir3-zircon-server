@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "checkedAtLocalDate": "2026-11-08",
+  "files": [
+    {
+      "path": "docs/tasks/official-ingame-ui/tasks.json",
+      "sha256": "7072652d9e82129f12f79c65a747e880dfda4f1188262a1c287d226dda691d08",
+      "snapshot": "docs/design/assets/official-ingame-ui/acceptance/asset-usage-contract/source-before/docs/tasks/official-ingame-ui/tasks.json"
+    },
+    {
+      "path": "docs/tasks/official-ingame-ui/README.md",
+      "sha256": "64d5a90f807b2c15cf9ba6ae8446968d2ae1cd94dc0f2e1b2b75e968f094748f",
+      "snapshot": "docs/design/assets/official-ingame-ui/acceptance/asset-usage-contract/source-before/docs/tasks/official-ingame-ui/README.md.snapshot"
+    }
+  ],
+  "newSources": [
+    "build/game-ui/asset-usage-official-v1.json",
+    "build/game-ui/Validate-OfficialUiAssets.py",
+    "tests/game-ui/test_official_ui_asset_usage.py"
+  ]
+}

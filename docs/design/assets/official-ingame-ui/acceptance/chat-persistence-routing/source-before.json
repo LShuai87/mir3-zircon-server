@@ -1,0 +1,38 @@
+[
+  {
+    "path": "Client/Envir/GameUiChatStore.cs",
+    "sha256": "a8bc05ceab25ab2a6b345a9d04617d999c240078b3f2a1a7d9598c9cbd53d81e"
+  },
+  {
+    "path": "Client/Envir/GameUiOfficialV1ChatSet.cs",
+    "sha256": "642ad9f11c1ffc6ee057c95298c13cfeb99ca3b6dddcaa26886f6ec1a188f4d0"
+  },
+  {
+    "path": "Client/Envir/GameUiOfficialV1WindowSet.cs",
+    "sha256": "a3fafcb71a8c9d374be8f63107725b7b82db434540c74a5a462409b50fe5ba3c"
+  },
+  {
+    "path": "Client/Envir/GameUiStartupSession.cs",
+    "sha256": "54de8a04f3e195402173ed97726d1e52e102b1afb5017d6c6891d402741765ab"
+  },
+  {
+    "path": "Client/Scenes/GameScene.cs",
+    "sha256": "429a2e77659b244fcf5044916a0ff776b21b368f49b2320516d17ad56737d311"
+  },
+  {
+    "path": "Client/Scenes/Views/ChatOptionsDialog.cs",
+    "sha256": "8609c62af0f8c78a55f6c8c60c8e45b833c12c7b79bb7cd88ec6efaa67b93355"
+  },
+  {
+    "path": "tests/Run-GameUiWindowSetTests.ps1",
+    "sha256": "361a374755a34b5d1b51ec12db7f7f6cf3569f81fac32d80f4082d9cf36af0d2"
+  },
+  {
+    "path": "tests/game-ui/OfficialUiSceneStartupTests.cs",
+    "sha256": "f2966092d5098e321ab79cdd81ca7af36982d7fa320e193316b787568a6d7807"
+  },
+  {
+    "path": "Client/Envir/GameUiChatGroupBinding.cs",
+    "sha256": "026c094d3dbdf042cf3487499194c8c01acaeba91bea6114ccd82692c0c46d47"
+  }
+]

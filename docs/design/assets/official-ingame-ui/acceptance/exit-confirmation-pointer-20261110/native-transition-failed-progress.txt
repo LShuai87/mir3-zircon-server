@@ -1,0 +1,41 @@
+serialized-login-success|native LoginScene -> SelectScene
+legacy-serialized-start-game|normal constructor, native UserObject, map, frame, one listener
+native-modal-focus|OK/close/hide restore live editor; dispose does not steal newer focus or restore disposed editor/ancestor
+legacy-exit-confirmation|HUD/window entry, modal focus, cancel/Escape, combat block, exact 10s boundary, one-shot confirmed close, native Logout
+game-logout|old controls/editor/tabs/adapters released, static listener removed, application owner retained
+legacy-serialized-start-game|normal constructor, native UserObject, map, frame, one listener
+direct-return-login|old controls/editor/tabs/adapters released, static listener removed, application owner retained
+serialized-login-success|native LoginScene -> SelectScene
+serialized-login-success|native LoginScene -> SelectScene
+legacy-serialized-start-game|normal constructor, native UserObject, map, frame, one listener
+socket-eof-confirm-ok|old controls/editor/tabs/adapters released, static listener removed, application owner retained
+serialized-login-success|native LoginScene -> SelectScene
+legacy-serialized-start-game|normal constructor, native UserObject, map, frame, one listener
+server-disconnect-Unknown|old controls/editor/tabs/adapters released, static listener removed, application owner retained
+serialized-login-success|native LoginScene -> SelectScene
+legacy-serialized-start-game|normal constructor, native UserObject, map, frame, one listener
+server-disconnect-TimedOut|old controls/editor/tabs/adapters released, static listener removed, application owner retained
+serialized-login-success|native LoginScene -> SelectScene
+legacy-serialized-start-game|normal constructor, native UserObject, map, frame, one listener
+server-disconnect-ServerClosing|old controls/editor/tabs/adapters released, static listener removed, application owner retained
+serialized-login-success|native LoginScene -> SelectScene
+legacy-serialized-start-game|normal constructor, native UserObject, map, frame, one listener
+server-disconnect-AnotherUser|old controls/editor/tabs/adapters released, static listener removed, application owner retained
+serialized-login-success|native LoginScene -> SelectScene
+legacy-serialized-start-game|normal constructor, native UserObject, map, frame, one listener
+server-disconnect-AnotherUserPassword|old controls/editor/tabs/adapters released, static listener removed, application owner retained
+serialized-login-success|native LoginScene -> SelectScene
+legacy-serialized-start-game|normal constructor, native UserObject, map, frame, one listener
+server-disconnect-AnotherUserAdmin|old controls/editor/tabs/adapters released, static listener removed, application owner retained
+serialized-login-success|native LoginScene -> SelectScene
+legacy-serialized-start-game|normal constructor, native UserObject, map, frame, one listener
+server-disconnect-Banned|old controls/editor/tabs/adapters released, static listener removed, application owner retained
+serialized-login-success|native LoginScene -> SelectScene
+legacy-serialized-start-game|normal constructor, native UserObject, map, frame, one listener
+server-disconnect-Crashed|old controls/editor/tabs/adapters released, static listener removed, application owner retained
+serialized-login-success|native LoginScene -> SelectScene
+legacy-serialized-start-game|normal constructor, native UserObject, map, frame, one listener
+native-character-refresh|old controls/editor/tabs/adapters released, static listener removed, application owner retained
+serialized-login-success|native LoginScene -> SelectScene
+official-serialized-start-game|normal constructor, native UserObject, map, frame, one listener
+native-modal-focus|OK/close/hide restore live editor; dispose does not steal newer focus or restore disposed editor/ancestor

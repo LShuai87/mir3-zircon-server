@@ -1,0 +1,1 @@
+HUD layout: 676 checks passed; real controls, native HP/MP/XP setters, geometry, action identity, flags, foreground order, repeated rebind/restore, observer rollback, lifecycle. No game login, packets or final-art acceptance.

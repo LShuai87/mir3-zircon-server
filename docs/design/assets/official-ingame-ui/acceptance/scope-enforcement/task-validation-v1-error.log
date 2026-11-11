@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "E:\workspace\mir3-zircon-server\build\game-ui\Validate-UiTasks.py", line 124, in <module>
+    main()
+    ~~~~^^
+  File "E:\workspace\mir3-zircon-server\build\game-ui\Validate-UiTasks.py", line 107, in main
+    require('implementationSourceHashesMatch', all(sha(ROOT / path) == expected for path, expected in current_sources.items()))
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\workspace\mir3-zircon-server\build\game-ui\Validate-UiTasks.py", line 50, in require
+    raise ValueError(name)
+ValueError: implementationSourceHashesMatch

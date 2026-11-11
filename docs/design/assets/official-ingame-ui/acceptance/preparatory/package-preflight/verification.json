@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "kind": "official-ui-package-preflight-preparation-verification",
+  "checkedAtLocalDate": "2026-11-08",
+  "referenceResolution": [
+    1024,
+    768
+  ],
+  "releaseAccepted": false,
+  "sourceChanges": [
+    {
+      "path": "Client/Client.csproj",
+      "beforeSha256": "f4abc6a5df5ae62d92cfd67e517aeafdac10904e373df408c06a9fef2ed48813",
+      "afterSha256": "3de5dcbc79d77b204e2f706db69768b3126bc36ecec1b1cc14909a311ce53c83"
+    }
+  ],
+  "sourceHashes": [
+    {
+      "path": "Client/Client.csproj",
+      "sha256": "3de5dcbc79d77b204e2f706db69768b3126bc36ecec1b1cc14909a311ce53c83"
+    },
+    {
+      "path": "Client/Envir/GameUiPackagePreflight.cs",
+      "sha256": "ce1cebe72e271f4cc3867d4dbcb35b6b65f322a0e888181a2b63dc0b33eb0d35"
+    },
+    {
+      "path": "tests/Run-GameUiPackagePreflightTests.ps1",
+      "sha256": "6f92a8ba9d3f4582d38298bf79aedf56588ef95ffbb3cc9f5d0906bf0d080d63"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiPackagePreflightTests.cs",
+      "sha256": "803c221adf098baa0813a86a5d352ba598a90cb574a48c1378d2d104428ab287"
+    },
+    {
+      "path": "ImageManager/Mir3Library.cs",
+      "sha256": "9b08f5c8344364db9275fb608086bf112404c72f16df4cd245e8a49ca4c61d67"
+    }
+  ],
+  "priorSourceHashes": [
+    {
+      "path": "Client/Client.csproj",
+      "sha256": "f4abc6a5df5ae62d92cfd67e517aeafdac10904e373df408c06a9fef2ed48813"
+    }
+  ],
+  "newlyRegisteredSourceChanges": [],
+  "commands": [
+    {
+      "command": "MSBuild.exe Client/Client.csproj /t:Build /p:Configuration=Debug /p:Platform=AnyCPU /nologo /v:minimal",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/package-preflight/build-debug.log",
+      "logSha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "command": "powershell -NoProfile -File tests/Run-GameUiPackagePreflightTests.ps1",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/package-preflight/preflight.log",
+      "logSha256": "9ff6563b70a6999cbfdfdc7a39dd5ce86ce024413bbfe40650a8b969081930ea"
+    },
+    {
+      "command": "powershell -NoProfile -File tests/Run-GameUiTests.ps1 -Suite Controls",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/package-preflight/controls.log",
+      "logSha256": "9353112ab8a94ac9d4a079953cc017993646512ad4ea6d3b21abde1296333f6f"
+    },
+    {
+      "command": "MSBuild.exe Client/Client.csproj /t:Build /p:Configuration=Release /p:Platform=AnyCPU /nologo /v:minimal",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/package-preflight/build-release.log",
+      "logSha256": "c9e24428be1e56c8408af17aacfea3413de3953bfe426d10eb768782f5005ebc"
+    },
+    {
+      "command": "git -c core.whitespace=cr-at-eol diff --check",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/package-preflight/diff-check.log",
+      "logSha256": "79d6e102d3342502fc80ca42def8ff97f6642ce33398d5219dc2f3e921c23f6f"
+    }
+  ],
+  "evidenceHashes": [
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/package-preflight/before.json",
+      "sha256": "1dd23924288132ccd6f386c7a65cf783ae451f8b583f31490982f7276d0a6f41"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/package-preflight/README.md",
+      "sha256": "cbbbd7029c27ae258391d44d7fb60e35251c2b88c4d014f96e5c42e839926392"
+    }
+  ],
+  "results": {
+    "checks": 418,
+    "gpuPixelComparisons": 288,
+    "ownerLifetimes": 3,
+    "realWriterAndNativeReader": true,
+    "packageAndPerFrameHashes": true,
+    "strictBoundedHeaderAndPayloadChecks": true,
+    "heldReadOnlyLease": true,
+    "allFramesGpuUploadBeforePublishing": true,
+    "partialGpuFailureReleasesAllPriorTextures": true,
+    "partialGpuFailureInjection": "Reflection changes the second immutable frame index after CPU verification; isolated test only.",
+    "cacheExpiryAndExplicitTextureInvalidationReupload": true,
+    "threadAffinityAndRepeatedDisposal": true,
+    "missingPackageWrongHashMalformedHeaderAndNoDeviceReturnNoResource": true,
+    "nativeDisposeTextureGapHandledByPackageOwner": true,
+    "commonWindowSkinChecks": 60,
+    "commonControlChecks": 26,
+    "debugBuild": "pass",
+    "releaseBuild": "pass",
+    "runtimeEnabled": false,
+    "gameAcceptanceExecuted": false
+  },
+  "limitations": [
+    "This component is not called from Program/GameScene and does not switch styles or define a production semantic catalog. Legacy remains the default.",
+    "Synthetic real-writer Zl files and D3D9 pixel checks do not prove final official-art/alpha/composition acceptance.",
+    "Cache expiry and explicit texture invalidation/reupload are covered, but no live game device reset, login/relogin, IME, input/actions/network, performance or installation/rollback acceptance is claimed.",
+    "A subsequent startup context must supply the complete compiled production manifest and retain the owner until all consumers are disposed. No runtime JSON or partial resource library is exposed by this component.",
+    "NPC interaction cards, secondary popups and display settings retain their current styling. UI-07/UI-12 and G0-1..G0-5 remain unclosed."
+  ]
+}

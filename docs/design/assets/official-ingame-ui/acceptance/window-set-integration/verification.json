@@ -1,0 +1,221 @@
+{
+  "schemaVersion": 1,
+  "kind": "official-ui-window-set-integration",
+  "checkedAtLocalDate": "2026-11-08",
+  "referenceResolution": [
+    1024,
+    768
+  ],
+  "releaseAccepted": false,
+  "sourceChanges": [
+    {
+      "path": "Client/Client.csproj",
+      "beforeSha256": "f7099a1cf1f0cad1ad8c6a316e15927e33b1b9f966b49540ca0225c70b151dd6",
+      "afterSha256": "288679c570f3e2fdce7d62dd2c350ae9667e91adfe469f8c83b405d617605d8a"
+    },
+    {
+      "path": "Client/Controls/DXWindow.cs",
+      "beforeSha256": "4d210da6477c03d85aec9e68b2b40e4c7a51e96a7521c51082eddf3159e55ca8",
+      "afterSha256": "ba9b735edb8dd9e96071ff4af502af334ed6f8258cf9b8f3dcab7b6b75ccb615"
+    },
+    {
+      "path": "Client/Scenes/Views/CharacterDialog.cs",
+      "beforeSha256": "0f54e5c8b45e7ccd5391e05964b75f55f27a597528f62ef5c6c6b06ad0c6ce7a",
+      "afterSha256": "a8f69388197d52d6aa2aa40f90eb21e044af7db8847e8709c57e5a1d2df0a7fb"
+    },
+    {
+      "path": "Client/Scenes/GameScene.cs",
+      "beforeSha256": "2a663876bfe103bd55e52afaf74f370b87f2c0ece99e3505b61dfd82dcc56ee4",
+      "afterSha256": "957f9fafab11d8a7c5c9b9e057a7d3702a6853f356e4c9dde39bffa369e76ed7"
+    },
+    {
+      "path": "Client/Scenes/Views/CharacterDialog.GameUi.cs",
+      "beforeSha256": "2711ff4153367e7ce5bc243cb05dca5331904a2a614bc3f244eb3653f0116065",
+      "afterSha256": "6f3a99744f68bd0eb4aff92a8b72982161fa8b0812cab67acfeee3f8842ae7e8"
+    },
+    {
+      "path": "build/game-ui/character-bindings.json",
+      "beforeSha256": "61046ce9b47b0a055872d62a3a466c434b4f32b52caa170de15ed009c17fd244",
+      "afterSha256": "b511324bf0cef0134a4785186b6a7557e74fd9f21d0a49624d2a09b4744935c9"
+    }
+  ],
+  "sourceHashes": [
+    {
+      "path": "Client/Client.csproj",
+      "sha256": "288679c570f3e2fdce7d62dd2c350ae9667e91adfe469f8c83b405d617605d8a"
+    },
+    {
+      "path": "Client/Controls/DXWindow.cs",
+      "sha256": "ba9b735edb8dd9e96071ff4af502af334ed6f8258cf9b8f3dcab7b6b75ccb615"
+    },
+    {
+      "path": "Client/Scenes/Views/CharacterDialog.cs",
+      "sha256": "a8f69388197d52d6aa2aa40f90eb21e044af7db8847e8709c57e5a1d2df0a7fb"
+    },
+    {
+      "path": "Client/Scenes/GameScene.cs",
+      "sha256": "957f9fafab11d8a7c5c9b9e057a7d3702a6853f356e4c9dde39bffa369e76ed7"
+    },
+    {
+      "path": "Client/Scenes/Views/CharacterDialog.GameUi.cs",
+      "sha256": "6f3a99744f68bd0eb4aff92a8b72982161fa8b0812cab67acfeee3f8842ae7e8"
+    },
+    {
+      "path": "build/game-ui/character-bindings.json",
+      "sha256": "b511324bf0cef0134a4785186b6a7557e74fd9f21d0a49624d2a09b4744935c9"
+    },
+    {
+      "path": "Client/Envir/GameUiOfficialV1WindowSet.cs",
+      "sha256": "a8ce0737271c820524a34472846c407eb5072d805984d685c1fd2b50cee21be9"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiWindowSetTests.cs",
+      "sha256": "238016d2d4eb1b08adf0347f9dd9e2ecb8faadec4d61de55075bcadf70079e37"
+    },
+    {
+      "path": "tests/Run-GameUiWindowSetTests.ps1",
+      "sha256": "af5807e3936deffd14ca6128e094832ebdce8506d5583da1fb5cbd3fa9639053"
+    }
+  ],
+  "commands": [
+    {
+      "command": "MSBuild Client/Client.csproj /t:Build /p:Configuration=Debug /p:Platform=AnyCPU /nologo /v:minimal",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/window-set-integration/debug-build.log",
+      "logSha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "command": "MSBuild Client/Client.csproj /t:Build /p:Configuration=Release /p:Platform=AnyCPU /nologo /v:minimal",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/window-set-integration/release-build.log",
+      "logSha256": "c9e24428be1e56c8408af17aacfea3413de3953bfe426d10eb768782f5005ebc"
+    },
+    {
+      "command": "python build/game-ui/Assemble-CharacterBindings.py --output docs/design/assets/official-ingame-ui/acceptance/window-set-integration/character-bindings.final.generated.json",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/window-set-integration/binding-assemble.log",
+      "logSha256": "5932bc5269e5c6e34910ecd3f36fca9797c3ba463775aafeaf2ec6cd4131e437"
+    },
+    {
+      "command": "python build/game-ui/Assemble-CharacterBindings.py --check",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/window-set-integration/binding-check.log",
+      "logSha256": "5932bc5269e5c6e34910ecd3f36fca9797c3ba463775aafeaf2ec6cd4131e437"
+    },
+    {
+      "command": "python -m unittest discover -s tests/game-ui -p test_character_binding_contract.py -v",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/window-set-integration/binding-tests.log",
+      "logSha256": "8fa243859c404639cbceafbff1cc06c3fe86cc9bee54b609221c28aabaa8381f"
+    },
+    {
+      "command": "tests/Run-GameUiCharacterPageTests.ps1",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/window-set-integration/CharacterPage.log",
+      "logSha256": "cdb79d2442b3f9f86e1d6b30427f5a19d04fb2025a0e06da162eae4d28475a0a"
+    },
+    {
+      "command": "tests/Run-GameUiCharacterAttributeTests.ps1",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/window-set-integration/CharacterAttribute.log",
+      "logSha256": "6da292fea3083b92f96bce1cf1b16c1ebc49bc0847d4d87377a09e9371fa5d43"
+    },
+    {
+      "command": "tests/Run-GameUiCharacterControlTests.ps1",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/window-set-integration/CharacterControl.log",
+      "logSha256": "5a2eac24053bc7181ae10c8c9b1a6cdcf74225c78528f8ffa8d0727f60f23214"
+    },
+    {
+      "command": "tests/Run-GameUiCharacterCompositionTests.ps1",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/window-set-integration/CharacterComposition.log",
+      "logSha256": "3b3c9390ac1ba8c55eb56f5f88e0b1dedd6e713a0cb5ebc5f3300179a5956581"
+    },
+    {
+      "command": "tests/Run-GameUiSceneLayoutHostTests.ps1",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/window-set-integration/SceneLayoutHost.log",
+      "logSha256": "ce6a3eebdc7571d073fd99ae5b81c4281844dc584ad2d87182dc7ab27bc9cc32"
+    },
+    {
+      "command": "tests/Run-GameUiLayoutContractTests.ps1",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/window-set-integration/LayoutContract.log",
+      "logSha256": "73bbd53121dc7e8a9628ecf8fe0f957dd50c7943e80cf6a1a7bc8c3c50eaa31c"
+    },
+    {
+      "command": "tests/Run-GameUiWindowSetTests.ps1 -PackagePath E:/workspace/mir3-ui-work/character-surfaces-zl-20261108-v1/OfficialV1.Zl -EvidenceDirectory docs/design/assets/official-ingame-ui/acceptance/window-set-integration/glyph-probes-final",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/window-set-integration/window-set.log",
+      "logSha256": "8736a5e58641b49e51a9b6a9a228f4f3242f090c1f7c0cead8ac904191979b93"
+    },
+    {
+      "command": "git -c core.whitespace=cr-at-eol diff --check",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/window-set-integration/diff-check.log",
+      "logSha256": "79d6e102d3342502fc80ca42def8ff97f6642ce33398d5219dc2f3e921c23f6f"
+    }
+  ],
+  "evidenceHashes": [
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/window-set-integration/before.json",
+      "sha256": "dcd30e176f64b20b218288bd4ed6fd76b48d6288b9f0a7eb897a42d50366f163"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/window-set-integration/README.md",
+      "sha256": "04c271054e2eb6c4f979d1a847d927420f821deb387133811d6368c17dbf7180"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/window-set-integration/character-bindings.final.generated.json",
+      "sha256": "b511324bf0cef0134a4785186b6a7557e74fd9f21d0a49624d2a09b4744935c9"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/window-set-integration/glyph-probes-final/legacy-glyph-suppressed.png",
+      "sha256": "5a739a1abe0ce2f11461d1c429810d6256b07eabeb58321d7f9ba821f84b2cab"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/window-set-integration/glyph-probes-final/legacy-glyph-restored.png",
+      "sha256": "0a53fff02c059efc67e4808ccfbd669c8560f8a164c6da2f2f6970301adcf2ff"
+    }
+  ],
+  "results": {
+    "priorSourceHashesVerified": 129,
+    "windowSetAssertions": 6472,
+    "actualGameSceneMethodsExercised": true,
+    "realWorldConstructed": false,
+    "equipmentPageAssertions": 17248,
+    "attributeAssertions": 19302,
+    "controlAssertions": 4584,
+    "compositionAssertions": 2115,
+    "sceneLayoutHostAssertions": 1464,
+    "realControlLayouts": 145,
+    "layoutNodes": 234,
+    "interactiveNodes": 109,
+    "generatedContractFiles": 12,
+    "pythonTestMethods": 5,
+    "glyphGpuProbes": 2,
+    "packageFrames": 88,
+    "runtimeReady": false,
+    "startupCallerAdded": false
+  },
+  "limitations": [
+    "Candidate four-window integration only. HUD/chat unified transaction and production startup remain pending. Legacy remains default and all five G0 gates remain open.",
+    "GameScene tests bypass world construction. Native HWND/draft checks and glyph GPU probes do not constitute live login, real IME, full-scene art, device Reset, network, performance, release or rollback acceptance.",
+    "Verified package is borrowed; caller must retain it until complete detachment, including retry after rollback errors.",
+    "No NPC card, secondary popup or display-settings style changes. Existing 1024x768 screenshots are reused."
+  ]
+}

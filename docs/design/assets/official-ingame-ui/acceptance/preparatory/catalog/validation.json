@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "kind": "ui07-independent-catalog-preparation-verification",
+  "checkedAt": "2026-11-07T09:47:27.244Z",
+  "releaseAccepted": false,
+  "productionBindingAllowed": false,
+  "taskAccepted": false,
+  "taskId": "UI-07",
+  "sourceChanges": [],
+  "sourceHashes": [
+    {
+      "path": "build/game-ui/Prepare-UiCatalog.py",
+      "sha256": "aa4978fc3034581b97274b749d839bb8d260f4aa04d98870590110d155c05bc2"
+    },
+    {
+      "path": "tests/game-ui/test_ui_catalog.py",
+      "sha256": "fa729845e6c6e504dae029ffee01f6f48a0a1f630d028d967cd3b1985474d8c2"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiCatalogFixture.cs",
+      "sha256": "5817a1c5eba37dcfa80937d5e10c4d07f125ddc05c24b052d5a79a0259df9663"
+    },
+    {
+      "path": "ImageManager/Mir3Library.cs",
+      "sha256": "9b08f5c8344364db9275fb608086bf112404c72f16df4cd245e8a49ca4c61d67"
+    }
+  ],
+  "commands": [
+    {
+      "command": "python tests/game-ui/test_ui_catalog.py",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/catalog/catalog-tests.log",
+      "logSha256": "71aa6aa684dfbcfd946c224347be40e78855a3f5f4de13747aa1160c424d7b90"
+    }
+  ],
+  "result": {
+    "unittestMethodsPassed": 7,
+    "compiledCatalogChecksPassed": 51,
+    "manifestNegativeCasesRejected": 34,
+    "binaryAndAlphaNegativeCasesRejected": 12,
+    "invalidJsonCasesRejected": 5,
+    "byteIdenticalRepeatedBundle": true,
+    "realMir3LibraryWriterUsed": true,
+    "generatedCSharpCompiledAndExecuted": true,
+    "publicationFailureCleanupVerified": true,
+    "existingOutputPreserved": true,
+    "cliRejectionVerified": true,
+    "explicitBinaryMaskAndRepeatedStateVerified": true
+  },
+  "limitations": [
+    "Synthetic package and coordinates only; no official assets approved or bound.",
+    "Does not crop/composite/encode official assets or generate the final OfficialUiCatalog.cs.",
+    "Does not verify current MirLibrary GPU upload, official alpha provenance, rendering or game interaction.",
+    "Runtime Build-OfficialUi.ps1 remains gated; UI-05/06/07 and A01/A02 are not accepted.",
+    "Generated binding descriptions do not wire game refresh events; real source/layout bindings remain pending."
+  ]
+}

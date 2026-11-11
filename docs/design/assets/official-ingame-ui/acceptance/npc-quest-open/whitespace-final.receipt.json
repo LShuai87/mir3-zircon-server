@@ -1,0 +1,8 @@
+{
+  "command": [
+    "python",
+    "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/check-whitespace.py"
+  ],
+  "exitCode": 0,
+  "log": "E:/workspace/mir3-zircon-server/docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/whitespace-final.log"
+}

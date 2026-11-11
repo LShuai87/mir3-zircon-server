@@ -1,0 +1,11 @@
+library|absolutePath|bytes|sha256
+Interface|E:\workspace\Debug\Client\Data\Interface.Zl|136888|2539dbe103e2ab21e39b773edd63e335c28eaafe782cb9a82db62b082491f356
+GameInter|E:\workspace\Debug\Client\Data\GameInter.Zl|14883533|6bf0ca6600ca338a74945a1c73fe522b63eaed97422dea43dcc87d95ce805991
+Equip|E:\workspace\Debug\Client\Data\Equip.Zl|3570677|c1ed63c2f5866e1e318af5c643d9f1984609d829bce73e87d40d69689e8a5957
+ProgUse|E:\workspace\Debug\Client\Data\ProgUse.Zl|10778857|3aa4cbb9bacf61d2c182451d88156160f07e49bb8cf5f29727c2caaf0763a53f
+Inventory|E:\workspace\Debug\Client\Data\Inventory.Zl|2785552|9366b634bd312197ae37aba1f5d8b59be6bef6f83050105302898d590f67fc66
+StoreItems|E:\workspace\Debug\Client\Data\StoreItems.Zl|1010286|4bee8a36f5023d5327b0f2a96f0ad38eef877ecbb8883835b222530736e366fb
+MagicIcon|E:\workspace\Debug\Client\Data\MIcon.Zl|137722|7bbe0337e1fc7a56a481a48ef7165da2ab048db43afb37bbb9962cdd7813d665
+CBIcon|E:\workspace\Debug\Client\Data\CBIcons.Zl|60153|cb8b329b204fabcc91781e559e0e65b318870eb683dadef655a39c5b162bf06f
+M_Hum|E:\workspace\Debug\Client\Data\M-Hum.Zl|43739592|6e2b38a51940a737fa0d82029d38a436942364701fbb2ac8ca0654420dd9783d
+M_Hair|E:\workspace\Debug\Client\Data\M-Hair.Zl|4095376|896603a904d5636bae37cd5ced079412c17a57678b681bd94be82aa31fa9708a

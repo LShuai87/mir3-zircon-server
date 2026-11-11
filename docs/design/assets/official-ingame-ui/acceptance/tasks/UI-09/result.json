@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "taskId": "UI-09",
+  "title": "实现可选窗口皮肤",
+  "status": "done",
+  "checkedAtLocalDate": "2026-11-07",
+  "validationRunId": "official-ui-foundations-20261107-2cc5f7ece409",
+  "baselineCommit": "fc581d5cf96a81b49c557a15675a7386efac8825",
+  "implementationCommit": null,
+  "implementationInWorkingTree": true,
+  "sourcePlanSha256": "f8c0a002b3821fabb54993792c354c4eff35eec51f9cfdc418535017c13069e9",
+  "accomplishments": [
+    "实现可空固定/九宫格皮肤、客户区互算、标题拖动、关闭/ESC、命中与缓存失效。",
+    "60 项皮肤检查及 14 项实际 D3D9 像素检查通过，包括半透明、改尺寸和纹理重建。"
+  ],
+  "evidence": [
+    "docs/design/assets/official-ingame-ui/acceptance/foundations/verification.json"
+  ],
+  "commandIds": [
+    "build-debug",
+    "build-release",
+    "controls-layout"
+  ],
+  "unresolved": [],
+  "acceptanceCases": [
+    {
+      "caseId": "A02",
+      "taskScope": "pass",
+      "fullGameResult": "not_run"
+    },
+    {
+      "caseId": "A14",
+      "taskScope": "pass",
+      "fullGameResult": "not_run"
+    },
+    {
+      "caseId": "A17",
+      "taskScope": "pass",
+      "fullGameResult": "not_run"
+    }
+  ],
+  "releaseAccepted": false
+}

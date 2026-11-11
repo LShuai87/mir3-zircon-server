@@ -1,0 +1,26 @@
+[
+  {
+    "path": "Client/Envir/GameUiStartupSession.cs",
+    "sha256": "d044bd514f839ab2656d433ef0e39f4f84770916803d5fc566e929de9667c40b"
+  },
+  {
+    "path": "Client/Program.cs",
+    "sha256": "a62866c951f6dfc6967377d1146941a79a07003e116c0d67df7d75640db73312"
+  },
+  {
+    "path": "tests/game-ui/OfficialUiStartupTests.cs",
+    "sha256": "cb424875b50735b673ff889c3952526a733a3810bb4c6ee3baba3c5fd73deefc"
+  },
+  {
+    "path": "tests/Run-GameUiStartupTests.ps1",
+    "sha256": "f4d54c90668917a65580162fc3503d02b014ce40072e4127482b0bb8d9bd9721"
+  },
+  {
+    "path": "tests/game-ui/OfficialUiFullSceneTests.cs",
+    "sha256": "a4b607babe3891f061e63594df316a639dc1598aaa85a70d582200ae8489eefc"
+  },
+  {
+    "path": "tests/Run-GameUiFullSceneTests.ps1",
+    "sha256": "0265097ae7ff97fdf326a6cfc1755d85cc19b6b6317cdf1aedc41c8077863b71"
+  }
+]

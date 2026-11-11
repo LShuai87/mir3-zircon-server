@@ -1,0 +1,10 @@
+{
+  "command": [
+    "pwsh",
+    "-NoProfile",
+    "-File",
+    "tests/Run-GameUiMiniMapLayoutTests.ps1"
+  ],
+  "exitCode": 1,
+  "log": "E:/workspace/mir3-zircon-server/docs/design/assets/official-ingame-ui/acceptance/window-title-bounds/before-fix-runtime.log"
+}

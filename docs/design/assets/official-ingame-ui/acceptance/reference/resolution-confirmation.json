@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "kind": "user-provided-resolution-confirmation",
+  "recordedOn": "2026-11-07",
+  "userStatement": "这是设置的分辨率 截图分辨率 1024*768",
+  "configuredGameResolution": {
+    "width": 1024,
+    "height": 768,
+    "status": "user_confirmed_and_visible_in_settings"
+  },
+  "windowMode": {
+    "value": "windowed",
+    "evidence": "截图中窗口模式的开启选项已勾选；未独立测量操作系统窗口。"
+  },
+  "imageRelativePath": "captures/07-resolution-settings-user.png",
+  "imageSha256": "46170d8eeafc4ae345541e6793227a76ebdbeac59588e1bace978d41f7c0e559",
+  "imagePixelSize": {
+    "width": 1280,
+    "height": 959
+  },
+  "verificationBoundary": "游戏设置分辨率与附件像素尺寸分别记录。附件为1280×959；不据此推断缩放原因、Windows DPI或历史截图客户区精确边界。用户确认此前截图使用1024×768，属于用户提供的设置说明，不是独立窗口测量。",
+  "scopeBoundary": "仅补充参考元数据，设置页面不换肤，不要求重新截图或修改显示设置。",
+  "dpiPercent": null,
+  "requiredManualCaptures": []
+}

@@ -24,6 +24,8 @@ namespace Client.Envir
 
 
         [ConfigSection("Graphics")]
+        // Read once at startup; changing this setting requires a restart.
+        public static string GameUiStyle { get; set; } = "OfficialV1";
         public static bool FullScreen { get; set; } = true;
         public static bool VSync { get; set; }
         public static bool LimitFPS { get; set; }

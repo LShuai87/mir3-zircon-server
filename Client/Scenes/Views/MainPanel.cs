@@ -9,13 +9,19 @@ using Library;
 //Cleaned
 namespace Client.Scenes.Views
 {
-    public sealed class MainPanel : DXImageControl
+    public sealed partial class MainPanel : DXImageControl
     {
         #region Properties
         
         public DXImageControl ExperienceBar, NewMailIcon, CompletedQuestIcon, AvailableQuestIcon;
 
         public DXLabel ClassLabel, LevelLabel, ACLabel, MRLabel, DCLabel, MCLabel, SCLabel, AccuracyLabel, AgilityLabel, HealthLabel, ManaLabel, ExperienceLabel, AttackModeLabel, PetModeLabel;
+
+        private DXControl HealthBar, ManaBar;
+        private DXImageControl OtherBar;
+        private DXButton CharacterButton, InventoryButton, SpellButton, QuestButton, MailButton, BeltButton, GroupButton, GuildButton, ConfigButton, CashShopButton;
+        private DXLabel MCLabelLabel, SCLabelLabel;
+        private readonly System.Collections.Generic.List<DXLabel> gameUiLegacyCaptions = new System.Collections.Generic.List<DXLabel>();
 
         #endregion
 
@@ -33,6 +39,7 @@ namespace Client.Scenes.Views
             ExperienceBar.Location = new Point((Size.Width - ExperienceBar.Size.Width) / 2 + 1, 2 + 1);
             ExperienceBar.BeforeDraw += (o, e) =>
             {
+                if (GameUiHudLayout != null) return;
                 if (ExperienceBar.Library == null) return;
 
                 if (MapObject.User.Level >= Globals.ExperienceList.Count) return;
@@ -59,7 +66,7 @@ namespace Client.Scenes.Views
                 PresentTexture(image.Image, this, new Rectangle(ExperienceBar.DisplayArea.X + x, ExperienceBar.DisplayArea.Y + y - 1, (int) (image.Width * percent), image.Height), Color.White, ExperienceBar);
             };
 
-            DXControl HealthBar = new DXControl
+            HealthBar = new DXControl
             {
                 Parent = this,
                 Location = new Point(35, 22),
@@ -67,6 +74,7 @@ namespace Client.Scenes.Views
             };
             HealthBar.BeforeDraw += (o, e) =>
             {
+                if (GameUiHudLayout != null) return;
                 if (ExperienceBar.Library == null) return;
 
                 if (MapObject.User.Stats[Stat.Health] == 0) return;
@@ -81,7 +89,7 @@ namespace Client.Scenes.Views
 
                 PresentTexture(image.Image, this, new Rectangle(HealthBar.DisplayArea.X, HealthBar.DisplayArea.Y, (int) (image.Width*percent), image.Height), Color.White, HealthBar);
             };
-            DXControl ManaBar = new DXControl
+            ManaBar = new DXControl
             {
                 Parent = this,
                 Location = new Point(35, 36),
@@ -89,6 +97,7 @@ namespace Client.Scenes.Views
             };
             ManaBar.BeforeDraw += (o, e) =>
             {
+                if (GameUiHudLayout != null) return;
                 if (ExperienceBar.Library == null) return;
 
                 if (MapObject.User.Stats[Stat.Mana] == 0) return;
@@ -103,7 +112,7 @@ namespace Client.Scenes.Views
 
                 PresentTexture(image.Image, this, new Rectangle(ManaBar.DisplayArea.X, ManaBar.DisplayArea.Y, (int) (image.Width * percent), image.Height), Color.White, ManaBar);
             };
-            DXImageControl OtherBar =  new DXImageControl
+            OtherBar =  new DXImageControl
             {
                 Parent = this,
                 Location = new Point(35, 50),
@@ -112,7 +121,7 @@ namespace Client.Scenes.Views
                 Visible = false,
             };
 
-            DXButton CharacterButton = new DXButton
+            CharacterButton = new DXButton
             {
                 LibraryFile = LibraryFile.GameInter,
                 Index = 82,
@@ -125,7 +134,7 @@ namespace Client.Scenes.Views
                 GameScene.Game.CharacterBox.Visible = !GameScene.Game.CharacterBox.Visible;
             };
 
-            DXButton InventoryButton = new DXButton
+            InventoryButton = new DXButton
             {
                 LibraryFile = LibraryFile.GameInter,
                 Index = 87,
@@ -136,7 +145,7 @@ namespace Client.Scenes.Views
             };
             InventoryButton.MouseClick += (o, e) => GameScene.Game.InventoryBox.Visible = !GameScene.Game.InventoryBox.Visible;
 
-            DXButton SpellButton = new DXButton
+            SpellButton = new DXButton
             {
                 LibraryFile = LibraryFile.GameInter,
                 Index = 92,
@@ -146,7 +155,7 @@ namespace Client.Scenes.Views
             };
             SpellButton.MouseClick += (o, e) => GameScene.Game.MagicBox.Visible = !GameScene.Game.MagicBox.Visible;
 
-            DXButton QuestButton = new DXButton
+            QuestButton = new DXButton
             {
                 LibraryFile = LibraryFile.GameInter,
                 Index = 112,
@@ -156,7 +165,7 @@ namespace Client.Scenes.Views
             };
             QuestButton.MouseClick += (o, e) => GameScene.Game.QuestBox.Visible = !GameScene.Game.QuestBox.Visible;
 
-            DXButton MailButton = new DXButton
+            MailButton = new DXButton
             {
                 LibraryFile = LibraryFile.GameInter,
                 Index = 97,
@@ -165,6 +174,17 @@ namespace Client.Scenes.Views
                 Hint = "邮件 [,]"
             };
             MailButton.MouseClick += (o, e) => GameScene.Game.MailBox.Visible = !GameScene.Game.MailBox.Visible;
+
+            // Official command wheel exposes guild; Legacy retains its separate mail action.
+            GuildButton = new DXButton
+            {
+                Parent = this,
+                FixedSize = true,
+                Size = new Size(54, 32),
+                Visible = false,
+                Hint = "行会 [G]"
+            };
+            GuildButton.MouseClick += (o, e) => GameScene.Game.GuildBox.Visible = !GameScene.Game.GuildBox.Visible;
 
             NewMailIcon = new DXImageControl
             {
@@ -185,13 +205,7 @@ namespace Client.Scenes.Views
                 Location = new Point(2, 2),
                 Visible = false,
             };
-            AvailableQuestIcon.VisibleChanged += (o, e) =>
-            {
-                if (AvailableQuestIcon.Visible)
-                    CompletedQuestIcon.Location = new Point(2, QuestButton.Size.Height - CompletedQuestIcon.Size.Height);
-                else
-                CompletedQuestIcon.Location = new Point(2, 2);
-            };
+            AvailableQuestIcon.VisibleChanged += (o, e) => RefreshHudAlertLocations();
 
             CompletedQuestIcon = new DXImageControl
             {
@@ -203,7 +217,7 @@ namespace Client.Scenes.Views
                 Visible = false,
             };
 
-            DXButton BeltButton = new DXButton
+            BeltButton = new DXButton
             {
                 LibraryFile = LibraryFile.GameInter,
                 Index = 107,
@@ -213,7 +227,7 @@ namespace Client.Scenes.Views
             };
             BeltButton.MouseClick += (o, e) => GameScene.Game.BeltBox.Visible = !GameScene.Game.BeltBox.Visible;
 
-            DXButton GroupButton = new DXButton
+            GroupButton = new DXButton
             {
                 LibraryFile = LibraryFile.GameInter,
                 Index = 102,
@@ -223,7 +237,7 @@ namespace Client.Scenes.Views
             };
             GroupButton.MouseClick += (o,e) => GameScene.Game.GroupBox.Visible = !GameScene.Game.GroupBox.Visible;
 
-            DXButton ConfigButton = new DXButton
+            ConfigButton = new DXButton
             {
                 LibraryFile = LibraryFile.GameInter,
                 Index = 117,
@@ -233,7 +247,7 @@ namespace Client.Scenes.Views
             };
             ConfigButton.MouseClick += (o, e) => GameScene.Game.ConfigBox.Visible = !GameScene.Game.ConfigBox.Visible;
 
-            DXButton CashShopButton = new DXButton
+            CashShopButton = new DXButton
             {
                 LibraryFile = LibraryFile.GameInter,
                 Index = 122,
@@ -259,6 +273,7 @@ namespace Client.Scenes.Views
                 Text = "职业",
                 Hint = "职业",
             };
+            gameUiLegacyCaptions.Add(label);
             label.Location = new Point(300 - label.Size.Width, 20);
 
             label = new DXLabel
@@ -268,6 +283,7 @@ namespace Client.Scenes.Views
                 Text = "等级",
                 Hint = "等级",
             };
+            gameUiLegacyCaptions.Add(label);
             label.Location = new Point(300 - label.Size.Width, 40);
 
             label = new DXLabel
@@ -276,6 +292,7 @@ namespace Client.Scenes.Views
                 Font = new Font(Config.FontName, CEnvir.FontSize(9F), FontStyle.Bold),
                 Text = "防御",
             };
+            gameUiLegacyCaptions.Add(label);
             label.Location = new Point(385 - label.Size.Width, 20);
 
             label = new DXLabel
@@ -284,6 +301,7 @@ namespace Client.Scenes.Views
                 Font = new Font(Config.FontName, CEnvir.FontSize(9F), FontStyle.Bold),
                 Text = "魔防",
             };
+            gameUiLegacyCaptions.Add(label);
             label.Location = new Point(470 - label.Size.Width, 20);
 
             label = new DXLabel
@@ -292,22 +310,25 @@ namespace Client.Scenes.Views
                 Font = new Font(Config.FontName, CEnvir.FontSize(9F), FontStyle.Bold),
                 Text = "攻击",
             };
+            gameUiLegacyCaptions.Add(label);
             label.Location = new Point(385 - label.Size.Width, 40);
 
-            DXLabel MCLabelLabel = new DXLabel
+            MCLabelLabel = new DXLabel
             {
                 Parent = this,
                 Font = new Font(Config.FontName, CEnvir.FontSize(9F), FontStyle.Bold),
                 Text = "魔法",
             };
+            gameUiLegacyCaptions.Add(MCLabelLabel);
             MCLabelLabel.Location = new Point(470 - MCLabelLabel.Size.Width, 40);
 
-            DXLabel SCLabelLabel = new DXLabel
+            SCLabelLabel = new DXLabel
             {
                 Parent = this,
                 Font = new Font(Config.FontName, CEnvir.FontSize(9F), FontStyle.Bold),
                 Text = "道术",
             };
+            gameUiLegacyCaptions.Add(SCLabelLabel);
             SCLabelLabel.Location = new Point(470 - SCLabelLabel.Size.Width, 40);
 
             label = new DXLabel
@@ -317,6 +338,7 @@ namespace Client.Scenes.Views
                 Text = "准确",
                 Hint = "准确",
             };
+            gameUiLegacyCaptions.Add(label);
             label.Location = new Point(567 - label.Size.Width, 20);
 
             label = new DXLabel
@@ -326,6 +348,7 @@ namespace Client.Scenes.Views
                 Text = "敏捷",
                 Hint = "敏捷",
             };
+            gameUiLegacyCaptions.Add(label);
             label.Location = new Point(567 - label.Size.Width, 40);
 
             ClassLabel = new DXLabel
@@ -387,7 +410,7 @@ namespace Client.Scenes.Views
                 Size = new Size(60, 16),
                 DrawFormat = TextFormatFlags.VerticalCenter | TextFormatFlags.HorizontalCenter
             };
-            MCLabel.VisibleChanged += (o, e) => MCLabelLabel.Visible = MCLabel.Visible;
+            MCLabel.VisibleChanged += (o, e) => { if (GameUiHudLayout == null) MCLabelLabel.Visible = MCLabel.Visible; };
 
             SCLabel = new DXLabel
             {
@@ -398,7 +421,7 @@ namespace Client.Scenes.Views
                 Size = new Size(60, 16),
                 DrawFormat = TextFormatFlags.VerticalCenter | TextFormatFlags.HorizontalCenter
             };
-            SCLabel.VisibleChanged += (o, e) => SCLabelLabel.Visible = SCLabel.Visible;
+            SCLabel.VisibleChanged += (o, e) => { if (GameUiHudLayout == null) SCLabelLabel.Visible = SCLabel.Visible; };
 
             AccuracyLabel = new DXLabel
             {
@@ -431,6 +454,7 @@ namespace Client.Scenes.Views
             };
             HealthLabel.SizeChanged += (o, e) =>
             {
+                if (GameUiHudLayout != null) return;
                 HealthLabel.Location = new Point(HealthBar.Location.X + (HealthBar.Size.Width - HealthLabel.Size.Width) / 2, HealthBar.Location.Y + (HealthBar.Size.Height - HealthLabel.Size.Height) / 2);
             };
 
@@ -444,6 +468,7 @@ namespace Client.Scenes.Views
             };
             ManaLabel.SizeChanged += (o, e) =>
             {
+                if (GameUiHudLayout != null) return;
                 ManaLabel.Location = new Point(ManaBar.Location.X + (ManaBar.Size.Width - ManaLabel.Size.Width) / 2, ManaBar.Location.Y + (ManaBar.Size.Height - ManaLabel.Size.Height) / 2);
             };
 
@@ -458,6 +483,7 @@ namespace Client.Scenes.Views
             };
             ExperienceLabel.SizeChanged += (o, e) =>
             {
+                if (GameUiHudLayout != null) return;
                 ExperienceLabel.Location = new Point(ExperienceBar.Location.X + (ExperienceBar.Size.Width - ExperienceLabel.Size.Width) / 2, ExperienceBar.Location.Y + (ExperienceBar.Size.Height - ExperienceLabel.Size.Height) / 2);
             };
 
@@ -471,6 +497,7 @@ namespace Client.Scenes.Views
             };
             AttackModeLabel.SizeChanged += (o, e) =>
             {
+                if (GameUiHudLayout != null) return;
                 AttackModeLabel.Location = new Point(OtherBar.Location.X, OtherBar.Location.Y + (OtherBar.Size.Height - AttackModeLabel.Size.Height) / 2 - 2);
             }; 
 
@@ -484,6 +511,7 @@ namespace Client.Scenes.Views
             };
             PetModeLabel.SizeChanged += (o, e) =>
             {
+                if (GameUiHudLayout != null) return;
                 PetModeLabel.Location = new Point(OtherBar.Location.X + OtherBar.Size.Width - PetModeLabel.Size.Width, OtherBar.Location.Y + (OtherBar.Size.Height - PetModeLabel.Size.Height)/2 - 2);
             };
 
@@ -493,6 +521,7 @@ namespace Client.Scenes.Views
 
         protected override void Dispose(bool disposing)
         {
+            if (disposing) DisableGameUiHud();
             base.Dispose(disposing);
 
             if (disposing)

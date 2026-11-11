@@ -1,0 +1,563 @@
+{
+  "schemaVersion": 1,
+  "kind": "official-ui-composition-recipe",
+  "productionBindingAllowed": false,
+  "selectionSha256": "50f476b613f87b52695405c651ec198fcb8d01d7ed7cde9e74db89e744adf685",
+  "assets": [
+    {
+      "role": "character",
+      "sourceRole": "character",
+      "alphaPolicy": "edge-connected-exact-black",
+      "clearRects": [],
+      "transform": {
+        "type": "texture-cover",
+        "sourcePatch": [
+          24,
+          452,
+          56,
+          72
+        ],
+        "targets": [
+          [
+            8,
+            90,
+            396,
+            461
+          ]
+        ]
+      },
+      "button": false
+    },
+    {
+      "role": "inventory",
+      "sourceRole": "inventory",
+      "alphaPolicy": "edge-connected-exact-black",
+      "clearRects": [],
+      "transform": {
+        "type": "inventory-grid",
+        "sourceArea": [
+          15,
+          49,
+          246,
+          328
+        ],
+        "sourceCell": [
+          15,
+          49,
+          41,
+          41
+        ],
+        "columns": 7,
+        "rows": 7,
+        "cellSize": 36,
+        "step": 35
+      },
+      "button": false
+    },
+    {
+      "role": "hud-orb-shell",
+      "sourceRole": "hud-orb-shell",
+      "alphaPolicy": "edge-connected-exact-black",
+      "clearRects": [],
+      "transform": {
+        "type": "identity"
+      },
+      "button": false
+    },
+    {
+      "role": "quickbar-base",
+      "sourceRole": "quickbar-base",
+      "alphaPolicy": "edge-connected-exact-black",
+      "clearRects": [],
+      "transform": {
+        "type": "quickbar-grid",
+        "sourceArea": [
+          60,
+          3,
+          410,
+          40
+        ],
+        "sourceCell": [
+          60,
+          3,
+          41,
+          40
+        ],
+        "columns": 10,
+        "cellSize": 36,
+        "step": 35
+      },
+      "button": false
+    },
+    {
+      "role": "minimap-frame",
+      "sourceRole": "minimap-frame",
+      "alphaPolicy": "edge-connected-exact-black",
+      "clearRects": [
+        [
+          11,
+          21,
+          150,
+          152
+        ]
+      ],
+      "transform": {
+        "type": "identity"
+      },
+      "button": false
+    },
+    {
+      "role": "chat-speaker-icon",
+      "sourceRole": "chat-speaker-icon",
+      "alphaPolicy": "edge-connected-exact-black",
+      "clearRects": [],
+      "transform": {
+        "type": "identity"
+      },
+      "button": true
+    },
+    {
+      "role": "chat-two-person-icon",
+      "sourceRole": "chat-two-person-icon",
+      "alphaPolicy": "edge-connected-exact-black",
+      "clearRects": [],
+      "transform": {
+        "type": "identity"
+      },
+      "button": true
+    },
+    {
+      "role": "chat-person-icon",
+      "sourceRole": "chat-person-icon",
+      "alphaPolicy": "edge-connected-exact-black",
+      "clearRects": [],
+      "transform": {
+        "type": "identity"
+      },
+      "button": true
+    },
+    {
+      "role": "chat-group-icon",
+      "sourceRole": "chat-group-icon",
+      "alphaPolicy": "edge-connected-exact-black",
+      "clearRects": [],
+      "transform": {
+        "type": "identity"
+      },
+      "button": true
+    },
+    {
+      "role": "chat-flag-icon",
+      "sourceRole": "chat-flag-icon",
+      "alphaPolicy": "edge-connected-exact-black",
+      "clearRects": [],
+      "transform": {
+        "type": "identity"
+      },
+      "button": true
+    },
+    {
+      "role": "minimap-collapse-button",
+      "sourceRole": "minimap-collapse-button",
+      "alphaPolicy": "edge-connected-exact-black",
+      "clearRects": [],
+      "transform": {
+        "type": "identity"
+      },
+      "button": true
+    },
+    {
+      "role": "minimap-zoom-in-button",
+      "sourceRole": "minimap-zoom-in-button",
+      "alphaPolicy": "edge-connected-exact-black",
+      "clearRects": [],
+      "transform": {
+        "type": "identity"
+      },
+      "button": true
+    },
+    {
+      "role": "minimap-mountain-button",
+      "sourceRole": "minimap-mountain-button",
+      "alphaPolicy": "edge-connected-exact-black",
+      "clearRects": [],
+      "transform": {
+        "type": "identity"
+      },
+      "button": true
+    },
+    {
+      "role": "hud-shop-icon",
+      "sourceRole": "hud-shop-icon",
+      "alphaPolicy": "edge-connected-exact-black",
+      "clearRects": [],
+      "transform": {
+        "type": "identity"
+      },
+      "button": true
+    },
+    {
+      "role": "hud-command-center",
+      "sourceRole": "hud-command-center",
+      "alphaPolicy": "edge-connected-exact-black",
+      "clearRects": [],
+      "transform": {
+        "type": "identity"
+      },
+      "button": true
+    },
+    {
+      "role": "hud-command-top",
+      "sourceRole": "hud-command-top",
+      "alphaPolicy": "edge-connected-exact-black",
+      "clearRects": [],
+      "transform": {
+        "type": "identity"
+      },
+      "button": true
+    },
+    {
+      "role": "hud-command-upper-left",
+      "sourceRole": "hud-command-upper-left",
+      "alphaPolicy": "edge-connected-exact-black",
+      "clearRects": [],
+      "transform": {
+        "type": "identity"
+      },
+      "button": true
+    },
+    {
+      "role": "hud-command-upper-right",
+      "sourceRole": "hud-command-upper-right",
+      "alphaPolicy": "edge-connected-exact-black",
+      "clearRects": [],
+      "transform": {
+        "type": "identity"
+      },
+      "button": true
+    },
+    {
+      "role": "hud-command-lower-left",
+      "sourceRole": "hud-command-lower-left",
+      "alphaPolicy": "edge-connected-exact-black",
+      "clearRects": [],
+      "transform": {
+        "type": "identity"
+      },
+      "button": true
+    },
+    {
+      "role": "hud-command-lower-right",
+      "sourceRole": "hud-command-lower-right",
+      "alphaPolicy": "edge-connected-exact-black",
+      "clearRects": [],
+      "transform": {
+        "type": "identity"
+      },
+      "button": true
+    },
+    {
+      "role": "hud-command-bottom",
+      "sourceRole": "hud-command-bottom",
+      "alphaPolicy": "edge-connected-exact-black",
+      "clearRects": [],
+      "transform": {
+        "type": "identity"
+      },
+      "button": true
+    },
+    {
+      "role": "hud-horse-icon",
+      "sourceRole": "hud-horse-icon",
+      "alphaPolicy": "edge-connected-exact-black",
+      "clearRects": [],
+      "transform": {
+        "type": "identity"
+      },
+      "button": true
+    },
+    {
+      "role": "hud-handshake-icon",
+      "sourceRole": "hud-handshake-icon",
+      "alphaPolicy": "edge-connected-exact-black",
+      "clearRects": [],
+      "transform": {
+        "type": "identity"
+      },
+      "button": true
+    },
+    {
+      "role": "hud-exit-icon",
+      "sourceRole": "hud-exit-icon",
+      "alphaPolicy": "edge-connected-exact-black",
+      "clearRects": [],
+      "transform": {
+        "type": "identity"
+      },
+      "button": true
+    },
+    {
+      "role": "bottom-segmented-frame",
+      "sourceRole": "bottom-segmented-frame",
+      "alphaPolicy": "edge-connected-exact-black",
+      "clearRects": [],
+      "transform": {
+        "type": "identity"
+      },
+      "button": false
+    },
+    {
+      "role": "hud-hp-fill",
+      "sourceRole": "hud-hp-fill",
+      "alphaPolicy": "edge-connected-exact-black",
+      "clearRects": [],
+      "transform": {
+        "type": "identity"
+      },
+      "button": false
+    },
+    {
+      "role": "hud-mp-fill",
+      "sourceRole": "hud-mp-fill",
+      "alphaPolicy": "edge-connected-exact-black",
+      "clearRects": [],
+      "transform": {
+        "type": "identity"
+      },
+      "button": false
+    },
+    {
+      "role": "bottom-segmented-fill",
+      "sourceRole": "bottom-segmented-fill",
+      "alphaPolicy": "edge-connected-exact-black",
+      "clearRects": [],
+      "transform": {
+        "type": "identity"
+      },
+      "button": false
+    },
+    {
+      "role": "character-main-background",
+      "sourceRole": "character",
+      "alphaPolicy": "edge-connected-exact-black",
+      "clearRects": [],
+      "transform": {
+        "type": "crop",
+        "sourceArea": [
+          0,
+          64,
+          412,
+          498
+        ]
+      },
+      "button": false
+    },
+    {
+      "role": "hud-command-frame",
+      "sourceRole": "hud-command-shell",
+      "alphaPolicy": "edge-connected-exact-black",
+      "clearRects": [],
+      "transform": {
+        "type": "canvas",
+        "size": [
+          225,
+          202
+        ],
+        "origin": [
+          0,
+          27
+        ]
+      },
+      "button": false
+    },
+    {
+      "role": "npc-shop",
+      "sourceRole": "npc-shop",
+      "alphaPolicy": "edge-connected-exact-black",
+      "clearRects": [],
+      "transform": {
+        "type": "identity"
+      },
+      "button": false
+    },
+    {
+      "role": "character-companion",
+      "sourceRole": "character-companion",
+      "alphaPolicy": "edge-connected-exact-black",
+      "clearRects": [],
+      "transform": {
+        "type": "identity"
+      },
+      "button": false
+    },
+    {
+      "role": "character-companion-button",
+      "sourceRole": "character-companion-button",
+      "alphaPolicy": "edge-connected-exact-black",
+      "clearRects": [],
+      "transform": {
+        "type": "panel-resize",
+        "size": [
+          56,
+          22
+        ],
+        "sliceInsets": [
+          4,
+          4,
+          4,
+          4
+        ],
+        "sampling": "nearest"
+      },
+      "button": true
+    },
+    {
+      "role": "hud-combat-icon",
+      "sourceRole": "hud-combat-icon",
+      "alphaPolicy": "edge-connected-exact-black",
+      "clearRects": [],
+      "transform": {
+        "type": "identity"
+      },
+      "button": true,
+      "nativeStates": {
+        "hover": "hud-combat-icon-hover",
+        "pressed": "hud-combat-icon-pressed",
+        "disabled": "hud-combat-icon-disabled"
+      }
+    },
+    {
+      "role": "hud-potential-icon",
+      "sourceRole": "hud-potential-icon",
+      "alphaPolicy": "edge-connected-exact-black",
+      "clearRects": [],
+      "transform": {
+        "type": "identity"
+      },
+      "button": true,
+      "nativeStates": {
+        "hover": "hud-potential-icon-hover",
+        "pressed": "hud-potential-icon-pressed",
+        "disabled": "hud-potential-icon-disabled"
+      }
+    }
+  ],
+  "buttonTint": {
+    "hover": [
+      115,
+      100
+    ],
+    "pressed": [
+      75,
+      100
+    ],
+    "disabled": [
+      60,
+      100
+    ]
+  },
+  "compositions": [
+    {
+      "id": "hud-orb",
+      "layers": [
+        {
+          "role": "hud-orb-shell",
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "role": "hud-hp-fill",
+          "offset": [
+            43,
+            75
+          ],
+          "fill": "vertical-bottom"
+        },
+        {
+          "role": "hud-mp-fill",
+          "offset": [
+            96,
+            75
+          ],
+          "fill": "vertical-bottom"
+        }
+      ],
+      "offsetDerivation": "fill source offset minus shell source offset; baked zero offsets in output"
+    }
+  ],
+  "derivedFrames": [
+    {
+      "type": "border-frame",
+      "role": "chat-history-frame",
+      "sourceRole": "bottom-segmented-frame",
+      "size": [
+        574,
+        106
+      ],
+      "sliceInsets": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "horizontalSample": [
+        2,
+        56
+      ]
+    },
+    {
+      "type": "border-frame",
+      "role": "chat-input-frame",
+      "sourceRole": "bottom-segmented-frame",
+      "size": [
+        574,
+        22
+      ],
+      "sliceInsets": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "horizontalSample": [
+        2,
+        56
+      ]
+    },
+    {
+      "type": "crop-frame",
+      "role": "equipment-cell-frame",
+      "sourceRole": "inventory",
+      "sourceArea": [
+        15,
+        49,
+        36,
+        36
+      ]
+    },
+    {
+      "type": "segmented-frame",
+      "role": "hud-experience-track",
+      "sourceRole": "bottom-segmented-frame",
+      "size": [
+        574,
+        8
+      ],
+      "sampling": "nearest",
+      "segments": 10
+    },
+    {
+      "type": "segmented-frame",
+      "role": "hud-experience-fill",
+      "sourceRole": "bottom-segmented-fill",
+      "size": [
+        574,
+        8
+      ],
+      "sampling": "nearest",
+      "segments": 10
+    }
+  ]
+}

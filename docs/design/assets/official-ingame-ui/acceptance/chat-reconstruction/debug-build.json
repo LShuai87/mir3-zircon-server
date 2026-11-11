@@ -1,0 +1,1139 @@
+{
+  "schemaVersion": 1,
+  "documentType": "game-ui-release-manifest",
+  "style": "OfficialV1",
+  "buildId": "gameui-e4e1fa72467d0ee78233cf3de0f3c200f8500fe6f2e593a714a68ff7eed516e9",
+  "client": {
+    "path": "Zircon.exe",
+    "length": 1368064,
+    "sha256": "02775cf7641e2dca6d0411d47185553973ae1870e290bdf41bdd6be3e93ce555"
+  },
+  "package": {
+    "path": "Data\\GameUI\\OfficialV1.Zl",
+    "length": 655052,
+    "sha256": "dd45cbf51d976a69d28269ee0d27a985def1ee1693cab2b509b74ae347a880a4"
+  },
+  "dependencies": [
+    {
+      "path": "D3DCompiler_43.dll",
+      "length": 2106216,
+      "sha256": "2f23182ec6f4889397ac4bf03d62536136c5bdba825c7d2c4ef08c827f3a8a1c"
+    },
+    {
+      "path": "d3dcsx_43.dll",
+      "length": 1868128,
+      "sha256": "b46a44b6fce8f141c9e02798645db2ee0da5c69ea71195e29f83a91a355fa2ca"
+    },
+    {
+      "path": "d3dx10_43.dll",
+      "length": 470880,
+      "sha256": "56fcd13650fd1f075743154e8c48465dd68a236ab8960667d75373139d2631bf"
+    },
+    {
+      "path": "d3dx11_43.dll",
+      "length": 248672,
+      "sha256": "492e960cb3ccfc8c25fc83f7c464ba77c86a20411347a1a9b3e5d3e8c9180a8d"
+    },
+    {
+      "path": "d3dx9_43.dll",
+      "length": 1998168,
+      "sha256": "0b28546be22c71834501f7d7185ede5d79742457331c7ee09efc14490dd64f5f"
+    },
+    {
+      "path": "Library.dll",
+      "length": 368640,
+      "sha256": "557ba4f45f3cb2db8bbbbb2a336289b0d3d535959190f86ec7efc2bfdd0b0c5b"
+    },
+    {
+      "path": "msvcp100.dll",
+      "length": 421200,
+      "sha256": "d769fafa2b3232de9fa7153212ba287f68e745257f1c00fafb511e7a02de7adf"
+    },
+    {
+      "path": "msvcr100.dll",
+      "length": 773968,
+      "sha256": "60c06e0fa4449314da3a0a87c1a9d9577df99226f943637e06f61188e5862efa"
+    },
+    {
+      "path": "SlimDX.dll",
+      "length": 3383808,
+      "sha256": "f23ec20aeaec149ba963d1fb03af3ea1585ccdf1ac207f315361a80ceaadcc05"
+    },
+    {
+      "path": "X3DAudio1_7.dll",
+      "length": 22360,
+      "sha256": "288c701bdedf1d45c63dd0b7d424a752f8819f90feb5088c582f76bc98970ba3"
+    },
+    {
+      "path": "xinput1_3.dll",
+      "length": 81768,
+      "sha256": "8d540d484ea41e374fd0107d55d253f87ded4ce780d515d8fd59bbe8c98970a7"
+    }
+  ],
+  "catalogContractSha256": "9b00111ed3feb46ca48ed905806ea5450b997af9202a45f3b3637247699d5651",
+  "catalog": {
+    "runtimeReady": false,
+    "packageRelativePath": "Data\\GameUI\\OfficialV1.Zl",
+    "packageSha256": "dd45cbf51d976a69d28269ee0d27a985def1ee1693cab2b509b74ae347a880a4",
+    "sourceManifestSha256": "ff87c5736be6d5b3243162d6fda6079a8aa1e6f7bb342ad3fe3c990297b3b57f",
+    "frames": [
+      {
+        "id": "character",
+        "index": 0,
+        "width": 412,
+        "height": 562,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "32483a37f74e10524537e7e975c2d78fe354db1a6e2b9ae9123db8b47d5be324"
+      },
+      {
+        "id": "inventory",
+        "index": 1,
+        "width": 276,
+        "height": 412,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "25c24de6c36b44f59c97bd94dbfe08be99015fc102c61f9f128c0a757f758382"
+      },
+      {
+        "id": "hud-orb-shell",
+        "index": 2,
+        "width": 225,
+        "height": 202,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "1b589d2f85c573c635c1a85ae32447fb4e5014fe4ef2c3aaf7e629140856b9fe"
+      },
+      {
+        "id": "quickbar-base",
+        "index": 3,
+        "width": 459,
+        "height": 44,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "4e3b82892017dbddf87a2aa1ac419a3815c3f0652293feefa5922df1c04fa627"
+      },
+      {
+        "id": "minimap-frame",
+        "index": 4,
+        "width": 166,
+        "height": 198,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "109806c32effbc9c073e022b45750e2f37851d1279f45838c600073a256167a4"
+      },
+      {
+        "id": "chat-speaker-icon",
+        "index": 5,
+        "width": 31,
+        "height": 24,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "056704aae82533f17a91974c523df42c47a285b0c7105c26195a05ae0534524c"
+      },
+      {
+        "id": "chat-speaker-icon-hover",
+        "index": 6,
+        "width": 31,
+        "height": 24,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "c0a31764890765f0ca8801fc628ca5c31879d0a7d7acf89ea8fefb549c16fcd2"
+      },
+      {
+        "id": "chat-speaker-icon-pressed",
+        "index": 7,
+        "width": 31,
+        "height": 24,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "bc43f235b12021d5eb8c9d45f6ae55d87cf6ee940fee09609fcfed8c7a2d416c"
+      },
+      {
+        "id": "chat-speaker-icon-disabled",
+        "index": 8,
+        "width": 31,
+        "height": 24,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "44b91d1d5362dbf4aa95dd937daab8d585881ee3c960f7fe9bdac4cf375772fd"
+      },
+      {
+        "id": "chat-two-person-icon",
+        "index": 9,
+        "width": 31,
+        "height": 24,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "d554e36c1a927ea6ac617528fb4008ac0939e35a2479c1b2bf53df0d5b8eae57"
+      },
+      {
+        "id": "chat-two-person-icon-hover",
+        "index": 10,
+        "width": 31,
+        "height": 24,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "b9c3e2b74ff68a553cf3690ad3cd339653e0af4e068fe2289b6c0f8faa637d7e"
+      },
+      {
+        "id": "chat-two-person-icon-pressed",
+        "index": 11,
+        "width": 31,
+        "height": 24,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "98772385dc5a11b4a7ee458b19de2ae1c2e124f5994c26122c6a842bbf2a6907"
+      },
+      {
+        "id": "chat-two-person-icon-disabled",
+        "index": 12,
+        "width": 31,
+        "height": 24,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "5e85be97d94e0239f6468210a8c269afe5266df9ed451165f9f189d03acbf520"
+      },
+      {
+        "id": "chat-person-icon",
+        "index": 13,
+        "width": 31,
+        "height": 24,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "7c7befb3df9b7d21d3b64a86d4142bf8c7bd2e62a42f79f4b54e7c47d4b91da0"
+      },
+      {
+        "id": "chat-person-icon-hover",
+        "index": 14,
+        "width": 31,
+        "height": 24,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "f9e0bace49f64b6f2730c44d000e0a1511f0d3f2509d13e74ae6aef1befd4ae0"
+      },
+      {
+        "id": "chat-person-icon-pressed",
+        "index": 15,
+        "width": 31,
+        "height": 24,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "a55b4df1ac0e27c3e21264c12010d58d34c8ae7a41b90a68646d438ea8b8bd83"
+      },
+      {
+        "id": "chat-person-icon-disabled",
+        "index": 16,
+        "width": 31,
+        "height": 24,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "01f6a255f428cf5d6b6afd53d842c854235430fd57d723db68c42780a52288f0"
+      },
+      {
+        "id": "chat-group-icon",
+        "index": 17,
+        "width": 31,
+        "height": 24,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "e3168fe1b7428cfc1c05547600dc3b884a7c43221eca7241961fd3eedaac3bb9"
+      },
+      {
+        "id": "chat-group-icon-hover",
+        "index": 18,
+        "width": 31,
+        "height": 24,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "bfdef760a3d34e509ed29292cdcb4f535c5c0491636227259172ed391c71778c"
+      },
+      {
+        "id": "chat-group-icon-pressed",
+        "index": 19,
+        "width": 31,
+        "height": 24,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "938581e8a6bffc9e380ccaf2f1a30697d4000190410196e4a8fd186f13aa90da"
+      },
+      {
+        "id": "chat-group-icon-disabled",
+        "index": 20,
+        "width": 31,
+        "height": 24,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "79ea539dc5649ffb7aaf561d781a2628194fd13406b0883a9c043b5dcd95d69a"
+      },
+      {
+        "id": "chat-flag-icon",
+        "index": 21,
+        "width": 31,
+        "height": 24,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "3552016b8de277df7750306adeaeffe3459cc1b2b19a1601a554a641f32ba2ec"
+      },
+      {
+        "id": "chat-flag-icon-hover",
+        "index": 22,
+        "width": 31,
+        "height": 24,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "bc102ec92df1b8959f27c05674533ccc315bb2195ba26c2606d20c9f6c0e8c0b"
+      },
+      {
+        "id": "chat-flag-icon-pressed",
+        "index": 23,
+        "width": 31,
+        "height": 24,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "f45615526e9ee0a6c941b82c4a0e4701d25042d05cc781a0699eef1a9f26c5af"
+      },
+      {
+        "id": "chat-flag-icon-disabled",
+        "index": 24,
+        "width": 31,
+        "height": 24,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "d6ce09af5f6c30ba8ad3e05fca06c40bd9d24ffc4b071a5e950715834eeabd56"
+      },
+      {
+        "id": "minimap-collapse-button",
+        "index": 25,
+        "width": 20,
+        "height": 16,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "10b4dba47d9fd9320d970121f40eaf65de241c6aa024ab6fab4ae350407fe9a2"
+      },
+      {
+        "id": "minimap-collapse-button-hover",
+        "index": 26,
+        "width": 20,
+        "height": 16,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "19f658f36eb057fec7e07e1f1ed7c82dd94fc5b761c2546c6ebd9bb922ebe405"
+      },
+      {
+        "id": "minimap-collapse-button-pressed",
+        "index": 27,
+        "width": 20,
+        "height": 16,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "7b10b841b1b3df6fe123dbca19745ae10cbe594423bdb3a72cac9a378cb8911f"
+      },
+      {
+        "id": "minimap-collapse-button-disabled",
+        "index": 28,
+        "width": 20,
+        "height": 16,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "f8adec68bc52832f3ee8d516748bf1963f4e9238af482c97369f630fcae0d059"
+      },
+      {
+        "id": "minimap-zoom-in-button",
+        "index": 29,
+        "width": 20,
+        "height": 16,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "f0cf5581aaa8e3336b15a4542a73d45cf48771a55642247458d571ed6b9e4fd6"
+      },
+      {
+        "id": "minimap-zoom-in-button-hover",
+        "index": 30,
+        "width": 20,
+        "height": 16,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "3747deadaa214e635138a0b25f0531b5aa3575533e7ef1b5f35021865e4be162"
+      },
+      {
+        "id": "minimap-zoom-in-button-pressed",
+        "index": 31,
+        "width": 20,
+        "height": 16,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "9112349bbc0ecae9e2fad2efd0eff54340b3710ece27105d9198cc3b7b134ad8"
+      },
+      {
+        "id": "minimap-zoom-in-button-disabled",
+        "index": 32,
+        "width": 20,
+        "height": 16,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "d4d8445b6c2a7e09ca4101666f47880fa763b66b9c348db3dd8950a63f58a90c"
+      },
+      {
+        "id": "minimap-mountain-button",
+        "index": 33,
+        "width": 20,
+        "height": 16,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "f9ecd6a8bcd42513b2de106c11647fd8a44bfba71107f612ee47fa896f3058d5"
+      },
+      {
+        "id": "minimap-mountain-button-hover",
+        "index": 34,
+        "width": 20,
+        "height": 16,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "09d0bd295564cd76a3c495ac90b232fb1ef21be38861685710b9da21ef56e9ea"
+      },
+      {
+        "id": "minimap-mountain-button-pressed",
+        "index": 35,
+        "width": 20,
+        "height": 16,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "ae67fece36d66c81ef2fce2ca1f202b00f976423195d901aa78021c62bb2cdf8"
+      },
+      {
+        "id": "minimap-mountain-button-disabled",
+        "index": 36,
+        "width": 20,
+        "height": 16,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "8cba105929c5e747ce213b2b793febfcbf8afea893def8f58d2ae27de3fbb067"
+      },
+      {
+        "id": "hud-shop-icon",
+        "index": 37,
+        "width": 40,
+        "height": 40,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "6f769ac4169582ed5f946a133a72dd31141f2eb4d2483659490691ba9792a731"
+      },
+      {
+        "id": "hud-shop-icon-hover",
+        "index": 38,
+        "width": 40,
+        "height": 40,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "81b2ee25f22b8cad3530937b0cfee1947fb90c07eb7be44f136410f766d2d83f"
+      },
+      {
+        "id": "hud-shop-icon-pressed",
+        "index": 39,
+        "width": 40,
+        "height": 40,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "0c41092414e24d517e0c24cbc41da0602bbec5e6f1304cc67fdf5ffa85d9750d"
+      },
+      {
+        "id": "hud-shop-icon-disabled",
+        "index": 40,
+        "width": 40,
+        "height": 40,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "46372aa2431785f5636e66d127811ebcf18682cb35caa3bd66cdea47a3926714"
+      },
+      {
+        "id": "hud-command-center",
+        "index": 41,
+        "width": 58,
+        "height": 58,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "28849a41f5bfaa40806fcd0ea14a8d8262e7b5db11c7f61de22a6d1bcdb9e119"
+      },
+      {
+        "id": "hud-command-center-hover",
+        "index": 42,
+        "width": 58,
+        "height": 58,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "aba2430e4e8cd44bfab4c7395be506b83c08e02fdb0528d313f59a662e6d775d"
+      },
+      {
+        "id": "hud-command-center-pressed",
+        "index": 43,
+        "width": 58,
+        "height": 58,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "f1a24f27a578face7b01176e1304fb37808694dccd9753f20d0b60a4a3ded6b3"
+      },
+      {
+        "id": "hud-command-center-disabled",
+        "index": 44,
+        "width": 58,
+        "height": 58,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "783420a65522fcca34da428bc4fabd2d815ab7f23820c7438555ad802be34676"
+      },
+      {
+        "id": "hud-command-top",
+        "index": 45,
+        "width": 54,
+        "height": 32,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "25d5957b689996130ddb9721e0b4b64f1e9a8d6d82abf105eec9c5cbd125f96f"
+      },
+      {
+        "id": "hud-command-top-hover",
+        "index": 46,
+        "width": 54,
+        "height": 32,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "a0beae09e3faaa0b9076e33788053aa82aa6ad5c77a77a4ad40156222751140d"
+      },
+      {
+        "id": "hud-command-top-pressed",
+        "index": 47,
+        "width": 54,
+        "height": 32,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "ba3c250f0d938a8ec55473e8e29f67873710242cdc47de8077d7bb97c6eed69a"
+      },
+      {
+        "id": "hud-command-top-disabled",
+        "index": 48,
+        "width": 54,
+        "height": 32,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "2d3e49ad5119d54c10f7c0e6b2a6ca23bc8c49f8e73b88bd60460653d6ba1909"
+      },
+      {
+        "id": "hud-command-upper-left",
+        "index": 49,
+        "width": 42,
+        "height": 50,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "096c0bfb3a6405582b51f635d9e01daa340c438dd33d9997735ce61445def735"
+      },
+      {
+        "id": "hud-command-upper-left-hover",
+        "index": 50,
+        "width": 42,
+        "height": 50,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "55c82a3b00a26f44bc31fee719a24c67e5f753447903cc46d1437bfe8ddf60a4"
+      },
+      {
+        "id": "hud-command-upper-left-pressed",
+        "index": 51,
+        "width": 42,
+        "height": 50,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "b12ba2742ca57e713ea49fcfe45bedfdd1baf3eb634dac777718041f1fcbaea5"
+      },
+      {
+        "id": "hud-command-upper-left-disabled",
+        "index": 52,
+        "width": 42,
+        "height": 50,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "d50c82abaee586c9480e433b93f30afb81266a51d15c7baeba35cad8473dd9cc"
+      },
+      {
+        "id": "hud-command-upper-right",
+        "index": 53,
+        "width": 42,
+        "height": 50,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "f15a1ceb4b7ced9f3ab11de198e20588fa71ccbc72aa4cd9f13c35a1d0ede641"
+      },
+      {
+        "id": "hud-command-upper-right-hover",
+        "index": 54,
+        "width": 42,
+        "height": 50,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "273e392afe4f070da390901bb239c563a96f6c1f66f2e3409a31e06f63374b01"
+      },
+      {
+        "id": "hud-command-upper-right-pressed",
+        "index": 55,
+        "width": 42,
+        "height": 50,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "3b5ca4f4e89b10a267093472345c1b32cf59816a21b7b6486ca4e74610698679"
+      },
+      {
+        "id": "hud-command-upper-right-disabled",
+        "index": 56,
+        "width": 42,
+        "height": 50,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "e40bdf6b0eb2890805f583565b0314773ee2bd18051adcba72f6ec1e61bc5b06"
+      },
+      {
+        "id": "hud-command-lower-left",
+        "index": 57,
+        "width": 42,
+        "height": 50,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "cb2920e4edc6152e7703ec9c2f2d58259902c04822a2e13595a1ff983f35106e"
+      },
+      {
+        "id": "hud-command-lower-left-hover",
+        "index": 58,
+        "width": 42,
+        "height": 50,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "47e8e136b66f44f2f6a995ae92b60e06cf2191d0156f798c2f15e0e1d63081c9"
+      },
+      {
+        "id": "hud-command-lower-left-pressed",
+        "index": 59,
+        "width": 42,
+        "height": 50,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "a945382e569c5c0ba93f3473491c28ab59e814effd5eac524f06bcf8e5bcffcf"
+      },
+      {
+        "id": "hud-command-lower-left-disabled",
+        "index": 60,
+        "width": 42,
+        "height": 50,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "afe16c15a28f2c1a9b87c25757ba9dd089ea13eb6194cf274551e1e600ee1a38"
+      },
+      {
+        "id": "hud-command-lower-right",
+        "index": 61,
+        "width": 42,
+        "height": 50,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "e2ae70a99627de0b12c1fd6a14064428d5a12abc4fa0df4f0eb5fa3d76e8c7cf"
+      },
+      {
+        "id": "hud-command-lower-right-hover",
+        "index": 62,
+        "width": 42,
+        "height": 50,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "11e6ef396c27a5daae68f8a7bc16f0662174324deef25d2553e1692112436337"
+      },
+      {
+        "id": "hud-command-lower-right-pressed",
+        "index": 63,
+        "width": 42,
+        "height": 50,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "ec847fd1b7b39e38919de2f71057dd8562ded975743ee017d2abc6f4e7429dc9"
+      },
+      {
+        "id": "hud-command-lower-right-disabled",
+        "index": 64,
+        "width": 42,
+        "height": 50,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "ff3c4d57006e5ad3d3ba0d404fbf23101b75d161d6eacd2e140e17c9960f9f6b"
+      },
+      {
+        "id": "hud-command-bottom",
+        "index": 65,
+        "width": 54,
+        "height": 32,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "fca5dd9effd0382800ff678abcc5f982ab41e62a66ff3e3cfa6e08b897f923a5"
+      },
+      {
+        "id": "hud-command-bottom-hover",
+        "index": 66,
+        "width": 54,
+        "height": 32,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "1e5f92d9e9817fb0437e4dfdee2d62ccf43cb8423ea0348f5bb7bb834898c453"
+      },
+      {
+        "id": "hud-command-bottom-pressed",
+        "index": 67,
+        "width": 54,
+        "height": 32,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "7269dfb68dcfae6e3580bd1991b587eefa0dbb682e09dd4ce4ee4b569178892c"
+      },
+      {
+        "id": "hud-command-bottom-disabled",
+        "index": 68,
+        "width": 54,
+        "height": 32,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "9170827e3b9ad1d18566a63d51e69f6597429760d1137b3419b8fdb2ddc82514"
+      },
+      {
+        "id": "hud-horse-icon",
+        "index": 69,
+        "width": 31,
+        "height": 24,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "055310ddc74e9529b9f9dacbf86ab8650baa44e8fc5b228949145311e4dbac58"
+      },
+      {
+        "id": "hud-horse-icon-hover",
+        "index": 70,
+        "width": 31,
+        "height": 24,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "5ba08a590bad7e52528a0c56f868de5afb77aaeaa21b52538d395b488c5812ce"
+      },
+      {
+        "id": "hud-horse-icon-pressed",
+        "index": 71,
+        "width": 31,
+        "height": 24,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "c5e6514f59196e0e5370e997e4bcc219ad5de9b7a4a7c311a05cf7c0af7521fe"
+      },
+      {
+        "id": "hud-horse-icon-disabled",
+        "index": 72,
+        "width": 31,
+        "height": 24,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "3ba71ea823c5b149bdfcabd9d080e97de201dc2d4705ddcee65cb4cb4226409d"
+      },
+      {
+        "id": "hud-handshake-icon",
+        "index": 73,
+        "width": 31,
+        "height": 24,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "5e22d7d88d5e72e2f41e0f4b61e2a38e0c4f16a8f8f33347753d70cf3a13c7e2"
+      },
+      {
+        "id": "hud-handshake-icon-hover",
+        "index": 74,
+        "width": 31,
+        "height": 24,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "a1ae6c6234c465fd09660cee72a17b4072aa06f79c2c255ddce463afbad331e1"
+      },
+      {
+        "id": "hud-handshake-icon-pressed",
+        "index": 75,
+        "width": 31,
+        "height": 24,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "9939448dc32fc7e861d442109f8016285151a7281e63ffe540a89cbc69179fd7"
+      },
+      {
+        "id": "hud-handshake-icon-disabled",
+        "index": 76,
+        "width": 31,
+        "height": 24,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "861554758dd50d933eabafced52ae9b4f5bc25a5a0bb23f192c639102f52664c"
+      },
+      {
+        "id": "hud-exit-icon",
+        "index": 77,
+        "width": 22,
+        "height": 18,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "0f34dfded9cc6422556fd6e6dab495509ef06df236eb2648f23c7bd47f3d7b3e"
+      },
+      {
+        "id": "hud-exit-icon-hover",
+        "index": 78,
+        "width": 22,
+        "height": 18,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "116bf3318d1160446f398e3fb89d8b686654070b667400be3e45a88f5d80530d"
+      },
+      {
+        "id": "hud-exit-icon-pressed",
+        "index": 79,
+        "width": 22,
+        "height": 18,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "955e5fd69710c51a84190b2f7ade600cd48bf28a98f7d274193745f1c3f20174"
+      },
+      {
+        "id": "hud-exit-icon-disabled",
+        "index": 80,
+        "width": 22,
+        "height": 18,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "8160e39a523388669b7aebca36ebba3e74a57f98ff501f28b9b1493868cb91ab"
+      },
+      {
+        "id": "bottom-segmented-frame",
+        "index": 81,
+        "width": 611,
+        "height": 10,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "9f28f11e6b7c0cc742e0b6aacb4aa5c7d69360e358a236f44a2b23bd96e3ae57"
+      },
+      {
+        "id": "hud-hp-fill",
+        "index": 82,
+        "width": 53,
+        "height": 101,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "1b9c89199c8d2e2ce0f047fda84af0f65ecdddfd7f444ca892150a25da3e94dd"
+      },
+      {
+        "id": "hud-mp-fill",
+        "index": 83,
+        "width": 48,
+        "height": 101,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "fced7d0845e6466006c520a661656f1947e9bcfcbf5eb6e6b6c5f44fdc89501a"
+      },
+      {
+        "id": "bottom-segmented-fill",
+        "index": 84,
+        "width": 611,
+        "height": 10,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "5ddd89a771683d2718c82315a760344bceb63316f0dc60f26df1ece9f9b95eb1"
+      },
+      {
+        "id": "character-main-background",
+        "index": 85,
+        "width": 412,
+        "height": 498,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "8f734c9060cec7977cd7ccf952d6fe33adf0ffcb3f038173bd55e7b5acf6bcb7"
+      },
+      {
+        "id": "hud-command-frame",
+        "index": 86,
+        "width": 225,
+        "height": 202,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "caf108a7367aeef9679029d1342537fe4f81c6f2787bea7d700a0693384bc8ac"
+      },
+      {
+        "id": "npc-shop",
+        "index": 87,
+        "width": 344,
+        "height": 438,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "857bef7c75d3d365c910db364d694961f5c67b67d502a4d7248f25ad59c3b140"
+      },
+      {
+        "id": "chat-history-frame",
+        "index": 88,
+        "width": 574,
+        "height": 106,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "9353ccd45d0b22e50a47a07f3c2c3516fff067f93794949f800a4452963dfc96"
+      },
+      {
+        "id": "chat-input-frame",
+        "index": 89,
+        "width": 574,
+        "height": 22,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "36bc1758fc82be2a7318a8c68575c9cd104e0e503227a28d23210ecc4c1e9a46"
+      },
+      {
+        "id": "equipment-cell-frame",
+        "index": 90,
+        "width": 36,
+        "height": 36,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "13e0643db01f80e8d78c46a7a821bbb81f719cfa04f19ded3f52641c2035ca1d"
+      },
+      {
+        "id": "hud-experience-track",
+        "index": 91,
+        "width": 574,
+        "height": 8,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "36a2dab30d05ab6d0e8f2a9055c41fc38f126e84cf2c08a2f53a8d329716f6e0"
+      },
+      {
+        "id": "hud-experience-fill",
+        "index": 92,
+        "width": 574,
+        "height": 8,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "fbab8bd6dc9b181a3a2c287f30d3bba55424df79d1c854a861501616159e8b65"
+      },
+      {
+        "id": "warehouse-background",
+        "index": 93,
+        "width": 508,
+        "height": 480,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "720a1a70a050a1c6f1fdccfd7613a084d6cac976b3824a97653c251336cc0dbc"
+      }
+    ],
+    "buttons": [
+      {
+        "id": "chat-flag-icon",
+        "normal": 21,
+        "hover": 22,
+        "pressed": 23,
+        "disabled": 24,
+        "normalTint": -1,
+        "hoverTint": -1,
+        "pressedTint": -1,
+        "disabledTint": -1
+      },
+      {
+        "id": "chat-group-icon",
+        "normal": 17,
+        "hover": 18,
+        "pressed": 19,
+        "disabled": 20,
+        "normalTint": -1,
+        "hoverTint": -1,
+        "pressedTint": -1,
+        "disabledTint": -1
+      },
+      {
+        "id": "chat-person-icon",
+        "normal": 13,
+        "hover": 14,
+        "pressed": 15,
+        "disabled": 16,
+        "normalTint": -1,
+        "hoverTint": -1,
+        "pressedTint": -1,
+        "disabledTint": -1
+      },
+      {
+        "id": "chat-speaker-icon",
+        "normal": 5,
+        "hover": 6,
+        "pressed": 7,
+        "disabled": 8,
+        "normalTint": -1,
+        "hoverTint": -1,
+        "pressedTint": -1,
+        "disabledTint": -1
+      },
+      {
+        "id": "chat-two-person-icon",
+        "normal": 9,
+        "hover": 10,
+        "pressed": 11,
+        "disabled": 12,
+        "normalTint": -1,
+        "hoverTint": -1,
+        "pressedTint": -1,
+        "disabledTint": -1
+      },
+      {
+        "id": "hud-command-bottom",
+        "normal": 65,
+        "hover": 66,
+        "pressed": 67,
+        "disabled": 68,
+        "normalTint": -1,
+        "hoverTint": -1,
+        "pressedTint": -1,
+        "disabledTint": -1
+      },
+      {
+        "id": "hud-command-center",
+        "normal": 41,
+        "hover": 42,
+        "pressed": 43,
+        "disabled": 44,
+        "normalTint": -1,
+        "hoverTint": -1,
+        "pressedTint": -1,
+        "disabledTint": -1
+      },
+      {
+        "id": "hud-command-lower-left",
+        "normal": 57,
+        "hover": 58,
+        "pressed": 59,
+        "disabled": 60,
+        "normalTint": -1,
+        "hoverTint": -1,
+        "pressedTint": -1,
+        "disabledTint": -1
+      },
+      {
+        "id": "hud-command-lower-right",
+        "normal": 61,
+        "hover": 62,
+        "pressed": 63,
+        "disabled": 64,
+        "normalTint": -1,
+        "hoverTint": -1,
+        "pressedTint": -1,
+        "disabledTint": -1
+      },
+      {
+        "id": "hud-command-top",
+        "normal": 45,
+        "hover": 46,
+        "pressed": 47,
+        "disabled": 48,
+        "normalTint": -1,
+        "hoverTint": -1,
+        "pressedTint": -1,
+        "disabledTint": -1
+      },
+      {
+        "id": "hud-command-upper-left",
+        "normal": 49,
+        "hover": 50,
+        "pressed": 51,
+        "disabled": 52,
+        "normalTint": -1,
+        "hoverTint": -1,
+        "pressedTint": -1,
+        "disabledTint": -1
+      },
+      {
+        "id": "hud-command-upper-right",
+        "normal": 53,
+        "hover": 54,
+        "pressed": 55,
+        "disabled": 56,
+        "normalTint": -1,
+        "hoverTint": -1,
+        "pressedTint": -1,
+        "disabledTint": -1
+      },
+      {
+        "id": "hud-exit-icon",
+        "normal": 77,
+        "hover": 78,
+        "pressed": 79,
+        "disabled": 80,
+        "normalTint": -1,
+        "hoverTint": -1,
+        "pressedTint": -1,
+        "disabledTint": -1
+      },
+      {
+        "id": "hud-handshake-icon",
+        "normal": 73,
+        "hover": 74,
+        "pressed": 75,
+        "disabled": 76,
+        "normalTint": -1,
+        "hoverTint": -1,
+        "pressedTint": -1,
+        "disabledTint": -1
+      },
+      {
+        "id": "hud-horse-icon",
+        "normal": 69,
+        "hover": 70,
+        "pressed": 71,
+        "disabled": 72,
+        "normalTint": -1,
+        "hoverTint": -1,
+        "pressedTint": -1,
+        "disabledTint": -1
+      },
+      {
+        "id": "hud-shop-icon",
+        "normal": 37,
+        "hover": 38,
+        "pressed": 39,
+        "disabled": 40,
+        "normalTint": -1,
+        "hoverTint": -1,
+        "pressedTint": -1,
+        "disabledTint": -1
+      },
+      {
+        "id": "minimap-collapse-button",
+        "normal": 25,
+        "hover": 26,
+        "pressed": 27,
+        "disabled": 28,
+        "normalTint": -1,
+        "hoverTint": -1,
+        "pressedTint": -1,
+        "disabledTint": -1
+      },
+      {
+        "id": "minimap-mountain-button",
+        "normal": 33,
+        "hover": 34,
+        "pressed": 35,
+        "disabled": 36,
+        "normalTint": -1,
+        "hoverTint": -1,
+        "pressedTint": -1,
+        "disabledTint": -1
+      },
+      {
+        "id": "minimap-zoom-in-button",
+        "normal": 29,
+        "hover": 30,
+        "pressed": 31,
+        "disabled": 32,
+        "normalTint": -1,
+        "hoverTint": -1,
+        "pressedTint": -1,
+        "disabledTint": -1
+      }
+    ]
+  }
+}

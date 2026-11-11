@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "kind": "official-ui-reference-zl",
+  "alphaVerified": false,
+  "sourceManifestSha256": "aa66a416aabc5d243d0d791c5fd26ea11a55a3cdc8611b22e175f16a52c14ed9",
+  "libraries": [
+    {
+      "name": "UI",
+      "slots": 2045,
+      "present": 1175,
+      "mixSha256": "591913aad522549f3e5280e4bea4812f57e9a2a2df4775bf6924e3a6a5e82443",
+      "mizSha256": "4e3995abe034e1da89723bce5ed2503b3d23f659ad7df183d886b7fab9740e56",
+      "path": "Reference/UI.Zl",
+      "sha256": "c2a5d948e0d8a5fa71188c9bb5201a5de1a4f78f2ecbef649a280e089a763f9e",
+      "alphaMode": "opaque",
+      "alphaVerified": false
+    },
+    {
+      "name": "Interface",
+      "slots": 420,
+      "present": 349,
+      "mixSha256": "7c44f857fbc614e7ba9a5a52c1882e097a1157c6819697a37617952c7053d912",
+      "mizSha256": "f4a726ec4a1e95428548de676fcccb32b84487b616c891a8c1070d8ffed1494e",
+      "path": "Reference/Interface.Zl",
+      "sha256": "011b1c8e910a9441665cf4629af19eded9ba4b981d8c29d5d1f62c67b990166d",
+      "alphaMode": "opaque",
+      "alphaVerified": false
+    },
+    {
+      "name": "GameInter",
+      "slots": 181,
+      "present": 112,
+      "mixSha256": "07bd3102c2257013e3fa082a79844c676b2cb79fc0486001c43635e314fd238e",
+      "mizSha256": "2fd1450a515d411b8747a41a9570053566c6665fa08d19490f55e420a20f7ba1",
+      "path": "Reference/GameInter.Zl",
+      "sha256": "ea9701e84c463f79c0e2602274cc9f7095cdac4c4ba808e31e49bd7eed5c4386",
+      "alphaMode": "opaque",
+      "alphaVerified": false
+    },
+    {
+      "name": "ProgUse",
+      "slots": 1630,
+      "present": 572,
+      "mixSha256": "4e6b71f1b331eeac29a1ea65989a28fbffa47273be0b3696445fe8c73501fb14",
+      "mizSha256": "335de71e409f6109f7aa1c44e3804b4e5ac1807acb6c82c0c8c94962c7c6d337",
+      "path": "Reference/ProgUse.Zl",
+      "sha256": "25869c8e38d787828b93aafe3926edd8fe381c01e4726b873c4aa85598abcd83",
+      "alphaMode": "opaque",
+      "alphaVerified": false
+    }
+  ]
+}

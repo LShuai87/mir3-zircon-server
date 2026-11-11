@@ -1,0 +1,210 @@
+{
+  "schemaVersion": 1,
+  "kind": "official-ui-optional-character-controls-verification",
+  "releaseAccepted": false,
+  "sourceChanges": [
+    {
+      "path": "Client/Client.csproj",
+      "beforeSha256": "6e71ef3279329bb5b923eaf247e819379e7d2a718b118a467ca57925eb66bf56",
+      "afterSha256": "3b147fe6301bf1a3a3d4e5f93ba2e8710a29a6e69fee08cab90dbb9b8b5c8ad9"
+    },
+    {
+      "path": "Client/Scenes/Views/CharacterDialog.cs",
+      "beforeSha256": "5a9ba738c8f2c3de23438861bc74f3014fd19076aa69fd1f294f7ce1d6ae3cdd",
+      "afterSha256": "49f90db1b55faa3c2eb938feae5fd2027da8325774ca0f23025465defeb1b4db"
+    },
+    {
+      "path": "Client/Scenes/Views/CharacterDialog.GameUi.cs",
+      "beforeSha256": "659654c2f008f9322f990aca54a07cbdca93143312d6adbbe77da6fc614635e2",
+      "afterSha256": "967d803713918543820bf710ab04e72129466cba98ad428a42285cbff811de1e"
+    },
+    {
+      "path": "Client/Scenes/Views/CharacterDialog.GameUiAttributes.cs",
+      "beforeSha256": "e430ee90de813001438adc108d8d3c3635b020a7a53ef26b96a140db998e720b",
+      "afterSha256": "1b0ff72d96fc67ffeb814a8381133b0ed93c10b69e0f8ae793421439c1f74b3a"
+    },
+    {
+      "path": "build/game-ui/Prepare-CharacterBindings.py",
+      "beforeSha256": "a5253d96fd6e93a33db34fd3f898a0a6e1b073f5b548e2fb454c057421ef1ae2",
+      "afterSha256": "c6c842199b0d8f156b3b1d40652ea032487b6fa06a55e288c311c430d0303b73"
+    },
+    {
+      "path": "build/game-ui/layout-official-v1.json",
+      "beforeSha256": "d7f984554f7ef23de31213d96062e7f655d655d706502df18a0cde946c9509b6",
+      "afterSha256": "0b2a0ed97808197eaa2da71711ef3e37eff401e67d65e3be8a35ccfb7ce7546a"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiLayoutContractTests.cs",
+      "beforeSha256": "65533e43599ee376333934b80af10e3d1f4a0a8fa30747323bdc3a792cf4a9da",
+      "afterSha256": "d812cef377d261555986e2780c889a083fe32580402f04066e0cb14202c8826b"
+    }
+  ],
+  "sourceHashes": [
+    {
+      "path": "Client/Client.csproj",
+      "sha256": "3b147fe6301bf1a3a3d4e5f93ba2e8710a29a6e69fee08cab90dbb9b8b5c8ad9"
+    },
+    {
+      "path": "Client/Controls/DXCheckBox.cs",
+      "sha256": "3ae0a9bd1f6b4a16d9de1a8f5da82f98ce32c8df96266271dbc78d2f037e0e5c"
+    },
+    {
+      "path": "Client/Scenes/Views/CharacterDialog.cs",
+      "sha256": "49f90db1b55faa3c2eb938feae5fd2027da8325774ca0f23025465defeb1b4db"
+    },
+    {
+      "path": "Client/Scenes/Views/CharacterDialog.GameUi.cs",
+      "sha256": "967d803713918543820bf710ab04e72129466cba98ad428a42285cbff811de1e"
+    },
+    {
+      "path": "Client/Scenes/Views/CharacterDialog.GameUiAttributes.cs",
+      "sha256": "1b0ff72d96fc67ffeb814a8381133b0ed93c10b69e0f8ae793421439c1f74b3a"
+    },
+    {
+      "path": "Client/Scenes/Views/CharacterDialog.GameUiControls.cs",
+      "sha256": "1941d4fa3c5e6302182f002bba02a96d4b7740c16061f71a007954acfa6ffc33"
+    },
+    {
+      "path": "Client/Envir/GameUiCharacterControlLayout.cs",
+      "sha256": "a6fa656244e9aa3f9876e8684f045308eb55a1ea9fda334462482cf0fb3ac5b3"
+    },
+    {
+      "path": "build/game-ui/Prepare-CharacterBindings.py",
+      "sha256": "c6c842199b0d8f156b3b1d40652ea032487b6fa06a55e288c311c430d0303b73"
+    },
+    {
+      "path": "build/game-ui/layout-official-v1.json",
+      "sha256": "0b2a0ed97808197eaa2da71711ef3e37eff401e67d65e3be8a35ccfb7ce7546a"
+    },
+    {
+      "path": "tests/Run-GameUiCharacterControlTests.ps1",
+      "sha256": "c64f3421fefd1ece132559626a9f6e89505486a587f2a1a21accb850a41aa64a"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiCharacterControlTests.cs",
+      "sha256": "fbc8c7092ce709c4cb34344096ae067f01f129dd260f9e3f5628059fc7498798"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiLayoutContractTests.cs",
+      "sha256": "d812cef377d261555986e2780c889a083fe32580402f04066e0cb14202c8826b"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-controls/character-bindings.draft.json",
+      "sha256": "d3f5c7918cab37398c8ed1b719c52cbb0510b6caad995cc9e4d4c55cf7ae794b"
+    }
+  ],
+  "commands": [
+    {
+      "command": "MSBuild.exe Client/Client.csproj /t:Build /p:Configuration=Debug /p:Platform=AnyCPU /nologo /v:minimal",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-controls/build-debug.log",
+      "logSha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "command": "powershell -NoProfile -File tests/Run-GameUiCharacterControlTests.ps1",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-controls/controls.log",
+      "logSha256": "5a2eac24053bc7181ae10c8c9b1a6cdcf74225c78528f8ffa8d0727f60f23214"
+    },
+    {
+      "command": "powershell -NoProfile -File tests/Run-GameUiCharacterAttributeTests.ps1",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-controls/attributes.log",
+      "logSha256": "6da292fea3083b92f96bce1cf1b16c1ebc49bc0847d4d87377a09e9371fa5d43"
+    },
+    {
+      "command": "powershell -NoProfile -File tests/Run-GameUiCharacterPageTests.ps1",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-controls/pages.log",
+      "logSha256": "af0c9da72c6091016f9a48867a26c21fe86fa7fe91ddec84c47b0d3c0f82762a"
+    },
+    {
+      "command": "powershell -NoProfile -File tests/Run-GameUiCharacterReadoutTests.ps1",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-controls/readouts.log",
+      "logSha256": "79f9189b1763809c1c6dfbd8abe8578038a9575bd92a0c9017a5299f1e33c06e"
+    },
+    {
+      "command": "python build/game-ui/Prepare-CharacterBindings.py --write-draft --report docs/design/assets/official-ingame-ui/acceptance/preparatory/character-controls/binding-validation.json",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-controls/bindings.log",
+      "logSha256": "c7d98fee356f6a4679e2b7354d442e0b326c5c94755b39b293e12b0ca948e87d"
+    },
+    {
+      "command": "powershell -NoProfile -File tests/Run-GameUiLayoutContractTests.ps1 -PythonPath C:/Users/shuai/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-controls/layout.log",
+      "logSha256": "5c22c69c94e3a592df4575321008df9786d8d20ec5f74e00b2a988c28bac2c52"
+    },
+    {
+      "command": "MSBuild.exe Client/Client.csproj /t:Build /p:Configuration=Release /p:Platform=AnyCPU /nologo /v:minimal",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-controls/build-release.log",
+      "logSha256": "c9e24428be1e56c8408af17aacfea3413de3953bfe426d10eb768782f5005ebc"
+    }
+  ],
+  "results": {
+    "characterControlAssertions": 4584,
+    "characterAttributeAssertions": 19302,
+    "characterPageAssertions": 12173,
+    "characterReadoutAssertions": 2474,
+    "originalControls": 20,
+    "ownedCaptions": 11,
+    "compiledControlRows": 31,
+    "windowPlacements": 6,
+    "enableReplaceDisableCycles": 8,
+    "originalHermitLocalQueueAndConfirmationTested": true,
+    "originalHelmetReadOnlyServerUpdateTested": true,
+    "networkUsed": false,
+    "layoutNodes": 232,
+    "debugBuild": "pass",
+    "releaseBuild": "pass",
+    "runtimeEnabled": false,
+    "gameAcceptanceExecuted": false
+  },
+  "limitations": [
+    "The optional controls adapter requires equipment pages. GameScene does not invoke it; OfficialV1 remains incomplete and disabled.",
+    "Immediate-readout composition, preview pivot/clipping and final character artwork remain pending; the new readout captions alone do not complete composition.",
+    "Hermit and helmet checks exercise original handlers with a local in-memory packet queue and the original receive handler. They do not prove live server interactions.",
+    "Hidden control and geometry tests do not establish rendering, equipment operations, IME, performance or game acceptance.",
+    "The user-confirmed logical baseline is 1024x768. Existing screenshots are reused. NPC cards, secondary popups and display settings retain the agreed scope."
+  ],
+  "priorSourceHashes": [
+    {
+      "path": "Client/Client.csproj",
+      "sha256": "6e71ef3279329bb5b923eaf247e819379e7d2a718b118a467ca57925eb66bf56"
+    },
+    {
+      "path": "Client/Scenes/Views/CharacterDialog.cs",
+      "sha256": "5a9ba738c8f2c3de23438861bc74f3014fd19076aa69fd1f294f7ce1d6ae3cdd"
+    },
+    {
+      "path": "Client/Scenes/Views/CharacterDialog.GameUi.cs",
+      "sha256": "659654c2f008f9322f990aca54a07cbdca93143312d6adbbe77da6fc614635e2"
+    },
+    {
+      "path": "Client/Scenes/Views/CharacterDialog.GameUiAttributes.cs",
+      "sha256": "e430ee90de813001438adc108d8d3c3635b020a7a53ef26b96a140db998e720b"
+    },
+    {
+      "path": "build/game-ui/Prepare-CharacterBindings.py",
+      "sha256": "a5253d96fd6e93a33db34fd3f898a0a6e1b073f5b548e2fb454c057421ef1ae2"
+    },
+    {
+      "path": "build/game-ui/layout-official-v1.json",
+      "sha256": "d7f984554f7ef23de31213d96062e7f655d655d706502df18a0cde946c9509b6"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiLayoutContractTests.cs",
+      "sha256": "65533e43599ee376333934b80af10e3d1f4a0a8fa30747323bdc3a792cf4a9da"
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-08T02:23:08.539Z",
+  "taskId": "UI-02",
+  "status": "reference_ready_implementation_pending",
+  "goalComplete": false,
+  "reason": "UI-02/G0-1有效范围参考准备完成；现有候选素材和布局尚待最终冻结与后续实机验收。",
+  "requiredUserAction": null,
+  "affectedNotStartedTasks": [
+    "UI-06",
+    "UI-07",
+    "UI-11",
+    "UI-12",
+    "UI-13",
+    "UI-14",
+    "UI-15",
+    "UI-16",
+    "UI-17",
+    "UI-18",
+    "UI-19",
+    "UI-21",
+    "UI-22",
+    "UI-23",
+    "UI-24",
+    "UI-25",
+    "UI-27",
+    "UI-28"
+  ],
+  "unclosedInputGates": {
+    "G0-2": "not_closed",
+    "G0-3": "not_closed",
+    "G0-4": "not_closed",
+    "G0-5": "not_closed"
+  },
+  "savedOriginalCaptureCount": 6,
+  "newScreenshotCaptured": false,
+  "releaseAccepted": false,
+  "evidence": [
+    "docs/design/assets/official-ingame-ui/acceptance/reference/process-metadata-check.json",
+    "docs/design/assets/official-ingame-ui/acceptance/reference/captures/capture-session.json",
+    "docs/design/assets/official-ingame-ui/acceptance/reference/runtime-observation-20261107T121828020Z.json",
+    "docs/design/assets/official-ingame-ui/acceptance/reference/captures/runtime-disconnected-20261107T121828020Z.jpg",
+    "docs/design/assets/official-ingame-ui/acceptance/reference/runtime-processes-20261107T121828020Z.json",
+    "docs/design/assets/official-ingame-ui/acceptance/reference/resume-blocker-audit.json",
+    "docs/design/assets/official-ingame-ui/acceptance/reference/resolution-confirmation.json",
+    "docs/design/assets/official-ingame-ui/acceptance/reference-finalization/gate-closure.json",
+    "docs/design/assets/official-ingame-ui/acceptance/reference-finalization/generated/reference-map.json"
+  ],
+  "assessment": "Scoped runtime reference is complete. Final asset, alpha, layout and action-mapping gates remain open; implementation does not require a new live-login capture.",
+  "scopeDecision": "docs/design/assets/official-ingame-ui/acceptance/reference/chat-scope-decision.json",
+  "runtimeObservation": "docs/design/assets/official-ingame-ui/acceptance/reference/runtime-observation-20261107T121828020Z.json",
+  "newScreenshotPurpose": "本次使用用户提供的设置附件补充配置说明；未再次操作或采集正式版游戏。",
+  "latestResumeAudit": "docs/design/assets/official-ingame-ui/acceptance/reference/resume-blocker-audit.json",
+  "currentManualCaptureRequest": [],
+  "resolutionConfirmation": "docs/design/assets/official-ingame-ui/acceptance/reference/resolution-confirmation.json",
+  "historicalRuntimeObservation": "docs/design/assets/official-ingame-ui/acceptance/reference/runtime-observation-20261107T121828020Z.json",
+  "existingPostLoginCapturesAvailable": true,
+  "referenceSelectionVerification": "docs/design/assets/official-ingame-ui/acceptance/preparatory/selected-assets/verification.json",
+  "taskStatus": "done",
+  "finalInputStatus": [
+    {
+      "path": "build/game-ui/asset-manifest.json",
+      "status": "candidate_not_frozen",
+      "runtimeReady": false,
+      "productionBindingAllowed": false
+    },
+    {
+      "path": "build/game-ui/layout-official-v1.json",
+      "status": "proposed_not_frozen"
+    },
+    {
+      "path": "Client/Envir/GameUiOfficialV1Catalog.g.cs",
+      "status": "candidate_generated_runtime_disabled"
+    }
+  ],
+  "effectiveOriginalCaptureCount": 5,
+  "ignoredCaptureIds": [
+    "06-chat-chinese-input"
+  ]
+}

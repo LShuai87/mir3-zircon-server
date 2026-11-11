@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "sourceFileVersion": "1.15.0.7269",
+  "sourceExecutable": "Mir3.dat",
+  "capturedAt": "2026-11-07",
+  "libraries": [
+    {
+      "name": "UI",
+      "slots": 5674,
+      "present": 1209,
+      "mixSha256": "79cee0111d7f6308ec0b278023f881b5f74d15c53282fa95b65c79335e550f38",
+      "mizSha256": "28446e7a78b3821ee229cafe6730e4ba4beb3df08ec5ae990b07e928666964fa"
+    },
+    {
+      "name": "Interface",
+      "slots": 420,
+      "present": 349,
+      "mixSha256": "7c44f857fbc614e7ba9a5a52c1882e097a1157c6819697a37617952c7053d912",
+      "mizSha256": "f4a726ec4a1e95428548de676fcccb32b84487b616c891a8c1070d8ffed1494e"
+    },
+    {
+      "name": "GameInter",
+      "slots": 184,
+      "present": 112,
+      "mixSha256": "7e42a6007b393ddfa2478ad47f5253192b8a5990d7d34baf11a87a1f48f058ce",
+      "mizSha256": "69a74d00a21b62f3441e4f455e195b33ceba4f90fffe5a582e17daef10af6305"
+    },
+    {
+      "name": "ProgUse",
+      "slots": 2656,
+      "present": 572,
+      "mixSha256": "900b55c2053da277635c0ea2e825d4de009e0e99d54328296f3de55d1781ef9e",
+      "mizSha256": "4fe6978a46b2e8af3a1b64115e339664c6fbd30e12caec6e8a2c225d6a4c1f71"
+    }
+  ],
+  "purpose": "Current source snapshot for explicitly selected records; historical baseline remains unchanged."
+}

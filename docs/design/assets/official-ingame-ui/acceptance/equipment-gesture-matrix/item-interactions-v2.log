@@ -1,0 +1,12 @@
+System.Exception: legacy: one expected packet ItemMove
+   在 OfficialUiFullSceneTests.Check(Boolean condition, String message)
+   在 OfficialUiFullSceneTests.ItemCheck(Boolean condition, String message)
+   在 OfficialUiFullSceneTests.OnePacket[T](CConnection connection)
+   在 OfficialUiFullSceneTests.EquipmentGestures(GameScene scene, CConnection connection, ItemType[] types, List`1 trace)
+   在 OfficialUiFullSceneTests.ExerciseItems(GameUiStartupSession owner, MapInfo map, String evidence, String style)
+   在 OfficialUiFullSceneTests.RunItemInteractions(String[] args)
+Exception: E:\workspace\mir3-zircon-server\tests\Run-GameUiItemInteractionTests.ps1:33
+Line |
+  33 |  …    if ($LASTEXITCODE -ne 0) { throw 'ItemInteraction tests failed.' }
+     |                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | ItemInteraction tests failed.

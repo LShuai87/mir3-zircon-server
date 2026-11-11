@@ -1,0 +1,42 @@
+[
+  {
+    "path": "Client/Envir/GameUiOfficialV1WindowSet.cs",
+    "sha256": "cfeea738a915890e0d82534f5e9179ec5b3f2c300dfc051dac8e5508d92a5e50"
+  },
+  {
+    "path": "Client/Scenes/GameScene.cs",
+    "sha256": "89df6b08cf454fd022e3a0a909aa385f0d7ff55f822621648b7db785b8c260ce"
+  },
+  {
+    "path": "Client/Scenes/Views/NPCDialog.cs",
+    "sha256": "57ac6a9b0ebcd1407fbf85e01e0dbfcf554824afe11af54325c989ee4cbb7010"
+  },
+  {
+    "path": "tests/game-ui/OfficialUiWindowSetTests.cs",
+    "sha256": "c28af51d176db9f9bbad7ee3b19aaf0997dcbaacbf51c6d04e7e1a02ad37526c"
+  },
+  {
+    "path": "tests/game-ui/OfficialUiStorageSceneTests.cs",
+    "sha256": "e2f4a72e89237b7aedddfa7234621768b4a312691b55c1bd079e6c1df9fa3a14"
+  },
+  {
+    "path": "tests/game-ui/test_official_ui_asset_usage.py",
+    "sha256": "72220a031c23a4ddbcea9089a304a6701f09cb73a691a9d3523d63f52842dd8c"
+  },
+  {
+    "path": "build/game-ui/asset-usage-official-v1.json",
+    "sha256": "171615c4fa736e349d47df6cba011aeacd0ee2ba054b9560b8de20fec19a4ac9"
+  },
+  {
+    "path": "build/game-ui/Validate-OfficialUiAssets.py",
+    "sha256": "6668486a0f57e869c48b3c6c9d8d3d75b9c26dc0534bb3d1f14fac4d8280e218"
+  },
+  {
+    "path": "tests/game-ui/OfficialUiNpcTests.cs",
+    "sha256": "36e6f3003458aba27a03dc8d8e0142271f22a8c55cfd62881498648a305bdc90"
+  },
+  {
+    "path": "build/game-ui/character-bindings.json",
+    "sha256": "6939630ec981054e1d9c024753e13add61acd33d548832667b32602a81bb1cb4"
+  }
+]

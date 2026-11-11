@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "checkedAtLocalDate": "2026-11-08",
+  "releaseAccepted": false,
+  "package": {
+    "path": "E:/workspace/mir3-ui-work/npc-shop-assets-20261108-v1/zl/OfficialV1.Zl",
+    "sha256": "50ec53a62c5b564c3e1bf736c5be01e6d86ebbd2cd08994578aafeb7ce031ddb",
+    "frameCount": 93,
+    "bytes": 533106
+  },
+  "builds": [
+    {
+      "configuration": "debug",
+      "clientPath": "E:/workspace/Debug/Client/Zircon.exe",
+      "clientSha256": "74c8320db2ef06cdf1583e13856c8a0615e62ff00b2a51053f435e807a722b1d",
+      "releaseManifest": "release-debug.json",
+      "dependencyCount": 11,
+      "buildId": "gameui-40abb61c8964b15069af16a82ec11b9f324e02dddeedb6353a0e5e9b24f9cad1"
+    },
+    {
+      "configuration": "release",
+      "clientPath": "E:/workspace/Release/Client/Zircon.exe",
+      "clientSha256": "cf3592f6913560eaaa650b9a9a2a78efd93125399e9eee52b07261f6cf9829bc",
+      "releaseManifest": "release-release.json",
+      "dependencyCount": 11,
+      "buildId": "gameui-7083057fcd77697fb8de8a3ae355a0f9a73103f85ebfd100f29f9176654b44ba"
+    }
+  ],
+  "runtimeReady": false,
+  "productionBindingAllowed": false,
+  "legacyDefault": true,
+  "limitations": [
+    "Inspection manifests only; no production installation.",
+    "Synthetic NPC replies; real login, server behavior, live IME, final visual acceptance and complete deployment/rollback remain pending."
+  ]
+}

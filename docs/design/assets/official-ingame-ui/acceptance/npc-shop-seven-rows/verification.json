@@ -1,0 +1,207 @@
+{
+  "schemaVersion": 1,
+  "kind": "official-ingame-ui-npc-goods-seven-rows",
+  "checkedAtLocalDate": "2026-11-08",
+  "releaseAccepted": false,
+  "referenceResolution": [
+    1024,
+    768
+  ],
+  "results": {
+    "visibleRows": 7,
+    "columns": 2,
+    "fullVisibleGoods": 14,
+    "partialEighthRow": false,
+    "rowPitch": 46,
+    "topInset": 2,
+    "cellSize": [
+      138,
+      45
+    ],
+    "itemCellSize": [
+      36,
+      36
+    ],
+    "npcChecks": 2427,
+    "npcScenes": 3,
+    "npcCoordinateHits": 128,
+    "npcPresentedFrames": 36,
+    "npcDeviceResets": 27,
+    "identicalOriginalCardPixels": 2399935,
+    "orderedPacketAndActionTracesEqual": true,
+    "quantityPopupGeometryEqual": true,
+    "windowSetChecks": 159787,
+    "candidateFrames": 93,
+    "packageUnchanged": true,
+    "runtimeReady": false,
+    "productionBindingAllowed": false,
+    "legacyDefault": true,
+    "fullHintReachableThroughOriginalMouseTarget": true,
+    "livePriceHintUpdates": true
+  },
+  "sourceChanges": [
+    {
+      "path": "Client/Envir/GameUiNpcGoodsBinding.cs",
+      "beforeSha256": "1f8cf4d07a054f7890ea70a97fe0b9c34803b4e1988a53504182d8243492d4cf",
+      "afterSha256": "0607ae451a907320360273ddd741384f3ccc6f94fa0af00461999c283e487f7c"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiNpcGoodsTests.cs",
+      "beforeSha256": "f0788cee5c5a86637c9a361a50d1f92be69e81fd9cb95521a7c02131de955b96",
+      "afterSha256": "6cc9f4077ce14c03f2e6636351ace51009c8dbca24a70cbbb0130f327352740f"
+    }
+  ],
+  "sourceHashes": [
+    {
+      "path": "Client/Envir/GameUiNpcGoodsBinding.cs",
+      "sha256": "0607ae451a907320360273ddd741384f3ccc6f94fa0af00461999c283e487f7c"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiNpcGoodsTests.cs",
+      "sha256": "6cc9f4077ce14c03f2e6636351ace51009c8dbca24a70cbbb0130f327352740f"
+    }
+  ],
+  "commands": [
+    {
+      "command": "MSBuild Client/Client.csproj /t:Build /p:Configuration=Debug /p:Platform=AnyCPU /v:minimal /nologo",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-shop-seven-rows/build-debug.log",
+      "logSha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "command": "MSBuild Client/Client.csproj /t:Build /p:Configuration=Release /p:Platform=AnyCPU /v:minimal /nologo",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-shop-seven-rows/build-release.log",
+      "logSha256": "c9e24428be1e56c8408af17aacfea3413de3953bfe426d10eb768782f5005ebc"
+    },
+    {
+      "command": "tests/Run-GameUiNpcTests.ps1 -CompilerPath \"D:/Program Files/Microsoft Visual Studio/2022/Enterprise/MSBuild/Current/Bin/Roslyn/csc.exe\" -PackagePath E:/workspace/mir3-ui-work/npc-shop-assets-20261108-v1/zl/OfficialV1.Zl -EvidenceDirectory E:/workspace/mir3-ui-work/npc-shop-seven-rows-20261108-v2/npc",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-shop-seven-rows/npc-test.log",
+      "logSha256": "ab513763b5b738e1abc68604aa150a6f5c8cdb6a7cba46a41b8fa13a1aeb8532"
+    },
+    {
+      "command": "tests/Run-GameUiWindowSetTests.ps1 -CompilerPath \"D:/Program Files/Microsoft Visual Studio/2022/Enterprise/MSBuild/Current/Bin/Roslyn/csc.exe\" -PackagePath E:/workspace/mir3-ui-work/npc-shop-assets-20261108-v1/zl/OfficialV1.Zl -EvidenceDirectory E:/workspace/mir3-ui-work/npc-shop-seven-rows-20261108-v2/window-set",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-shop-seven-rows/window-set-test.log",
+      "logSha256": "c054dda8e876e3d8eeada36656bb5ebf0bf9d573beb3a05c234422a808bb4242"
+    },
+    {
+      "command": "build/game-ui/New-GameUiReleaseManifest.ps1 -ClientDirectory E:/workspace/Debug/Client -ResourceRoot E:/workspace/mir3-ui-work/npc-shop-binding-20261108-v1/staged-resources -OutputPath E:/workspace/mir3-ui-work/npc-shop-seven-rows-20261108-v2/release-debug.json",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-shop-seven-rows/manifest-debug.log",
+      "logSha256": "0ce0f3460d64b8e721fdfcc3857df69e0cd492fcdb214b098af32cfb38c9e5f5"
+    },
+    {
+      "command": "build/game-ui/New-GameUiReleaseManifest.ps1 -ClientDirectory E:/workspace/Release/Client -ResourceRoot E:/workspace/mir3-ui-work/npc-shop-binding-20261108-v1/staged-resources -OutputPath E:/workspace/mir3-ui-work/npc-shop-seven-rows-20261108-v2/release-release.json",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-shop-seven-rows/manifest-release.log",
+      "logSha256": "7464b98ea7b9324f6707af2200d50a260940d0b7d1af351b0a9b7a5efb910aff"
+    },
+    {
+      "command": "git -c core.whitespace=cr-at-eol diff --check -- Client/Envir/GameUiNpcGoodsBinding.cs tests/game-ui/OfficialUiNpcGoodsTests.cs",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-shop-seven-rows/whitespace.log",
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": "python build/game-ui/Validate-UiTasks.py",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-shop-seven-rows/task-validation.log",
+      "logSha256": "90e3ddffa807ef19523e77855653984be659ff7ab47ec66f04d41348c4cb85b3"
+    }
+  ],
+  "packageSha256": "50ec53a62c5b564c3e1bf736c5be01e6d86ebbd2cd08994578aafeb7ce031ddb",
+  "sourcePlanSha256": "f8c0a002b3821fabb54993792c354c4eff35eec51f9cfdc418535017c13069e9",
+  "limitations": [
+    "用户确认1024×768窗口设置；附件像素尺寸不用于推断DPI或客户区。",
+    "商品几何修正及离线回归不代表UI-21全部窗口或真实服务器验收。",
+    "默认Legacy；G0-2/3/4/5、真实登录/服务器/中文IME/最终视觉及整包部署回退未验收。"
+  ],
+  "evidenceHashes": [
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-shop-seven-rows/README.md",
+      "sha256": "174e6a8a20153c4c4c9031bd646d25bacd4632e3bd7484d932c4c59f8402f086"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-shop-seven-rows/source-before.json",
+      "sha256": "3b46e1d1ddf761375065ea5c7fa4d3955b761326b35f5399da4961200c922f8b"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-shop-seven-rows/runtime-audit.json",
+      "sha256": "0747a55462ca7b8bbb6b125be4be805db4999a62cdd22050140a8b167fd7a186"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-shop-seven-rows/release-debug.json",
+      "sha256": "1c3fef798668624132dd144f2a8285652b0ba19db9882172140154a56fd9ecf3"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-shop-seven-rows/release-release.json",
+      "sha256": "1d097896603d93dadb3370f3d16d16be2d30ccd53a8cd6ae47a482542e70b3c2"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-shop-seven-rows/npc/metrics.json",
+      "sha256": "4e8f6faccf7ed6fc008dd6bb6ae22123b4e3633401eae4b2ebf246dca4f0328c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-shop-seven-rows/npc/assertions.txt",
+      "sha256": "47a930ff1603aa5b47444df85aba51e9f1ee3f136ef84571cfb8334bd153bf8c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-shop-seven-rows/npc/coordinate-hits.txt",
+      "sha256": "c8c1e8d860d4c12a7e1aee437c04c8d177346a4949962de990c8e0423ed8f973"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-shop-seven-rows/npc/legacy-trace.txt",
+      "sha256": "076c53d3697fa40d207b104596849447f3817dc0058fab45127a2eb039d27ae1"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-shop-seven-rows/npc/official-trace.txt",
+      "sha256": "076c53d3697fa40d207b104596849447f3817dc0058fab45127a2eb039d27ae1"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-shop-seven-rows/npc/official-reentry-trace.txt",
+      "sha256": "076c53d3697fa40d207b104596849447f3817dc0058fab45127a2eb039d27ae1"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-shop-seven-rows/npc/tested-runtime.json",
+      "sha256": "588293d9b7e88d90252df1ed1c102bb2305557f90d40568a5dbe3c18a38edd03"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-shop-seven-rows/npc/legacy-card.png",
+      "sha256": "bbf533c95e714eb1b384a34ed7dde97083e54d67bca961844f3c9e9c8f2882d6"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-shop-seven-rows/npc/official-card.png",
+      "sha256": "8eca9ae7629a157e425126f2e8b3e1ac890eacecc3658cb1f0a1933e8e54cee8"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-shop-seven-rows/npc/legacy-goods-top.png",
+      "sha256": "771fbf5408ff1edc726b6888249f3c10491bc553f52a0e774199bac882bf60db"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-shop-seven-rows/npc/official-goods-top.png",
+      "sha256": "f26aa55462a8080898a497809a9d844b0051d9f8f78e645b87d9458e20925f98"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-shop-seven-rows/npc/official-goods-bottom.png",
+      "sha256": "e17209b53af488962905ac9a9e98a853ed89363d523b4e661bd662704b90712e"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-shop-seven-rows/npc/legacy-goods-quantity.png",
+      "sha256": "203601bf8d8d27d816c2fce39ce93c2fe096e8103c81b8be023e9b3eae45bfc6"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-shop-seven-rows/npc/official-goods-quantity.png",
+      "sha256": "c1ecee4e98ebece522bc968738335783d98fcb2e37dd2ce1400579c4d0aa0dfa"
+    }
+  ]
+}

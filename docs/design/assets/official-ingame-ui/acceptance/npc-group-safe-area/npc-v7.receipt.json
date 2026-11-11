@@ -1,0 +1,14 @@
+{
+  "command": [
+    "pwsh",
+    "-NoProfile",
+    "-File",
+    "tests/Run-GameUiNpcTests.ps1",
+    "-PackagePath",
+    "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+    "-EvidenceDirectory",
+    "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v7"
+  ],
+  "exitCode": 0,
+  "log": "E:/workspace/mir3-zircon-server/docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/npc-v7.log"
+}

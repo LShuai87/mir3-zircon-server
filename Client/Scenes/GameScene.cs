@@ -359,8 +359,87 @@ namespace Client.Scenes
         }
         private float _DayTime;
         
+        private GameUiOfficialV1WindowSet officialWindowSet;
+        private GameUiStartupSession startupUiSession;
+        internal bool HasOfficialWindowOwner => officialWindowSet != null;
+        private bool officialWindowOperation, officialWindowDisposalStarted;
+
+        // Package is borrowed. The application startup session owns the compiled gate.
+        internal void InstallOfficialWindowCandidate(GameUiVerifiedPackage package, GameUiLayoutStore store)
+        {
+            if (IsDisposed || officialWindowDisposalStarted) throw new ObjectDisposedException(nameof(GameScene));
+            if (officialWindowSet != null || officialWindowOperation) throw new InvalidOperationException("The scene already owns a window installer or is changing layout.");
+            officialWindowOperation = true;
+            try
+            {
+                var candidate = new GameUiOfficialV1WindowSet(this, MainPanel, CharacterBox, InventoryBox, BeltBox, MiniMapBox, package, store);
+                officialWindowSet = candidate;
+                try { candidate.Install(Size); }
+                catch (Exception installError)
+                {
+                    try { candidate.Dispose(); officialWindowSet = null; }
+                    catch (Exception rollbackError)
+                    {
+                        throw new AggregateException("Scene installation rollback needs retry before releasing its package.", installError, rollbackError);
+                    }
+                    throw;
+                }
+            }
+            finally { officialWindowOperation = false; }
+        }
+
+        internal void CompleteStartupUi(GameUiStartupSession session, string configurationDirectory)
+        {
+            if (session?.CanInstallOfficial != true) return;
+            if (startupUiSession != null) throw new InvalidOperationException("The scene already has a startup UI owner.");
+            startupUiSession = session;
+            try { session.AttachScene(this, configurationDirectory); }
+            catch { startupUiSession = null; throw; }
+            if (!HasOfficialWindowOwner && !session.RequiresRestart) startupUiSession = null;
+        }
+
+        private bool IsOfficialStartupWindow(DXWindow window)
+            => window == CharacterBox || window == InventoryBox || window == BeltBox || window == MiniMapBox || window == StorageBox;
+
+        internal void RestoreLegacyStartupLayout()
+        {
+            BeltBox.Size = BeltBox.GetAcceptableResize(Size.Empty);
+            SetDefaultLocations();
+            foreach (DXWindow window in DXWindow.Windows)
+                if (window.Parent == this && IsOfficialStartupWindow(window)) window.LoadSettings();
+        }
+
+        internal void StopGameUiOperations()
+        {
+            if (MapControl != null) MapControl.MapButtons = MouseButtons.None;
+            _AutoRun = false; // No chat events while containing a UI fault.
+            CanRun = false;
+            MagicObject = TargetObject = FocusObject = null;
+        }
+
         public override void OnSizeChanged(Size oValue, Size nValue)
         {
+            if (officialWindowOperation) throw new InvalidOperationException("Cannot resize the scene during an Official window transaction.");
+            if (officialWindowSet != null)
+            {
+                officialWindowOperation = true;
+                try
+                {
+                    using (DXWindow.SuppressSceneLayoutWrites(this))
+                    {
+                        base.OnSizeChanged(oValue, nValue);
+                        if (MapControl != null) MapControl.Size = Size;
+                        officialWindowSet.Apply(Size);
+                    }
+                }
+                catch (Exception error)
+                {
+                    startupUiSession?.HandleSceneFailure(this, error);
+                    throw;
+                }
+                finally { officialWindowOperation = false; }
+                return;
+            }
             base.OnSizeChanged(oValue, nValue);
             
             SetDefaultLocations();
@@ -377,6 +456,7 @@ namespace Client.Scenes
         {
             DrawTexture = false;
             Game = this;
+            bool prepareOfficial = CEnvir.GameUiSession?.CanInstallOfficial == true;
 
             foreach (NPCInfo info in Globals.NPCInfoList.Binding)
                 info.CurrentIcon = QuestIcon.None;
@@ -406,7 +486,7 @@ namespace Client.Scenes
                 ColourTab = { TabButton = { Visible = true } },
                 ExitButton = { Visible = true },
             };
-            ConfigBox.ExitButton.MouseClick += (o, e) => ExitBox.Visible = true;
+            ConfigBox.ExitButton.MouseClick += (o, e) => ExitBox.ShowConfirmation();
 
             ExitBox = new ExitDialog
             {
@@ -434,7 +514,7 @@ namespace Client.Scenes
                 Parent = this,
                 Visible = false,
             };
-            BeltBox = new BeltDialog
+            BeltBox = new BeltDialog(prepareOfficial)
             {
                 Parent = this,
             };
@@ -504,6 +584,9 @@ namespace Client.Scenes
             {
                 Parent = this,
             };
+            MiniMapBox.LocationChanged += (o, e) => BuffBox?.ArrangeAroundMiniMap();
+            MiniMapBox.SizeChanged += (o, e) => BuffBox?.ArrangeAroundMiniMap();
+            MiniMapBox.IsVisibleChanged += (o, e) => BuffBox?.ArrangeAroundMiniMap();
             StorageBox = new StorageDialog
             {
                 Parent = this,
@@ -669,13 +752,17 @@ namespace Client.Scenes
             LoadChatTabs();
 
             foreach (DXWindow window in DXWindow.Windows)
-                window.LoadSettings();
+                if (!prepareOfficial || !IsOfficialStartupWindow(window)) window.LoadSettings();
 
             // feature 拾取过滤 在创建GameScene的时候第一次加载
             AutoPickUpItemList.AddRange(ItemListStorage.Load(Config.PickUpListFile));
             SaveAutoPickUpItemList();
             DisplayNameItemList.AddRange(ItemListStorage.Load(Config.DisplayNameItemListFile));
             HightLightItemList.AddRange(ItemListStorage.Load(Config.HightLightItemListFile));
+
+            // No user data or gameplay actions have been loaded at this point.
+            CompleteStartupUi(CEnvir.GameUiSession, CEnvir.GameUiSession?.ConfigurationDirectory);
+            BuffBox.ArrangeAroundMiniMap();
 
         }
 
@@ -755,8 +842,17 @@ namespace Client.Scenes
             NPCWeaponCraftBox.Location = new Point((Size.Width - NPCWeaponCraftBox.Size.Width) / 2, (Size.Height - NPCWeaponCraftBox.Size.Height) / 2);
         }
 
-        public void SaveChatTabs()
+        public bool SaveChatTabs()
         {
+            if (IsDisposed || officialWindowDisposalStarted) throw new ObjectDisposedException(nameof(GameScene));
+            if (officialWindowOperation) throw new InvalidOperationException("Cannot save chat during an Official window transaction.");
+            if (officialWindowSet != null)
+            {
+                officialWindowOperation = true;
+                try { return officialWindowSet.SaveChat(); }
+                catch (Exception error) { startupUiSession?.HandleSceneFailure(this, error); throw; }
+                finally { officialWindowOperation = false; }
+            }
             DBCollection<ChatTabControlSetting> controlSettings = CEnvir.Session.GetCollection<ChatTabControlSetting>();
             DBCollection<ChatTabPageSetting> pageSettings = CEnvir.Session.GetCollection<ChatTabPageSetting>();
 
@@ -802,11 +898,68 @@ namespace Client.Scenes
                     pSetting.GainsChat = tab.Panel.GainsCheckBox.Checked;
                 }
             }
+            return true;
+        }
+
+        internal void RebuildChatTabs(Action rebuild) => ExecuteChatRebuild(rebuild, null, null);
+
+        private void ExecuteChatRebuild(Action rebuild, GameUiChatStore.Snapshot restored, IList<DXTabControl> restoredGroups)
+        {
+            if (rebuild == null) throw new ArgumentNullException(nameof(rebuild));
+            if (IsDisposed || officialWindowDisposalStarted) throw new ObjectDisposedException(nameof(GameScene));
+            if (officialWindowOperation) throw new InvalidOperationException("Cannot rebuild chat during an Official window transaction.");
+            if (officialWindowSet == null) { rebuild(); return; }
+            officialWindowOperation = true;
+            try { officialWindowSet.RebuildChat(rebuild, restored, restoredGroups); }
+            catch (Exception error)
+            {
+                startupUiSession?.HandleSceneFailure(this, error);
+                throw;
+            }
+            finally { officialWindowOperation = false; }
         }
 
         public void LoadChatTabs()
         {
             if (ConfigBox == null) return;
+            if (!RestoreOfficialChatLayout()) RebuildChatTabs(LoadChatTabsCore);
+        }
+
+        // Called after the Official owner installs; absent/corrupt entries retain native startup tabs.
+        internal bool RestoreOfficialChatLayout()
+        {
+            if (officialWindowSet == null || ChatOptionsBox == null) return false;
+            if (IsDisposed || officialWindowDisposalStarted) throw new ObjectDisposedException(nameof(GameScene));
+            if (officialWindowOperation) throw new InvalidOperationException("Cannot load chat during an Official window transaction.");
+            GameUiChatStore.Snapshot saved;
+            if (!officialWindowSet.TryGetSavedChat(true, out saved)) return false;
+            var restored = new List<DXTabControl>();
+            ExecuteChatRebuild(() =>
+            {
+                for (int i = ChatTab.Tabs.Count - 1; i >= 0; i--)
+                    if (ChatTab.Tabs[i].CurrentTabControl?.Parent == this)
+                        ChatTab.Tabs[i].Panel.RemoveButton.InvokeMouseClick();
+                foreach (var value in saved.groups)
+                {
+                    var group = new DXTabControl { Parent = this, Movable = true, Location = new Point(value.x, value.y), Size = new Size(value.width, value.height) };
+                    restored.Add(group);
+                    var tabs = new List<ChatTab>();
+                    foreach (var page in value.tabs)
+                    {
+                        var tab = ChatOptionsBox.AddNewTab();
+                        tab.Parent = group;
+                        GameUiOfficialV1ChatSet.RestorePage(tab, page);
+                        tabs.Add(tab);
+                    }
+                    group.SelectedTab = value.selected < 0 ? null : tabs[value.selected];
+                }
+            }, saved, restored);
+            ReceiveChat("聊天布局已加载", MessageType.Announcement);
+            return true;
+        }
+
+        private void LoadChatTabsCore()
+        {
 
             for (int i = ChatTab.Tabs.Count - 1; i >= 0; i--)
                 ChatTab.Tabs[i].Panel.RemoveButton.InvokeMouseClick();
@@ -1111,6 +1264,10 @@ namespace Client.Scenes
 
             if (ItemLabel != null && !ItemLabel.IsDisposed)
             {
+                if ((itemTooltipLayout != null) != (officialWindowSet?.IsInstalled == true))
+                    CreateItemLabel();
+                itemTooltipLayout?.Reflow(Size);
+
                 int x = CEnvir.MouseLocation.X + 15, y = CEnvir.MouseLocation.Y;
 
                 if (x + ItemLabel.Size.Width > Size.Width + Location.X)
@@ -1126,7 +1283,8 @@ namespace Client.Scenes
                     y = Location.Y;
 
 
-                ItemLabel.Location = new Point(x, y);
+                ItemLabel.Location = itemTooltipLayout == null ? new Point(x, y) :
+                    itemTooltipLayout.ClampPosition(DisplayArea, new Point(x, y));
             }
 
             if (MagicLabel != null && !MagicLabel.IsDisposed)
@@ -1157,6 +1315,26 @@ namespace Client.Scenes
                 MonsterBox.Clear();
             else
                 MonsterBox.UpdateTarget(MouseObject, FocusObject);
+        }
+
+        public override void OnMouseWheel(MouseEventArgs e)
+        {
+            if (!IsEnabled) return;
+            if (officialWindowSet?.IsInstalled == true && MouseItem != null &&
+                ReferenceEquals(itemTooltipItem, MouseItem) && ItemLabel != null && !ItemLabel.IsDisposed &&
+                itemTooltipLayout?.Scroll(e.Delta) == true) return;
+            base.OnMouseWheel(e);
+        }
+
+        // Shared by the native M binding and the OfficialV1 horse shortcut.
+        // Do not bypass observer, queued-action or in-flight server throttling.
+        public void ToggleMount()
+        {
+            if (!IsEnabled || Observer || User == null) return;
+            if (CEnvir.Now < User.NextActionTime || User.ActionQueue.Count > 0) return;
+            if (CEnvir.Now < User.ServerTime) return;
+            User.ServerTime = CEnvir.Now.AddSeconds(5);
+            CEnvir.Enqueue(new C.Mount());
         }
 
         public override void OnKeyUp(KeyEventArgs e)
@@ -1257,21 +1435,8 @@ namespace Client.Scenes
                         }
                         break;
                     case KeyBindAction.MapMiniWindow:
-                        if (!MiniMapBox.Visible)
-                        {
-                            MiniMapBox.Opacity = 1F;
-                            MiniMapBox.Visible = true;
-                            return;
-                        }
-
-                        if (MiniMapBox.Opacity == 1F)
-                        {
-                            MiniMapBox.Opacity = 0.5F;
-                            return;
-                        }
-
-                        MiniMapBox.Visible = false;
-                        break;
+                        MiniMapBox.ToggleDisplay();
+                        return;
                     case KeyBindAction.MapBigWindow:
                         if (!BigMapBox.Visible)
                         {
@@ -1300,8 +1465,7 @@ namespace Client.Scenes
                         ChatOptionsBox.Visible = !ChatOptionsBox.Visible;
                         break;
                     case KeyBindAction.ExitGameWindow:
-                        ExitBox.Visible = true;
-                        ExitBox.BringToFront();
+                        ExitBox.ShowConfirmation();
                         break;
                     case KeyBindAction.ChangeAttackMode:
                         if (Observer) continue;
@@ -1354,13 +1518,7 @@ namespace Client.Scenes
                         CEnvir.Enqueue(new C.MarriageTeleport());
                         break;
                     case KeyBindAction.MountToggle:
-                        if (Observer) continue;
-
-                        if (CEnvir.Now < User.NextActionTime || User.ActionQueue.Count > 0) return;
-                        if (CEnvir.Now < User.ServerTime) return; //Next Server response Time.
-
-                        User.ServerTime = CEnvir.Now.AddSeconds(5);
-                        CEnvir.Enqueue(new C.Mount());
+                        ToggleMount();
                         break;
                     case KeyBindAction.AutoRunToggle:
                         if (Observer) continue;
@@ -1626,7 +1784,22 @@ namespace Client.Scenes
             }
         }
 
+        private GameUiItemTooltipLayout itemTooltipLayout;
+        private ClientUserItem itemTooltipItem;
+
         private void CreateItemLabel()
+        {
+            var previous = ReferenceEquals(itemTooltipItem, MouseItem) ? itemTooltipLayout : null;
+            itemTooltipItem = MouseItem;
+            itemTooltipLayout = null;
+            BuildItemLabel();
+            if (ItemLabel == null || ItemLabel.IsDisposed || officialWindowSet?.IsInstalled != true) return;
+            itemTooltipLayout = new GameUiItemTooltipLayout(ItemLabel);
+            itemTooltipLayout.Reflow(Size);
+            if (previous != null) itemTooltipLayout.RestoreScroll(previous.ScrollOffset, previous.WheelRemainder);
+        }
+
+        private void BuildItemLabel()
         {
             if (ItemLabel != null && !ItemLabel.IsDisposed) ItemLabel.Dispose();
 
@@ -3680,26 +3853,15 @@ namespace Client.Scenes
 
         public bool CanWearItem(ClientUserItem item, EquipmentSlot slot)
         {
-            if (!CanUseItem(item)) return false;
-            
-            switch (slot)
+            if (!Functions.CorrectSlot(item.Info.ItemType, slot) || !CanUseItem(item)) return false;
+            ClientUserItem previous = Equipment[(int)slot];
+            bool hand = Functions.UsesHandWeight(item.Info.ItemType);
+            int previousWeight = previous != null && Functions.UsesHandWeight(previous.Info.ItemType) == hand ? previous.Weight : 0;
+            int weight = (hand ? User.HandWeight : User.WearWeight) - previousWeight + item.Weight;
+            if (weight > User.Stats[hand ? Stat.HandWeight : Stat.WearWeight])
             {
-                case EquipmentSlot.Weapon:
-                case EquipmentSlot.Torch:
-                case EquipmentSlot.Shield:
-                    if (User.HandWeight - (Equipment[(int) slot]?.Info.Weight ?? 0) + item.Weight > User.Stats[Stat.HandWeight])
-                    {
-                        ReceiveChat($"不能拿起 {item.Info.ItemName}, 太重了.", MessageType.System);
-                        return false;
-                    }
-                    break;
-                default:
-                    if (User.WearWeight - (Equipment[(int) slot]?.Info.Weight ?? 0) + item.Weight > User.Stats[Stat.WearWeight])
-                    {
-                        ReceiveChat($"不能穿上 {item.Info.ItemName}, 太重了.", MessageType.System);
-                        return false;
-                    }
-                    break;
+                ReceiveChat($"不能穿戴 {item.Info.ItemName}, 太重了.", MessageType.System);
+                return false;
             }
 
             return true;
@@ -3880,7 +4042,7 @@ namespace Client.Scenes
         }
         public void SafeZoneChanged()
         {
-
+            MiniMapBox?.RefreshGameUiSafety();
         }
         public void WeightChanged()
         {
@@ -3889,6 +4051,7 @@ namespace Client.Scenes
             InventoryBox.WeightLabel.Text = $"{User.BagWeight} of {User.Stats[Stat.BagWeight]}";
 
             InventoryBox.WeightLabel.ForeColour = User.BagWeight > User.Stats[Stat.BagWeight] ? Color.Red : Color.White;
+            InventoryBox.UpdateGameUiInventoryWeight(User.BagWeight, User.Stats[Stat.BagWeight]);
 
 
             CharacterBox.WearWeightLabel.Text = $"{User.WearWeight}/{User.Stats[Stat.WearWeight]}";
@@ -4212,6 +4375,24 @@ namespace Client.Scenes
 
         protected override void Dispose(bool disposing)
         {
+            // Detach while original controls and borrowed GPU resources are still alive.
+            if (disposing)
+            {
+                if (officialWindowOperation) throw new InvalidOperationException("Cannot dispose the scene during an Official window transaction.");
+                officialWindowOperation = true;
+                try
+                {
+                    if (officialWindowSet != null)
+                    {
+                        officialWindowSet.Dispose();
+                        officialWindowSet = null;
+                    }
+                    startupUiSession?.DetachScene(this);
+                    startupUiSession = null;
+                    officialWindowDisposalStarted = true;
+                }
+                finally { officialWindowOperation = false; }
+            }
             base.Dispose(disposing);
 
             if (disposing)

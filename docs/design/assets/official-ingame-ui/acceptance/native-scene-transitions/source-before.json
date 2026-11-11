@@ -1,0 +1,66 @@
+[
+  {
+    "path": "tests/game-ui/OfficialUiFullSceneTests.cs",
+    "sha256": "95e0b086a7ba20c631d30dab30079d09e683ea5672c61a1f762ac623af5cc306"
+  },
+  {
+    "path": "tests/Run-GameUiFullSceneTests.ps1",
+    "sha256": "e3d5fb3b99d993f4b403ee78a5166a55baf10639f63c292c2b85b8791eb7bcd0"
+  },
+  {
+    "path": "Client/Envir/CEnvir.cs",
+    "sha256": "0ee69c9035ae21a9486cfc4bca99ec4435ca31c39cc94df3995ebb9527ce4919"
+  },
+  {
+    "path": "Client/Envir/CConnection.cs",
+    "sha256": "423e46eeb1a01089ddc211cc0ebfaf5c79144a1da3bd7b0c981e44d9fe7d1fbc"
+  },
+  {
+    "path": "Client/Scenes/GameScene.cs",
+    "sha256": "9e5ab5f140a301c895626a952c19983236ec8434985511aa3f6937a964d0f94e"
+  },
+  {
+    "path": "Client/Scenes/LoginScene.cs",
+    "sha256": "ce27d89c1bbcc383b8b7cef38287a40245c03b66fcfc396cc6a5508d4437a42d"
+  },
+  {
+    "path": "Client/Scenes/SelectScene.cs",
+    "sha256": "c266b17c620c4852e8972e9689884ca028ec6c3f93b4de52c2f83ba31b6339ad"
+  },
+  {
+    "path": "Client/Controls/DXMessageBox.cs",
+    "sha256": "d2e7f34114a0123c840a34ac8d37c118feeccbfa500e1f30fa9808f91cfe55ba"
+  },
+  {
+    "path": "Client/Envir/GameUiStartupSession.cs",
+    "sha256": "d044bd514f839ab2656d433ef0e39f4f84770916803d5fc566e929de9667c40b"
+  },
+  {
+    "path": "Client/Envir/GameUiOfficialV1WindowSet.cs",
+    "sha256": "35ada8411ee7c2036ef8759ab268199de73210681b08b780fa5cf285aebdcef2"
+  },
+  {
+    "path": "Client/Envir/GameUiOfficialV1ChatSet.cs",
+    "sha256": "01611900bc742f6258e8408066ca6936ad25b05d21ea734b2ed58717f5b66de9"
+  },
+  {
+    "path": "Client/Envir/GameUiChatGroupBinding.cs",
+    "sha256": "8ad5dd1769c1dcd75c6b76492af95daf3526768e0accf53e726084e83da6edd4"
+  },
+  {
+    "path": "Client/Scenes/Views/ChatTab.cs",
+    "sha256": "a4ac0c7392a1c50c9649e6a4ab5e26829af4ca8c007fd9f2cbe238d21815c6d2"
+  },
+  {
+    "path": "Library/Network/BaseConnection.cs",
+    "sha256": "2408a3fcf1cf060239d3cc1bb08544c4d10e6cd958c32d86d6f9a3c88b42d749"
+  },
+  {
+    "path": "Library/Network/Packet.cs",
+    "sha256": "aed519285bf0fbe1859c3b954d8b4990be5c6926bbfbc13cb52a3a412f66ea33"
+  },
+  {
+    "path": "tests/Run-GameUiWindowSetTests.ps1",
+    "sha256": "28b89b6548b60728468ee0311ae3fc6b98d6a724dc0a7abb031c5a59327e9c6d"
+  }
+]

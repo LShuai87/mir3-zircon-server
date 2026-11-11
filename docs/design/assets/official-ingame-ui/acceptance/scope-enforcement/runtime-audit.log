@@ -1,0 +1,1 @@
+PASS: Debug and Release clients and 11 dependencies per build match manifests. NPC and full-scene tested runtimes match Debug. All three ordered NPC traces are byte-identical. Readiness remains false.

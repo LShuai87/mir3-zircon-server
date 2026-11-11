@@ -1,0 +1,20 @@
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 Client.Controls.DXTextBox.OnActivated()
+   在 Client.Controls.DXTextBox.set_ActiveTextBox(DXTextBox value)
+   在 Client.Controls.DXMessageBox.Dispose(Boolean disposing)
+   在 Client.Controls.DXControl.Dispose()
+   在 Client.Controls.DXControl.Dispose(Boolean disposing)
+   在 Client.Controls.DXScene.Dispose(Boolean disposing)
+   在 Client.Scenes.GameScene.Dispose(Boolean disposing)
+   在 Client.Controls.DXControl.Dispose()
+   在 Client.Envir.CEnvir.ReturnToLogin()
+   在 Client.Controls.DXMessageBox.<>c.<Show>b__20_3(Object o, MouseEventArgs e)
+   在 System.EventHandler`1.Invoke(Object sender, TEventArgs e)
+   在 Client.Controls.DXControl.InvokeMouseClick()
+   在 OfficialUiFullSceneTests.ExerciseNativeTransitions(GameUiStartupSession owner, MapInfo map, String evidence, Boolean official)
+   在 OfficialUiFullSceneTests.Main(String[] args)
+Exception: E:\workspace\mir3-zircon-server\tests\Run-GameUiFullSceneTests.ps1:33
+Line |
+  33 |          if ($LASTEXITCODE -ne 0) { throw 'FullScene tests failed.' }
+     |                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | FullScene tests failed.

@@ -1,0 +1,18 @@
+[
+  {
+    "path": "Client/Scenes/GameScene.cs",
+    "sha256": "ad6d502552ea7e4c9e77323da4ee7f2841efd5253fd670e40399152562f32edc"
+  },
+  {
+    "path": "Client/Client.csproj",
+    "sha256": "0c2d6b407c62ad02f43eb11a1eeae23567d14bba0e3a441465d945c0775b7124"
+  },
+  {
+    "path": "build/game-ui/README.md",
+    "sha256": "8694a7143cec253ed2b8678e53f86458ce1be284bb929a65ec2e896a6692836e"
+  },
+  {
+    "path": "build/game-ui/character-bindings.json",
+    "sha256": "e87654d9b11552e2885d11d32e5168482fb02d3f5570eb1ac024408f58629aad"
+  }
+]

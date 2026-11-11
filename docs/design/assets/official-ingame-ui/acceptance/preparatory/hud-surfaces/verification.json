@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 1,
+  "kind": "official-ui-hud-surfaces-preparation-verification",
+  "checkedAtLocalDate": "2026-11-08",
+  "referenceResolution": [
+    1024,
+    768
+  ],
+  "releaseAccepted": false,
+  "sourceChanges": [
+    {
+      "path": "build/game-ui/Compose-OfficialUi.py",
+      "beforeSha256": "5220ed3c13122fcc8ba36f70a99e04832ab916c1ce412f147e2d53c8e1422763",
+      "afterSha256": "eb9d9e0f8ef370a380d2c78aabea435002fc08be11801b9957c946261e119c97"
+    },
+    {
+      "path": "build/game-ui/composition-recipe.json",
+      "beforeSha256": "d463a781d3bac90fa4ec09d0301a0dcf0f645b6630e99082a5d820448ed2e956",
+      "afterSha256": "4ced064bf5714c17298c56c7659ed89009436e83fcc888d66570bc816e254b14"
+    },
+    {
+      "path": "tests/game-ui/test_composed_ui.py",
+      "beforeSha256": "1b9e98f21685d5a6d405cd0f4310a4f2f4e6159804e2d8e6564f0694b2ce2788",
+      "afterSha256": "3d289778ed0045c3e579cacf517a00835ae125d935a3490758cb7510be3ddf74"
+    }
+  ],
+  "sourceHashes": [
+    {
+      "path": "build/game-ui/Compose-OfficialUi.py",
+      "sha256": "eb9d9e0f8ef370a380d2c78aabea435002fc08be11801b9957c946261e119c97"
+    },
+    {
+      "path": "build/game-ui/composition-recipe.json",
+      "sha256": "4ced064bf5714c17298c56c7659ed89009436e83fcc888d66570bc816e254b14"
+    },
+    {
+      "path": "tests/game-ui/test_composed_ui.py",
+      "sha256": "3d289778ed0045c3e579cacf517a00835ae125d935a3490758cb7510be3ddf74"
+    },
+    {
+      "path": "tests/game-ui/Verify-HudSurfaces.py",
+      "sha256": "619cdc3bea5ec4d02170641dceb4fcae04eb9504a223a4651be0d654b3f103c0"
+    },
+    {
+      "path": "build/game-ui/layout-official-v1.json",
+      "sha256": "b39fa17ba46f9424a7c5b713a1c77cf7d16b31570a1320232f747239ccd8f509"
+    },
+    {
+      "path": "ImageManager/OfficialUiAssetBuilder.cs",
+      "sha256": "4d1ebb40c8668c1c1914a27a6710d0c5f532db4d229e53d810755b475ea36239"
+    },
+    {
+      "path": "tests/game-ui/test_prepared_ui.py",
+      "sha256": "597e9165e67a90ab4d1b936b374824df0040299fe716d375ab13382d57bb0195"
+    },
+    {
+      "path": "tests/game-ui/Verify-ComposedUi.py",
+      "sha256": "f6191b23a313fe146d3a0b9d7c706bda0b642f8cd4e6ff12dd063dca4fb43100"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiComposedRenderTests.cs",
+      "sha256": "24c25bb5e978bad56c5027475f67471db27076efbaf971170cad91d0c26df843"
+    },
+    {
+      "path": "tests/Run-GameUiComposedRenderTests.ps1",
+      "sha256": "3d367433467c8f5487aaf71adf883f9bac3ad29ccf77d55d57fb8a0aab286537"
+    }
+  ],
+  "commands": [
+    {
+      "command": "python -m unittest discover -s tests/game-ui -p test_composed_ui.py -v",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-surfaces/composition-tests.log",
+      "logSha256": "f7fb0f95ac5b42017de1ea906471bd372bb6d370c6a29707fecc477fb9934791"
+    },
+    {
+      "command": "python -m unittest discover -s tests/game-ui -p test_prepared_ui.py -v",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-surfaces/package-regression.log",
+      "logSha256": "644185e7c8c13d80993a366bbc3590bd7851537e01529552591b7136a0437a41"
+    },
+    {
+      "command": "python build/game-ui/Compose-OfficialUi.py --decoded E:/workspace/mir3-ui-work/selected-reference-20261107-v1/Decoded --output E:/workspace/mir3-ui-work/hud-surfaces-art-20261108-v2 --recipe build/game-ui/composition-recipe.json",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-surfaces/compose.log",
+      "logSha256": "a34ef7ceac57612b179c5ef2a58e852c3989172a8f2941df75a2863854fe3c11"
+    },
+    {
+      "command": "E:/workspace/Debug/ImageManager/ImageManager.exe --official-ui prepared E:/workspace/mir3-ui-work/hud-surfaces-art-20261108-v2 E:/workspace/mir3-ui-work/hud-surfaces-zl-20261108-v2 E:/workspace/mir3-ui-work/hud-surfaces-art-20261108-v2/composed-manifest.json",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-surfaces/package.log",
+      "logSha256": "d389bd68df1138046f7e8d67c8d8d60b294a7bc7cddeff86bef5ad81ebc3a751"
+    },
+    {
+      "command": "python build/game-ui/Compose-OfficialUi.py --decoded E:/workspace/mir3-ui-work/selected-reference-20261107-v1/Decoded --output E:/workspace/mir3-ui-work/hud-surfaces-art-20261108-v3 --recipe build/game-ui/composition-recipe.json",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-surfaces/compose-repeat.log",
+      "logSha256": "a34ef7ceac57612b179c5ef2a58e852c3989172a8f2941df75a2863854fe3c11"
+    },
+    {
+      "command": "E:/workspace/Debug/ImageManager/ImageManager.exe --official-ui prepared E:/workspace/mir3-ui-work/hud-surfaces-art-20261108-v3 E:/workspace/mir3-ui-work/hud-surfaces-zl-20261108-v3 E:/workspace/mir3-ui-work/hud-surfaces-art-20261108-v3/composed-manifest.json",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-surfaces/package-repeat.log",
+      "logSha256": "4a16e34fccb24fb17494999cbb69a6d1008de662b320d76542735c350e2c6d4f"
+    },
+    {
+      "command": "python tests/game-ui/Verify-ComposedUi.py --art E:/workspace/mir3-ui-work/hud-surfaces-art-20261108-v2 --package E:/workspace/mir3-ui-work/hud-surfaces-zl-20261108-v2 --output E:/workspace/mir3-ui-work/hud-surfaces-bc1-20261108-v2",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-surfaces/bc1.log",
+      "logSha256": "c240e12c3c814eb7a06bef646b5c300111f1a778e2ab3496fc01c7ed285dd70b"
+    },
+    {
+      "command": "powershell -NoProfile -ExecutionPolicy Bypass -File tests/Run-GameUiComposedRenderTests.ps1 -PackagePath E:/workspace/mir3-ui-work/hud-surfaces-zl-20261108-v2 -VerificationPath E:/workspace/mir3-ui-work/hud-surfaces-bc1-20261108-v2 -RenderPath E:/workspace/mir3-ui-work/hud-surfaces-d3d-20261108-v2",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-surfaces/d3d.log",
+      "logSha256": "d2d3183d81265d17a2ed4cd1b6864c7041922abd120dd650219b50ed3cd666c5"
+    },
+    {
+      "command": "python tests/game-ui/Verify-HudSurfaces.py --art E:/workspace/mir3-ui-work/hud-surfaces-art-20261108-v2 --repeat-art E:/workspace/mir3-ui-work/hud-surfaces-art-20261108-v3 --package E:/workspace/mir3-ui-work/hud-surfaces-zl-20261108-v2 --repeat-package E:/workspace/mir3-ui-work/hud-surfaces-zl-20261108-v3 --previous-art E:/workspace/mir3-ui-work/composed-art-20261107-verified2-v1 --recipe build/game-ui/composition-recipe.json --layout build/game-ui/layout-official-v1.json --output docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-surfaces/art-verification.json",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-surfaces/art-verification.log",
+      "logSha256": "f250d85bcccee08c89f5316a421034113a98586e1a6823f438355c6895e18128"
+    },
+    {
+      "command": "git -c core.whitespace=cr-at-eol diff --check",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-surfaces/diff-check.log",
+      "logSha256": "21b8107bd294e2d55f0b95ad171a74f8a6c3f7f8663c41d098c5983f4c74ca25"
+    }
+  ],
+  "artifactHashes": [
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-surfaces-art-20261108-v2/composed-manifest.json",
+      "sha256": "a7c3dd06f85c79156a08b8b682d2db1b093807a782db05edafa24233c1d78355"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-surfaces-zl-20261108-v2/OfficialV1.Zl",
+      "sha256": "fb97489bb3a2d2edb52e7b0c2f6fb67b98c9183eff6eb69c25e5fd610cdcc2d4"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-surfaces-zl-20261108-v2/prepared-manifest.json",
+      "sha256": "2a2ef9b407f43273282a504646d36c63382738d8d0d282fdcaac63b7f838091c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-surfaces-zl-20261108-v3/OfficialV1.Zl",
+      "sha256": "fb97489bb3a2d2edb52e7b0c2f6fb67b98c9183eff6eb69c25e5fd610cdcc2d4"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-surfaces-bc1-20261108-v2/verification.json",
+      "sha256": "26a486dc23acf8869e14e0d6cdb89d397685f448cb26f6c3c7ead5ce7fe3afed"
+    },
+    {
+      "path": "E:/workspace/Debug/ImageManager/ImageManager.exe",
+      "sha256": "5c5330dbc2f2889ce47dc9f4337f0bc8620a370c248aa8c787f545b2841e7f74"
+    },
+    {
+      "path": "E:/workspace/Debug/Client/Zircon.exe",
+      "sha256": "52a5ea835500ec7a662de95be3f369f870a27140bf143a931bbb7dc1bc4dae2c"
+    }
+  ],
+  "evidenceHashes": [
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-surfaces/before.json",
+      "sha256": "c340aacb3a7e510dbce47dd53754a2ef54b6c29dfdaf8a7c971eae9389f89d53"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-surfaces/README.md",
+      "sha256": "af15cb066f60860a6efe20e4eebdbf5f36474df8e82b01012de7c2075dd97497"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-surfaces/art-verification.json",
+      "sha256": "49d0b877c0d2188ab7d687200df1414a2b1aea70b77ce20285a3e00e172d54ba"
+    }
+  ],
+  "results": {
+    "compositionRegressionTests": 32,
+    "packageRegressionTests": 16,
+    "derivedFrameCount": 3,
+    "priorFramesUnchanged": 84,
+    "totalFrames": 87,
+    "explicitButtonStateSets": 19,
+    "logicalAlphaPixelsChecked": 672539,
+    "transparentTexturePaddingPixelsChecked": 13605,
+    "opaqueBlackInteriorPixelsPreserved": 3178,
+    "derivedTransparentInteriorPixelsChecked": 115528,
+    "gpuRenderedFrames": 90,
+    "gpuPixelComparisons": 808889,
+    "maximumGpuRgbError": 5,
+    "gpuRgbTolerance": 8,
+    "transparentPixelsExact": true,
+    "deterministicArtFiles": 119,
+    "deterministicPackageFiles": 2,
+    "runtimeEnabled": false,
+    "gameAcceptanceExecuted": false
+  },
+  "derivation": {
+    "source": "UI[422] / bottom-segmented-frame",
+    "corners": "native pixels",
+    "edges": "explicit sample; nearest-neighbour",
+    "interior": "transparent",
+    "sceneLayout": "three owner sizes exactly match build layout",
+    "provenance": "Original decoded PNG hash, source index/offset retained. Derived recipe is bound by packaged sourceManifestSha256.",
+    "commandShellIdentity": "UI[140]/UI[1270] remains unresolved; this frame is an explicit layout adaptation."
+  },
+  "limitations": [
+    "The 87-frame package remains test-only. No production semantic catalog, Program/GameScene binding or enabled runtime style is claimed.",
+    "Border composition does not establish complete final art: character/inventory repaint, labels, icon/action consistency and alert geometry still need integration review.",
+    "No live game, IME, network/action count, device-reset, performance or install/rollback acceptance was performed.",
+    "Previously captured images and historical reports are preserved. NPC cards, secondary popups and display settings remain outside skin changes; all task statuses and five G0 gates remain unchanged."
+  ],
+  "developmentCorrections": [
+    "Fixed derived provenance to carry the original decoded PNG digest rather than the intermediate composed digest.",
+    "Kept per-asset native manifest compatibility; derivation metadata stays in the full input manifest. Development v1 outputs are excluded; validated outputs are v2/v3."
+  ]
+}

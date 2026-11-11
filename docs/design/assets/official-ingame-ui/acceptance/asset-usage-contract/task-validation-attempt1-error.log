@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "E:\workspace\mir3-zircon-server\build\game-ui\Validate-UiTasks.py", line 124, in <module>
+    main()
+    ~~~~^^
+  File "E:\workspace\mir3-zircon-server\build\game-ui\Validate-UiTasks.py", line 104, in main
+    require('supplementalCommandsPassed', bool(supplemental['commands']) and all(
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        c['result'] == 'pass' and c['exitCode'] == 0 and sha(ROOT / c['log']) == c['logSha256']
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        for c in supplemental['commands']))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\workspace\mir3-zircon-server\build\game-ui\Validate-UiTasks.py", line 50, in require
+    raise ValueError(name)
+ValueError: supplementalCommandsPassed

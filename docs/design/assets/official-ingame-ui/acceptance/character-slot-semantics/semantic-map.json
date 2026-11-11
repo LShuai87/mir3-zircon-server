@@ -1,0 +1,95 @@
+{
+  "kind": "official-ui-equipment-semantic-correction",
+  "releaseAccepted": false,
+  "referenceResolution": [
+    1024,
+    768
+  ],
+  "coordinateSpace": "character-window logical pixels",
+  "requirement": {
+    "path": "docs/design/official-ingame-ui-implementation-plan.md",
+    "section": "6.2",
+    "sha256": "f8c0a002b3821fabb54993792c354c4eff35eec51f9cfdc418535017c13069e9"
+  },
+  "runtimeReference": {
+    "path": "docs/design/assets/official-ingame-ui/acceptance/reference/captures/02-character.jpg",
+    "sha256": "571e96dbafabedb997d454e6ce7a3768e2ddd5f7dd3357d8c6f69537671c6274",
+    "use": "artwork/context only; current 9+7 project equipment semantics are fixed by plan section 6.2; does not establish official slot identity from unlabelled silhouettes"
+  },
+  "previewRect": [
+    60,
+    138,
+    134,
+    193
+  ],
+  "changes": [
+    {
+      "enumName": "Helmet",
+      "slotId": 2,
+      "control": "Grid[2]",
+      "oldRect": [
+        16,
+        96,
+        36,
+        36
+      ],
+      "visualRect": [
+        110,
+        96,
+        36,
+        36
+      ],
+      "hitRect": [
+        110,
+        96,
+        36,
+        36
+      ],
+      "iconRect": [
+        110,
+        96,
+        36,
+        36
+      ]
+    },
+    {
+      "enumName": "Shoes",
+      "slotId": 9,
+      "control": "Grid[9]",
+      "oldRect": [
+        110,
+        340,
+        36,
+        36
+      ],
+      "visualRect": [
+        16,
+        340,
+        36,
+        36
+      ],
+      "hitRect": [
+        16,
+        340,
+        36,
+        36
+      ],
+      "iconRect": [
+        16,
+        340,
+        36,
+        36
+      ]
+    }
+  ],
+  "invariants": [
+    "Same original Grid and ItemGrid identities, enum IDs and event handlers",
+    "visualRect=hitRect=iconRect; global cell size 36x36",
+    "No added slot, packet, art frame or second click layer",
+    "Legacy default and RuntimeReady=false"
+  ],
+  "limitations": [
+    "Layout remains a candidate; no full G0 closure or live-server/IME acceptance",
+    "Project-specific 9+7 equipment adaptation; not a pixel-identical copy of official gameplay"
+  ]
+}

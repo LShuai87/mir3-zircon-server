@@ -1,0 +1,10 @@
+{
+  "command": [
+    "python",
+    "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/audit-history.py",
+    "--output",
+    "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/history-audit.json"
+  ],
+  "exitCode": 0,
+  "log": "E:/workspace/mir3-zircon-server/docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/history-audit.log"
+}

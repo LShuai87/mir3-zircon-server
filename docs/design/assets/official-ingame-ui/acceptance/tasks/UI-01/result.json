@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "taskId": "UI-01",
+  "title": "冻结代码、功能与接口基线",
+  "status": "done",
+  "checkedAtLocalDate": "2026-11-07",
+  "validationRunId": "official-ui-foundations-20261107-2cc5f7ece409",
+  "baselineCommit": "fc581d5cf96a81b49c557a15675a7386efac8825",
+  "implementationCommit": null,
+  "implementationInWorkingTree": true,
+  "sourcePlanSha256": "f8c0a002b3821fabb54993792c354c4eff35eec51f9cfdc418535017c13069e9",
+  "accomplishments": [
+    "清点 16 装备槽、57 项角色字典绑定、76 默认按键、17 NPC 窗口及弹框/发包位置。",
+    "保留历史代码快照，记录 18 项对比及 5 项差异原因；源码/计划接口区分已实现和待实现。",
+    "旧客户端运行图和发包轨迹按验收允许的缺失项记录，后续行为任务不以空证据验收。"
+  ],
+  "evidence": [
+    "docs/design/assets/official-ingame-ui/acceptance/foundations/verification.json",
+    "docs/design/assets/official-ingame-ui/acceptance/baseline/implementation-start/baseline.json",
+    "docs/design/assets/official-ingame-ui/acceptance/baseline/contracts.md"
+  ],
+  "commandIds": [],
+  "unresolved": [
+    "旧客户端截图/发包基线未采集；后续行为验收保持开放。"
+  ],
+  "acceptanceCases": [],
+  "releaseAccepted": false
+}

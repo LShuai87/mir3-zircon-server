@@ -1,0 +1,12 @@
+{
+  "command": [
+    "pwsh",
+    "-NoProfile",
+    "-File",
+    "tests/Run-GameUiChatStoreTests.ps1",
+    "-EvidenceDirectory",
+    "E:/workspace/mir3-ui-work/chat-persistence-store-20261108-final"
+  ],
+  "exitCode": 0,
+  "log": "E:/workspace/mir3-zircon-server/docs/design/assets/official-ingame-ui/acceptance/chat-persistence/chat-store-final.log"
+}

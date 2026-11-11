@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "kind": "official-ui-proposed-layout-contract-verification",
+  "releaseAccepted": false,
+  "sourceChanges": [],
+  "sourceHashes": [
+    {
+      "path": "build/game-ui/layout-official-v1.json",
+      "sha256": "496f406266adb07da791fb677cb456abc499cd395fe43237be297c41bc6833c0"
+    },
+    {
+      "path": "build/game-ui/Validate-OfficialUiLayout.py",
+      "sha256": "50f0e316452a146f95a2f86bc365069fe227c612a6a47f60ea46cafcf4cfacb0"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiLayoutContractTests.cs",
+      "sha256": "65533e43599ee376333934b80af10e3d1f4a0a8fa30747323bdc3a792cf4a9da"
+    },
+    {
+      "path": "tests/Run-GameUiLayoutContractTests.ps1",
+      "sha256": "7347b52ce89d8be1057383f3353dc02281df9e55e58d864155fa4b78d7edfbe7"
+    }
+  ],
+  "commands": [
+    {
+      "command": "powershell -NoProfile -File tests/Run-GameUiLayoutContractTests.ps1",
+      "exitCode": 0,
+      "result": "pass",
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/layout-contract/layout-contract-tests.log",
+      "logSha256": "c99412e121692189235547a21b40aa3f0bcec581ba94cb2f69fe9170224f73c7"
+    }
+  ],
+  "results": {
+    "nodeCount": 231,
+    "interactiveCount": 109,
+    "hitPairsChecked": 1757,
+    "equipmentSlots": 16,
+    "inventoryCells": 49,
+    "quickbarCells": 10,
+    "statBindings": 57,
+    "existingControlBindings": 8,
+    "additionalImmediateBindings": 4,
+    "hermitPacketActions": 8,
+    "hudEntries": 9,
+    "resolutionCount": 6
+  },
+  "determinism": "12 generated files byte-identical across two clean runs",
+  "compiledReadback": "231 nodes, 109 contained hit regions, 60 placements; unknown owner/resolution rejected; production disabled",
+  "limitations": [
+    "Coordinates are an implementation proposal, not measured client rectangles or actual game acceptance.",
+    "Generated C# is not included in Client.csproj and cannot activate a skin.",
+    "Original 57 stat bindings and 8 controls are covered; four immediate values remain not implemented.",
+    "Final art composition, preview pivot, clipping, real native IME, events/packets and G0 closure remain unfinished."
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "kind": "independent-preparatory-implementation",
+  "forTask": "UI-05",
+  "checkedAt": "2026-11-07T13:58:21.860Z",
+  "taskMarkedDone": false,
+  "releaseAccepted": false,
+  "productionBindingAllowed": false,
+  "summary": "Strict selected-record reference extraction from the installed libraries; 27 screenshot-matched PNG hashes remain unchanged across source revisions. Opaque reference output only.",
+  "sourceChanges": [
+    {
+      "path": "build/game-ui/Build-OfficialUi.ps1",
+      "beforeSha256": "db0bd2c18b6aaa19cd8b26f33f99b8bb29aa96036ae3bdcaaf4ad2da0010da0c",
+      "afterSha256": "1a8222746cba30266ab43116f828e80b53305c7709f4e64d8f431e6136ece848"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiRenderTests.cs",
+      "beforeSha256": "9a4b3f6d15391f1d4c4ab9c52ef110fe2bd09ad557ec03b92ed9ffeb932eb4d1",
+      "afterSha256": "0099b2ff0afe62103da64eacdaa2d1144a2fd977d3548342be0a62fba5b66956"
+    }
+  ],
+  "sourceHashes": [
+    {
+      "path": "build/game-ui/Select-OfficialUi.py",
+      "sha256": "63c673827654d93298dca024d3d31ce3854603d905d1854ada8c438f78332fc0"
+    },
+    {
+      "path": "build/game-ui/Build-OfficialUi.ps1",
+      "sha256": "1a8222746cba30266ab43116f828e80b53305c7709f4e64d8f431e6136ece848"
+    },
+    {
+      "path": "build/game-ui/reference-selection.json",
+      "sha256": "a011cced373a12186898e5043c00dad1ef8b87b3aa81150c678267018db9f928"
+    },
+    {
+      "path": "build/game-ui/selection-source-libraries.json",
+      "sha256": "902153e43cb89d82e2d41ecb9ad3f77df5d3a1cd7a3a5ce0a460c11a1222037c"
+    },
+    {
+      "path": "tests/game-ui/test_selected_ui.py",
+      "sha256": "5b5e984c26d405a457966877267e53d210d78c8bea415c4ed8aec3f08f8ef33c"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiRenderTests.cs",
+      "sha256": "0099b2ff0afe62103da64eacdaa2d1144a2fd977d3548342be0a62fba5b66956"
+    }
+  ],
+  "commands": [
+    {
+      "command": "python -m unittest discover -s tests/game-ui -p test_selected_ui.py -v",
+      "exitCode": 0,
+      "result": "pass",
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/selected-assets/selection-tests.log",
+      "logSha256": "ff865361819129157e6134540a770eedfea7330a0871e998fc8461049a24ef66"
+    },
+    {
+      "command": "python -m unittest discover -s tests/game-ui -p test_decoder.py -v",
+      "exitCode": 0,
+      "result": "pass",
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/selected-assets/decoder-regression.log",
+      "logSha256": "4440d72fb3068fb8a28461835d6173db2d653ea543c1c8e73dcdbbbb32e9e977"
+    },
+    {
+      "command": "Build-OfficialUi.ps1 -SourcePath \"E:/Program Files/ShengquGames/Mir3/Data\" -OutputPath \"E:/workspace/mir3-ui-work/selected-reference-20261107-v2\" -BaselinePath build/game-ui/selection-source-libraries.json -SelectionPath build/game-ui/reference-selection.json",
+      "exitCode": 0,
+      "result": "pass",
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/selected-assets/build-reference.log",
+      "logSha256": "af0a7edf7e9756bddf1f32a2cb5db9324d6c0fcb7162c4de373b4cc3214bb990"
+    },
+    {
+      "command": "Run-GameUiTests.ps1 -Suite Controls -DecodedPath E:/workspace/mir3-ui-work/selected-reference-20261107-v1/Decoded -ReferencePath E:/workspace/mir3-ui-work/selected-reference-20261107-v1/Package -RenderPath E:/workspace/mir3-ui-work/selected-reference-20261107-v1-render",
+      "exitCode": 0,
+      "result": "pass",
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/selected-assets/controls-render.log",
+      "logSha256": "b29d9c336b529ee22c5d5ea06065d883ca70fcba3f909c076f850e17bee5a26c"
+    },
+    {
+      "command": "Run-GameUiTests.ps1 -Suite Controls -DecodedPath E:/workspace/mir3-ui-work/reference-build-v1/Decoded -ReferencePath E:/workspace/mir3-ui-work/reference-build-v1/Package -RenderPath E:/workspace/mir3-ui-work/selected-assets-regression-render",
+      "exitCode": 0,
+      "result": "pass",
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/selected-assets/full-reference-regression.log",
+      "logSha256": "cb2c68a807895321ab657c9f4f21cac7fc70adbae369a394fbde14b1c8d374bf"
+    }
+  ],
+  "checks": {
+    "selectionTests": 20,
+    "strictDecoderRegressionTests": 18,
+    "clientReaderAndControlAssertions": 5756,
+    "selectedTextureGpuReadbacks": 27,
+    "fullReferenceRegressionAssertions": 8726,
+    "fullReferenceTextureGpuReadbacks": 2208,
+    "windowSkinAssertions": 60,
+    "syntheticPixelAssertions": 14,
+    "selectedPngHashesMatchReviewedReferences": true
+  },
+  "outputRoot": "E:/workspace/mir3-ui-work/selected-reference-20261107-v1",
+  "repeatOutputRoot": "E:/workspace/mir3-ui-work/selected-reference-20261107-v2",
+  "artifacts": [
+    {
+      "path": "Decoded/manifest.json",
+      "sha256": "c8455c236ff6065c7e4dee62ebf6dd26d8fb2a56a39476f49e4e8c043bc35d24",
+      "identicalAcrossBuilds": true
+    },
+    {
+      "path": "Package/Reference/UI.Zl",
+      "sha256": "d72263b4f7af015c25e2782425f7fa9ad62b5eb9aa5ce5ff80fe0ffe649a16eb",
+      "identicalAcrossBuilds": true
+    },
+    {
+      "path": "Package/reference-manifest.json",
+      "sha256": "35f354300ef118c4d748e143457cc6b022e127802d1ed9df35831105a3a0af04",
+      "identicalAcrossBuilds": true
+    }
+  ],
+  "limitations": [
+    "No runtime package or actual scene integration. Reference alpha is explicitly opaque and unverified.",
+    "The five unsupported unselected records are not decoded or declared supported. The full strict decoder still rejects these records.",
+    "Button states, composition, final layout and binary transparency masks remain pending. GPU byte readback verifies upload integrity, not visual equivalence.",
+    "1024x768 is confirmed by the user and the settings attachment. Attachment dimensions and unknown Windows DPI are separate metadata.",
+    "Source file version text is inherited from the prior baseline; this run pins the exact MIX/MIZ hashes and image hashes, without claiming the executable version was remeasured."
+  ]
+}

@@ -1,0 +1,4 @@
+PASS: 拾取列表.txt missing, create, UTF-8, preserve, replace and clear
+PASS: 显名列表.txt missing, create, UTF-8, preserve, replace and clear
+PASS: 高亮列表.txt missing, create, UTF-8, preserve, replace and clear
+PASS: nested path creation and non-missing I/O errors

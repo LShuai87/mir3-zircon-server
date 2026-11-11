@@ -1,0 +1,252 @@
+{
+  "schemaVersion": 1,
+  "kind": "effective-scope-asset-usage-contract",
+  "status": "candidate-incomplete",
+  "runtimeReady": false,
+  "productionBindingAllowed": false,
+  "layoutFrozen": false,
+  "referenceResolution": [
+    1024,
+    768
+  ],
+  "windowMode": true,
+  "scope": {
+    "npcCards": "Legacy",
+    "secondaryPopups": "Legacy",
+    "displaySettings": "unchanged",
+    "loginAndCharacterSelection": "unchanged"
+  },
+  "entrypoint": "Client/Envir/GameUiOfficialV1WindowSet.cs",
+  "inputs": [
+    {
+      "path": "build/game-ui/asset-manifest.json",
+      "sha256": "e6eafc9c9a4d4c8f34ab70113d9841d0c0e067d9bb866165fa0639586d56850f"
+    },
+    {
+      "path": "build/game-ui/reference-selection.json",
+      "sha256": "50f476b613f87b52695405c651ec198fcb8d01d7ed7cde9e74db89e744adf685"
+    },
+    {
+      "path": "build/game-ui/composition-recipe.json",
+      "sha256": "d4d3aaaaf0e5fde2cfb284a00db99d02c37cf8e5eb71713b9e210e3b6dc09cff"
+    }
+  ],
+  "surfaces": [
+    {
+      "id": "hud",
+      "roles": [
+        "hud-orb-shell",
+        "hud-command-frame",
+        "hud-hp-fill",
+        "hud-mp-fill",
+        "hud-experience-track",
+        "hud-experience-fill"
+      ],
+      "buttonGroups": [
+        "hud-command-center",
+        "hud-command-top",
+        "hud-command-upper-left",
+        "hud-command-upper-right",
+        "hud-command-lower-left",
+        "hud-command-lower-right",
+        "hud-command-bottom",
+        "hud-shop-icon",
+        "hud-exit-icon",
+        "hud-combat-icon",
+        "hud-potential-icon",
+        "hud-handshake-icon",
+        "hud-horse-icon"
+      ],
+      "reuse": [
+        {
+          "path": "Client/Scenes/Views/MainPanel.GameUi.cs",
+          "anchor": "BeltButton",
+          "reason": "快捷栏开关及攻击/宠物模式和数值复用原控件；文字不从正式版图片提取。"
+        }
+      ]
+    },
+    {
+      "id": "character",
+      "roles": [
+        "character",
+        "character-main-background",
+        "equipment-cell-frame",
+        "character-companion"
+      ],
+      "buttonGroups": [
+        "character-companion-button"
+      ],
+      "reuse": [
+        {
+          "path": "Client/Envir/GameUiCharacterEquipmentLayout.cs",
+          "anchor": "CreateOfficialCandidate",
+          "reason": "角色预览、16个原装备槽、原属性和原操作保留实例及数据来源。"
+        },
+        {
+          "path": "Client/Scenes/Views/CharacterDialog.GameUiCompanions.cs",
+          "anchor": "UseGameUiCompanionCards",
+          "reason": "状态和修炼复用原数值、图标、加点按钮及确认框，移入右侧独立原生卡片；角色主页和装备不切换。"
+        }
+      ]
+    },
+    {
+      "id": "inventory",
+      "roles": [
+        "inventory"
+      ],
+      "buttonGroups": [],
+      "reuse": [
+        {
+          "path": "Client/Scenes/Views/InventoryDialog.GameUi.cs",
+          "anchor": "RemoteSellButton, RemoteFragmentButton, MonsterDropListButton",
+          "reason": "49格原物品控件、三个原操作按钮、金币及负重复用；不将底板上的装饰当作新功能。"
+        }
+      ]
+    },
+    {
+      "id": "belt",
+      "roles": [
+        "quickbar-base"
+      ],
+      "buttonGroups": [],
+      "reuse": [
+        {
+          "path": "Client/Envir/GameUiBeltLayout.cs",
+          "anchor": "OfficialV1",
+          "reason": "10格原物品控件及槽号保持。"
+        }
+      ]
+    },
+    {
+      "id": "minimap",
+      "roles": [
+        "minimap-frame"
+      ],
+      "buttonGroups": [
+        "minimap-collapse-button"
+      ],
+      "reuse": [
+        {
+          "path": "Client/Scenes/Views/MiniMapDialog.GameUi.cs",
+          "anchor": "Panel.DrawTexture = true;",
+          "reason": "实际地图、标记、地图名称、坐标由原控件绘制；额外正式版图标未接入。"
+        }
+      ]
+    },
+    {
+      "id": "chat",
+      "roles": [
+        "chat-history-frame",
+        "chat-input-frame"
+      ],
+      "buttonGroups": [],
+      "reuse": [
+        {
+          "path": "Client/Envir/GameUiChatGroupBinding.cs",
+          "anchor": "private readonly Dictionary<ChatTab, TabState> states",
+          "reason": "原聊天列表、标签、颜色、滚动及消息渲染保持；原输入框/IME保留。"
+        }
+      ]
+    },
+    {
+      "id": "npc-shop",
+      "roles": [
+        "npc-shop"
+      ],
+      "buttonGroups": [],
+      "reuse": [
+        {
+          "path": "Client/Envir/GameUiNpcGoodsBinding.cs",
+          "anchor": "NPCGoodsDialog",
+          "reason": "商店原商品格、翻页、数量和操作继续使用原控件；不覆盖二级服务。"
+        }
+      ]
+    },
+    {
+      "id": "item-tooltip",
+      "roles": [],
+      "buttonGroups": [],
+      "reuse": [
+        {
+          "path": "Client/Envir/GameUiItemTooltipLayout.cs",
+          "anchor": "tooltip.BackColour = Color.FromArgb(232, 12, 12, 12);",
+          "reason": "提示卡背景/边框按代码绘制，文字及颜色继续原逻辑；不需要新增贴图帧。"
+        }
+      ]
+    },
+    {
+      "id": "warehouse",
+      "roles": [
+        "warehouse-background"
+      ],
+      "buttonGroups": [],
+      "reuse": [
+        {
+          "path": "Client/Scenes/Views/StorageDialog.GameUi.cs",
+          "anchor": "UseGameUiStorage",
+          "reason": "统一窗口入口安装可恢复布局；原13列动态网格、容量、筛选、滚动与存取不变。NPC多窗口组合定位及真实操作验收仍待完成。"
+        }
+      ]
+    }
+  ],
+  "compositionOnlyRoles": {
+    "bottom-segmented-frame": "聊天外框及经验底板的合成来源，场景不直接显示此原料帧。",
+    "bottom-segmented-fill": "经验填充的合成来源，场景不直接显示此原料帧。"
+  },
+  "uninstalledButtonGroups": {
+    "chat-speaker-icon": "保留原聊天列表和标签；此组贴图只在包内。",
+    "chat-two-person-icon": "保留原聊天列表和标签；此组贴图只在包内。",
+    "chat-person-icon": "保留原聊天列表和标签；此组贴图只在包内。",
+    "chat-group-icon": "保留原聊天列表和标签；此组贴图只在包内。",
+    "chat-flag-icon": "保留原聊天列表和标签；此组贴图只在包内。",
+    "minimap-zoom-in-button": "没有对应的候选场景绑定；保留包内素材，不代表功能已接入。",
+    "minimap-mountain-button": "没有对应的候选场景绑定；保留包内素材，不代表功能已接入。"
+  },
+  "rules": {
+    "alphaMode": "BinaryMask",
+    "blendMode": "Normal",
+    "offsetMode": "baked",
+    "outputOffset": [
+      0,
+      0
+    ],
+    "pivot": [
+      0,
+      0
+    ],
+    "textureAlignment": 4,
+    "buttonTint": {
+      "hover": [
+        115,
+        100
+      ],
+      "pressed": [
+        75,
+        100
+      ],
+      "disabled": [
+        60,
+        100
+      ]
+    },
+    "rgbCompression": "BC1-lossy",
+    "gpuRgbTolerance": 8
+  },
+  "outstanding": [
+    {
+      "id": "warehouse-background",
+      "surface": "warehouse",
+      "taskIds": [
+        "UI-05",
+        "UI-25"
+      ],
+      "reason": "仓库第93帧已由统一入口安装，原NPC开关不再写入仓库Legacy位置；NPC多窗口组合定位、布局审定及真实操作验收未完成。"
+    }
+  ],
+  "remainingAcceptance": [
+    "逐项审定复用控件及有效范围的原操作/字段覆盖；源码锚点只证明当前声明有出处。",
+    "完成最终PNG/Zl实绘对照：暗底、细线、文字、红蓝边缘、负offset及压缩；本校验不代替GPU/真实游戏验收。"
+  ],
+  "gateClosureAllowed": false,
+  "stagedFrameRoles": {}
+}

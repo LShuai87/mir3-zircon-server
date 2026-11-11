@@ -1,0 +1,296 @@
+{
+  "schemaVersion": 1,
+  "kind": "official-ui-character-slot-semantic-correction",
+  "checkedAtLocalDate": "2026-11-08",
+  "releaseAccepted": false,
+  "referenceResolution": [
+    1024,
+    768
+  ],
+  "sourceChanges": [
+    {
+      "path": "build/game-ui/layout-official-v1.json",
+      "beforeSha256": "99ce647e526840323f44877ec6815bd193c3851343f6831d2ba4572c72026d25",
+      "afterSha256": "fa72dfa5971ff00dd71177e18465468f0d29253b38c55cce6655a56e44c0d41e"
+    },
+    {
+      "path": "build/game-ui/Validate-OfficialUiLayout.py",
+      "beforeSha256": "b587840abf96fbe55f7580f99379054ebb7794f5fe34f622a6103ddc85ab55cf",
+      "afterSha256": "1294985d1da652f3f91f1f9fa9d3c21f060e02bdb044c769ed5697a4c3ffbee7"
+    },
+    {
+      "path": "Client/Envir/GameUiCharacterEquipmentLayout.cs",
+      "beforeSha256": "26b4b94e2bd15a853b9af0f41ee7eedd84f9ce529d43c56a452a2ea3b330d7af",
+      "afterSha256": "8b1029ca1c26f36791d3cf6b8fa30d739dda8e6e31c4a45a2c41ab52afb20487"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiCharacterPageTests.cs",
+      "beforeSha256": "96bd9ffec5ada94c7c50789cfa2b4abf99bbef6e148ee66d2c4dbb43777aa887",
+      "afterSha256": "c3a81250e1664a4cd6cde4694f5b08f3125ab3b903a5b09b657a5014de13be7a"
+    },
+    {
+      "path": "build/game-ui/character-bindings.json",
+      "beforeSha256": "99978681ca8d1d5e5cab18d923be40cb94e8abf60d964977cd054e4da32177e5",
+      "afterSha256": "44cc478ae837f5fa52f940d56a976f1bef7a77128f96771740db4f8d06594697"
+    },
+    {
+      "path": "tests/game-ui/test_character_binding_contract.py",
+      "beforeSha256": "daf06c30da705c56b480b0f0b046b567b9f0b041217940df346c43cddae1651c",
+      "afterSha256": "fb48ed6ea9c017a65d4bebd3104e6d34040ac6b5e32baadb41919814b5248bed"
+    }
+  ],
+  "sourceHashes": [
+    {
+      "path": "build/game-ui/layout-official-v1.json",
+      "sha256": "fa72dfa5971ff00dd71177e18465468f0d29253b38c55cce6655a56e44c0d41e"
+    },
+    {
+      "path": "build/game-ui/Validate-OfficialUiLayout.py",
+      "sha256": "1294985d1da652f3f91f1f9fa9d3c21f060e02bdb044c769ed5697a4c3ffbee7"
+    },
+    {
+      "path": "Client/Envir/GameUiCharacterEquipmentLayout.cs",
+      "sha256": "8b1029ca1c26f36791d3cf6b8fa30d739dda8e6e31c4a45a2c41ab52afb20487"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiCharacterPageTests.cs",
+      "sha256": "c3a81250e1664a4cd6cde4694f5b08f3125ab3b903a5b09b657a5014de13be7a"
+    },
+    {
+      "path": "build/game-ui/character-bindings.json",
+      "sha256": "44cc478ae837f5fa52f940d56a976f1bef7a77128f96771740db4f8d06594697"
+    },
+    {
+      "path": "tests/game-ui/test_character_binding_contract.py",
+      "sha256": "fb48ed6ea9c017a65d4bebd3104e6d34040ac6b5e32baadb41919814b5248bed"
+    }
+  ],
+  "commands": [
+    {
+      "command": "MSBuild Client/Client.csproj /t:Build /p:Configuration=Debug /p:Platform=AnyCPU /nologo /v:minimal",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/character-slot-semantics/build-debug.log",
+      "logSha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "command": "MSBuild Client/Client.csproj /t:Build /p:Configuration=Release /p:Platform=AnyCPU /nologo /v:minimal",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/character-slot-semantics/build-release.log",
+      "logSha256": "c9e24428be1e56c8408af17aacfea3413de3953bfe426d10eb768782f5005ebc"
+    },
+    {
+      "command": "python -m unittest discover -s tests/game-ui -p test_*.py",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/character-slot-semantics/python.log",
+      "logSha256": "6514c48a86257c302cb2bc7453595cd09610666e87ae6879f0f53884118be1ba"
+    },
+    {
+      "command": "tests/Run-GameUiCharacterPageTests.ps1",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/character-slot-semantics/pages.log",
+      "logSha256": "c25d0e640d56207ef094b893b52d9238b6c4ab89f2c54c35c3df83d3c29b6f10"
+    },
+    {
+      "command": "tests/Run-GameUiFullSceneTests.ps1 -PackagePath <unchanged 92-frame package> -EvidenceDirectory <fresh scene directory>",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/character-slot-semantics/scene.log",
+      "logSha256": "0d85d4de7905eb608acc989200b5dfcc19842b35b62586889490caf606d4a988"
+    },
+    {
+      "command": "tests/Run-GameUiItemInteractionTests.ps1 -PackagePath <unchanged 92-frame package> -EvidenceDirectory <fresh items directory>",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/character-slot-semantics/items.log",
+      "logSha256": "ab9c87311be86e46702bd4397142393e28f9dd184bc5dcb5d1274cd8458620a5"
+    },
+    {
+      "command": "tests/Run-GameUiWindowSetTests.ps1 -PackagePath <unchanged 92-frame package>",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/character-slot-semantics/windows.log",
+      "logSha256": "2d22e601a523fd4d1b3aeeeee1695e0362b21f8e942eb157fa9438819bf07f29"
+    },
+    {
+      "command": "python build/game-ui/Assemble-CharacterBindings.py --check",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/character-slot-semantics/bindings.log",
+      "logSha256": "5932bc5269e5c6e34910ecd3f36fca9797c3ba463775aafeaf2ec6cd4131e437"
+    },
+    {
+      "command": "python build/game-ui/Validate-OfficialUiLayout.py --guards",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/character-slot-semantics/layout.log",
+      "logSha256": "daf54465b490a35d68188f8d4f13fdc11bda5e451254a0f3a4f45644bad2b452"
+    },
+    {
+      "command": "x86 PowerShell build/game-ui/New-GameUiReleaseManifest.ps1 -ClientDirectory E:/workspace/Debug/Client -ResourceRoot <unchanged staged resources> -OutputPath <fresh debug manifest>",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/character-slot-semantics/release-debug.log",
+      "logSha256": "8f74b7dd292873c0b0b4c7c08c5d1d2b45150671a9edfd65291a648d45a4097c"
+    },
+    {
+      "command": "x86 PowerShell build/game-ui/New-GameUiReleaseManifest.ps1 -ClientDirectory E:/workspace/Release/Client -ResourceRoot <unchanged staged resources> -OutputPath <fresh release manifest>",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/character-slot-semantics/release-release.log",
+      "logSha256": "966971b53a8cc9bc78401764b86b70e5dfa9272f28ab43080e29199d67cf85d9"
+    }
+  ],
+  "verification": {
+    "debugBuild": "pass",
+    "releaseBuild": "pass",
+    "pythonTests": 139,
+    "characterPageChecks": 17250,
+    "normalSceneChecks": 180,
+    "normalSceneResolutions": 6,
+    "itemInteractionChecks": 7519,
+    "coordinateHits": 1149,
+    "windowSetChecks": 9267,
+    "independentSemanticRegression": "Old valid non-overlapping Helmet and Shoes rectangles are rejected; compiled geometry also checked against preview relationships",
+    "visualInspection": "Viewed actual offline character page capture; new slots agree with plan directions and remain outside preview",
+    "packageUnchangedSha256": "b7e648b077be93af3fad03772571f07bf338288310623e8d95f3062e91138c57"
+  },
+  "limitations": [
+    "Layout remains a candidate; no full G0 closure or live-server/IME acceptance",
+    "Project-specific 9+7 equipment adaptation; not a pixel-identical copy of official gameplay",
+    "Real login/relogin, server transactions, IME and deployment/rollback acceptance remain open"
+  ],
+  "evidenceFiles": [
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-slot-semantics/before-after.png",
+      "sha256": "85b21efb5fa4393c492c63fbed83a63a3865519af1abc5c9b36d3de0a93a2882"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-slot-semantics/before-character.png",
+      "sha256": "575f37d7956736f5421aab664bdc073e17f5e9b2158d0ed1abd42260e3ecceea"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-slot-semantics/before.json",
+      "sha256": "75483062f2eec73fba99ff95f0d177bd8e1397372d18e9460d5635f408a6ba74"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-slot-semantics/bindings.log",
+      "sha256": "5932bc5269e5c6e34910ecd3f36fca9797c3ba463775aafeaf2ec6cd4131e437"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-slot-semantics/build-debug.log",
+      "sha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-slot-semantics/build-release.log",
+      "sha256": "c9e24428be1e56c8408af17aacfea3413de3953bfe426d10eb768782f5005ebc"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-slot-semantics/items/assertions.txt",
+      "sha256": "9cb3328b9aa80e38b692da1e5910593e6b5c17766e5b454bb28e6ff503ec57ad"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-slot-semantics/items/coordinate-hits.txt",
+      "sha256": "7590d5d2177451b51f7c4e12465d227bf05589b8742611e4be1253d717e06948"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-slot-semantics/items/legacy-packet-trace.txt",
+      "sha256": "2616428afb2fc1488d5a1123ba5066899b1115f9a7901986dd2ca6637713906d"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-slot-semantics/items/metrics.json",
+      "sha256": "4b8a42b819e12cd95e4f9caab8fbd2c622b4541454cfe03ad922ee75be1c1311"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-slot-semantics/items/official-filled-equipment.png",
+      "sha256": "1985a80e18ba7d96c0eba120a030337105df852d5ad1194e48496ac6da2bf4b1"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-slot-semantics/items/official-filled-extra.png",
+      "sha256": "979db6f4cb108e31373b87803f30f8629fb4b1e9d4ebc6d7a16b2bd5b85675d8"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-slot-semantics/items/official-packet-trace.txt",
+      "sha256": "2616428afb2fc1488d5a1123ba5066899b1115f9a7901986dd2ca6637713906d"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-slot-semantics/items/official-reentry-filled-equipment.png",
+      "sha256": "1985a80e18ba7d96c0eba120a030337105df852d5ad1194e48496ac6da2bf4b1"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-slot-semantics/items/official-reentry-packet-trace.txt",
+      "sha256": "2616428afb2fc1488d5a1123ba5066899b1115f9a7901986dd2ca6637713906d"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-slot-semantics/items/tested-runtime.json",
+      "sha256": "17e5349e109594b7c1d8afa602d8711a9a10a2f686dd5f55f51b49cbcab8f213"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-slot-semantics/items.log",
+      "sha256": "ab9c87311be86e46702bd4397142393e28f9dd184bc5dcb5d1274cd8458620a5"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-slot-semantics/layout.log",
+      "sha256": "daf54465b490a35d68188f8d4f13fdc11bda5e451254a0f3a4f45644bad2b452"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-slot-semantics/pages.log",
+      "sha256": "c25d0e640d56207ef094b893b52d9238b6c4ab89f2c54c35c3df83d3c29b6f10"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-slot-semantics/python.log",
+      "sha256": "6514c48a86257c302cb2bc7453595cd09610666e87ae6879f0f53884118be1ba"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-slot-semantics/release-debug.json",
+      "sha256": "dcbc769da4871c2e65fe809f1fa9f4704d915b298f72f98b8a15b8a8e9c86a3e"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-slot-semantics/release-debug.log",
+      "sha256": "8f74b7dd292873c0b0b4c7c08c5d1d2b45150671a9edfd65291a648d45a4097c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-slot-semantics/release-release.json",
+      "sha256": "705ac9921e29aef9fe83129e1a5b1a51ecfcaf4edb2936d81a8569a95174b0a2"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-slot-semantics/release-release.log",
+      "sha256": "966971b53a8cc9bc78401764b86b70e5dfa9272f28ab43080e29199d67cf85d9"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-slot-semantics/scene/official-CharacterTab.png",
+      "sha256": "b00343ffc521f9f65dd70b9d8f291f5ba2a94f31da7fac6fff29976bc4ef4353"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-slot-semantics/scene/official-reentry-panels.png",
+      "sha256": "ce00c93ef6111de67eacf7f47061bf70310d9b140696dc7d7ae2ac2b5d98157d"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-slot-semantics/scene/official-reset-1024x768.png",
+      "sha256": "b00343ffc521f9f65dd70b9d8f291f5ba2a94f31da7fac6fff29976bc4ef4353"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-slot-semantics/scene/official-reset-1920x1080.png",
+      "sha256": "5b85dc8388c93abb926091b6e1ad4668b28a5bcbcca5e4ed001214e4a74c24e9"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-slot-semantics/scene/tested-runtime.json",
+      "sha256": "17e5349e109594b7c1d8afa602d8711a9a10a2f686dd5f55f51b49cbcab8f213"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-slot-semantics/scene.log",
+      "sha256": "0d85d4de7905eb608acc989200b5dfcc19842b35b62586889490caf606d4a988"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-slot-semantics/semantic-map.json",
+      "sha256": "d7151160020337254fe15dffe40c48d7734d7a36ebfced622863f93b96a13654"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-slot-semantics/windows.log",
+      "sha256": "2d22e601a523fd4d1b3aeeeee1695e0362b21f8e942eb157fa9438819bf07f29"
+    }
+  ]
+}

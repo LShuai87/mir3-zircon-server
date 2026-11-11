@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "sourceFileVersion": "1.9.3.137",
+  "libraries": [
+    {
+      "name": "UI",
+      "slots": 2045,
+      "present": 1175,
+      "mixSha256": "591913aad522549f3e5280e4bea4812f57e9a2a2df4775bf6924e3a6a5e82443",
+      "mizSha256": "4e3995abe034e1da89723bce5ed2503b3d23f659ad7df183d886b7fab9740e56"
+    },
+    {
+      "name": "Interface",
+      "slots": 420,
+      "present": 349,
+      "mixSha256": "7c44f857fbc614e7ba9a5a52c1882e097a1157c6819697a37617952c7053d912",
+      "mizSha256": "f4a726ec4a1e95428548de676fcccb32b84487b616c891a8c1070d8ffed1494e"
+    },
+    {
+      "name": "GameInter",
+      "slots": 181,
+      "present": 112,
+      "mixSha256": "07bd3102c2257013e3fa082a79844c676b2cb79fc0486001c43635e314fd238e",
+      "mizSha256": "2fd1450a515d411b8747a41a9570053566c6665fa08d19490f55e420a20f7ba1"
+    },
+    {
+      "name": "ProgUse",
+      "slots": 1630,
+      "present": 572,
+      "mixSha256": "4e6b71f1b331eeac29a1ea65989a28fbffa47273be0b3696445fe8c73501fb14",
+      "mizSha256": "335de71e409f6109f7aa1c44e3804b4e5ac1807acb6c82c0c8c94962c7c6d337"
+    }
+  ]
+}

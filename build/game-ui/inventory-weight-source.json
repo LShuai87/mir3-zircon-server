@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "sourceLibrary": "UI",
+  "sourceFileVersion": "1.15.0.7269",
+  "capturedAt": "2026-11-10",
+  "mixSha256": "f35e10788b025359ecb35291d17608cd16d2f86414368569481239896261d819",
+  "mizSha256": "9142a25182b48469faa5120a94db73f02b2a17e4161ebf8c3e12804d4ca7af5c",
+  "sourceSize": [
+    120,
+    6
+  ],
+  "targetSize": [
+    120,
+    6
+  ],
+  "slicePadding": 2,
+  "frames": [
+    {
+      "state": "normal",
+      "sourceIndex": 121,
+      "pngSha256": "b0b7f42bdb225b3acba1f4fa8beb3734c0656ed63198577f5c958f727967e3d1"
+    },
+    {
+      "state": "overweight",
+      "sourceIndex": 253,
+      "pngSha256": "e4d6b394da384fa6e0b2a55fe12254df7975ca39f55eadb4572e1fcf43f0a3b3"
+    }
+  ],
+  "reference": "Official UI[121] normal weight fill and UI[253] warning fill; native trough remains in inventory atlas",
+  "output": "Client/Resources/GameUi/inventory-weight.png"
+}

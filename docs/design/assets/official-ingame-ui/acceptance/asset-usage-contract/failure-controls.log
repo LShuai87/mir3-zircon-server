@@ -1,0 +1,23 @@
+test_bc1_payload_mutation_fails_even_with_new_package_digest (__main__.EffectiveAssetUsageTests.test_bc1_payload_mutation_fails_even_with_new_package_digest) ... ok
+test_button_state_swap_fails (__main__.EffectiveAssetUsageTests.test_button_state_swap_fails) ... ok
+test_current_inventory_does_not_claim_scope_complete (__main__.EffectiveAssetUsageTests.test_current_inventory_does_not_claim_scope_complete) ... ok
+test_deleted_surface_fails (__main__.EffectiveAssetUsageTests.test_deleted_surface_fails) ... ok
+test_dynamic_frame_expression_requires_review (__main__.EffectiveAssetUsageTests.test_dynamic_frame_expression_requires_review) ... ok
+test_excluded_npc_scope_cannot_expand (__main__.EffectiveAssetUsageTests.test_excluded_npc_scope_cannot_expand) ... ok
+test_missing_live_role_fails (__main__.EffectiveAssetUsageTests.test_missing_live_role_fails) ... ok
+test_new_frame_binding_requires_review (__main__.EffectiveAssetUsageTests.test_new_frame_binding_requires_review) ... ok
+test_nonbinary_blend_declaration_fails (__main__.EffectiveAssetUsageTests.test_nonbinary_blend_declaration_fails) ... ok
+test_require_complete_cli_refuses_current_candidate (__main__.EffectiveAssetUsageTests.test_require_complete_cli_refuses_current_candidate) ... ok
+test_runtime_activation_cannot_be_authorized (__main__.EffectiveAssetUsageTests.test_runtime_activation_cannot_be_authorized) ... ok
+test_source_identity_swap_fails (__main__.EffectiveAssetUsageTests.test_source_identity_swap_fails) ... ok
+test_stale_control_reuse_evidence_fails (__main__.EffectiveAssetUsageTests.test_stale_control_reuse_evidence_fails) ... ok
+test_tint_change_fails (__main__.EffectiveAssetUsageTests.test_tint_change_fails) ... ok
+test_unaccounted_packaged_art_fails (__main__.EffectiveAssetUsageTests.test_unaccounted_packaged_art_fails) ... ok
+test_uninstalled_art_cannot_be_reported_as_installed (__main__.EffectiveAssetUsageTests.test_uninstalled_art_cannot_be_reported_as_installed) ... ok
+test_unknown_button_expression_requires_review (__main__.EffectiveAssetUsageTests.test_unknown_button_expression_requires_review) ... ok
+test_warehouse_gap_cannot_be_silently_erased (__main__.EffectiveAssetUsageTests.test_warehouse_gap_cannot_be_silently_erased) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.143s
+
+OK

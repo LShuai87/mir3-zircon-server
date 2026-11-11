@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "checkedAtLocalDate": "2026-11-08",
+  "releaseAccepted": false,
+  "checks": [
+    {
+      "name": "source:build/game-ui/README.md",
+      "passed": true
+    },
+    {
+      "name": "source:tests/Run-GameUiTests.ps1",
+      "passed": true
+    },
+    {
+      "name": "source:tests/Run-GameUiNpcTests.ps1",
+      "passed": true
+    },
+    {
+      "name": "source:tests/game-ui/OfficialUiNpcTests.cs",
+      "passed": true
+    },
+    {
+      "name": "source:tests/game-ui/OfficialUiFullSceneTests.cs",
+      "passed": true
+    },
+    {
+      "name": "source:Client/Scenes/Views/NPCDialog.cs",
+      "passed": true
+    },
+    {
+      "name": "source:Client/Scenes/GameScene.cs",
+      "passed": true
+    },
+    {
+      "name": "source:Client/Envir/CConnection.cs",
+      "passed": true
+    },
+    {
+      "name": "transition:build/game-ui/README.md",
+      "passed": true
+    },
+    {
+      "name": "transition:tests/Run-GameUiTests.ps1",
+      "passed": true
+    },
+    {
+      "name": "historical implementation plan",
+      "passed": true
+    },
+    {
+      "name": "candidate package",
+      "passed": true
+    },
+    {
+      "name": "runtime current:Zircon.exe",
+      "passed": true
+    },
+    {
+      "name": "runtime continuity:Zircon.exe",
+      "passed": true
+    },
+    {
+      "name": "runtime current:Library.dll",
+      "passed": true
+    },
+    {
+      "name": "runtime continuity:Library.dll",
+      "passed": true
+    },
+    {
+      "name": "runtime current:SlimDX.dll",
+      "passed": true
+    },
+    {
+      "name": "runtime continuity:SlimDX.dll",
+      "passed": true
+    },
+    {
+      "name": "preserved HEAD implementation:Client/Scenes/Views/NPCDialog.cs",
+      "passed": true
+    },
+    {
+      "name": "preserved implementation:Client/Scenes/GameScene.cs",
+      "passed": true
+    },
+    {
+      "name": "preserved HEAD implementation:Client/Envir/CConnection.cs",
+      "passed": true
+    },
+    {
+      "name": "trace equality:official-trace.txt",
+      "passed": true
+    },
+    {
+      "name": "trace equality:official-reentry-trace.txt",
+      "passed": true
+    },
+    {
+      "name": "metrics match report",
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+生成启动时间为 2026/11/7 17:19:40。
+日志记录详细程度设置为: Normal。
+项目“E:\workspace\mir3-zircon-server\Client\Client.csproj”在节点 1 上(Build 个目标)。
+项目“E:\workspace\mir3-zircon-server\Client\Client.csproj”(1)正在节点 1 上生成“E:\workspace\mir3-zircon-server\Library\Library.csproj”(2:2) (默认目标)。
+GenerateTargetFrameworkMonikerAttribute:
+正在跳过目标“GenerateTargetFrameworkMonikerAttribute”，因为所有输出文件相对于输入文件而言都是最新的。
+CoreCompile:
+正在跳过目标“CoreCompile”，因为所有输出文件相对于输入文件而言都是最新的。
+CopyFilesToOutputDirectory:
+  Library -> E:\workspace\Debug\Library\Library.dll
+已完成生成项目“E:\workspace\mir3-zircon-server\Library\Library.csproj”(默认目标)的操作。
+CoreResGen:
+  正在将资源文件“Properties\Resources.resx”处理到“obj\Debug\Client.Properties.Resources.resources”中。
+  正在将资源文件“TargetForm.resx”处理到“obj\Debug\Client.TargetForm.resources”中。
+GenerateTargetFrameworkMonikerAttribute:
+正在跳过目标“GenerateTargetFrameworkMonikerAttribute”，因为所有输出文件相对于输入文件而言都是最新的。
+CoreCompile:
+  D:\Program Files\Microsoft Visual Studio\2022\Enterprise\MSBuild\Current\Bin\Roslyn\csc.exe /noconfig /unsafe+ /nowarn:1701,1702 /fullpaths /nostdlib+ /platform:x86 /errorreport:prompt /warn:4 /define:DEBUG;TRACE /highentropyva+ /reference:E:\workspace\Debug\Library\Library.dll /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\Microsoft.CSharp.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\mscorlib.dll" /reference:E:\workspace\mir3-zircon-server\Components\SlimDX\x86\SlimDX.dll /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.Core.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.Data.DataSetExtensions.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.Data.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.Deployment.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.Drawing.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.Web.Extensions.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.Windows.Forms.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.Xml.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.Xml.Linq.dll" /debug+ /debug:full /filealign:512 /optimize- /out:obj\Debug\Zircon.exe /subsystemversion:6.00 /resource:obj\Debug\Client.Properties.Resources.resources /resource:obj\Debug\Client.TargetForm.resources /target:winexe /utf8output /win32icon:Zircon.ico /langversion:default Controls\DXInputWindow.cs Controls\DXItemAmountWindow.cs Controls\DXAnimatedControl.cs Controls\DXButton.cs Controls\DXCheckBox.cs Controls\DXColourControl.cs Controls\DXComboBox.cs Controls\DXConfigWindow.cs Controls\DXControl.cs Controls\DXKeyBindWindow.cs Controls\DXListBox.cs Controls\DXNumberTextBox.cs Controls\DXVScrollBar.cs Envir\ClientConnectionAttempt.cs Envir\ItemListStorage.cs Envir\CConnection.cs Envir\CEnvir.cs Envir\GameUiLayoutStore.cs Envir\Config.cs Envir\DXManager.cs Envir\DXSound.cs Envir\DXSoundManager.cs Envir\Translations\ChineseMessages.cs Envir\Translations\EnglishMessages.cs Envir\Translations\StringMessages.cs Models\GameUi\GameUiFillGeometry.cs Models\MirLibrary.cs Models\DamageInfo.cs Models\ItemObject.cs Models\MapObject.cs Models\MirEffect.cs Models\MirProjectile.cs Models\MonsterObject.cs Models\MonsterHudState.cs Models\NPCObject.cs Models\ObjectAction.cs Models\PlayerObject.cs Models\SpellObject.cs Models\UserObject.cs Controls\DXImageControl.cs Controls\DXItemCell.cs Controls\DXItemGrid.cs Controls\DXLabel.cs Controls\DXMessageBox.cs Controls\DXNumberBox.cs Controls\DXScene.cs Controls\DXTabControl.cs Controls\DXTextBox.cs Controls\DXWindow.cs Controls\GameUiWindowSkin.cs Program.cs Properties\AssemblyInfo.cs Properties\Resources.Designer.cs Scenes\GameScene.cs Scenes\LoginScene.cs Scenes\SelectScene.cs Scenes\Views\AutoPotionDialog.cs Scenes\Views\BeltDialog.cs Scenes\Views\BigMapDialog.cs Scenes\Views\BuffDialog.cs Scenes\Views\CharacterDialog.cs Scenes\Views\ChatOptionsDialog.cs Scenes\Views\ChatTextBox.cs Scenes\Views\ChatTab.cs Scenes\Views\CompanionDialog.cs Scenes\Views\BlockDialog.cs Scenes\Views\EditCharacterDialog.cs Scenes\Views\FortuneCheckerDialog.cs Scenes\Views\GuildDialog.cs Scenes\Views\MagicBarDialog.cs Scenes\Views\MailDialog.cs Scenes\Views\MarketPlaceDialog.cs Scenes\Views\GroupDialog.cs Scenes\Views\InspectDialog.cs Scenes\Views\InventoryDialog.cs Scenes\Views\ExitDialog.cs Scenes\Views\MagicDialog.cs Scenes\Views\MainPanel.cs Scenes\Views\MapControl.cs Scenes\Views\MiniMapDialog.cs Scenes\Views\MonsterDialog.cs Scenes\Views\MonsterDropItemsDialog.cs Scenes\Views\MonsterDropListDialog.cs Scenes\Views\NPCDialog.cs Scenes\Views\QuestDialog.cs Scenes\Views\QuestTrackerDialog.cs Scenes\Views\RankingDialog.cs Scenes\Views\StorageDialog.cs Scenes\Views\TradeDialog.cs TargetForm.cs UserModels\ChatTabControlSetting.cs UserModels\ChatTabPageSetting.cs UserModels\WindowSetting.cs UserModels\KeyBindInfo.cs Properties\Settings.Designer.cs "obj\Debug\.NETFramework,Version=v4.8.AssemblyAttributes.cs"
+  CompilerServer: server - server processed compilation - Client
+CopyFilesToOutputDirectory:
+  正在将文件从“E:\workspace\mir3-zircon-server\Client\obj\Debug\Zircon.exe”复制到“E:\workspace\Debug\Client\Zircon.exe”。
+  Client -> E:\workspace\Debug\Client\Zircon.exe
+  正在将文件从“E:\workspace\mir3-zircon-server\Client\obj\Debug\Zircon.pdb”复制到“E:\workspace\Debug\Client\Zircon.pdb”。
+已完成生成项目“E:\workspace\mir3-zircon-server\Client\Client.csproj”(Build 个目标)的操作。
+
+已成功生成。
+    0 个警告
+    0 个错误
+
+已用时间 00:00:03.68

@@ -1,0 +1,166 @@
+{
+  "schemaVersion": 1,
+  "kind": "official-ingame-ui-npc-shop-candidate-assets",
+  "checkedAtLocalDate": "2026-11-08",
+  "releaseAccepted": false,
+  "referenceResolution": [
+    1024,
+    768
+  ],
+  "results": {
+    "selectedSources": 30,
+    "candidateFrames": 93,
+    "buttonStateSets": 19,
+    "existingPngsByteIdentical": 92,
+    "existingBc1PayloadsByteIdentical": 92,
+    "repeatedDecodedFiles": 33,
+    "repeatedPngs": 93,
+    "repeatedPackageByteIdentical": true,
+    "indexMigrations": 5,
+    "negativeControlsPassed": 5,
+    "logicalAlphaPixelsChecked": 1044977,
+    "transparentPaddingPixelsChecked": 16383,
+    "opaqueBlackInteriorPixelsPreserved": 4262,
+    "gpuFramesAndCompositions": 96,
+    "gpuPixelsCompared": 1181327,
+    "gpuMaxRgbDifference": 5,
+    "gpuOpaqueRgbTolerance": 8,
+    "gpuTransparentRgbExact": true,
+    "runtimeReady": false,
+    "productionBindingAllowed": false,
+    "activeCatalogChanged": false
+  },
+  "sourceChanges": [],
+  "sourceHashes": [
+    {
+      "path": "build/game-ui/npc-shop-selection.json",
+      "sha256": "c6600f1d895d0002dff43947d520c3a625023d17aa3ccc7cf23748dadceadeaa"
+    },
+    {
+      "path": "build/game-ui/npc-shop-composition-recipe.json",
+      "sha256": "ac9402028994f1666b3513155378dd2696106f0259745d08f3b1aa274eb69e3a"
+    },
+    {
+      "path": "tests/game-ui/Verify-NpcShopAssets.py",
+      "sha256": "aec29f483718fed494cb30243b405f51607f65bc9ec28e6fef5e6418c5fff4fd"
+    },
+    {
+      "path": "build/game-ui/asset-manifest.json",
+      "sha256": "77946f30a67f8d433d0a0a8c1e2660faf2464239045995075808d57a5b9a7f58"
+    },
+    {
+      "path": "Client/Envir/GameUiOfficialV1Catalog.g.cs",
+      "sha256": "ee3063da968958fa824522c1e5e5ad9b3c31ecfd8f2cdc3fb5b64d869ca837cf"
+    }
+  ],
+  "commands": [
+    {
+      "command": "python build/game-ui/Select-OfficialUi.py --source \"E:/Program Files/ShengquGames/Mir3/Data\" --output \"E:/workspace/mir3-ui-work/npc-shop-assets-20261108-v1/decoded-repeat\" --baseline build/game-ui/selection-source-libraries.json --selection build/game-ui/npc-shop-selection.json",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-shop-assets/select.log",
+      "logSha256": "0de481b4b58f7569a034b68040c9a379dd4432fc745f7852782cea93e5e84bf4"
+    },
+    {
+      "command": "python build/game-ui/Compose-OfficialUi.py --decoded \"E:/workspace/mir3-ui-work/npc-shop-assets-20261108-v1/decoded\" --output \"E:/workspace/mir3-ui-work/npc-shop-assets-20261108-v1/art\" --recipe build/game-ui/npc-shop-composition-recipe.json",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-shop-assets/compose.log",
+      "logSha256": "87e81035a57a18b2232423959c631420eb7c5cbb6e92e792efaac36c2f6084d6"
+    },
+    {
+      "command": "python build/game-ui/Compose-OfficialUi.py --decoded \"E:/workspace/mir3-ui-work/npc-shop-assets-20261108-v1/decoded-repeat\" --output \"E:/workspace/mir3-ui-work/npc-shop-assets-20261108-v1/art-repeat\" --recipe build/game-ui/npc-shop-composition-recipe.json",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-shop-assets/compose-repeat.log",
+      "logSha256": "87e81035a57a18b2232423959c631420eb7c5cbb6e92e792efaac36c2f6084d6"
+    },
+    {
+      "command": "E:/workspace/Debug/ImageManager/ImageManager.exe --official-ui prepared \"E:/workspace/mir3-ui-work/npc-shop-assets-20261108-v1/art\" \"E:/workspace/mir3-ui-work/npc-shop-assets-20261108-v1/zl\" \"E:/workspace/mir3-ui-work/npc-shop-assets-20261108-v1/art/composed-manifest.json\"",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-shop-assets/package.log",
+      "logSha256": "193c1f4310fa4696a9fbb29338379c41439f6d8f68e4279d97307d265902cc31"
+    },
+    {
+      "command": "E:/workspace/Debug/ImageManager/ImageManager.exe --official-ui prepared \"E:/workspace/mir3-ui-work/npc-shop-assets-20261108-v1/art-repeat\" \"E:/workspace/mir3-ui-work/npc-shop-assets-20261108-v1/zl-repeat\" \"E:/workspace/mir3-ui-work/npc-shop-assets-20261108-v1/art-repeat/composed-manifest.json\"",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-shop-assets/package-repeat.log",
+      "logSha256": "9653f3ed931c9496c7b73a3a284e9d67cea30e69e780964ee1f59331c5219259"
+    },
+    {
+      "command": "python tests/game-ui/Verify-ComposedUi.py --art \"E:/workspace/mir3-ui-work/npc-shop-assets-20261108-v1/art\" --package \"E:/workspace/mir3-ui-work/npc-shop-assets-20261108-v1/zl\" --output \"E:/workspace/mir3-ui-work/npc-shop-assets-20261108-v1/bc1\"",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-shop-assets/bc1.log",
+      "logSha256": "b2a57f66aa25cabe27602801ca5d347e509334b37587b963a0c28259e1f7113b"
+    },
+    {
+      "command": "tests/Run-GameUiComposedRenderTests.ps1 -PackagePath \"E:/workspace/mir3-ui-work/npc-shop-assets-20261108-v1/zl\" -VerificationPath \"E:/workspace/mir3-ui-work/npc-shop-assets-20261108-v1/bc1\" -RenderPath \"E:/workspace/mir3-ui-work/npc-shop-assets-20261108-v1/render-verified\"",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-shop-assets/render.log",
+      "logSha256": "d7d803f66f92b1096014e0aa05fb7fa816d74ed31ae83cc44452fc8743fa94d7"
+    },
+    {
+      "command": "python tests/game-ui/Verify-NpcShopAssets.py --root \"E:/workspace/mir3-zircon-server\" --work \"E:/workspace/mir3-ui-work/npc-shop-assets-20261108-v1\" --previous \"E:/workspace/mir3-ui-work/compact-wheel-20261108-v1\" --output docs/design/assets/official-ingame-ui/acceptance/npc-shop-assets/reproduction-validation.json",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-shop-assets/reproduction.log",
+      "logSha256": "291370ff91e600ee065937c6421dc7de4a1bd9ef2a588cefac9faebc5d8e060b"
+    },
+    {
+      "command": "python build/game-ui/Validate-UiTasks.py",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-shop-assets/task-validation.log",
+      "logSha256": "90e3ddffa807ef19523e77855653984be659ff7ab47ec66f04d41348c4cb85b3"
+    },
+    {
+      "command": "git -c core.whitespace=cr-at-eol diff --check",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-shop-assets/whitespace-check.log",
+      "logSha256": "be1a00df4e1d341ba6c0575ec394503282ac98876d290692f8d29706b26d3107"
+    }
+  ],
+  "sourcePlanSha256": "f8c0a002b3821fabb54993792c354c4eff35eec51f9cfdc418535017c13069e9",
+  "previousPackageSha256": "b469289d105e2404361033c81869b610399d7610edee5143dd7e62d1803ccfa7",
+  "packageSha256": "50ec53a62c5b564c3e1bf736c5be01e6d86ebbd2cd08994578aafeb7ce031ddb",
+  "packagePath": "E:/workspace/mir3-ui-work/npc-shop-assets-20261108-v1/zl/OfficialV1.Zl",
+  "packageByteLength": 533106,
+  "limitations": [
+    "独立商品商店底图已补齐；候选93帧尚未接入运行控件。",
+    "新增底图索引87使五项派生帧索引后移；不得与现有92帧编译目录混用，接入前必须同步生成并验证新目录。",
+    "透明策略为边缘连通纯黑转二值透明；其余RGB不修改。PNG原色到BC1的有损压缩误差见bc1-verification.json，D3D9到BC1独立参考的差值另记，不混为零误差。",
+    "NPC交互卡片及按钮打开的二级弹窗仍按已确认范围保留。",
+    "1024×768窗口模式为设置基准；附件像素尺寸单独记录，不推断DPI或客户区坐标。",
+    "Legacy默认、RuntimeReady=false、productionBindingAllowed=false；UI-05及四项G0继续未完成，真实服务器/中文IME/部署回退尚未验收。"
+  ],
+  "diagnostics": [
+    "首次D3D9命令将Zl文件误传为包目录，且相对Tee日志路径受Push-Location影响；改用正确包目录、新输出目录和绝对日志路径后通过。"
+  ],
+  "evidenceHashes": [
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-shop-assets/reproduction-validation.json",
+      "sha256": "98593eb06eedaaa8c9a53349c42d5a9c3b007bec571e95d83035801928f87240"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-shop-assets/bc1-verification.json",
+      "sha256": "3c5225b679d4acac2f5b3a652df38804a8bf4492da958f04d471f5bc488cf4f8"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-shop-assets/npc-shop.png",
+      "sha256": "29817962f417c2f0d64abbe067993a7113e795f07463af61e7365819b97ed14c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-shop-assets/npc-shop-gpu.png",
+      "sha256": "8fdc2b0ab1cc35aa52560dd1cf675e58c34a34150d55d0662ba189762436169f"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-shop-assets/README.md",
+      "sha256": "e0cda3e84b46a1578785afce54f74cfb457c3c8991c8abaf5069b78063a4ffa9"
+    }
+  ]
+}

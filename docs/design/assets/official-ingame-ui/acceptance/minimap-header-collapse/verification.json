@@ -1,0 +1,50 @@
+{
+  "date": "2026-11-11",
+  "scope": "minimap header and real viewport collapse",
+  "builds": {
+    "Debug": "pass",
+    "Release": "pass"
+  },
+  "minimap": {
+    "status": "pass",
+    "checks": 206273,
+    "viewportPixelComparisons": 206040,
+    "outsideTitlePixelsUnchanged": 195480,
+    "titleFrames": 6,
+    "renderDirectory": "verified-render"
+  },
+  "windowSet": {
+    "status": "pass",
+    "checks": 562035,
+    "resolutionCount": 6
+  },
+  "sharedControls": {
+    "status": "pass",
+    "skinChecks": 60,
+    "controlsReaderChecks": 26
+  },
+  "routingContract": {
+    "status": "pass",
+    "command": "python build/game-ui/Prepare-CharacterBindings.py --manifest build/game-ui/character-routing.json"
+  },
+  "fullLayoutContract": {
+    "status": "blocked-existing",
+    "error": "Overlap outside alpha-tested wheel edges: commands.CharacterButton, commands.BeltButton",
+    "control": "Reproduced after removing minimap.safety/minimap.title and restoring the prior collapse action in memory. No wheel geometry changed."
+  },
+  "limitations": [
+    "No live server login or real map loading.",
+    "Collapse state is session-only; position persistence retains the existing mechanism.",
+    "Full joined contract generation remains blocked by the existing wheel overlap rule."
+  ],
+  "runtime": [
+    {
+      "path": "E:\\workspace\\Debug\\Client\\Zircon.exe",
+      "sha256": "362853e86c4f957057f0f9679bd537c18332291fa5f42bd5fb59917fe35fc63a"
+    },
+    {
+      "path": "E:\\workspace\\Release\\Client\\Zircon.exe",
+      "sha256": "3f4505364beb60f0bdc32895b61d391134d8544ee832ede0a1317ee0d2175ba1"
+    }
+  ]
+}

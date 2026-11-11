@@ -1,0 +1,14 @@
+{
+  "command": [
+    "pwsh",
+    "-NoProfile",
+    "-File",
+    "tests/Run-GameUiPreviewTests.ps1",
+    "-PackagePath",
+    "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+    "-EvidenceDirectory",
+    "E:/workspace/mir3-ui-work/manual-preview-20261110-staging-v2"
+  ],
+  "exitCode": 0,
+  "log": "E:/workspace/mir3-zircon-server/docs/design/assets/official-ingame-ui/acceptance/manual-preview-entry/staging-final.log"
+}

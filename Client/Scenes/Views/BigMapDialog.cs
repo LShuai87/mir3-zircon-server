@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
@@ -10,6 +11,7 @@ using Client.Models;
 using Client.UserModels;
 using Library;
 using Library.SystemModels;
+using SlimDX.Direct3D9;
 using C = Library.Network.ClientPackets;
 
 //Cleaned
@@ -138,6 +140,16 @@ namespace Client.Scenes.Views
 
             AllowResize = true;
 
+            // Share the official UI[40..43] close artwork at its native size.
+            CloseButton.BindImage(null, -1);
+            CloseButton.Size = new Size(21, 22);
+            CloseButton.DrawImage = false;
+            CloseButton.DrawTexture = false;
+            CloseButton.Border = false;
+            new CloseButtonArtwork(CloseButton);
+            CloseButton.Hint = "关闭大地图";
+
+
             Panel = new DXControl
             {
                 Parent = this,
@@ -151,6 +163,74 @@ namespace Client.Scenes.Views
                 LibraryFile = LibraryFile.MiniMap,
             };
             Image.MouseClick += Image_MouseClick;
+        }
+
+        private sealed class CloseButtonArtwork : DXControl
+        {
+            private readonly DXButton button;
+            private Bitmap sheet;
+            private int renderedState = -1;
+            private int State => !button.IsEnabled ? 3 :
+                button.Pressed || (button.HasFocus && MouseControl == button && button.CanBePressed) ? 2 :
+                MouseControl == button ? 1 : 0;
+
+            internal CloseButtonArtwork(DXButton button)
+            {
+                this.button = button;
+                using (var stream = typeof(BigMapDialog).Assembly.GetManifestResourceStream("Client.Resources.GameUi.inventory-close.png"))
+                using (var image = new Bitmap(stream)) sheet = new Bitmap(image);
+                Parent = button;
+                Size = button.Size;
+                IsControl = false;
+                PassThrough = true;
+                DrawTexture = true;
+            }
+
+            protected override void DrawControl()
+            {
+                if (renderedState != State) TextureValid = false;
+                if (!TextureValid) CreateTexture();
+                float oldOpacity = DXManager.Opacity;
+                try
+                {
+                    DXManager.SetOpacity(1F);
+                    float alpha = Math.Max(0F, Math.Min(1F, button.Opacity));
+                    PresentTexture(ControlTexture, Parent, DisplayArea, Color.FromArgb((int)(255 * alpha), Color.White), this);
+                }
+                finally { DXManager.SetOpacity(oldOpacity); }
+                ExpireTime = CEnvir.Now + Config.CacheDuration;
+            }
+
+            protected override void CreateTexture()
+            {
+                if (ControlTexture == null || TextureSize != Size)
+                {
+                    DisposeTexture();
+                    TextureSize = Size;
+                    ControlTexture = new Texture(DXManager.Device, Size.Width, Size.Height, 1, Usage.None, Format.A8R8G8B8, Pool.Managed);
+                    DXManager.ControlList.Add(this);
+                }
+                var pixels = ControlTexture.LockRectangle(0, LockFlags.Discard);
+                try
+                {
+                    using (var target = new Bitmap(Size.Width, Size.Height, pixels.Pitch, PixelFormat.Format32bppArgb, pixels.Data.DataPointer))
+                    using (var graphics = Graphics.FromImage(target))
+                    {
+                        graphics.Clear(Color.Transparent);
+                        renderedState = State;
+                        // Copy the frame without scaling its transparent edges or close glyph.
+                        graphics.DrawImageUnscaled(sheet, 0, -renderedState * Size.Height);
+                    }
+                }
+                finally { ControlTexture.UnlockRectangle(0); pixels.Data.Dispose(); }
+                TextureValid = true;
+            }
+
+            protected override void Dispose(bool disposing)
+            {
+                if (disposing) { sheet?.Dispose(); sheet = null; }
+                base.Dispose(disposing);
+            }
         }
 
         private void Image_MouseClick(object sender, MouseEventArgs e)
@@ -180,9 +260,12 @@ namespace Client.Scenes.Views
             OnBeforeDraw();
             DrawControl();
             OnBeforeChildrenDraw();
-            DrawChildControls();
+            foreach (DXControl control in Controls)
+                if (control != TitleLabel && control != CloseButton) control.Draw();
             DrawWindow();
             TitleLabel.Draw();
+            // The frame is drawn after map content and would cover header controls.
+            CloseButton.Draw();
             DrawBorder();
             OnAfterDraw();
         }

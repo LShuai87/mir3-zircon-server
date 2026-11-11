@@ -1,0 +1,582 @@
+{
+  "schemaVersion": 1,
+  "kind": "official-manual-preview-entry-verification",
+  "checkedAtLocalDate": "2026-11-10",
+  "referenceResolution": [
+    1024,
+    768
+  ],
+  "releaseAccepted": false,
+  "results": {
+    "suites": {
+      "startupChecks": 368,
+      "stagingChecks": 15,
+      "fullSceneChecks": 4297
+    },
+    "screenshotsCaptured": false,
+    "pixelComparisonsPerformed": false,
+    "productionSourceChanged": true,
+    "realServerBehaviorVerified": false,
+    "finalVisualAcceptance": false
+  },
+  "implementation": [
+    "Add exact per-process preview and Legacy flags at the normal application entry point; persisted configuration and compiled production gate remain unchanged.",
+    "Explicit preview retains the complete CPU/GPU package preflight, fallback diagnostics and application-owned resource lifecycle.",
+    "Add conflict-preserving local staging with validation-only mode and two launchers; reject the official game installation.",
+    "Add screenshot-free full-scene mode that retains rendering and functional checks, and test through the public preview entry."
+  ],
+  "verifiedBehaviors": [
+    "368 startup checks include missing/corrupt package fallback, unknown/conflicting flags, config retention and three full 94-frame GPU lifetimes.",
+    "15 staging checks cover validation without writes, conflict retention, source=destination, idempotency, INI retention and official-directory rejection. Final rerun follows incomplete-copy cleanup refinement.",
+    "4297 full-scene checks cover 27 constructors, 47 presented frames and 9 explicit device resets without saving screenshots or comparing pixels.",
+    "Debug and Release compile; both contain hash-matching candidate packages and explicit launchers. Debug is the manual review entry with existing base assets/configuration."
+  ],
+  "sourceChanges": [
+    {
+      "path": "Client/Envir/GameUiStartupSession.cs",
+      "beforeSha256": "d044bd514f839ab2656d433ef0e39f4f84770916803d5fc566e929de9667c40b",
+      "afterSha256": "48d5fdc9bb94c5a592786307f9eb8e6f22c5dfc7c6f9feb371ec3758c03d7ecc"
+    },
+    {
+      "path": "Client/Program.cs",
+      "beforeSha256": "a62866c951f6dfc6967377d1146941a79a07003e116c0d67df7d75640db73312",
+      "afterSha256": "eb0a7f5a4e97ecac6c246ff9d36b567b0af5cec1b9c03efba9d5dc78222ee4c2"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiStartupTests.cs",
+      "beforeSha256": "cb424875b50735b673ff889c3952526a733a3810bb4c6ee3baba3c5fd73deefc",
+      "afterSha256": "6cf4c07eba8f8f779fd869ae7f7d11baea596552ed60f9cfeb13d742e79f63da"
+    },
+    {
+      "path": "tests/Run-GameUiStartupTests.ps1",
+      "beforeSha256": "f4d54c90668917a65580162fc3503d02b014ce40072e4127482b0bb8d9bd9721",
+      "afterSha256": "e7cf60f2c2094845402fedc895d2dcb747bb9545befb275b1dabca51cba26457"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiFullSceneTests.cs",
+      "beforeSha256": "a4b607babe3891f061e63594df316a639dc1598aaa85a70d582200ae8489eefc",
+      "afterSha256": "449cb0a12836eae8bfa4b5b438f7a63e8952dec4684c4d02bf0fe103491cc103"
+    },
+    {
+      "path": "tests/Run-GameUiFullSceneTests.ps1",
+      "beforeSha256": "0265097ae7ff97fdf326a6cfc1755d85cc19b6b6317cdf1aedc41c8077863b71",
+      "afterSha256": "54fd1d6386d747cf34b9f46da669bbf90c5b710d28df5ce3cf3d005226dca8b1"
+    }
+  ],
+  "firstTrackedSourceChanges": [],
+  "newlyTrackedSources": [
+    "build/game-ui/Prepare-GameUiPreview.ps1",
+    "tests/Run-GameUiPreviewTests.ps1"
+  ],
+  "sourceHashes": [
+    {
+      "path": "Client/Envir/GameUiStartupSession.cs",
+      "sha256": "48d5fdc9bb94c5a592786307f9eb8e6f22c5dfc7c6f9feb371ec3758c03d7ecc"
+    },
+    {
+      "path": "Client/Program.cs",
+      "sha256": "eb0a7f5a4e97ecac6c246ff9d36b567b0af5cec1b9c03efba9d5dc78222ee4c2"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiStartupTests.cs",
+      "sha256": "6cf4c07eba8f8f779fd869ae7f7d11baea596552ed60f9cfeb13d742e79f63da"
+    },
+    {
+      "path": "tests/Run-GameUiStartupTests.ps1",
+      "sha256": "e7cf60f2c2094845402fedc895d2dcb747bb9545befb275b1dabca51cba26457"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiFullSceneTests.cs",
+      "sha256": "449cb0a12836eae8bfa4b5b438f7a63e8952dec4684c4d02bf0fe103491cc103"
+    },
+    {
+      "path": "tests/Run-GameUiFullSceneTests.ps1",
+      "sha256": "54fd1d6386d747cf34b9f46da669bbf90c5b710d28df5ce3cf3d005226dca8b1"
+    },
+    {
+      "path": "build/game-ui/Prepare-GameUiPreview.ps1",
+      "sha256": "63a259371dad4d5e4633e77b096097c6dc49717a21dc69dfabfba08589ecc4c2"
+    },
+    {
+      "path": "tests/Run-GameUiPreviewTests.ps1",
+      "sha256": "fd70f75476a912cdc7cf13f9bf420edbd9313cd4ea1c9e7f7c896469dd3c434c"
+    }
+  ],
+  "commands": [
+    {
+      "command": [
+        "D:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\MSBuild\\Current\\Bin\\MSBuild.exe",
+        "Client/Client.csproj",
+        "/t:Build",
+        "/p:Configuration=Debug",
+        "/p:Platform=AnyCPU",
+        "/v:minimal",
+        "/nologo"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/manual-preview-entry/debug-build.log",
+      "logSha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiFullSceneTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/manual-preview-20261110-fullscene-v1",
+        "-NoScreenshots"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/manual-preview-entry/full-scene.log",
+      "logSha256": "f41729431feda67113f32e49ccd2804c1ad02ccd6cfb420fae906862ee5312fa"
+    },
+    {
+      "command": [
+        "C:\\Users\\shuai\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "docs/design/assets/official-ingame-ui/acceptance/manual-preview-entry/audit-history.py",
+        "--output",
+        "docs/design/assets/official-ingame-ui/acceptance/manual-preview-entry/history-audit.json"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/manual-preview-entry/history-audit.log",
+      "logSha256": "430f9989947295e0d9c6231c79c340cfaaf1f8e4d7d294031474f80b7b49f6d5"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "build/game-ui/New-GameUiReleaseManifest.ps1",
+        "-ClientDirectory",
+        "E:/workspace/Debug/Client",
+        "-ResourceRoot",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/staged-resources",
+        "-OutputPath",
+        "docs/design/assets/official-ingame-ui/acceptance/manual-preview-entry/debug-build.json"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/manual-preview-entry/manifest-debug.log",
+      "logSha256": "3a8eeeebe45d034124d8e34e165365d511068ee2ba89fea4f18e980934212514"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "build/game-ui/New-GameUiReleaseManifest.ps1",
+        "-ClientDirectory",
+        "E:/workspace/Release/Client",
+        "-ResourceRoot",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/staged-resources",
+        "-OutputPath",
+        "docs/design/assets/official-ingame-ui/acceptance/manual-preview-entry/release-build.json"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/manual-preview-entry/manifest-release.log",
+      "logSha256": "0891cd9a582500e87564bbf7637a8aa5f8841c2812471352e7f4a99cf16b4042"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "build/game-ui/Prepare-GameUiPreview.ps1",
+        "-ClientDirectory",
+        "E:/workspace/Debug/Client",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/manual-preview-entry/prepare-debug.log",
+      "logSha256": "c046ea33e413970e2c2dc43f687f566945d306eb1bc8b73f4e00ce0d2537e5fa"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "build/game-ui/Prepare-GameUiPreview.ps1",
+        "-ClientDirectory",
+        "E:/workspace/Release/Client",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/manual-preview-entry/prepare-release.log",
+      "logSha256": "ea9266493de49857fbde14cf76d8b802585c96822d506d3ef59f900f63ff2361"
+    },
+    {
+      "command": [
+        "D:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\MSBuild\\Current\\Bin\\MSBuild.exe",
+        "Client/Client.csproj",
+        "/t:Build",
+        "/p:Configuration=Release",
+        "/p:Platform=AnyCPU",
+        "/v:minimal",
+        "/nologo"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/manual-preview-entry/release-build.log",
+      "logSha256": "c9e24428be1e56c8408af17aacfea3413de3953bfe426d10eb768782f5005ebc"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiPreviewTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/manual-preview-20261110-staging-v2"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/manual-preview-entry/staging-final.log",
+      "logSha256": "cfaa67071c06faccc93120b3b3512ef6784444fe23098cd49c6c177f75dffc76"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiPreviewTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/manual-preview-20261110-staging-v1"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/manual-preview-entry/staging.log",
+      "logSha256": "cfaa67071c06faccc93120b3b3512ef6784444fe23098cd49c6c177f75dffc76"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiStartupTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/manual-preview-20261110-startup-v1"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/manual-preview-entry/startup.log",
+      "logSha256": "ddf5e9cc3bf690cd0d4372699f53a4f524c242b4122fd8175125318983ae021b"
+    },
+    {
+      "command": [
+        "C:\\Users\\shuai\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "build/game-ui/Validate-UiTasks.py"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/manual-preview-entry/task-validation.log",
+      "logSha256": "90e3ddffa807ef19523e77855653984be659ff7ab47ec66f04d41348c4cb85b3"
+    },
+    {
+      "command": [
+        "C:\\Users\\shuai\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "docs/design/assets/official-ingame-ui/acceptance/manual-preview-entry/check-whitespace.py"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/manual-preview-entry/whitespace.log",
+      "logSha256": "dab5b1705fa791e0e330f2de6a614409f4b9d9f74d7edd7cf574a96f0db31377"
+    }
+  ],
+  "failedAttempts": [],
+  "builds": {
+    "debug": {
+      "buildId": "gameui-ca74b255b2f695b19a77e54698bad8cfa2d412e81cad11f9d46eba5ffb537b65",
+      "client": {
+        "path": "Zircon.exe",
+        "length": 1388032,
+        "sha256": "685a044923c2c9040e4d3bf65e8bdb7cd599ac4fba496ba2487dc699fb7d7f75"
+      }
+    },
+    "release": {
+      "buildId": "gameui-7f5171031d3bcd80a5bc64df3306beb2201a0ff73fa046d173dd55d078f07173",
+      "client": {
+        "path": "Zircon.exe",
+        "length": 1283072,
+        "sha256": "c532da4e357c3d07f1ce9549fa67c6885bdd3a9f84ce2f8956b8b9cd70550b7a"
+      }
+    }
+  },
+  "runtimeRebuiltThisTurn": true,
+  "runtimeManifestReferences": {
+    "debug": "docs/design/assets/official-ingame-ui/acceptance/manual-preview-entry/debug-build.json",
+    "release": "docs/design/assets/official-ingame-ui/acceptance/manual-preview-entry/release-build.json"
+  },
+  "package": {
+    "path": "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+    "frameCount": 94,
+    "sha256": "dd45cbf51d976a69d28269ee0d27a985def1ee1693cab2b509b74ae347a880a4"
+  },
+  "candidate": {
+    "path": "E:/workspace/mir3-ui-work/warehouse-assets-20261108-v1/zl-v2/OfficialV1.Zl",
+    "frameCount": 1,
+    "sha256": "471169dfa093b521f3c700c5a993e4e763aa17a45b2e16f440d961c0c7bf4cec"
+  },
+  "sourcePlanSha256": "f8c0a002b3821fabb54993792c354c4eff35eec51f9cfdc418535017c13069e9",
+  "limitations": [
+    "User requested manual visual review. No screenshot comparison or final appearance acceptance is claimed.",
+    "Synthetic offline loopback tests do not prove real-server transactions, live IME, hardware device-loss or zero bugs.",
+    "Release output has the built runtime and candidate package but lacks base game assets/settings; use the configured Debug entry for manual review.",
+    "Tasks remain 7 done / 3 in_progress / 18 not_started; G0-2/3/4/5 remain open. Default Legacy, RuntimeReady=false, productionBindingAllowed=false and releaseAccepted=false.",
+    "NPC interaction cards, secondary/service/confirmation windows, settings and login/selection retain native style. Official installation is read-only; no commit, push or deployment."
+  ],
+  "evidenceHashes": [
+    {
+      "path": "E:/workspace/Debug/Client/Data/GameUI/OfficialV1.Zl",
+      "sha256": "dd45cbf51d976a69d28269ee0d27a985def1ee1693cab2b509b74ae347a880a4"
+    },
+    {
+      "path": "E:/workspace/Debug/Client/Start-LegacyUi.cmd",
+      "sha256": "a4f86810998fc1555597bafb84ab6d6f27392b7cbc3b185458de2ef8099e0f2f"
+    },
+    {
+      "path": "E:/workspace/Debug/Client/Start-OfficialUiPreview.cmd",
+      "sha256": "1eb2370bf133e862856c81d51803d4eb7d24f5f676b354412e45416e7b418924"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/manual-preview-20261110-fullscene-v1/capture-policy.txt",
+      "sha256": "114248b96948ae0c1c430bec67fe8d32eca119b681345dd3506fe53366825b20"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/manual-preview-20261110-fullscene-v1/legacy-resources.txt",
+      "sha256": "47713d590a1b9214abdef7a0fc33d6c28a2b5a73a0cff9794375a5083020b498"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/manual-preview-20261110-fullscene-v1/native-character-refresh-fields.txt",
+      "sha256": "564be2e5cdbdaedc1c4f4d10a6c9c013186f4efe3d3b161ab5086b2f82cb90d6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/manual-preview-20261110-fullscene-v1/native-character-refresh-summary.txt",
+      "sha256": "c4e0e7ea8074ebae2956c6573048c386db3524233e4288dabafc93e3d58cb32a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/manual-preview-20261110-fullscene-v1/native-transition-results.txt",
+      "sha256": "347dfa519804984941ffca7a2251cf69b55d3adf4ff97a29fecc597ac6a886a7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/manual-preview-20261110-fullscene-v1/tested-runtime.json",
+      "sha256": "cc14d14a7e5ccd0ef5f14edfc5ae1a8221b129d02a2bbd2c86697a475f974c62"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/manual-preview-20261110-staging-v1/staging-result.json",
+      "sha256": "dcf2cb0da0000f73c90d18173ae1767b6cc5674ddeee9caccbadf9a296170686"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/manual-preview-20261110-staging-v1/tested-runtime.json",
+      "sha256": "cc14d14a7e5ccd0ef5f14edfc5ae1a8221b129d02a2bbd2c86697a475f974c62"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/manual-preview-20261110-staging-v2/staging-result.json",
+      "sha256": "603982a3e16ce09fe7fb4b6f559f163f073d85311cfb1326b2e2a721e6532902"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/manual-preview-20261110-staging-v2/tested-runtime.json",
+      "sha256": "cc14d14a7e5ccd0ef5f14edfc5ae1a8221b129d02a2bbd2c86697a475f974c62"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/manual-preview-20261110-startup-v1/tested-runtime.json",
+      "sha256": "cc14d14a7e5ccd0ef5f14edfc5ae1a8221b129d02a2bbd2c86697a475f974c62"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/manual-preview-entry/audit-history.py",
+      "sha256": "43b3dd93e1bb748275abd80d37a7d986d4016b83b72bd6cf2e0ed3bac1c1fd92"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/manual-preview-entry/check-whitespace.py",
+      "sha256": "ffbcf763e7bb13b753616425d4504c033bdfd21d697dca40f0449cfb89fbe68f"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/manual-preview-entry/debug-build.json",
+      "sha256": "589e7c96e6cdf4d3ccaf614663b8e1ff35497d3609ceb1630ae473a3bf11afd2"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/manual-preview-entry/debug-build.log",
+      "sha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/manual-preview-entry/debug-build.receipt.json",
+      "sha256": "793a95312b0edec32c5b1708c24dd9177b9815de66acb7bb7bef53ca12a9cbc2"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/manual-preview-entry/full-scene.log",
+      "sha256": "f41729431feda67113f32e49ccd2804c1ad02ccd6cfb420fae906862ee5312fa"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/manual-preview-entry/full-scene.receipt.json",
+      "sha256": "300e41ef06a49a7c03a9e0d4045a18d5b275c371739efba302615a03b1d4db6d"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/manual-preview-entry/history-audit.json",
+      "sha256": "430f9989947295e0d9c6231c79c340cfaaf1f8e4d7d294031474f80b7b49f6d5"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/manual-preview-entry/history-audit.log",
+      "sha256": "430f9989947295e0d9c6231c79c340cfaaf1f8e4d7d294031474f80b7b49f6d5"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/manual-preview-entry/history-audit.receipt.json",
+      "sha256": "a4f9b9762fb4e34bb4f37025a168e844ed51d77a1a8b15098cf8b46d2856fbc1"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/manual-preview-entry/manifest-debug.log",
+      "sha256": "3a8eeeebe45d034124d8e34e165365d511068ee2ba89fea4f18e980934212514"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/manual-preview-entry/manifest-debug.receipt.json",
+      "sha256": "d84f47c8d230d4ae8958106c9bd8aff6e49bc54c90ca497717bbd24638bdcdd1"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/manual-preview-entry/manifest-release.log",
+      "sha256": "0891cd9a582500e87564bbf7637a8aa5f8841c2812471352e7f4a99cf16b4042"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/manual-preview-entry/manifest-release.receipt.json",
+      "sha256": "4092dcdb108f77dcb8b995c4c8588a8e5f7060751367a6a5a445174298912874"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/manual-preview-entry/prepare-debug.log",
+      "sha256": "c046ea33e413970e2c2dc43f687f566945d306eb1bc8b73f4e00ce0d2537e5fa"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/manual-preview-entry/prepare-debug.receipt.json",
+      "sha256": "6bb47b69a41b5e7b87c3a30b1367c35ba3b0ae3d7f4390046e560e0ff33d1564"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/manual-preview-entry/prepare-release.log",
+      "sha256": "ea9266493de49857fbde14cf76d8b802585c96822d506d3ef59f900f63ff2361"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/manual-preview-entry/prepare-release.receipt.json",
+      "sha256": "c5adc6ee44877f40d27012333aeaf7ba382b976a1e1356da98a49837e0efcb21"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/manual-preview-entry/prepare-report.py",
+      "sha256": "5cae4e9371b1533b2b23b1c897284ac72158c83c103fe5682a9cd8de36c605ab"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/manual-preview-entry/README.md",
+      "sha256": "fc12f061a31b736bd3e69b2b9cd49d5251b62b8b43d2b0a2b10fd6d9146842a2"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/manual-preview-entry/release-build.json",
+      "sha256": "37015671f5920ff1df268b14a5b373c8541924cbb0bf7a213d83a9aa245523fa"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/manual-preview-entry/release-build.log",
+      "sha256": "c9e24428be1e56c8408af17aacfea3413de3953bfe426d10eb768782f5005ebc"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/manual-preview-entry/release-build.receipt.json",
+      "sha256": "6292ef9897d567f86f2cae26097b36dd09e391baa1b207f9176817fb4583be20"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/manual-preview-entry/run-check.py",
+      "sha256": "8cea69f8c28d781722ec26876840ea3e6bb44ae5ed37e2d213fdab62d1a7c943"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/manual-preview-entry/source-before/Client/Envir/GameUiStartupSession.cs",
+      "sha256": "d044bd514f839ab2656d433ef0e39f4f84770916803d5fc566e929de9667c40b"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/manual-preview-entry/source-before/Client/Program.cs",
+      "sha256": "a62866c951f6dfc6967377d1146941a79a07003e116c0d67df7d75640db73312"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/manual-preview-entry/source-before/tests/game-ui/OfficialUiFullSceneTests.cs",
+      "sha256": "a4b607babe3891f061e63594df316a639dc1598aaa85a70d582200ae8489eefc"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/manual-preview-entry/source-before/tests/game-ui/OfficialUiStartupTests.cs",
+      "sha256": "cb424875b50735b673ff889c3952526a733a3810bb4c6ee3baba3c5fd73deefc"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/manual-preview-entry/source-before/tests/Run-GameUiFullSceneTests.ps1",
+      "sha256": "0265097ae7ff97fdf326a6cfc1755d85cc19b6b6317cdf1aedc41c8077863b71"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/manual-preview-entry/source-before/tests/Run-GameUiStartupTests.ps1",
+      "sha256": "f4d54c90668917a65580162fc3503d02b014ce40072e4127482b0bb8d9bd9721"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/manual-preview-entry/source-before.json",
+      "sha256": "bb1e318d02f7aa4b4fe08df60374c943b55401a88d3349bebf457895059f3e06"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/manual-preview-entry/staging-final.log",
+      "sha256": "cfaa67071c06faccc93120b3b3512ef6784444fe23098cd49c6c177f75dffc76"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/manual-preview-entry/staging-final.receipt.json",
+      "sha256": "1cbd730f20b1c1d9950b262015c086c6cc055c7867139ce33fdd61a379c539a7"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/manual-preview-entry/staging.log",
+      "sha256": "cfaa67071c06faccc93120b3b3512ef6784444fe23098cd49c6c177f75dffc76"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/manual-preview-entry/staging.receipt.json",
+      "sha256": "77dd28462b5fe62a0915c8d4c8ace2a5e88e072c0c1ffb2d83b21f12d41eee4b"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/manual-preview-entry/startup.log",
+      "sha256": "ddf5e9cc3bf690cd0d4372699f53a4f524c242b4122fd8175125318983ae021b"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/manual-preview-entry/startup.receipt.json",
+      "sha256": "a221852e19b8ed481f61b80640d16b3e82a7e51fcd2ebfc6f2e4524e7fa066af"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/manual-preview-entry/task-validation.log",
+      "sha256": "90e3ddffa807ef19523e77855653984be659ff7ab47ec66f04d41348c4cb85b3"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/manual-preview-entry/task-validation.receipt.json",
+      "sha256": "6630c2303b2dd1e4d10edaa33f475947c26e8702ea26312b3edb089fd14fa01e"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/manual-preview-entry/tested-runtime.json",
+      "sha256": "cc14d14a7e5ccd0ef5f14edfc5ae1a8221b129d02a2bbd2c86697a475f974c62"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/manual-preview-entry/whitespace.log",
+      "sha256": "dab5b1705fa791e0e330f2de6a614409f4b9d9f74d7edd7cf574a96f0db31377"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/manual-preview-entry/whitespace.receipt.json",
+      "sha256": "f18cdaf6bb3350a9b297b776ad38ddacd3dd6c28d4179377dfd1c3e2c96a1037"
+    },
+    {
+      "path": "E:/workspace/Release/Client/Data/GameUI/OfficialV1.Zl",
+      "sha256": "dd45cbf51d976a69d28269ee0d27a985def1ee1693cab2b509b74ae347a880a4"
+    },
+    {
+      "path": "E:/workspace/Release/Client/Start-LegacyUi.cmd",
+      "sha256": "a4f86810998fc1555597bafb84ab6d6f27392b7cbc3b185458de2ef8099e0f2f"
+    },
+    {
+      "path": "E:/workspace/Release/Client/Start-OfficialUiPreview.cmd",
+      "sha256": "1eb2370bf133e862856c81d51803d4eb7d24f5f676b354412e45416e7b418924"
+    }
+  ]
+}

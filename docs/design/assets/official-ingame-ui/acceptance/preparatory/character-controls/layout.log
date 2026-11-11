@@ -1,0 +1,4 @@
+Layout validated: 232 nodeCount, 109 interactiveCount, 1757 hitPairsChecked, 16 equipmentSlots, 49 inventoryCells, 10 quickbarCells, 57 statBindings, 8 existingControlBindings, 4 additionalImmediateBindings, 8 hermitPacketActions, 9 hudEntries, 6 resolutionCount; 11 rejected invalid contracts; runtime not enabled.
+Layout validated: 232 nodeCount, 109 interactiveCount, 1757 hitPairsChecked, 16 equipmentSlots, 49 inventoryCells, 10 quickbarCells, 57 statBindings, 8 existingControlBindings, 4 additionalImmediateBindings, 8 hermitPacketActions, 9 hudEntries, 6 resolutionCount; 11 rejected invalid contracts; runtime not enabled.
+PASS: compiled C# readback: 232 unique nodes, 109 contained hit regions, 60 placements, unknown lookup guards, production disabled.
+PASS: all 12 generated files byte-identical.

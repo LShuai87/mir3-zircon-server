@@ -1,0 +1,18 @@
+[
+  {
+    "path": "Client/Controls/DXWindow.cs",
+    "sha256": "fcb585d6836c00052c86d5eb74b16e65f5110d9702909d4391d76b1864e31dfe"
+  },
+  {
+    "path": "tests/game-ui/OfficialUiMiniMapLayoutTests.cs",
+    "sha256": "354e3688d2bce8f4ef5c579de8ca2f7ca1ccfaa548337fd7e8cbee23898af039"
+  },
+  {
+    "path": "tests/game-ui/OfficialUiMiniMapRenderTests.cs",
+    "sha256": "129fb88068ae0eba7006da053e6181777e985e2fbb3886dd60d8efa489d6f1e9"
+  },
+  {
+    "path": "tests/Run-GameUiMiniMapLayoutTests.ps1",
+    "sha256": "a03f9ffe214e8a6102e947d79d85b0ea4d29db3e295b98be6d01a494f3f2166f"
+  }
+]

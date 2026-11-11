@@ -1,0 +1,3 @@
+PASS PowerShell parse: 2 scripts
+PASS Npc: Npc suite requires -PackagePath and a fresh -EvidenceDirectory.
+PASS Bindings: Suite Bindings is not implemented yet; it cannot be marked as passed.

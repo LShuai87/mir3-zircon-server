@@ -1,0 +1,5 @@
+Native scene transitions: 11 normal game entries; 32 serialized loopback packets; 34 evidence rows. Native login/start/logout, EOF disconnect and eight in-game server reasons; synthetic account/world only.
+Native character refresh: 17 checkpoints, 26 serialized loopback packets, 0 Legacy parity fields; production acceptance remains false.
+Native scene transitions: 23 normal game entries; 90 serialized loopback packets; 81 evidence rows. Native login/start/logout, EOF disconnect and eight in-game server reasons; synthetic account/world only.
+Native character refresh: 34 checkpoints, 52 serialized loopback packets, 1156 Legacy parity fields; production acceptance remains false.
+Full-scene offline integration: 4297 checks passed; 27 real constructors, 47 presented frames, 9 explicit Device.Reset calls; screenshots and pixel comparisons disabled. Real legacy resources, synthetic user/map, four character pages, six resolutions, scene reentry, cell/chat/native-input retention. Synthetic loopback covers native login/scene dispatch; no real account login, server behavior, hardware device-loss, live IME or final visual acceptance.

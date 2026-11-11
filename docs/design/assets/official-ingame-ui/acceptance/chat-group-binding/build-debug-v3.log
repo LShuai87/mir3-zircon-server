@@ -1,0 +1,3 @@
+
+  Library -> E:\workspace\Debug\Library\Library.dll
+E:\workspace\mir3-zircon-server\Client\Envir\GameUiChatGroupBinding.cs(284,37): error CS0234: 命名空间“Library”中不存在类型或命名空间名“WindowType”(是否缺少程序集引用?) [E:\workspace\mir3-zircon-server\Client\Client.csproj]

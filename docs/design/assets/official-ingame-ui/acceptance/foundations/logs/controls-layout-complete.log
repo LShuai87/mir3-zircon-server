@@ -1,0 +1,6 @@
+Official UI window skin: 60 checks passed.
+Official UI SlimDX render: 14 checks passed; output=E:\workspace\mir3-ui-work\acceptance\skin
+Official UI GPU reference payloads: 2208 textures uploaded and read back byte-identically.
+Official UI controls/reader: 8726 checks passed.
+Legacy Users.db SHA256 before/after: 890c13348dd10d14cb0118ec3fcea171c85face9739985a958f47d72b54cbc15
+Official UI layout: 35 checks passed.

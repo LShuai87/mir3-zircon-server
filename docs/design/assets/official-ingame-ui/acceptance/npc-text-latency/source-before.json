@@ -1,0 +1,10 @@
+[
+  {
+    "path": "Client/Scenes/Views/NPCDialog.cs",
+    "sha256": "2372fdf6322c51156bd48cc52e173f70604c6d185ba64b1832cdd8337ecc31f4"
+  },
+  {
+    "path": "tests/game-ui/OfficialUiNpcTests.cs",
+    "sha256": "50d6490fafb8686814191bba17034351d718e500032371436346e2b8f08638c3"
+  }
+]

@@ -1,0 +1,60 @@
+CPU button masks: 17256 checks; 0 source PNG alpha comparisons; no GPU uploads.
+Button mask checks including real controls: 111539; hover, pressed, disabled, hide/restore, PassThrough, invalid rebind and Legacy reset.
+Compact wheel ownership: 228 shared opaque pixels; single click, hidden fallback, disabled blocking and fixed draw order passed.
+Chat persistence body: System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 Client.Scenes.Views.ChatTab.OnSelectedChanged(Boolean oValue, Boolean nValue)
+   在 Client.Controls.DXTab.set_Selected(Boolean value)
+   在 Client.Controls.DXTabControl.OnSelectedTabChanged(DXTab oValue, DXTab nValue)
+   在 Client.Controls.DXTabControl.set_SelectedTab(DXTab value)
+   在 Client.Controls.DXTabControl.SetNewTab()
+   在 Client.Controls.DXTab.Dispose(Boolean disposing)
+   在 Client.Scenes.Views.ChatTab.Dispose(Boolean disposing)
+   在 Client.Controls.DXControl.Dispose()
+   在 Client.Scenes.Views.ChatOptionsDialog.<>c__DisplayClass8_0.<AddNewTab>b__5(Object o1, MouseEventArgs e1)
+   在 Client.Controls.DXControl.InvokeMouseClick()
+   在 OfficialUiWindowSetTests.<>c__DisplayClass43_1.<ExerciseChatPersistence>b__0(GameUiStartupSession owner)
+Chat persistence disposal: System.AggregateException: Window rollback did not finish. Keep the verified package alive and retry disposal. ---> System.AggregateException: Chat group rollback needs retry; keep the package alive. ---> System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 Client.Envir.GameUiChatGroupBinding.Release(ChatTab tab, Boolean restore)
+   在 Client.Envir.GameUiChatGroupBinding.Detach(Boolean restore)
+   在 Client.Envir.GameUiChatGroupBinding.Dispose()
+   在 Client.Envir.GameUiOfficialV1ChatSet.Dispose()
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Client.Envir.GameUiOfficialV1ChatSet.Dispose()
+   在 Client.Envir.GameUiOfficialV1WindowSet.<>c__DisplayClass48_0.<RestoreOriginals>b__0()
+   在 Client.Envir.GameUiOfficialV1WindowSet.TryRestore(Action action, List`1 failures)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Client.Envir.GameUiOfficialV1WindowSet.RestoreOriginals(Boolean restoreInitialVisibility)
+   在 Client.Envir.GameUiOfficialV1WindowSet.Dispose()
+   在 Client.Scenes.GameScene.Dispose(Boolean disposing)
+   在 Client.Controls.DXControl.Dispose()
+   在 OfficialUiWindowSetTests.<>c__DisplayClass43_1.<ExerciseChatPersistence>b__0(GameUiStartupSession owner)
+---> (内部异常 #0) System.AggregateException: Chat group rollback needs retry; keep the package alive. ---> System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 Client.Envir.GameUiChatGroupBinding.Release(ChatTab tab, Boolean restore)
+   在 Client.Envir.GameUiChatGroupBinding.Detach(Boolean restore)
+   在 Client.Envir.GameUiChatGroupBinding.Dispose()
+   在 Client.Envir.GameUiOfficialV1ChatSet.Dispose()
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Client.Envir.GameUiOfficialV1ChatSet.Dispose()
+   在 Client.Envir.GameUiOfficialV1WindowSet.<>c__DisplayClass48_0.<RestoreOriginals>b__0()
+   在 Client.Envir.GameUiOfficialV1WindowSet.TryRestore(Action action, List`1 failures)
+---> (内部异常 #0) System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 Client.Envir.GameUiChatGroupBinding.Release(ChatTab tab, Boolean restore)
+   在 Client.Envir.GameUiChatGroupBinding.Detach(Boolean restore)
+   在 Client.Envir.GameUiChatGroupBinding.Dispose()
+   在 Client.Envir.GameUiOfficialV1ChatSet.Dispose()<---
+<---
+
+System.InvalidOperationException: Dispose the borrowing game scene before releasing its UI startup session.
+   在 Client.Envir.GameUiStartupSession.Dispose()
+   在 OfficialUiWindowSetTests.WithStartupOwner(String package, String directory, Action`1 action)
+   在 OfficialUiWindowSetTests.ExerciseChatPersistence(String package, String directory)
+   在 OfficialUiWindowSetTests.ExerciseStartupSessions(String package, String directory)
+   在 OfficialUiWindowSetTests.Main(String[] args)
+
+
+   由于 Exception.ToString() 失败，因此无法打印异常字符串。
+Exception: E:\workspace\mir3-zircon-server\tests\Run-GameUiWindowSetTests.ps1:40
+Line |
+  40 |          if ($LASTEXITCODE -ne 0) { throw 'WindowSet tests failed.' }
+     |                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | WindowSet tests failed.

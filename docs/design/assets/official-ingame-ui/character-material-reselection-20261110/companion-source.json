@@ -1,0 +1,45 @@
+{
+  "kind": "native-character-companion-source",
+  "source": "E:\\Program Files\\ShengquGames\\Mir3\\Data",
+  "mixSha256": "7413bc66c18b631e967da5d77400ed4bf020164bcc1daa4c789666d4edb911a4",
+  "mizSha256": "2bf58eaba339d45c5f5d3d51365bafa0f757ba426f6d3b33cefa3cb3f7e9e4fa",
+  "sources": [
+    {
+      "role": "character-companion",
+      "sourceLibrary": "UI",
+      "sourceIndex": 130,
+      "logicalSize": [
+        296,
+        436
+      ],
+      "sourceOffset": [
+        0,
+        0
+      ],
+      "pngSha256": "5d012ff49a7e1347c5f9cef68bdc22da00d5cc0f1f0c85f5cdae256cf326710f",
+      "identification": "read-only-native-library-review",
+      "captureId": "character-companion",
+      "alphaVerified": false
+    },
+    {
+      "role": "character-companion-button",
+      "sourceLibrary": "UI",
+      "sourceIndex": 3304,
+      "logicalSize": [
+        57,
+        24
+      ],
+      "sourceOffset": [
+        -28,
+        -12
+      ],
+      "pngSha256": "c141eb9f14701fcdf4f0c75959492b9322db55d4f939eb90636c06299e61fdfe",
+      "identification": "read-only-native-library-review",
+      "captureId": "character-companion",
+      "alphaVerified": false
+    }
+  ],
+  "baseManifestSha256": "82114d2109fa93b15df83d4f39c775031202e930367f4688754ef1640309d8c6",
+  "preservedFrames": 94,
+  "outputFrames": 99
+}

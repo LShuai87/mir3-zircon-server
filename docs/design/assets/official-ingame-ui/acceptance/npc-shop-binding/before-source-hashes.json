@@ -1,0 +1,15 @@
+{
+  "Client/Scenes/Views/NPCDialog.cs": "ad706bbd920d091455cada87917bb011082a61e1548b2b88d37eef3d52a7872c",
+  "Client/Envir/GameUiOfficialV1WindowSet.cs": "f555a572dc937f0349d45b95c7214fa0e4607805e1eb530a7d00b98a46ebe598",
+  "Client/Client.csproj": "028261436daf37a56f383691101b439f89527f063427f01cd773b499320e4d01",
+  "build/game-ui/asset-manifest.json": "77946f30a67f8d433d0a0a8c1e2660faf2464239045995075808d57a5b9a7f58",
+  "build/game-ui/reference-selection.json": "6a9874824080dc2715b76e2d88907790f12a05f7ce8e9903e43ff21629f6337b",
+  "build/game-ui/composition-recipe.json": "35e3f1b7e3495a6222c53d5150471fe50eed8db83f29949d86da9d832b2e7ca9",
+  "Client/Envir/GameUiOfficialV1Catalog.g.cs": "ee3063da968958fa824522c1e5e5ad9b3c31ecfd8f2cdc3fb5b64d869ca837cf",
+  "tests/game-ui/OfficialUiNpcTests.cs": "664b85e3b51182de3678dd188f65c085379ae5736b3b7749ed8b66384087c5e1",
+  "tests/Run-GameUiNpcTests.ps1": "93d0fa0e25ac588c67e54bf491e3061b338bdfd10cfcba3da708ff9085789c39",
+  "tests/game-ui/OfficialUiWindowSetTests.cs": "c631707a04ea51d6ee0ec232cfd367e660209ab0adc6b166185d9ec0bc5faab7",
+  "tests/game-ui/OfficialUiCatalogTests.cs": "4f88e87a02da0f200f31f05fcb02469af14a69601d9ab44c7b0cd2af6968a458",
+  "tests/game-ui/OfficialUiStartupTests.cs": "a7335e3ca46f021d916a13040d027c95b19d213354cfb1796a1fe9883c46e5e6",
+  "tests/game-ui/Verify-NpcShopAssets.py": "aec29f483718fed494cb30243b405f51607f65bc9ec28e6fef5e6418c5fff4fd"
+}

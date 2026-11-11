@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-07T12:18:28.020Z",
+  "method": "@oai/sky list_apps/list_windows/get_window_state",
+  "expectedExecutable": "E:\\Program Files\\ShengquGames\\Mir3\\Mir3.dat",
+  "processFound": true,
+  "window": {
+    "app": "process:E:\\Program Files\\ShengquGames\\Mir3\\Mir3.dat",
+    "id": 41289804,
+    "title": "传奇3"
+  },
+  "observedState": "server_selection_with_connection_lost_dialog",
+  "observedText": "与服务器失去链接...",
+  "postLoginGameUiAvailable": false,
+  "dpiMeasured": false,
+  "clientRectMeasured": false,
+  "screenshot": {
+    "path": "docs/design/assets/official-ingame-ui/acceptance/reference/captures/runtime-disconnected-20261107T121828020Z.jpg",
+    "sha256": "d8c89b8367f8f1ef226bf81da8efecabd324bd1cd7c3f7fd617c9bcbaa88bbca",
+    "width": 1026,
+    "height": 795,
+    "mime": "image/jpeg"
+  },
+  "newScreenshotCaptured": true,
+  "screenshotUse": "Availability evidence only. Server-selection/login UI is outside the replacement scope; this does not satisfy G0-1.",
+  "actionsTaken": [
+    "Observed the uniquely returned official game window",
+    "Activated the already running game window"
+  ],
+  "noChatSent": true,
+  "noLoginPerformed": true
+}

@@ -1,0 +1,496 @@
+{
+  "schemaVersion": 1,
+  "kind": "official-ui-reference-capture-request",
+  "status": "all_views_collected_metadata_pending",
+  "sourcePlan": "docs/design/official-ingame-ui-implementation-plan.md",
+  "sourceExecutable": {
+    "path": "E:\\Program Files\\ShengquGames\\Mir3\\Mir3.dat",
+    "fileVersion": "1.15.0.7269",
+    "sha256": "bcde890317a1b1f9e7de7817c15666e2d2ae31e60ed1f12659e84d63f831e943"
+  },
+  "sourceLibraryBaseline": "docs/design/assets/official-ingame-ui/acceptance/reference/runtime-source-libraries.json",
+  "capturedAt": "2026-11-07T08:00:18.472Z",
+  "sourceFileVersion": "1.15.0.7269",
+  "capturePolicy": {
+    "source": "official_client_logged_in",
+    "originalImageRequired": true,
+    "compositePreviewAllowed": false,
+    "historicalWebsiteImageAllowed": false,
+    "oneCaptureMayCoverMultipleViews": true,
+    "minimumBaseline": "一种实际客户端分辨率和DPI的完整原图及范围内窗口状态，作为素材与布局确认的参考。",
+    "targetAcceptance": "六分辨率、100/125/150%DPI、窗口/全屏共36组合由本项目最终UI-27验证，不要求先从正式版采满36组合。",
+    "scopeBoundary": "正式版截图提供已有界面的视觉证据；自定义四标签布局和17个NPC窗口的业务可达性仍由本项目验收。",
+    "settingsScreenshotsRequired": false,
+    "userMustChangeDisplaySettings": false,
+    "displayMetadataCollectionOwner": "实现方核对，未测值保留未确认；不要求用户提供设置截图或参数。",
+    "reuseExistingCaptures": true,
+    "duplicateBaselineCaptureRequired": false
+  },
+  "requiredMetadata": [
+    "clientFileVersion",
+    "sourceLibraryBaselineSha256",
+    "capturedAt",
+    "clientResolution",
+    "dpiPercent",
+    "windowMode",
+    "imagePixelSize",
+    "clientRectInImage",
+    "viewIds",
+    "imageRelativePath",
+    "imageSha256"
+  ],
+  "views": [
+    {
+      "id": "overview",
+      "subject": "已登录完整游戏界面",
+      "mustShow": [
+        "HP/MP 壳及填充",
+        "经验",
+        "主功能按钮",
+        "快捷栏",
+        "聊天区",
+        "小地图外框"
+      ],
+      "note": "保留完整客户端边缘；主界面可同时满足下列多个视图的部分覆盖。"
+    },
+    {
+      "id": "character",
+      "subject": "正式版实际角色/装备面板",
+      "mustShow": [
+        "完整窗口外形",
+        "人物与装备位置",
+        "右侧及下方属性区",
+        "实际存在的标签/按钮"
+      ],
+      "note": "不要求正式版提供本项目新增的扩展装备、状态、修炼四页；这部分依据已确认视觉元素设计并在本项目验收。"
+    },
+    {
+      "id": "inventory",
+      "subject": "正式版包裹及操作栏",
+      "mustShow": [
+        "完整外框",
+        "格子与操作按钮",
+        "包裹和主界面的相对位置"
+      ],
+      "note": "正式版容量只作视觉参考；本项目保持49格，不能照图删格或改容量。"
+    },
+    {
+      "id": "tooltip",
+      "subject": "一件装备的悬浮提示",
+      "mustShow": [
+        "边框及透明区",
+        "属性文字层级",
+        "物品与提示的相对位置"
+      ],
+      "note": "使用普通装备即可；显示内容以当前项目的数据能力为准。"
+    },
+    {
+      "id": "minimap",
+      "subject": "小地图外框与控件",
+      "mustShow": [
+        "边缘装饰",
+        "地图内容边界",
+        "按钮",
+        "坐标/标题"
+      ],
+      "note": "完整主界面里足够清晰时可引用同一张原图，无需重复采集。"
+    },
+    {
+      "id": "chat",
+      "subject": "聊天显示区与输入状态",
+      "mustShow": [
+        "文字区和边框",
+        "输入栏",
+        "频道及其他实际按钮"
+      ],
+      "note": "用户已确认列表沿用当前项目样式；截图仅辅助定位消息显示框，不要求补采中文输入或正式版发送。项目IME和发送行为由UI-15/UI-27验证，详见chat-scope-decision.json。"
+    },
+    {
+      "id": "npc-dialog",
+      "subject": "普通NPC对话与选项",
+      "mustShow": [],
+      "note": "用户最新要求NPC交互卡片不替换，已有图保留作历史资料，不再补采。",
+      "requiredForCurrentScope": false
+    },
+    {
+      "id": "npc-service",
+      "subject": "正式版实际存在的一种NPC商品/服务窗口",
+      "mustShow": [
+        "窗口边框",
+        "列表/物品格",
+        "主窗口现有操作按钮；不要求打开二级弹窗",
+        "与包裹共存关系"
+      ],
+      "note": "尽量用商店或修理服务。项目独有的17类服务分别保留UI-20..25的实际验收，不要求正式版一一存在。"
+    }
+  ],
+  "captures": [
+    {
+      "id": "01-overview",
+      "capturedAt": "2026-11-07T08:00:18.472Z",
+      "viewIds": [
+        "overview",
+        "minimap"
+      ],
+      "imageRelativePath": "captures/01-overview.jpg",
+      "imageSha256": "d5912e87139eb0264edd4ce5949fa5bc3f88e097a554999708270b58380679b1",
+      "imagePixelSize": {
+        "width": 1026,
+        "height": 795
+      },
+      "window": {
+        "app": "process:E:\\Program Files\\ShengquGames\\Mir3\\Mir3.dat",
+        "id": 629344752,
+        "title": "传奇3【万马同庆】"
+      },
+      "screenOrigin": {
+        "x": 447,
+        "y": 141
+      },
+      "notes": "真实正式版已登录主界面原图；聊天输入框尚为空。",
+      "clientFileVersion": "1.15.0.7269",
+      "sourceLibraryBaselineSha256": "1ab7914a73b4266ebe2ab402e714d027743ffc9589889b0612d56ece14dc5570",
+      "sourceLibraryBaselineVerified": false,
+      "clientResolution": {
+        "width": 1024,
+        "height": 768,
+        "status": "user_confirmed_configuration_not_independent_window_measurement",
+        "evidence": "resolution-confirmation.json"
+      },
+      "clientRectInImage": {
+        "x": 1,
+        "y": 26,
+        "width": 1024,
+        "height": 768,
+        "status": "visual_estimate_pending_confirmation"
+      },
+      "dpiPercent": null,
+      "windowMode": "windowed",
+      "windowModeEvidence": "Mir3.ini WndMode=1 and visible title bar",
+      "sourceAssociation": "当前源库比较见 source-comparison.json；未建立每张图采集时的源文件历史哈希。",
+      "imageFormat": "JPEG"
+    },
+    {
+      "id": "02-character",
+      "capturedAt": "2026-11-07T08:04:44.514Z",
+      "viewIds": [
+        "character"
+      ],
+      "imageRelativePath": "captures/02-character.jpg",
+      "imageSha256": "571e96dbafabedb997d454e6ce7a3768e2ddd5f7dd3357d8c6f69537671c6274",
+      "imagePixelSize": {
+        "width": 1026,
+        "height": 795
+      },
+      "window": {
+        "app": "process:E:\\Program Files\\ShengquGames\\Mir3\\Mir3.dat",
+        "id": 629344752,
+        "title": "传奇3【万马同庆】"
+      },
+      "screenOrigin": {
+        "x": 447,
+        "y": 141
+      },
+      "notes": "用户手动打开正式版角色主界面；完整人物、装备区、右栏基础属性和底部战斗/元素属性可见。",
+      "clientFileVersion": "1.15.0.7269",
+      "sourceLibraryBaselineSha256": "1ab7914a73b4266ebe2ab402e714d027743ffc9589889b0612d56ece14dc5570",
+      "sourceLibraryBaselineVerified": false,
+      "clientResolution": {
+        "width": 1024,
+        "height": 768,
+        "status": "user_confirmed_configuration_not_independent_window_measurement",
+        "evidence": "resolution-confirmation.json"
+      },
+      "clientRectInImage": {
+        "x": 1,
+        "y": 26,
+        "width": 1024,
+        "height": 768,
+        "status": "visual_estimate_pending_confirmation"
+      },
+      "dpiPercent": null,
+      "windowMode": "windowed",
+      "windowModeEvidence": "Mir3.ini WndMode=1 and visible title bar",
+      "sourceAssociation": "当前源库比较见 source-comparison.json；未建立每张图采集时的源文件历史哈希。",
+      "imageFormat": "JPEG"
+    },
+    {
+      "id": "03-character-inventory",
+      "capturedAt": "2026-11-07T08:06:15.983Z",
+      "viewIds": [
+        "character",
+        "inventory"
+      ],
+      "imageRelativePath": "captures/03-character-inventory.jpg",
+      "imageSha256": "11ac2f41784e123da471b799fd0d6aab7cf44deec36186248e14f3f696a09436",
+      "imagePixelSize": {
+        "width": 1026,
+        "height": 795
+      },
+      "window": {
+        "app": "process:E:\\Program Files\\ShengquGames\\Mir3\\Mir3.dat",
+        "id": 629344752,
+        "title": "传奇3【万马同庆】"
+      },
+      "screenOrigin": {
+        "x": 447,
+        "y": 141
+      },
+      "notes": "角色面板位于左，包裹位于右；正式版包裹6列8行48格，仅作为视觉参考，本项目保持7列7行49格。",
+      "clientFileVersion": "1.15.0.7269",
+      "sourceLibraryBaselineSha256": "1ab7914a73b4266ebe2ab402e714d027743ffc9589889b0612d56ece14dc5570",
+      "sourceLibraryBaselineVerified": false,
+      "clientResolution": {
+        "width": 1024,
+        "height": 768,
+        "status": "user_confirmed_configuration_not_independent_window_measurement",
+        "evidence": "resolution-confirmation.json"
+      },
+      "clientRectInImage": {
+        "x": 1,
+        "y": 26,
+        "width": 1024,
+        "height": 768,
+        "status": "visual_estimate_pending_confirmation"
+      },
+      "dpiPercent": null,
+      "windowMode": "windowed",
+      "windowModeEvidence": "Mir3.ini WndMode=1 and visible title bar",
+      "sourceAssociation": "当前源库比较见 source-comparison.json；未建立每张图采集时的源文件历史哈希。",
+      "imageFormat": "JPEG"
+    },
+    {
+      "id": "04-equipment-tooltip",
+      "capturedAt": "2026-11-07T08:08:26.518Z",
+      "viewIds": [
+        "tooltip",
+        "inventory",
+        "character"
+      ],
+      "imageRelativePath": "captures/04-equipment-tooltip.jpg",
+      "imageSha256": "939e94172ae916a04787c1086a6958e2b5e9ca43f8dbb33ddae4e3b628f17f3a",
+      "imagePixelSize": {
+        "width": 1026,
+        "height": 795
+      },
+      "window": {
+        "app": "process:E:\\Program Files\\ShengquGames\\Mir3\\Mir3.dat",
+        "id": 629344752,
+        "title": "传奇3【万马同庆】"
+      },
+      "screenOrigin": {
+        "x": 447,
+        "y": 141
+      },
+      "notes": "包裹第一格新手木剑悬浮提示；黄色名称和装备注评价、白色属性，半透明深色矩形背景，覆盖在包裹格子上。",
+      "clientFileVersion": "1.15.0.7269",
+      "sourceLibraryBaselineSha256": "1ab7914a73b4266ebe2ab402e714d027743ffc9589889b0612d56ece14dc5570",
+      "sourceLibraryBaselineVerified": false,
+      "clientResolution": {
+        "width": 1024,
+        "height": 768,
+        "status": "user_confirmed_configuration_not_independent_window_measurement",
+        "evidence": "resolution-confirmation.json"
+      },
+      "clientRectInImage": {
+        "x": 1,
+        "y": 26,
+        "width": 1024,
+        "height": 768,
+        "status": "visual_estimate_pending_confirmation"
+      },
+      "dpiPercent": null,
+      "windowMode": "windowed",
+      "windowModeEvidence": "Mir3.ini WndMode=1 and visible title bar",
+      "sourceAssociation": "当前源库比较见 source-comparison.json；未建立每张图采集时的源文件历史哈希。",
+      "imageFormat": "JPEG"
+    },
+    {
+      "id": "05-npc-dialog-shop-inventory",
+      "capturedAt": "2026-11-07T08:12:23.473Z",
+      "viewIds": [
+        "npc-dialog",
+        "npc-service",
+        "inventory"
+      ],
+      "imageRelativePath": "captures/05-npc-dialog-shop-inventory.jpg",
+      "imageSha256": "55aa95d6399d190ad832efcb81a4ef620d4a6ed1cb39e5252b6004cb030567bb",
+      "imagePixelSize": {
+        "width": 1026,
+        "height": 795
+      },
+      "window": {
+        "app": "process:E:\\Program Files\\ShengquGames\\Mir3\\Mir3.dat",
+        "id": 629344752,
+        "title": "传奇3【万马同庆】"
+      },
+      "screenOrigin": {
+        "x": 447,
+        "y": 141
+      },
+      "notes": "正式版运行实拍：NPC 欢迎对话与使用商店链接、药品商店商品列表（两列四行可见）、修理与购买按钮、包裹同时可见；仅采集，未执行购买或修理。",
+      "clientFileVersion": "1.15.0.7269",
+      "sourceLibraryBaselineSha256": "1ab7914a73b4266ebe2ab402e714d027743ffc9589889b0612d56ece14dc5570",
+      "sourceLibraryBaselineVerified": false,
+      "clientResolution": {
+        "width": 1024,
+        "height": 768,
+        "status": "user_confirmed_configuration_not_independent_window_measurement",
+        "evidence": "resolution-confirmation.json"
+      },
+      "clientRectInImage": {
+        "x": 1,
+        "y": 26,
+        "width": 1024,
+        "height": 768,
+        "status": "visual_estimate_pending_confirmation"
+      },
+      "dpiPercent": null,
+      "windowMode": "windowed",
+      "windowModeEvidence": "Mir3.ini WndMode=1 and visible title bar",
+      "sourceAssociation": "当前源库比较见 source-comparison.json；未建立每张图采集时的源文件历史哈希。",
+      "imageFormat": "JPEG"
+    },
+    {
+      "id": "06-chat-chinese-input",
+      "capturedAt": "2026-11-07T08:18:16.624Z",
+      "viewIds": [
+        "chat",
+        "overview",
+        "minimap"
+      ],
+      "imageRelativePath": "captures/06-chat-chinese-input.jpg",
+      "imageFormat": "JPEG",
+      "imageSha256": "69b96babce26f036862ce232a9d1e43a37002a9ded9eb71004829f7cc96c5ca4",
+      "imagePixelSize": {
+        "width": 1026,
+        "height": 795
+      },
+      "window": {
+        "app": "process:E:\\Program Files\\ShengquGames\\Mir3\\Mir3.dat",
+        "id": 629344752,
+        "title": "传奇3【万马同庆】"
+      },
+      "screenOrigin": {
+        "x": 447,
+        "y": 141
+      },
+      "notes": "正式版运行实拍：聊天输入栏显示[普通]: 界面样式测试，文字仍在输入框，未发送；聊天消息区、左侧频道/功能按钮、右侧滚动条和完整HUD可见。",
+      "clientFileVersion": "1.15.0.7269",
+      "sourceLibraryBaselineSha256": "1ab7914a73b4266ebe2ab402e714d027743ffc9589889b0612d56ece14dc5570",
+      "sourceLibraryBaselineVerified": false,
+      "clientResolution": {
+        "width": 1024,
+        "height": 768,
+        "status": "user_confirmed_configuration_not_independent_window_measurement",
+        "evidence": "resolution-confirmation.json"
+      },
+      "clientRectInImage": {
+        "x": 1,
+        "y": 26,
+        "width": 1024,
+        "height": 768,
+        "status": "visual_estimate_pending_confirmation"
+      },
+      "dpiPercent": null,
+      "windowMode": "windowed",
+      "windowModeEvidence": "Mir3.ini WndMode=1 and visible title bar",
+      "sourceAssociation": "chat-source-check.json：截图后读取八个源文件，均与当前外部快照一致；未在截图前读取，不能证明采集瞬间或历史各图源文件版本。"
+    }
+  ],
+  "unresolved": [],
+  "launcherExecutable": {
+    "path": "E:\\Program Files\\ShengquGames\\Mir3\\Mir3.exe",
+    "fileVersion": "1.9.3.137",
+    "sha256": "030dfe11875382d083ba27c70b4b6f897ab4f7d64996f57e24ac715c6a7e025e"
+  },
+  "latestCapturedAt": "2026-11-07T08:18:16.624Z",
+  "sourceLibraryBaselineSha256": "1ab7914a73b4266ebe2ab402e714d027743ffc9589889b0612d56ece14dc5570",
+  "runtimeSourceComparison": "source-comparison.json",
+  "unresolvedMetadata": [
+    "目标窗口实际DPI尚未确认；系统AppliedDPI=96不能替代目标窗口测量。",
+    "历史截图客户区矩形仍为图像目测值，未独立测量；1024×768游戏设置分辨率已由用户确认。",
+    "新快照已独立固定并完成诊断；五张异常记录格式待确认，截图与各采集时点的历史源库关联仍未冻结。"
+  ],
+  "serviceCoverage": {
+    "visible": [
+      "NPC正文与选项",
+      "关闭按钮",
+      "商品两列四行可见卡片",
+      "滚动条",
+      "修理按钮",
+      "购买按钮",
+      "包裹共存"
+    ],
+    "notCaptured": [],
+    "note": "窗口可见性和样式参考；未测试按钮命中、购买、修理或服务行为。项目17服务独立验收仍未执行。",
+    "deferredCapture": [
+      "数量输入、交易确认、提示及其他操作后额外二级弹窗；当前不换肤，不作为补采缺项"
+    ]
+  },
+  "chatCoverage": {
+    "captureId": "06-chat-chinese-input",
+    "inputText": "界面样式测试",
+    "channel": "普通",
+    "visible": [
+      "中文文字保留在输入框",
+      "聊天显示区",
+      "左侧频道/功能按钮",
+      "右侧滚动条",
+      "下方输入栏"
+    ],
+    "notValidated": [
+      "真实IME组合/候选窗操作",
+      "发送行为",
+      "焦点与快捷键冲突"
+    ],
+    "note": "用户手动输入后的静态参考；不等同于UI-27真实输入法或交互验收通过。",
+    "scopeDecision": "docs/design/assets/official-ingame-ui/acceptance/reference/chat-scope-decision.json",
+    "latestRequirement": "保留当前项目聊天列表样式，放入输入栏上方的消息显示框；不再要求正式版输入/发送采集。",
+    "officialSendUserReportedLimitation": "用户说明正式版需要满15级才能发送，当前无法发送；未独立验证等级规则。",
+    "inputCaptureStyleReference": false,
+    "retainDraftRequired": false,
+    "officialSendRequired": false
+  },
+  "historicalRequestedBaseline": {
+    "path": "build/game-ui/source-libraries.json",
+    "sha256": "70780b5b723aec7b7e37c7f9c8b4423971a2295cff2d8ccf974b91f6acd2dec1",
+    "note": "采集开始前的旧参考基线；从未验证为各图采集时的真实源文件版本。"
+  },
+  "baselineAssociationStatus": "current-snapshot-comparison-only; historical capture association remains unverified",
+  "runtimeInspection": "runtime-inspection.json",
+  "panelMatching": "panel-matching.json",
+  "scopeDecision": "docs/design/assets/official-ingame-ui/acceptance/reference/chat-scope-decision.json",
+  "latestRuntimeObservation": "docs/design/assets/official-ingame-ui/acceptance/reference/runtime-observation-20261107T121828020Z.json",
+  "secondaryPopupScopeDecision": "docs/design/assets/official-ingame-ui/acceptance/reference/secondary-popup-scope-decision.json",
+  "npcCardScopeDecision": "docs/design/assets/official-ingame-ui/acceptance/reference/npc-card-scope-decision.json",
+  "displaySettingsScopeDecision": "docs/design/assets/official-ingame-ui/acceptance/reference/display-settings-scope-decision.json",
+  "manualCaptureRequest": {
+    "status": "no_upload_required_now",
+    "requiredCaptures": [],
+    "reuseCaptures": [
+      {
+        "captureId": "01-overview",
+        "imageRelativePath": "captures/01-overview.jpg",
+        "imageSha256": "d5912e87139eb0264edd4ce5949fa5bc3f88e097a554999708270b58380679b1",
+        "fileIntegrityVerified": true
+      },
+      {
+        "captureId": "02-character",
+        "imageRelativePath": "captures/02-character.jpg",
+        "imageSha256": "571e96dbafabedb997d454e6ce7a3768e2ddd5f7dd3357d8c6f69537671c6274",
+        "fileIntegrityVerified": true
+      },
+      {
+        "captureId": "03-character-inventory",
+        "imageRelativePath": "captures/03-character-inventory.jpg",
+        "imageSha256": "11ac2f41784e123da471b799fd0d6aab7cf44deec36186248e14f3f696a09436",
+        "fileIntegrityVerified": true
+      }
+    ],
+    "reason": "已有主界面、角色及角色与包裹组合图直接复用，取消重复截图要求。",
+    "conditionalFollowUp": "先分析已有截图及本地素材；仅在确有缺项时，明确指定区域、状态和用途后单独提出，不要求重拍整套。",
+    "verificationBoundary": "文件存在且SHA256与采集记录一致，仅证明归档完整；不代表DPI、透明、按钮状态、历史源库关联或运行交互验收通过。"
+  },
+  "resolutionConfirmation": "docs/design/assets/official-ingame-ui/acceptance/reference/resolution-confirmation.json"
+}

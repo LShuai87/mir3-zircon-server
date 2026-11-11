@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "result": "pass",
+  "kind": "native-character-2765-verification",
+  "sourceSha256": "98efced4a423a11ebef3b97d1f851bc9570053b8dbc48c046a136e4d98c5ccc3",
+  "packageSha256": "208c6d4b3f710651a9724fe13b12eb927d02ee1a99510e2698fb62f606a4219b",
+  "previousPackageSha256": "639a5b6762f22dfc6cd837d2765ff0a558068ffa5c89f1b58194f66003baba5d",
+  "sourceSize": [
+    412,
+    562
+  ],
+  "nativePixelsPreserved": 205176,
+  "localRepairs": [],
+  "untouchedArtworkFrames": 93,
+  "untouchedPackageFrames": 93,
+  "equipmentCellsOnHomepage": 16,
+  "pages": [
+    "character",
+    "status",
+    "hermit"
+  ],
+  "productionBindingAllowed": false,
+  "scope": "PNG/native-pixel and packaged-frame preservation; synthetic runtime/interaction evidence is recorded separately."
+}

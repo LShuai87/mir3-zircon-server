@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "kind": "character-companion-layout-evidence",
+  "runtimeReady": false,
+  "productionBindingAllowed": false,
+  "source": "Client/Scenes/Views/CharacterDialog.GameUiCompanions.cs",
+  "carrier": {
+    "source": "UI[130]",
+    "size": [
+      296,
+      436
+    ],
+    "title": [
+      24,
+      10,
+      236,
+      20
+    ],
+    "close": [
+      274,
+      10,
+      18,
+      18
+    ],
+    "movable": false
+  },
+  "buttons": {
+    "source": "UI[3304]",
+    "nativeSize": [
+      57,
+      24
+    ],
+    "size": [
+      56,
+      22
+    ],
+    "status": [
+      288,
+      66
+    ],
+    "hermit": [
+      346,
+      66
+    ],
+    "states": [
+      "normal",
+      "hover",
+      "pressed",
+      "disabled"
+    ]
+  },
+  "content": {
+    "status": {
+      "startY": 80,
+      "rowHeight": 25,
+      "label": [
+        18,
+        160
+      ],
+      "value": [
+        184,
+        94
+      ],
+      "rows": 12
+    },
+    "hermit": {
+      "startY": 82,
+      "rowHeight": 30,
+      "basicLabel": [
+        18,
+        58
+      ],
+      "basicValue": [
+        76,
+        38
+      ],
+      "action": [
+        118,
+        22
+      ],
+      "elementIcon": [
+        158,
+        16
+      ],
+      "elementLabel": [
+        180,
+        30
+      ],
+      "elementValue": [
+        214,
+        64
+      ],
+      "weaponElementY": 292,
+      "remainingY": 332,
+      "confirmationY": 368
+    }
+  },
+  "behavior": [
+    "Sibling window flush right, top aligned.",
+    "Only one external card visible; same-button click collapses; other button replaces external content only.",
+    "Original role tab stays selected.",
+    "Owner movement, visibility, parent and resolution changes propagate.",
+    "Shift pair inside screen at right/bottom edges.",
+    "Close companion leaves owner open.",
+    "Page containers are non-sorting and pass-through, retaining native actions without covering close.",
+    "Disable/disposal restores original control parents, bounds, visibility, formats and colours."
+  ]
+}

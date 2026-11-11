@@ -1,0 +1,14 @@
+{
+  "command": [
+    "pwsh",
+    "-NoProfile",
+    "-File",
+    "build/game-ui/Prepare-GameUiPreview.ps1",
+    "-ClientDirectory",
+    "E:/workspace/Debug/Client",
+    "-PackagePath",
+    "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl"
+  ],
+  "exitCode": 0,
+  "log": "E:/workspace/mir3-zircon-server/docs/design/assets/official-ingame-ui/acceptance/manual-preview-entry/prepare-debug.log"
+}

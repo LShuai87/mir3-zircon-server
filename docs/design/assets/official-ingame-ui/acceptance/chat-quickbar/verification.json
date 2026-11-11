@@ -1,0 +1,133 @@
+{
+  "date": "2026-11-10",
+  "hudChecks": 842,
+  "windowSetChecks": 557408,
+  "fullSceneChecks": 4328,
+  "fullSceneFrames": 47,
+  "deviceResets": 9,
+  "placements": [
+    {
+      "resolution": [
+        1024,
+        768
+      ],
+      "quickbar": [
+        282,
+        586,
+        459,
+        44
+      ],
+      "chat": [
+        225,
+        630,
+        574,
+        106
+      ],
+      "gap": 0
+    },
+    {
+      "resolution": [
+        1366,
+        768
+      ],
+      "quickbar": [
+        453,
+        586,
+        459,
+        44
+      ],
+      "chat": [
+        396,
+        630,
+        574,
+        106
+      ],
+      "gap": 0
+    },
+    {
+      "resolution": [
+        1280,
+        800
+      ],
+      "quickbar": [
+        410,
+        618,
+        459,
+        44
+      ],
+      "chat": [
+        353,
+        662,
+        574,
+        106
+      ],
+      "gap": 0
+    },
+    {
+      "resolution": [
+        1440,
+        900
+      ],
+      "quickbar": [
+        490,
+        718,
+        459,
+        44
+      ],
+      "chat": [
+        433,
+        762,
+        574,
+        106
+      ],
+      "gap": 0
+    },
+    {
+      "resolution": [
+        1600,
+        900
+      ],
+      "quickbar": [
+        570,
+        718,
+        459,
+        44
+      ],
+      "chat": [
+        513,
+        762,
+        574,
+        106
+      ],
+      "gap": 0
+    },
+    {
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quickbar": [
+        730,
+        898,
+        459,
+        44
+      ],
+      "chat": [
+        673,
+        942,
+        574,
+        106
+      ],
+      "gap": 0
+    }
+  ],
+  "builtRuntimeSha256": "30c3f5ee843ca1c7976589ded497565a7430f48dfaf518ab0eea9cfefd91d30a",
+  "defaultRuntimeSha256": "d6c4e165c4968ef99b2ad856d0cdcb77f883feddd05a58393a8465f117b8fbb8",
+  "defaultExecutableUpdated": false,
+  "resourcePackageSha256": "dd45cbf51d976a69d28269ee0d27a985def1ee1693cab2b509b74ae347a880a4",
+  "evidenceDirectory": "E:\\workspace\\mir3-ui-work\\chat-quickbar-20261110",
+  "limitations": [
+    "Offline scene and synthetic account; no live account login.",
+    "Global contract validator remains blocked by the existing character binding source SHA256 mismatch."
+  ]
+}

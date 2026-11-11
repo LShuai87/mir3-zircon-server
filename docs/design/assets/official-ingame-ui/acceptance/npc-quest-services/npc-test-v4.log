@@ -1,0 +1,9 @@
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 Client.Scenes.GameScene.UpdateQuestIcons()
+   在 Client.Scenes.GameScene.CheckNewQuests()
+   在 Client.Scenes.GameScene.LevelChanged()
+   在 Client.Scenes.GameScene.UserChanged()
+   在 Client.Scenes.GameScene.set_User(UserObject value)
+   在 OfficialUiFullSceneTests.Populate(GameScene scene, MapInfo map)
+   在 OfficialUiFullSceneTests.ExerciseNpc(GameUiStartupSession owner, MapInfo map, String evidence, String style)
+   在 OfficialUiFullSceneTests.RunNpc(String[] args)

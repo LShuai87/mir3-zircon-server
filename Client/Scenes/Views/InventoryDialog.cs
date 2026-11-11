@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 using Client.Controls;
 using Client.Envir;
@@ -9,7 +10,7 @@ using Library;
 //Cleaned
 namespace Client.Scenes.Views
 {
-    public sealed class InventoryDialog : DXWindow
+    public sealed partial class InventoryDialog : DXWindow
     {
         #region Properties
 
@@ -30,18 +31,25 @@ namespace Client.Scenes.Views
         private DXButton RemoteSellButton, RemoteFragmentButton, MonsterDropListButton;
         public void OpenFragmentDialog()
         {
-            GameScene.Game.NPCItemFragmentBox.Visible = true;
-            GameScene.Game.NPCItemFragmentBox.Location = new Point(Size.Width - GameScene.Game.NPCItemFragmentBox.Size.Width, Size.Height);
+            OpenInventoryPopup(GameScene.Game.NPCItemFragmentBox,
+                new Point(Size.Width - GameScene.Game.NPCItemFragmentBox.Size.Width, Size.Height));
         }
         public void OpenSellGoodsDialog()
         {
-            GameScene.Game.NPCSellBox.Visible = true;
-            GameScene.Game.NPCSellBox.Location = new Point(0, Size.Height);
+            OpenInventoryPopup(GameScene.Game.NPCSellBox, new Point(0, Size.Height));
         }
         public void OpenMonsterDropListDialog()
         {
-            GameScene.Game.MonsterDropListBox.Visible = true;
-            GameScene.Game.MonsterDropListBox.Location = new Point(500, Size.Height);
+            OpenInventoryPopup(GameScene.Game.MonsterDropListBox, new Point(500, Size.Height));
+        }
+        private void OpenInventoryPopup(DXWindow popup, Point preferredLocation)
+        {
+            popup.Visible = true;
+            // Keep the original popup fully reachable at every supported resolution.
+            Size viewport = GameScene.Game.Size;
+            popup.Location = new Point(
+                Math.Max(0, Math.Min(preferredLocation.X, viewport.Width - popup.Size.Width)),
+                Math.Max(0, Math.Min(preferredLocation.Y, viewport.Height - popup.Size.Height)));
         }
         #endregion
 
@@ -76,7 +84,7 @@ namespace Client.Scenes.Views
             };
             GoldLabel.MouseClick += GoldLabel_MouseClick;
 
-            new DXLabel
+            gameUiGoldCaption = new DXLabel
             {
                 AutoSize = false,
                 Border = true,
@@ -105,7 +113,7 @@ namespace Client.Scenes.Views
                 Sound = SoundIndex.GoldPickUp
             };
 
-            new DXLabel
+            gameUiWeightCaption = new DXLabel
             {
                 AutoSize = false,
                 Border = true,
@@ -162,6 +170,7 @@ namespace Client.Scenes.Views
 
         protected override void Dispose(bool disposing)
         {
+            if (disposing) DisableGameUiInventory();
             base.Dispose(disposing);
 
             if (disposing)

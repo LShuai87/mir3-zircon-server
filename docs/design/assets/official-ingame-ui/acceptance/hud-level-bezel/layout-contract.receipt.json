@@ -1,0 +1,11 @@
+{
+  "command": [
+    "C:/Users/shuai/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+    "build/game-ui/Validate-OfficialUiLayout.py",
+    "--guards",
+    "--output",
+    "E:/workspace/mir3-ui-work/hud-level-bezel-20261108-layout-v1"
+  ],
+  "exitCode": 0,
+  "log": "E:/workspace/mir3-zircon-server/docs/design/assets/official-ingame-ui/acceptance/hud-level-bezel/layout-contract.log"
+}

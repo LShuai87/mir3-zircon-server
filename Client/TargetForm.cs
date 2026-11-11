@@ -37,6 +37,70 @@ namespace Client
             MaximizeBox = false;
         }
 
+        private bool closeConfirmed;
+        private DXMessageBox closeConfirmation;
+
+        // The confirmation buttons use a one-shot bypass so Close() does not reopen the dialog.
+        internal void CloseAfterConfirmation()
+        {
+            closeConfirmed = true;
+            try { Close(); }
+            finally { closeConfirmed = false; }
+        }
+
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            base.OnFormClosing(e);
+            if (e.Cancel || closeConfirmed || e.CloseReason != CloseReason.UserClosing) return;
+            e.Cancel = true;
+
+            var game = DXControl.ActiveScene as GameScene;
+            if (!CEnvir.GameUiOperationsBlocked && gameUiFailureNotice == null && game?.ExitBox != null && !game.ExitBox.IsDisposed)
+            {
+                game.ExitBox.ShowConfirmation();
+                return;
+            }
+
+            // A native prompt remains usable if the renderer has stopped or there is no scene.
+            if (CEnvir.GameUiOperationsBlocked || gameUiFailureNotice != null || DXControl.ActiveScene == null || DXControl.ActiveScene.IsDisposed)
+            {
+                if (MessageBox.Show(this, "确定要退出游戏吗？", "退出游戏", MessageBoxButtons.YesNo, MessageBoxIcon.Question,
+                    MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+                    e.Cancel = false;
+                return;
+            }
+
+            if (closeConfirmation != null && !closeConfirmation.IsDisposed)
+            {
+                closeConfirmation.Visible = true;
+                closeConfirmation.BringToFront();
+                return;
+            }
+            closeConfirmation = new DXMessageBox("确定要退出游戏吗？", "退出游戏", DXMessageBoxButtons.YesNo);
+            closeConfirmation.YesButton.Label.Text = "退出游戏";
+            closeConfirmation.NoButton.Label.Text = "取消";
+            closeConfirmation.YesButton.MouseClick += (o, args) => CloseAfterConfirmation();
+        }
+
+        private Panel gameUiFailureNotice;
+        internal void ShowGameUiFailureNotice()
+        {
+            if (IsDisposed || gameUiFailureNotice != null) return;
+            Text = "界面故障，请关闭客户端后重启";
+            gameUiFailureNotice = new Panel { Dock = DockStyle.Fill, BackColor = Color.Black };
+            var message = new Label
+            {
+                Dock = DockStyle.Fill, ForeColor = Color.White, TextAlign = ContentAlignment.MiddleCenter,
+                Text = "游戏界面发生故障，已停止新的操作。\r\n请关闭客户端后重新启动。"
+            };
+            var close = new Button { Dock = DockStyle.Bottom, Height = 48, Text = "退出客户端" };
+            close.Click += (o, e) => Close();
+            gameUiFailureNotice.Controls.Add(message);
+            gameUiFailureNotice.Controls.Add(close);
+            Controls.Add(gameUiFailureNotice);
+            gameUiFailureNotice.BringToFront();
+        }
+
         protected override void OnDeactivate(EventArgs e)
         {
             if (GameScene.Game != null)
@@ -51,6 +115,7 @@ namespace Client
 
         protected override void OnMouseMove(MouseEventArgs e)
         {
+            if (CEnvir.GameUiOperationsBlocked) return;
             //TODO Move to other locations instead?
             if (Config.ClipMouse && Focused)
                 Cursor.Clip = RectangleToScreen(ClientRectangle);
@@ -65,11 +130,12 @@ namespace Client
             }
             catch (Exception ex)
             {
-                CEnvir.SaveError(ex.ToString());
+                if (!CEnvir.HandleGameUiFailure(ex)) CEnvir.SaveError(ex.ToString());
             }
         }
         protected override void OnMouseDown(MouseEventArgs e)
         {
+            if (CEnvir.GameUiOperationsBlocked) return;
             if (GameScene.Game != null && e.Button == MouseButtons.Right && (GameScene.Game.SelectedCell != null || GameScene.Game.GoldPickedUp))
             {
                 GameScene.Game.SelectedCell = null;
@@ -83,11 +149,12 @@ namespace Client
             }
             catch (Exception ex)
             {
-                CEnvir.SaveError(ex.ToString());
+                if (!CEnvir.HandleGameUiFailure(ex)) CEnvir.SaveError(ex.ToString());
             }
         }
         protected override void OnMouseUp(MouseEventArgs e)
         {
+            if (CEnvir.GameUiOperationsBlocked) return;
 
             if (GameScene.Game != null)
                 GameScene.Game.MapControl.MapButtons &= ~e.Button;
@@ -98,45 +165,49 @@ namespace Client
             }
             catch (Exception ex)
             {
-                CEnvir.SaveError(ex.ToString());
+                if (!CEnvir.HandleGameUiFailure(ex)) CEnvir.SaveError(ex.ToString());
             }
         }
         protected override void OnMouseClick(MouseEventArgs e)
         {
+            if (CEnvir.GameUiOperationsBlocked) return;
             try
             {
                 DXControl.ActiveScene?.OnMouseClick(e);
             }
             catch (Exception ex)
             {
-                CEnvir.SaveError(ex.ToString());
+                if (!CEnvir.HandleGameUiFailure(ex)) CEnvir.SaveError(ex.ToString());
             }
         }
         protected override void OnMouseDoubleClick(MouseEventArgs e)
         {
+            if (CEnvir.GameUiOperationsBlocked) return;
             try
             {
                 DXControl.ActiveScene?.OnMouseClick(e);
             }
             catch (Exception ex)
             {
-                CEnvir.SaveError(ex.ToString());
+                if (!CEnvir.HandleGameUiFailure(ex)) CEnvir.SaveError(ex.ToString());
             }
         }
         protected override void OnMouseWheel(MouseEventArgs e)
         {
+            if (CEnvir.GameUiOperationsBlocked) return;
             try
             {
                 DXControl.ActiveScene?.OnMouseWheel(e);
             }
             catch (Exception ex)
             {
-                CEnvir.SaveError(ex.ToString());
+                if (!CEnvir.HandleGameUiFailure(ex)) CEnvir.SaveError(ex.ToString());
             }
         }
 
         protected override void OnKeyDown(KeyEventArgs e)
         {
+            if (CEnvir.GameUiOperationsBlocked) { e.Handled = e.SuppressKeyPress = true; return; }
             base.OnKeyDown(e);
 
             CEnvir.Shift = e.Shift;
@@ -156,11 +227,12 @@ namespace Client
             }
             catch (Exception ex)
             {
-                CEnvir.SaveError(ex.ToString());
+                if (!CEnvir.HandleGameUiFailure(ex)) CEnvir.SaveError(ex.ToString());
             }
         }
         protected override void OnKeyUp(KeyEventArgs e)
         {
+            if (CEnvir.GameUiOperationsBlocked) { e.Handled = e.SuppressKeyPress = true; return; }
             CEnvir.Shift = e.Shift;
             CEnvir.Alt = e.Alt;
             CEnvir.Ctrl = e.Control;
@@ -175,11 +247,12 @@ namespace Client
             }
             catch (Exception ex)
             {
-                CEnvir.SaveError(ex.ToString());
+                if (!CEnvir.HandleGameUiFailure(ex)) CEnvir.SaveError(ex.ToString());
             }
         }
         protected override void OnKeyPress(KeyPressEventArgs e)
         {
+            if (CEnvir.GameUiOperationsBlocked) { e.Handled = true; return; }
             try
             {
                 DXControl.ActiveScene?.OnKeyPress(e);
@@ -187,7 +260,7 @@ namespace Client
             }
             catch (Exception ex)
             {
-                CEnvir.SaveError(ex.ToString());
+                if (!CEnvir.HandleGameUiFailure(ex)) CEnvir.SaveError(ex.ToString());
             }
         }
         

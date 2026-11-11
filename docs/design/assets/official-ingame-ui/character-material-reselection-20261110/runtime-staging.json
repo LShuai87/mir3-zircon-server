@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "stagedAt": "2026-11-11T08:34:42.720847+08:00",
+  "result": "pass",
+  "configurations": [
+    {
+      "configuration": "Debug",
+      "clientDirectory": "E:\\workspace\\Debug\\Client",
+      "executableSha256": "3bde5cede2e471760ea498dec03ed4e60810d31eab74a8e74ef5cd45e9b654b2",
+      "librarySha256": "4c1255be4a4d98fc829275bf6bf1d39dc66327dd4e434e51accf87a91e0ac027",
+      "packageSha256": "a92a9153937181f0ecafdb335ad4ffcefdd5853353786efb6494b1242c19c766",
+      "previousPackageSha256": "208c6d4b3f710651a9724fe13b12eb927d02ee1a99510e2698fb62f606a4219b",
+      "backupFile": "E:\\workspace\\mir3-ui-work\\character-external-cards-20261111\\runtime-backup\\Debug\\OfficialV1.Zl",
+      "previewLauncher": "E:\\workspace\\Debug\\Client\\Start-OfficialUiPreview.cmd"
+    },
+    {
+      "configuration": "Release",
+      "clientDirectory": "E:\\workspace\\Release\\Client",
+      "executableSha256": "a3c4b6a8a515e015398d7fbaf4cbda64e6520d1234f8746def2a9756f4f1e178",
+      "librarySha256": "f6b5df3e890cfc935e853f39f15e6ea6e937ebbbf36dbb6cd62da508abbec95c",
+      "packageSha256": "a92a9153937181f0ecafdb335ad4ffcefdd5853353786efb6494b1242c19c766",
+      "previousPackageSha256": "208c6d4b3f710651a9724fe13b12eb927d02ee1a99510e2698fb62f606a4219b",
+      "backupFile": "E:\\workspace\\mir3-ui-work\\character-external-cards-20261111\\runtime-backup\\Release\\OfficialV1.Zl",
+      "previewLauncher": "E:\\workspace\\Release\\Client\\Start-OfficialUiPreview.cmd"
+    }
+  ],
+  "executableVerification": "companion-verification.json",
+  "serverBuild": {
+    "directory": "E:\\workspace\\mir3-ui-work\\character-shared-slot-20261110\\server",
+    "executableSha256": "a5a5b99fd441c2f899ea33e876349ff50e107cf843ac0e90b45818bdc2253bf5",
+    "librarySha256": "4c1255be4a4d98fc829275bf6bf1d39dc66327dd4e434e51accf87a91e0ac027",
+    "checks": 94,
+    "runningServerRestarted": false
+  },
+  "executableRebuiltAt": "2026-11-11T08:34:42.720847+08:00"
+}

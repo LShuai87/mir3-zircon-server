@@ -1,0 +1,88 @@
+{
+  "integrityChecksPassed": true,
+  "requirementCoverageComplete": false,
+  "referenceResolution": [
+    1024,
+    768
+  ],
+  "surfaceCount": 9,
+  "packageFrames": 94,
+  "sceneReferencedFrames": 51,
+  "directFrameRoles": [
+    "character",
+    "character-main-background",
+    "chat-history-frame",
+    "chat-input-frame",
+    "equipment-cell-frame",
+    "hud-command-frame",
+    "hud-experience-fill",
+    "hud-experience-track",
+    "hud-hp-fill",
+    "hud-mp-fill",
+    "hud-orb-shell",
+    "inventory",
+    "minimap-frame",
+    "npc-shop",
+    "quickbar-base"
+  ],
+  "installedButtonGroups": [
+    "hud-command-bottom",
+    "hud-command-center",
+    "hud-command-lower-left",
+    "hud-command-lower-right",
+    "hud-command-top",
+    "hud-command-upper-left",
+    "hud-command-upper-right",
+    "hud-shop-icon",
+    "minimap-collapse-button"
+  ],
+  "compositionOnlyRoles": [
+    "bottom-segmented-fill",
+    "bottom-segmented-frame"
+  ],
+  "uninstalledButtonGroups": [
+    "chat-flag-icon",
+    "chat-group-icon",
+    "chat-person-icon",
+    "chat-speaker-icon",
+    "chat-two-person-icon",
+    "hud-exit-icon",
+    "hud-handshake-icon",
+    "hud-horse-icon",
+    "minimap-mountain-button",
+    "minimap-zoom-in-button"
+  ],
+  "uninstalledButtonFrames": 40,
+  "stagedFrameRoles": [
+    "warehouse-background"
+  ],
+  "stagedFrames": 1,
+  "outstanding": [
+    {
+      "id": "warehouse-background",
+      "surface": "warehouse",
+      "taskIds": [
+        "UI-05",
+        "UI-25"
+      ],
+      "reason": "仓库底板已作为第93帧合入完整94帧候选包；可恢复统一入口及NPC组合定位未接入，布局/视觉尚未审定。"
+    }
+  ],
+  "remainingAcceptance": [
+    "逐项审定复用控件及有效范围的原操作/字段覆盖；源码锚点只证明当前声明有出处。",
+    "完成最终PNG/Zl实绘对照：暗底、细线、文字、红蓝边缘、负offset及压缩；本校验不代替GPU/真实游戏验收。"
+  ],
+  "gateClosureAllowed": false,
+  "runtimeReady": false,
+  "productionBindingAllowed": false,
+  "artifactVerification": {
+    "selectedSourcePngs": 30,
+    "outputPngs": 94,
+    "binaryAlphaFrames": 94,
+    "opaqueBlackPixels": 4262,
+    "transparentPixels": 159609,
+    "verifiedBc1Payloads": 94,
+    "gpuComparisonExecuted": false
+  },
+  "staticAuditOnly": true
+}

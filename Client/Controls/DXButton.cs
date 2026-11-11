@@ -147,6 +147,57 @@ namespace Client.Controls
 
         #endregion
 
+        private ButtonImageStates _ImageStates;
+        public ButtonImageStates ImageStates => _ImageStates;
+        public int CurrentImageIndex => _ImageStates == null ? Index :
+            !IsEnabled ? _ImageStates.Disabled :
+            Pressed || (HasFocus && MouseControl == this && CanBePressed) ? _ImageStates.Pressed :
+            MouseControl == this ? _ImageStates.Hover : _ImageStates.Normal;
+        private Color CurrentImageTint => !IsEnabled ? _ImageStates.DisabledTint :
+            Pressed || (HasFocus && MouseControl == this && CanBePressed) ? _ImageStates.PressedTint :
+            MouseControl == this ? _ImageStates.HoverTint : _ImageStates.NormalTint;
+
+        public GameUiButtonHitMask NormalFrameHitMask { get; private set; }
+
+        public void BindButtonImages(MirLibrary library, ButtonImageStates states, bool normalFrameHitTest = false)
+        {
+            if (library == null) throw new ArgumentNullException(nameof(library));
+            if (states == null) throw new ArgumentNullException(nameof(states));
+            Size size = library.GetSize(states.Normal);
+            if (size.IsEmpty) throw new ArgumentException("Button normal frame is missing.", nameof(states));
+            foreach (int index in new[] { states.Normal, states.Hover, states.Pressed, states.Disabled })
+                if (library.GetSize(index) != size)
+                    throw new ArgumentException("All explicit button frames must have the same logical size.", nameof(states));
+            var hitMask = normalFrameHitTest ? library.ReadButtonHitMask(states.Normal) : null;
+            _ImageStates = states;
+            NormalFrameHitMask = hitMask;
+            FixedSize = true;
+            Size = size;
+            base.BindImage(library, states.Normal);
+            UpdateForeColour();
+            UpdateDisplayArea();
+        }
+
+        public override void BindImage(MirLibrary library, int index)
+        {
+            if ((library == null && index != -1) || (library != null && library.GetImage(index) == null))
+                throw new ArgumentException("Image binding must reference a present frame, or null/-1 to clear it.");
+            bool hadStates = _ImageStates != null;
+            _ImageStates = null;
+            NormalFrameHitMask = null;
+            if (hadStates) FixedSize = false;
+            base.BindImage(library, index);
+            UpdateForeColour();
+            UpdateDisplayArea();
+        }
+
+        public override bool IsMouseOver(Point point)
+        {
+            bool hit = base.IsMouseOver(point);
+            if (!hit || NormalFrameHitMask == null || !DisplayArea.Contains(point)) return hit;
+            return NormalFrameHitMask.Contains(new Point(point.X - DisplayArea.X, point.Y - DisplayArea.Y));
+        }
+
         public DXLabel Label { get; private set; }
 
         public override void OnIsEnabledChanged(bool oValue, bool nValue)
@@ -192,7 +243,7 @@ namespace Client.Controls
             if (Parent != null)
                 area.Offset(Parent.DisplayArea.Location);
 
-            if (HasFocus && MouseControl == this && !Pressed && IsEnabled && CanBePressed) area.Y++;
+            if (_ImageStates == null && HasFocus && MouseControl == this && !Pressed && IsEnabled && CanBePressed) area.Y++;
 
             DisplayArea = area;
         }
@@ -230,7 +281,8 @@ namespace Client.Controls
             }
             else
             {
-                MirImage image = Library.CreateImage(Index, ImageType.Image);
+                MirImage image = Library.CreateImage(CurrentImageIndex, ImageType.Image);
+                if (image?.Image == null) return;
                 texture = image.Image;
                 image.ExpireTime = CEnvir.Now + Config.CacheDuration;
             }
@@ -243,7 +295,7 @@ namespace Client.Controls
             else
                 DXManager.SetOpacity(Opacity);
 
-            PresentTexture(texture, Parent, DisplayArea, ForeColour, this);
+            PresentTexture(texture, Parent, DisplayArea, _ImageStates == null ? ForeColour : CurrentImageTint, this);
             
             if (Blend)
                 DXManager.SetBlend(oldBlend, oldRate);
@@ -350,6 +402,8 @@ namespace Client.Controls
 
             if (disposing)
             {
+                _ImageStates = null;
+                NormalFrameHitMask = null;
                 _HasFocus = false;
                 _Pressed = false;
                 _CanBePressed = false;
@@ -372,6 +426,29 @@ namespace Client.Controls
             }
         }
         #endregion
+    }
+
+    /// <summary>Explicit frames and optional tint fallbacks. Index adjacency has no meaning.</summary>
+    public sealed class ButtonImageStates
+    {
+        public int Normal { get; }
+        public int Hover { get; }
+        public int Pressed { get; }
+        public int Disabled { get; }
+        public Color NormalTint { get; }
+        public Color HoverTint { get; }
+        public Color PressedTint { get; }
+        public Color DisabledTint { get; }
+
+        public ButtonImageStates(int normal, int hover, int pressed, int disabled,
+            Color? normalTint = null, Color? hoverTint = null, Color? pressedTint = null, Color? disabledTint = null)
+        {
+            if (normal < 0 || hover < 0 || pressed < 0 || disabled < 0)
+                throw new ArgumentOutOfRangeException(nameof(normal), "Every button state requires an explicit frame.");
+            Normal = normal; Hover = hover; Pressed = pressed; Disabled = disabled;
+            NormalTint = normalTint ?? Color.White; HoverTint = hoverTint ?? Color.White;
+            PressedTint = pressedTint ?? Color.White; DisabledTint = disabledTint ?? Color.White;
+        }
     }
 
     public enum ButtonType

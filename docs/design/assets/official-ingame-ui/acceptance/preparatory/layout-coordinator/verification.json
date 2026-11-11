@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "kind": "independent-preparatory-implementation",
+  "forTask": "UI-11",
+  "checkedAt": "2026-11-07T12:12:52.857091+00:00",
+  "taskMarkedDone": false,
+  "releaseAccepted": false,
+  "productionBindingAllowed": false,
+  "summary": "Unified geometry coordinator with simulated host and participants; no GameScene integration or final asset bindings.",
+  "sourceChanges": [
+    {
+      "path": "Client/Client.csproj",
+      "beforeSha256": "54ad61a5afd72bde09fb066ee933894848a004d02ba9ade5dbf660d754fd1c38",
+      "afterSha256": "8a78a722a79086dbac11a4f93c45272cfa88575ddda05136665fa09176ca76a3"
+    },
+    {
+      "path": "build/game-ui/Validate-UiTasks.py",
+      "beforeSha256": "c7e1e70684410dd0fb7488f97bccbbb80da2656f3bdee6f2ffb0b6617aee7078",
+      "afterSha256": "86edc974a9c235790e750bcca71458bba844e93430695ffc2703fa4d7667adfb"
+    }
+  ],
+  "sourceHashes": [
+    {
+      "path": "Client/Envir/GameUiLayoutCoordinator.cs",
+      "sha256": "f518ef9319e67b377f182e2232845dbfde0a3818f2fa596b6d8f051222166718"
+    },
+    {
+      "path": "Client/Client.csproj",
+      "sha256": "8a78a722a79086dbac11a4f93c45272cfa88575ddda05136665fa09176ca76a3"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiCoordinatorTests.cs",
+      "sha256": "e9fa597515b2331349761f96268a779d079324cf5aab30035ad2fee1a16e7a6d"
+    },
+    {
+      "path": "tests/Run-GameUiCoordinatorTests.ps1",
+      "sha256": "91a6f3e6ead61adb38e6aad1f760c3eab1d6caabcb91aeeae86e9001c1645dfa"
+    },
+    {
+      "path": "build/game-ui/Validate-UiTasks.py",
+      "sha256": "86edc974a9c235790e750bcca71458bba844e93430695ffc2703fa4d7667adfb"
+    },
+    {
+      "path": "tests/game-ui/test_ui_task_history.py",
+      "sha256": "1a2067af18052606a8e3aa2ab36a8770155780824ddba7ba8eca826161432eb6"
+    }
+  ],
+  "commands": [
+    {
+      "command": "MSBuild Client/Client.csproj /t:Build /p:Configuration=Debug /p:Platform=AnyCPU /nologo /v:minimal",
+      "exitCode": 0,
+      "result": "pass",
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/layout-coordinator/client-debug.log",
+      "logSha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "command": "MSBuild Client/Client.csproj /t:Build /p:Configuration=Release /p:Platform=AnyCPU /nologo /v:minimal",
+      "exitCode": 0,
+      "result": "pass",
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/layout-coordinator/client-release.log",
+      "logSha256": "c9e24428be1e56c8408af17aacfea3413de3953bfe426d10eb768782f5005ebc"
+    },
+    {
+      "command": "powershell tests/Run-GameUiCoordinatorTests.ps1",
+      "exitCode": 0,
+      "result": "pass",
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/layout-coordinator/coordinator-tests.log",
+      "logSha256": "2348fb57b3b06d6b0b55262509a276f94617b23313093db60c421fe9ab62d6b0"
+    },
+    {
+      "command": "python tests/game-ui/test_ui_task_history.py",
+      "exitCode": 0,
+      "result": "pass",
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/layout-coordinator/history-tests.log",
+      "logSha256": "49b7fa04099424de6a1860c4c070a282579e47425fabd079cf7a573d3e886174"
+    },
+    {
+      "command": "powershell tests/Run-GameUiTests.ps1 -Suite Layout",
+      "exitCode": 0,
+      "result": "pass",
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/layout-coordinator/layout-regression.log",
+      "logSha256": "cf0154f933896b9bf41f685995b9ad2eb9aae9111a98a79030cf026d143eb002"
+    }
+  ],
+  "checks": {
+    "coordinatorAssertions": 25303,
+    "supportedResolutions": 6,
+    "anchors": 9,
+    "randomizedPlacements": 2400,
+    "sourceHistoryTests": 7,
+    "existingLayoutAssertions": 35
+  },
+  "limitations": [
+    "No host or participants are connected to GameScene; UI-11 remains not_started because its final inputs and integration are pending.",
+    "Synthetic window sizes and positions only; no official resource index or final layout coordinate is selected.",
+    "The host must implement suppression for existing/new windows, real clipping/scrolling, overlay order and chat input refresh before activation.",
+    "Synchronous reentry returns false. The eventual scene adapter must schedule another pass after the current pass if the requested resolution or safe area changed.",
+    "Actual IME, focus, messages, tabs, visibility, topmost hit testing, drag/drop and real NPC interactions are not verified; A14/A15 remain not_run.",
+    "Current project chat-list style is retained by scope decision; official send validation is not a prerequisite and no level limit is added.",
+    "Historical source reports stay immutable; explicit hash transitions are checked at each boundary and final hashes are checked against disk."
+  ]
+}

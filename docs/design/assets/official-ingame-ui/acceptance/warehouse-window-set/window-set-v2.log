@@ -1,0 +1,14 @@
+CPU button masks: 17256 checks; 0 source PNG alpha comparisons; no GPU uploads.
+Button mask checks including real controls: 111539; hover, pressed, disabled, hide/restore, PassThrough, invalid rebind and Legacy reset.
+Compact wheel ownership: 228 shared opaque pixels; single click, hidden fallback, disabled blocking and fixed draw order passed.
+System.Exception: Actual scene resize wrote layout settings
+   在 OfficialUiWindowSetTests.Check(Boolean value, String detail)
+   在 OfficialUiWindowSetTests.ExerciseScene(GameUiVerifiedPackage package, String directory)
+   在 OfficialUiWindowSetTests.Main(String[] args)
+WindowSet tests failed.
+At E:\workspace\mir3-zircon-server\tests\Run-GameUiWindowSetTests.ps1:40 char:36
++         if ($LASTEXITCODE -ne 0) { throw 'WindowSet tests failed.' }
++                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (WindowSet tests failed.:String) [], RuntimeException
+    + FullyQualifiedErrorId : WindowSet tests failed.
+ 

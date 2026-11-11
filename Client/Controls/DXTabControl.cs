@@ -9,6 +9,25 @@ using SlimDX.Direct3D9;
 //Cleaned
 namespace Client.Controls
 {
+    // Optional per-page geometry. The default tab layout remains automatic.
+    public sealed class DXTabGeometry
+    {
+        public Rectangle Page { get; }
+        public Rectangle Button { get; }
+
+        public DXTabGeometry(Rectangle page, Rectangle button)
+        {
+            foreach (Rectangle rect in new[] { page, button })
+                if (rect.X < 0 || rect.Y < 0 || rect.Width <= 0 || rect.Height <= 0 ||
+                    (long)rect.X + rect.Width > 16384 || (long)rect.Y + rect.Height > 16384)
+                    throw new ArgumentOutOfRangeException(nameof(page), "Tab rectangles must be positive and within 16384 pixels.");
+            if (page.IntersectsWith(button))
+                throw new ArgumentException("The tab header must be outside its page.");
+            Page = page;
+            Button = button;
+        }
+    }
+
     public class DXTabControl : DXControl
     {
         #region Properties
@@ -39,23 +58,35 @@ namespace Client.Controls
 
             if (nValue != null)
                 nValue.Selected = true;
+            GameUiChatGroup?.RevealSelectedTab();
         }
 
         #endregion
 
         public List<DXButton> TabButtons = new List<DXButton>();
 
+        // Opt-in chat geometry preserves the existing movable tabs and their parents.
+        public GameUiChatGroupBinding GameUiChatGroup { get; internal set; }
+        public override Size Size
+        {
+            get => base.Size;
+            set => base.Size = GameUiChatGroup?.ConstrainSize(value) ?? value;
+        }
+        public override Size GetAcceptableResize(Size size)
+            => GameUiChatGroup?.ConstrainSize(base.GetAcceptableResize(size)) ?? base.GetAcceptableResize(size);
+
         public override void OnDisplayAreaChanged(Rectangle oValue, Rectangle nValue)
         {
             base.OnDisplayAreaChanged(oValue, nValue);
 
             if (Parent == null) return;
+            if (GameUiChatGroup != null) { GameUiChatGroup.Refresh(); return; }
 
             foreach (DXControl control in Controls)
             {
                 DXTab tab = control as DXTab;
 
-                if (tab == null || tab.Updating) continue;
+                if (tab == null || tab.Updating || tab.FixedGeometry != null) continue;
 
                 control.Size = new Size(Size.Width - control.Location.X, Size.Height - control.Location.Y);
             }
@@ -88,8 +119,17 @@ namespace Client.Controls
             _SelectedTab = null;
         }
         
+        private DXTab FindFixedTab(DXButton button)
+        {
+            foreach (DXControl control in Controls)
+                if (control is DXTab tab && tab.TabButton == button && tab.FixedGeometry != null)
+                    return tab;
+            return null;
+        }
+
         public void TabsChanged()
         {
+            if (GameUiChatGroup != null) { GameUiChatGroup.Refresh(); return; }
 
             if (SelectedTab == null)
             {
@@ -109,6 +149,8 @@ namespace Client.Controls
             foreach (DXButton control in TabButtons)
             {
                 if (!control.Visible) continue;
+                DXTab fixedTab = FindFixedTab(control);
+                if (fixedTab != null) { fixedTab.ApplyFixedGeometry(); continue; }
 
                 if (control.RightAligned)
                 {
@@ -126,7 +168,7 @@ namespace Client.Controls
             {
                 if (!control.Visible) continue;
 
-                if (!control.RightAligned) continue;
+                if (!control.RightAligned || FindFixedTab(control) != null) continue;
 
             //    control.Visible = true;
                 control.Location = new Point(Size.Width - width, 0);
@@ -279,11 +321,63 @@ namespace Client.Controls
 
         public bool Updating;
 
+        public DXTabGeometry FixedGeometry { get; private set; }
+        private bool fixedGeometryApplying;
+        private bool legacyButtonMovable, legacyAllowResize;
+
+        public void UseFixedGeometry(DXTabGeometry geometry)
+        {
+            if (IsDisposed) throw new ObjectDisposedException(nameof(DXTab));
+            if (IsMoving || IsResizing || TabButton.IsMoving || TabButton.IsResizing)
+                throw new InvalidOperationException("A moving or resizing tab cannot change layout.");
+            if (geometry != null)
+            {
+                if (!(Parent is DXTabControl)) throw new InvalidOperationException("A fixed tab needs a tab control parent.");
+                Rectangle parentBounds = new Rectangle(Point.Empty, Parent.Size);
+                if (!parentBounds.Contains(geometry.Page) || !parentBounds.Contains(geometry.Button))
+                    throw new ArgumentException("Tab geometry exceeds its parent.", nameof(geometry));
+            }
+            if (FixedGeometry == null && geometry != null)
+            {
+                legacyButtonMovable = TabButton.Movable;
+                legacyAllowResize = AllowResize;
+            }
+            bool wasFixed = FixedGeometry != null;
+            FixedGeometry = geometry;
+            if (geometry != null) ApplyFixedGeometry();
+            else if (wasFixed)
+            {
+                TabButton.Movable = legacyButtonMovable;
+                AllowResize = legacyAllowResize;
+                Location = new Point(0, (Parent as DXTabControl)?.GameUiChatGroup?.ContentTop ?? TabHeight - 1);
+                if (Parent != null) Size = new Size(Parent.Size.Width, Parent.Size.Height - Location.Y);
+                TabButton.Size = new Size(Math.Max(60, DXLabel.GetSize(TabButton.Label.Text, TabButton.Label.Font, TabButton.Label.Outline).Width), TabHeight);
+            }
+            (Parent as DXTabControl)?.TabsChanged();
+        }
+
+        internal void ApplyFixedGeometry()
+        {
+            if (FixedGeometry == null || fixedGeometryApplying || IsDisposed) return;
+            fixedGeometryApplying = true;
+            try
+            {
+                TabButton.Movable = false;
+                AllowResize = false;
+                Location = FixedGeometry.Page.Location;
+                Size = FixedGeometry.Page.Size;
+                TabButton.Location = FixedGeometry.Button.Location;
+                TabButton.Size = FixedGeometry.Button.Size;
+            }
+            finally { fixedGeometryApplying = false; }
+        }
+
         public override void OnDisplayAreaChanged(Rectangle oValue, Rectangle nValue)
         {
             base.OnDisplayAreaChanged(oValue, nValue);
 
             if (Parent == null) return;
+            if (FixedGeometry != null) { ApplyFixedGeometry(); return; }
 
             if (IsResizing && Updating) return;
 
@@ -339,7 +433,7 @@ namespace Client.Controls
                 Updating = true;
                 Parent.Size = size;
                 Parent.Location = location;
-                Location = new Point(0, TabHeight - 1);
+                Location = new Point(0, (Parent as DXTabControl)?.GameUiChatGroup?.ContentTop ?? TabHeight - 1);
                 Updating = false;
                 return;
             }
@@ -366,7 +460,8 @@ namespace Client.Controls
             };
             TabButton.Label.TextChanged += (o, e) =>
             {
-                TabButton.Size = new Size(Math.Max(60, DXLabel.GetSize(TabButton.Label.Text, TabButton.Label.Font, TabButton.Label.Outline).Width), TabHeight);
+                if (FixedGeometry != null) ApplyFixedGeometry();
+                else TabButton.Size = new Size(Math.Max(60, DXLabel.GetSize(TabButton.Label.Text, TabButton.Label.Font, TabButton.Label.Outline).Width), TabHeight);
 
             };
             TabButton.MouseClick += (o, e) =>
@@ -382,6 +477,7 @@ namespace Client.Controls
         #region Methods
         private void TabButton_IsMovingChanged(object sender, EventArgs e)
         {
+            if (FixedGeometry != null) { ApplyFixedGeometry(); return; }
             if (!IsMoving)
             {
                 DXTabControl cTab = Parent as DXTabControl;
@@ -423,6 +519,7 @@ namespace Client.Controls
 
         private void TabButton_LocationChanged(object sender, EventArgs e)
         {
+            if (FixedGeometry != null) { ApplyFixedGeometry(); return; }
             if (Updating || !TabButton.IsMoving) return;
 
             if (Parent?.Parent == null) return;

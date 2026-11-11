@@ -1,0 +1,138 @@
+{
+  "kind": "button-alpha-and-reference-overlap-inspection",
+  "releaseAccepted": false,
+  "matchingSha256": "0395f9c379f24126b3b00f3d5ef531b5a87441bae29b5205188986e634d5a1f0",
+  "coordinateSpace": "Matched original screenshot pixels including titlebar. CurrentLocalRect is existing candidate geometry, not recovered official hit geometry.",
+  "buttons": [
+    {
+      "role": "hud-command-center",
+      "currentLocalRect": [
+        85,
+        73,
+        58,
+        58
+      ],
+      "matchedScreenshotOrigin": [
+        885,
+        686
+      ],
+      "pngSha256": "f7d184668925943307c939dfb7e8022de9072066f5795d1532f3b103c0969990"
+    },
+    {
+      "role": "hud-command-top",
+      "currentLocalRect": [
+        86,
+        38,
+        54,
+        32
+      ],
+      "matchedScreenshotOrigin": [
+        888,
+        659
+      ],
+      "pngSha256": "bb36e2442506d89ce30175ff22c6af74d91cf1dde81c646fa7273559149f0b70"
+    },
+    {
+      "role": "hud-command-upper-left",
+      "currentLocalRect": [
+        40,
+        73,
+        42,
+        50
+      ],
+      "matchedScreenshotOrigin": [
+        855,
+        668
+      ],
+      "pngSha256": "9d55cd4664566145fb8dcd1ced678fb56093599d99b104267c3e05cb4c94e1b5"
+    },
+    {
+      "role": "hud-command-upper-right",
+      "currentLocalRect": [
+        146,
+        73,
+        42,
+        50
+      ],
+      "matchedScreenshotOrigin": [
+        930,
+        666
+      ],
+      "pngSha256": "2fdaf84c57d0cd9555b2ea3722bb1e7d64a4573babf21d347e8c8daa7cdb6fba"
+    },
+    {
+      "role": "hud-command-lower-left",
+      "currentLocalRect": [
+        40,
+        134,
+        42,
+        50
+      ],
+      "matchedScreenshotOrigin": [
+        856,
+        718
+      ],
+      "pngSha256": "d16bda56705e5c13077e41cd039011e06bd77db1b93d9ffd2c22312690b8330b"
+    },
+    {
+      "role": "hud-command-lower-right",
+      "currentLocalRect": [
+        146,
+        134,
+        42,
+        50
+      ],
+      "matchedScreenshotOrigin": [
+        931,
+        717
+      ],
+      "pngSha256": "2d1fceeb597eb50d4da10fe6a4497b053d5e10812d227695de7ca25d04a60d1a"
+    },
+    {
+      "role": "hud-command-bottom",
+      "currentLocalRect": [
+        85,
+        134,
+        54,
+        32
+      ],
+      "matchedScreenshotOrigin": [
+        885,
+        744
+      ],
+      "pngSha256": "933c6010f640843361ae37b4c8512c78c9f151564336e6c81ab8b64233fc6863"
+    }
+  ],
+  "matchedOpaqueOverlaps": [
+    {
+      "a": "hud-command-center",
+      "b": "hud-command-top",
+      "opaqueOverlapPixels": 62
+    },
+    {
+      "a": "hud-command-center",
+      "b": "hud-command-upper-left",
+      "opaqueOverlapPixels": 40
+    },
+    {
+      "a": "hud-command-center",
+      "b": "hud-command-upper-right",
+      "opaqueOverlapPixels": 30
+    },
+    {
+      "a": "hud-command-top",
+      "b": "hud-command-upper-right",
+      "opaqueOverlapPixels": 55
+    },
+    {
+      "a": "hud-command-lower-left",
+      "b": "hud-command-bottom",
+      "opaqueOverlapPixels": 43
+    }
+  ],
+  "limitations": [
+    "Local JPEG placement is approximate; it does not establish unique coordinates or window client crop.",
+    "Nonzero opaque intersections prevent asserting disjoint official hit regions from alpha alone.",
+    "Current rectangles remain unchanged and disjoint; compact layout and edge ownership are pending."
+  ]
+}

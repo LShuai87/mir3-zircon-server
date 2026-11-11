@@ -1,0 +1,274 @@
+{
+  "schemaVersion": 1,
+  "kind": "official-ui-character-surfaces-preparation-verification",
+  "checkedAtLocalDate": "2026-11-08",
+  "referenceResolution": [
+    1024,
+    768
+  ],
+  "releaseAccepted": false,
+  "sourceChanges": [
+    {
+      "path": "build/game-ui/Compose-OfficialUi.py",
+      "beforeSha256": "eb9d9e0f8ef370a380d2c78aabea435002fc08be11801b9957c946261e119c97",
+      "afterSha256": "141feb1bfb9b4e072d6dfed47115b0727a09357c7dafc4d86e9973f52a32dc6b"
+    },
+    {
+      "path": "build/game-ui/composition-recipe.json",
+      "beforeSha256": "4ced064bf5714c17298c56c7659ed89009436e83fcc888d66570bc816e254b14",
+      "afterSha256": "05234c60dd0bae9fbdd9c4e95781878d8a0694af4fb942bad80151f87ae9a662"
+    },
+    {
+      "path": "tests/game-ui/test_composed_ui.py",
+      "beforeSha256": "3d289778ed0045c3e579cacf517a00835ae125d935a3490758cb7510be3ddf74",
+      "afterSha256": "49667dcb26462346962661fad8659dde35e7e4e81b61faa982f98c085ddbfd02"
+    }
+  ],
+  "sourceHashes": [
+    {
+      "path": "build/game-ui/Compose-OfficialUi.py",
+      "sha256": "141feb1bfb9b4e072d6dfed47115b0727a09357c7dafc4d86e9973f52a32dc6b"
+    },
+    {
+      "path": "build/game-ui/composition-recipe.json",
+      "sha256": "05234c60dd0bae9fbdd9c4e95781878d8a0694af4fb942bad80151f87ae9a662"
+    },
+    {
+      "path": "tests/game-ui/test_composed_ui.py",
+      "sha256": "49667dcb26462346962661fad8659dde35e7e4e81b61faa982f98c085ddbfd02"
+    },
+    {
+      "path": "tests/game-ui/Verify-HudSurfaces.py",
+      "sha256": "619cdc3bea5ec4d02170641dceb4fcae04eb9504a223a4651be0d654b3f103c0"
+    },
+    {
+      "path": "build/game-ui/layout-official-v1.json",
+      "sha256": "b39fa17ba46f9424a7c5b713a1c77cf7d16b31570a1320232f747239ccd8f509"
+    },
+    {
+      "path": "ImageManager/OfficialUiAssetBuilder.cs",
+      "sha256": "4d1ebb40c8668c1c1914a27a6710d0c5f532db4d229e53d810755b475ea36239"
+    },
+    {
+      "path": "tests/game-ui/test_prepared_ui.py",
+      "sha256": "597e9165e67a90ab4d1b936b374824df0040299fe716d375ab13382d57bb0195"
+    },
+    {
+      "path": "tests/game-ui/Verify-ComposedUi.py",
+      "sha256": "f6191b23a313fe146d3a0b9d7c706bda0b642f8cd4e6ff12dd063dca4fb43100"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiComposedRenderTests.cs",
+      "sha256": "24c25bb5e978bad56c5027475f67471db27076efbaf971170cad91d0c26df843"
+    },
+    {
+      "path": "tests/Run-GameUiComposedRenderTests.ps1",
+      "sha256": "3d367433467c8f5487aaf71adf883f9bac3ad29ccf77d55d57fb8a0aab286537"
+    },
+    {
+      "path": "tests/game-ui/Verify-CharacterSurfaces.py",
+      "sha256": "c79c1e12228d9aaf14cee345c09a0cbd7a8270f9887417e8fc5f99ad4467b049"
+    }
+  ],
+  "commands": [
+    {
+      "command": "C:/Users/shuai/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe -m unittest discover -s tests/game-ui -p test_composed_ui.py -v",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-surfaces/composition-tests.log",
+      "logSha256": "bb8b298af7ea69d2c27df7da8f2d7c409dca9a32fd03162e3d7aa9f9a456f5bd"
+    },
+    {
+      "command": "C:/Users/shuai/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe -m unittest discover -s tests/game-ui -p test_prepared_ui.py -v",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-surfaces/package-regression.log",
+      "logSha256": "2ca92cad2fce69b237079e3cc638d5af83698e8992a39c1417927ce2a45b10b4"
+    },
+    {
+      "command": "C:/Users/shuai/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe build/game-ui/Compose-OfficialUi.py --decoded E:/workspace/mir3-ui-work/selected-reference-20261107-v1/Decoded --output E:/workspace/mir3-ui-work/character-surfaces-art-20261108-v1 --recipe build/game-ui/composition-recipe.json",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-surfaces/compose.log",
+      "logSha256": "4bfb4a72669f1dedbb246ebc0be6553f17de0e1dc33c5b000c5632ef718d784c"
+    },
+    {
+      "command": "E:/workspace/Debug/ImageManager/ImageManager.exe --official-ui prepared E:/workspace/mir3-ui-work/character-surfaces-art-20261108-v1 E:/workspace/mir3-ui-work/character-surfaces-zl-20261108-v1 E:/workspace/mir3-ui-work/character-surfaces-art-20261108-v1/composed-manifest.json",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-surfaces/package.log",
+      "logSha256": "13d6df98fcfc1b88504aba3e4b49558b8ce63cf3701c9840969f7beecf92ed20"
+    },
+    {
+      "command": "C:/Users/shuai/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe build/game-ui/Compose-OfficialUi.py --decoded E:/workspace/mir3-ui-work/selected-reference-20261107-v1/Decoded --output E:/workspace/mir3-ui-work/character-surfaces-art-20261108-v2 --recipe build/game-ui/composition-recipe.json",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-surfaces/compose-repeat.log",
+      "logSha256": "4bfb4a72669f1dedbb246ebc0be6553f17de0e1dc33c5b000c5632ef718d784c"
+    },
+    {
+      "command": "E:/workspace/Debug/ImageManager/ImageManager.exe --official-ui prepared E:/workspace/mir3-ui-work/character-surfaces-art-20261108-v2 E:/workspace/mir3-ui-work/character-surfaces-zl-20261108-v2 E:/workspace/mir3-ui-work/character-surfaces-art-20261108-v2/composed-manifest.json",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-surfaces/package-repeat.log",
+      "logSha256": "7b4bb4c11d2963990045ae45e805c24b49793f165a95a797721a99a37cd0597a"
+    },
+    {
+      "command": "C:/Users/shuai/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe tests/game-ui/Verify-CharacterSurfaces.py --art E:/workspace/mir3-ui-work/character-surfaces-art-20261108-v1 --repeat-art E:/workspace/mir3-ui-work/character-surfaces-art-20261108-v2 --package E:/workspace/mir3-ui-work/character-surfaces-zl-20261108-v1 --repeat-package E:/workspace/mir3-ui-work/character-surfaces-zl-20261108-v2 --previous-art E:/workspace/mir3-ui-work/hud-surfaces-art-20261108-v2 --recipe build/game-ui/composition-recipe.json --layout build/game-ui/layout-official-v1.json --output docs/design/assets/official-ingame-ui/acceptance/preparatory/character-surfaces/art-verification.json",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-surfaces/art-verification.log",
+      "logSha256": "ff83a6e37f13cea0413e10cb3b52a7c52baf3135a7e0ed39d7ab467a9ae962ed"
+    },
+    {
+      "command": "C:/Users/shuai/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe tests/game-ui/Verify-ComposedUi.py --art E:/workspace/mir3-ui-work/character-surfaces-art-20261108-v1 --package E:/workspace/mir3-ui-work/character-surfaces-zl-20261108-v1 --output E:/workspace/mir3-ui-work/character-surfaces-bc1-20261108-v1",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-surfaces/bc1.log",
+      "logSha256": "35177a54887f8b4158f9a5627103ede015d5cc234e8c6cb9e04f4e815d7c4ff1"
+    },
+    {
+      "command": "powershell -NoProfile -ExecutionPolicy Bypass -File tests/Run-GameUiComposedRenderTests.ps1 -PackagePath E:/workspace/mir3-ui-work/character-surfaces-zl-20261108-v1 -VerificationPath E:/workspace/mir3-ui-work/character-surfaces-bc1-20261108-v1 -RenderPath E:/workspace/mir3-ui-work/character-surfaces-d3d-20261108-v1",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-surfaces/d3d.log",
+      "logSha256": "d98ddbcbfb5144892412d98f3dc897dacfd0e27940cd3a6f25c3cec4b40e2863"
+    },
+    {
+      "command": "git -c core.whitespace=cr-at-eol diff --check",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-surfaces/diff-check.log",
+      "logSha256": "21b8107bd294e2d55f0b95ad171a74f8a6c3f7f8663c41d098c5983f4c74ca25"
+    }
+  ],
+  "artifactHashes": [
+    {
+      "path": "E:/workspace/mir3-ui-work/character-surfaces-art-20261108-v1/composed-manifest.json",
+      "sha256": "0bef667725acc19acdf26e74dee4a5498d0540938b5301ccf397383a6a6384d0"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/character-surfaces-art-20261108-v2/composed-manifest.json",
+      "sha256": "0bef667725acc19acdf26e74dee4a5498d0540938b5301ccf397383a6a6384d0"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/character-surfaces-zl-20261108-v1/OfficialV1.Zl",
+      "sha256": "de28e3ce0a84aa670e10b913f3a45a3745a9172fae999ce544bd780a2ab97af4"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/character-surfaces-zl-20261108-v1/prepared-manifest.json",
+      "sha256": "b1b2c6d330d94371fed22dc5478809922f2188f33e8aa289e63f768aa55bd724"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/character-surfaces-zl-20261108-v2/OfficialV1.Zl",
+      "sha256": "de28e3ce0a84aa670e10b913f3a45a3745a9172fae999ce544bd780a2ab97af4"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/character-surfaces-bc1-20261108-v1/verification.json",
+      "sha256": "29f4460fb90ee769366400e08a6dc9c5454ea4850e325f20d88f42ab86c808da"
+    },
+    {
+      "path": "E:/workspace/Debug/ImageManager/ImageManager.exe",
+      "sha256": "5c5330dbc2f2889ce47dc9f4337f0bc8620a370c248aa8c787f545b2841e7f74"
+    },
+    {
+      "path": "E:/workspace/Debug/Client/Zircon.exe",
+      "sha256": "52a5ea835500ec7a662de95be3f369f870a27140bf143a931bbb7dc1bc4dae2c"
+    }
+  ],
+  "evidenceHashes": [
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-surfaces/before.json",
+      "sha256": "50ba1aaa7f85c91b7fb488dc387d7ec52bc4111d034555c3105f643883e0a03d"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-surfaces/README.md",
+      "sha256": "7e44fa720ed8b127a28c0b095bf2547582e8d065e5da4815f0100c5cdf1e8a2a"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-surfaces/art-verification.json",
+      "sha256": "495a879b88eefbfd50c643eb682c71fca07b6c8d2fc003f415b43aaa36175f4f"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-surfaces/character-before.png",
+      "sha256": "a015b02b261a4a157d76f6d89e71faab9b6ac11104f6f8bc62c2c218f1a316e4"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-surfaces/character-clean.png",
+      "sha256": "96fa9522aa3224ccbe14d67b3587fa2512abe5796530251c303aa78927be1809"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-surfaces/equipment-cell.png",
+      "sha256": "1c84037d26a32569eba29e809c65e73a3546b57cdc7c1971c067e82b12b80a01"
+    }
+  ],
+  "results": {
+    "compositionRegressionTests": 45,
+    "packageRegressionTests": 16,
+    "totalFrames": 88,
+    "priorFramesUnchanged": 86,
+    "priorFramesRepainted": 1,
+    "addedCroppedFrames": 1,
+    "explicitButtonStateSets": 19,
+    "characterRepaintedPixels": 182556,
+    "characterChromePixelsUnchanged": 48988,
+    "characterAlphaPixelsUnchanged": 231544,
+    "equipmentFrameNativePixelsChecked": 1296,
+    "equipmentCells": 16,
+    "equipmentPageCounts": {
+      "character": 9,
+      "extraEquipment": 7,
+      "status": 0,
+      "hermit": 0
+    },
+    "logicalAlphaPixelsChecked": 673835,
+    "transparentTexturePaddingPixelsChecked": 13605,
+    "opaqueBlackInteriorPixelsPreserved": 3184,
+    "gpuRenderedFrames": 91,
+    "gpuPixelComparisons": 810185,
+    "maximumGpuRgbError": 5,
+    "gpuRgbTolerance": 8,
+    "transparentPixelsExact": true,
+    "deterministicArtFiles": 121,
+    "deterministicPackageFiles": 2,
+    "runtimeEnabled": false,
+    "gameAcceptanceExecuted": false
+  },
+  "derivation": {
+    "character": {
+      "source": "UI[2765]",
+      "sourcePatch": [
+        24,
+        452,
+        56,
+        72
+      ],
+      "targets": [
+        [
+          8,
+          90,
+          396,
+          461
+        ]
+      ],
+      "method": "Unscaled native texture tiling; cropped ends; unchanged alpha and outer chrome. Interior dragon decoration is removed with obsolete baked wells as an explicit four-page layout adaptation."
+    },
+    "equipmentFrame": {
+      "source": "UI[120], after the existing 7x7 inventory adaptation",
+      "sourceArea": [
+        15,
+        49,
+        36,
+        36
+      ],
+      "method": "Native pixel crop; not baked into the shared character base; original decoded PNG provenance retained."
+    },
+    "provenance": "recipeSha256 binds all transforms; packaged sourceManifestSha256 binds the full composed input."
+  },
+  "limitations": [
+    "The 88-frame package remains test-only. No production catalog, Config/Program/GameScene binding or enabled runtime style is claimed.",
+    "The equipment-cell-frame is available as art only and has not been bound to the 16 live controls; final labels, character preview, inventory footer art and alert geometry still require integration.",
+    "No live-game interaction, IME, network/action counts, device-reset, performance, deployment or rollback acceptance was performed.",
+    "Historical art and sealed evidence are preserved. NPC cards, secondary popups and display settings remain outside skin changes; task statuses and the five G0 gates remain unchanged."
+  ]
+}

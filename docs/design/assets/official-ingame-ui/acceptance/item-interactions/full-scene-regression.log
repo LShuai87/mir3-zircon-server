@@ -1,0 +1,1 @@
+Full-scene offline integration: 180 checks passed; 3 real constructors, 17 presented frames, 7 explicit Device.Reset calls; 690512 identical panel pixels. Real legacy resources, synthetic user/map, four character pages, six resolutions, scene reentry, cell/chat/native-input retention. No login, server behavior, hardware device-loss, live IME or final visual acceptance.

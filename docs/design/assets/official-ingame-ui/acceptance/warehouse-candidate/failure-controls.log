@@ -1,0 +1,22 @@
+[
+  {
+    "control": "package-digest",
+    "rejected": true,
+    "reason": "Package digest differs"
+  },
+  {
+    "control": "source-png",
+    "rejected": true,
+    "reason": "Source identity differs"
+  },
+  {
+    "control": "png-digest",
+    "rejected": true,
+    "reason": "PNG digest differs"
+  },
+  {
+    "control": "bc1-alpha",
+    "rejected": true,
+    "reason": "BC1 alpha differs"
+  }
+]

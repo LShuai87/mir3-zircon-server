@@ -1,0 +1,1933 @@
+{
+  "schemaVersion": 1,
+  "kind": "native-npc-foreground-switch-and-captured-drag-regression",
+  "checkedAtLocalDate": "2026-11-08",
+  "referenceResolution": [
+    1024,
+    768
+  ],
+  "releaseAccepted": false,
+  "results": {
+    "npcChecks": 34501,
+    "npcScenes": 3,
+    "npcCoordinateHits": 857,
+    "npcFrames": 154,
+    "npcResets": 83,
+    "identicalNativeNpcPixels": 2399935,
+    "layoutAndInputRows": {
+      "official": {
+        "defaultLayoutRows": 210,
+        "foregroundSwitches": 30,
+        "capturedDrags": 12
+      },
+      "official-reentry": {
+        "defaultLayoutRows": 210,
+        "foregroundSwitches": 30,
+        "capturedDrags": 12
+      }
+    },
+    "orderedBusinessTraces": "Legacy/Official/reentry identical"
+  },
+  "sourceChanges": [
+    {
+      "path": "tests/game-ui/OfficialUiNpcQuestTests.cs",
+      "beforeSha256": "74e0fbf348e72a9ec55c62fb36dfce2608acdfbca712720b5a2a2e6be5caee7e",
+      "afterSha256": "53b3018551183f8f02f72eda9529676032a9ec4d85792ac81ca10715b99ac13d"
+    }
+  ],
+  "sourceHashes": [
+    {
+      "path": "tests/game-ui/OfficialUiNpcQuestTests.cs",
+      "sha256": "53b3018551183f8f02f72eda9529676032a9ec4d85792ac81ca10715b99ac13d"
+    }
+  ],
+  "commands": [
+    {
+      "command": [
+        "C:/Users/shuai/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+        "docs/design/assets/official-ingame-ui/acceptance/npc-foreground-routing/audit-history.py",
+        "--output",
+        "docs/design/assets/official-ingame-ui/acceptance/npc-foreground-routing/history-audit.json"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-foreground-routing/history-audit.log",
+      "logSha256": "b31a95b67923cb55302621dee211d1d3c00b39ee904dcbfb4a1ee80411fab8ff"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiNpcTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-foreground-routing/npc-foreground-v1.log",
+      "logSha256": "7bc54b71cae4510694f2fdd59019f0c586d646fd620c9c5e790f1b12225f28b2"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiNpcTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-foreground-routing/npc-foreground-v2.log",
+      "logSha256": "d0e0e33e0d65d2723a8ed9bb578791215652469b1ff276ebdce2c4c61824dd39"
+    },
+    {
+      "command": [
+        "C:/Users/shuai/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+        "build/game-ui/Validate-UiTasks.py"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-foreground-routing/task-validation.log",
+      "logSha256": "90e3ddffa807ef19523e77855653984be659ff7ab47ec66f04d41348c4cb85b3"
+    },
+    {
+      "command": [
+        "C:/Users/shuai/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+        "docs/design/assets/official-ingame-ui/acceptance/npc-foreground-routing/check-whitespace.py"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-foreground-routing/whitespace.log",
+      "logSha256": "797075f3efe9cc1c4d8b5593462756f0539e44a440109765cf042d0ab941f96d"
+    }
+  ],
+  "failedAttempts": [],
+  "builds": {
+    "debug": {
+      "buildId": "gameui-9bb1aaf5a628f1465d8b06d25c28fe84e160d7070a46e146207a8c275bc5e39e",
+      "client": {
+        "path": "Zircon.exe",
+        "length": 1367040,
+        "sha256": "f51202c2e91b5b9b549dbb0491279613d850cd7665438de61bda3c2bf24416b2"
+      }
+    },
+    "release": {
+      "buildId": "gameui-1ab9bc284d9e1fc6963a27e6d87213d1ec3f6a66e2acbae2d1968539ecd2b738",
+      "client": {
+        "path": "Zircon.exe",
+        "length": 1263104,
+        "sha256": "be8f10863963de54428bf50b83da2ea6dc056cd14a2cb51ad630a91a3be08fd7"
+      }
+    }
+  },
+  "buildProvenance": {
+    "reusedFrom": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/verification.json",
+    "reason": "Test-only change; production source and Debug/Release binaries unchanged. NPC runner compiled current test sources against the recorded Debug runtime."
+  },
+  "package": {
+    "path": "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+    "frameCount": 94,
+    "sha256": "dd45cbf51d976a69d28269ee0d27a985def1ee1693cab2b509b74ae347a880a4"
+  },
+  "candidate": {
+    "path": "E:/workspace/mir3-ui-work/warehouse-assets-20261108-v1/zl-v2/OfficialV1.Zl",
+    "frameCount": 1,
+    "sha256": "471169dfa093b521f3c700c5a993e4e763aa17a45b2e16f440d961c0c7bf4cec"
+  },
+  "sourcePlanSha256": "f8c0a002b3821fabb54993792c354c4eff35eec51f9cfdc418535017c13069e9",
+  "limitations": [
+    "Manual body overlap is allowed by the immutable plan, line 289. Native foreground order is preserved; no automatic relocation or added production handlers.",
+    "60 coordinate title switches and 24 captured drags cover None/BuySell, 1024x768 and 1920x1080 plus return to 1024x768, and two Official scene entries.",
+    "Each switch begins in default reflow; a real quest visibility cycle restores all close-button access. No guarantee that all underlying close buttons stay simultaneously exposed after arbitrary manual stacking.",
+    "Synthetic socket-free replies only. All17window lifecycles, live server transactions/storage, final character semantics/visual acceptance, target hardware, fonts, IME, device-loss and release/rollback gates remain open.",
+    "Legacy remains default; RuntimeReady=false, productionBindingAllowed=false, releaseAccepted=false. No commit, push or deployment; official installation remains read-only."
+  ],
+  "evidenceHashes": [
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/assertions.txt",
+      "sha256": "9cd360b81d1ac33f5cc4536c48cd391e413744189b9dde15674fe43d63e2d6e9"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/coordinate-hits.txt",
+      "sha256": "cdd6a2b339eec3c7874363da736be1c1a266f9bff3e74f34f0f8bcf26475a239"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/legacy-card.png",
+      "sha256": "bbf533c95e714eb1b384a34ed7dde97083e54d67bca961844f3c9e9c8f2882d6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/legacy-goods-bottom.png",
+      "sha256": "923b0c68e8cf7a6a3c51de563999d0f24bb99b7a8c4382bb02c858b5637a435e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/legacy-goods-quantity.png",
+      "sha256": "203601bf8d8d27d816c2fce39ce93c2fe096e8103c81b8be023e9b3eae45bfc6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/legacy-goods-top.png",
+      "sha256": "771fbf5408ff1edc726b6888249f3c10491bc553f52a0e774199bac882bf60db"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/legacy-refine-retrieve.png",
+      "sha256": "b0ca02edebfb861c3e2375d08a0e4501ea545c975379bf3df9965c22f948cdac"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/legacy-refine.png",
+      "sha256": "0743781638dc75bd0e871ff69a221e7c7cffdabc666ac4ed021bac0a0cae2551"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/legacy-repair-full.png",
+      "sha256": "c7733722ac20d86135c879e46aefd6cd530d80275fe45902c5ebab3fa6065379"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/legacy-reset-1024x768.png",
+      "sha256": "718e52a0df1079d77fab5dff0823b58b2d8d98cb7c5d319a4fb36d5893eaca4d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/legacy-reset-1280x800.png",
+      "sha256": "6ba4420ef13f0c9e3e11e94b0b510f0ef22e92014dd02cadc2da81c2e20918bf"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/legacy-reset-1366x768.png",
+      "sha256": "9307abd4893bee4b08268e04f81e8f8889f09be289f4703c0dd332384e396b42"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/legacy-reset-1440x900.png",
+      "sha256": "5d7a6e9c1c15173e85b1c06b094a5773c037c7c3e7d270d57818628ed4e3abdd"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/legacy-reset-1600x900.png",
+      "sha256": "0270ea3175f839c48f352f53a0057f3c9366895a424af520eddf7709fb8da65f"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/legacy-reset-1920x1080.png",
+      "sha256": "b024b69683e93b115d6d3973a578d2ea688b5090fe5ce983f352af2f1b7d50d3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/legacy-resources.txt",
+      "sha256": "47713d590a1b9214abdef7a0fc33d6c28a2b5a73a0cff9794375a5083020b498"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/legacy-sell-full.png",
+      "sha256": "78b81311bb79aa207b13afd334aeb71de0ef227a133dc7cb331ac6cc1fddb224"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/legacy-trace.txt",
+      "sha256": "91c82d2086833279a797ee32cca8872a03d8474feee7557aab631281914e6b8a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/legacy-wrapped-option.png",
+      "sha256": "ff0659f55ad69307331223cc4612065bd036ee8b8e2442c86a2c9a6a470714a3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/metrics.json",
+      "sha256": "b45b5f130377f660ed6985013169dd1bd22a5ba52153453853966190a53dea59"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-card.png",
+      "sha256": "0f2b78045205403779ab7c33e75a3c5f834e7a635c67aefc7e77d52e3dd92487"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-goods-bottom.png",
+      "sha256": "28126a2c308d877e5b8a12e34af35324a1f9eff570a94e0eb96494ae792d4210"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-goods-quantity.png",
+      "sha256": "64e83eca43cb5f9e009cbc84573a4d10311872e0c34954085fa3c47b35867bab"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-goods-top.png",
+      "sha256": "1699c23697fbe693c0e986963bc605e6f38fe5a8b959b1371e77ee07adfd2081"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-group-AccessoryRefineLevel.png",
+      "sha256": "511685d5f72355ffa80707ab7e2c07bbd65c920288002d9983fec83089df377c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-group-AccessoryRefineUpgrade.png",
+      "sha256": "63b1bdef1010516c8f19fa3e5a5d28ba164537649f385d19b8e5efab3ac798b6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-group-AccessoryReset.png",
+      "sha256": "6ba621631c614f06fd61f72babf77fe39e64123890905dcaa2349ebce2e76107"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-group-BuySell.png",
+      "sha256": "142cdcfa45f401a54b6c88c76a62ffb5bbdac26ba67c21d65c6a5f10179b6a09"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-group-CompanionManage.png",
+      "sha256": "edbceebdf415a23af0c441707c691541238d6662701ab9abde8b0348c7a8d763"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-group-ItemFragment.png",
+      "sha256": "dd3da9296f291dcdae2bb56243fc8e4ab25f393e3ef66c152ae9911d10696497"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-group-layouts.txt",
+      "sha256": "250341fb9b8676103b9c1ebc7a005a97b512102cae541ff1fea6c425e1bafe1d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-group-MasterRefine.png",
+      "sha256": "4e5a4349ac66f1a26bfff3466f9b775000a1544f7b0f5906dd2854dfe9a14745"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-group-None.png",
+      "sha256": "202213e86c15f790407a01b5aa5f8ed438b7ba5b3bef81989e1c6226d3aff5f6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-group-Refine.png",
+      "sha256": "2cd79cf36098f1a754f73a5b9facf6de858eddf9576ada426d751cd41c8f2390"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-group-RefinementStone.png",
+      "sha256": "0aac443250dea1e4eb81631823b40babf9d0c7b9075f02b4dcaabc9ea6181614"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-group-RefineRetrieve.png",
+      "sha256": "78e0361ac4176f016f81fc972264e3379b851a354d8218bffaabd681d9b04fd6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-group-Repair.png",
+      "sha256": "1abd5747f1546bbfb6d22d361ebd006647d541ed2d1084df30a6123122850d13"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-group-reset-BuySell-1024x768-14.png",
+      "sha256": "142cdcfa45f401a54b6c88c76a62ffb5bbdac26ba67c21d65c6a5f10179b6a09"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-group-reset-BuySell-1024x768-21.png",
+      "sha256": "142cdcfa45f401a54b6c88c76a62ffb5bbdac26ba67c21d65c6a5f10179b6a09"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-group-reset-BuySell-1280x800-17.png",
+      "sha256": "60019e050f20e88699723a239ba984c2715869bb53234a3ffe11f8d808b7a08d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-group-reset-BuySell-1366x768-16.png",
+      "sha256": "7289d4f835cab8517e0d113a30c8e091dc7988dae63e91c4becb71b19ade0b44"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-group-reset-BuySell-1440x900-18.png",
+      "sha256": "ec1c0e4905e7208a47479644b649721e0a5233777fbf746931ebbe962b6bf559"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-group-reset-BuySell-1600x900-19.png",
+      "sha256": "b5097aaf23ef40a484410d4bff3cecedaa706b1c5388b5965522abd7643341fc"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-group-reset-BuySell-1920x1080-20.png",
+      "sha256": "66b8bd38abd4726bc79dd9ae41a08cd4b4bb39419c5aa26c0d24c0b338036bda"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-group-reset-None-1024x768-12.png",
+      "sha256": "e137ea4e229f1f91aeefcd701cbb518c3e8d9ef2340a83f3d3187e3de21acd1d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-group-reset-None-1024x768-5.png",
+      "sha256": "a0aff43117abb5d71faf7019ce997b3d06ffbf20f1929d620c769de8900da7e6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-group-reset-None-1280x800-8.png",
+      "sha256": "d44339d4e6d8db1179e29f936dc31d23021ecea09d81e954b9d2f2950ceec51b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-group-reset-None-1366x768-7.png",
+      "sha256": "1ad3fe071bb79a43be8744953741e2cd9d0d5e7e1ddd5d0db0f8615de8c00e6a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-group-reset-None-1440x900-9.png",
+      "sha256": "087ad7ed609b972654f1fe47987ad95a022b0b841acdc1621c5d6c881684c5b0"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-group-reset-None-1600x900-10.png",
+      "sha256": "815c2db150346713786712f21505a8b9138d874503b738b20504d241aa86d30e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-group-reset-None-1920x1080-11.png",
+      "sha256": "6c387b1c6ea0334ce8509fca74a8b01484547172e25c6350f06d77e60ba519ac"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-group-WeaponCraft.png",
+      "sha256": "c39bdb95bc0e9717d30a3222fddef464c2abb744659f0cb1f61a201f7b626603"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-group-WeaponReset.png",
+      "sha256": "744cd9c5e3d8b46162bc5c87bc8d34e479603d6ceb7f3e750f31a967102a434d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-group-WeddingRing.png",
+      "sha256": "63098f3342fcab1bfa62c643beb0e976661bc31aa85fbc49877fa1f4c4869ae9"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-long-card-1024x768.png",
+      "sha256": "b54dbb90ee816caf7e8ce88e8938e58db9699ca746ac56619e537aabd29317d0"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-long-card-1280x800.png",
+      "sha256": "9af5d5190590baef30643a68935da1600322be27fe22afbcdefb99835486360a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-long-card-1366x768.png",
+      "sha256": "b55ab3338eb65b583ca33cfc58a937c5842bb00a363738de01796dd6b1d74b66"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-long-card-1440x900.png",
+      "sha256": "665a37a21a65083e4d3c0980408c08764ce82bf01a783998b3c71a108f3d5266"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-long-card-1600x900.png",
+      "sha256": "792dbd50a93b47560b02c8c1bd2a0d8aec1f8db6e7357e88cdc4c0cf9dd38d18"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-long-card-1920x1080.png",
+      "sha256": "343c8ce461c764e57c1b570bcd13674141d2b621d46778cc33e407c9ab477f7f"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-long-card-bottom.png",
+      "sha256": "b54dbb90ee816caf7e8ce88e8938e58db9699ca746ac56619e537aabd29317d0"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-long-card-open-ms.txt",
+      "sha256": "8f8472a2f6ec348bfc7577a035c7f34a04c62f0c757b54687e1175236dcf393b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-long-card-partial-line.png",
+      "sha256": "382cf651c1bf649d422fcffa975b7021cb7a1485ab692cdf36fe17fb772cb58e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-long-card-top.png",
+      "sha256": "d154b3c83f92432d87fe900abb6fbb975094d02a2d6ed3fa6af781a6966f3b3d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-long-text-reference.png",
+      "sha256": "63ea7a263505137352f230f85a422f09e91ab97d20ca985316bf3e2865a92f02"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-long-text-texture.png",
+      "sha256": "63ea7a263505137352f230f85a422f09e91ab97d20ca985316bf3e2865a92f02"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-paragraph-0-bottom-long-text-reference.png",
+      "sha256": "540cf8ddf77fd1f66ffcc649f94881940f350239284b80e3216d05b32eadb668"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-paragraph-0-bottom-long-text-texture.png",
+      "sha256": "540cf8ddf77fd1f66ffcc649f94881940f350239284b80e3216d05b32eadb668"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-paragraph-0-top-long-text-reference.png",
+      "sha256": "540cf8ddf77fd1f66ffcc649f94881940f350239284b80e3216d05b32eadb668"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-paragraph-0-top-long-text-texture.png",
+      "sha256": "540cf8ddf77fd1f66ffcc649f94881940f350239284b80e3216d05b32eadb668"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-paragraph-1-bottom-long-text-reference.png",
+      "sha256": "3c877d05e4761b12e3f859ddcd81930155c8b2679c4142c6764fa24ed2e61bf1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-paragraph-1-bottom-long-text-texture.png",
+      "sha256": "3c877d05e4761b12e3f859ddcd81930155c8b2679c4142c6764fa24ed2e61bf1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-paragraph-1-top-long-text-reference.png",
+      "sha256": "3c877d05e4761b12e3f859ddcd81930155c8b2679c4142c6764fa24ed2e61bf1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-paragraph-1-top-long-text-texture.png",
+      "sha256": "3c877d05e4761b12e3f859ddcd81930155c8b2679c4142c6764fa24ed2e61bf1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-paragraph-2-bottom-long-text-reference.png",
+      "sha256": "76f9761631c924f05ee0b940de90650b0fdd8f6aafc690b16f6c44256a4d29c5"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-paragraph-2-bottom-long-text-texture.png",
+      "sha256": "76f9761631c924f05ee0b940de90650b0fdd8f6aafc690b16f6c44256a4d29c5"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-paragraph-2-top-long-text-reference.png",
+      "sha256": "fbd146c4875677e71b4aea14983e602bc6b6a30d7afec1da3b69ae006f9dd385"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-paragraph-2-top-long-text-texture.png",
+      "sha256": "fbd146c4875677e71b4aea14983e602bc6b6a30d7afec1da3b69ae006f9dd385"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-paragraph-3-bottom-long-text-reference.png",
+      "sha256": "bea194a346d02dcd2ef465ee055452165c9160e1e376cb9f231bded2a48bfb20"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-paragraph-3-bottom-long-text-texture.png",
+      "sha256": "bea194a346d02dcd2ef465ee055452165c9160e1e376cb9f231bded2a48bfb20"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-paragraph-3-top-long-text-reference.png",
+      "sha256": "bea194a346d02dcd2ef465ee055452165c9160e1e376cb9f231bded2a48bfb20"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-paragraph-3-top-long-text-texture.png",
+      "sha256": "bea194a346d02dcd2ef465ee055452165c9160e1e376cb9f231bded2a48bfb20"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-paragraph-4-bottom-long-text-reference.png",
+      "sha256": "52f16e5b87e95e1883fbb66b55b65a675e943facf62287f7e2ed0ad6ad9ec5a7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-paragraph-4-bottom-long-text-texture.png",
+      "sha256": "52f16e5b87e95e1883fbb66b55b65a675e943facf62287f7e2ed0ad6ad9ec5a7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-paragraph-4-top-long-text-reference.png",
+      "sha256": "52f16e5b87e95e1883fbb66b55b65a675e943facf62287f7e2ed0ad6ad9ec5a7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-paragraph-4-top-long-text-texture.png",
+      "sha256": "52f16e5b87e95e1883fbb66b55b65a675e943facf62287f7e2ed0ad6ad9ec5a7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-paragraph-native-geometry.txt",
+      "sha256": "685fc10cc9db4dc20dd5ac1cc8c20f1ce90e974bf7f7b658e4174573550bf14b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-paragraph-regions-0-bottom.png",
+      "sha256": "0752888ee514617d8adc950b02b491bdcccd3dde61df703e4b109e17f04563d3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-paragraph-regions-0-top.png",
+      "sha256": "0752888ee514617d8adc950b02b491bdcccd3dde61df703e4b109e17f04563d3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-paragraph-regions-1-bottom.png",
+      "sha256": "01232ed4471cbd70cc61d322947b99f432f82081dc97c4cfcd258c0e69a4c56c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-paragraph-regions-1-top.png",
+      "sha256": "6cf4141602db2109c411ac89089dece740825c6eec308a0ae1920fea0f02166b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-paragraph-regions-2-bottom.png",
+      "sha256": "cae9dc7b5665b8b1ca018b6744b1f83560cc9a6a65f361c288cfcf58e8021237"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-paragraph-regions-2-top.png",
+      "sha256": "81488e09d89be939762cd891d237a74478a856990436f941d1795b4b173990f2"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-paragraph-regions-3-bottom.png",
+      "sha256": "4d8fc3d5d8203756594ae1ee9c0b25f9221ce50947baa426b78d97f2d28da171"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-paragraph-regions-3-top.png",
+      "sha256": "4d8fc3d5d8203756594ae1ee9c0b25f9221ce50947baa426b78d97f2d28da171"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-paragraph-regions-4-bottom.png",
+      "sha256": "06020eff21eccab57697bc154f4ba1fcc6eb491a9dbdafe25d69591ff1c737d3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-paragraph-regions-4-top.png",
+      "sha256": "06020eff21eccab57697bc154f4ba1fcc6eb491a9dbdafe25d69591ff1c737d3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-partial-line-long-text-reference.png",
+      "sha256": "966bb5e8cc0c4cc6428f93a50e5c86a2c4db0e33f84f4ecd89f8ac4913ad16aa"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-partial-line-long-text-texture.png",
+      "sha256": "966bb5e8cc0c4cc6428f93a50e5c86a2c4db0e33f84f4ecd89f8ac4913ad16aa"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-quest-group-BuySell-False.png",
+      "sha256": "8ba19c518f2a7e821234e97c212348a24b8b37e5e2b184d3302df5bbeb68ec34"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-quest-group-BuySell-True.png",
+      "sha256": "2a5ca1207d7b0dec7c8bb8e04d03704b3b28ee32d5e53329ecb64dec57eb7342"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-quest-group-None-False.png",
+      "sha256": "9475e2c37b1b062512bb37ba4833c76e8019ad076716bb5ee4951dfd7ee2d3c8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-quest-group-None-True.png",
+      "sha256": "3fc198b71b8ab8926a619f70b9ef0d9d77486695394b5acd42c1263b522bb497"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-quest-open-layouts.txt",
+      "sha256": "b6a5f442fc4b41a71b895f884c04c53e5e624683e14352f212f6571f47a32f09"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-card.png",
+      "sha256": "0f2b78045205403779ab7c33e75a3c5f834e7a635c67aefc7e77d52e3dd92487"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-goods-bottom.png",
+      "sha256": "28126a2c308d877e5b8a12e34af35324a1f9eff570a94e0eb96494ae792d4210"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-goods-quantity.png",
+      "sha256": "64e83eca43cb5f9e009cbc84573a4d10311872e0c34954085fa3c47b35867bab"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-goods-top.png",
+      "sha256": "1699c23697fbe693c0e986963bc605e6f38fe5a8b959b1371e77ee07adfd2081"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-group-AccessoryRefineLevel.png",
+      "sha256": "511685d5f72355ffa80707ab7e2c07bbd65c920288002d9983fec83089df377c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-group-AccessoryRefineUpgrade.png",
+      "sha256": "63b1bdef1010516c8f19fa3e5a5d28ba164537649f385d19b8e5efab3ac798b6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-group-AccessoryReset.png",
+      "sha256": "6ba621631c614f06fd61f72babf77fe39e64123890905dcaa2349ebce2e76107"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-group-BuySell.png",
+      "sha256": "142cdcfa45f401a54b6c88c76a62ffb5bbdac26ba67c21d65c6a5f10179b6a09"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-group-CompanionManage.png",
+      "sha256": "edbceebdf415a23af0c441707c691541238d6662701ab9abde8b0348c7a8d763"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-group-ItemFragment.png",
+      "sha256": "dd3da9296f291dcdae2bb56243fc8e4ab25f393e3ef66c152ae9911d10696497"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-group-layouts.txt",
+      "sha256": "4b4790bfba5390835692c6f8e80ae9aeaa6830e867ae08b842ccd356f5e546e6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-group-MasterRefine.png",
+      "sha256": "4e5a4349ac66f1a26bfff3466f9b775000a1544f7b0f5906dd2854dfe9a14745"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-group-None.png",
+      "sha256": "202213e86c15f790407a01b5aa5f8ed438b7ba5b3bef81989e1c6226d3aff5f6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-group-Refine.png",
+      "sha256": "2cd79cf36098f1a754f73a5b9facf6de858eddf9576ada426d751cd41c8f2390"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-group-RefinementStone.png",
+      "sha256": "0aac443250dea1e4eb81631823b40babf9d0c7b9075f02b4dcaabc9ea6181614"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-group-RefineRetrieve.png",
+      "sha256": "78e0361ac4176f016f81fc972264e3379b851a354d8218bffaabd681d9b04fd6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-group-Repair.png",
+      "sha256": "1abd5747f1546bbfb6d22d361ebd006647d541ed2d1084df30a6123122850d13"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-group-reset-BuySell-1024x768-14.png",
+      "sha256": "142cdcfa45f401a54b6c88c76a62ffb5bbdac26ba67c21d65c6a5f10179b6a09"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-group-reset-BuySell-1024x768-21.png",
+      "sha256": "142cdcfa45f401a54b6c88c76a62ffb5bbdac26ba67c21d65c6a5f10179b6a09"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-group-reset-BuySell-1280x800-17.png",
+      "sha256": "60019e050f20e88699723a239ba984c2715869bb53234a3ffe11f8d808b7a08d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-group-reset-BuySell-1366x768-16.png",
+      "sha256": "7289d4f835cab8517e0d113a30c8e091dc7988dae63e91c4becb71b19ade0b44"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-group-reset-BuySell-1440x900-18.png",
+      "sha256": "ec1c0e4905e7208a47479644b649721e0a5233777fbf746931ebbe962b6bf559"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-group-reset-BuySell-1600x900-19.png",
+      "sha256": "b5097aaf23ef40a484410d4bff3cecedaa706b1c5388b5965522abd7643341fc"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-group-reset-BuySell-1920x1080-20.png",
+      "sha256": "66b8bd38abd4726bc79dd9ae41a08cd4b4bb39419c5aa26c0d24c0b338036bda"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-group-reset-None-1024x768-12.png",
+      "sha256": "e137ea4e229f1f91aeefcd701cbb518c3e8d9ef2340a83f3d3187e3de21acd1d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-group-reset-None-1024x768-5.png",
+      "sha256": "a0aff43117abb5d71faf7019ce997b3d06ffbf20f1929d620c769de8900da7e6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-group-reset-None-1280x800-8.png",
+      "sha256": "d44339d4e6d8db1179e29f936dc31d23021ecea09d81e954b9d2f2950ceec51b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-group-reset-None-1366x768-7.png",
+      "sha256": "1ad3fe071bb79a43be8744953741e2cd9d0d5e7e1ddd5d0db0f8615de8c00e6a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-group-reset-None-1440x900-9.png",
+      "sha256": "087ad7ed609b972654f1fe47987ad95a022b0b841acdc1621c5d6c881684c5b0"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-group-reset-None-1600x900-10.png",
+      "sha256": "815c2db150346713786712f21505a8b9138d874503b738b20504d241aa86d30e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-group-reset-None-1920x1080-11.png",
+      "sha256": "6c387b1c6ea0334ce8509fca74a8b01484547172e25c6350f06d77e60ba519ac"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-group-WeaponCraft.png",
+      "sha256": "c39bdb95bc0e9717d30a3222fddef464c2abb744659f0cb1f61a201f7b626603"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-group-WeaponReset.png",
+      "sha256": "744cd9c5e3d8b46162bc5c87bc8d34e479603d6ceb7f3e750f31a967102a434d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-group-WeddingRing.png",
+      "sha256": "63098f3342fcab1bfa62c643beb0e976661bc31aa85fbc49877fa1f4c4869ae9"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-long-card-1024x768.png",
+      "sha256": "b54dbb90ee816caf7e8ce88e8938e58db9699ca746ac56619e537aabd29317d0"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-long-card-1280x800.png",
+      "sha256": "9af5d5190590baef30643a68935da1600322be27fe22afbcdefb99835486360a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-long-card-1366x768.png",
+      "sha256": "b55ab3338eb65b583ca33cfc58a937c5842bb00a363738de01796dd6b1d74b66"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-long-card-1440x900.png",
+      "sha256": "665a37a21a65083e4d3c0980408c08764ce82bf01a783998b3c71a108f3d5266"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-long-card-1600x900.png",
+      "sha256": "792dbd50a93b47560b02c8c1bd2a0d8aec1f8db6e7357e88cdc4c0cf9dd38d18"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-long-card-1920x1080.png",
+      "sha256": "266742077100d1727cbe11211f2e1f9ab29c4ed83d62d3093b2e7cb4c882a397"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-long-card-bottom.png",
+      "sha256": "b54dbb90ee816caf7e8ce88e8938e58db9699ca746ac56619e537aabd29317d0"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-long-card-open-ms.txt",
+      "sha256": "8a376a996f6d7e958bbd68a87649296ea289ed2880de8b358cb91fa06aa3dfc6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-long-card-partial-line.png",
+      "sha256": "382cf651c1bf649d422fcffa975b7021cb7a1485ab692cdf36fe17fb772cb58e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-long-card-top.png",
+      "sha256": "d154b3c83f92432d87fe900abb6fbb975094d02a2d6ed3fa6af781a6966f3b3d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-long-text-reference.png",
+      "sha256": "63ea7a263505137352f230f85a422f09e91ab97d20ca985316bf3e2865a92f02"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-long-text-texture.png",
+      "sha256": "63ea7a263505137352f230f85a422f09e91ab97d20ca985316bf3e2865a92f02"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-paragraph-0-bottom-long-text-reference.png",
+      "sha256": "540cf8ddf77fd1f66ffcc649f94881940f350239284b80e3216d05b32eadb668"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-paragraph-0-bottom-long-text-texture.png",
+      "sha256": "540cf8ddf77fd1f66ffcc649f94881940f350239284b80e3216d05b32eadb668"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-paragraph-0-top-long-text-reference.png",
+      "sha256": "540cf8ddf77fd1f66ffcc649f94881940f350239284b80e3216d05b32eadb668"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-paragraph-0-top-long-text-texture.png",
+      "sha256": "540cf8ddf77fd1f66ffcc649f94881940f350239284b80e3216d05b32eadb668"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-paragraph-1-bottom-long-text-reference.png",
+      "sha256": "3c877d05e4761b12e3f859ddcd81930155c8b2679c4142c6764fa24ed2e61bf1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-paragraph-1-bottom-long-text-texture.png",
+      "sha256": "3c877d05e4761b12e3f859ddcd81930155c8b2679c4142c6764fa24ed2e61bf1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-paragraph-1-top-long-text-reference.png",
+      "sha256": "3c877d05e4761b12e3f859ddcd81930155c8b2679c4142c6764fa24ed2e61bf1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-paragraph-1-top-long-text-texture.png",
+      "sha256": "3c877d05e4761b12e3f859ddcd81930155c8b2679c4142c6764fa24ed2e61bf1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-paragraph-2-bottom-long-text-reference.png",
+      "sha256": "76f9761631c924f05ee0b940de90650b0fdd8f6aafc690b16f6c44256a4d29c5"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-paragraph-2-bottom-long-text-texture.png",
+      "sha256": "76f9761631c924f05ee0b940de90650b0fdd8f6aafc690b16f6c44256a4d29c5"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-paragraph-2-top-long-text-reference.png",
+      "sha256": "fbd146c4875677e71b4aea14983e602bc6b6a30d7afec1da3b69ae006f9dd385"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-paragraph-2-top-long-text-texture.png",
+      "sha256": "fbd146c4875677e71b4aea14983e602bc6b6a30d7afec1da3b69ae006f9dd385"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-paragraph-3-bottom-long-text-reference.png",
+      "sha256": "bea194a346d02dcd2ef465ee055452165c9160e1e376cb9f231bded2a48bfb20"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-paragraph-3-bottom-long-text-texture.png",
+      "sha256": "bea194a346d02dcd2ef465ee055452165c9160e1e376cb9f231bded2a48bfb20"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-paragraph-3-top-long-text-reference.png",
+      "sha256": "bea194a346d02dcd2ef465ee055452165c9160e1e376cb9f231bded2a48bfb20"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-paragraph-3-top-long-text-texture.png",
+      "sha256": "bea194a346d02dcd2ef465ee055452165c9160e1e376cb9f231bded2a48bfb20"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-paragraph-4-bottom-long-text-reference.png",
+      "sha256": "52f16e5b87e95e1883fbb66b55b65a675e943facf62287f7e2ed0ad6ad9ec5a7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-paragraph-4-bottom-long-text-texture.png",
+      "sha256": "52f16e5b87e95e1883fbb66b55b65a675e943facf62287f7e2ed0ad6ad9ec5a7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-paragraph-4-top-long-text-reference.png",
+      "sha256": "52f16e5b87e95e1883fbb66b55b65a675e943facf62287f7e2ed0ad6ad9ec5a7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-paragraph-4-top-long-text-texture.png",
+      "sha256": "52f16e5b87e95e1883fbb66b55b65a675e943facf62287f7e2ed0ad6ad9ec5a7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-paragraph-native-geometry.txt",
+      "sha256": "685fc10cc9db4dc20dd5ac1cc8c20f1ce90e974bf7f7b658e4174573550bf14b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-paragraph-regions-0-bottom.png",
+      "sha256": "0752888ee514617d8adc950b02b491bdcccd3dde61df703e4b109e17f04563d3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-paragraph-regions-0-top.png",
+      "sha256": "0752888ee514617d8adc950b02b491bdcccd3dde61df703e4b109e17f04563d3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-paragraph-regions-1-bottom.png",
+      "sha256": "01232ed4471cbd70cc61d322947b99f432f82081dc97c4cfcd258c0e69a4c56c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-paragraph-regions-1-top.png",
+      "sha256": "6cf4141602db2109c411ac89089dece740825c6eec308a0ae1920fea0f02166b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-paragraph-regions-2-bottom.png",
+      "sha256": "cae9dc7b5665b8b1ca018b6744b1f83560cc9a6a65f361c288cfcf58e8021237"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-paragraph-regions-2-top.png",
+      "sha256": "81488e09d89be939762cd891d237a74478a856990436f941d1795b4b173990f2"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-paragraph-regions-3-bottom.png",
+      "sha256": "4d8fc3d5d8203756594ae1ee9c0b25f9221ce50947baa426b78d97f2d28da171"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-paragraph-regions-3-top.png",
+      "sha256": "4d8fc3d5d8203756594ae1ee9c0b25f9221ce50947baa426b78d97f2d28da171"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-paragraph-regions-4-bottom.png",
+      "sha256": "06020eff21eccab57697bc154f4ba1fcc6eb491a9dbdafe25d69591ff1c737d3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-paragraph-regions-4-top.png",
+      "sha256": "06020eff21eccab57697bc154f4ba1fcc6eb491a9dbdafe25d69591ff1c737d3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-partial-line-long-text-reference.png",
+      "sha256": "966bb5e8cc0c4cc6428f93a50e5c86a2c4db0e33f84f4ecd89f8ac4913ad16aa"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-partial-line-long-text-texture.png",
+      "sha256": "966bb5e8cc0c4cc6428f93a50e5c86a2c4db0e33f84f4ecd89f8ac4913ad16aa"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-quest-group-BuySell-False.png",
+      "sha256": "8ba19c518f2a7e821234e97c212348a24b8b37e5e2b184d3302df5bbeb68ec34"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-quest-group-BuySell-True.png",
+      "sha256": "2a5ca1207d7b0dec7c8bb8e04d03704b3b28ee32d5e53329ecb64dec57eb7342"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-quest-group-None-False.png",
+      "sha256": "9475e2c37b1b062512bb37ba4833c76e8019ad076716bb5ee4951dfd7ee2d3c8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-quest-group-None-True.png",
+      "sha256": "3fc198b71b8ab8926a619f70b9ef0d9d77486695394b5acd42c1263b522bb497"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-quest-open-layouts.txt",
+      "sha256": "b6a5f442fc4b41a71b895f884c04c53e5e624683e14352f212f6571f47a32f09"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-refine-retrieve.png",
+      "sha256": "3f7eb9a9f7340ceb814a555debee9cb55c1d0754284b4b0971d010da44cf59f3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-refine.png",
+      "sha256": "0777dc5bb26557845515406d9542c476eafe8579336d2f2105d4d7b0ca209a79"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-repair-full.png",
+      "sha256": "88db572245fc19774293834e687fa1b377f9a0f147e44ef8ff2dde6fd2211b31"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-reset-1024x768.png",
+      "sha256": "b23ebfbbf33922fe2f863509032d879ddf3d14bd569d57beadb417a02e0a15b8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-reset-1280x800.png",
+      "sha256": "d1ec9b51d29b2e5931cb48055f57c4e2e0229dc5d8ed2a950e5508d6f5773f5a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-reset-1366x768.png",
+      "sha256": "d7cea0b802505a77da7e495fa8dc1b092940b3088212f9f03b19d44cd9b3a4d2"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-reset-1440x900.png",
+      "sha256": "dfbceb3b8cfc600a6f8b707206f4b594a37417ad53a2b4628e2a787c992e4891"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-reset-1600x900.png",
+      "sha256": "217cce3ffb4be7a12b8b9dd80e29641a7c4d49251b2c6a3820f6c110beff3122"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-reset-1920x1080.png",
+      "sha256": "caf615323b22db269fd245c591d2fa2e9521f25e8fcadcf8f81f6d84bbd7406c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-sell-full.png",
+      "sha256": "fa4fb302ec719470b85aef401e43c5d5fb79a86a6e45e24ed08615e04705492a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-trace.txt",
+      "sha256": "91c82d2086833279a797ee32cca8872a03d8474feee7557aab631281914e6b8a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reentry-wrapped-option.png",
+      "sha256": "d26978a42c5b6bc4e2d0b20a25f3a364e07f877494efb454fb43c77ce64008d9"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-refine-retrieve.png",
+      "sha256": "3f7eb9a9f7340ceb814a555debee9cb55c1d0754284b4b0971d010da44cf59f3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-refine.png",
+      "sha256": "0777dc5bb26557845515406d9542c476eafe8579336d2f2105d4d7b0ca209a79"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-repair-full.png",
+      "sha256": "88db572245fc19774293834e687fa1b377f9a0f147e44ef8ff2dde6fd2211b31"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reset-1024x768.png",
+      "sha256": "b23ebfbbf33922fe2f863509032d879ddf3d14bd569d57beadb417a02e0a15b8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reset-1280x800.png",
+      "sha256": "d1ec9b51d29b2e5931cb48055f57c4e2e0229dc5d8ed2a950e5508d6f5773f5a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reset-1366x768.png",
+      "sha256": "d7cea0b802505a77da7e495fa8dc1b092940b3088212f9f03b19d44cd9b3a4d2"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reset-1440x900.png",
+      "sha256": "dfbceb3b8cfc600a6f8b707206f4b594a37417ad53a2b4628e2a787c992e4891"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reset-1600x900.png",
+      "sha256": "217cce3ffb4be7a12b8b9dd80e29641a7c4d49251b2c6a3820f6c110beff3122"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-reset-1920x1080.png",
+      "sha256": "caf615323b22db269fd245c591d2fa2e9521f25e8fcadcf8f81f6d84bbd7406c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-sell-full.png",
+      "sha256": "fa4fb302ec719470b85aef401e43c5d5fb79a86a6e45e24ed08615e04705492a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-trace.txt",
+      "sha256": "91c82d2086833279a797ee32cca8872a03d8474feee7557aab631281914e6b8a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/official-wrapped-option.png",
+      "sha256": "d26978a42c5b6bc4e2d0b20a25f3a364e07f877494efb454fb43c77ce64008d9"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v1/tested-runtime.json",
+      "sha256": "b42ac69a4fa648fab7da5583cde6b102360a5aa5deb4cb126ec8fe05179dfb6c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/assertions.txt",
+      "sha256": "09bba6e0409b7063febaa490e0f023aaa1e503de5aeb065fc9f1ab45d4e9f44b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/coordinate-hits.txt",
+      "sha256": "bb5bfe8f7d5210623b4f6f29ec1bd888de5f5be5243bc40da1de0f8d0eecf3bc"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/legacy-card.png",
+      "sha256": "bbf533c95e714eb1b384a34ed7dde97083e54d67bca961844f3c9e9c8f2882d6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/legacy-goods-bottom.png",
+      "sha256": "923b0c68e8cf7a6a3c51de563999d0f24bb99b7a8c4382bb02c858b5637a435e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/legacy-goods-quantity.png",
+      "sha256": "203601bf8d8d27d816c2fce39ce93c2fe096e8103c81b8be023e9b3eae45bfc6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/legacy-goods-top.png",
+      "sha256": "771fbf5408ff1edc726b6888249f3c10491bc553f52a0e774199bac882bf60db"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/legacy-refine-retrieve.png",
+      "sha256": "b0ca02edebfb861c3e2375d08a0e4501ea545c975379bf3df9965c22f948cdac"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/legacy-refine.png",
+      "sha256": "0743781638dc75bd0e871ff69a221e7c7cffdabc666ac4ed021bac0a0cae2551"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/legacy-repair-full.png",
+      "sha256": "c7733722ac20d86135c879e46aefd6cd530d80275fe45902c5ebab3fa6065379"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/legacy-reset-1024x768.png",
+      "sha256": "718e52a0df1079d77fab5dff0823b58b2d8d98cb7c5d319a4fb36d5893eaca4d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/legacy-reset-1280x800.png",
+      "sha256": "6ba4420ef13f0c9e3e11e94b0b510f0ef22e92014dd02cadc2da81c2e20918bf"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/legacy-reset-1366x768.png",
+      "sha256": "9307abd4893bee4b08268e04f81e8f8889f09be289f4703c0dd332384e396b42"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/legacy-reset-1440x900.png",
+      "sha256": "5d7a6e9c1c15173e85b1c06b094a5773c037c7c3e7d270d57818628ed4e3abdd"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/legacy-reset-1600x900.png",
+      "sha256": "0270ea3175f839c48f352f53a0057f3c9366895a424af520eddf7709fb8da65f"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/legacy-reset-1920x1080.png",
+      "sha256": "b024b69683e93b115d6d3973a578d2ea688b5090fe5ce983f352af2f1b7d50d3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/legacy-resources.txt",
+      "sha256": "47713d590a1b9214abdef7a0fc33d6c28a2b5a73a0cff9794375a5083020b498"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/legacy-sell-full.png",
+      "sha256": "78b81311bb79aa207b13afd334aeb71de0ef227a133dc7cb331ac6cc1fddb224"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/legacy-trace.txt",
+      "sha256": "91c82d2086833279a797ee32cca8872a03d8474feee7557aab631281914e6b8a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/legacy-wrapped-option.png",
+      "sha256": "ff0659f55ad69307331223cc4612065bd036ee8b8e2442c86a2c9a6a470714a3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/metrics.json",
+      "sha256": "46aca3d15ffb7a995c57d288b8784e763ee579ccda7cecda5d7fa8a893481e59"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-card.png",
+      "sha256": "0f2b78045205403779ab7c33e75a3c5f834e7a635c67aefc7e77d52e3dd92487"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-goods-bottom.png",
+      "sha256": "28126a2c308d877e5b8a12e34af35324a1f9eff570a94e0eb96494ae792d4210"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-goods-quantity.png",
+      "sha256": "64e83eca43cb5f9e009cbc84573a4d10311872e0c34954085fa3c47b35867bab"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-goods-top.png",
+      "sha256": "1699c23697fbe693c0e986963bc605e6f38fe5a8b959b1371e77ee07adfd2081"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-group-AccessoryRefineLevel.png",
+      "sha256": "511685d5f72355ffa80707ab7e2c07bbd65c920288002d9983fec83089df377c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-group-AccessoryRefineUpgrade.png",
+      "sha256": "63b1bdef1010516c8f19fa3e5a5d28ba164537649f385d19b8e5efab3ac798b6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-group-AccessoryReset.png",
+      "sha256": "6ba621631c614f06fd61f72babf77fe39e64123890905dcaa2349ebce2e76107"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-group-BuySell.png",
+      "sha256": "142cdcfa45f401a54b6c88c76a62ffb5bbdac26ba67c21d65c6a5f10179b6a09"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-group-CompanionManage.png",
+      "sha256": "edbceebdf415a23af0c441707c691541238d6662701ab9abde8b0348c7a8d763"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-group-ItemFragment.png",
+      "sha256": "dd3da9296f291dcdae2bb56243fc8e4ab25f393e3ef66c152ae9911d10696497"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-group-layouts.txt",
+      "sha256": "27e2ccd15c35c3c4f7c1119986f6ce51c00123405873ea8db9c38ec5c1b7ef4a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-group-MasterRefine.png",
+      "sha256": "4e5a4349ac66f1a26bfff3466f9b775000a1544f7b0f5906dd2854dfe9a14745"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-group-None.png",
+      "sha256": "202213e86c15f790407a01b5aa5f8ed438b7ba5b3bef81989e1c6226d3aff5f6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-group-Refine.png",
+      "sha256": "2cd79cf36098f1a754f73a5b9facf6de858eddf9576ada426d751cd41c8f2390"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-group-RefinementStone.png",
+      "sha256": "0aac443250dea1e4eb81631823b40babf9d0c7b9075f02b4dcaabc9ea6181614"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-group-RefineRetrieve.png",
+      "sha256": "78e0361ac4176f016f81fc972264e3379b851a354d8218bffaabd681d9b04fd6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-group-Repair.png",
+      "sha256": "1abd5747f1546bbfb6d22d361ebd006647d541ed2d1084df30a6123122850d13"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-group-reset-BuySell-1024x768-14.png",
+      "sha256": "142cdcfa45f401a54b6c88c76a62ffb5bbdac26ba67c21d65c6a5f10179b6a09"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-group-reset-BuySell-1024x768-21.png",
+      "sha256": "142cdcfa45f401a54b6c88c76a62ffb5bbdac26ba67c21d65c6a5f10179b6a09"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-group-reset-BuySell-1280x800-17.png",
+      "sha256": "60019e050f20e88699723a239ba984c2715869bb53234a3ffe11f8d808b7a08d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-group-reset-BuySell-1366x768-16.png",
+      "sha256": "7289d4f835cab8517e0d113a30c8e091dc7988dae63e91c4becb71b19ade0b44"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-group-reset-BuySell-1440x900-18.png",
+      "sha256": "ec1c0e4905e7208a47479644b649721e0a5233777fbf746931ebbe962b6bf559"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-group-reset-BuySell-1600x900-19.png",
+      "sha256": "b5097aaf23ef40a484410d4bff3cecedaa706b1c5388b5965522abd7643341fc"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-group-reset-BuySell-1920x1080-20.png",
+      "sha256": "66b8bd38abd4726bc79dd9ae41a08cd4b4bb39419c5aa26c0d24c0b338036bda"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-group-reset-None-1024x768-12.png",
+      "sha256": "e137ea4e229f1f91aeefcd701cbb518c3e8d9ef2340a83f3d3187e3de21acd1d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-group-reset-None-1024x768-5.png",
+      "sha256": "a0aff43117abb5d71faf7019ce997b3d06ffbf20f1929d620c769de8900da7e6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-group-reset-None-1280x800-8.png",
+      "sha256": "d44339d4e6d8db1179e29f936dc31d23021ecea09d81e954b9d2f2950ceec51b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-group-reset-None-1366x768-7.png",
+      "sha256": "1ad3fe071bb79a43be8744953741e2cd9d0d5e7e1ddd5d0db0f8615de8c00e6a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-group-reset-None-1440x900-9.png",
+      "sha256": "087ad7ed609b972654f1fe47987ad95a022b0b841acdc1621c5d6c881684c5b0"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-group-reset-None-1600x900-10.png",
+      "sha256": "815c2db150346713786712f21505a8b9138d874503b738b20504d241aa86d30e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-group-reset-None-1920x1080-11.png",
+      "sha256": "6c387b1c6ea0334ce8509fca74a8b01484547172e25c6350f06d77e60ba519ac"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-group-WeaponCraft.png",
+      "sha256": "c39bdb95bc0e9717d30a3222fddef464c2abb744659f0cb1f61a201f7b626603"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-group-WeaponReset.png",
+      "sha256": "744cd9c5e3d8b46162bc5c87bc8d34e479603d6ceb7f3e750f31a967102a434d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-group-WeddingRing.png",
+      "sha256": "63098f3342fcab1bfa62c643beb0e976661bc31aa85fbc49877fa1f4c4869ae9"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-long-card-1024x768.png",
+      "sha256": "b54dbb90ee816caf7e8ce88e8938e58db9699ca746ac56619e537aabd29317d0"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-long-card-1280x800.png",
+      "sha256": "9af5d5190590baef30643a68935da1600322be27fe22afbcdefb99835486360a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-long-card-1366x768.png",
+      "sha256": "b55ab3338eb65b583ca33cfc58a937c5842bb00a363738de01796dd6b1d74b66"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-long-card-1440x900.png",
+      "sha256": "665a37a21a65083e4d3c0980408c08764ce82bf01a783998b3c71a108f3d5266"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-long-card-1600x900.png",
+      "sha256": "792dbd50a93b47560b02c8c1bd2a0d8aec1f8db6e7357e88cdc4c0cf9dd38d18"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-long-card-1920x1080.png",
+      "sha256": "343c8ce461c764e57c1b570bcd13674141d2b621d46778cc33e407c9ab477f7f"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-long-card-bottom.png",
+      "sha256": "b54dbb90ee816caf7e8ce88e8938e58db9699ca746ac56619e537aabd29317d0"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-long-card-open-ms.txt",
+      "sha256": "576c85c584f60555c2a024cbb99dfbbdb5f58c3bdcf28dbc8ea315fd46a388f3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-long-card-partial-line.png",
+      "sha256": "382cf651c1bf649d422fcffa975b7021cb7a1485ab692cdf36fe17fb772cb58e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-long-card-top.png",
+      "sha256": "d154b3c83f92432d87fe900abb6fbb975094d02a2d6ed3fa6af781a6966f3b3d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-long-text-reference.png",
+      "sha256": "63ea7a263505137352f230f85a422f09e91ab97d20ca985316bf3e2865a92f02"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-long-text-texture.png",
+      "sha256": "63ea7a263505137352f230f85a422f09e91ab97d20ca985316bf3e2865a92f02"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-paragraph-0-bottom-long-text-reference.png",
+      "sha256": "540cf8ddf77fd1f66ffcc649f94881940f350239284b80e3216d05b32eadb668"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-paragraph-0-bottom-long-text-texture.png",
+      "sha256": "540cf8ddf77fd1f66ffcc649f94881940f350239284b80e3216d05b32eadb668"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-paragraph-0-top-long-text-reference.png",
+      "sha256": "540cf8ddf77fd1f66ffcc649f94881940f350239284b80e3216d05b32eadb668"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-paragraph-0-top-long-text-texture.png",
+      "sha256": "540cf8ddf77fd1f66ffcc649f94881940f350239284b80e3216d05b32eadb668"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-paragraph-1-bottom-long-text-reference.png",
+      "sha256": "3c877d05e4761b12e3f859ddcd81930155c8b2679c4142c6764fa24ed2e61bf1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-paragraph-1-bottom-long-text-texture.png",
+      "sha256": "3c877d05e4761b12e3f859ddcd81930155c8b2679c4142c6764fa24ed2e61bf1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-paragraph-1-top-long-text-reference.png",
+      "sha256": "3c877d05e4761b12e3f859ddcd81930155c8b2679c4142c6764fa24ed2e61bf1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-paragraph-1-top-long-text-texture.png",
+      "sha256": "3c877d05e4761b12e3f859ddcd81930155c8b2679c4142c6764fa24ed2e61bf1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-paragraph-2-bottom-long-text-reference.png",
+      "sha256": "76f9761631c924f05ee0b940de90650b0fdd8f6aafc690b16f6c44256a4d29c5"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-paragraph-2-bottom-long-text-texture.png",
+      "sha256": "76f9761631c924f05ee0b940de90650b0fdd8f6aafc690b16f6c44256a4d29c5"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-paragraph-2-top-long-text-reference.png",
+      "sha256": "fbd146c4875677e71b4aea14983e602bc6b6a30d7afec1da3b69ae006f9dd385"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-paragraph-2-top-long-text-texture.png",
+      "sha256": "fbd146c4875677e71b4aea14983e602bc6b6a30d7afec1da3b69ae006f9dd385"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-paragraph-3-bottom-long-text-reference.png",
+      "sha256": "bea194a346d02dcd2ef465ee055452165c9160e1e376cb9f231bded2a48bfb20"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-paragraph-3-bottom-long-text-texture.png",
+      "sha256": "bea194a346d02dcd2ef465ee055452165c9160e1e376cb9f231bded2a48bfb20"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-paragraph-3-top-long-text-reference.png",
+      "sha256": "bea194a346d02dcd2ef465ee055452165c9160e1e376cb9f231bded2a48bfb20"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-paragraph-3-top-long-text-texture.png",
+      "sha256": "bea194a346d02dcd2ef465ee055452165c9160e1e376cb9f231bded2a48bfb20"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-paragraph-4-bottom-long-text-reference.png",
+      "sha256": "52f16e5b87e95e1883fbb66b55b65a675e943facf62287f7e2ed0ad6ad9ec5a7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-paragraph-4-bottom-long-text-texture.png",
+      "sha256": "52f16e5b87e95e1883fbb66b55b65a675e943facf62287f7e2ed0ad6ad9ec5a7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-paragraph-4-top-long-text-reference.png",
+      "sha256": "52f16e5b87e95e1883fbb66b55b65a675e943facf62287f7e2ed0ad6ad9ec5a7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-paragraph-4-top-long-text-texture.png",
+      "sha256": "52f16e5b87e95e1883fbb66b55b65a675e943facf62287f7e2ed0ad6ad9ec5a7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-paragraph-native-geometry.txt",
+      "sha256": "685fc10cc9db4dc20dd5ac1cc8c20f1ce90e974bf7f7b658e4174573550bf14b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-paragraph-regions-0-bottom.png",
+      "sha256": "0752888ee514617d8adc950b02b491bdcccd3dde61df703e4b109e17f04563d3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-paragraph-regions-0-top.png",
+      "sha256": "0752888ee514617d8adc950b02b491bdcccd3dde61df703e4b109e17f04563d3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-paragraph-regions-1-bottom.png",
+      "sha256": "01232ed4471cbd70cc61d322947b99f432f82081dc97c4cfcd258c0e69a4c56c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-paragraph-regions-1-top.png",
+      "sha256": "6cf4141602db2109c411ac89089dece740825c6eec308a0ae1920fea0f02166b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-paragraph-regions-2-bottom.png",
+      "sha256": "cae9dc7b5665b8b1ca018b6744b1f83560cc9a6a65f361c288cfcf58e8021237"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-paragraph-regions-2-top.png",
+      "sha256": "81488e09d89be939762cd891d237a74478a856990436f941d1795b4b173990f2"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-paragraph-regions-3-bottom.png",
+      "sha256": "4d8fc3d5d8203756594ae1ee9c0b25f9221ce50947baa426b78d97f2d28da171"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-paragraph-regions-3-top.png",
+      "sha256": "4d8fc3d5d8203756594ae1ee9c0b25f9221ce50947baa426b78d97f2d28da171"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-paragraph-regions-4-bottom.png",
+      "sha256": "06020eff21eccab57697bc154f4ba1fcc6eb491a9dbdafe25d69591ff1c737d3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-paragraph-regions-4-top.png",
+      "sha256": "06020eff21eccab57697bc154f4ba1fcc6eb491a9dbdafe25d69591ff1c737d3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-partial-line-long-text-reference.png",
+      "sha256": "966bb5e8cc0c4cc6428f93a50e5c86a2c4db0e33f84f4ecd89f8ac4913ad16aa"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-partial-line-long-text-texture.png",
+      "sha256": "966bb5e8cc0c4cc6428f93a50e5c86a2c4db0e33f84f4ecd89f8ac4913ad16aa"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-quest-group-BuySell-False.png",
+      "sha256": "9b70eb00234fb3ceea123663e0ef552055f5e0522ee563b7a9ec366939adb471"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-quest-group-BuySell-True.png",
+      "sha256": "2a5ca1207d7b0dec7c8bb8e04d03704b3b28ee32d5e53329ecb64dec57eb7342"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-quest-group-None-False.png",
+      "sha256": "1857fd3e9f836c536daab1f5262796869625f77f4a14d2700ec6ad5a77cdd782"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-quest-group-None-True.png",
+      "sha256": "3fc198b71b8ab8926a619f70b9ef0d9d77486695394b5acd42c1263b522bb497"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-quest-open-layouts.txt",
+      "sha256": "c4b869a10efff4a1e213d3b7cd54664631d1bad7fe2863fdd30d05d955492b8e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-card.png",
+      "sha256": "0f2b78045205403779ab7c33e75a3c5f834e7a635c67aefc7e77d52e3dd92487"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-goods-bottom.png",
+      "sha256": "28126a2c308d877e5b8a12e34af35324a1f9eff570a94e0eb96494ae792d4210"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-goods-quantity.png",
+      "sha256": "64e83eca43cb5f9e009cbc84573a4d10311872e0c34954085fa3c47b35867bab"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-goods-top.png",
+      "sha256": "1699c23697fbe693c0e986963bc605e6f38fe5a8b959b1371e77ee07adfd2081"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-group-AccessoryRefineLevel.png",
+      "sha256": "511685d5f72355ffa80707ab7e2c07bbd65c920288002d9983fec83089df377c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-group-AccessoryRefineUpgrade.png",
+      "sha256": "63b1bdef1010516c8f19fa3e5a5d28ba164537649f385d19b8e5efab3ac798b6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-group-AccessoryReset.png",
+      "sha256": "6ba621631c614f06fd61f72babf77fe39e64123890905dcaa2349ebce2e76107"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-group-BuySell.png",
+      "sha256": "142cdcfa45f401a54b6c88c76a62ffb5bbdac26ba67c21d65c6a5f10179b6a09"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-group-CompanionManage.png",
+      "sha256": "edbceebdf415a23af0c441707c691541238d6662701ab9abde8b0348c7a8d763"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-group-ItemFragment.png",
+      "sha256": "dd3da9296f291dcdae2bb56243fc8e4ab25f393e3ef66c152ae9911d10696497"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-group-layouts.txt",
+      "sha256": "bbc19b77dae66e202c9a4f61fe7d36b3715ad118b393279eb137d24c623db834"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-group-MasterRefine.png",
+      "sha256": "4e5a4349ac66f1a26bfff3466f9b775000a1544f7b0f5906dd2854dfe9a14745"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-group-None.png",
+      "sha256": "202213e86c15f790407a01b5aa5f8ed438b7ba5b3bef81989e1c6226d3aff5f6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-group-Refine.png",
+      "sha256": "2cd79cf36098f1a754f73a5b9facf6de858eddf9576ada426d751cd41c8f2390"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-group-RefinementStone.png",
+      "sha256": "0aac443250dea1e4eb81631823b40babf9d0c7b9075f02b4dcaabc9ea6181614"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-group-RefineRetrieve.png",
+      "sha256": "78e0361ac4176f016f81fc972264e3379b851a354d8218bffaabd681d9b04fd6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-group-Repair.png",
+      "sha256": "1abd5747f1546bbfb6d22d361ebd006647d541ed2d1084df30a6123122850d13"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-group-reset-BuySell-1024x768-14.png",
+      "sha256": "142cdcfa45f401a54b6c88c76a62ffb5bbdac26ba67c21d65c6a5f10179b6a09"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-group-reset-BuySell-1024x768-21.png",
+      "sha256": "142cdcfa45f401a54b6c88c76a62ffb5bbdac26ba67c21d65c6a5f10179b6a09"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-group-reset-BuySell-1280x800-17.png",
+      "sha256": "60019e050f20e88699723a239ba984c2715869bb53234a3ffe11f8d808b7a08d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-group-reset-BuySell-1366x768-16.png",
+      "sha256": "7289d4f835cab8517e0d113a30c8e091dc7988dae63e91c4becb71b19ade0b44"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-group-reset-BuySell-1440x900-18.png",
+      "sha256": "ec1c0e4905e7208a47479644b649721e0a5233777fbf746931ebbe962b6bf559"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-group-reset-BuySell-1600x900-19.png",
+      "sha256": "b5097aaf23ef40a484410d4bff3cecedaa706b1c5388b5965522abd7643341fc"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-group-reset-BuySell-1920x1080-20.png",
+      "sha256": "66b8bd38abd4726bc79dd9ae41a08cd4b4bb39419c5aa26c0d24c0b338036bda"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-group-reset-None-1024x768-12.png",
+      "sha256": "e137ea4e229f1f91aeefcd701cbb518c3e8d9ef2340a83f3d3187e3de21acd1d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-group-reset-None-1024x768-5.png",
+      "sha256": "a0aff43117abb5d71faf7019ce997b3d06ffbf20f1929d620c769de8900da7e6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-group-reset-None-1280x800-8.png",
+      "sha256": "d44339d4e6d8db1179e29f936dc31d23021ecea09d81e954b9d2f2950ceec51b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-group-reset-None-1366x768-7.png",
+      "sha256": "1ad3fe071bb79a43be8744953741e2cd9d0d5e7e1ddd5d0db0f8615de8c00e6a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-group-reset-None-1440x900-9.png",
+      "sha256": "087ad7ed609b972654f1fe47987ad95a022b0b841acdc1621c5d6c881684c5b0"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-group-reset-None-1600x900-10.png",
+      "sha256": "815c2db150346713786712f21505a8b9138d874503b738b20504d241aa86d30e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-group-reset-None-1920x1080-11.png",
+      "sha256": "6c387b1c6ea0334ce8509fca74a8b01484547172e25c6350f06d77e60ba519ac"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-group-WeaponCraft.png",
+      "sha256": "c39bdb95bc0e9717d30a3222fddef464c2abb744659f0cb1f61a201f7b626603"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-group-WeaponReset.png",
+      "sha256": "744cd9c5e3d8b46162bc5c87bc8d34e479603d6ceb7f3e750f31a967102a434d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-group-WeddingRing.png",
+      "sha256": "63098f3342fcab1bfa62c643beb0e976661bc31aa85fbc49877fa1f4c4869ae9"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-long-card-1024x768.png",
+      "sha256": "b54dbb90ee816caf7e8ce88e8938e58db9699ca746ac56619e537aabd29317d0"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-long-card-1280x800.png",
+      "sha256": "9af5d5190590baef30643a68935da1600322be27fe22afbcdefb99835486360a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-long-card-1366x768.png",
+      "sha256": "b55ab3338eb65b583ca33cfc58a937c5842bb00a363738de01796dd6b1d74b66"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-long-card-1440x900.png",
+      "sha256": "665a37a21a65083e4d3c0980408c08764ce82bf01a783998b3c71a108f3d5266"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-long-card-1600x900.png",
+      "sha256": "792dbd50a93b47560b02c8c1bd2a0d8aec1f8db6e7357e88cdc4c0cf9dd38d18"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-long-card-1920x1080.png",
+      "sha256": "343c8ce461c764e57c1b570bcd13674141d2b621d46778cc33e407c9ab477f7f"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-long-card-bottom.png",
+      "sha256": "b54dbb90ee816caf7e8ce88e8938e58db9699ca746ac56619e537aabd29317d0"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-long-card-open-ms.txt",
+      "sha256": "4432cb276ffc79e796e2f86c4aabb5a223462ff45d089d30e5c78c38318c55cf"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-long-card-partial-line.png",
+      "sha256": "382cf651c1bf649d422fcffa975b7021cb7a1485ab692cdf36fe17fb772cb58e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-long-card-top.png",
+      "sha256": "d154b3c83f92432d87fe900abb6fbb975094d02a2d6ed3fa6af781a6966f3b3d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-long-text-reference.png",
+      "sha256": "63ea7a263505137352f230f85a422f09e91ab97d20ca985316bf3e2865a92f02"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-long-text-texture.png",
+      "sha256": "63ea7a263505137352f230f85a422f09e91ab97d20ca985316bf3e2865a92f02"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-paragraph-0-bottom-long-text-reference.png",
+      "sha256": "540cf8ddf77fd1f66ffcc649f94881940f350239284b80e3216d05b32eadb668"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-paragraph-0-bottom-long-text-texture.png",
+      "sha256": "540cf8ddf77fd1f66ffcc649f94881940f350239284b80e3216d05b32eadb668"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-paragraph-0-top-long-text-reference.png",
+      "sha256": "540cf8ddf77fd1f66ffcc649f94881940f350239284b80e3216d05b32eadb668"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-paragraph-0-top-long-text-texture.png",
+      "sha256": "540cf8ddf77fd1f66ffcc649f94881940f350239284b80e3216d05b32eadb668"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-paragraph-1-bottom-long-text-reference.png",
+      "sha256": "3c877d05e4761b12e3f859ddcd81930155c8b2679c4142c6764fa24ed2e61bf1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-paragraph-1-bottom-long-text-texture.png",
+      "sha256": "3c877d05e4761b12e3f859ddcd81930155c8b2679c4142c6764fa24ed2e61bf1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-paragraph-1-top-long-text-reference.png",
+      "sha256": "3c877d05e4761b12e3f859ddcd81930155c8b2679c4142c6764fa24ed2e61bf1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-paragraph-1-top-long-text-texture.png",
+      "sha256": "3c877d05e4761b12e3f859ddcd81930155c8b2679c4142c6764fa24ed2e61bf1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-paragraph-2-bottom-long-text-reference.png",
+      "sha256": "76f9761631c924f05ee0b940de90650b0fdd8f6aafc690b16f6c44256a4d29c5"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-paragraph-2-bottom-long-text-texture.png",
+      "sha256": "76f9761631c924f05ee0b940de90650b0fdd8f6aafc690b16f6c44256a4d29c5"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-paragraph-2-top-long-text-reference.png",
+      "sha256": "fbd146c4875677e71b4aea14983e602bc6b6a30d7afec1da3b69ae006f9dd385"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-paragraph-2-top-long-text-texture.png",
+      "sha256": "fbd146c4875677e71b4aea14983e602bc6b6a30d7afec1da3b69ae006f9dd385"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-paragraph-3-bottom-long-text-reference.png",
+      "sha256": "bea194a346d02dcd2ef465ee055452165c9160e1e376cb9f231bded2a48bfb20"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-paragraph-3-bottom-long-text-texture.png",
+      "sha256": "bea194a346d02dcd2ef465ee055452165c9160e1e376cb9f231bded2a48bfb20"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-paragraph-3-top-long-text-reference.png",
+      "sha256": "bea194a346d02dcd2ef465ee055452165c9160e1e376cb9f231bded2a48bfb20"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-paragraph-3-top-long-text-texture.png",
+      "sha256": "bea194a346d02dcd2ef465ee055452165c9160e1e376cb9f231bded2a48bfb20"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-paragraph-4-bottom-long-text-reference.png",
+      "sha256": "52f16e5b87e95e1883fbb66b55b65a675e943facf62287f7e2ed0ad6ad9ec5a7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-paragraph-4-bottom-long-text-texture.png",
+      "sha256": "52f16e5b87e95e1883fbb66b55b65a675e943facf62287f7e2ed0ad6ad9ec5a7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-paragraph-4-top-long-text-reference.png",
+      "sha256": "52f16e5b87e95e1883fbb66b55b65a675e943facf62287f7e2ed0ad6ad9ec5a7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-paragraph-4-top-long-text-texture.png",
+      "sha256": "52f16e5b87e95e1883fbb66b55b65a675e943facf62287f7e2ed0ad6ad9ec5a7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-paragraph-native-geometry.txt",
+      "sha256": "685fc10cc9db4dc20dd5ac1cc8c20f1ce90e974bf7f7b658e4174573550bf14b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-paragraph-regions-0-bottom.png",
+      "sha256": "0752888ee514617d8adc950b02b491bdcccd3dde61df703e4b109e17f04563d3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-paragraph-regions-0-top.png",
+      "sha256": "0752888ee514617d8adc950b02b491bdcccd3dde61df703e4b109e17f04563d3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-paragraph-regions-1-bottom.png",
+      "sha256": "01232ed4471cbd70cc61d322947b99f432f82081dc97c4cfcd258c0e69a4c56c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-paragraph-regions-1-top.png",
+      "sha256": "6cf4141602db2109c411ac89089dece740825c6eec308a0ae1920fea0f02166b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-paragraph-regions-2-bottom.png",
+      "sha256": "cae9dc7b5665b8b1ca018b6744b1f83560cc9a6a65f361c288cfcf58e8021237"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-paragraph-regions-2-top.png",
+      "sha256": "81488e09d89be939762cd891d237a74478a856990436f941d1795b4b173990f2"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-paragraph-regions-3-bottom.png",
+      "sha256": "4d8fc3d5d8203756594ae1ee9c0b25f9221ce50947baa426b78d97f2d28da171"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-paragraph-regions-3-top.png",
+      "sha256": "4d8fc3d5d8203756594ae1ee9c0b25f9221ce50947baa426b78d97f2d28da171"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-paragraph-regions-4-bottom.png",
+      "sha256": "06020eff21eccab57697bc154f4ba1fcc6eb491a9dbdafe25d69591ff1c737d3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-paragraph-regions-4-top.png",
+      "sha256": "06020eff21eccab57697bc154f4ba1fcc6eb491a9dbdafe25d69591ff1c737d3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-partial-line-long-text-reference.png",
+      "sha256": "966bb5e8cc0c4cc6428f93a50e5c86a2c4db0e33f84f4ecd89f8ac4913ad16aa"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-partial-line-long-text-texture.png",
+      "sha256": "966bb5e8cc0c4cc6428f93a50e5c86a2c4db0e33f84f4ecd89f8ac4913ad16aa"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-quest-group-BuySell-False.png",
+      "sha256": "9b70eb00234fb3ceea123663e0ef552055f5e0522ee563b7a9ec366939adb471"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-quest-group-BuySell-True.png",
+      "sha256": "2a5ca1207d7b0dec7c8bb8e04d03704b3b28ee32d5e53329ecb64dec57eb7342"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-quest-group-None-False.png",
+      "sha256": "1857fd3e9f836c536daab1f5262796869625f77f4a14d2700ec6ad5a77cdd782"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-quest-group-None-True.png",
+      "sha256": "3fc198b71b8ab8926a619f70b9ef0d9d77486695394b5acd42c1263b522bb497"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-quest-open-layouts.txt",
+      "sha256": "c4b869a10efff4a1e213d3b7cd54664631d1bad7fe2863fdd30d05d955492b8e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-refine-retrieve.png",
+      "sha256": "3f7eb9a9f7340ceb814a555debee9cb55c1d0754284b4b0971d010da44cf59f3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-refine.png",
+      "sha256": "0777dc5bb26557845515406d9542c476eafe8579336d2f2105d4d7b0ca209a79"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-repair-full.png",
+      "sha256": "88db572245fc19774293834e687fa1b377f9a0f147e44ef8ff2dde6fd2211b31"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-reset-1024x768.png",
+      "sha256": "b23ebfbbf33922fe2f863509032d879ddf3d14bd569d57beadb417a02e0a15b8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-reset-1280x800.png",
+      "sha256": "d1ec9b51d29b2e5931cb48055f57c4e2e0229dc5d8ed2a950e5508d6f5773f5a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-reset-1366x768.png",
+      "sha256": "d7cea0b802505a77da7e495fa8dc1b092940b3088212f9f03b19d44cd9b3a4d2"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-reset-1440x900.png",
+      "sha256": "dfbceb3b8cfc600a6f8b707206f4b594a37417ad53a2b4628e2a787c992e4891"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-reset-1600x900.png",
+      "sha256": "217cce3ffb4be7a12b8b9dd80e29641a7c4d49251b2c6a3820f6c110beff3122"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-reset-1920x1080.png",
+      "sha256": "caf615323b22db269fd245c591d2fa2e9521f25e8fcadcf8f81f6d84bbd7406c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-sell-full.png",
+      "sha256": "fa4fb302ec719470b85aef401e43c5d5fb79a86a6e45e24ed08615e04705492a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-trace.txt",
+      "sha256": "91c82d2086833279a797ee32cca8872a03d8474feee7557aab631281914e6b8a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reentry-wrapped-option.png",
+      "sha256": "d26978a42c5b6bc4e2d0b20a25f3a364e07f877494efb454fb43c77ce64008d9"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-refine-retrieve.png",
+      "sha256": "3f7eb9a9f7340ceb814a555debee9cb55c1d0754284b4b0971d010da44cf59f3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-refine.png",
+      "sha256": "0777dc5bb26557845515406d9542c476eafe8579336d2f2105d4d7b0ca209a79"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-repair-full.png",
+      "sha256": "88db572245fc19774293834e687fa1b377f9a0f147e44ef8ff2dde6fd2211b31"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reset-1024x768.png",
+      "sha256": "b23ebfbbf33922fe2f863509032d879ddf3d14bd569d57beadb417a02e0a15b8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reset-1280x800.png",
+      "sha256": "d1ec9b51d29b2e5931cb48055f57c4e2e0229dc5d8ed2a950e5508d6f5773f5a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reset-1366x768.png",
+      "sha256": "d7cea0b802505a77da7e495fa8dc1b092940b3088212f9f03b19d44cd9b3a4d2"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reset-1440x900.png",
+      "sha256": "dfbceb3b8cfc600a6f8b707206f4b594a37417ad53a2b4628e2a787c992e4891"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reset-1600x900.png",
+      "sha256": "217cce3ffb4be7a12b8b9dd80e29641a7c4d49251b2c6a3820f6c110beff3122"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-reset-1920x1080.png",
+      "sha256": "caf615323b22db269fd245c591d2fa2e9521f25e8fcadcf8f81f6d84bbd7406c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-sell-full.png",
+      "sha256": "fa4fb302ec719470b85aef401e43c5d5fb79a86a6e45e24ed08615e04705492a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-trace.txt",
+      "sha256": "91c82d2086833279a797ee32cca8872a03d8474feee7557aab631281914e6b8a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/official-wrapped-option.png",
+      "sha256": "d26978a42c5b6bc4e2d0b20a25f3a364e07f877494efb454fb43c77ce64008d9"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-foreground-routing-20261108-v2/tested-runtime.json",
+      "sha256": "b42ac69a4fa648fab7da5583cde6b102360a5aa5deb4cb126ec8fe05179dfb6c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-foreground-routing/audit-history.py",
+      "sha256": "43b3dd93e1bb748275abd80d37a7d986d4016b83b72bd6cf2e0ed3bac1c1fd92"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-foreground-routing/check-whitespace.py",
+      "sha256": "b0a86f69a0f4d2d1028cf29ec177b27a0b21d80f60d2f17ed9eaf8f84c6a104f"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-foreground-routing/history-audit.json",
+      "sha256": "b31a95b67923cb55302621dee211d1d3c00b39ee904dcbfb4a1ee80411fab8ff"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-foreground-routing/history-audit.log",
+      "sha256": "b31a95b67923cb55302621dee211d1d3c00b39ee904dcbfb4a1ee80411fab8ff"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-foreground-routing/history-audit.receipt.json",
+      "sha256": "4f72d28cd3b2ef74d01e36f2ad59de3c7ba6b1224b22a9583838375a13de0776"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-foreground-routing/npc-foreground-v1.log",
+      "sha256": "7bc54b71cae4510694f2fdd59019f0c586d646fd620c9c5e790f1b12225f28b2"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-foreground-routing/npc-foreground-v1.receipt.json",
+      "sha256": "36def75aa4150084606528dd3c938745adad6cb64ebe0e9d94c5bc0a6046677c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-foreground-routing/npc-foreground-v2.log",
+      "sha256": "d0e0e33e0d65d2723a8ed9bb578791215652469b1ff276ebdce2c4c61824dd39"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-foreground-routing/npc-foreground-v2.receipt.json",
+      "sha256": "8be5e2ad01000da801cb6161fadbc47399e304973d24b7213edebad861a84890"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-foreground-routing/prepare-report.py",
+      "sha256": "1c6de9435e8c8400c1a760c071995f20ffcc578e355d6699135b2a1a217ea5fe"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-foreground-routing/README.md",
+      "sha256": "75272928c507808cf74670eb4e2dc830f8e30792eb3879592e7f781146d76dcd"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-foreground-routing/run-check.py",
+      "sha256": "8cea69f8c28d781722ec26876840ea3e6bb44ae5ed37e2d213fdab62d1a7c943"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-foreground-routing/source-before/tests/game-ui/OfficialUiNpcQuestTests.cs",
+      "sha256": "74e0fbf348e72a9ec55c62fb36dfce2608acdfbca712720b5a2a2e6be5caee7e"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-foreground-routing/source-before.json",
+      "sha256": "e16b191730f3fb6c402a50214e65196264241ba994485a0911da5e6b6a607a12"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-foreground-routing/task-validation.log",
+      "sha256": "90e3ddffa807ef19523e77855653984be659ff7ab47ec66f04d41348c4cb85b3"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-foreground-routing/task-validation.receipt.json",
+      "sha256": "202f881d589b35307e4e8acf8b0f4859690f7e4f9d22043ce12c37b39b71c34c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-foreground-routing/tested-runtime.json",
+      "sha256": "b42ac69a4fa648fab7da5583cde6b102360a5aa5deb4cb126ec8fe05179dfb6c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-foreground-routing/whitespace.log",
+      "sha256": "797075f3efe9cc1c4d8b5593462756f0539e44a440109765cf042d0ab941f96d"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-foreground-routing/whitespace.receipt.json",
+      "sha256": "240f8d4e66aea54f8badf3e61b69a10d697c5381f3a472a7283a68d56d5a7a8c"
+    }
+  ]
+}

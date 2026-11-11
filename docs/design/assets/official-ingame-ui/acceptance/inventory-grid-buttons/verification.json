@@ -1,0 +1,38 @@
+{
+  "date": "2026-11-10",
+  "slotCount": 49,
+  "gridSize": [
+    7,
+    7
+  ],
+  "inventoryChecks": 6415,
+  "renderBackend": "SlimDX D3D9, real InventoryDialog, actual OfficialV1.Zl; offline, empty item cells",
+  "liveGameAcceptance": false,
+  "runtimeReady": false,
+  "artSource": "Pinned installed official UI.MIX/UI.MIZ; opened read-only",
+  "artProvenance": [
+    "build/game-ui/inventory-button-source.json",
+    "build/game-ui/inventory-close-source.json"
+  ],
+  "files": {
+    "client": {
+      "path": "E:\\workspace\\Debug\\Client\\Zircon.exe",
+      "sha256": "4ab30639560cd1fab80a956bf7fcfec783dd6fb2e9b507e53a0a4c3a3951dc8a"
+    },
+    "buttonArt": {
+      "path": "E:\\workspace\\mir3-zircon-server\\Client\\Resources\\GameUi\\inventory-button.png",
+      "sha256": "9578c1a71d8eb554a790d1f21a768fe3db4c2fce33b469a15b7e66d09705a083"
+    },
+    "closeArt": {
+      "path": "E:\\workspace\\mir3-zircon-server\\Client\\Resources\\GameUi\\inventory-close.png",
+      "sha256": "50ac4f16b9777aded28ac4a714d9189e13ebc37bd3adbe3f130803325f687de4"
+    },
+    "package": {
+      "path": "E:\\workspace\\Debug\\Client\\Data\\GameUI\\OfficialV1.Zl",
+      "sha256": "dd45cbf51d976a69d28269ee0d27a985def1ee1693cab2b509b74ae347a880a4"
+    }
+  },
+  "windowSetChecks": 284355,
+  "previewValidationPassed": true,
+  "embeddedArtReproductionPassed": true
+}

@@ -1,0 +1,811 @@
+{
+  "schemaVersion": 1,
+  "kind": "official-window-title-bounds-verification",
+  "checkedAtLocalDate": "2026-11-08",
+  "referenceResolution": [
+    1024,
+    768
+  ],
+  "releaseAccepted": false,
+  "results": {
+    "suites": {
+      "minimap": {
+        "viewportPixels": 206040,
+        "outsideTitlePixels": 193368,
+        "changedTitlePixels": 5710,
+        "titleFrames": 6
+      },
+      "minimapChecks": 194052,
+      "windowSetChecks": 168890,
+      "fullSceneChecks": 4328
+    },
+    "productionSourceChanged": true,
+    "realServerBehaviorVerified": false,
+    "finalVisualAcceptance": false
+  },
+  "implementation": [
+    "Bound skinned DXWindow title labels to the declared skin title rectangle. Use single-line centered text, end ellipsis and literal ampersands.",
+    "Capture native AutoSize, DrawFormat and fixed size once per native-to-skin binding; preserve snapshots on skin replacement and restore them using current text on rollback.",
+    "Add repeated auto/fixed title binding, long/short/empty/multiline text, font identity, input exclusion, headerless skin, HasTitle and current-text rollback checks. Add real GPU pixel clipping checks and runtime evidence."
+  ],
+  "verifiedBehaviors": [
+    "Long title exceeded 742 pixels before the fix; after the fix the title occupies exactly (8,2,132,16) in the minimap fixture.",
+    "Six GPU title frames at two positions show visible text and 193368 identical pixels outside the title, including the collapse region. Inspected long-title screenshot with visible ellipsis.",
+    "206040 viewport pixel comparisons across two placements and three map states remain correct.",
+    "194052 minimap, 168890 window-set and 4328 full-scene checks pass against the rebuilt Debug runtime. Native title settings and current text measurements restore after repeated skin transitions."
+  ],
+  "userReference": {
+    "path": "docs/design/assets/official-ingame-ui/acceptance/window-title-bounds/user-resolution-reference.png",
+    "imagePixels": [
+      1280,
+      960
+    ],
+    "configuredResolution": [
+      1024,
+      768
+    ],
+    "windowed": true,
+    "note": "Uploaded image pixels differ from the configured game size. Layout baseline follows the user-confirmed 1024x768 setting, not the uploaded image dimensions. No repeat settings, character or bag screenshot requested."
+  },
+  "sourceChanges": [
+    {
+      "path": "Client/Controls/DXWindow.cs",
+      "beforeSha256": "fcb585d6836c00052c86d5eb74b16e65f5110d9702909d4391d76b1864e31dfe",
+      "afterSha256": "556409c2d9abba166ce8469c94aebc1466bdb13b866c984290ce5018f2da3d74"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiMiniMapLayoutTests.cs",
+      "beforeSha256": "354e3688d2bce8f4ef5c579de8ca2f7ca1ccfaa548337fd7e8cbee23898af039",
+      "afterSha256": "183b5e273c6d6e019db9c5302d2bd9c7b9de9c3fca836cd3ec56306b0d2a35b5"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiMiniMapRenderTests.cs",
+      "beforeSha256": "129fb88068ae0eba7006da053e6181777e985e2fbb3886dd60d8efa489d6f1e9",
+      "afterSha256": "914b95be89209603d25a18d2c52820b493e182e9a196fc5d0d6d1c41c2582110"
+    },
+    {
+      "path": "tests/Run-GameUiMiniMapLayoutTests.ps1",
+      "beforeSha256": "a03f9ffe214e8a6102e947d79d85b0ea4d29db3e295b98be6d01a494f3f2166f",
+      "afterSha256": "87a43d973b4d857e6d0bcd1182fbe86d9f942f0be028880359893b596e31bea6"
+    }
+  ],
+  "firstTrackedSourceChanges": [],
+  "newlyTrackedSources": [],
+  "sourceHashes": [
+    {
+      "path": "Client/Controls/DXWindow.cs",
+      "sha256": "556409c2d9abba166ce8469c94aebc1466bdb13b866c984290ce5018f2da3d74"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiMiniMapLayoutTests.cs",
+      "sha256": "183b5e273c6d6e019db9c5302d2bd9c7b9de9c3fca836cd3ec56306b0d2a35b5"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiMiniMapRenderTests.cs",
+      "sha256": "914b95be89209603d25a18d2c52820b493e182e9a196fc5d0d6d1c41c2582110"
+    },
+    {
+      "path": "tests/Run-GameUiMiniMapLayoutTests.ps1",
+      "sha256": "87a43d973b4d857e6d0bcd1182fbe86d9f942f0be028880359893b596e31bea6"
+    }
+  ],
+  "commands": [
+    {
+      "command": [
+        "D:/Program Files/Microsoft Visual Studio/2022/Enterprise/MSBuild/Current/Bin/MSBuild.exe",
+        "Client/Client.csproj",
+        "/t:Build",
+        "/p:Configuration=Debug",
+        "/p:Platform=AnyCPU",
+        "/v:minimal",
+        "/nologo"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/window-title-bounds/debug-build.log",
+      "logSha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "build/game-ui/New-GameUiReleaseManifest.ps1",
+        "-ClientDirectory",
+        "E:/workspace/Debug/Client",
+        "-ResourceRoot",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/staged-resources",
+        "-OutputPath",
+        "docs/design/assets/official-ingame-ui/acceptance/window-title-bounds/debug-build.json"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/window-title-bounds/debug-manifest.log",
+      "logSha256": "40d092c7bdfd6202bd12f5497da738fd1f5bd0bc40b04a3aa557c78ec33b4843"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiFullSceneTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/window-title-bounds-20261108-fullscene-v1"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/window-title-bounds/full-scene.log",
+      "logSha256": "6b372d6607e1c4a4258344ca081d356474851f73abf7d50bec43cada10fe58f2"
+    },
+    {
+      "command": [
+        "C:/Users/shuai/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+        "docs/design/assets/official-ingame-ui/acceptance/window-title-bounds/audit-history.py",
+        "--output",
+        "docs/design/assets/official-ingame-ui/acceptance/window-title-bounds/history-audit.json"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/window-title-bounds/history-audit.log",
+      "logSha256": "b64037e0f4185a703ef544c7d11919ce7548812355bce65490879a0086e8794a"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiMiniMapLayoutTests.ps1",
+        "-RenderPath",
+        "E:/workspace/mir3-ui-work/window-title-bounds-20261108-minimap-v2"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/window-title-bounds/minimap-final.log",
+      "logSha256": "37e2b49c42748a6066360c258902400215a527b863e709d99e4c90a753fb5af7"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiMiniMapLayoutTests.ps1",
+        "-RenderPath",
+        "E:/workspace/mir3-ui-work/window-title-bounds-20261108-minimap-v1"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/window-title-bounds/minimap.log",
+      "logSha256": "d062037b5a6f226af5180d02c47746d5867b643c6f806b77f7f7d03018941ef4"
+    },
+    {
+      "command": [
+        "D:/Program Files/Microsoft Visual Studio/2022/Enterprise/MSBuild/Current/Bin/MSBuild.exe",
+        "Client/Client.csproj",
+        "/t:Build",
+        "/p:Configuration=Release",
+        "/p:Platform=AnyCPU",
+        "/v:minimal",
+        "/nologo"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/window-title-bounds/release-build.log",
+      "logSha256": "c9e24428be1e56c8408af17aacfea3413de3953bfe426d10eb768782f5005ebc"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "build/game-ui/New-GameUiReleaseManifest.ps1",
+        "-ClientDirectory",
+        "E:/workspace/Release/Client",
+        "-ResourceRoot",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/staged-resources",
+        "-OutputPath",
+        "docs/design/assets/official-ingame-ui/acceptance/window-title-bounds/release-build.json"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/window-title-bounds/release-manifest.log",
+      "logSha256": "279bf50c33e60352fc0c7c14f1c5cfd8e0507fec53cccc4445d93d68ef64099a"
+    },
+    {
+      "command": [
+        "C:/Users/shuai/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+        "build/game-ui/Validate-UiTasks.py"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/window-title-bounds/task-validation.log",
+      "logSha256": "90e3ddffa807ef19523e77855653984be659ff7ab47ec66f04d41348c4cb85b3"
+    },
+    {
+      "command": [
+        "C:/Users/shuai/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+        "docs/design/assets/official-ingame-ui/acceptance/window-title-bounds/check-whitespace.py"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/window-title-bounds/whitespace.log",
+      "logSha256": "3bcecbd9f8bdc0347dd116a141d6e2774765b511e55aa43ef5bbf3699521a1b2"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiWindowSetTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/window-title-bounds-20261108-windowset-v1"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/window-title-bounds/window-set.log",
+      "logSha256": "7a6ad5ea9bf68d161c07a4e52fbc2678b80dc996fa5f3672f58132b4fbf4aaaa"
+    }
+  ],
+  "failedAttempts": [
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiMiniMapLayoutTests.ps1"
+      ],
+      "result": "fail",
+      "exitCode": 1,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/window-title-bounds/before-fix-confirmed.log",
+      "logSha256": "72da00f794fb064a711dca38d6103b674fc2ce12729a1d2250dcc991c53c272a",
+      "explanation": "Behavioral regression reproduced against previous client: short label 55x19 was centered at (46,1) outside the declared (8,2,132,16) title area."
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiMiniMapLayoutTests.ps1"
+      ],
+      "result": "fail",
+      "exitCode": 1,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/window-title-bounds/before-fix-long-title.log",
+      "logSha256": "38d500b03831d338e08ba7329fa4552389c694822ce59ebcef4b7b6ea9d7f168",
+      "explanation": "Behavioral regression reproduced against previous client with long title first: label 742x19 at (-297,1) exceeded the declared (8,2,132,16) title area and close region."
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiMiniMapLayoutTests.ps1"
+      ],
+      "result": "fail",
+      "exitCode": 1,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/window-title-bounds/before-fix-runtime.log",
+      "logSha256": "7c11f94c1140b9c5b8538d240e50421df6228c04b2fcd75e7fd1bb8830f1477f",
+      "explanation": "Test development compilation error: WindowType required its Client.UserModels namespace. Corrected the test. This does not establish a production defect."
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiMiniMapLayoutTests.ps1"
+      ],
+      "result": "fail",
+      "exitCode": 1,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/window-title-bounds/before-fix.log",
+      "logSha256": "1367474ac16534046a7cef3265257e4eaa8099d31c1d5aa280507329e505398b",
+      "explanation": "Test development compilation error: DXWindow is abstract. Fixed using a minimal concrete TitleTestWindow. This does not establish a production defect."
+    }
+  ],
+  "builds": {
+    "debug": {
+      "buildId": "gameui-c154b8c4de195e83751901b2f4cf85f1d44b8c6e0246b9c27058d7589c49f115",
+      "client": {
+        "path": "Zircon.exe",
+        "length": 1387008,
+        "sha256": "8b8c26855ed3eec2cda19a0f80874eee5a159398fac9bdeed624bf60a7a8855c"
+      }
+    },
+    "release": {
+      "buildId": "gameui-6d77ba3ceea871ffe82a729b8126b16aba3b9b295233dd59b4bb97a214265fcd",
+      "client": {
+        "path": "Zircon.exe",
+        "length": 1282048,
+        "sha256": "8cb4c14300b027cffb394e06db192c288a866527d780833b0112a8055fcca309"
+      }
+    }
+  },
+  "runtimeRebuiltThisTurn": true,
+  "runtimeManifestReferences": {
+    "debug": "docs/design/assets/official-ingame-ui/acceptance/window-title-bounds/debug-build.json",
+    "release": "docs/design/assets/official-ingame-ui/acceptance/window-title-bounds/release-build.json"
+  },
+  "package": {
+    "path": "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+    "frameCount": 94,
+    "sha256": "dd45cbf51d976a69d28269ee0d27a985def1ee1693cab2b509b74ae347a880a4"
+  },
+  "candidate": {
+    "path": "E:/workspace/mir3-ui-work/warehouse-assets-20261108-v1/zl-v2/OfficialV1.Zl",
+    "frameCount": 1,
+    "sha256": "471169dfa093b521f3c700c5a993e4e763aa17a45b2e16f440d961c0c7bf4cec"
+  },
+  "sourcePlanSha256": "f8c0a002b3821fabb54993792c354c4eff35eec51f9cfdc418535017c13069e9",
+  "limitations": [
+    "Synthetic minimap artwork verifies clipping and ordering, not final official-art acceptance. Pixel checks include the collapse region but do not draw the native collapse glyph in the synthetic fixture; window-set/full-scene checks exercise real controls.",
+    "Loopback/synthetic scene tests do not establish real account/server transactions, live IME or final visual acceptance. No claim of zero bugs.",
+    "Tasks remain 7 done / 3 in_progress / 18 not_started and G0-2/3/4/5 remain open. RuntimeReady=false, productionBindingAllowed=false, releaseAccepted=false. Default Legacy. NPC cards, secondary popups and settings retain existing style. Official installation is read-only; no commit, push or deployment."
+  ],
+  "evidenceHashes": [
+    {
+      "path": "E:/workspace/mir3-ui-work/window-title-bounds-20261108-fullscene-v1/legacy-hud.png",
+      "sha256": "5fa69de2c6da4336331e9f837cd0ded6c24f9b714dda1e36432e8880dc050a09"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/window-title-bounds-20261108-fullscene-v1/legacy-panels.png",
+      "sha256": "d0723781ce5debe099e9ba58f4e2c999706872006bb0ec1594c651cea1634a46"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/window-title-bounds-20261108-fullscene-v1/legacy-refresh-CharacterTab.png",
+      "sha256": "deb2ea995582dde9a2484489b306af4d9e35d7dac17d4366174d62d3f952d136"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/window-title-bounds-20261108-fullscene-v1/legacy-refresh-HermitTab.png",
+      "sha256": "02d3a5bda866f6ef13342f7244346bbf4e8d245e958ccab4fa648071e814483d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/window-title-bounds-20261108-fullscene-v1/legacy-refresh-StatsTab.png",
+      "sha256": "95186a20d4b0a8ca306643f8044541a9ce4c51b71d294ddab552b8308c51b9be"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/window-title-bounds-20261108-fullscene-v1/legacy-resources.txt",
+      "sha256": "47713d590a1b9214abdef7a0fc33d6c28a2b5a73a0cff9794375a5083020b498"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/window-title-bounds-20261108-fullscene-v1/native-character-refresh-fields.txt",
+      "sha256": "564be2e5cdbdaedc1c4f4d10a6c9c013186f4efe3d3b161ab5086b2f82cb90d6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/window-title-bounds-20261108-fullscene-v1/native-character-refresh-summary.txt",
+      "sha256": "c4e0e7ea8074ebae2956c6573048c386db3524233e4288dabafc93e3d58cb32a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/window-title-bounds-20261108-fullscene-v1/native-transition-results.txt",
+      "sha256": "347dfa519804984941ffca7a2251cf69b55d3adf4ff97a29fecc597ac6a886a7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/window-title-bounds-20261108-fullscene-v1/official-CharacterTab.png",
+      "sha256": "1851afba31126ef72f63fe8f520a77497f322c0b6ec26d5ac25ee659c5773461"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/window-title-bounds-20261108-fullscene-v1/official-extraEquipmentTab.png",
+      "sha256": "f3d76606111fa690cdaa00bc7df9273cfaf2d91c0bf504f6581814bb7b8f6c32"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/window-title-bounds-20261108-fullscene-v1/official-HermitTab.png",
+      "sha256": "48b10a31c5932104388985474e1e2481799a5ae7cf962244ba014619cd1f5448"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/window-title-bounds-20261108-fullscene-v1/official-hud.png",
+      "sha256": "b081d07ef6c2c7ae3a4235736e64e621424bb8116158ddc5d200b1be26bccb24"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/window-title-bounds-20261108-fullscene-v1/official-panels.png",
+      "sha256": "1851afba31126ef72f63fe8f520a77497f322c0b6ec26d5ac25ee659c5773461"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/window-title-bounds-20261108-fullscene-v1/official-reentry-hud.png",
+      "sha256": "e8977a4a505d9bb93b69c017f465f895690d8702a72a61172ac336282046f7e2"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/window-title-bounds-20261108-fullscene-v1/official-reentry-panels.png",
+      "sha256": "93d29d6326eac6afe53aa4febe1922cd2538adbd6cbb25b6915f56b1858d65f2"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/window-title-bounds-20261108-fullscene-v1/official-refresh-CharacterTab.png",
+      "sha256": "f7b5321e90829fc47d3e06c0563fa96b900db138b2770c1802a496d20eea1d32"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/window-title-bounds-20261108-fullscene-v1/official-refresh-HermitTab.png",
+      "sha256": "33deba12a39edd16f2b2b403e8907a3fd74e9d2f059754e56fe122c389fb5de4"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/window-title-bounds-20261108-fullscene-v1/official-refresh-StatsTab.png",
+      "sha256": "9c0e8906632eeaf8902e28900f4ec9475f2c91feb156cec3a017e45e74df78a9"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/window-title-bounds-20261108-fullscene-v1/official-reset-1024x768.png",
+      "sha256": "1851afba31126ef72f63fe8f520a77497f322c0b6ec26d5ac25ee659c5773461"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/window-title-bounds-20261108-fullscene-v1/official-reset-1280x800.png",
+      "sha256": "4c174f5300aff64547d042234ec8caf26d5aed21b66c4609ce8d1aa0d419c672"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/window-title-bounds-20261108-fullscene-v1/official-reset-1366x768.png",
+      "sha256": "01ec0e7753558d0f882e635d11f7aacf44bca7e4484b4208eaa5a574daee9c5e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/window-title-bounds-20261108-fullscene-v1/official-reset-1440x900.png",
+      "sha256": "863cb24249fec14a173b999609ac6f4ef6f0f0cdcaeb36bb15082051ec41f47a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/window-title-bounds-20261108-fullscene-v1/official-reset-1600x900.png",
+      "sha256": "c4d46c934a14eba2ab98d604c797c27489a0f58712ac6425d8f7d38d84824243"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/window-title-bounds-20261108-fullscene-v1/official-reset-1920x1080.png",
+      "sha256": "c6321bea29ea2a5a39896eff1961e9318c18a7983fba7b5dc17f21eb09185c18"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/window-title-bounds-20261108-fullscene-v1/official-StatsTab.png",
+      "sha256": "7a3e27a4fc0ef8a4c05d813fd0a4be54370274e20eebbd4979dcad7eccc8e774"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/window-title-bounds-20261108-fullscene-v1/reset-pixel-probes.txt",
+      "sha256": "2c236cd844574b74b6d502b13ffed99b5cb29783fc53ea00587ca1543a18ac67"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/window-title-bounds-20261108-fullscene-v1/tested-runtime.json",
+      "sha256": "f06450d1381a8cdb2a561c2524a55bff9ab9c10b5e2ea11d933eb0ddde46f59c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/window-title-bounds-20261108-minimap-v1/metrics.json",
+      "sha256": "e6c74b07f22256638c49fbdf5b3d201d0e3ea1e01fc2c446f8f72266b07eff96"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/window-title-bounds-20261108-minimap-v1/tested-runtime.json",
+      "sha256": "05f7564dc5f278c91da2c23639487b6a753af1dd8e80997147bcd6fce60878d5"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/window-title-bounds-20261108-minimap-v1/title-1.png",
+      "sha256": "63df67082fb3c16ca153220ac78e44d9bbab9e691df46b6b283f917c703768f4"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/window-title-bounds-20261108-minimap-v1/title-2.png",
+      "sha256": "ab48a39f8283177b7a9f0ce59d97375ecf2c6c2207551de6c8e59cb0f1eb5d1f"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/window-title-bounds-20261108-minimap-v1/title-3.png",
+      "sha256": "f30efe8221f2aaa5f4a95c347b7e176a87d2f96c329ba6a11ea4e3487843a2b2"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/window-title-bounds-20261108-minimap-v1/title-4.png",
+      "sha256": "bf2c8edb51ce6d6e661a0a84ba832bd27c4245936c0406bfb4b78cf9e6a8a811"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/window-title-bounds-20261108-minimap-v1/title-5.png",
+      "sha256": "4933a65ce06fb119d1ca8caaf5d4691df6659503526522e9b74714fe21633196"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/window-title-bounds-20261108-minimap-v1/title-6.png",
+      "sha256": "a665fbfb935bd6cfd44219fa46cc169441c055289d4f1b276a721b73595a9182"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/window-title-bounds-20261108-minimap-v1/title-blank-20.png",
+      "sha256": "281779fceb80c80044d53690ac0ff1a87931dd02a4d2b228c04fb26a3eb7739b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/window-title-bounds-20261108-minimap-v1/title-blank-840.png",
+      "sha256": "073d6eea89a59925118079db9c5a4bedd92a4a6a37df90e6b766459f14ab7647"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/window-title-bounds-20261108-minimap-v1/viewport-1.png",
+      "sha256": "eaed5ed5c01c933f92f215957c9da65b446f16651bfbda8d1166d3b20309c4d0"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/window-title-bounds-20261108-minimap-v1/viewport-2.png",
+      "sha256": "110aaf2104212a07807fb968c721379f12bc3bf242f011849092e0fb9d4804f4"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/window-title-bounds-20261108-minimap-v1/viewport-3.png",
+      "sha256": "307755fc78d262ec8f7c889a7d385f6c4f56d7a19d1840f14d437b572b41c0e2"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/window-title-bounds-20261108-minimap-v1/viewport-4.png",
+      "sha256": "5d9743d50053ce561b56cb0795fb379201a9d20415506fea16d88398f1d80b10"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/window-title-bounds-20261108-minimap-v1/viewport-5.png",
+      "sha256": "281779fceb80c80044d53690ac0ff1a87931dd02a4d2b228c04fb26a3eb7739b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/window-title-bounds-20261108-minimap-v1/viewport-6.png",
+      "sha256": "073d6eea89a59925118079db9c5a4bedd92a4a6a37df90e6b766459f14ab7647"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/window-title-bounds-20261108-minimap-v2/metrics.json",
+      "sha256": "e6c74b07f22256638c49fbdf5b3d201d0e3ea1e01fc2c446f8f72266b07eff96"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/window-title-bounds-20261108-minimap-v2/tested-runtime.json",
+      "sha256": "05f7564dc5f278c91da2c23639487b6a753af1dd8e80997147bcd6fce60878d5"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/window-title-bounds-20261108-minimap-v2/title-1.png",
+      "sha256": "63df67082fb3c16ca153220ac78e44d9bbab9e691df46b6b283f917c703768f4"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/window-title-bounds-20261108-minimap-v2/title-2.png",
+      "sha256": "ab48a39f8283177b7a9f0ce59d97375ecf2c6c2207551de6c8e59cb0f1eb5d1f"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/window-title-bounds-20261108-minimap-v2/title-3.png",
+      "sha256": "f30efe8221f2aaa5f4a95c347b7e176a87d2f96c329ba6a11ea4e3487843a2b2"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/window-title-bounds-20261108-minimap-v2/title-4.png",
+      "sha256": "bf2c8edb51ce6d6e661a0a84ba832bd27c4245936c0406bfb4b78cf9e6a8a811"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/window-title-bounds-20261108-minimap-v2/title-5.png",
+      "sha256": "4933a65ce06fb119d1ca8caaf5d4691df6659503526522e9b74714fe21633196"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/window-title-bounds-20261108-minimap-v2/title-6.png",
+      "sha256": "a665fbfb935bd6cfd44219fa46cc169441c055289d4f1b276a721b73595a9182"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/window-title-bounds-20261108-minimap-v2/title-blank-20.png",
+      "sha256": "281779fceb80c80044d53690ac0ff1a87931dd02a4d2b228c04fb26a3eb7739b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/window-title-bounds-20261108-minimap-v2/title-blank-840.png",
+      "sha256": "073d6eea89a59925118079db9c5a4bedd92a4a6a37df90e6b766459f14ab7647"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/window-title-bounds-20261108-minimap-v2/viewport-1.png",
+      "sha256": "eaed5ed5c01c933f92f215957c9da65b446f16651bfbda8d1166d3b20309c4d0"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/window-title-bounds-20261108-minimap-v2/viewport-2.png",
+      "sha256": "110aaf2104212a07807fb968c721379f12bc3bf242f011849092e0fb9d4804f4"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/window-title-bounds-20261108-minimap-v2/viewport-3.png",
+      "sha256": "307755fc78d262ec8f7c889a7d385f6c4f56d7a19d1840f14d437b572b41c0e2"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/window-title-bounds-20261108-minimap-v2/viewport-4.png",
+      "sha256": "5d9743d50053ce561b56cb0795fb379201a9d20415506fea16d88398f1d80b10"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/window-title-bounds-20261108-minimap-v2/viewport-5.png",
+      "sha256": "281779fceb80c80044d53690ac0ff1a87931dd02a4d2b228c04fb26a3eb7739b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/window-title-bounds-20261108-minimap-v2/viewport-6.png",
+      "sha256": "073d6eea89a59925118079db9c5a4bedd92a4a6a37df90e6b766459f14ab7647"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/window-title-bounds-20261108-windowset-v1/button-hitmask-cpu.txt",
+      "sha256": "8c02ba0d543cdf1f7ebeb48c8e6f52a83dde10de6fcca3b43899d8982e666927"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/window-title-bounds-20261108-windowset-v1/chat-persistence-legacy.db",
+      "sha256": "972f5ef9898f2cab38e3248330d31ffe9a69185ac4f66263cec086b8e173bc04"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/window-title-bounds-20261108-windowset-v1/chat-persistence-results.txt",
+      "sha256": "d56bd9b90060c225a2efca1ec18c55fed9c21926f6e860fca5e5bfcea8296afc"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/window-title-bounds-20261108-windowset-v1/chat-persistence-saved.json",
+      "sha256": "2589878bba04bdc9da7d94056ccd2db6b035567362c2ae97b4a6e98a5ca9693e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/window-title-bounds-20261108-windowset-v1/chat-reconstruction-results.txt",
+      "sha256": "6c2f662715d829f457c148575f558d2d7dbdf15a96b7fb910e78a8d89715f77b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/window-title-bounds-20261108-windowset-v1/layout-persistence-legacy.db",
+      "sha256": "4d9e4e960d7ba8fce0a0912793f12675ed4ff77db13ae823b0d7b53c943d2918"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/window-title-bounds-20261108-windowset-v1/layout-persistence-results.txt",
+      "sha256": "ed11120c29f9eaa7a195223529c6f68ee13aaa60138b01b3d69f9bb274d6bf31"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/window-title-bounds-20261108-windowset-v1/layout-persistence-saved.json",
+      "sha256": "b0326ef274ff5d8e6ded212ddcedf694c77a6eccfd0425458d7e20c3ccfae93a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/window-title-bounds-20261108-windowset-v1/legacy-glyph-restored.png",
+      "sha256": "0a53fff02c059efc67e4808ccfbd669c8560f8a164c6da2f2f6970301adcf2ff"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/window-title-bounds-20261108-windowset-v1/legacy-glyph-suppressed.png",
+      "sha256": "5a739a1abe0ce2f11461d1c429810d6256b07eabeb58321d7f9ba821f84b2cab"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/window-title-bounds-20261108-windowset-v1/tested-runtime.json",
+      "sha256": "f06450d1381a8cdb2a561c2524a55bff9ab9c10b5e2ea11d933eb0ddde46f59c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/window-title-bounds/audit-history.py",
+      "sha256": "43b3dd93e1bb748275abd80d37a7d986d4016b83b72bd6cf2e0ed3bac1c1fd92"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/window-title-bounds/before-fix-confirmed.log",
+      "sha256": "72da00f794fb064a711dca38d6103b674fc2ce12729a1d2250dcc991c53c272a"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/window-title-bounds/before-fix-confirmed.receipt.json",
+      "sha256": "3582a6279164f5d2fb08b6d987e350f37ad0e7ddecd9d3994806d738159f9963"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/window-title-bounds/before-fix-long-title.log",
+      "sha256": "38d500b03831d338e08ba7329fa4552389c694822ce59ebcef4b7b6ea9d7f168"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/window-title-bounds/before-fix-long-title.receipt.json",
+      "sha256": "843682c157bba697338f3fdc3ab2549e29c201e33e0c533d2da37bfc68087314"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/window-title-bounds/before-fix-runtime.log",
+      "sha256": "7c11f94c1140b9c5b8538d240e50421df6228c04b2fcd75e7fd1bb8830f1477f"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/window-title-bounds/before-fix-runtime.receipt.json",
+      "sha256": "f485464c6ebe3fc111e4aee5d2c3a247a20212fc5e971d88dab5c96e818e2e9d"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/window-title-bounds/before-fix.log",
+      "sha256": "1367474ac16534046a7cef3265257e4eaa8099d31c1d5aa280507329e505398b"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/window-title-bounds/before-fix.receipt.json",
+      "sha256": "db53d72fa67588d61ac777dc7e1d454cfd7781332522ee172ada3dad455917f1"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/window-title-bounds/check-whitespace.py",
+      "sha256": "b0a86f69a0f4d2d1028cf29ec177b27a0b21d80f60d2f17ed9eaf8f84c6a104f"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/window-title-bounds/debug-build.json",
+      "sha256": "e7c2556b240e9084291e61aa7a145fea0deb71cb9ecaf249f7e00b71c9351e86"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/window-title-bounds/debug-build.log",
+      "sha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/window-title-bounds/debug-build.receipt.json",
+      "sha256": "4a5d8d146c073f12ee2343e99df687d173c80626f6c07a429f61b079e600e653"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/window-title-bounds/debug-manifest.log",
+      "sha256": "40d092c7bdfd6202bd12f5497da738fd1f5bd0bc40b04a3aa557c78ec33b4843"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/window-title-bounds/debug-manifest.receipt.json",
+      "sha256": "3024336070c48b4dac1eda6cb3d6417c2cf5b1c29a500751033cb9d2374da4f9"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/window-title-bounds/full-scene.log",
+      "sha256": "6b372d6607e1c4a4258344ca081d356474851f73abf7d50bec43cada10fe58f2"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/window-title-bounds/full-scene.receipt.json",
+      "sha256": "abd182254f8abbdef5af572ceea35092a8c5759a5692b5b3ba39acc2f21d329a"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/window-title-bounds/history-audit.json",
+      "sha256": "b64037e0f4185a703ef544c7d11919ce7548812355bce65490879a0086e8794a"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/window-title-bounds/history-audit.log",
+      "sha256": "b64037e0f4185a703ef544c7d11919ce7548812355bce65490879a0086e8794a"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/window-title-bounds/history-audit.receipt.json",
+      "sha256": "63327178ff11f63d14e34dea7d1dbd289154e13250fd1b40712f5c85d5ed913b"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/window-title-bounds/minimap-final.log",
+      "sha256": "37e2b49c42748a6066360c258902400215a527b863e709d99e4c90a753fb5af7"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/window-title-bounds/minimap-final.receipt.json",
+      "sha256": "7639c3bd704c5ca35b9183e00259a488c40127388899969eafdd8a88db8bb0d5"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/window-title-bounds/minimap.log",
+      "sha256": "d062037b5a6f226af5180d02c47746d5867b643c6f806b77f7f7d03018941ef4"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/window-title-bounds/minimap.receipt.json",
+      "sha256": "501ab60e0f76ebae4924928eaec26759be7b472879c3b8af5b7aa6e555d845a7"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/window-title-bounds/prepare-report.py",
+      "sha256": "efd41f286b47d1a01db8215adc6d5efa2df93d89f1e76efa68659e30df287ba2"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/window-title-bounds/README.md",
+      "sha256": "40f17bb86003711f44a07111c5a132fc8dadba20e2e94ef9f358e82575db56b9"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/window-title-bounds/release-build.json",
+      "sha256": "69b7749a48d7553d057cf2d6b3dcb3c92e46f53a94975b2fc02635836e1ec611"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/window-title-bounds/release-build.log",
+      "sha256": "c9e24428be1e56c8408af17aacfea3413de3953bfe426d10eb768782f5005ebc"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/window-title-bounds/release-build.receipt.json",
+      "sha256": "a74d5b2e942bb3451600efc6640717b8215fb58f2aa56722641a0292e4a2872c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/window-title-bounds/release-manifest.log",
+      "sha256": "279bf50c33e60352fc0c7c14f1c5cfd8e0507fec53cccc4445d93d68ef64099a"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/window-title-bounds/release-manifest.receipt.json",
+      "sha256": "8e3d74575683cef50311632c094218ea70173cc7de49135c4df77978ced93817"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/window-title-bounds/run-check.py",
+      "sha256": "8cea69f8c28d781722ec26876840ea3e6bb44ae5ed37e2d213fdab62d1a7c943"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/window-title-bounds/source-before/Client/Controls/DXWindow.cs",
+      "sha256": "fcb585d6836c00052c86d5eb74b16e65f5110d9702909d4391d76b1864e31dfe"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/window-title-bounds/source-before/tests/game-ui/OfficialUiMiniMapLayoutTests.cs",
+      "sha256": "354e3688d2bce8f4ef5c579de8ca2f7ca1ccfaa548337fd7e8cbee23898af039"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/window-title-bounds/source-before/tests/game-ui/OfficialUiMiniMapRenderTests.cs",
+      "sha256": "129fb88068ae0eba7006da053e6181777e985e2fbb3886dd60d8efa489d6f1e9"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/window-title-bounds/source-before/tests/Run-GameUiMiniMapLayoutTests.ps1",
+      "sha256": "a03f9ffe214e8a6102e947d79d85b0ea4d29db3e295b98be6d01a494f3f2166f"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/window-title-bounds/source-before.json",
+      "sha256": "26b2e66a458ecdd66c2ef4c4ef43667110a0ceac0d286b75f3aa76b81b0376f6"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/window-title-bounds/task-validation.log",
+      "sha256": "90e3ddffa807ef19523e77855653984be659ff7ab47ec66f04d41348c4cb85b3"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/window-title-bounds/task-validation.receipt.json",
+      "sha256": "c2f1c81e149f49e408fc7dfebae429a389409fee3cdfd193c5fe5cc8a5acbeb0"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/window-title-bounds/tested-runtime.json",
+      "sha256": "f06450d1381a8cdb2a561c2524a55bff9ab9c10b5e2ea11d933eb0ddde46f59c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/window-title-bounds/user-resolution-reference.png",
+      "sha256": "46170d8eeafc4ae345541e6793227a76ebdbeac59588e1bace978d41f7c0e559"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/window-title-bounds/whitespace.log",
+      "sha256": "3bcecbd9f8bdc0347dd116a141d6e2774765b511e55aa43ef5bbf3699521a1b2"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/window-title-bounds/whitespace.receipt.json",
+      "sha256": "5e9f45ec5240e75ddefc78d0f63fa7ceaee845b5eb6606ba8bca45e9779cc528"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/window-title-bounds/window-set.log",
+      "sha256": "7a6ad5ea9bf68d161c07a4e52fbc2678b80dc996fa5f3672f58132b4fbf4aaaa"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/window-title-bounds/window-set.receipt.json",
+      "sha256": "0deeedcfe38bad9f579a250753eef0f338620e0ec5bd7a27ca187f6f03a47e1e"
+    }
+  ]
+}

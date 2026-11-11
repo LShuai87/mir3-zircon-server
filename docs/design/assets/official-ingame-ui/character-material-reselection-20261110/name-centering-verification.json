@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "result": "pass",
+  "date": "2026-11-11",
+  "nameRect": [
+    42,
+    10,
+    328,
+    22
+  ],
+  "windowWidth": 412,
+  "alignment": "HorizontalCenter | VerticalCenter; fixed bounds, ellipsis and full-name hint retained",
+  "controlsChecks": 4009,
+  "fullSceneChecks": 4386,
+  "scope": "Offline actual client rendering, six placements, three pages, long Chinese/English names, rollback and layout generation. No live login acceptance.",
+  "logs": {
+    "build-debug.log": {
+      "sha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c",
+      "path": "E:\\workspace\\mir3-ui-work\\character-name-center-20261111\\build-debug.log"
+    },
+    "build-release.log": {
+      "sha256": "c9e24428be1e56c8408af17aacfea3413de3953bfe426d10eb768782f5005ebc",
+      "path": "E:\\workspace\\mir3-ui-work\\character-name-center-20261111\\build-release.log"
+    },
+    "test-controls.log": {
+      "sha256": "5ecdcd338dc9dc2c8847fcd890b9e2b7205e52057e5c867ebed5a56a4707c1cb",
+      "path": "E:\\workspace\\mir3-ui-work\\character-name-center-20261111\\test-controls.log"
+    },
+    "test-fullscene.log": {
+      "sha256": "9c9bfc1c543fd6489f098b825ea26befab2302c840cf522d400a669e1f184008",
+      "path": "E:\\workspace\\mir3-ui-work\\character-name-center-20261111\\test-fullscene.log"
+    },
+    "test-layout.log": {
+      "sha256": "539dd33fa769bac05988361e4b0037eb48e24b780baff672517b471095213a92",
+      "path": "E:\\workspace\\mir3-ui-work\\character-name-center-20261111\\test-layout.log"
+    }
+  },
+  "configurations": [
+    {
+      "configuration": "Debug",
+      "executableSha256": "b3aef4d1d677f46e4a0959735917e73c0bf970295b0c2c668a46aa1d17b3c051",
+      "librarySha256": "4c1255be4a4d98fc829275bf6bf1d39dc66327dd4e434e51accf87a91e0ac027"
+    },
+    {
+      "configuration": "Release",
+      "executableSha256": "891629b5b2ac300735a4bb8e56058699d12cd4bbd44e884579032e8ceac8cfb1",
+      "librarySha256": "f6b5df3e890cfc935e853f39f15e6ea6e937ebbbf36dbb6cd62da508abbec95c"
+    }
+  ]
+}

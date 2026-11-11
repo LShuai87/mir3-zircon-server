@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "result": "pass",
+  "kind": "character-preview-position-fix",
+  "previousPivot": [
+    124,
+    280
+  ],
+  "pivot": [
+    124,
+    220
+  ],
+  "movedUpPixels": 60,
+  "viewport": [
+    60,
+    96,
+    128,
+    192
+  ],
+  "sourcePath": "E:\\workspace\\Debug\\Client\\Data\\ProgUse.Zl",
+  "sourceSha256": "3aa4cbb9bacf61d2c182451d88156160f07e49bb8cf5f29727c2caaf0763a53f",
+  "naturalBodyFrames": [
+    {
+      "frame": 0,
+      "gender": "male",
+      "imageSize": [
+        84,
+        178
+      ],
+      "offset": [
+        -22,
+        -123
+      ],
+      "bounds": [
+        102,
+        97,
+        84,
+        178
+      ],
+      "bottomClearance": 13
+    },
+    {
+      "frame": 1,
+      "gender": "female",
+      "imageSize": [
+        80,
+        182
+      ],
+      "offset": [
+        -22,
+        -122
+      ],
+      "bounds": [
+        102,
+        98,
+        80,
+        182
+      ],
+      "bottomClearance": 8
+    }
+  ],
+  "scope": "Native male/female body frames fit entirely inside the existing preview without scaling; visual confirmation recorded separately."
+}

@@ -10,7 +10,7 @@ using Library;
 //Cleaned
 namespace Client.Scenes.Views
 {
-    public sealed class StorageDialog : DXWindow
+    public sealed partial class StorageDialog : DXWindow
     {
         #region Properties
         public DXItemGrid Grid;
@@ -46,7 +46,7 @@ namespace Client.Scenes.Views
 
             SetClientSize(new Size(473, 380));
 
-            DXControl filterPanel = new DXControl
+            DXControl filterPanel = gameUiStorageFilterPanel = new DXControl
             {
                 Parent = this,
                 Size = new Size(ClientArea.Width, 26),
@@ -156,7 +156,8 @@ namespace Client.Scenes.Views
             foreach (DXItemCell cell in Grid.Grid)
                 cell.MouseWheel += StorageScrollBar.DoMouseWheel;
 
-
+            gameUiStorageOriginalControls = new DXControl[] { filterPanel, Grid, StorageScrollBar };
+            gameUiStorageOriginalFilters = new DXControl[] { ItemNameTextBox, ItemTypeComboBox, ClearButton };
         }
 
         public void RefreshStorage()
@@ -225,6 +226,11 @@ namespace Client.Scenes.Views
 
         protected override void Dispose(bool disposing)
         {
+            if (disposing)
+            {
+                gameUiStorageSnapshots = null;
+                GameUiStorageLayout = null;
+            }
             base.Dispose(disposing);
 
             if (disposing)

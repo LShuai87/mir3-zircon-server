@@ -1,0 +1,2481 @@
+{
+  "schemaVersion": 1,
+  "kind": "native-npc-paragraph-measurement-latency-and-crlf-verification",
+  "checkedAtLocalDate": "2026-11-08",
+  "releaseAccepted": false,
+  "referenceResolution": [
+    1024,
+    768
+  ],
+  "results": {
+    "npcChecks": 24071,
+    "npcScenes": 3,
+    "npcCoordinateHits": 773,
+    "npcFrames": 146,
+    "npcResets": 75,
+    "identicalNativeNpcPixels": 2399935,
+    "responseLatency": {
+      "before": {
+        "count": 30,
+        "minMs": 2903,
+        "maxMs": 3236,
+        "meanMs": 3037.9333333333334,
+        "optionLayoutMs": [
+          3053,
+          3038
+        ]
+      },
+      "after": {
+        "count": 30,
+        "minMs": 1,
+        "maxMs": 52,
+        "meanMs": 5.366666666666666,
+        "optionLayoutMs": [
+          1,
+          1
+        ]
+      }
+    },
+    "nativeGeometryChecks": 40,
+    "independentTextPixelComparisons": 24,
+    "windowSetSummary": "Window-set integration: 165921 checks passed with real catalog package, eight registered participants plus original chat groups/input and six resolutions, identity/chat retention, actual GameScene resize/disposal, startup scene entry/reentry, clean/dirty rollback, render-fault input containment, loopback heartbeat and teardown. Two glyph-path GPU probes only; no full-scene/live-game/IME acceptance.",
+    "fullSceneSummary": "Full-scene offline integration: 180 checks passed; 3 real constructors, 17 presented frames, 7 explicit Device.Reset calls; 690512 identical panel pixels. Real legacy resources, synthetic user/map, four character pages, six resolutions, scene reentry, cell/chat/native-input retention. No login, server behavior, hardware device-loss, live IME or final visual acceptance.",
+    "pythonTests": 172,
+    "packageFrames": 94
+  },
+  "sourceChanges": [
+    {
+      "path": "Client/Scenes/Views/NPCDialog.cs",
+      "beforeSha256": "2372fdf6322c51156bd48cc52e173f70604c6d185ba64b1832cdd8337ecc31f4",
+      "afterSha256": "5e48de6b797416c0d6de39eb7cc94a56ad360c689b453634d11b36ec2257e97c"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiNpcTests.cs",
+      "beforeSha256": "50d6490fafb8686814191bba17034351d718e500032371436346e2b8f08638c3",
+      "afterSha256": "ee3c1302c32a330768e31d81c947c33f79608436cd5b155a347268d1501d499c"
+    }
+  ],
+  "sourceHashes": [
+    {
+      "path": "Client/Scenes/Views/NPCDialog.cs",
+      "sha256": "5e48de6b797416c0d6de39eb7cc94a56ad360c689b453634d11b36ec2257e97c"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiNpcTests.cs",
+      "sha256": "ee3c1302c32a330768e31d81c947c33f79608436cd5b155a347268d1501d499c"
+    }
+  ],
+  "commands": [
+    {
+      "command": [
+        "D:/Program Files/Microsoft Visual Studio/2022/Enterprise/MSBuild/Current/Bin/MSBuild.exe",
+        "Client/Client.csproj",
+        "/t:Build",
+        "/p:Configuration=Debug",
+        "/p:Platform=AnyCPU",
+        "/v:minimal",
+        "/nologo"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/build-debug-v2.log",
+      "logSha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "command": [
+        "D:/Program Files/Microsoft Visual Studio/2022/Enterprise/MSBuild/Current/Bin/MSBuild.exe",
+        "Client/Client.csproj",
+        "/t:Build",
+        "/p:Configuration=Debug",
+        "/p:Platform=AnyCPU",
+        "/v:minimal",
+        "/nologo"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/build-debug.log",
+      "logSha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "command": [
+        "D:/Program Files/Microsoft Visual Studio/2022/Enterprise/MSBuild/Current/Bin/MSBuild.exe",
+        "Client/Client.csproj",
+        "/t:Build",
+        "/p:Configuration=Release",
+        "/p:Platform=AnyCPU",
+        "/v:minimal",
+        "/nologo"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/build-release-v2.log",
+      "logSha256": "c9e24428be1e56c8408af17aacfea3413de3953bfe426d10eb768782f5005ebc"
+    },
+    {
+      "command": [
+        "D:/Program Files/Microsoft Visual Studio/2022/Enterprise/MSBuild/Current/Bin/MSBuild.exe",
+        "Client/Client.csproj",
+        "/t:Build",
+        "/p:Configuration=Release",
+        "/p:Platform=AnyCPU",
+        "/v:minimal",
+        "/nologo"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/build-release.log",
+      "logSha256": "c9e24428be1e56c8408af17aacfea3413de3953bfe426d10eb768782f5005ebc"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiFullSceneTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/npc-text-latency-full-scene-20261108-v1"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/full-scene.log",
+      "logSha256": "0d85d4de7905eb608acc989200b5dfcc19842b35b62586889490caf606d4a988"
+    },
+    {
+      "command": [
+        "python",
+        "docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/audit-history.py",
+        "--output",
+        "docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/history-audit.json"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/history-audit.log",
+      "logSha256": "ab1334d685d1b58495354819e2dc4ed0e6f8d55cac5936277e7e3670cbd5f822"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "build/game-ui/New-GameUiReleaseManifest.ps1",
+        "-ClientDirectory",
+        "E:/workspace/Debug/Client",
+        "-ResourceRoot",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/staged-resources",
+        "-OutputPath",
+        "E:/workspace/mir3-zircon-server/docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/release-manifest-debug.json"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/manifest-debug.log",
+      "logSha256": "b5689d38b6a047fed46577bc1a98ffaf76fdca67d2367b7a4bd3b14273fae790"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "build/game-ui/New-GameUiReleaseManifest.ps1",
+        "-ClientDirectory",
+        "E:/workspace/Release/Client",
+        "-ResourceRoot",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/staged-resources",
+        "-OutputPath",
+        "E:/workspace/mir3-zircon-server/docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/release-manifest-release.json"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/manifest-release.log",
+      "logSha256": "57a19a76962bdf9bde85eb9ee2a19405896e6b467b6c5dad7db60ef087ce49e2"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiNpcTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/npc-after-v3.log",
+      "logSha256": "b94d46d8cd32a84e77ffe5fcd2316b8affd56025457f6aa27be3c21cae7477fe"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiNpcTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/npc-profile-before.log",
+      "logSha256": "66f5a2d042fc0808c96bad6ac2377a8eef7fa4d1387e4a968fad8128ab957b2d",
+      "purpose": "profile unchanged baseline runtime"
+    },
+    {
+      "command": [
+        "C:/Users/shuai/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests/game-ui",
+        "-p",
+        "test_*.py"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/python-tests.log",
+      "logSha256": "df4b4bd990100db7a76945d6fe434ebb51d1fa5b9f583d97ce327fb2f1acef7b"
+    },
+    {
+      "command": [
+        "python",
+        "build/game-ui/Validate-UiTasks.py"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/task-validation.log",
+      "logSha256": "90e3ddffa807ef19523e77855653984be659ff7ab47ec66f04d41348c4cb85b3"
+    },
+    {
+      "command": [
+        "python",
+        "docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/check-whitespace.py"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/whitespace-v2.log",
+      "logSha256": "b73b134d74f641d0773fa6a9b0c50ef55c4960ffb56937b897da4811cc9e1b8f"
+    },
+    {
+      "command": [
+        "python",
+        "docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/check-whitespace.py"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/whitespace.log",
+      "logSha256": "17c7e3a42a504c4ba1d85d315e8d34bd03a8e7c38d50032c65e2581c3ecb4391"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiWindowSetTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/npc-text-latency-window-set-20261108-v1"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/window-set.log",
+      "logSha256": "7268516005f09c2a1283c4de8f08e4192f9df4b73af2b019795f9bab1c1bb222"
+    }
+  ],
+  "failedAttempts": [
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiNpcTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v2"
+      ],
+      "result": "fail",
+      "exitCode": 1,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/npc-after-v2.log",
+      "logSha256": "2d7e9a93ad9c1912d8c39480da69f0e94c0b003c02958c2970d4657d9b98355f"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiNpcTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v1"
+      ],
+      "result": "fail",
+      "exitCode": 1,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/npc-after.log",
+      "logSha256": "c1d293af5d367110c209f8dec918f0293c03bed58d3a7150a63a20d546b98f65"
+    }
+  ],
+  "builds": {
+    "debug": {
+      "buildId": "gameui-826694766511c7673745ebeb9086ae6832ed9f5cb1dec692463bddc941faa147",
+      "client": {
+        "path": "Zircon.exe",
+        "length": 1366528,
+        "sha256": "8b314c242d6f8db8c3c68288c2f1697737d33e7188f69a966d6779cdb67447a6"
+      }
+    },
+    "release": {
+      "buildId": "gameui-6666b2a8d57d71c2aa5a82a95b101849bb048e68e1a57a0be71ea4ae6c72d1b7",
+      "client": {
+        "path": "Zircon.exe",
+        "length": 1263104,
+        "sha256": "25ffc85cd55018161ec907d90c71ddcceef71e64b8ea451fa75b9671835de346"
+      }
+    }
+  },
+  "package": {
+    "path": "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+    "frameCount": 94,
+    "sha256": "dd45cbf51d976a69d28269ee0d27a985def1ee1693cab2b509b74ae347a880a4"
+  },
+  "candidate": {
+    "path": "E:/workspace/mir3-ui-work/warehouse-assets-20261108-v1/zl-v2/OfficialV1.Zl",
+    "frameCount": 1,
+    "sha256": "471169dfa093b521f3c700c5a993e4e763aa17a45b2e16f440d961c0c7bf4cec"
+  },
+  "sourcePlanSha256": "f8c0a002b3821fabb54993792c354c4eff35eec51f9cfdc418535017c13069e9",
+  "finalValidation": {
+    "npc": "npc-after-v3.log",
+    "debug": "build-debug-v2.log",
+    "release": "build-release-v2.log",
+    "python": "python-tests.log",
+    "windowSet": "window-set.log",
+    "fullScene": "full-scene.log"
+  },
+  "limitations": [
+    "OfficialV1 only; native NPC/secondary styles, labels, option IDs and callbacks retained. Legacy remains default; RuntimeReady=false, productionBindingAllowed=false and releaseAccepted=false.",
+    "Same-machine fixed synthetic fixtures and a 1000 ms regression ceiling do not constitute target-hardware or universal text performance acceptance.",
+    "Native full-document geometry oracle plus independent full-document text rendering cover five selected paragraph cases across two candidate scene entries. All fonts and paragraph shapes remain unaccepted.",
+    "Independent quest opening callbacks, concurrent quest/service groups, manual foreground sequences and full lifecycle work remain pending.",
+    "No live-server, real service/storage, live IME, final visual, hardware device-loss or release/rollback acceptance. No commit, push or deployment; official installation is read-only."
+  ],
+  "evidenceHashes": [
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v1/legacy-card.png",
+      "sha256": "bbf533c95e714eb1b384a34ed7dde97083e54d67bca961844f3c9e9c8f2882d6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v1/legacy-goods-bottom.png",
+      "sha256": "923b0c68e8cf7a6a3c51de563999d0f24bb99b7a8c4382bb02c858b5637a435e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v1/legacy-goods-quantity.png",
+      "sha256": "203601bf8d8d27d816c2fce39ce93c2fe096e8103c81b8be023e9b3eae45bfc6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v1/legacy-goods-top.png",
+      "sha256": "771fbf5408ff1edc726b6888249f3c10491bc553f52a0e774199bac882bf60db"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v1/legacy-refine-retrieve.png",
+      "sha256": "b0ca02edebfb861c3e2375d08a0e4501ea545c975379bf3df9965c22f948cdac"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v1/legacy-refine.png",
+      "sha256": "0743781638dc75bd0e871ff69a221e7c7cffdabc666ac4ed021bac0a0cae2551"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v1/legacy-repair-full.png",
+      "sha256": "c7733722ac20d86135c879e46aefd6cd530d80275fe45902c5ebab3fa6065379"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v1/legacy-reset-1024x768.png",
+      "sha256": "718e52a0df1079d77fab5dff0823b58b2d8d98cb7c5d319a4fb36d5893eaca4d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v1/legacy-reset-1280x800.png",
+      "sha256": "6ba4420ef13f0c9e3e11e94b0b510f0ef22e92014dd02cadc2da81c2e20918bf"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v1/legacy-reset-1366x768.png",
+      "sha256": "9307abd4893bee4b08268e04f81e8f8889f09be289f4703c0dd332384e396b42"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v1/legacy-reset-1440x900.png",
+      "sha256": "5d7a6e9c1c15173e85b1c06b094a5773c037c7c3e7d270d57818628ed4e3abdd"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v1/legacy-reset-1600x900.png",
+      "sha256": "0270ea3175f839c48f352f53a0057f3c9366895a424af520eddf7709fb8da65f"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v1/legacy-reset-1920x1080.png",
+      "sha256": "b024b69683e93b115d6d3973a578d2ea688b5090fe5ce983f352af2f1b7d50d3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v1/legacy-resources.txt",
+      "sha256": "47713d590a1b9214abdef7a0fc33d6c28a2b5a73a0cff9794375a5083020b498"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v1/legacy-sell-full.png",
+      "sha256": "78b81311bb79aa207b13afd334aeb71de0ef227a133dc7cb331ac6cc1fddb224"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v1/legacy-trace.txt",
+      "sha256": "91c82d2086833279a797ee32cca8872a03d8474feee7557aab631281914e6b8a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v1/legacy-wrapped-option.png",
+      "sha256": "ff0659f55ad69307331223cc4612065bd036ee8b8e2442c86a2c9a6a470714a3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v1/official-card.png",
+      "sha256": "0f2b78045205403779ab7c33e75a3c5f834e7a635c67aefc7e77d52e3dd92487"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v1/official-long-card-1024x768.png",
+      "sha256": "b54dbb90ee816caf7e8ce88e8938e58db9699ca746ac56619e537aabd29317d0"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v1/official-long-card-1280x800.png",
+      "sha256": "9af5d5190590baef30643a68935da1600322be27fe22afbcdefb99835486360a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v1/official-long-card-1366x768.png",
+      "sha256": "b55ab3338eb65b583ca33cfc58a937c5842bb00a363738de01796dd6b1d74b66"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v1/official-long-card-1440x900.png",
+      "sha256": "665a37a21a65083e4d3c0980408c08764ce82bf01a783998b3c71a108f3d5266"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v1/official-long-card-1600x900.png",
+      "sha256": "792dbd50a93b47560b02c8c1bd2a0d8aec1f8db6e7357e88cdc4c0cf9dd38d18"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v1/official-long-card-1920x1080.png",
+      "sha256": "266742077100d1727cbe11211f2e1f9ab29c4ed83d62d3093b2e7cb4c882a397"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v1/official-long-card-bottom.png",
+      "sha256": "b54dbb90ee816caf7e8ce88e8938e58db9699ca746ac56619e537aabd29317d0"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v1/official-long-card-open-ms.txt",
+      "sha256": "639c1115ab55d139a527f7bb3c1a9570bb60cf96f5c13bdaa41a7264a74e748f"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v1/official-long-card-partial-line.png",
+      "sha256": "382cf651c1bf649d422fcffa975b7021cb7a1485ab692cdf36fe17fb772cb58e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v1/official-long-card-top.png",
+      "sha256": "d154b3c83f92432d87fe900abb6fbb975094d02a2d6ed3fa6af781a6966f3b3d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v1/official-long-text-reference.png",
+      "sha256": "63ea7a263505137352f230f85a422f09e91ab97d20ca985316bf3e2865a92f02"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v1/official-long-text-texture.png",
+      "sha256": "63ea7a263505137352f230f85a422f09e91ab97d20ca985316bf3e2865a92f02"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v1/official-paragraph-0-bottom-long-text-reference.png",
+      "sha256": "540cf8ddf77fd1f66ffcc649f94881940f350239284b80e3216d05b32eadb668"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v1/official-paragraph-0-bottom-long-text-texture.png",
+      "sha256": "540cf8ddf77fd1f66ffcc649f94881940f350239284b80e3216d05b32eadb668"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v1/official-paragraph-0-top-long-text-reference.png",
+      "sha256": "540cf8ddf77fd1f66ffcc649f94881940f350239284b80e3216d05b32eadb668"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v1/official-paragraph-0-top-long-text-texture.png",
+      "sha256": "540cf8ddf77fd1f66ffcc649f94881940f350239284b80e3216d05b32eadb668"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v1/official-paragraph-1-bottom-long-text-reference.png",
+      "sha256": "3c877d05e4761b12e3f859ddcd81930155c8b2679c4142c6764fa24ed2e61bf1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v1/official-paragraph-1-bottom-long-text-texture.png",
+      "sha256": "3c877d05e4761b12e3f859ddcd81930155c8b2679c4142c6764fa24ed2e61bf1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v1/official-paragraph-1-top-long-text-reference.png",
+      "sha256": "3c877d05e4761b12e3f859ddcd81930155c8b2679c4142c6764fa24ed2e61bf1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v1/official-paragraph-1-top-long-text-texture.png",
+      "sha256": "3c877d05e4761b12e3f859ddcd81930155c8b2679c4142c6764fa24ed2e61bf1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v1/official-paragraph-2-bottom-long-text-reference.png",
+      "sha256": "76f9761631c924f05ee0b940de90650b0fdd8f6aafc690b16f6c44256a4d29c5"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v1/official-paragraph-2-bottom-long-text-texture.png",
+      "sha256": "76f9761631c924f05ee0b940de90650b0fdd8f6aafc690b16f6c44256a4d29c5"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v1/official-paragraph-2-top-long-text-reference.png",
+      "sha256": "fbd146c4875677e71b4aea14983e602bc6b6a30d7afec1da3b69ae006f9dd385"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v1/official-paragraph-2-top-long-text-texture.png",
+      "sha256": "fbd146c4875677e71b4aea14983e602bc6b6a30d7afec1da3b69ae006f9dd385"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v1/official-paragraph-regions-0-bottom.png",
+      "sha256": "0752888ee514617d8adc950b02b491bdcccd3dde61df703e4b109e17f04563d3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v1/official-paragraph-regions-0-top.png",
+      "sha256": "0752888ee514617d8adc950b02b491bdcccd3dde61df703e4b109e17f04563d3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v1/official-paragraph-regions-1-bottom.png",
+      "sha256": "01232ed4471cbd70cc61d322947b99f432f82081dc97c4cfcd258c0e69a4c56c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v1/official-paragraph-regions-1-top.png",
+      "sha256": "01232ed4471cbd70cc61d322947b99f432f82081dc97c4cfcd258c0e69a4c56c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v1/official-paragraph-regions-2-bottom.png",
+      "sha256": "cae9dc7b5665b8b1ca018b6744b1f83560cc9a6a65f361c288cfcf58e8021237"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v1/official-paragraph-regions-2-top.png",
+      "sha256": "81488e09d89be939762cd891d237a74478a856990436f941d1795b4b173990f2"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v1/official-partial-line-long-text-reference.png",
+      "sha256": "966bb5e8cc0c4cc6428f93a50e5c86a2c4db0e33f84f4ecd89f8ac4913ad16aa"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v1/official-partial-line-long-text-texture.png",
+      "sha256": "966bb5e8cc0c4cc6428f93a50e5c86a2c4db0e33f84f4ecd89f8ac4913ad16aa"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v1/official-reset-1024x768.png",
+      "sha256": "b23ebfbbf33922fe2f863509032d879ddf3d14bd569d57beadb417a02e0a15b8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v1/official-reset-1280x800.png",
+      "sha256": "d1ec9b51d29b2e5931cb48055f57c4e2e0229dc5d8ed2a950e5508d6f5773f5a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v1/official-reset-1366x768.png",
+      "sha256": "d7cea0b802505a77da7e495fa8dc1b092940b3088212f9f03b19d44cd9b3a4d2"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v1/official-reset-1440x900.png",
+      "sha256": "dfbceb3b8cfc600a6f8b707206f4b594a37417ad53a2b4628e2a787c992e4891"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v1/official-reset-1600x900.png",
+      "sha256": "217cce3ffb4be7a12b8b9dd80e29641a7c4d49251b2c6a3820f6c110beff3122"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v1/official-reset-1920x1080.png",
+      "sha256": "caf615323b22db269fd245c591d2fa2e9521f25e8fcadcf8f81f6d84bbd7406c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v1/official-wrapped-option.png",
+      "sha256": "d26978a42c5b6bc4e2d0b20a25f3a364e07f877494efb454fb43c77ce64008d9"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v2/legacy-card.png",
+      "sha256": "bbf533c95e714eb1b384a34ed7dde97083e54d67bca961844f3c9e9c8f2882d6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v2/legacy-goods-bottom.png",
+      "sha256": "923b0c68e8cf7a6a3c51de563999d0f24bb99b7a8c4382bb02c858b5637a435e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v2/legacy-goods-quantity.png",
+      "sha256": "203601bf8d8d27d816c2fce39ce93c2fe096e8103c81b8be023e9b3eae45bfc6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v2/legacy-goods-top.png",
+      "sha256": "771fbf5408ff1edc726b6888249f3c10491bc553f52a0e774199bac882bf60db"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v2/legacy-refine-retrieve.png",
+      "sha256": "b0ca02edebfb861c3e2375d08a0e4501ea545c975379bf3df9965c22f948cdac"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v2/legacy-refine.png",
+      "sha256": "0743781638dc75bd0e871ff69a221e7c7cffdabc666ac4ed021bac0a0cae2551"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v2/legacy-repair-full.png",
+      "sha256": "c7733722ac20d86135c879e46aefd6cd530d80275fe45902c5ebab3fa6065379"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v2/legacy-reset-1024x768.png",
+      "sha256": "718e52a0df1079d77fab5dff0823b58b2d8d98cb7c5d319a4fb36d5893eaca4d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v2/legacy-reset-1280x800.png",
+      "sha256": "6ba4420ef13f0c9e3e11e94b0b510f0ef22e92014dd02cadc2da81c2e20918bf"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v2/legacy-reset-1366x768.png",
+      "sha256": "9307abd4893bee4b08268e04f81e8f8889f09be289f4703c0dd332384e396b42"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v2/legacy-reset-1440x900.png",
+      "sha256": "5d7a6e9c1c15173e85b1c06b094a5773c037c7c3e7d270d57818628ed4e3abdd"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v2/legacy-reset-1600x900.png",
+      "sha256": "0270ea3175f839c48f352f53a0057f3c9366895a424af520eddf7709fb8da65f"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v2/legacy-reset-1920x1080.png",
+      "sha256": "b024b69683e93b115d6d3973a578d2ea688b5090fe5ce983f352af2f1b7d50d3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v2/legacy-resources.txt",
+      "sha256": "47713d590a1b9214abdef7a0fc33d6c28a2b5a73a0cff9794375a5083020b498"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v2/legacy-sell-full.png",
+      "sha256": "78b81311bb79aa207b13afd334aeb71de0ef227a133dc7cb331ac6cc1fddb224"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v2/legacy-trace.txt",
+      "sha256": "91c82d2086833279a797ee32cca8872a03d8474feee7557aab631281914e6b8a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v2/legacy-wrapped-option.png",
+      "sha256": "ff0659f55ad69307331223cc4612065bd036ee8b8e2442c86a2c9a6a470714a3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v2/official-card.png",
+      "sha256": "0f2b78045205403779ab7c33e75a3c5f834e7a635c67aefc7e77d52e3dd92487"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v2/official-long-card-1024x768.png",
+      "sha256": "b54dbb90ee816caf7e8ce88e8938e58db9699ca746ac56619e537aabd29317d0"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v2/official-long-card-1280x800.png",
+      "sha256": "9af5d5190590baef30643a68935da1600322be27fe22afbcdefb99835486360a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v2/official-long-card-1366x768.png",
+      "sha256": "b55ab3338eb65b583ca33cfc58a937c5842bb00a363738de01796dd6b1d74b66"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v2/official-long-card-1440x900.png",
+      "sha256": "665a37a21a65083e4d3c0980408c08764ce82bf01a783998b3c71a108f3d5266"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v2/official-long-card-1600x900.png",
+      "sha256": "792dbd50a93b47560b02c8c1bd2a0d8aec1f8db6e7357e88cdc4c0cf9dd38d18"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v2/official-long-card-1920x1080.png",
+      "sha256": "266742077100d1727cbe11211f2e1f9ab29c4ed83d62d3093b2e7cb4c882a397"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v2/official-long-card-bottom.png",
+      "sha256": "b54dbb90ee816caf7e8ce88e8938e58db9699ca746ac56619e537aabd29317d0"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v2/official-long-card-open-ms.txt",
+      "sha256": "c30c6b3aa67e27e0fc807ab96edfc920b08ca09b98c942a593aff6c832957388"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v2/official-long-card-partial-line.png",
+      "sha256": "382cf651c1bf649d422fcffa975b7021cb7a1485ab692cdf36fe17fb772cb58e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v2/official-long-card-top.png",
+      "sha256": "d154b3c83f92432d87fe900abb6fbb975094d02a2d6ed3fa6af781a6966f3b3d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v2/official-long-text-reference.png",
+      "sha256": "63ea7a263505137352f230f85a422f09e91ab97d20ca985316bf3e2865a92f02"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v2/official-long-text-texture.png",
+      "sha256": "63ea7a263505137352f230f85a422f09e91ab97d20ca985316bf3e2865a92f02"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v2/official-paragraph-0-bottom-long-text-reference.png",
+      "sha256": "540cf8ddf77fd1f66ffcc649f94881940f350239284b80e3216d05b32eadb668"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v2/official-paragraph-0-bottom-long-text-texture.png",
+      "sha256": "540cf8ddf77fd1f66ffcc649f94881940f350239284b80e3216d05b32eadb668"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v2/official-paragraph-0-top-long-text-reference.png",
+      "sha256": "540cf8ddf77fd1f66ffcc649f94881940f350239284b80e3216d05b32eadb668"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v2/official-paragraph-0-top-long-text-texture.png",
+      "sha256": "540cf8ddf77fd1f66ffcc649f94881940f350239284b80e3216d05b32eadb668"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v2/official-paragraph-1-bottom-long-text-reference.png",
+      "sha256": "3c877d05e4761b12e3f859ddcd81930155c8b2679c4142c6764fa24ed2e61bf1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v2/official-paragraph-1-bottom-long-text-texture.png",
+      "sha256": "3c877d05e4761b12e3f859ddcd81930155c8b2679c4142c6764fa24ed2e61bf1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v2/official-paragraph-1-top-long-text-reference.png",
+      "sha256": "3c877d05e4761b12e3f859ddcd81930155c8b2679c4142c6764fa24ed2e61bf1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v2/official-paragraph-1-top-long-text-texture.png",
+      "sha256": "3c877d05e4761b12e3f859ddcd81930155c8b2679c4142c6764fa24ed2e61bf1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v2/official-paragraph-2-bottom-long-text-reference.png",
+      "sha256": "76f9761631c924f05ee0b940de90650b0fdd8f6aafc690b16f6c44256a4d29c5"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v2/official-paragraph-2-bottom-long-text-texture.png",
+      "sha256": "76f9761631c924f05ee0b940de90650b0fdd8f6aafc690b16f6c44256a4d29c5"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v2/official-paragraph-2-top-long-text-reference.png",
+      "sha256": "fbd146c4875677e71b4aea14983e602bc6b6a30d7afec1da3b69ae006f9dd385"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v2/official-paragraph-2-top-long-text-texture.png",
+      "sha256": "fbd146c4875677e71b4aea14983e602bc6b6a30d7afec1da3b69ae006f9dd385"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v2/official-paragraph-regions-0-bottom.png",
+      "sha256": "0752888ee514617d8adc950b02b491bdcccd3dde61df703e4b109e17f04563d3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v2/official-paragraph-regions-0-top.png",
+      "sha256": "0752888ee514617d8adc950b02b491bdcccd3dde61df703e4b109e17f04563d3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v2/official-paragraph-regions-1-bottom.png",
+      "sha256": "01232ed4471cbd70cc61d322947b99f432f82081dc97c4cfcd258c0e69a4c56c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v2/official-paragraph-regions-1-top.png",
+      "sha256": "6cf4141602db2109c411ac89089dece740825c6eec308a0ae1920fea0f02166b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v2/official-paragraph-regions-2-bottom.png",
+      "sha256": "cae9dc7b5665b8b1ca018b6744b1f83560cc9a6a65f361c288cfcf58e8021237"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v2/official-paragraph-regions-2-top.png",
+      "sha256": "81488e09d89be939762cd891d237a74478a856990436f941d1795b4b173990f2"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v2/official-partial-line-long-text-reference.png",
+      "sha256": "966bb5e8cc0c4cc6428f93a50e5c86a2c4db0e33f84f4ecd89f8ac4913ad16aa"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v2/official-partial-line-long-text-texture.png",
+      "sha256": "966bb5e8cc0c4cc6428f93a50e5c86a2c4db0e33f84f4ecd89f8ac4913ad16aa"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v2/official-reset-1024x768.png",
+      "sha256": "b23ebfbbf33922fe2f863509032d879ddf3d14bd569d57beadb417a02e0a15b8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v2/official-reset-1280x800.png",
+      "sha256": "d1ec9b51d29b2e5931cb48055f57c4e2e0229dc5d8ed2a950e5508d6f5773f5a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v2/official-reset-1366x768.png",
+      "sha256": "d7cea0b802505a77da7e495fa8dc1b092940b3088212f9f03b19d44cd9b3a4d2"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v2/official-reset-1440x900.png",
+      "sha256": "dfbceb3b8cfc600a6f8b707206f4b594a37417ad53a2b4628e2a787c992e4891"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v2/official-reset-1600x900.png",
+      "sha256": "217cce3ffb4be7a12b8b9dd80e29641a7c4d49251b2c6a3820f6c110beff3122"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v2/official-reset-1920x1080.png",
+      "sha256": "caf615323b22db269fd245c591d2fa2e9521f25e8fcadcf8f81f6d84bbd7406c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v2/official-wrapped-option.png",
+      "sha256": "d26978a42c5b6bc4e2d0b20a25f3a364e07f877494efb454fb43c77ce64008d9"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/assertions.txt",
+      "sha256": "9f914fc216230239c3821e06d4ef85e0601e3a52a60181173aa7365fd0014136"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/coordinate-hits.txt",
+      "sha256": "6f10a90e7fae67c727cb01fc8975bef13b71ce3d437210549d83c84c9503ef3d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/legacy-card.png",
+      "sha256": "bbf533c95e714eb1b384a34ed7dde97083e54d67bca961844f3c9e9c8f2882d6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/legacy-goods-bottom.png",
+      "sha256": "923b0c68e8cf7a6a3c51de563999d0f24bb99b7a8c4382bb02c858b5637a435e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/legacy-goods-quantity.png",
+      "sha256": "203601bf8d8d27d816c2fce39ce93c2fe096e8103c81b8be023e9b3eae45bfc6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/legacy-goods-top.png",
+      "sha256": "771fbf5408ff1edc726b6888249f3c10491bc553f52a0e774199bac882bf60db"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/legacy-refine-retrieve.png",
+      "sha256": "b0ca02edebfb861c3e2375d08a0e4501ea545c975379bf3df9965c22f948cdac"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/legacy-refine.png",
+      "sha256": "0743781638dc75bd0e871ff69a221e7c7cffdabc666ac4ed021bac0a0cae2551"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/legacy-repair-full.png",
+      "sha256": "c7733722ac20d86135c879e46aefd6cd530d80275fe45902c5ebab3fa6065379"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/legacy-reset-1024x768.png",
+      "sha256": "718e52a0df1079d77fab5dff0823b58b2d8d98cb7c5d319a4fb36d5893eaca4d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/legacy-reset-1280x800.png",
+      "sha256": "6ba4420ef13f0c9e3e11e94b0b510f0ef22e92014dd02cadc2da81c2e20918bf"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/legacy-reset-1366x768.png",
+      "sha256": "9307abd4893bee4b08268e04f81e8f8889f09be289f4703c0dd332384e396b42"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/legacy-reset-1440x900.png",
+      "sha256": "5d7a6e9c1c15173e85b1c06b094a5773c037c7c3e7d270d57818628ed4e3abdd"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/legacy-reset-1600x900.png",
+      "sha256": "0270ea3175f839c48f352f53a0057f3c9366895a424af520eddf7709fb8da65f"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/legacy-reset-1920x1080.png",
+      "sha256": "b024b69683e93b115d6d3973a578d2ea688b5090fe5ce983f352af2f1b7d50d3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/legacy-resources.txt",
+      "sha256": "47713d590a1b9214abdef7a0fc33d6c28a2b5a73a0cff9794375a5083020b498"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/legacy-sell-full.png",
+      "sha256": "78b81311bb79aa207b13afd334aeb71de0ef227a133dc7cb331ac6cc1fddb224"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/legacy-trace.txt",
+      "sha256": "91c82d2086833279a797ee32cca8872a03d8474feee7557aab631281914e6b8a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/legacy-wrapped-option.png",
+      "sha256": "ff0659f55ad69307331223cc4612065bd036ee8b8e2442c86a2c9a6a470714a3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/metrics.json",
+      "sha256": "ed226c275c89e7d93043db5db5aa9564f789dbe853b4def85d9d0fa6a3d40f40"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-card.png",
+      "sha256": "0f2b78045205403779ab7c33e75a3c5f834e7a635c67aefc7e77d52e3dd92487"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-goods-bottom.png",
+      "sha256": "28126a2c308d877e5b8a12e34af35324a1f9eff570a94e0eb96494ae792d4210"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-goods-quantity.png",
+      "sha256": "64e83eca43cb5f9e009cbc84573a4d10311872e0c34954085fa3c47b35867bab"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-goods-top.png",
+      "sha256": "3776f583811604303e1f46b1cdf1b1539bde2a123418be51fe2b7bdb4e0dc513"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-group-AccessoryRefineLevel.png",
+      "sha256": "0feb89a68c76e1ed2d026c6196aedc53b9c10966b6c2fd8f004a058b153d9413"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-group-AccessoryRefineUpgrade.png",
+      "sha256": "789c01202674062fd4da686fb9275a256ecd9328cc35b2cf9d95de9b2b7bbe6b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-group-AccessoryReset.png",
+      "sha256": "da97a32a328f5934eeeb90a98267abfa06debfdc85450e3e66d71aa1d7457cc8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-group-BuySell.png",
+      "sha256": "5f63cdbb520d68e8041c5538778463f59fd3079fff329647c5aac91433bbdd9a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-group-CompanionManage.png",
+      "sha256": "f24ba23228a428b45ad6a958a2c94a9aa189cae506a006ae3aea21fe4bf2e72a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-group-ItemFragment.png",
+      "sha256": "b7b5a26b607bfdfb9a6f7938bf90899ef8988f6ddfdf19dceae4610184e42d89"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-group-layouts.txt",
+      "sha256": "12872756839e9bf9bb20306d625b8d6e615f81e7fe1ac563eafe6e567c224492"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-group-MasterRefine.png",
+      "sha256": "7b79741e6ee3bffb22c01abbbb7a5f2b48d8db87029ac7ae6135571ccc4ed750"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-group-None.png",
+      "sha256": "68346c502e9b707aa042bf2e87c59db65cb8e2ebc014d6825b9780dca7ab7c5b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-group-Refine.png",
+      "sha256": "4508aa5050629aee83f7e113a5ad120bd859034db0429e91e977489c432f90c4"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-group-RefinementStone.png",
+      "sha256": "513d63c4cc391ab8c4406f8a99d4e7f92d352eb3e30420f7ce17fb0fff92b0df"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-group-RefineRetrieve.png",
+      "sha256": "6d5173cfc4cf6dc0a35fe1a77c55523adaf1c49f296cf464b53e7ef611db3a8f"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-group-Repair.png",
+      "sha256": "33e6e9c4c50b8c3014a568f2fab3518f58b9006174e5c2cb6de7ecd6907f1abf"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-group-reset-BuySell-1024x768-14.png",
+      "sha256": "5f63cdbb520d68e8041c5538778463f59fd3079fff329647c5aac91433bbdd9a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-group-reset-BuySell-1024x768-21.png",
+      "sha256": "5f63cdbb520d68e8041c5538778463f59fd3079fff329647c5aac91433bbdd9a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-group-reset-BuySell-1280x800-17.png",
+      "sha256": "60019e050f20e88699723a239ba984c2715869bb53234a3ffe11f8d808b7a08d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-group-reset-BuySell-1366x768-16.png",
+      "sha256": "7289d4f835cab8517e0d113a30c8e091dc7988dae63e91c4becb71b19ade0b44"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-group-reset-BuySell-1440x900-18.png",
+      "sha256": "ec1c0e4905e7208a47479644b649721e0a5233777fbf746931ebbe962b6bf559"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-group-reset-BuySell-1600x900-19.png",
+      "sha256": "b5097aaf23ef40a484410d4bff3cecedaa706b1c5388b5965522abd7643341fc"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-group-reset-BuySell-1920x1080-20.png",
+      "sha256": "66b8bd38abd4726bc79dd9ae41a08cd4b4bb39419c5aa26c0d24c0b338036bda"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-group-reset-None-1024x768-12.png",
+      "sha256": "68346c502e9b707aa042bf2e87c59db65cb8e2ebc014d6825b9780dca7ab7c5b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-group-reset-None-1024x768-5.png",
+      "sha256": "68346c502e9b707aa042bf2e87c59db65cb8e2ebc014d6825b9780dca7ab7c5b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-group-reset-None-1280x800-8.png",
+      "sha256": "d44339d4e6d8db1179e29f936dc31d23021ecea09d81e954b9d2f2950ceec51b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-group-reset-None-1366x768-7.png",
+      "sha256": "1ad3fe071bb79a43be8744953741e2cd9d0d5e7e1ddd5d0db0f8615de8c00e6a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-group-reset-None-1440x900-9.png",
+      "sha256": "087ad7ed609b972654f1fe47987ad95a022b0b841acdc1621c5d6c881684c5b0"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-group-reset-None-1600x900-10.png",
+      "sha256": "815c2db150346713786712f21505a8b9138d874503b738b20504d241aa86d30e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-group-reset-None-1920x1080-11.png",
+      "sha256": "6c387b1c6ea0334ce8509fca74a8b01484547172e25c6350f06d77e60ba519ac"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-group-WeaponCraft.png",
+      "sha256": "0cec1c8e3d29ca0cd858fdf5f160395e945fe0a8ca52d490dd1bb111012f0733"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-group-WeaponReset.png",
+      "sha256": "59873a5a22bb41430fa93cbd4e5a79f6d05552a7543c935bd4c8279439f59c6d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-group-WeddingRing.png",
+      "sha256": "f3c15f33c57f5d2104d5304eca94b1bf3d58f6e6d84e0a29e60e9e587e196040"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-long-card-1024x768.png",
+      "sha256": "b54dbb90ee816caf7e8ce88e8938e58db9699ca746ac56619e537aabd29317d0"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-long-card-1280x800.png",
+      "sha256": "9af5d5190590baef30643a68935da1600322be27fe22afbcdefb99835486360a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-long-card-1366x768.png",
+      "sha256": "b55ab3338eb65b583ca33cfc58a937c5842bb00a363738de01796dd6b1d74b66"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-long-card-1440x900.png",
+      "sha256": "665a37a21a65083e4d3c0980408c08764ce82bf01a783998b3c71a108f3d5266"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-long-card-1600x900.png",
+      "sha256": "792dbd50a93b47560b02c8c1bd2a0d8aec1f8db6e7357e88cdc4c0cf9dd38d18"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-long-card-1920x1080.png",
+      "sha256": "343c8ce461c764e57c1b570bcd13674141d2b621d46778cc33e407c9ab477f7f"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-long-card-bottom.png",
+      "sha256": "b54dbb90ee816caf7e8ce88e8938e58db9699ca746ac56619e537aabd29317d0"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-long-card-open-ms.txt",
+      "sha256": "b53a7292b38e011dbe6efc79c22d028ddd364da2e6b9aa182915572742330ea9"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-long-card-partial-line.png",
+      "sha256": "382cf651c1bf649d422fcffa975b7021cb7a1485ab692cdf36fe17fb772cb58e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-long-card-top.png",
+      "sha256": "d154b3c83f92432d87fe900abb6fbb975094d02a2d6ed3fa6af781a6966f3b3d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-long-text-reference.png",
+      "sha256": "63ea7a263505137352f230f85a422f09e91ab97d20ca985316bf3e2865a92f02"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-long-text-texture.png",
+      "sha256": "63ea7a263505137352f230f85a422f09e91ab97d20ca985316bf3e2865a92f02"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-paragraph-0-bottom-long-text-reference.png",
+      "sha256": "540cf8ddf77fd1f66ffcc649f94881940f350239284b80e3216d05b32eadb668"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-paragraph-0-bottom-long-text-texture.png",
+      "sha256": "540cf8ddf77fd1f66ffcc649f94881940f350239284b80e3216d05b32eadb668"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-paragraph-0-top-long-text-reference.png",
+      "sha256": "540cf8ddf77fd1f66ffcc649f94881940f350239284b80e3216d05b32eadb668"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-paragraph-0-top-long-text-texture.png",
+      "sha256": "540cf8ddf77fd1f66ffcc649f94881940f350239284b80e3216d05b32eadb668"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-paragraph-1-bottom-long-text-reference.png",
+      "sha256": "3c877d05e4761b12e3f859ddcd81930155c8b2679c4142c6764fa24ed2e61bf1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-paragraph-1-bottom-long-text-texture.png",
+      "sha256": "3c877d05e4761b12e3f859ddcd81930155c8b2679c4142c6764fa24ed2e61bf1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-paragraph-1-top-long-text-reference.png",
+      "sha256": "3c877d05e4761b12e3f859ddcd81930155c8b2679c4142c6764fa24ed2e61bf1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-paragraph-1-top-long-text-texture.png",
+      "sha256": "3c877d05e4761b12e3f859ddcd81930155c8b2679c4142c6764fa24ed2e61bf1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-paragraph-2-bottom-long-text-reference.png",
+      "sha256": "76f9761631c924f05ee0b940de90650b0fdd8f6aafc690b16f6c44256a4d29c5"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-paragraph-2-bottom-long-text-texture.png",
+      "sha256": "76f9761631c924f05ee0b940de90650b0fdd8f6aafc690b16f6c44256a4d29c5"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-paragraph-2-top-long-text-reference.png",
+      "sha256": "fbd146c4875677e71b4aea14983e602bc6b6a30d7afec1da3b69ae006f9dd385"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-paragraph-2-top-long-text-texture.png",
+      "sha256": "fbd146c4875677e71b4aea14983e602bc6b6a30d7afec1da3b69ae006f9dd385"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-paragraph-3-bottom-long-text-reference.png",
+      "sha256": "bea194a346d02dcd2ef465ee055452165c9160e1e376cb9f231bded2a48bfb20"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-paragraph-3-bottom-long-text-texture.png",
+      "sha256": "bea194a346d02dcd2ef465ee055452165c9160e1e376cb9f231bded2a48bfb20"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-paragraph-3-top-long-text-reference.png",
+      "sha256": "bea194a346d02dcd2ef465ee055452165c9160e1e376cb9f231bded2a48bfb20"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-paragraph-3-top-long-text-texture.png",
+      "sha256": "bea194a346d02dcd2ef465ee055452165c9160e1e376cb9f231bded2a48bfb20"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-paragraph-4-bottom-long-text-reference.png",
+      "sha256": "52f16e5b87e95e1883fbb66b55b65a675e943facf62287f7e2ed0ad6ad9ec5a7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-paragraph-4-bottom-long-text-texture.png",
+      "sha256": "52f16e5b87e95e1883fbb66b55b65a675e943facf62287f7e2ed0ad6ad9ec5a7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-paragraph-4-top-long-text-reference.png",
+      "sha256": "52f16e5b87e95e1883fbb66b55b65a675e943facf62287f7e2ed0ad6ad9ec5a7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-paragraph-4-top-long-text-texture.png",
+      "sha256": "52f16e5b87e95e1883fbb66b55b65a675e943facf62287f7e2ed0ad6ad9ec5a7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-paragraph-native-geometry.txt",
+      "sha256": "685fc10cc9db4dc20dd5ac1cc8c20f1ce90e974bf7f7b658e4174573550bf14b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-paragraph-regions-0-bottom.png",
+      "sha256": "0752888ee514617d8adc950b02b491bdcccd3dde61df703e4b109e17f04563d3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-paragraph-regions-0-top.png",
+      "sha256": "0752888ee514617d8adc950b02b491bdcccd3dde61df703e4b109e17f04563d3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-paragraph-regions-1-bottom.png",
+      "sha256": "01232ed4471cbd70cc61d322947b99f432f82081dc97c4cfcd258c0e69a4c56c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-paragraph-regions-1-top.png",
+      "sha256": "6cf4141602db2109c411ac89089dece740825c6eec308a0ae1920fea0f02166b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-paragraph-regions-2-bottom.png",
+      "sha256": "cae9dc7b5665b8b1ca018b6744b1f83560cc9a6a65f361c288cfcf58e8021237"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-paragraph-regions-2-top.png",
+      "sha256": "81488e09d89be939762cd891d237a74478a856990436f941d1795b4b173990f2"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-paragraph-regions-3-bottom.png",
+      "sha256": "4d8fc3d5d8203756594ae1ee9c0b25f9221ce50947baa426b78d97f2d28da171"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-paragraph-regions-3-top.png",
+      "sha256": "4d8fc3d5d8203756594ae1ee9c0b25f9221ce50947baa426b78d97f2d28da171"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-paragraph-regions-4-bottom.png",
+      "sha256": "06020eff21eccab57697bc154f4ba1fcc6eb491a9dbdafe25d69591ff1c737d3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-paragraph-regions-4-top.png",
+      "sha256": "06020eff21eccab57697bc154f4ba1fcc6eb491a9dbdafe25d69591ff1c737d3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-partial-line-long-text-reference.png",
+      "sha256": "966bb5e8cc0c4cc6428f93a50e5c86a2c4db0e33f84f4ecd89f8ac4913ad16aa"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-partial-line-long-text-texture.png",
+      "sha256": "966bb5e8cc0c4cc6428f93a50e5c86a2c4db0e33f84f4ecd89f8ac4913ad16aa"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-card.png",
+      "sha256": "0f2b78045205403779ab7c33e75a3c5f834e7a635c67aefc7e77d52e3dd92487"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-goods-bottom.png",
+      "sha256": "28126a2c308d877e5b8a12e34af35324a1f9eff570a94e0eb96494ae792d4210"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-goods-quantity.png",
+      "sha256": "64e83eca43cb5f9e009cbc84573a4d10311872e0c34954085fa3c47b35867bab"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-goods-top.png",
+      "sha256": "1699c23697fbe693c0e986963bc605e6f38fe5a8b959b1371e77ee07adfd2081"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-group-AccessoryRefineLevel.png",
+      "sha256": "0feb89a68c76e1ed2d026c6196aedc53b9c10966b6c2fd8f004a058b153d9413"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-group-AccessoryRefineUpgrade.png",
+      "sha256": "789c01202674062fd4da686fb9275a256ecd9328cc35b2cf9d95de9b2b7bbe6b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-group-AccessoryReset.png",
+      "sha256": "da97a32a328f5934eeeb90a98267abfa06debfdc85450e3e66d71aa1d7457cc8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-group-BuySell.png",
+      "sha256": "5f63cdbb520d68e8041c5538778463f59fd3079fff329647c5aac91433bbdd9a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-group-CompanionManage.png",
+      "sha256": "f24ba23228a428b45ad6a958a2c94a9aa189cae506a006ae3aea21fe4bf2e72a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-group-ItemFragment.png",
+      "sha256": "b7b5a26b607bfdfb9a6f7938bf90899ef8988f6ddfdf19dceae4610184e42d89"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-group-layouts.txt",
+      "sha256": "356809ed097206d70791729d65f56d6092cb6b63db0f85ff84702d0cf267b5ce"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-group-MasterRefine.png",
+      "sha256": "7b79741e6ee3bffb22c01abbbb7a5f2b48d8db87029ac7ae6135571ccc4ed750"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-group-None.png",
+      "sha256": "68346c502e9b707aa042bf2e87c59db65cb8e2ebc014d6825b9780dca7ab7c5b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-group-Refine.png",
+      "sha256": "4508aa5050629aee83f7e113a5ad120bd859034db0429e91e977489c432f90c4"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-group-RefinementStone.png",
+      "sha256": "513d63c4cc391ab8c4406f8a99d4e7f92d352eb3e30420f7ce17fb0fff92b0df"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-group-RefineRetrieve.png",
+      "sha256": "6d5173cfc4cf6dc0a35fe1a77c55523adaf1c49f296cf464b53e7ef611db3a8f"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-group-Repair.png",
+      "sha256": "33e6e9c4c50b8c3014a568f2fab3518f58b9006174e5c2cb6de7ecd6907f1abf"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-group-reset-BuySell-1024x768-14.png",
+      "sha256": "5f63cdbb520d68e8041c5538778463f59fd3079fff329647c5aac91433bbdd9a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-group-reset-BuySell-1024x768-21.png",
+      "sha256": "5f63cdbb520d68e8041c5538778463f59fd3079fff329647c5aac91433bbdd9a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-group-reset-BuySell-1280x800-17.png",
+      "sha256": "60019e050f20e88699723a239ba984c2715869bb53234a3ffe11f8d808b7a08d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-group-reset-BuySell-1366x768-16.png",
+      "sha256": "7289d4f835cab8517e0d113a30c8e091dc7988dae63e91c4becb71b19ade0b44"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-group-reset-BuySell-1440x900-18.png",
+      "sha256": "ec1c0e4905e7208a47479644b649721e0a5233777fbf746931ebbe962b6bf559"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-group-reset-BuySell-1600x900-19.png",
+      "sha256": "b5097aaf23ef40a484410d4bff3cecedaa706b1c5388b5965522abd7643341fc"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-group-reset-BuySell-1920x1080-20.png",
+      "sha256": "66b8bd38abd4726bc79dd9ae41a08cd4b4bb39419c5aa26c0d24c0b338036bda"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-group-reset-None-1024x768-12.png",
+      "sha256": "68346c502e9b707aa042bf2e87c59db65cb8e2ebc014d6825b9780dca7ab7c5b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-group-reset-None-1024x768-5.png",
+      "sha256": "68346c502e9b707aa042bf2e87c59db65cb8e2ebc014d6825b9780dca7ab7c5b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-group-reset-None-1280x800-8.png",
+      "sha256": "d44339d4e6d8db1179e29f936dc31d23021ecea09d81e954b9d2f2950ceec51b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-group-reset-None-1366x768-7.png",
+      "sha256": "1ad3fe071bb79a43be8744953741e2cd9d0d5e7e1ddd5d0db0f8615de8c00e6a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-group-reset-None-1440x900-9.png",
+      "sha256": "087ad7ed609b972654f1fe47987ad95a022b0b841acdc1621c5d6c881684c5b0"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-group-reset-None-1600x900-10.png",
+      "sha256": "815c2db150346713786712f21505a8b9138d874503b738b20504d241aa86d30e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-group-reset-None-1920x1080-11.png",
+      "sha256": "6c387b1c6ea0334ce8509fca74a8b01484547172e25c6350f06d77e60ba519ac"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-group-WeaponCraft.png",
+      "sha256": "0cec1c8e3d29ca0cd858fdf5f160395e945fe0a8ca52d490dd1bb111012f0733"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-group-WeaponReset.png",
+      "sha256": "59873a5a22bb41430fa93cbd4e5a79f6d05552a7543c935bd4c8279439f59c6d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-group-WeddingRing.png",
+      "sha256": "f3c15f33c57f5d2104d5304eca94b1bf3d58f6e6d84e0a29e60e9e587e196040"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-long-card-1024x768.png",
+      "sha256": "b54dbb90ee816caf7e8ce88e8938e58db9699ca746ac56619e537aabd29317d0"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-long-card-1280x800.png",
+      "sha256": "d5247047b57fc4a4ccfa941693378d05b8c9635d93c5014b025458b00649a9fc"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-long-card-1366x768.png",
+      "sha256": "b55ab3338eb65b583ca33cfc58a937c5842bb00a363738de01796dd6b1d74b66"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-long-card-1440x900.png",
+      "sha256": "665a37a21a65083e4d3c0980408c08764ce82bf01a783998b3c71a108f3d5266"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-long-card-1600x900.png",
+      "sha256": "f03ca94d4feceb28382b75e47043f774a5d763a52b1cc6e59548906ffcd0a3a4"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-long-card-1920x1080.png",
+      "sha256": "266742077100d1727cbe11211f2e1f9ab29c4ed83d62d3093b2e7cb4c882a397"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-long-card-bottom.png",
+      "sha256": "b54dbb90ee816caf7e8ce88e8938e58db9699ca746ac56619e537aabd29317d0"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-long-card-open-ms.txt",
+      "sha256": "060672b8531404f598515957df33d6387e0647cbc382d35ef286fa3466362384"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-long-card-partial-line.png",
+      "sha256": "382cf651c1bf649d422fcffa975b7021cb7a1485ab692cdf36fe17fb772cb58e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-long-card-top.png",
+      "sha256": "d154b3c83f92432d87fe900abb6fbb975094d02a2d6ed3fa6af781a6966f3b3d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-long-text-reference.png",
+      "sha256": "63ea7a263505137352f230f85a422f09e91ab97d20ca985316bf3e2865a92f02"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-long-text-texture.png",
+      "sha256": "63ea7a263505137352f230f85a422f09e91ab97d20ca985316bf3e2865a92f02"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-paragraph-0-bottom-long-text-reference.png",
+      "sha256": "540cf8ddf77fd1f66ffcc649f94881940f350239284b80e3216d05b32eadb668"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-paragraph-0-bottom-long-text-texture.png",
+      "sha256": "540cf8ddf77fd1f66ffcc649f94881940f350239284b80e3216d05b32eadb668"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-paragraph-0-top-long-text-reference.png",
+      "sha256": "540cf8ddf77fd1f66ffcc649f94881940f350239284b80e3216d05b32eadb668"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-paragraph-0-top-long-text-texture.png",
+      "sha256": "540cf8ddf77fd1f66ffcc649f94881940f350239284b80e3216d05b32eadb668"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-paragraph-1-bottom-long-text-reference.png",
+      "sha256": "3c877d05e4761b12e3f859ddcd81930155c8b2679c4142c6764fa24ed2e61bf1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-paragraph-1-bottom-long-text-texture.png",
+      "sha256": "3c877d05e4761b12e3f859ddcd81930155c8b2679c4142c6764fa24ed2e61bf1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-paragraph-1-top-long-text-reference.png",
+      "sha256": "3c877d05e4761b12e3f859ddcd81930155c8b2679c4142c6764fa24ed2e61bf1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-paragraph-1-top-long-text-texture.png",
+      "sha256": "3c877d05e4761b12e3f859ddcd81930155c8b2679c4142c6764fa24ed2e61bf1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-paragraph-2-bottom-long-text-reference.png",
+      "sha256": "76f9761631c924f05ee0b940de90650b0fdd8f6aafc690b16f6c44256a4d29c5"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-paragraph-2-bottom-long-text-texture.png",
+      "sha256": "76f9761631c924f05ee0b940de90650b0fdd8f6aafc690b16f6c44256a4d29c5"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-paragraph-2-top-long-text-reference.png",
+      "sha256": "fbd146c4875677e71b4aea14983e602bc6b6a30d7afec1da3b69ae006f9dd385"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-paragraph-2-top-long-text-texture.png",
+      "sha256": "fbd146c4875677e71b4aea14983e602bc6b6a30d7afec1da3b69ae006f9dd385"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-paragraph-3-bottom-long-text-reference.png",
+      "sha256": "bea194a346d02dcd2ef465ee055452165c9160e1e376cb9f231bded2a48bfb20"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-paragraph-3-bottom-long-text-texture.png",
+      "sha256": "bea194a346d02dcd2ef465ee055452165c9160e1e376cb9f231bded2a48bfb20"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-paragraph-3-top-long-text-reference.png",
+      "sha256": "bea194a346d02dcd2ef465ee055452165c9160e1e376cb9f231bded2a48bfb20"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-paragraph-3-top-long-text-texture.png",
+      "sha256": "bea194a346d02dcd2ef465ee055452165c9160e1e376cb9f231bded2a48bfb20"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-paragraph-4-bottom-long-text-reference.png",
+      "sha256": "52f16e5b87e95e1883fbb66b55b65a675e943facf62287f7e2ed0ad6ad9ec5a7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-paragraph-4-bottom-long-text-texture.png",
+      "sha256": "52f16e5b87e95e1883fbb66b55b65a675e943facf62287f7e2ed0ad6ad9ec5a7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-paragraph-4-top-long-text-reference.png",
+      "sha256": "52f16e5b87e95e1883fbb66b55b65a675e943facf62287f7e2ed0ad6ad9ec5a7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-paragraph-4-top-long-text-texture.png",
+      "sha256": "52f16e5b87e95e1883fbb66b55b65a675e943facf62287f7e2ed0ad6ad9ec5a7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-paragraph-native-geometry.txt",
+      "sha256": "685fc10cc9db4dc20dd5ac1cc8c20f1ce90e974bf7f7b658e4174573550bf14b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-paragraph-regions-0-bottom.png",
+      "sha256": "0752888ee514617d8adc950b02b491bdcccd3dde61df703e4b109e17f04563d3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-paragraph-regions-0-top.png",
+      "sha256": "0752888ee514617d8adc950b02b491bdcccd3dde61df703e4b109e17f04563d3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-paragraph-regions-1-bottom.png",
+      "sha256": "01232ed4471cbd70cc61d322947b99f432f82081dc97c4cfcd258c0e69a4c56c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-paragraph-regions-1-top.png",
+      "sha256": "6cf4141602db2109c411ac89089dece740825c6eec308a0ae1920fea0f02166b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-paragraph-regions-2-bottom.png",
+      "sha256": "cae9dc7b5665b8b1ca018b6744b1f83560cc9a6a65f361c288cfcf58e8021237"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-paragraph-regions-2-top.png",
+      "sha256": "81488e09d89be939762cd891d237a74478a856990436f941d1795b4b173990f2"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-paragraph-regions-3-bottom.png",
+      "sha256": "4d8fc3d5d8203756594ae1ee9c0b25f9221ce50947baa426b78d97f2d28da171"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-paragraph-regions-3-top.png",
+      "sha256": "4d8fc3d5d8203756594ae1ee9c0b25f9221ce50947baa426b78d97f2d28da171"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-paragraph-regions-4-bottom.png",
+      "sha256": "06020eff21eccab57697bc154f4ba1fcc6eb491a9dbdafe25d69591ff1c737d3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-paragraph-regions-4-top.png",
+      "sha256": "06020eff21eccab57697bc154f4ba1fcc6eb491a9dbdafe25d69591ff1c737d3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-partial-line-long-text-reference.png",
+      "sha256": "966bb5e8cc0c4cc6428f93a50e5c86a2c4db0e33f84f4ecd89f8ac4913ad16aa"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-partial-line-long-text-texture.png",
+      "sha256": "966bb5e8cc0c4cc6428f93a50e5c86a2c4db0e33f84f4ecd89f8ac4913ad16aa"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-refine-retrieve.png",
+      "sha256": "162e890082c288a3d43ec41f89b50b37d3fa38e0c3ea18846fadd2295e2bef7e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-refine.png",
+      "sha256": "37a9f8e43b3903a77edae564928e85c85a422583b1e0f1eec65894fc77cf2b49"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-repair-full.png",
+      "sha256": "405a5fdf27645cb97b87691cf2e1b08fd734dcaa1370d8052ce602dd13386d17"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-reset-1024x768.png",
+      "sha256": "b23ebfbbf33922fe2f863509032d879ddf3d14bd569d57beadb417a02e0a15b8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-reset-1280x800.png",
+      "sha256": "d1ec9b51d29b2e5931cb48055f57c4e2e0229dc5d8ed2a950e5508d6f5773f5a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-reset-1366x768.png",
+      "sha256": "d7cea0b802505a77da7e495fa8dc1b092940b3088212f9f03b19d44cd9b3a4d2"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-reset-1440x900.png",
+      "sha256": "dfbceb3b8cfc600a6f8b707206f4b594a37417ad53a2b4628e2a787c992e4891"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-reset-1600x900.png",
+      "sha256": "217cce3ffb4be7a12b8b9dd80e29641a7c4d49251b2c6a3820f6c110beff3122"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-reset-1920x1080.png",
+      "sha256": "caf615323b22db269fd245c591d2fa2e9521f25e8fcadcf8f81f6d84bbd7406c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-sell-full.png",
+      "sha256": "b0d539c5ec1dab7ab258526f8660184d9f29417d884ac7bf94b980c4e22712a5"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-trace.txt",
+      "sha256": "91c82d2086833279a797ee32cca8872a03d8474feee7557aab631281914e6b8a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reentry-wrapped-option.png",
+      "sha256": "d26978a42c5b6bc4e2d0b20a25f3a364e07f877494efb454fb43c77ce64008d9"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-refine-retrieve.png",
+      "sha256": "fd470afaa3cd17e4d9f47b3001c077e4015428af50a0c1ae847508c3f9a52749"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-refine.png",
+      "sha256": "332c52ffe680da7209ad3ff18ea20be988455fd0b61f4f7f7f0a3bf16934bb9f"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-repair-full.png",
+      "sha256": "405a5fdf27645cb97b87691cf2e1b08fd734dcaa1370d8052ce602dd13386d17"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reset-1024x768.png",
+      "sha256": "b23ebfbbf33922fe2f863509032d879ddf3d14bd569d57beadb417a02e0a15b8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reset-1280x800.png",
+      "sha256": "d1ec9b51d29b2e5931cb48055f57c4e2e0229dc5d8ed2a950e5508d6f5773f5a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reset-1366x768.png",
+      "sha256": "d7cea0b802505a77da7e495fa8dc1b092940b3088212f9f03b19d44cd9b3a4d2"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reset-1440x900.png",
+      "sha256": "dfbceb3b8cfc600a6f8b707206f4b594a37417ad53a2b4628e2a787c992e4891"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reset-1600x900.png",
+      "sha256": "217cce3ffb4be7a12b8b9dd80e29641a7c4d49251b2c6a3820f6c110beff3122"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-reset-1920x1080.png",
+      "sha256": "caf615323b22db269fd245c591d2fa2e9521f25e8fcadcf8f81f6d84bbd7406c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-sell-full.png",
+      "sha256": "993ead60d81f33b4a3a22c7789ba9c3834a3c8414b52f03e6a2585d899eade46"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-trace.txt",
+      "sha256": "91c82d2086833279a797ee32cca8872a03d8474feee7557aab631281914e6b8a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/official-wrapped-option.png",
+      "sha256": "d26978a42c5b6bc4e2d0b20a25f3a364e07f877494efb454fb43c77ce64008d9"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-after-20261108-v3/tested-runtime.json",
+      "sha256": "46b932a6fa15bf2d2f144c6b3447c6a447c74cc0183d26d2993b9c7951ee1bbb"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/assertions.txt",
+      "sha256": "52302c58f9681671aceaf0a6540e042b3d78c070b48ab30140b4fa6f1e659d60"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/coordinate-hits.txt",
+      "sha256": "8f1b6abd83b681be961e428eeb27567eb76ec0c817b69798c9658fa2f3b3f153"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/legacy-card.png",
+      "sha256": "bbf533c95e714eb1b384a34ed7dde97083e54d67bca961844f3c9e9c8f2882d6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/legacy-goods-bottom.png",
+      "sha256": "923b0c68e8cf7a6a3c51de563999d0f24bb99b7a8c4382bb02c858b5637a435e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/legacy-goods-quantity.png",
+      "sha256": "203601bf8d8d27d816c2fce39ce93c2fe096e8103c81b8be023e9b3eae45bfc6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/legacy-goods-top.png",
+      "sha256": "771fbf5408ff1edc726b6888249f3c10491bc553f52a0e774199bac882bf60db"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/legacy-refine-retrieve.png",
+      "sha256": "b0ca02edebfb861c3e2375d08a0e4501ea545c975379bf3df9965c22f948cdac"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/legacy-refine.png",
+      "sha256": "0743781638dc75bd0e871ff69a221e7c7cffdabc666ac4ed021bac0a0cae2551"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/legacy-repair-full.png",
+      "sha256": "c7733722ac20d86135c879e46aefd6cd530d80275fe45902c5ebab3fa6065379"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/legacy-reset-1024x768.png",
+      "sha256": "718e52a0df1079d77fab5dff0823b58b2d8d98cb7c5d319a4fb36d5893eaca4d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/legacy-reset-1280x800.png",
+      "sha256": "6ba4420ef13f0c9e3e11e94b0b510f0ef22e92014dd02cadc2da81c2e20918bf"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/legacy-reset-1366x768.png",
+      "sha256": "9307abd4893bee4b08268e04f81e8f8889f09be289f4703c0dd332384e396b42"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/legacy-reset-1440x900.png",
+      "sha256": "5d7a6e9c1c15173e85b1c06b094a5773c037c7c3e7d270d57818628ed4e3abdd"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/legacy-reset-1600x900.png",
+      "sha256": "0270ea3175f839c48f352f53a0057f3c9366895a424af520eddf7709fb8da65f"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/legacy-reset-1920x1080.png",
+      "sha256": "b024b69683e93b115d6d3973a578d2ea688b5090fe5ce983f352af2f1b7d50d3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/legacy-resources.txt",
+      "sha256": "47713d590a1b9214abdef7a0fc33d6c28a2b5a73a0cff9794375a5083020b498"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/legacy-sell-full.png",
+      "sha256": "78b81311bb79aa207b13afd334aeb71de0ef227a133dc7cb331ac6cc1fddb224"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/legacy-trace.txt",
+      "sha256": "91c82d2086833279a797ee32cca8872a03d8474feee7557aab631281914e6b8a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/legacy-wrapped-option.png",
+      "sha256": "ff0659f55ad69307331223cc4612065bd036ee8b8e2442c86a2c9a6a470714a3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/metrics.json",
+      "sha256": "98db0cbfd456f1e33b87ddc278b65953227e2ee1f51f57aec1a0e84dbb77cb0d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-card.png",
+      "sha256": "0f2b78045205403779ab7c33e75a3c5f834e7a635c67aefc7e77d52e3dd92487"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-goods-bottom.png",
+      "sha256": "28126a2c308d877e5b8a12e34af35324a1f9eff570a94e0eb96494ae792d4210"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-goods-quantity.png",
+      "sha256": "64e83eca43cb5f9e009cbc84573a4d10311872e0c34954085fa3c47b35867bab"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-goods-top.png",
+      "sha256": "1699c23697fbe693c0e986963bc605e6f38fe5a8b959b1371e77ee07adfd2081"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-group-AccessoryRefineLevel.png",
+      "sha256": "0feb89a68c76e1ed2d026c6196aedc53b9c10966b6c2fd8f004a058b153d9413"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-group-AccessoryRefineUpgrade.png",
+      "sha256": "789c01202674062fd4da686fb9275a256ecd9328cc35b2cf9d95de9b2b7bbe6b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-group-AccessoryReset.png",
+      "sha256": "da97a32a328f5934eeeb90a98267abfa06debfdc85450e3e66d71aa1d7457cc8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-group-BuySell.png",
+      "sha256": "5f63cdbb520d68e8041c5538778463f59fd3079fff329647c5aac91433bbdd9a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-group-CompanionManage.png",
+      "sha256": "f24ba23228a428b45ad6a958a2c94a9aa189cae506a006ae3aea21fe4bf2e72a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-group-ItemFragment.png",
+      "sha256": "b7b5a26b607bfdfb9a6f7938bf90899ef8988f6ddfdf19dceae4610184e42d89"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-group-layouts.txt",
+      "sha256": "72940d39782a509ddd914a24cc79c9ff8cacc52462e7b71bfc72f4a9366ce1e6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-group-MasterRefine.png",
+      "sha256": "7b79741e6ee3bffb22c01abbbb7a5f2b48d8db87029ac7ae6135571ccc4ed750"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-group-None.png",
+      "sha256": "68346c502e9b707aa042bf2e87c59db65cb8e2ebc014d6825b9780dca7ab7c5b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-group-Refine.png",
+      "sha256": "4508aa5050629aee83f7e113a5ad120bd859034db0429e91e977489c432f90c4"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-group-RefinementStone.png",
+      "sha256": "513d63c4cc391ab8c4406f8a99d4e7f92d352eb3e30420f7ce17fb0fff92b0df"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-group-RefineRetrieve.png",
+      "sha256": "6d5173cfc4cf6dc0a35fe1a77c55523adaf1c49f296cf464b53e7ef611db3a8f"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-group-Repair.png",
+      "sha256": "33e6e9c4c50b8c3014a568f2fab3518f58b9006174e5c2cb6de7ecd6907f1abf"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-group-reset-BuySell-1024x768-14.png",
+      "sha256": "5f63cdbb520d68e8041c5538778463f59fd3079fff329647c5aac91433bbdd9a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-group-reset-BuySell-1024x768-21.png",
+      "sha256": "5f63cdbb520d68e8041c5538778463f59fd3079fff329647c5aac91433bbdd9a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-group-reset-BuySell-1280x800-17.png",
+      "sha256": "60019e050f20e88699723a239ba984c2715869bb53234a3ffe11f8d808b7a08d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-group-reset-BuySell-1366x768-16.png",
+      "sha256": "7289d4f835cab8517e0d113a30c8e091dc7988dae63e91c4becb71b19ade0b44"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-group-reset-BuySell-1440x900-18.png",
+      "sha256": "ec1c0e4905e7208a47479644b649721e0a5233777fbf746931ebbe962b6bf559"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-group-reset-BuySell-1600x900-19.png",
+      "sha256": "b5097aaf23ef40a484410d4bff3cecedaa706b1c5388b5965522abd7643341fc"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-group-reset-BuySell-1920x1080-20.png",
+      "sha256": "66b8bd38abd4726bc79dd9ae41a08cd4b4bb39419c5aa26c0d24c0b338036bda"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-group-reset-None-1024x768-12.png",
+      "sha256": "68346c502e9b707aa042bf2e87c59db65cb8e2ebc014d6825b9780dca7ab7c5b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-group-reset-None-1024x768-5.png",
+      "sha256": "68346c502e9b707aa042bf2e87c59db65cb8e2ebc014d6825b9780dca7ab7c5b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-group-reset-None-1280x800-8.png",
+      "sha256": "d44339d4e6d8db1179e29f936dc31d23021ecea09d81e954b9d2f2950ceec51b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-group-reset-None-1366x768-7.png",
+      "sha256": "1ad3fe071bb79a43be8744953741e2cd9d0d5e7e1ddd5d0db0f8615de8c00e6a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-group-reset-None-1440x900-9.png",
+      "sha256": "087ad7ed609b972654f1fe47987ad95a022b0b841acdc1621c5d6c881684c5b0"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-group-reset-None-1600x900-10.png",
+      "sha256": "f951fd0c179c9afbae487ec96efbc654b1311a4debdbebf1c2ca34bf62bfc93d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-group-reset-None-1920x1080-11.png",
+      "sha256": "87638d9e562ae31bee667d889f71d462d29f11549bdc147443fec722b3403443"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-group-WeaponCraft.png",
+      "sha256": "0cec1c8e3d29ca0cd858fdf5f160395e945fe0a8ca52d490dd1bb111012f0733"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-group-WeaponReset.png",
+      "sha256": "59873a5a22bb41430fa93cbd4e5a79f6d05552a7543c935bd4c8279439f59c6d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-group-WeddingRing.png",
+      "sha256": "f3c15f33c57f5d2104d5304eca94b1bf3d58f6e6d84e0a29e60e9e587e196040"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-long-card-1024x768.png",
+      "sha256": "b54dbb90ee816caf7e8ce88e8938e58db9699ca746ac56619e537aabd29317d0"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-long-card-1280x800.png",
+      "sha256": "9af5d5190590baef30643a68935da1600322be27fe22afbcdefb99835486360a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-long-card-1366x768.png",
+      "sha256": "b55ab3338eb65b583ca33cfc58a937c5842bb00a363738de01796dd6b1d74b66"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-long-card-1440x900.png",
+      "sha256": "665a37a21a65083e4d3c0980408c08764ce82bf01a783998b3c71a108f3d5266"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-long-card-1600x900.png",
+      "sha256": "792dbd50a93b47560b02c8c1bd2a0d8aec1f8db6e7357e88cdc4c0cf9dd38d18"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-long-card-1920x1080.png",
+      "sha256": "343c8ce461c764e57c1b570bcd13674141d2b621d46778cc33e407c9ab477f7f"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-long-card-bottom.png",
+      "sha256": "b54dbb90ee816caf7e8ce88e8938e58db9699ca746ac56619e537aabd29317d0"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-long-card-open-ms.txt",
+      "sha256": "3d5d2c29712a98874d8142d229c4bce09158a144ad376c2b68411f240878a9c1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-long-card-partial-line.png",
+      "sha256": "382cf651c1bf649d422fcffa975b7021cb7a1485ab692cdf36fe17fb772cb58e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-long-card-top.png",
+      "sha256": "d154b3c83f92432d87fe900abb6fbb975094d02a2d6ed3fa6af781a6966f3b3d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-long-text-reference.png",
+      "sha256": "63ea7a263505137352f230f85a422f09e91ab97d20ca985316bf3e2865a92f02"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-long-text-texture.png",
+      "sha256": "63ea7a263505137352f230f85a422f09e91ab97d20ca985316bf3e2865a92f02"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-partial-line-long-text-reference.png",
+      "sha256": "966bb5e8cc0c4cc6428f93a50e5c86a2c4db0e33f84f4ecd89f8ac4913ad16aa"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-partial-line-long-text-texture.png",
+      "sha256": "966bb5e8cc0c4cc6428f93a50e5c86a2c4db0e33f84f4ecd89f8ac4913ad16aa"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-reentry-card.png",
+      "sha256": "0f2b78045205403779ab7c33e75a3c5f834e7a635c67aefc7e77d52e3dd92487"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-reentry-goods-bottom.png",
+      "sha256": "28126a2c308d877e5b8a12e34af35324a1f9eff570a94e0eb96494ae792d4210"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-reentry-goods-quantity.png",
+      "sha256": "64e83eca43cb5f9e009cbc84573a4d10311872e0c34954085fa3c47b35867bab"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-reentry-goods-top.png",
+      "sha256": "1699c23697fbe693c0e986963bc605e6f38fe5a8b959b1371e77ee07adfd2081"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-reentry-group-AccessoryRefineLevel.png",
+      "sha256": "0feb89a68c76e1ed2d026c6196aedc53b9c10966b6c2fd8f004a058b153d9413"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-reentry-group-AccessoryRefineUpgrade.png",
+      "sha256": "789c01202674062fd4da686fb9275a256ecd9328cc35b2cf9d95de9b2b7bbe6b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-reentry-group-AccessoryReset.png",
+      "sha256": "da97a32a328f5934eeeb90a98267abfa06debfdc85450e3e66d71aa1d7457cc8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-reentry-group-BuySell.png",
+      "sha256": "5f63cdbb520d68e8041c5538778463f59fd3079fff329647c5aac91433bbdd9a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-reentry-group-CompanionManage.png",
+      "sha256": "f24ba23228a428b45ad6a958a2c94a9aa189cae506a006ae3aea21fe4bf2e72a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-reentry-group-ItemFragment.png",
+      "sha256": "b7b5a26b607bfdfb9a6f7938bf90899ef8988f6ddfdf19dceae4610184e42d89"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-reentry-group-layouts.txt",
+      "sha256": "525eedfb637425d8a4cab982023fc761f0af12df63e5be8cf3b671f34e94afba"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-reentry-group-MasterRefine.png",
+      "sha256": "7b79741e6ee3bffb22c01abbbb7a5f2b48d8db87029ac7ae6135571ccc4ed750"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-reentry-group-None.png",
+      "sha256": "68346c502e9b707aa042bf2e87c59db65cb8e2ebc014d6825b9780dca7ab7c5b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-reentry-group-Refine.png",
+      "sha256": "4508aa5050629aee83f7e113a5ad120bd859034db0429e91e977489c432f90c4"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-reentry-group-RefinementStone.png",
+      "sha256": "513d63c4cc391ab8c4406f8a99d4e7f92d352eb3e30420f7ce17fb0fff92b0df"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-reentry-group-RefineRetrieve.png",
+      "sha256": "6d5173cfc4cf6dc0a35fe1a77c55523adaf1c49f296cf464b53e7ef611db3a8f"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-reentry-group-Repair.png",
+      "sha256": "33e6e9c4c50b8c3014a568f2fab3518f58b9006174e5c2cb6de7ecd6907f1abf"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-reentry-group-reset-BuySell-1024x768-14.png",
+      "sha256": "5f63cdbb520d68e8041c5538778463f59fd3079fff329647c5aac91433bbdd9a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-reentry-group-reset-BuySell-1024x768-21.png",
+      "sha256": "5f63cdbb520d68e8041c5538778463f59fd3079fff329647c5aac91433bbdd9a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-reentry-group-reset-BuySell-1280x800-17.png",
+      "sha256": "60019e050f20e88699723a239ba984c2715869bb53234a3ffe11f8d808b7a08d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-reentry-group-reset-BuySell-1366x768-16.png",
+      "sha256": "7289d4f835cab8517e0d113a30c8e091dc7988dae63e91c4becb71b19ade0b44"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-reentry-group-reset-BuySell-1440x900-18.png",
+      "sha256": "ec1c0e4905e7208a47479644b649721e0a5233777fbf746931ebbe962b6bf559"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-reentry-group-reset-BuySell-1600x900-19.png",
+      "sha256": "b5097aaf23ef40a484410d4bff3cecedaa706b1c5388b5965522abd7643341fc"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-reentry-group-reset-BuySell-1920x1080-20.png",
+      "sha256": "66b8bd38abd4726bc79dd9ae41a08cd4b4bb39419c5aa26c0d24c0b338036bda"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-reentry-group-reset-None-1024x768-12.png",
+      "sha256": "68346c502e9b707aa042bf2e87c59db65cb8e2ebc014d6825b9780dca7ab7c5b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-reentry-group-reset-None-1024x768-5.png",
+      "sha256": "68346c502e9b707aa042bf2e87c59db65cb8e2ebc014d6825b9780dca7ab7c5b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-reentry-group-reset-None-1280x800-8.png",
+      "sha256": "d44339d4e6d8db1179e29f936dc31d23021ecea09d81e954b9d2f2950ceec51b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-reentry-group-reset-None-1366x768-7.png",
+      "sha256": "1ad3fe071bb79a43be8744953741e2cd9d0d5e7e1ddd5d0db0f8615de8c00e6a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-reentry-group-reset-None-1440x900-9.png",
+      "sha256": "087ad7ed609b972654f1fe47987ad95a022b0b841acdc1621c5d6c881684c5b0"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-reentry-group-reset-None-1600x900-10.png",
+      "sha256": "f951fd0c179c9afbae487ec96efbc654b1311a4debdbebf1c2ca34bf62bfc93d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-reentry-group-reset-None-1920x1080-11.png",
+      "sha256": "87638d9e562ae31bee667d889f71d462d29f11549bdc147443fec722b3403443"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-reentry-group-WeaponCraft.png",
+      "sha256": "0cec1c8e3d29ca0cd858fdf5f160395e945fe0a8ca52d490dd1bb111012f0733"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-reentry-group-WeaponReset.png",
+      "sha256": "59873a5a22bb41430fa93cbd4e5a79f6d05552a7543c935bd4c8279439f59c6d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-reentry-group-WeddingRing.png",
+      "sha256": "f3c15f33c57f5d2104d5304eca94b1bf3d58f6e6d84e0a29e60e9e587e196040"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-reentry-long-card-1024x768.png",
+      "sha256": "b54dbb90ee816caf7e8ce88e8938e58db9699ca746ac56619e537aabd29317d0"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-reentry-long-card-1280x800.png",
+      "sha256": "9af5d5190590baef30643a68935da1600322be27fe22afbcdefb99835486360a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-reentry-long-card-1366x768.png",
+      "sha256": "b55ab3338eb65b583ca33cfc58a937c5842bb00a363738de01796dd6b1d74b66"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-reentry-long-card-1440x900.png",
+      "sha256": "665a37a21a65083e4d3c0980408c08764ce82bf01a783998b3c71a108f3d5266"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-reentry-long-card-1600x900.png",
+      "sha256": "792dbd50a93b47560b02c8c1bd2a0d8aec1f8db6e7357e88cdc4c0cf9dd38d18"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-reentry-long-card-1920x1080.png",
+      "sha256": "343c8ce461c764e57c1b570bcd13674141d2b621d46778cc33e407c9ab477f7f"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-reentry-long-card-bottom.png",
+      "sha256": "b54dbb90ee816caf7e8ce88e8938e58db9699ca746ac56619e537aabd29317d0"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-reentry-long-card-open-ms.txt",
+      "sha256": "3f46bdea034f311a14efe877f5592d84a7a6c97d9b917be3f55573311e6cdda7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-reentry-long-card-partial-line.png",
+      "sha256": "382cf651c1bf649d422fcffa975b7021cb7a1485ab692cdf36fe17fb772cb58e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-reentry-long-card-top.png",
+      "sha256": "d154b3c83f92432d87fe900abb6fbb975094d02a2d6ed3fa6af781a6966f3b3d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-reentry-long-text-reference.png",
+      "sha256": "63ea7a263505137352f230f85a422f09e91ab97d20ca985316bf3e2865a92f02"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-reentry-long-text-texture.png",
+      "sha256": "63ea7a263505137352f230f85a422f09e91ab97d20ca985316bf3e2865a92f02"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-reentry-partial-line-long-text-reference.png",
+      "sha256": "966bb5e8cc0c4cc6428f93a50e5c86a2c4db0e33f84f4ecd89f8ac4913ad16aa"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-reentry-partial-line-long-text-texture.png",
+      "sha256": "966bb5e8cc0c4cc6428f93a50e5c86a2c4db0e33f84f4ecd89f8ac4913ad16aa"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-reentry-refine-retrieve.png",
+      "sha256": "162e890082c288a3d43ec41f89b50b37d3fa38e0c3ea18846fadd2295e2bef7e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-reentry-refine.png",
+      "sha256": "37a9f8e43b3903a77edae564928e85c85a422583b1e0f1eec65894fc77cf2b49"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-reentry-repair-full.png",
+      "sha256": "405a5fdf27645cb97b87691cf2e1b08fd734dcaa1370d8052ce602dd13386d17"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-reentry-reset-1024x768.png",
+      "sha256": "b23ebfbbf33922fe2f863509032d879ddf3d14bd569d57beadb417a02e0a15b8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-reentry-reset-1280x800.png",
+      "sha256": "d1ec9b51d29b2e5931cb48055f57c4e2e0229dc5d8ed2a950e5508d6f5773f5a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-reentry-reset-1366x768.png",
+      "sha256": "d7cea0b802505a77da7e495fa8dc1b092940b3088212f9f03b19d44cd9b3a4d2"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-reentry-reset-1440x900.png",
+      "sha256": "dfbceb3b8cfc600a6f8b707206f4b594a37417ad53a2b4628e2a787c992e4891"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-reentry-reset-1600x900.png",
+      "sha256": "217cce3ffb4be7a12b8b9dd80e29641a7c4d49251b2c6a3820f6c110beff3122"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-reentry-reset-1920x1080.png",
+      "sha256": "caf615323b22db269fd245c591d2fa2e9521f25e8fcadcf8f81f6d84bbd7406c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-reentry-sell-full.png",
+      "sha256": "b0d539c5ec1dab7ab258526f8660184d9f29417d884ac7bf94b980c4e22712a5"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-reentry-trace.txt",
+      "sha256": "91c82d2086833279a797ee32cca8872a03d8474feee7557aab631281914e6b8a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-reentry-wrapped-option.png",
+      "sha256": "d26978a42c5b6bc4e2d0b20a25f3a364e07f877494efb454fb43c77ce64008d9"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-refine-retrieve.png",
+      "sha256": "162e890082c288a3d43ec41f89b50b37d3fa38e0c3ea18846fadd2295e2bef7e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-refine.png",
+      "sha256": "37a9f8e43b3903a77edae564928e85c85a422583b1e0f1eec65894fc77cf2b49"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-repair-full.png",
+      "sha256": "405a5fdf27645cb97b87691cf2e1b08fd734dcaa1370d8052ce602dd13386d17"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-reset-1024x768.png",
+      "sha256": "b23ebfbbf33922fe2f863509032d879ddf3d14bd569d57beadb417a02e0a15b8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-reset-1280x800.png",
+      "sha256": "d1ec9b51d29b2e5931cb48055f57c4e2e0229dc5d8ed2a950e5508d6f5773f5a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-reset-1366x768.png",
+      "sha256": "d7cea0b802505a77da7e495fa8dc1b092940b3088212f9f03b19d44cd9b3a4d2"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-reset-1440x900.png",
+      "sha256": "dfbceb3b8cfc600a6f8b707206f4b594a37417ad53a2b4628e2a787c992e4891"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-reset-1600x900.png",
+      "sha256": "217cce3ffb4be7a12b8b9dd80e29641a7c4d49251b2c6a3820f6c110beff3122"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-reset-1920x1080.png",
+      "sha256": "caf615323b22db269fd245c591d2fa2e9521f25e8fcadcf8f81f6d84bbd7406c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-sell-full.png",
+      "sha256": "b0d539c5ec1dab7ab258526f8660184d9f29417d884ac7bf94b980c4e22712a5"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-trace.txt",
+      "sha256": "91c82d2086833279a797ee32cca8872a03d8474feee7557aab631281914e6b8a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/official-wrapped-option.png",
+      "sha256": "d26978a42c5b6bc4e2d0b20a25f3a364e07f877494efb454fb43c77ce64008d9"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-before-20261108-v1/tested-runtime.json",
+      "sha256": "86376629655e78e274dde15d803d0988acd06c91d2794b1cbcb97512589e42cd"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-full-scene-20261108-v1/legacy-hud.png",
+      "sha256": "5fa69de2c6da4336331e9f837cd0ded6c24f9b714dda1e36432e8880dc050a09"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-full-scene-20261108-v1/legacy-panels.png",
+      "sha256": "d0723781ce5debe099e9ba58f4e2c999706872006bb0ec1594c651cea1634a46"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-full-scene-20261108-v1/legacy-resources.txt",
+      "sha256": "47713d590a1b9214abdef7a0fc33d6c28a2b5a73a0cff9794375a5083020b498"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-full-scene-20261108-v1/official-CharacterTab.png",
+      "sha256": "43a1af56f6c3bfd96763e2bdc70b81fcda2ad9bddce1aa09a95ffa0b5055eac8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-full-scene-20261108-v1/official-extraEquipmentTab.png",
+      "sha256": "fd2f77d0befc66bba22a81f66c6636dd2b169066f24bb721f5170886176243ca"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-full-scene-20261108-v1/official-HermitTab.png",
+      "sha256": "4f638a46988d05fdf41f695893510dc4b19dc85b5ca24a8ef781e63a17fe6348"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-full-scene-20261108-v1/official-hud.png",
+      "sha256": "0d72ce7b9c9ed1d0c807333ef4c62517a0f9d90d6f49015ba946f1b0882384ac"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-full-scene-20261108-v1/official-panels.png",
+      "sha256": "43a1af56f6c3bfd96763e2bdc70b81fcda2ad9bddce1aa09a95ffa0b5055eac8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-full-scene-20261108-v1/official-reentry-hud.png",
+      "sha256": "39be0066510de06ba2465cc008c6379ffbc4c556c67be4870b3a750f99696f4b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-full-scene-20261108-v1/official-reentry-panels.png",
+      "sha256": "8a0a2644ac845d99ab8104c3cc9acdd0573cdff950c0706b3a8b1a2bd2d4d2a8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-full-scene-20261108-v1/official-reset-1024x768.png",
+      "sha256": "43a1af56f6c3bfd96763e2bdc70b81fcda2ad9bddce1aa09a95ffa0b5055eac8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-full-scene-20261108-v1/official-reset-1280x800.png",
+      "sha256": "6da4d263d19f1aae323e49c0f41f848bd9fb075cb94dafb02df4e2f0749ef8a4"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-full-scene-20261108-v1/official-reset-1366x768.png",
+      "sha256": "bccd5d8071878413408790dbe90b5d5a1ea48d880be4cec00c916469bc30f495"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-full-scene-20261108-v1/official-reset-1440x900.png",
+      "sha256": "1b0be5742da74968aba14f74293e474a1324d346421cab3b9692607f90f43a06"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-full-scene-20261108-v1/official-reset-1600x900.png",
+      "sha256": "ddc79b57cfef144f95511d28a92a7ad2351a7a8d74ed73ca4e19a4a5f8f44ba7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-full-scene-20261108-v1/official-reset-1920x1080.png",
+      "sha256": "41a4d7849e3d91c630c2910d35900a1143c75b435ca0d252a3b2f9483a83cb33"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-full-scene-20261108-v1/official-StatsTab.png",
+      "sha256": "dc665d7ec9343b3bdbdd2fd5bbc16f245d961d0ab217de3d7af7e82be17d8664"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-full-scene-20261108-v1/reset-pixel-probes.txt",
+      "sha256": "2c236cd844574b74b6d502b13ffed99b5cb29783fc53ea00587ca1543a18ac67"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-full-scene-20261108-v1/tested-runtime.json",
+      "sha256": "46b932a6fa15bf2d2f144c6b3447c6a447c74cc0183d26d2993b9c7951ee1bbb"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-window-set-20261108-v1/button-hitmask-cpu.txt",
+      "sha256": "8c02ba0d543cdf1f7ebeb48c8e6f52a83dde10de6fcca3b43899d8982e666927"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-window-set-20261108-v1/legacy-glyph-restored.png",
+      "sha256": "0a53fff02c059efc67e4808ccfbd669c8560f8a164c6da2f2f6970301adcf2ff"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-text-latency-window-set-20261108-v1/legacy-glyph-suppressed.png",
+      "sha256": "5a739a1abe0ce2f11461d1c429810d6256b07eabeb58321d7f9ba821f84b2cab"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/audit-history.py",
+      "sha256": "43b3dd93e1bb748275abd80d37a7d986d4016b83b72bd6cf2e0ed3bac1c1fd92"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/baseline-profile-test-source.cs",
+      "sha256": "e2ab3ff7af5a593559cd859ad741bdab6b66801525d6595c14bb1b6c3d065886"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/build-debug-v2.log",
+      "sha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/build-debug-v2.receipt.json",
+      "sha256": "83ac8305daacad5c6057523e3aff3c985e237c60167074126cb6d5455136301c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/build-debug.log",
+      "sha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/build-debug.receipt.json",
+      "sha256": "0f283bed34126d8fcd594001e6ebb4e7021da21e6709708c71b2d29681e90c19"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/build-release-v2.log",
+      "sha256": "c9e24428be1e56c8408af17aacfea3413de3953bfe426d10eb768782f5005ebc"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/build-release-v2.receipt.json",
+      "sha256": "8bc381f4e5282a1b7855ca8465d207fa489754485a2c471e56979ec736257ef9"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/build-release.log",
+      "sha256": "c9e24428be1e56c8408af17aacfea3413de3953bfe426d10eb768782f5005ebc"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/build-release.receipt.json",
+      "sha256": "5349be76d6e1b1ab8b46f3cbc1a73fd1af4b8e5dd947d573d8e37bece4a9627d"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/check-whitespace.py",
+      "sha256": "b0a86f69a0f4d2d1028cf29ec177b27a0b21d80f60d2f17ed9eaf8f84c6a104f"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/full-scene.log",
+      "sha256": "0d85d4de7905eb608acc989200b5dfcc19842b35b62586889490caf606d4a988"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/full-scene.receipt.json",
+      "sha256": "49ef55bb5c4cdb83d44d00ea8ef84c3e3ccf6cef1b21068c1c1735fc6e859f01"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/history-audit.json",
+      "sha256": "ab1334d685d1b58495354819e2dc4ed0e6f8d55cac5936277e7e3670cbd5f822"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/history-audit.log",
+      "sha256": "ab1334d685d1b58495354819e2dc4ed0e6f8d55cac5936277e7e3670cbd5f822"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/history-audit.receipt.json",
+      "sha256": "c5606841b9fb27f19cc5b87396e1fd063d2e33992b82b26dec627f66bb13a267"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/latency-comparison.json",
+      "sha256": "1494d37c7b0ab65a6aeb9bee1bc665fcf6bb3ddde26756dc0a9b7e6f58e48dcb"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/manifest-debug.log",
+      "sha256": "b5689d38b6a047fed46577bc1a98ffaf76fdca67d2367b7a4bd3b14273fae790"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/manifest-debug.receipt.json",
+      "sha256": "edf9d7560c51ff9394620fba5cd17cc60bd284965c858d7922ce5ee5773c6c85"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/manifest-release.log",
+      "sha256": "57a19a76962bdf9bde85eb9ee2a19405896e6b467b6c5dad7db60ef087ce49e2"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/manifest-release.receipt.json",
+      "sha256": "d741ef764e68a5380fd521aa89742a1451de278dce26b175b75768232966275c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/npc-after-v2.log",
+      "sha256": "2d7e9a93ad9c1912d8c39480da69f0e94c0b003c02958c2970d4657d9b98355f"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/npc-after-v2.receipt.json",
+      "sha256": "9d282559b2c45997fc8ab43e09369cf5aea812ba3d5107561cf80209ade69290"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/npc-after-v3.log",
+      "sha256": "b94d46d8cd32a84e77ffe5fcd2316b8affd56025457f6aa27be3c21cae7477fe"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/npc-after-v3.receipt.json",
+      "sha256": "83531a944186c4bf42d04c47d25247fdd4e0788a729fcbcc853b2b8e3fcb04fa"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/npc-after.log",
+      "sha256": "c1d293af5d367110c209f8dec918f0293c03bed58d3a7150a63a20d546b98f65"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/npc-after.receipt.json",
+      "sha256": "983604c2d2f72c33add36b395a5d8faab14d47841530f9106d1fc4e991cb1c5c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/npc-profile-before.log",
+      "sha256": "66f5a2d042fc0808c96bad6ac2377a8eef7fa4d1387e4a968fad8128ab957b2d"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/npc-profile-before.receipt.json",
+      "sha256": "56112d492873c507151182fd0105ddf5bf9004aec95e4485b2fdf3e78cc80592"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/prepare-report.py",
+      "sha256": "465fe849fddf8117a5f3182a69655e4df2195ec54612edc831e21320993e8daf"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/python-tests.log",
+      "sha256": "df4b4bd990100db7a76945d6fe434ebb51d1fa5b9f583d97ce327fb2f1acef7b"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/python-tests.receipt.json",
+      "sha256": "c4876395c78e5c6ddce4a17f29db927a425ce984193fd1147f64d87daac76f81"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/README.md",
+      "sha256": "6ac6539fc6431aea17605d8296df87db6dbf8fdb6530fa63ff231d0602c24362"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/release-manifest-debug.json",
+      "sha256": "5c91147f9a6eb81374590dac96826737506bf61754cc2cc858d60f20eab83048"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/release-manifest-release.json",
+      "sha256": "ce597a8d104831db2aed67cdcb94441376c60537bdf5926287f5715a63ae106e"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/run-check.py",
+      "sha256": "8cea69f8c28d781722ec26876840ea3e6bb44ae5ed37e2d213fdab62d1a7c943"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/source-before/Client/Scenes/Views/NPCDialog.cs",
+      "sha256": "2372fdf6322c51156bd48cc52e173f70604c6d185ba64b1832cdd8337ecc31f4"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/source-before/tests/game-ui/OfficialUiNpcTests.cs",
+      "sha256": "50d6490fafb8686814191bba17034351d718e500032371436346e2b8f08638c3"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/source-before.json",
+      "sha256": "2e0a3204d1fe29552971fc72b1bde92c873fdd1e5bd0c3ecea051b571bfb99b1"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/task-validation.log",
+      "sha256": "90e3ddffa807ef19523e77855653984be659ff7ab47ec66f04d41348c4cb85b3"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/task-validation.receipt.json",
+      "sha256": "38eeb13a7d641ea354263bb2150a8a015af5301696bf4a8120eb435cbb110dbc"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/tested-runtime.json",
+      "sha256": "46b932a6fa15bf2d2f144c6b3447c6a447c74cc0183d26d2993b9c7951ee1bbb"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/whitespace-v2.log",
+      "sha256": "b73b134d74f641d0773fa6a9b0c50ef55c4960ffb56937b897da4811cc9e1b8f"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/whitespace-v2.receipt.json",
+      "sha256": "f39f0874894da562f9982915bd594cb1448a1e81cb2d3ecfe657014ee663d9d4"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/whitespace.log",
+      "sha256": "17c7e3a42a504c4ba1d85d315e8d34bd03a8e7c38d50032c65e2581c3ecb4391"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/whitespace.receipt.json",
+      "sha256": "0cf1727b6f9d7445beb579ecf4a1fd312b9a9696e9e9a95e6af5c48ce727eaf8"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/window-set.log",
+      "sha256": "7268516005f09c2a1283c4de8f08e4192f9df4b73af2b019795f9bab1c1bb222"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/window-set.receipt.json",
+      "sha256": "415825059b3c05f02d6216d69905c6528dae9b03571658ddda54d31608470340"
+    }
+  ]
+}

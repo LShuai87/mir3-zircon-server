@@ -1,0 +1,14 @@
+[
+  {
+    "path": "Client/Scenes/Views/NPCDialog.cs",
+    "sha256": "7a7c3831f9496ea9425b0d26c49bada34bb482445656cbd59e5df3f669c3b681"
+  },
+  {
+    "path": "Client/Envir/GameUiOfficialV1WindowSet.cs",
+    "sha256": "6a73cbc73a08be5afff0a027ee0f48b56ec21dc92d9268cc89e6ee765ef4732e"
+  },
+  {
+    "path": "tests/game-ui/OfficialUiNpcTests.cs",
+    "sha256": "467d3d3e36dada193d829362122603414deac482d0dcdb9a0cfd22f6355d4a82"
+  }
+]

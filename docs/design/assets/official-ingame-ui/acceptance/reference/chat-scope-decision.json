@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "documentType": "user-chat-scope-clarification",
+  "recordedAtLocalDate": "2026-11-07",
+  "authority": "direct_user_instruction",
+  "userInstructions": [
+    "忽略这个截图，聊天列表保持当前的样式只是放在刚才截图的上方的框内展示",
+    "升满15级才能发送聊天，我现在没法发送"
+  ],
+  "supersedes": "Prior requirements to copy the official message-list style or retain/submit draft text for official capture; frozen implementation plan is retained as historical baseline.",
+  "messageList": {
+    "styleSource": "current_project_client",
+    "preserve": [
+      "字体与字号",
+      "文字和频道颜色",
+      "消息排版及频道标识",
+      "现有标签、过滤、历史和滚动行为"
+    ],
+    "change": [
+      "位置",
+      "可用显示区域尺寸",
+      "容器边界内的裁剪"
+    ],
+    "destination": {
+      "description": "已采主界面截图中聊天输入栏上方的消息显示框内部",
+      "referenceCaptureId": "01-overview",
+      "crossCheckCaptureId": "06-chat-chinese-input",
+      "regionReference": "chat-regions.json#message-area",
+      "pixelEstimatesAreNotFinalLayout": true
+    },
+    "constraints": [
+      "不把完整聊天窗口含输入栏嵌入消息列表框；消息列表和输入控件分别布局。",
+      "不采用正式版消息字体、颜色、行距或频道图标替换当前列表样式。",
+      "现有聊天内容与行为保留，布局变化不清空消息、不重建标签；必要的换行或可见行数变化以新容器尺寸为准。",
+      "正式版外框及其他HUD素材继续按各自任务核对；本决定不批准未知素材或最终坐标。"
+    ]
+  },
+  "inputCapture": {
+    "captureId": "06-chat-chinese-input",
+    "role": "historical_evidence_only_not_chat_style_acceptance",
+    "recaptureRequiredForThisDecision": false,
+    "keepOriginalBytesAndHashes": true,
+    "retainDraftRequired": false
+  },
+  "officialSendValidation": {
+    "status": "not_validated",
+    "reason": "用户说明正式版需要满15级才能发送，当前无法发送。",
+    "source": "user_report_not_independently_verified",
+    "requiredForReferenceCollection": false,
+    "requireLeveling": false
+  },
+  "projectAcceptance": {
+    "taskId": "UI-15",
+    "ownerTask": "UI-27",
+    "requirements": [
+      "在本项目客户端验证中文IME、发送/取消、焦点、标签/频道、过滤、历史与滚动；正式版发送不作为前置。",
+      "六分辨率及规定DPI下，消息在指定框内裁剪，输入框位置正确，不覆盖相邻HUD。",
+      "保留当前聊天样式和处理逻辑；不因正式版等级限制新增本项目发言限制。"
+    ],
+    "status": "not_run"
+  },
+  "productionBindingAllowed": false
+}

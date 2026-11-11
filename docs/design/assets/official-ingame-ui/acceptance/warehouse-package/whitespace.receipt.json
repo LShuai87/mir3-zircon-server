@@ -1,0 +1,8 @@
+{
+  "command": [
+    "python",
+    "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/check-whitespace.py"
+  ],
+  "exitCode": 1,
+  "log": "E:/workspace/mir3-zircon-server/docs/design/assets/official-ingame-ui/acceptance/warehouse-package/whitespace.log"
+}

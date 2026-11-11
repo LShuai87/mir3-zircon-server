@@ -1,0 +1,185 @@
+{
+  "schemaVersion": 1,
+  "kind": "official-ui-hud-transaction-integration",
+  "checkedAtLocalDate": "2026-11-08",
+  "referenceResolution": [
+    1024,
+    768
+  ],
+  "releaseAccepted": false,
+  "sourceChanges": [
+    {
+      "path": "build/game-ui/layout-official-v1.json",
+      "beforeSha256": "b39fa17ba46f9424a7c5b713a1c77cf7d16b31570a1320232f747239ccd8f509",
+      "afterSha256": "85c1e8399367b6ae44a77c175aac4b581020735ba23d5576eff9ae81eca01e15"
+    },
+    {
+      "path": "Client/Scenes/Views/MainPanel.GameUi.cs",
+      "beforeSha256": "56f3fc14d72c19593839fcb972a2be12819a02c3831b0a420cfa0189bc4d2d54",
+      "afterSha256": "b5dd21f1831bb7a96ca08aff570cb1708887ede4e46c3c21534d1481b6267b14"
+    },
+    {
+      "path": "Client/Envir/GameUiHudLayout.cs",
+      "beforeSha256": "a6201e2f7f2735b1b3df01bafb6620224a8c65dd88dcb0ce18d73f3a0795034c",
+      "afterSha256": "e647558a51cb00149e7637b2f6cd1c5fb1044e704fc0de57616a5af13bb359b7"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiHudLayoutTests.cs",
+      "beforeSha256": "e2e346ae18e9037bf73d840e4df96e18e31b7ec087979066736f1a4b2c1ef6fb",
+      "afterSha256": "2c9149e5bda55f4c4b9a743fa806dac2a7682e45537a39df46be784dadb17a32"
+    },
+    {
+      "path": "build/game-ui/character-bindings.json",
+      "beforeSha256": "b511324bf0cef0134a4785186b6a7557e74fd9f21d0a49624d2a09b4744935c9",
+      "afterSha256": "e95c7a877421d39d87ca2162a06ab15190872565dad52d230767372044bf18c0"
+    },
+    {
+      "path": "Client/Envir/GameUiOfficialV1WindowSet.cs",
+      "beforeSha256": "a8ce0737271c820524a34472846c407eb5072d805984d685c1fd2b50cee21be9",
+      "afterSha256": "f102e567a5a1aa8e3c9cb177e7cbb80c5519b6b77344cde2599df222dc0ae349"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiWindowSetTests.cs",
+      "beforeSha256": "b681adb637f67a25c836a49f36688835088c92421a9c089bd4badd5e07a1ad48",
+      "afterSha256": "a4ca2cff79b401b09e28514ced233ba7582a9c659309ede189dcbf272c249c22"
+    },
+    {
+      "path": "tests/Run-GameUiWindowSetTests.ps1",
+      "beforeSha256": "af5807e3936deffd14ca6128e094832ebdce8506d5583da1fb5cbd3fa9639053",
+      "afterSha256": "d6c834438a8649b06624e7e3cc916890e898d74bb246ed44f95c58385952ee3d"
+    }
+  ],
+  "sourceHashes": [
+    {
+      "path": "build/game-ui/layout-official-v1.json",
+      "sha256": "85c1e8399367b6ae44a77c175aac4b581020735ba23d5576eff9ae81eca01e15"
+    },
+    {
+      "path": "Client/Scenes/Views/MainPanel.GameUi.cs",
+      "sha256": "b5dd21f1831bb7a96ca08aff570cb1708887ede4e46c3c21534d1481b6267b14"
+    },
+    {
+      "path": "Client/Envir/GameUiHudLayout.cs",
+      "sha256": "e647558a51cb00149e7637b2f6cd1c5fb1044e704fc0de57616a5af13bb359b7"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiHudLayoutTests.cs",
+      "sha256": "2c9149e5bda55f4c4b9a743fa806dac2a7682e45537a39df46be784dadb17a32"
+    },
+    {
+      "path": "build/game-ui/character-bindings.json",
+      "sha256": "e95c7a877421d39d87ca2162a06ab15190872565dad52d230767372044bf18c0"
+    },
+    {
+      "path": "Client/Envir/GameUiOfficialV1WindowSet.cs",
+      "sha256": "f102e567a5a1aa8e3c9cb177e7cbb80c5519b6b77344cde2599df222dc0ae349"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiWindowSetTests.cs",
+      "sha256": "a4ca2cff79b401b09e28514ced233ba7582a9c659309ede189dcbf272c249c22"
+    },
+    {
+      "path": "tests/Run-GameUiWindowSetTests.ps1",
+      "sha256": "d6c834438a8649b06624e7e3cc916890e898d74bb246ed44f95c58385952ee3d"
+    }
+  ],
+  "commands": [
+    {
+      "command": "MSBuild Client/Client.csproj /t:Build /p:Configuration=Debug /p:Platform=AnyCPU /verbosity:minimal /nologo",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/hud-transaction/build-debug-v5.log",
+      "logSha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "command": "MSBuild Client/Client.csproj /t:Build /p:Configuration=Release /p:Platform=AnyCPU /verbosity:minimal /nologo",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/hud-transaction/build-release.log",
+      "logSha256": "c9e24428be1e56c8408af17aacfea3413de3953bfe426d10eb768782f5005ebc"
+    },
+    {
+      "command": "tests/Run-GameUiWindowSetTests.ps1 -PackagePath E:/workspace/mir3-ui-work/hud-progress-zl-20261108-v1/OfficialV1.Zl -EvidenceDirectory E:/workspace/mir3-ui-work/hud-transaction-window-probes-20261108-v6",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/hud-transaction/window-set-v6.log",
+      "logSha256": "5b7420dd610580761cb71c55c20c67cd8c372b0aab8394cbce39dada102a9a68"
+    },
+    {
+      "command": "tests/Run-GameUiHudLayoutTests.ps1",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/hud-transaction/hud-layout-v2.log",
+      "logSha256": "8ff4020372a7ca4a58ba64d91bfe6596ad2590bac2652c9cf4176589dd201784"
+    },
+    {
+      "command": "python build/game-ui/Validate-OfficialUiLayout.py --guards --output E:/workspace/mir3-ui-work/hud-transaction-layout-20261108-v1",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/hud-transaction/layout-contract.log",
+      "logSha256": "daf54465b490a35d68188f8d4f13fdc11bda5e451254a0f3a4f45644bad2b452"
+    },
+    {
+      "command": "python build/game-ui/Assemble-CharacterBindings.py --output E:/workspace/mir3-ui-work/hud-transaction-character-bindings-20261108-v1.json",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/hud-transaction/binding-assemble.log",
+      "logSha256": "5932bc5269e5c6e34910ecd3f36fca9797c3ba463775aafeaf2ec6cd4131e437"
+    },
+    {
+      "command": "python build/game-ui/Assemble-CharacterBindings.py --check",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/hud-transaction/binding-check-v2.log",
+      "logSha256": "5932bc5269e5c6e34910ecd3f36fca9797c3ba463775aafeaf2ec6cd4131e437"
+    },
+    {
+      "command": "python -m unittest discover -s tests/game-ui -p test_character_binding_contract.py -v",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/hud-transaction/binding-tests.log",
+      "logSha256": "315bce48025b8f05dbe78e56dafb915ca9c94e9cb5c96addc9fb4a7d3616feda"
+    },
+    {
+      "command": "python build/game-ui/Compile-UiCatalog.py --manifest build/game-ui/asset-manifest.json --prepared E:/workspace/mir3-ui-work/hud-progress-zl-20261108-v1/prepared-manifest.json --package E:/workspace/mir3-ui-work/hud-progress-zl-20261108-v1/OfficialV1.Zl --recipe build/game-ui/composition-recipe.json --selection build/game-ui/reference-selection.json --source-libraries build/game-ui/selection-source-libraries.json --output Client/Envir/GameUiOfficialV1Catalog.g.cs --check",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/hud-transaction/catalog-check-v3.log",
+      "logSha256": "134c535b198348073a6785ce8b6fd9f8a13e39799bfd784161d3dd02bcb6dee1"
+    },
+    {
+      "command": "git -c core.whitespace=cr-at-eol diff --check",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/hud-transaction/diff-check.log",
+      "logSha256": "79d6e102d3342502fc80ca42def8ff97f6642ce33398d5219dc2f3e921c23f6f"
+    }
+  ],
+  "verification": {
+    "windowSetChecks": 7825,
+    "hudLayoutChecks": 650,
+    "characterBindingTests": 5,
+    "layoutNodes": 241,
+    "layoutGuardRejections": 11,
+    "resolutions": 6,
+    "participants": 8
+  },
+  "package": {
+    "path": "E:/workspace/mir3-ui-work/hud-progress-zl-20261108-v1/OfficialV1.Zl",
+    "fileName": "OfficialV1.Zl",
+    "sha256": "a67995c4a5d928da09b69b89ff199c9abb73821d6b620ad71bec4a62fd1df635",
+    "byteLength": 354374,
+    "slotCount": 91
+  },
+  "limitations": [
+    "Candidate integration only; Legacy is default, RuntimeReady=false and all five G0 gates remain open.",
+    "Chat roots have not joined the transaction yet. Existing tabs, history, input HWND and drafts are retained.",
+    "Only existing glyph suppression GPU probes were captured. No full HUD, live-game, IME, device Reset, action/packet or final-art acceptance."
+  ],
+  "diagnostics": [
+    "Initial independent placement comparison caught side roots incorrectly anchored to wide-screen edges. They now retain the centered 1024-pixel composition.",
+    "Original button descendant geometry and empty uninitialized label positions required full snapshots and guarded recentering for exact rollback.",
+    "Character binding JSON was regenerated because its layout input hash and geometry counts changed; no runtime JSON reads introduced.",
+    "Earlier failed build/test/catalog invocations are retained in this directory and excluded from successful commands."
+  ]
+}

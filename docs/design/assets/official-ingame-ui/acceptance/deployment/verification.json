@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "kind": "official-ui-deployment-manifest-and-version-validation",
+  "checkedAtLocalDate": "2026-11-08",
+  "referenceResolution": [
+    1024,
+    768
+  ],
+  "windowMode": "windowed",
+  "releaseAccepted": false,
+  "sourceChanges": [],
+  "sourceHashes": [
+    {
+      "path": "build/Setup-ClientAssets.ps1",
+      "sha256": "3930b1c7119825a4bd24b860f061aa95226b432a1baf45f34aa3889a64348334"
+    },
+    {
+      "path": "build/game-ui/GameUiReleaseTools.ps1",
+      "sha256": "28e75c00a5a4f31c89a01554fd8447a116986c74a5eb26db5e36cfae4cd8bd8f"
+    },
+    {
+      "path": "build/game-ui/Read-GameUiReleaseContract.ps1",
+      "sha256": "8a7a22bdcee0a069973498e1793e134cf1e1c33cbfe94c1f51eb3d5485feea9b"
+    },
+    {
+      "path": "build/game-ui/New-GameUiReleaseManifest.ps1",
+      "sha256": "3caad7858c547f83dcd28bf5acfc71124eee7edac4a0e42f8d342fdabd5be232"
+    },
+    {
+      "path": "tests/Run-GameUiReleaseTests.ps1",
+      "sha256": "10703df349c01b23a6db71be9aae062142b02f36e715b12f1740958165eb5b0c"
+    },
+    {
+      "path": "tests/game-ui/GameUiReleaseFixture.cs",
+      "sha256": "64836ef810c1f5d007404267f346f2c3fa2fa4cc27ba85f7a7ef7d52b2ae53ad"
+    },
+    {
+      "path": "tests/Run-ClientAssetsTests.ps1",
+      "sha256": "5c427c82677866fa876002e7bb0c7a173440ffb2cdb4335ddf77812895a0d503"
+    },
+    {
+      "path": "docs/build-and-debug.md",
+      "sha256": "62612a8af52978a0feee653eb90e7e85ac44642950de6fe648e2c01ab4b13ded"
+    },
+    {
+      "path": "build/game-ui/README.md",
+      "sha256": "4a2edf483dc82f292e573195d4d6aa13ce4508b9f934bd9ed1e17faf8f2228fb"
+    }
+  ],
+  "registeredSourcesBefore": {
+    "path": "docs/design/assets/official-ingame-ui/acceptance/deployment/registered-sources-before.json",
+    "sha256": "71ce2b58dc031681b9b7b04fca8182fd39ba13c501df1d472a6746dde94d99c0",
+    "count": 146,
+    "allMatchedRegisteredHashes": true,
+    "allUnchangedThisTurn": true
+  },
+  "commands": [
+    {
+      "command": "pwsh -NoProfile -File tests/Run-GameUiReleaseTests.ps1 -PackagePath E:/workspace/mir3-ui-work/hud-progress-zl-20261108-v1/OfficialV1.Zl -EvidenceDirectory E:/workspace/mir3-ui-work/deployment-20261108-v1/probe-4",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/deployment/release-powershell7.log",
+      "logSha256": "f4345a48a9b127368ea6203eeba4567b4230cd76375f376c5e906ad16829769b"
+    },
+    {
+      "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File tests/Run-GameUiReleaseTests.ps1 -PackagePath E:/workspace/mir3-ui-work/hud-progress-zl-20261108-v1/OfficialV1.Zl -EvidenceDirectory E:/workspace/mir3-ui-work/deployment-20261108-v1/probe-windows-powershell-3",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/deployment/release-windows-powershell.log",
+      "logSha256": "fddde0ab99e06150e086eea64dba38b87933c770a26537b125344d23d463940c"
+    },
+    {
+      "command": "pwsh -NoProfile -File tests/Run-ClientAssetsTests.ps1",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/deployment/legacy-powershell7.log",
+      "logSha256": "0efca5362f5c315f706baa0b70756b87b69cfb965e319a6482ab4f123c6af9ff"
+    },
+    {
+      "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File tests/Run-ClientAssetsTests.ps1",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/deployment/legacy-windows-powershell.log",
+      "logSha256": "ab0bd68230ca1d9e2eeee5e8976ea3b2f5943b6141fe24e38eeade556df5f884"
+    },
+    {
+      "command": "python build/game-ui/Validate-UiTasks.py",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/deployment/task-validation.log",
+      "logSha256": "a0bf6a8e0738de35b2e36e703a81f351d36919785b1be660f5f7e53773a413a9"
+    },
+    {
+      "command": "git -c core.whitespace=cr-at-eol diff --check",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/deployment/diff-check.log",
+      "logSha256": "76b12873a1d7d121020089664c81dad223d829260a45636b4ba58168797dfe46"
+    }
+  ],
+  "verification": {
+    "releaseChecksPowerShell7": 41,
+    "releaseChecksWindowsPowerShell51": 41,
+    "legacyRegressionPassedBothShells": true,
+    "actualClientManifestContentIdenticalAcrossShells": true,
+    "actualClientBuildId": "gameui-0db78408cf0902281bd553377505f684a70aef211f4d711a909b655aed22298b",
+    "actualClientSha256": "ea04d81de91d172b4db8a7c2e0863cf9ab66b6604aa87d6dc0006ba147cc412e",
+    "actualFrameCount": 91,
+    "actualButtonCount": 19,
+    "compiledRuntimeReady": false,
+    "developmentDefault": "Legacy",
+    "productionOfficialActivation": false,
+    "successfulOfficialDeploymentUsesTestOnlyFixture": true,
+    "allFiveG0Gates": "open",
+    "registeredSourceCount": 155,
+    "supplementalReportCount": 31,
+    "taskStatusCounts": {
+      "done": 6,
+      "in_progress": 2,
+      "blocked": 0,
+      "not_started": 20
+    }
+  },
+  "evidenceFiles": [
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/deployment/diff-check.log",
+      "sha256": "76b12873a1d7d121020089664c81dad223d829260a45636b4ba58168797dfe46"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/deployment/legacy-powershell7.log",
+      "sha256": "0efca5362f5c315f706baa0b70756b87b69cfb965e319a6482ab4f123c6af9ff"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/deployment/legacy-windows-powershell.log",
+      "sha256": "ab0bd68230ca1d9e2eeee5e8976ea3b2f5943b6141fe24e38eeade556df5f884"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/deployment/README.md",
+      "sha256": "10b28894470c21961f856bb557a09d5de2a6314f51ebc4fc13ddbfbdc694c4b7"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/deployment/registered-sources-before.json",
+      "sha256": "71ce2b58dc031681b9b7b04fca8182fd39ba13c501df1d472a6746dde94d99c0"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/deployment/release-powershell7.log",
+      "sha256": "f4345a48a9b127368ea6203eeba4567b4230cd76375f376c5e906ad16829769b"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/deployment/release-windows-powershell.log",
+      "sha256": "fddde0ab99e06150e086eea64dba38b87933c770a26537b125344d23d463940c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/deployment/task-validation.log",
+      "sha256": "a0bf6a8e0738de35b2e36e703a81f351d36919785b1be660f5f7e53773a413a9"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/deployment/windows-powershell/actual-client-manifest.json",
+      "sha256": "893be220f3b644e141544aa0967317347df2e2a7575727eeeb728d3bc16d85e2"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/deployment/windows-powershell/fixture-deployed-manifest.json",
+      "sha256": "391824db5f863c20229bc729da3928265273cb1880450698d755440a59b368ba"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/deployment/windows-powershell/fixture-manifest.json",
+      "sha256": "391824db5f863c20229bc729da3928265273cb1880450698d755440a59b368ba"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/deployment/windows-powershell/results.json",
+      "sha256": "1d79da4d04d00845f30767093f5402ea5d9cb7dbc63e4343ac2ae307a502f2ef"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/deployment/powershell7/actual-client-manifest.json",
+      "sha256": "c82eeb9af1a6020433670315770e57958562ce64a3f5808e6f4eb700099380af"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/deployment/powershell7/fixture-deployed-manifest.json",
+      "sha256": "d24a9427fadb328bc768a4e9ca4d99c9daea9cf9bed37233c8f7fd7258f3ee6a"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/deployment/powershell7/fixture-manifest.json",
+      "sha256": "d24a9427fadb328bc768a4e9ca4d99c9daea9cf9bed37233c8f7fd7258f3ee6a"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/deployment/powershell7/results.json",
+      "sha256": "b5169e086ae0a159a03d5b2831aec2431d1e80526ca4cc2bfd899932c5c417e7"
+    }
+  ],
+  "limitations": [
+    "UI-26 remains in_progress; UI-07/UI-12 and actual ready-client deployment/A01/A20 are not accepted.",
+    "Success path uses isolated compiled-ready fixture, not actual production-ready client. Real compiled RuntimeReady remains false.",
+    "No live game login, network, filled-item interactions, IME or final visual acceptance.",
+    "Asset-directory copy is not atomic; copy I/O failure may leave partial assets. Whole-package rollback is not accepted.",
+    "Original installation remains read-only. No game zero-defect claim."
+  ]
+}

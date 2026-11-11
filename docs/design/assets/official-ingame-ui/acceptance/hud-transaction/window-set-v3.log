@@ -1,0 +1,5 @@
+System.Exception: Native bounds not restored: DXLabel {X=35,Y=22,Width=0,Height=0} vs {X=0,Y=0,Width=0,Height=0}
+   在 OfficialUiWindowSetTests.Check(Boolean value, String detail)
+   在 OfficialUiWindowSetTests.Native.AssertRestored()
+   在 OfficialUiWindowSetTests.Exercise(TestScene root, GameScene game, GameUiVerifiedPackage package, String directory)
+   在 OfficialUiWindowSetTests.Main(String[] args)

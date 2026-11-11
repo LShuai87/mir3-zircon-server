@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "E:\workspace\mir3-zircon-server\docs\design\assets\official-ingame-ui\acceptance\warehouse-package\verify-merged-package.py", line 66, in <module>
+    report=verify();args.output.write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8')
+  File "E:\workspace\mir3-zircon-server\docs\design\assets\official-ingame-ui\acceptance\warehouse-package\verify-merged-package.py", line 52, in verify
+    require({k:v for k,v in prior.items() if k!='dataSha256'}==a,'Existing metadata/index differs: '+role)
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\workspace\mir3-zircon-server\docs\design\assets\official-ingame-ui\acceptance\warehouse-package\verify-merged-package.py", line 13, in require
+    if not ok: raise ValueError(message)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Existing metadata/index differs: character-main-background

@@ -1,0 +1,8 @@
+tests\game-ui\OfficialUiNativeSceneTransitionTests.cs(121,50): error CS0122: “DXControl.Controls”不可访问，因为它具有一定的保护级别
+tests\game-ui\OfficialUiNativeSceneTransitionTests.cs(190,33): error CS0122: “DXControl.Controls”不可访问，因为它具有一定的保护级别
+tests\game-ui\OfficialUiNativeSceneTransitionTests.cs(206,37): error CS0122: “DXControl.Controls”不可访问，因为它具有一定的保护级别
+Exception: E:\workspace\mir3-zircon-server\tests\Run-GameUiFullSceneTests.ps1:28
+Line |
+  28 |  …  ($LASTEXITCODE -ne 0) { throw 'FullScene test compilation failed.' }
+     |                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | FullScene test compilation failed.

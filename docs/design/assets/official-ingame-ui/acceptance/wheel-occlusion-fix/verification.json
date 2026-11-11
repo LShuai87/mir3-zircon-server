@@ -1,0 +1,48 @@
+{
+  "checkedAtLocalDate": "2026-11-10",
+  "releaseAccepted": false,
+  "oldRuntimeRegression": "New disjoint-artwork assertion fails at command-local (141,75): QuestButton and InventoryButton.",
+  "results": {
+    "sharedOpaquePixels": 0,
+    "routedVisiblePixels": 11897,
+    "hudChecks": 798,
+    "windowIntegrationChecks": 287098,
+    "fullSceneChecks": 4328,
+    "pythonTests": 172,
+    "layoutGuardCases": 16,
+    "debugBuild": "passed",
+    "releaseBuild": "passed",
+    "previewValidateOnly": "passed"
+  },
+  "sourceHashes": {
+    "Client/Envir/GameUiHudLayout.cs": "817b88a40ed198db316d9749d3dcfa7ffb7a1b7694b2a341edccfe7e576bfad6",
+    "Client/Scenes/Views/MainPanel.cs": "18e06da2a55e7addebf9913ec96d7cd01d51db12c5bb5a2fad23d895d319a472",
+    "Client/Scenes/Views/MainPanel.GameUi.cs": "5398f70496203d13df4a1377bea866d18818d6a1f71392a3bd356ba30f6e1262",
+    "build/game-ui/layout-official-v1.json": "78b60adc80d88c4b10109473f2fc67f5dcce54facb34e8eb8bda2c3fcb94071c",
+    "build/game-ui/Validate-OfficialUiLayout.py": "32d4c98897ad9d3a7d706d730404996bf4a2a33ba110535fc4ebe5d72dc0de9b",
+    "build/game-ui/character-bindings.json": "99178b67d75bd190d7ceb925a08cae714062b53dc22cf563686784efde49a1ca",
+    "tests/game-ui/OfficialUiWindowSetTests.cs": "10e6a4d65aca1d79afb0e4da66a95f2d2c1e1c7a1ef33616ad79bcdfe40f4ec8",
+    "tests/game-ui/OfficialUiHudLayoutTests.cs": "c0e08811e2565dc3c42d7333600c7c4b2add8a9eb16172d478b7f613d604d19b"
+  },
+  "runtimeHashes": {
+    "E:\\workspace\\Debug\\Client\\Zircon.exe": "68dfa4b9c638a603deb90a2c5895107e44b98337883d3c1fa61b593159d7e54d",
+    "E:\\workspace\\Release\\Client\\Zircon.exe": "3829b32695e8f73ba7f4e18aa23b1cfde3b3c1ea699cf7bc1ad456ab0f31fccf",
+    "E:\\workspace\\Debug\\Client\\Data\\GameUI\\OfficialV1.Zl": "dd45cbf51d976a69d28269ee0d27a985def1ee1693cab2b509b74ae347a880a4"
+  },
+  "comparison": {
+    "before": "docs/design/assets/official-ingame-ui/acceptance/compact-wheel/scene/official-hud.png",
+    "after": "official-hud.png",
+    "crop": [
+      845,
+      625,
+      985,
+      760
+    ],
+    "scale": 3,
+    "capture": "D3D9 offline scene with real resource package; synthetic world; quest reminders hidden in this capture."
+  },
+  "limitations": [
+    "No real account/server verification or final user visual acceptance.",
+    "RuntimeReady remains false; use the explicit preview launcher."
+  ]
+}

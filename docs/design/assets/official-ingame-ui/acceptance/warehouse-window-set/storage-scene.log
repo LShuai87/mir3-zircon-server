@@ -1,0 +1,8 @@
+Storage candidate offline scene: 76 checks; 4 presented frames; 4 device resets; 243840 identical warehouse pixels; 1024x768 original-cell coordinate hits and native filters. Installed through full verified catalog entry; no live server or final visual acceptance.
+E:\workspace\mir3-zircon-server\tests\Run-GameUiStorageSceneTests.ps1 : The term 'Get-FileHash' is not recognized as th
+e name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was includ
+ed, verify that the path is correct and try again.
+    + CategoryInfo          : ObjectNotFound: (Get-FileHash:String) [Run-GameUiStorageSceneTests.ps1], CommandNotFound 
+   Exception
+    + FullyQualifiedErrorId : CommandNotFoundException,Run-GameUiStorageSceneTests.ps1
+ 

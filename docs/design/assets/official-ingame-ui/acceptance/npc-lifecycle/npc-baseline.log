@@ -1,0 +1,6 @@
+tests\game-ui\OfficialUiNpcTests.cs(325,17): error CS0103: 当前上下文中不存在名称“disposedNpcControls”
+Exception: E:\workspace\mir3-zircon-server\tests\Run-GameUiNpcTests.ps1:28
+Line |
+  28 |      if ($LASTEXITCODE -ne 0) { throw 'Npc test compilation failed.' }
+     |                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Npc test compilation failed.

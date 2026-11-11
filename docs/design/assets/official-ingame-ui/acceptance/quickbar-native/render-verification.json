@@ -1,0 +1,204 @@
+{
+  "verification": "actual D3D screenshot vs independent BC1 frame decode",
+  "frameSize": [
+    518,
+    44
+  ],
+  "resolutions": 6,
+  "screenshots": 8,
+  "results": [
+    {
+      "image": "official-hud.png",
+      "region": "left-ornament",
+      "comparedPixels": 1087,
+      "maxRgbDifference": 5
+    },
+    {
+      "image": "official-hud.png",
+      "region": "right-ornament",
+      "comparedPixels": 802,
+      "maxRgbDifference": 5
+    },
+    {
+      "image": "official-hud.png",
+      "region": "last-slot-bottom",
+      "comparedPixels": 246,
+      "maxRgbDifference": 5
+    },
+    {
+      "image": "official-hud.png",
+      "region": "last-slot-right",
+      "comparedPixels": 103,
+      "maxRgbDifference": 5
+    },
+    {
+      "image": "official-reentry-hud.png",
+      "region": "left-ornament",
+      "comparedPixels": 1087,
+      "maxRgbDifference": 5
+    },
+    {
+      "image": "official-reentry-hud.png",
+      "region": "right-ornament",
+      "comparedPixels": 802,
+      "maxRgbDifference": 5
+    },
+    {
+      "image": "official-reentry-hud.png",
+      "region": "last-slot-bottom",
+      "comparedPixels": 246,
+      "maxRgbDifference": 5
+    },
+    {
+      "image": "official-reentry-hud.png",
+      "region": "last-slot-right",
+      "comparedPixels": 103,
+      "maxRgbDifference": 5
+    },
+    {
+      "image": "official-reset-1024x768.png",
+      "region": "left-ornament",
+      "comparedPixels": 1087,
+      "maxRgbDifference": 5
+    },
+    {
+      "image": "official-reset-1024x768.png",
+      "region": "right-ornament",
+      "comparedPixels": 802,
+      "maxRgbDifference": 5
+    },
+    {
+      "image": "official-reset-1024x768.png",
+      "region": "last-slot-bottom",
+      "comparedPixels": 246,
+      "maxRgbDifference": 5
+    },
+    {
+      "image": "official-reset-1024x768.png",
+      "region": "last-slot-right",
+      "comparedPixels": 103,
+      "maxRgbDifference": 5
+    },
+    {
+      "image": "official-reset-1280x800.png",
+      "region": "left-ornament",
+      "comparedPixels": 1087,
+      "maxRgbDifference": 5
+    },
+    {
+      "image": "official-reset-1280x800.png",
+      "region": "right-ornament",
+      "comparedPixels": 802,
+      "maxRgbDifference": 5
+    },
+    {
+      "image": "official-reset-1280x800.png",
+      "region": "last-slot-bottom",
+      "comparedPixels": 246,
+      "maxRgbDifference": 5
+    },
+    {
+      "image": "official-reset-1280x800.png",
+      "region": "last-slot-right",
+      "comparedPixels": 103,
+      "maxRgbDifference": 5
+    },
+    {
+      "image": "official-reset-1366x768.png",
+      "region": "left-ornament",
+      "comparedPixels": 1087,
+      "maxRgbDifference": 5
+    },
+    {
+      "image": "official-reset-1366x768.png",
+      "region": "right-ornament",
+      "comparedPixels": 802,
+      "maxRgbDifference": 5
+    },
+    {
+      "image": "official-reset-1366x768.png",
+      "region": "last-slot-bottom",
+      "comparedPixels": 246,
+      "maxRgbDifference": 5
+    },
+    {
+      "image": "official-reset-1366x768.png",
+      "region": "last-slot-right",
+      "comparedPixels": 103,
+      "maxRgbDifference": 5
+    },
+    {
+      "image": "official-reset-1440x900.png",
+      "region": "left-ornament",
+      "comparedPixels": 1087,
+      "maxRgbDifference": 5
+    },
+    {
+      "image": "official-reset-1440x900.png",
+      "region": "right-ornament",
+      "comparedPixels": 802,
+      "maxRgbDifference": 5
+    },
+    {
+      "image": "official-reset-1440x900.png",
+      "region": "last-slot-bottom",
+      "comparedPixels": 246,
+      "maxRgbDifference": 5
+    },
+    {
+      "image": "official-reset-1440x900.png",
+      "region": "last-slot-right",
+      "comparedPixels": 103,
+      "maxRgbDifference": 5
+    },
+    {
+      "image": "official-reset-1600x900.png",
+      "region": "left-ornament",
+      "comparedPixels": 1087,
+      "maxRgbDifference": 5
+    },
+    {
+      "image": "official-reset-1600x900.png",
+      "region": "right-ornament",
+      "comparedPixels": 802,
+      "maxRgbDifference": 5
+    },
+    {
+      "image": "official-reset-1600x900.png",
+      "region": "last-slot-bottom",
+      "comparedPixels": 246,
+      "maxRgbDifference": 5
+    },
+    {
+      "image": "official-reset-1600x900.png",
+      "region": "last-slot-right",
+      "comparedPixels": 103,
+      "maxRgbDifference": 5
+    },
+    {
+      "image": "official-reset-1920x1080.png",
+      "region": "left-ornament",
+      "comparedPixels": 1087,
+      "maxRgbDifference": 5
+    },
+    {
+      "image": "official-reset-1920x1080.png",
+      "region": "right-ornament",
+      "comparedPixels": 802,
+      "maxRgbDifference": 5
+    },
+    {
+      "image": "official-reset-1920x1080.png",
+      "region": "last-slot-bottom",
+      "comparedPixels": 246,
+      "maxRgbDifference": 5
+    },
+    {
+      "image": "official-reset-1920x1080.png",
+      "region": "last-slot-right",
+      "comparedPixels": 103,
+      "maxRgbDifference": 5
+    }
+  ],
+  "productionAccepted": false
+}

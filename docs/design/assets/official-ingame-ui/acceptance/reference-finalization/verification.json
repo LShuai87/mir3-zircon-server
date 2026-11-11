@@ -1,0 +1,183 @@
+{
+  "schemaVersion": 1,
+  "kind": "official-ingame-ui-scoped-reference-finalization",
+  "checkedAtLocalDate": "2026-11-08",
+  "releaseAccepted": false,
+  "referenceResolution": [
+    1024,
+    768
+  ],
+  "results": {
+    "activeOriginals": 5,
+    "localComparisons": 33,
+    "candidateAssetFrames": 92,
+    "reproducedFiles": 8,
+    "checks": 43,
+    "negativeGuards": 4,
+    "gateClosed": "G0-1",
+    "taskDone": "UI-02",
+    "taskInProgress": "UI-05",
+    "liveGameAccess": false,
+    "runtimeReady": false,
+    "productionBindingAllowed": false
+  },
+  "sourceChanges": [],
+  "sourceHashes": [
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/reference-finalization/Build-ReferenceMap.py",
+      "sha256": "ff661777cf6710746536d50225b75f69a02a30624ad7977a66a36b0a644376bd"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/reference-finalization/Verify-ReferenceMap.py",
+      "sha256": "e766283eb9b7d28feedb914ead4884ceed8386c404dd0a6c091085c08ec955fb"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/reference-finalization/effective-matching-spec.json",
+      "sha256": "7432c6b1b2e9a7978ee2b24175c0003e0f3d9cae510b6f1ffa07182ed0e6854c"
+    },
+    {
+      "path": "build/game-ui/asset-manifest.json",
+      "sha256": "77946f30a67f8d433d0a0a8c1e2660faf2464239045995075808d57a5b9a7f58"
+    },
+    {
+      "path": "build/game-ui/layout-official-v1.json",
+      "sha256": "da4f31ddeafb449b0312e3331ede61368a203aa2cc766b561e96910475481caf"
+    },
+    {
+      "path": "build/game-ui/composition-recipe.json",
+      "sha256": "35e3f1b7e3495a6222c53d5150471fe50eed8db83f29949d86da9d832b2e7ca9"
+    },
+    {
+      "path": "Client/Envir/GameUiOfficialV1Catalog.g.cs",
+      "sha256": "ee3063da968958fa824522c1e5e5ad9b3c31ecfd8f2cdc3fb5b64d869ca837cf"
+    }
+  ],
+  "commands": [
+    {
+      "command": "Match-ReferencePanels.py --inspection E:/workspace/mir3-ui-work/runtime-reference-20261107/Inspection --reference docs/design/assets/official-ingame-ui/acceptance/reference --spec docs/design/assets/official-ingame-ui/acceptance/reference-finalization/effective-matching-spec.json --output docs/design/assets/official-ingame-ui/acceptance/reference-finalization/panel-matching.json",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/reference-finalization/matching.log",
+      "logSha256": "ef9e975a7dddbef579a2d3d0daed3f097a20562872878bd43062fb651a3ab006"
+    },
+    {
+      "command": "Build-ReferenceMap.py --inspection E:/workspace/mir3-ui-work/runtime-reference-20261107/Inspection --art E:/workspace/mir3-ui-work/compact-wheel-20261108-v1/art --output docs/design/assets/official-ingame-ui/acceptance/reference-finalization/generated",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/reference-finalization/generation.log",
+      "logSha256": "e6f1a1fad9132a0cc7f6d20ee19243a461a3abffc5e7a80ce0b4668c14ee5deb"
+    },
+    {
+      "command": "Verify-ReferenceMap.py --inspection E:/workspace/mir3-ui-work/runtime-reference-20261107/Inspection --art E:/workspace/mir3-ui-work/compact-wheel-20261108-v1/art --repeat E:/workspace/mir3-ui-work/reference-finalization-20261108-v1 --output docs/design/assets/official-ingame-ui/acceptance/reference-finalization/reproduction-validation.json",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/reference-finalization/reproduction.log",
+      "logSha256": "0ca32d31a6b02a72ad2d1e2deae558a516f35a3ec1cf96ded9fa1cda22d0c569"
+    },
+    {
+      "command": "python build/game-ui/Validate-UiTasks.py",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/reference-finalization/task-validation.log",
+      "logSha256": "90e3ddffa807ef19523e77855653984be659ff7ab47ec66f04d41348c4cb85b3"
+    },
+    {
+      "command": "git -c core.whitespace=cr-at-eol diff --check",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/reference-finalization/whitespace-check.log",
+      "logSha256": "be1a00df4e1d341ba6c0575ec394503282ac98876d290692f8d29706b26d3107"
+    }
+  ],
+  "limitations": [
+    "截图坐标含标题栏，不能生成运行控件矩形；G0-3另行冻结。",
+    "候选透明追溯不代表全部必需素材和正式混合/压缩验收；G0-2/G0-5继续未关闭。",
+    "四态调色、7×7包裹及项目属性映射属于显式适配，不宣称正式版业务或状态已采集。",
+    "RuntimeReady=false、productionBindingAllowed=false，Legacy默认；G0-2/G0-3/G0-4/G0-5未关闭。",
+    "真实服务器、中文IME及完整部署/回退未验收；本次未重跑C#构建或D3D9套件，产品源代码及92帧候选包未改动。"
+  ],
+  "diagnostics": [
+    "校验夹具曾误用枚举形式的配置假设，已改为实际字符串Legacy；负向夹具修改spec后同步其摘要，最终43项检查通过。"
+  ],
+  "packageSha256": "b469289d105e2404361033c81869b610399d7610edee5143dd7e62d1803ccfa7",
+  "sourcePlanSha256": "f8c0a002b3821fabb54993792c354c4eff35eec51f9cfdc418535017c13069e9",
+  "gateClosure": "docs/design/assets/official-ingame-ui/acceptance/reference-finalization/gate-closure.json",
+  "evidenceHashes": [
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/reference-finalization/Build-ReferenceMap.py",
+      "sha256": "ff661777cf6710746536d50225b75f69a02a30624ad7977a66a36b0a644376bd"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/reference-finalization/effective-matching-spec.json",
+      "sha256": "7432c6b1b2e9a7978ee2b24175c0003e0f3d9cae510b6f1ffa07182ed0e6854c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/reference-finalization/gate-closure.json",
+      "sha256": "e6c98dd57e81f651ddce1e6fe2767f43013b9496c1346fd961089711dbf84c01"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/reference-finalization/generation.log",
+      "sha256": "e6f1a1fad9132a0cc7f6d20ee19243a461a3abffc5e7a80ce0b4668c14ee5deb"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/reference-finalization/matching.log",
+      "sha256": "ef9e975a7dddbef579a2d3d0daed3f097a20562872878bd43062fb651a3ab006"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/reference-finalization/panel-matching.json",
+      "sha256": "beda412d7451d2c4e1183fcb8c0fa4345daf607052e6d12047d07826a4cd67e3"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/reference-finalization/README.md",
+      "sha256": "c1d2bf1cead6f8861fbb49e67f848ff202e0d4be3d98515158cea04eec5c0218"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/reference-finalization/reproduction-validation.json",
+      "sha256": "375b87e1c0a95bd0f9eef3c97584152e8ada293ff91a440f3032628228b85e4e"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/reference-finalization/reproduction.log",
+      "sha256": "0ca32d31a6b02a72ad2d1e2deae558a516f35a3ec1cf96ded9fa1cda22d0c569"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/reference-finalization/Verify-ReferenceMap.py",
+      "sha256": "e766283eb9b7d28feedb914ead4884ceed8386c404dd0a6c091085c08ec955fb"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/reference-finalization/generated/01-overview-annotated.png",
+      "sha256": "f0b2721bb5dd7498c69e34f7008d82c7e885f5b266ed940e1c37395871da2d76"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/reference-finalization/generated/02-character-annotated.png",
+      "sha256": "ccdb0408af123436f0fb79af9caa422aed65291a956361332be8f384050c18ce"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/reference-finalization/generated/03-character-inventory-annotated.png",
+      "sha256": "96035f716afa0bdb04f69b2e575d14f46cbf79aaf07185ee0bf19558a3e7461b"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/reference-finalization/generated/04-equipment-tooltip-annotated.png",
+      "sha256": "e16758c52a6f1ce13db059ee65ab5f6fc1f540620cdaf85d4fe1cf97a08b7724"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/reference-finalization/generated/05-npc-dialog-shop-inventory-annotated.png",
+      "sha256": "0219c08a4c836ef9034e992d6bae6cebefc58a2a70f6d21f8912246b2adf54c0"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/reference-finalization/generated/candidate-alpha-preview.png",
+      "sha256": "13ac8c1fe363a70dc4f04e83e911e3775c1b78ad9a03bd049dd422daeeb302c9"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/reference-finalization/generated/reference-map.json",
+      "sha256": "6a52f922ed7092a7b213deb02d2e1f125cb2338666fca9ef9b43f284181c4971"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/reference-finalization/task-validation.log",
+      "sha256": "90e3ddffa807ef19523e77855653984be659ff7ab47ec66f04d41348c4cb85b3"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/reference-finalization/whitespace-check.log",
+      "sha256": "be1a00df4e1d341ba6c0575ec394503282ac98876d290692f8d29706b26d3107"
+    }
+  ]
+}

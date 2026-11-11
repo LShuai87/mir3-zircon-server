@@ -1,0 +1,6 @@
+tests\game-ui\OfficialUiChatPersistenceTests.cs(18,100): error CS0122: “DXControl.Controls”不可访问，因为它具有一定的保护级别
+Exception: E:\workspace\mir3-zircon-server\tests\Run-GameUiWindowSetTests.ps1:34
+Line |
+  34 |  …  ($LASTEXITCODE -ne 0) { throw 'WindowSet test compilation failed.' }
+     |                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | WindowSet test compilation failed.

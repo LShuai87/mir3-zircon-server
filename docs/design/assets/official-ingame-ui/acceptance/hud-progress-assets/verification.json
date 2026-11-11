@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 1,
+  "kind": "official-ui-hud-progress-assets",
+  "checkedAtLocalDate": "2026-11-08",
+  "referenceResolution": [
+    1024,
+    768
+  ],
+  "releaseAccepted": false,
+  "sourceChanges": [
+    {
+      "path": "build/game-ui/reference-selection.json",
+      "beforeSha256": "a011cced373a12186898e5043c00dad1ef8b87b3aa81150c678267018db9f928",
+      "afterSha256": "af2373a21b1f5f9fcd156dfa5d2200e6baa9dacf97e64e6b9772b59a2fb5c2c3"
+    },
+    {
+      "path": "build/game-ui/Compose-OfficialUi.py",
+      "beforeSha256": "141feb1bfb9b4e072d6dfed47115b0727a09357c7dafc4d86e9973f52a32dc6b",
+      "afterSha256": "5656fa2ec69e3b3cee23a9efc15952f11ac68dbc15767ec8c083780186094331"
+    },
+    {
+      "path": "build/game-ui/composition-recipe.json",
+      "beforeSha256": "05234c60dd0bae9fbdd9c4e95781878d8a0694af4fb942bad80151f87ae9a662",
+      "afterSha256": "1360876ba522819e30e14fa8c005a62460fa69c712de1a11da0fe1620a7559f3"
+    },
+    {
+      "path": "tests/game-ui/test_composed_ui.py",
+      "beforeSha256": "49667dcb26462346962661fad8659dde35e7e4e81b61faa982f98c085ddbfd02",
+      "afterSha256": "40af13e9248dc8b190a99b7bad24ca9dcfd946ecd04dfc0db2f8b695ed635b4e"
+    },
+    {
+      "path": "build/game-ui/asset-manifest.json",
+      "beforeSha256": "9863c170ce9af202c2618b8e61b2c71d63646f6bdb90f6eca0cb3526d0ee10f5",
+      "afterSha256": "e0af804567c06dadbc1899174b1070902ac977078cc6ae1fc08498480e1c9689"
+    },
+    {
+      "path": "Client/Envir/GameUiOfficialV1Catalog.g.cs",
+      "beforeSha256": "75e084ede7326cfcfba974dd6bcd3fc3e81b3e1a932955df4764d252647f8e06",
+      "afterSha256": "8918aa6c9101fd32d37d6078a2d8614064b049970eaf800a1044e2ef1ca628a5"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiCatalogTests.cs",
+      "beforeSha256": "d36cfeddc5e8a111bbf4328911646f5a8791fac7bd07fd9ae59a82aacefd6f30",
+      "afterSha256": "1f504bcd676a4521cd271253970a87250804bdd8b30db3fcdb8c425794612bdb"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiWindowSetTests.cs",
+      "beforeSha256": "238016d2d4eb1b08adf0347f9dd9e2ecb8faadec4d61de55075bcadf70079e37",
+      "afterSha256": "b681adb637f67a25c836a49f36688835088c92421a9c089bd4badd5e07a1ad48"
+    }
+  ],
+  "sourceHashes": [
+    {
+      "path": "build/game-ui/reference-selection.json",
+      "sha256": "af2373a21b1f5f9fcd156dfa5d2200e6baa9dacf97e64e6b9772b59a2fb5c2c3"
+    },
+    {
+      "path": "build/game-ui/Compose-OfficialUi.py",
+      "sha256": "5656fa2ec69e3b3cee23a9efc15952f11ac68dbc15767ec8c083780186094331"
+    },
+    {
+      "path": "build/game-ui/composition-recipe.json",
+      "sha256": "1360876ba522819e30e14fa8c005a62460fa69c712de1a11da0fe1620a7559f3"
+    },
+    {
+      "path": "tests/game-ui/test_composed_ui.py",
+      "sha256": "40af13e9248dc8b190a99b7bad24ca9dcfd946ecd04dfc0db2f8b695ed635b4e"
+    },
+    {
+      "path": "build/game-ui/asset-manifest.json",
+      "sha256": "e0af804567c06dadbc1899174b1070902ac977078cc6ae1fc08498480e1c9689"
+    },
+    {
+      "path": "Client/Envir/GameUiOfficialV1Catalog.g.cs",
+      "sha256": "8918aa6c9101fd32d37d6078a2d8614064b049970eaf800a1044e2ef1ca628a5"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiCatalogTests.cs",
+      "sha256": "1f504bcd676a4521cd271253970a87250804bdd8b30db3fcdb8c425794612bdb"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiWindowSetTests.cs",
+      "sha256": "b681adb637f67a25c836a49f36688835088c92421a9c089bd4badd5e07a1ad48"
+    }
+  ],
+  "commands": [
+    {
+      "command": "Build-OfficialUi.ps1 -SourcePath E:/Program Files/ShengquGames/Mir3/Data -OutputPath E:/workspace/mir3-ui-work/hud-progress-selected-20261108-v1 -BaselinePath build/game-ui/selection-source-libraries.json -SelectionPath build/game-ui/reference-selection.json",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/hud-progress-assets/selected-build.log",
+      "logSha256": "6dec3f50a4089f48bc29c7b6b729282935311ccc1e12bc36dfcac122cb4de93b"
+    },
+    {
+      "command": "Compose-OfficialUi.py --decoded E:/workspace/mir3-ui-work/hud-progress-selected-20261108-v1/Decoded --output E:/workspace/mir3-ui-work/hud-progress-art-20261108-v1 --recipe build/game-ui/composition-recipe.json",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/hud-progress-assets/compose.log",
+      "logSha256": "b584e3048add9c278a36fe0b7b9298d8c3573b2ab1b217ae2808c7716317a398"
+    },
+    {
+      "command": "ImageManager.exe --official-ui prepared E:/workspace/mir3-ui-work/hud-progress-art-20261108-v1 E:/workspace/mir3-ui-work/hud-progress-zl-20261108-v1 E:/workspace/mir3-ui-work/hud-progress-art-20261108-v1/composed-manifest.json",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/hud-progress-assets/package.stdout.log",
+      "logSha256": "07f63aa01ca11137376bba1450f7d5b976c620a91c73f7ba8b5ff38e5d9e1210"
+    },
+    {
+      "command": "Compile-UiCatalog.py (91-frame real package and current build inputs) --output Client/Envir/GameUiOfficialV1Catalog.g.cs --check",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/hud-progress-assets/catalog-check.log",
+      "logSha256": "134c535b198348073a6785ce8b6fd9f8a13e39799bfd784161d3dd02bcb6dee1"
+    },
+    {
+      "command": "Verify-ComposedUi.py --art E:/workspace/mir3-ui-work/hud-progress-art-20261108-v1 --package E:/workspace/mir3-ui-work/hud-progress-zl-20261108-v1 --output E:/workspace/mir3-ui-work/hud-progress-bc1-20261108-v1",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/hud-progress-assets/bc1.log",
+      "logSha256": "00db7ef3d07ee7cb8c22b20c320e9d9d58151dd4af27e918b0936dd57306fced"
+    },
+    {
+      "command": "python -m unittest discover -s tests/game-ui -p test_composed_ui.py",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/hud-progress-assets/test_composed_ui.py.log",
+      "logSha256": "502ae77632009fe23046decdb91b940748254f15c8c4b74d482aba9dbd2a7bed"
+    },
+    {
+      "command": "python -m unittest discover -s tests/game-ui -p test_selected_ui.py",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/hud-progress-assets/test_selected_ui.py.log",
+      "logSha256": "f37b1249bb8e1ddfa5c67526458675074ff57a758d5c999468fed18d9f91608d"
+    },
+    {
+      "command": "python -m unittest discover -s tests/game-ui -p test_official_ui_catalog.py",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/hud-progress-assets/test_official_ui_catalog.py.log",
+      "logSha256": "ae10987178926efd0c42ab8a75d6ac3c218c967e5bbcd7d4d1ae3ffdcf1c0c3e"
+    },
+    {
+      "command": "MSBuild Client/Client.csproj /t:Build /p:Configuration=Debug /p:Platform=AnyCPU /nologo /v:minimal",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/hud-progress-assets/debug-build.log",
+      "logSha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "command": "MSBuild Client/Client.csproj /t:Build /p:Configuration=Release /p:Platform=AnyCPU /nologo /v:minimal",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/hud-progress-assets/release-build.log",
+      "logSha256": "c9e24428be1e56c8408af17aacfea3413de3953bfe426d10eb768782f5005ebc"
+    },
+    {
+      "command": "tests/Run-GameUiCatalogTests.ps1 -PackagePath E:/workspace/mir3-ui-work/hud-progress-zl-20261108-v1/OfficialV1.Zl",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/hud-progress-assets/catalog-tests.log",
+      "logSha256": "a6bae934eedd3e0467ca0c6cb2f0945a1925134ebb3d92d4df66ca67b1a81e29"
+    },
+    {
+      "command": "tests/Run-GameUiComposedRenderTests.ps1 -PackagePath E:/workspace/mir3-ui-work/hud-progress-zl-20261108-v1 -VerificationPath E:/workspace/mir3-ui-work/hud-progress-bc1-20261108-v1 -RenderPath E:/workspace/mir3-ui-work/hud-progress-render-20261108-v2",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/hud-progress-assets/gpu-render-tests.log",
+      "logSha256": "ce4d9906e734e1e227ac97ee6d0aa13d1713816bcf1a2f48b72a83e250721662"
+    },
+    {
+      "command": "tests/Run-GameUiWindowSetTests.ps1 -PackagePath E:/workspace/mir3-ui-work/hud-progress-zl-20261108-v1/OfficialV1.Zl -EvidenceDirectory E:/workspace/mir3-ui-work/hud-progress-window-probes-20261108-v1",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/hud-progress-assets/window-set-tests.log",
+      "logSha256": "3f1946b39494499595ff4e2f37bb05d2130b3f06df47caafe2fddeeaaf94b375"
+    },
+    {
+      "command": "Assemble-CharacterBindings.py --check",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/hud-progress-assets/binding-check.log",
+      "logSha256": "5932bc5269e5c6e34910ecd3f36fca9797c3ba463775aafeaf2ec6cd4131e437"
+    },
+    {
+      "command": "git -c core.whitespace=cr-at-eol diff --check",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/hud-progress-assets/diff-check.log",
+      "logSha256": "79d6e102d3342502fc80ca42def8ff97f6642ce33398d5219dc2f3e921c23f6f"
+    }
+  ],
+  "package": {
+    "path": "E:/workspace/mir3-ui-work/hud-progress-zl-20261108-v1/OfficialV1.Zl",
+    "fileName": "OfficialV1.Zl",
+    "sha256": "a67995c4a5d928da09b69b89ff199c9abb73821d6b620ad71bec4a62fd1df635",
+    "byteLength": 354374,
+    "slotCount": 91
+  },
+  "verification": {
+    "pythonTests": 72,
+    "catalogChecks": 4041,
+    "frameUploads": 819,
+    "bc1Frames": 91,
+    "logicalAlphaPixels": 689129,
+    "paddingPixels": 14871,
+    "opaqueBlackPixels": 4262,
+    "buttonGroups": 19,
+    "gpuRenderCases": 94,
+    "gpuComparedPixels": 825479,
+    "gpuMaxRgbError": 5,
+    "gpuTolerance": 8,
+    "windowSetChecks": 6472
+  },
+  "remaining": [
+    "HUD/chat unified transaction and complete action/art mapping",
+    "Startup/fallback and actual device-reset lifecycle",
+    "Live-game behavior, IME and final visual/packet acceptance; all G0 gates remain open"
+  ],
+  "diagnostics": [
+    "Whole-strip nearest resampling initially lost one divider in a synthetic regression. Replaced before publication by per-segment reflow; all nine internal dividers survive.",
+    "Verification entrypoints require package directories or files according to their parameters; initial invocation path mistakes were corrected and do not count as successful checks.",
+    "Initial plain git diff --check treated CRLF as whitespace; final check uses the same core.whitespace=cr-at-eol setting as preceding accepted reports."
+  ]
+}

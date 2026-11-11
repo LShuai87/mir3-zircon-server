@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Drawing;
 using Client.Envir;
 using Library;
@@ -233,6 +233,23 @@ namespace Client.Controls
             Index = -1;
             ImageOpacity = 1F;
             PixelDetect = true;
+        }
+
+        /// <summary>Bind an independent library and frame as one update. This control does not own the library.</summary>
+        public virtual void BindImage(MirLibrary library, int index)
+        {
+            if ((library == null && index != -1) || (library != null && library.GetImage(index) == null))
+                throw new ArgumentException("Image binding must reference a present frame, or null/-1 to clear it.");
+            Size logicalSize = library == null ? Size.Empty : library.GetSize(index);
+            int oldIndex = _Index;
+            Library = library;
+            _LibraryFile = LibraryFile.None;
+            _Index = index;
+            TextureValid = false;
+            if (!FixedSize) base.Size = logicalSize;
+            UpdateDisplayArea();
+            // Observers always see the complete library/index pair and the synchronized geometry.
+            if (oldIndex != index) OnIndexChanged(oldIndex, index);
         }
 
         #region Methods

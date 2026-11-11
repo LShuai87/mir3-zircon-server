@@ -1,0 +1,487 @@
+{
+  "schemaVersion": 1,
+  "kind": "official-ingame-ui-item-tooltip-presentation",
+  "checkedAtLocalDate": "2026-11-08",
+  "releaseAccepted": false,
+  "referenceResolution": [
+    1024,
+    768
+  ],
+  "results": {
+    "checks": 37923,
+    "scenes": 2,
+    "items": 7,
+    "presentedFrames": 25,
+    "deviceResets": 6,
+    "serverConnected": false,
+    "releaseAccepted": false,
+    "contentBuilderBodyUnchanged": true,
+    "itemInteractionChecks": 7519,
+    "fullSceneChecks": 180,
+    "startupChecks": 351,
+    "pythonTests": 141,
+    "artPackageUnchanged": true,
+    "packageSha256": "b469289d105e2404361033c81869b610399d7610edee5143dd7e62d1803ccfa7"
+  },
+  "limitations": [
+    "Synthetic offline fixture, no live server or IME/final visual acceptance.",
+    "Unbounded tooltip content can exceed available viewport; UI-19 remains unaccepted.",
+    "Legacy default and RuntimeReady=false; G0 gates unchanged."
+  ],
+  "sourceChanges": [
+    {
+      "path": "Client/Scenes/GameScene.cs",
+      "beforeSha256": "ad6d502552ea7e4c9e77323da4ee7f2841efd5253fd670e40399152562f32edc",
+      "afterSha256": "0e5d459554122c26de60fd1759bcb947f856a3024bb5e05555a4ab09b0b1e3c1"
+    },
+    {
+      "path": "Client/Client.csproj",
+      "beforeSha256": "0c2d6b407c62ad02f43eb11a1eeae23567d14bba0e3a441465d945c0775b7124",
+      "afterSha256": "028261436daf37a56f383691101b439f89527f063427f01cd773b499320e4d01"
+    },
+    {
+      "path": "build/game-ui/README.md",
+      "beforeSha256": "8694a7143cec253ed2b8678e53f86458ce1be284bb929a65ec2e896a6692836e",
+      "afterSha256": "6e80731cc6c927bac0130f32fe790f247d129a8ebba030d79ad4f561cfc029cd"
+    },
+    {
+      "path": "build/game-ui/character-bindings.json",
+      "beforeSha256": "e87654d9b11552e2885d11d32e5168482fb02d3f5570eb1ac024408f58629aad",
+      "afterSha256": "44ca2531bd4237aef514a0876a72d64d740c08ce2a5c07757c5065e3345a6632"
+    }
+  ],
+  "sourceHashes": [
+    {
+      "path": "Client/Scenes/GameScene.cs",
+      "sha256": "0e5d459554122c26de60fd1759bcb947f856a3024bb5e05555a4ab09b0b1e3c1"
+    },
+    {
+      "path": "Client/Client.csproj",
+      "sha256": "028261436daf37a56f383691101b439f89527f063427f01cd773b499320e4d01"
+    },
+    {
+      "path": "build/game-ui/README.md",
+      "sha256": "6e80731cc6c927bac0130f32fe790f247d129a8ebba030d79ad4f561cfc029cd"
+    },
+    {
+      "path": "build/game-ui/character-bindings.json",
+      "sha256": "44ca2531bd4237aef514a0876a72d64d740c08ce2a5c07757c5065e3345a6632"
+    },
+    {
+      "path": "Client/Envir/GameUiItemTooltipLayout.cs",
+      "sha256": "2ec73ef44da1d00f0e82238ba4d9403af6b9c67ce1ed22102826350c772ce5f9"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiItemTooltipTests.cs",
+      "sha256": "f08447ff77886d7dfcc67e1fb01161e648ec7f874d60379696c46d4a30775828"
+    },
+    {
+      "path": "tests/Run-GameUiItemTooltipTests.ps1",
+      "sha256": "9584b9716d024daf9d76f9d783c10f0ad8395b0f62f37231de9682937a88e637"
+    }
+  ],
+  "commands": [
+    {
+      "command": "MSBuild Client/Client.csproj /t:Build /p:Configuration=Debug /p:Platform=AnyCPU /v:minimal /nologo",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/build-debug.log",
+      "logSha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "command": "MSBuild Client/Client.csproj /t:Build /p:Configuration=Release /p:Platform=AnyCPU /v:minimal /nologo",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/build-release.log",
+      "logSha256": "c9e24428be1e56c8408af17aacfea3413de3953bfe426d10eb768782f5005ebc"
+    },
+    {
+      "command": "tests/Run-GameUiItemTooltipTests.ps1 -PackagePath E:/workspace/mir3-ui-work/compact-wheel-20261108-v1/zl/OfficialV1.Zl -EvidenceDirectory E:/workspace/mir3-ui-work/item-tooltip-20261108-v1/tooltips-ready",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/tooltip.log",
+      "logSha256": "8a2f5263d4142e60daa90b1d6f36ef8b46a7381dfa6f8828f53f0b89e037bb28"
+    },
+    {
+      "command": "tests/Run-GameUiItemInteractionTests.ps1 -PackagePath E:/workspace/mir3-ui-work/compact-wheel-20261108-v1/zl/OfficialV1.Zl -EvidenceDirectory E:/workspace/mir3-ui-work/item-tooltip-20261108-v1/item-interactions",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/item-interactions.log",
+      "logSha256": "ab9c87311be86e46702bd4397142393e28f9dd184bc5dcb5d1274cd8458620a5"
+    },
+    {
+      "command": "tests/Run-GameUiFullSceneTests.ps1 -PackagePath E:/workspace/mir3-ui-work/compact-wheel-20261108-v1/zl/OfficialV1.Zl -EvidenceDirectory E:/workspace/mir3-ui-work/item-tooltip-20261108-v1/scene",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/scene.log",
+      "logSha256": "0d85d4de7905eb608acc989200b5dfcc19842b35b62586889490caf606d4a988"
+    },
+    {
+      "command": "tests/Run-GameUiStartupTests.ps1 -PackagePath E:/workspace/mir3-ui-work/compact-wheel-20261108-v1/zl/OfficialV1.Zl",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/startup.log",
+      "logSha256": "9c69c072b79c3e362371df0ef87f46a17d6ab9959c7d62a4b7bf4d746a5bd3ff"
+    },
+    {
+      "command": "python build/game-ui/Assemble-CharacterBindings.py --output E:/workspace/mir3-ui-work/item-tooltip-20261108-v1/character-bindings.json",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/character-bindings.log",
+      "logSha256": "5932bc5269e5c6e34910ecd3f36fca9797c3ba463775aafeaf2ec6cd4131e437"
+    },
+    {
+      "command": "python -m unittest discover -s tests/game-ui -p test_*.py",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/python-tests.log",
+      "logSha256": "fe47137ec0dbdbd1b746c75d7a24daf008ca122c3bb3b4ffc1a7e34278a90211"
+    },
+    {
+      "command": "x86 WindowsPowerShell build/game-ui/New-GameUiReleaseManifest.ps1 -ClientDirectory E:/workspace/Debug/Client -ResourceRoot E:/workspace/mir3-ui-work/compact-wheel-20261108-v1/resources -OutputPath E:/workspace/mir3-ui-work/item-tooltip-20261108-v1/release-debug.json",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/release-debug.log",
+      "logSha256": "6e2c8baa90acf68658848c5a4109a1770e817a3274651768477f26d11c16b4eb"
+    },
+    {
+      "command": "x86 WindowsPowerShell build/game-ui/New-GameUiReleaseManifest.ps1 -ClientDirectory E:/workspace/Release/Client -ResourceRoot E:/workspace/mir3-ui-work/compact-wheel-20261108-v1/resources -OutputPath E:/workspace/mir3-ui-work/item-tooltip-20261108-v1/release-release.json",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/release-release.log",
+      "logSha256": "7361d2017799d38b9265217ee6c36960272c0fa7be15b1d4039fc59482d4df0f"
+    },
+    {
+      "command": "git -c core.whitespace=cr-at-eol diff --check",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/whitespace.log",
+      "logSha256": "c88af3f0305494eb460be51c4ab5bcd99caf6eb847109d977af760542dffc8a1"
+    },
+    {
+      "command": "python build/game-ui/Validate-UiTasks.py",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/task-validation.log",
+      "logSha256": "a0bf6a8e0738de35b2e36e703a81f351d36919785b1be660f5f7e53773a413a9"
+    }
+  ],
+  "evidenceHashes": [
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/before-sources.json",
+      "sha256": "f4416fcf69aec4e3732453d822dd536c694a43ae7f7ac7acf7a6cb5604a3c5fd"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/build-debug.log",
+      "sha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/build-release.log",
+      "sha256": "c9e24428be1e56c8408af17aacfea3413de3953bfe426d10eb768782f5005ebc"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/character-bindings.log",
+      "sha256": "5932bc5269e5c6e34910ecd3f36fca9797c3ba463775aafeaf2ec6cd4131e437"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/content-contract.json",
+      "sha256": "3432511b094954840acf28ccc8f2356fdc35ef7b1f458e4dd6a82e689cb50554"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/item-interactions/assertions.txt",
+      "sha256": "9cb3328b9aa80e38b692da1e5910593e6b5c17766e5b454bb28e6ff503ec57ad"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/item-interactions/coordinate-hits.txt",
+      "sha256": "7590d5d2177451b51f7c4e12465d227bf05589b8742611e4be1253d717e06948"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/item-interactions/legacy-filled-bag.png",
+      "sha256": "081d8ac11ab37bdcec0bd4646bed8812a587852fe3bf05e72f09ea939dddfc1b"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/item-interactions/legacy-filled-equipment.png",
+      "sha256": "7613d2436951116adb5af332b5d81daaa1d70cb885dea8aa32d86461d0a1ce0e"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/item-interactions/legacy-filled-extra.png",
+      "sha256": "7613d2436951116adb5af332b5d81daaa1d70cb885dea8aa32d86461d0a1ce0e"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/item-interactions/legacy-packet-trace.txt",
+      "sha256": "2616428afb2fc1488d5a1123ba5066899b1115f9a7901986dd2ca6637713906d"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/item-interactions/legacy-resources.txt",
+      "sha256": "47713d590a1b9214abdef7a0fc33d6c28a2b5a73a0cff9794375a5083020b498"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/item-interactions/metrics.json",
+      "sha256": "4b8a42b819e12cd95e4f9caab8fbd2c622b4541454cfe03ad922ee75be1c1311"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/item-interactions/official-filled-bag.png",
+      "sha256": "65958d83f7e8e8032a17eebd8b47b2cdae5ddeb395c6ba07e2dc55468055c653"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/item-interactions/official-filled-equipment.png",
+      "sha256": "54694478bc1323043a4c8aeb5af4cd3de7aa98f09f6020e7077ef356eb8f4fa5"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/item-interactions/official-filled-extra.png",
+      "sha256": "3510d45d158409b5dcec4cba75e0c3609ec1ecc6dc8688159eddc3371d07bee4"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/item-interactions/official-packet-trace.txt",
+      "sha256": "2616428afb2fc1488d5a1123ba5066899b1115f9a7901986dd2ca6637713906d"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/item-interactions/official-reentry-filled-bag.png",
+      "sha256": "65958d83f7e8e8032a17eebd8b47b2cdae5ddeb395c6ba07e2dc55468055c653"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/item-interactions/official-reentry-filled-equipment.png",
+      "sha256": "54694478bc1323043a4c8aeb5af4cd3de7aa98f09f6020e7077ef356eb8f4fa5"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/item-interactions/official-reentry-filled-extra.png",
+      "sha256": "3510d45d158409b5dcec4cba75e0c3609ec1ecc6dc8688159eddc3371d07bee4"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/item-interactions/official-reentry-packet-trace.txt",
+      "sha256": "2616428afb2fc1488d5a1123ba5066899b1115f9a7901986dd2ca6637713906d"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/item-interactions/tested-runtime.json",
+      "sha256": "0d5d86be2092e455f4ff2ebbe7d9683e4563f7d5e08de1bec231dc168202dc80"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/item-interactions.log",
+      "sha256": "ab9c87311be86e46702bd4397142393e28f9dd184bc5dcb5d1274cd8458620a5"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/python-tests.log",
+      "sha256": "fe47137ec0dbdbd1b746c75d7a24daf008ca122c3bb3b4ffc1a7e34278a90211"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/README.md",
+      "sha256": "780eb07e6979694a5ef59f53e430226f240fff78c7158459e3ed4ae45a35c8da"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/release-debug.json",
+      "sha256": "029e91a560e3d8f7f629e638e909c48857c07091576e98ad9c7684d2ccdc77a0"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/release-debug.log",
+      "sha256": "6e2c8baa90acf68658848c5a4109a1770e817a3274651768477f26d11c16b4eb"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/release-release.json",
+      "sha256": "25a09216ac3cd552d5d511b8876cdf8041997ba09099d5ba4fd108f438e90560"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/release-release.log",
+      "sha256": "7361d2017799d38b9265217ee6c36960272c0fa7be15b1d4039fc59482d4df0f"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/scene/legacy-hud.png",
+      "sha256": "a4baa304a5426cd071242025959b43b21a817620df350b453d486460f7ac08af"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/scene/legacy-panels.png",
+      "sha256": "7539d2eff4ea7c7d6e59a24f471bf09be726baf5283d86ffadd258bad67a40c4"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/scene/legacy-resources.txt",
+      "sha256": "47713d590a1b9214abdef7a0fc33d6c28a2b5a73a0cff9794375a5083020b498"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/scene/official-CharacterTab.png",
+      "sha256": "b4b3273ea7fe024e1da3c4ab72e906b309dd31def6a4938525f0f423558617f9"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/scene/official-extraEquipmentTab.png",
+      "sha256": "227c26eebbf097782fc40d7a510120ccc35493bbec5abdf87ed23f2af066fd3d"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/scene/official-HermitTab.png",
+      "sha256": "45b7b075bbdab4e7cdad86a5c82e3ccb10c11a89a8fff73d53f29a61e77721be"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/scene/official-hud.png",
+      "sha256": "f7b7f3da32cebfb201acb870a8ad2bd75d8d912e19edb5574b893b87c5758faf"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/scene/official-panels.png",
+      "sha256": "b4b3273ea7fe024e1da3c4ab72e906b309dd31def6a4938525f0f423558617f9"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/scene/official-reentry-hud.png",
+      "sha256": "944dbf94d8d914b682de37b2453a15386f3802e8f5590baacfb1686b42b28131"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/scene/official-reentry-panels.png",
+      "sha256": "e74076c0c581641f96aedafcb10b05b66438923bbdf57e4a7462886133a0005f"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/scene/official-reset-1024x768.png",
+      "sha256": "88e3a4c51d3eec0d9264ee3886c74fc497f05a558e6f70b347237856dfb7fd83"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/scene/official-reset-1280x800.png",
+      "sha256": "af32acc8d7571360daac40337e2949fdb2670eedca37320b51ca647bf7510403"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/scene/official-reset-1366x768.png",
+      "sha256": "277e8fb3b301c0c91832821025542bf1c9d3d75e045316cd889bf044f92d4f0b"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/scene/official-reset-1440x900.png",
+      "sha256": "b75ae55b1b24f8946413b9ccc8a8458651360635055d67d7c7b3b99dc0cfa4be"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/scene/official-reset-1600x900.png",
+      "sha256": "3fdb7ffff417e04fd614064e5493bfc08e699b760565e2eccd2a55fddd541d30"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/scene/official-reset-1920x1080.png",
+      "sha256": "6b510acf7ceb511b5a02db5f9beaae0a796c86e289537c0d8fb92034b5f8e6c9"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/scene/official-StatsTab.png",
+      "sha256": "6d363c66a1e625eacf00a1fceaa03129d33ce0c98d8291da2ee6248a30606382"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/scene/reset-pixel-probes.txt",
+      "sha256": "2c236cd844574b74b6d502b13ffed99b5cb29783fc53ea00587ca1543a18ac67"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/scene/tested-runtime.json",
+      "sha256": "0d5d86be2092e455f4ff2ebbe7d9683e4563f7d5e08de1bec231dc168202dc80"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/scene.log",
+      "sha256": "0d85d4de7905eb608acc989200b5dfcc19842b35b62586889490caf606d4a988"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/startup.log",
+      "sha256": "9c69c072b79c3e362371df0ef87f46a17d6ab9959c7d62a4b7bf4d746a5bd3ff"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/tooltip.log",
+      "sha256": "8a2f5263d4142e60daa90b1d6f36ef8b46a7381dfa6f8828f53f0b89e037bb28"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/tooltips/assertions.txt",
+      "sha256": "894765818cc7049ba253359843dae7c4cb7712b19e91c4e5689560d6b7b81b29"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/tooltips/legacy-0.png",
+      "sha256": "c4402083452b8f03546d5489d6876819d4a1f9bbb317a0083509eec7a6f5d7bc"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/tooltips/legacy-1.png",
+      "sha256": "c596e630b432b746e38c31433b97a73fd7f72063c64a413c058c89c914893568"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/tooltips/legacy-2.png",
+      "sha256": "d533da0090b3f98a1a3f9ebf2b03394beb9c438e46a86151919344fb04891e69"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/tooltips/legacy-3.png",
+      "sha256": "7726a4958223cf749ca2739ff97fbae6794f22fd0ed59fe9db255a4075745c07"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/tooltips/legacy-4.png",
+      "sha256": "2b89760dbc7f288d71cbcebb1f9217c7df9012cb0fe59b6b96674e4e60d5a6b6"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/tooltips/legacy-5.png",
+      "sha256": "e204d77a35d442ac25b008f23e97c84c7d648de06012fa15ad012480e7f6d4a1"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/tooltips/legacy-6.png",
+      "sha256": "7ab68730f65d48dbbaed3cbefefcefb62a8f066c8fa6a86fbbee0ff4d3fcfb7a"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/tooltips/legacy-resources.txt",
+      "sha256": "47713d590a1b9214abdef7a0fc33d6c28a2b5a73a0cff9794375a5083020b498"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/tooltips/metrics.json",
+      "sha256": "412eb34b5a912df9ee8eb7e094cb22d4b19d080a3aa9edbc7b80652f51265036"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/tooltips/official-0.png",
+      "sha256": "40137a36b466f91596fc87af48bea879be4d0af550953bc92ae546813781a7e0"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/tooltips/official-1.png",
+      "sha256": "e0a657d0a7d47f20899d7e24392c9666fe5258068ec794c79e47cf92a0744986"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/tooltips/official-2.png",
+      "sha256": "04bfd0226e940f3d6006f974a84defda4b68ae6a4d455ce9454c123c7ad6a2cc"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/tooltips/official-3.png",
+      "sha256": "20ea0052d6d1fea4dc8b312df90813c3ebe8476bd670782dcec6b55f77f3d5bb"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/tooltips/official-4.png",
+      "sha256": "082ba443bd28bdde52631b4854b405b04ca93207047392f84a23bf087468775b"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/tooltips/official-5.png",
+      "sha256": "1fc40fb81e6b38d82e02722c531d58ed6dfe91d43662dab2bf42042f11914741"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/tooltips/official-6.png",
+      "sha256": "f2eccaaaf748fbbe4c3690d39a45c4197e59a49fadaa44518b2cbde7082a2f25"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/tooltips/official-resize-1024x768.png",
+      "sha256": "2de330ff764d8241dcb708c7c802a0bcd092cc976c3677f356885b10c73b3f03"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/tooltips/official-resize-1280x800.png",
+      "sha256": "674d16198f0d3998af8302ca4a1f44fe3b3578eb388302c22a2b525adf431b92"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/tooltips/official-resize-1366x768.png",
+      "sha256": "1fe00f56e71ce718ff3025eaee741cc2840514c4a81c436c201e0418e099da61"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/tooltips/official-resize-1440x900.png",
+      "sha256": "ca15287eed75a24ba6892ae5f1a99c478ea2c7005aa7f421d1554d3f646c6b11"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/tooltips/official-resize-1600x900.png",
+      "sha256": "3f4c1f1204ace9ba3ba2b0d91df1529131291d8f2d3c011fe45bdb22ab8448ad"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/tooltips/official-resize-1920x1080.png",
+      "sha256": "849fb0b9c16478dd3d662a9562b4500958f8eaf7bf6225babb455ce4f70daf35"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/tooltips/rollback-tooltip.png",
+      "sha256": "17d37ed4b09cbdf4898c122cc8275bef9492d5c0a95164edb6735c6b0697e81d"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/tooltips/tested-runtime.json",
+      "sha256": "0d5d86be2092e455f4ff2ebbe7d9683e4563f7d5e08de1bec231dc168202dc80"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/whitespace.log",
+      "sha256": "c88af3f0305494eb460be51c4ab5bcd99caf6eb847109d977af760542dffc8a1"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/runtime-audit.json",
+      "sha256": "b65d301ecfa55f6e163868f802b86c7260dfd9798da38d22256621b13a77c0e3"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/task-validation.log",
+      "sha256": "a0bf6a8e0738de35b2e36e703a81f351d36919785b1be660f5f7e53773a413a9"
+    }
+  ]
+}

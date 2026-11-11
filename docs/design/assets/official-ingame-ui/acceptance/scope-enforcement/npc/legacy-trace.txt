@@ -1,0 +1,83 @@
+style|{Width=509, Height=205}|{X=9,Y=16,Width=491,Height=180}|False|False|False|True|{X=19,Y=26}|{Width=471, Height=160}|[Font: Name=Microsoft Sans Serif, Size=8, Units=3, GdiCharSet=1, GdiVerticalFont=False]|-3758493|False|Left, Default, Top, WordBreak, WordEllipsis|{X=483,Y=5}|{Width=21, Height=21}|Interface|15|True
+packet|NPCButton|17
+packet|NPCButton|29
+packet|NPCButton|17
+packet|NPCButton|2147483647
+packet|NPCButton|2147483647
+packet|NPCClose
+packet|NPCClose
+service|BuySell|NPCSellBox|{X=245,Y=205}|{Width=264, Height=342}|{X=9,Y=37,Width=246,Height=296}|True|False|{X=238,Y=5}|{Width=21, Height=21}|15|True
+packet|NPCClose
+service|Repair|NPCRepairBox|{X=0,Y=205}|{Width=509, Height=292}|{X=9,Y=37,Width=491,Height=246}|True|False|{X=483,Y=5}|{Width=21, Height=21}|15|True
+packet|NPCClose
+service|Refine|NPCRefineBox|{X=0,Y=205}|{Width=509, Height=170}|{X=9,Y=37,Width=491,Height=124}|True|False|{X=483,Y=5}|{Width=21, Height=21}|15|True
+packet|NPCClose
+service|RefineRetrieve|NPCRefineRetrieveBox|{X=0,Y=205}|{Width=509, Height=226}|{X=9,Y=37,Width=491,Height=128}|True|True|{X=483,Y=5}|{Width=21, Height=21}|15|True
+packet|NPCClose
+service|CompanionManage|NPCAdoptCompanionBox|{X=216,Y=205}|{Width=293, Height=176}|{X=9,Y=37,Width=275,Height=130}|True|False|{X=267,Y=5}|{Width=21, Height=21}|15|True
+service|CompanionManage|NPCCompanionStorageBox|{X=0,Y=205}|{Width=216, Height=395}|{X=9,Y=37,Width=198,Height=349}|True|False|{X=190,Y=5}|{Width=21, Height=21}|15|True
+packet|NPCClose
+service|WeddingRing|NPCWeddingRingBox|{X=431,Y=205}|{Width=78, Height=110}|{X=9,Y=16,Width=60,Height=85}|False|False|{X=52,Y=5}|{Width=21, Height=21}|15|True
+packet|NPCClose
+service|RefinementStone|NPCRefinementStoneBox|{X=0,Y=205}|{Width=509, Height=176}|{X=9,Y=37,Width=491,Height=130}|True|False|{X=483,Y=5}|{Width=21, Height=21}|15|True
+packet|NPCClose
+service|MasterRefine|NPCMasterRefineBox|{X=0,Y=205}|{Width=509, Height=170}|{X=9,Y=37,Width=491,Height=124}|True|False|{X=483,Y=5}|{Width=21, Height=21}|15|True
+packet|NPCClose
+packet|NPCClose
+service|ItemFragment|NPCItemFragmentBox|{X=245,Y=205}|{Width=264, Height=202}|{X=9,Y=37,Width=246,Height=156}|True|False|{X=238,Y=5}|{Width=21, Height=21}|15|True
+packet|NPCClose
+service|AccessoryRefineUpgrade|NPCAccessoryUpgradeBox|{X=0,Y=205}|{Width=509, Height=176}|{X=9,Y=37,Width=491,Height=130}|True|False|{X=483,Y=5}|{Width=21, Height=21}|15|True
+packet|NPCClose
+service|AccessoryRefineLevel|NPCAccessoryLevelBox|{X=245,Y=205}|{Width=264, Height=262}|{X=9,Y=37,Width=246,Height=216}|True|False|{X=238,Y=5}|{Width=21, Height=21}|15|True
+packet|NPCClose
+service|AccessoryReset|NPCAccessoryResetBox|{X=391,Y=205}|{Width=118, Height=130}|{X=9,Y=16,Width=100,Height=105}|False|False|{X=92,Y=5}|{Width=21, Height=21}|15|True
+packet|NPCClose
+service|WeaponCraft|NPCWeaponCraftBox|{X=241,Y=205}|{Width=268, Height=326}|{X=9,Y=37,Width=250,Height=280}|True|False|{X=242,Y=5}|{Width=21, Height=21}|15|True
+packet|NPCClose
+buy-sell|0|False|False
+packet|NPCClose
+buy-sell|1|True|False
+packet|NPCClose
+buy-sell|2|False|True
+packet|NPCClose
+buy-sell|3|True|True
+packet|NPCClose
+packet|NPCClose
+packet|NPCButton|61
+packet|NPCClose
+packet|NPCButton|29
+packet|NPCClose
+quantity|{Width=218, Height=144}|{X=9,Y=37,Width=200,Height=46}|{X=89,Y=51}|{Width=90, Height=18}|{X=119,Y=101}|{Width=80, Height=24}
+packet|NPCBuy
+packet|NPCBuy
+packet|NPCBuy
+packet|NPCBuy
+packet|NPCClose
+sale-quantity|{Width=218, Height=144}|{X=9,Y=37,Width=200,Height=46}|{X=89,Y=51}|{X=119,Y=101}
+packet|NPCSell
+sell|Inventory:0:3;Inventory:1:1;Inventory:2:1;Inventory:3:1;Inventory:4:1;Inventory:5:1;Inventory:6:1;Inventory:7:1;Inventory:8:1;Inventory:9:1;Inventory:10:1;Inventory:11:1;Inventory:12:1;Inventory:13:1;Inventory:14:1;Inventory:15:1;Inventory:16:1;Inventory:17:1;Inventory:18:1;Inventory:19:1;Inventory:20:1;Inventory:21:1;Inventory:22:1;Inventory:23:1;Inventory:24:1;Inventory:25:1;Inventory:26:1;Inventory:27:1;Inventory:28:1;Inventory:29:1;Inventory:30:1;Inventory:31:1;Inventory:32:1;Inventory:33:1;Inventory:34:1;Inventory:35:1;Inventory:36:1;Inventory:37:1;Inventory:38:1;Inventory:39:1;Inventory:40:1;Inventory:41:1;Inventory:42:1;Inventory:43:1;Inventory:44:1;Inventory:45:1;Inventory:46:1;Inventory:47:1;Inventory:48:1
+packet|NPCClose
+packet|NPCRepair
+repair|Inventory:0:3;Inventory:1:1;Inventory:2:1;Inventory:3:1;Inventory:4:1;Inventory:5:1;Inventory:6:1;Inventory:7:1;Inventory:8:1;Inventory:9:1;Inventory:10:1;Inventory:11:1;Inventory:12:1;Inventory:13:1;Inventory:14:1;Inventory:15:1;Inventory:16:1;Inventory:17:1;Inventory:18:1;Inventory:19:1;Inventory:20:1;Inventory:21:1;Inventory:22:1;Inventory:23:1;Inventory:24:1;Inventory:25:1;Inventory:26:1;Inventory:27:1;Inventory:28:1;Inventory:29:1;Inventory:30:1;Inventory:31:1;Inventory:32:1;Inventory:33:1;Inventory:34:1;Inventory:35:1;Inventory:36:1;Inventory:37:1;Inventory:38:1;Inventory:39:1;Inventory:40:1;Inventory:41:1;Inventory:42:1;Inventory:43:1;Inventory:44:1;Inventory:45:1;Inventory:46:1;Inventory:47:1;Inventory:48:1;Storage:0:1;Storage:1:1;Storage:2:1;Storage:3:1;Storage:4:1;Storage:5:1;Storage:6:1;Storage:7:1;Storage:8:1;Storage:9:1;Storage:10:1;Storage:11:1;Storage:12:1;Storage:13:1;Storage:14:1;Storage:15:1;Storage:16:1;Storage:17:1;Storage:18:1;Storage:19:1;Storage:20:1
+packet|NPCRepair
+equipment-repair|Equipment:0:1
+packet|NPCClose
+packet|NPCRefine
+refine|Phantom|Quick|Inventory:0:1;Inventory:1:1;Inventory:2:1;Inventory:3:1;Inventory:4:1;Inventory:5:1;Inventory:6:1;Inventory:7:1;Inventory:8:1
+packet|NPCClose
+packet|NPCRefineRetrieve
+retrieve|1|800
+packet|NPCRefineRetrieve
+retrieve|3|802
+packet|NPCRefineRetrieve
+retrieve|7|806
+packet|NPCRefineRetrieve
+retrieve|12|811
+packet|NPCClose
+packet|QuestComplete
+packet|QuestComplete
+packet|QuestComplete
+packet|QuestAccept
+packet|NPCClose
+packet|QuestComplete
+packet|NPCClose

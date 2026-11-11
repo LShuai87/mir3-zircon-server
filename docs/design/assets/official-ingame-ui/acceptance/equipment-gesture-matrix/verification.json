@@ -1,0 +1,1862 @@
+{
+  "schemaVersion": 1,
+  "kind": "official-equipment-gesture-matrix-verification",
+  "checkedAtLocalDate": "2026-11-08",
+  "referenceResolution": [
+    1024,
+    768
+  ],
+  "releaseAccepted": false,
+  "results": {
+    "suites": {
+      "itemInteractions": {
+        "checks": 20359,
+        "scenes": 3,
+        "presentedFrames": 15,
+        "deviceResets": 6,
+        "coordinateHits": 2076,
+        "fixtureImage": 1,
+        "serverConnected": false,
+        "releaseAccepted": false
+      },
+      "itemDrop": {
+        "checks": 3775,
+        "scenes": 3,
+        "presentedFrames": 63,
+        "deviceResets": 18,
+        "coordinateHits": 327,
+        "fixtureImage": 1,
+        "serverConnected": false,
+        "releaseAccepted": false
+      },
+      "itemTooltip": {
+        "checks": 38968,
+        "scenes": 3,
+        "items": 7,
+        "presentedFrames": 30,
+        "deviceResets": 8,
+        "serverConnected": false,
+        "releaseAccepted": false
+      },
+      "npcPreservation": {
+        "checks": 46129,
+        "scenes": 3,
+        "presentedFrames": 157,
+        "deviceResets": 83,
+        "coordinateHits": 1472,
+        "comparedPixels": 2399935,
+        "dialogTypes": 15,
+        "dependentWindows": 16,
+        "serverConnected": false,
+        "releaseAccepted": false
+      },
+      "storageScene": {
+        "checks": 76,
+        "presentedFrames": 4,
+        "deviceResets": 4,
+        "comparedPixels": 243840
+      }
+    },
+    "productionSourceChanged": false,
+    "realServerBehaviorVerified": false,
+    "finalVisualAcceptance": false
+  },
+  "implementation": [
+    "Expand coordinate-driven automatic wear coverage from Weapon to all 16 slots plus DarkStone in Amulet, using right-click and double-click.",
+    "Verify native paired-slot selection and right-slot replacement when both bracelet/ring slots are occupied; preserve ordinary equipped-item double-click no-removal behavior.",
+    "Repair five test entrypoints to include shared native scene-transition and character-refresh partial source dependencies."
+  ],
+  "verifiedBehaviors": [
+    "Legacy, Official and Official scene reentry retain identical ordered item request traces.",
+    "Automatic wear keeps the target page hidden; pending requests cannot duplicate, refusal unlocks without speculative mutation, success updates exact object identities, and the other 15 slots remain untouched.",
+    "Removal uses right-click and responses are checked with the equipment page hidden. Existing manual movement, bag, belt, merge and split checks remain.",
+    "Inspected 1024x768 equipment and extra-page renders. Repeated potion icons are synthetic item fixtures and do not establish real equipment-icon selection. Black world is synthetic.",
+    "All five modified test entrypoints compile and execute using identical previously built Debug runtime files. Debug and Release dependencies, package and immutable plan hashes are rechecked."
+  ],
+  "sourceChanges": [
+    {
+      "path": "tests/game-ui/OfficialUiItemInteractionTests.cs",
+      "beforeSha256": "60da0fe623f888c4a75f759301ee02ec7c5995528bae13f6a03efd73afb76cc3",
+      "afterSha256": "03476904305f01a9a7278c000056eb7873d30445a407b0bd2c758af06c0b28b6"
+    },
+    {
+      "path": "tests/Run-GameUiItemInteractionTests.ps1",
+      "beforeSha256": "bf2896523ee2b1d1c025043a1a104c2cd3d8041d996fa311bfd0c796a91a8645",
+      "afterSha256": "b3b5dc5fdb34ae93760885e9070db3531aae6e79bdc02ac272ab7158cfe02b15"
+    },
+    {
+      "path": "tests/Run-GameUiItemDropTests.ps1",
+      "beforeSha256": "43cd81f755efbf9e183510b2e27a6620f0975ddc8982672ee930274dfde78b6a",
+      "afterSha256": "bc8859f7fe159bd58e9f8a36bd1c48a46ea740532ee30da6f9f649828b164a66"
+    },
+    {
+      "path": "tests/Run-GameUiItemTooltipTests.ps1",
+      "beforeSha256": "9584b9716d024daf9d76f9d783c10f0ad8395b0f62f37231de9682937a88e637",
+      "afterSha256": "949c8e4c41c13feb18ffd503c0afa5c546948f7501345e625a82768905ea6ab5"
+    },
+    {
+      "path": "tests/Run-GameUiNpcTests.ps1",
+      "beforeSha256": "9c0c4b3cda994e154c79714a3ed77cff2cf08f20bce4fdd7df0f362265a7b37a",
+      "afterSha256": "93ecf93d7e95d475f97d9fb9d8b455d6abf8034b8ad89da9e1ebbd47d19d4da1"
+    },
+    {
+      "path": "tests/Run-GameUiStorageSceneTests.ps1",
+      "beforeSha256": "3cba6c0c37627b0cdda5ddbc21f8c2c192881545687f774a6b7113d61e90933e",
+      "afterSha256": "d6ac512610ccc7bb8f17eabe46fad1729853e61820c1c69fbac796e648ee9ad5"
+    }
+  ],
+  "firstTrackedSourceChanges": [],
+  "newlyTrackedSources": [],
+  "sourceHashes": [
+    {
+      "path": "tests/game-ui/OfficialUiItemInteractionTests.cs",
+      "sha256": "03476904305f01a9a7278c000056eb7873d30445a407b0bd2c758af06c0b28b6"
+    },
+    {
+      "path": "tests/Run-GameUiItemInteractionTests.ps1",
+      "sha256": "b3b5dc5fdb34ae93760885e9070db3531aae6e79bdc02ac272ab7158cfe02b15"
+    },
+    {
+      "path": "tests/Run-GameUiItemDropTests.ps1",
+      "sha256": "bc8859f7fe159bd58e9f8a36bd1c48a46ea740532ee30da6f9f649828b164a66"
+    },
+    {
+      "path": "tests/Run-GameUiItemTooltipTests.ps1",
+      "sha256": "949c8e4c41c13feb18ffd503c0afa5c546948f7501345e625a82768905ea6ab5"
+    },
+    {
+      "path": "tests/Run-GameUiNpcTests.ps1",
+      "sha256": "93ecf93d7e95d475f97d9fb9d8b455d6abf8034b8ad89da9e1ebbd47d19d4da1"
+    },
+    {
+      "path": "tests/Run-GameUiStorageSceneTests.ps1",
+      "sha256": "d6ac512610ccc7bb8f17eabe46fad1729853e61820c1c69fbac796e648ee9ad5"
+    }
+  ],
+  "commands": [
+    {
+      "command": [
+        "C:/Users/shuai/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+        "docs/design/assets/official-ingame-ui/acceptance/equipment-gesture-matrix/audit-history.py",
+        "--output",
+        "docs/design/assets/official-ingame-ui/acceptance/equipment-gesture-matrix/history-audit.json"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/equipment-gesture-matrix/history-audit.log",
+      "logSha256": "b3adc3ce9dd9eecdb586b86d0975c7e8a7b5605c9ca88887752adf596c09f67a"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiItemDropTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-drop-v1"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/equipment-gesture-matrix/item-drop.log",
+      "logSha256": "eeae7a966e2bb531d349df0cd49c652131ef64eac2de47fd11ce133ab1273a70"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiItemInteractionTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-final-v1"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/equipment-gesture-matrix/item-interactions-final.log",
+      "logSha256": "3955dc0c964742bb67590881173f47f9b6716d38fe2ccbff2cbc933478693374"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiItemTooltipTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-tooltip-v1"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/equipment-gesture-matrix/item-tooltip.log",
+      "logSha256": "e99077cd8fc1aeb60389f50a9a4c1f66fc6ac4d44093c73b8c5e468f702e5d4e"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiNpcTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/equipment-gesture-matrix/npc.log",
+      "logSha256": "2eb281241a67e93ffacfeef3eb3257cb64981cf50b2b53a95124c584663b2e3d"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiStorageSceneTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-CandidatePath",
+        "E:/workspace/mir3-ui-work/warehouse-assets-20261108-v1/zl-v2/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-storage-v1"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/equipment-gesture-matrix/storage-scene.log",
+      "logSha256": "dddec952051f02d804672ad591f2bfd739dac4ee7ed141c0b82c9b1771d5e763"
+    },
+    {
+      "command": [
+        "C:/Users/shuai/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+        "build/game-ui/Validate-UiTasks.py"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/equipment-gesture-matrix/task-validation.log",
+      "logSha256": "90e3ddffa807ef19523e77855653984be659ff7ab47ec66f04d41348c4cb85b3"
+    },
+    {
+      "command": [
+        "C:/Users/shuai/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+        "docs/design/assets/official-ingame-ui/acceptance/equipment-gesture-matrix/check-whitespace.py"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/equipment-gesture-matrix/whitespace.log",
+      "logSha256": "d5036b303f1c186877d8c9e3e66ee95b88f6c78ec50d3f825f6ce614b333a40a"
+    }
+  ],
+  "failedAttempts": [
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiItemInteractionTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-diagnostics-v1"
+      ],
+      "result": "fail",
+      "exitCode": 1,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/equipment-gesture-matrix/item-interactions-diagnostics.log",
+      "logSha256": "bb61934e965f2e4dbbe058ffc649974d248911ef8a91f6ea9167e97879f8cfba",
+      "explanation": "Diagnostic identifies automatic remove double/Weapon/Weapon/False on Legacy. Corrected the test to expect no removal or packet from ordinary equipped-item double-click; right-click removal remains covered."
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiItemInteractionTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-v2"
+      ],
+      "result": "fail",
+      "exitCode": 1,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/equipment-gesture-matrix/item-interactions-v2.log",
+      "logSha256": "a2ae492584b7150e4c3448d68e0e787eb80cd77eb23b1cb62d3c6dbf6a223c5f",
+      "explanation": "Expanded test incorrectly expected ordinary equipped-item double-click to remove equipment. It failed on native Legacy; no production behavior was changed."
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiItemInteractionTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-v1"
+      ],
+      "result": "fail",
+      "exitCode": 1,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/equipment-gesture-matrix/item-interactions.log",
+      "logSha256": "34dc7acce6aae8ced70d218a36e437e61d4f22861daa3355a3bdc2110068c44f",
+      "explanation": "Compilation failed before execution because five dependent test runners omitted two shared native-scene partial sources. All five source lists are repaired and separately executed."
+    }
+  ],
+  "builds": {
+    "debug": {
+      "buildId": "gameui-e69eb10eb419e4fbb434cad8d61077e978aed58dde6abce7dfc56af0bcbbcbfd",
+      "client": {
+        "path": "Zircon.exe",
+        "length": 1386496,
+        "sha256": "9465cf0813fd5c915b0906c536805c66b7c0cfd6ed5360cbb776b0d865c239a2"
+      }
+    },
+    "release": {
+      "buildId": "gameui-61e04e49c0c96da2e49cb62ad12a5a72577200893a42ee79c3883c0ebb5e1296",
+      "client": {
+        "path": "Zircon.exe",
+        "length": 1281536,
+        "sha256": "ddbb7604b64e80101851231a239d78a0708c600fee47c1ddb1a6d042a6af1b63"
+      }
+    }
+  },
+  "runtimeRebuiltThisTurn": false,
+  "runtimeManifestReferences": {
+    "debug": "docs/design/assets/official-ingame-ui/acceptance/hud-font-ownership/debug-build.json",
+    "release": "docs/design/assets/official-ingame-ui/acceptance/hud-font-ownership/release-build.json"
+  },
+  "package": {
+    "path": "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+    "frameCount": 94,
+    "sha256": "dd45cbf51d976a69d28269ee0d27a985def1ee1693cab2b509b74ae347a880a4"
+  },
+  "candidate": {
+    "path": "E:/workspace/mir3-ui-work/warehouse-assets-20261108-v1/zl-v2/OfficialV1.Zl",
+    "frameCount": 1,
+    "sha256": "471169dfa093b521f3c700c5a993e4e763aa17a45b2e16f440d961c0c7bf4cec"
+  },
+  "sourcePlanSha256": "f8c0a002b3821fabb54993792c354c4eff35eec51f9cfdc418535017c13069e9",
+  "limitations": [
+    "Socket-free queues and synthetic server replies do not establish real account/server transactions, real equipment icons or live IME behavior.",
+    "Expanded gesture coverage is A03 supporting evidence; live-server and final visual acceptance remain open. No claim of zero bugs.",
+    "Tasks remain 7 done / 3 in_progress / 18 not_started and G0-2/3/4/5 remain open. RuntimeReady=false, productionBindingAllowed=false, releaseAccepted=false. Default Legacy. NPC cards, secondary popups and settings retain existing style. Official installation is read-only; no commit, push or deployment."
+  ],
+  "evidenceHashes": [
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-drop-v1/assertions.txt",
+      "sha256": "26a33ae0914795374a57da61cca573b11e2f2e3e4e8b22840229f0df4c6343ad"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-drop-v1/coordinate-hits.txt",
+      "sha256": "590d31d3a14c9ac11cfa1f438f01fdc7f7281603b61b9c915ef40e8ab2c63682"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-drop-v1/legacy-packet-trace.txt",
+      "sha256": "3ed73818b96633cba7d2d5ce735bb5d015bc404577a6741f1b3a76c82536ec1c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-drop-v1/legacy-resources.txt",
+      "sha256": "47713d590a1b9214abdef7a0fc33d6c28a2b5a73a0cff9794375a5083020b498"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-drop-v1/legacy-v1-1024x768-MonsterDropListButton.png",
+      "sha256": "36644e2b45205409f22a52b722a2caa3a14a2fcb8afbb73026c2cb1265dfa218"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-drop-v1/legacy-v1-1024x768-RemoteFragmentButton.png",
+      "sha256": "161fa008cd67019765f19b7e12eddcdfb38adf07e324c5f5392f290563531928"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-drop-v1/legacy-v1-1024x768-RemoteSellButton.png",
+      "sha256": "dc1c22ec53a5d8ec46278c22f772e4238e8fcc5811d2cddea2e568f32e49f496"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-drop-v1/legacy-v2-800x600-MonsterDropListButton.png",
+      "sha256": "9309bf6ddf7d2252ce1dd2cdda4ddff1d07bad68a3e6b89fe0f64e2ae6ad05ff"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-drop-v1/legacy-v2-800x600-RemoteFragmentButton.png",
+      "sha256": "e8207d413449e9c642a42720643d1049081dfa366baf76036aa229f5f562df3a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-drop-v1/legacy-v2-800x600-RemoteSellButton.png",
+      "sha256": "c930c372755e53fedc71f25f02980cca7b386186a1638949e9f6795efc8de3d6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-drop-v1/legacy-v3-1280x720-MonsterDropListButton.png",
+      "sha256": "606efa322678a6f6e43b6a57990798b3a7f6c0adf6f1cb2c6122c853e1874473"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-drop-v1/legacy-v3-1280x720-RemoteFragmentButton.png",
+      "sha256": "d84ad65d1f70879f4fb0a4a7cf37444486a574ead26746cd08dbf597bbd8d4e1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-drop-v1/legacy-v3-1280x720-RemoteSellButton.png",
+      "sha256": "a785504bb7960d10b8cb217c45368ef52d5b4643d5eecd46e252f2e5e62e7c47"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-drop-v1/legacy-v4-1280x800-MonsterDropListButton.png",
+      "sha256": "1ddcf2305a7b8fdf0a7e5a04208baf529e71337fbcda1a0726265e8f5b0a2afb"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-drop-v1/legacy-v4-1280x800-RemoteFragmentButton.png",
+      "sha256": "38a63f57e236cd002741105ee933f49870967d2420c413aeed86f173358ebdab"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-drop-v1/legacy-v4-1280x800-RemoteSellButton.png",
+      "sha256": "c82458924d980d021bdacd344bea579a696d63dab35c145e2e03a6c5164f1893"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-drop-v1/legacy-v5-1366x768-MonsterDropListButton.png",
+      "sha256": "b209496d63025307f21e66e50a2a7b7a1b4fb27dc743dd9c1bdcd6b8f660febd"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-drop-v1/legacy-v5-1366x768-RemoteFragmentButton.png",
+      "sha256": "fa263ae1b16a5abe1a2453f97e1dedf94e108ec40fd6d926d8975e6e3984c67a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-drop-v1/legacy-v5-1366x768-RemoteSellButton.png",
+      "sha256": "f48f5d29878d9cf659c3842d0e6de93c48ea3cf5b256d54207e049e675a634c8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-drop-v1/legacy-v6-1920x1080-MonsterDropListButton.png",
+      "sha256": "b6eeb0dc1cd230518349fa1e443c080fdcd7b8f013d7f794d1f22edbcf710845"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-drop-v1/legacy-v6-1920x1080-RemoteFragmentButton.png",
+      "sha256": "c127c1aad5d813e41bef26ca77ed0caee84ee2be79d51230aa69529f69e57308"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-drop-v1/legacy-v6-1920x1080-RemoteSellButton.png",
+      "sha256": "58318016e75421f992427e571a4967f1023685bbfe92f4a29b8a905e6a9bb2ac"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-drop-v1/legacy-v7-1024x768-MonsterDropListButton.png",
+      "sha256": "36644e2b45205409f22a52b722a2caa3a14a2fcb8afbb73026c2cb1265dfa218"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-drop-v1/legacy-v7-1024x768-RemoteFragmentButton.png",
+      "sha256": "161fa008cd67019765f19b7e12eddcdfb38adf07e324c5f5392f290563531928"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-drop-v1/legacy-v7-1024x768-RemoteSellButton.png",
+      "sha256": "dc1c22ec53a5d8ec46278c22f772e4238e8fcc5811d2cddea2e568f32e49f496"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-drop-v1/metrics.json",
+      "sha256": "c9a483bebdeadd20a6f50b6e1d4f0194f481671f72cbf2da0cd17f07e2195fc9"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-drop-v1/official-packet-trace.txt",
+      "sha256": "3ed73818b96633cba7d2d5ce735bb5d015bc404577a6741f1b3a76c82536ec1c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-drop-v1/official-reentry-packet-trace.txt",
+      "sha256": "3ed73818b96633cba7d2d5ce735bb5d015bc404577a6741f1b3a76c82536ec1c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-drop-v1/official-reentry-v1-1024x768-MonsterDropListButton.png",
+      "sha256": "4cdea57c01673e6df6cbf6a3854bcc37196704930293da779fd783d5e45eff5a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-drop-v1/official-reentry-v1-1024x768-RemoteFragmentButton.png",
+      "sha256": "b24b38d25d3e622b9e71228764d9ef12560dbfbb667c0336609288450152465d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-drop-v1/official-reentry-v1-1024x768-RemoteSellButton.png",
+      "sha256": "e4c6f8fd6ec2922e5b8314ebb9eb55cab8dd01d06a6edfe5646c3104a5d72d7a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-drop-v1/official-reentry-v2-800x600-MonsterDropListButton.png",
+      "sha256": "0d9b6ca5aae26f37bb511fd665518aeaf661f4c2c23d14f75c154105793031ca"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-drop-v1/official-reentry-v2-800x600-RemoteFragmentButton.png",
+      "sha256": "0fdb66390e07278eecb79625c5df393c83ad953bd53e49713d02ea7428b44912"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-drop-v1/official-reentry-v2-800x600-RemoteSellButton.png",
+      "sha256": "99abcb011707533149dffd3805f50315f328b099c2406112165244ba02373590"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-drop-v1/official-reentry-v3-1280x720-MonsterDropListButton.png",
+      "sha256": "0fb0fa7cee92d988891ddac9fb140506207dee2d23c57a6a8f7908ca9d68b531"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-drop-v1/official-reentry-v3-1280x720-RemoteFragmentButton.png",
+      "sha256": "61668660b6ac6d05e22115943d703cd5baa74952caa169cd9f8f65897186a099"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-drop-v1/official-reentry-v3-1280x720-RemoteSellButton.png",
+      "sha256": "4aa733daf2abe0e93b0fac35adefe4f26c05d64c64f4ae52df0f71d8aa59dc71"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-drop-v1/official-reentry-v4-1280x800-MonsterDropListButton.png",
+      "sha256": "028dbb7cb85d03d85e35e002a9dfd8ba7d9a0934c9864d1dc6fc0c4fdda756dc"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-drop-v1/official-reentry-v4-1280x800-RemoteFragmentButton.png",
+      "sha256": "70131cce98cacef2ffee0d9c55da5ffd133bf29a5c221732222b12c5dbb52641"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-drop-v1/official-reentry-v4-1280x800-RemoteSellButton.png",
+      "sha256": "a5c705d5de71dc3a1fe9a4b7aa81bb6fc12606e0e5b75fc67ecdd90041fb9d1e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-drop-v1/official-reentry-v5-1366x768-MonsterDropListButton.png",
+      "sha256": "a532fab3b026ad84f2d8cfc13d5713d9616f31a7cdbeb98d3c2452a5731a93cd"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-drop-v1/official-reentry-v5-1366x768-RemoteFragmentButton.png",
+      "sha256": "efd341a1a4df1734366820e17eb280e78f7c36a304867b236ad0e7d1db0baaa3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-drop-v1/official-reentry-v5-1366x768-RemoteSellButton.png",
+      "sha256": "301f3de59b4782bd12e1893d09df4df4e6e2baba500057b4fd2e524f5c4da672"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-drop-v1/official-reentry-v6-1920x1080-MonsterDropListButton.png",
+      "sha256": "26d27267f1227c600f6f14976c41be2a0405bcc5c5b20d02bd167d661180645b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-drop-v1/official-reentry-v6-1920x1080-RemoteFragmentButton.png",
+      "sha256": "11d00c04bc66225165ac7e07acc781791b1b334f6e35d86a5522dd83d57dcd66"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-drop-v1/official-reentry-v6-1920x1080-RemoteSellButton.png",
+      "sha256": "b7ec5a008a0bfc7aa07075508ab384f6fa7a5a338b205c0839348363fb1aaded"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-drop-v1/official-reentry-v7-1024x768-MonsterDropListButton.png",
+      "sha256": "4cdea57c01673e6df6cbf6a3854bcc37196704930293da779fd783d5e45eff5a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-drop-v1/official-reentry-v7-1024x768-RemoteFragmentButton.png",
+      "sha256": "b24b38d25d3e622b9e71228764d9ef12560dbfbb667c0336609288450152465d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-drop-v1/official-reentry-v7-1024x768-RemoteSellButton.png",
+      "sha256": "e4c6f8fd6ec2922e5b8314ebb9eb55cab8dd01d06a6edfe5646c3104a5d72d7a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-drop-v1/official-v1-1024x768-MonsterDropListButton.png",
+      "sha256": "4cdea57c01673e6df6cbf6a3854bcc37196704930293da779fd783d5e45eff5a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-drop-v1/official-v1-1024x768-RemoteFragmentButton.png",
+      "sha256": "1adf3fc0edba7b3ac5613d190149e781071b2ccab2c4d0ca4cec5dafd4c4f0ac"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-drop-v1/official-v1-1024x768-RemoteSellButton.png",
+      "sha256": "e4c6f8fd6ec2922e5b8314ebb9eb55cab8dd01d06a6edfe5646c3104a5d72d7a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-drop-v1/official-v2-800x600-MonsterDropListButton.png",
+      "sha256": "0d9b6ca5aae26f37bb511fd665518aeaf661f4c2c23d14f75c154105793031ca"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-drop-v1/official-v2-800x600-RemoteFragmentButton.png",
+      "sha256": "0fdb66390e07278eecb79625c5df393c83ad953bd53e49713d02ea7428b44912"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-drop-v1/official-v2-800x600-RemoteSellButton.png",
+      "sha256": "99abcb011707533149dffd3805f50315f328b099c2406112165244ba02373590"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-drop-v1/official-v3-1280x720-MonsterDropListButton.png",
+      "sha256": "0fb0fa7cee92d988891ddac9fb140506207dee2d23c57a6a8f7908ca9d68b531"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-drop-v1/official-v3-1280x720-RemoteFragmentButton.png",
+      "sha256": "61668660b6ac6d05e22115943d703cd5baa74952caa169cd9f8f65897186a099"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-drop-v1/official-v3-1280x720-RemoteSellButton.png",
+      "sha256": "4aa733daf2abe0e93b0fac35adefe4f26c05d64c64f4ae52df0f71d8aa59dc71"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-drop-v1/official-v4-1280x800-MonsterDropListButton.png",
+      "sha256": "028dbb7cb85d03d85e35e002a9dfd8ba7d9a0934c9864d1dc6fc0c4fdda756dc"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-drop-v1/official-v4-1280x800-RemoteFragmentButton.png",
+      "sha256": "70131cce98cacef2ffee0d9c55da5ffd133bf29a5c221732222b12c5dbb52641"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-drop-v1/official-v4-1280x800-RemoteSellButton.png",
+      "sha256": "a5c705d5de71dc3a1fe9a4b7aa81bb6fc12606e0e5b75fc67ecdd90041fb9d1e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-drop-v1/official-v5-1366x768-MonsterDropListButton.png",
+      "sha256": "a532fab3b026ad84f2d8cfc13d5713d9616f31a7cdbeb98d3c2452a5731a93cd"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-drop-v1/official-v5-1366x768-RemoteFragmentButton.png",
+      "sha256": "efd341a1a4df1734366820e17eb280e78f7c36a304867b236ad0e7d1db0baaa3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-drop-v1/official-v5-1366x768-RemoteSellButton.png",
+      "sha256": "301f3de59b4782bd12e1893d09df4df4e6e2baba500057b4fd2e524f5c4da672"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-drop-v1/official-v6-1920x1080-MonsterDropListButton.png",
+      "sha256": "26d27267f1227c600f6f14976c41be2a0405bcc5c5b20d02bd167d661180645b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-drop-v1/official-v6-1920x1080-RemoteFragmentButton.png",
+      "sha256": "11d00c04bc66225165ac7e07acc781791b1b334f6e35d86a5522dd83d57dcd66"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-drop-v1/official-v6-1920x1080-RemoteSellButton.png",
+      "sha256": "b7ec5a008a0bfc7aa07075508ab384f6fa7a5a338b205c0839348363fb1aaded"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-drop-v1/official-v7-1024x768-MonsterDropListButton.png",
+      "sha256": "4cdea57c01673e6df6cbf6a3854bcc37196704930293da779fd783d5e45eff5a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-drop-v1/official-v7-1024x768-RemoteFragmentButton.png",
+      "sha256": "b24b38d25d3e622b9e71228764d9ef12560dbfbb667c0336609288450152465d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-drop-v1/official-v7-1024x768-RemoteSellButton.png",
+      "sha256": "e4c6f8fd6ec2922e5b8314ebb9eb55cab8dd01d06a6edfe5646c3104a5d72d7a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-drop-v1/tested-runtime.json",
+      "sha256": "f98d41a73d990ef8606f65ba42644383f40359e4375701435411fb9e1ab68d61"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-final-v1/assertions.txt",
+      "sha256": "e83d2745c03d6d5d9c19c4d969c4602791e10a5358e470b71d0949dc7a94d881"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-final-v1/coordinate-hits.txt",
+      "sha256": "8fccacd2a9829fb1e2c562e05c7b50efb0785fe6c7a7912efed4f65ab7b2850c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-final-v1/legacy-filled-bag.png",
+      "sha256": "081d8ac11ab37bdcec0bd4646bed8812a587852fe3bf05e72f09ea939dddfc1b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-final-v1/legacy-filled-equipment.png",
+      "sha256": "7613d2436951116adb5af332b5d81daaa1d70cb885dea8aa32d86461d0a1ce0e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-final-v1/legacy-filled-extra.png",
+      "sha256": "7613d2436951116adb5af332b5d81daaa1d70cb885dea8aa32d86461d0a1ce0e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-final-v1/legacy-packet-trace.txt",
+      "sha256": "9cda29f259df54a99b03ba95f8d43c6e04a216b755c5896352d10ff835235ed9"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-final-v1/legacy-resources.txt",
+      "sha256": "47713d590a1b9214abdef7a0fc33d6c28a2b5a73a0cff9794375a5083020b498"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-final-v1/metrics.json",
+      "sha256": "6dbba66b5bcc397f5d2624f2378812f1d20cbf3fb3150186ce85d469068c0de1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-final-v1/official-filled-bag.png",
+      "sha256": "148e2bb5c09c7ecf88b25ddad7a6cee7edc24cf03e5932148cd1e49449feb490"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-final-v1/official-filled-equipment.png",
+      "sha256": "755f973005e48813ff4def8176b88f62997026e0e0089b1c946dbd47a15aba84"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-final-v1/official-filled-extra.png",
+      "sha256": "4d32619632d128f3e68150a955bc462433d5b29decdc79cfc463b2abc7095ce1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-final-v1/official-packet-trace.txt",
+      "sha256": "9cda29f259df54a99b03ba95f8d43c6e04a216b755c5896352d10ff835235ed9"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-final-v1/official-reentry-filled-bag.png",
+      "sha256": "40396dcc69f87e454ab51f4fbd346837a487f46c43f8f81475afc56f4550fb46"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-final-v1/official-reentry-filled-equipment.png",
+      "sha256": "755f973005e48813ff4def8176b88f62997026e0e0089b1c946dbd47a15aba84"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-final-v1/official-reentry-filled-extra.png",
+      "sha256": "acf480a31baab090855a5e6d4e84ca2ed12bf8693493fee59d40201b13c7ddb6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-final-v1/official-reentry-packet-trace.txt",
+      "sha256": "9cda29f259df54a99b03ba95f8d43c6e04a216b755c5896352d10ff835235ed9"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-final-v1/tested-runtime.json",
+      "sha256": "f98d41a73d990ef8606f65ba42644383f40359e4375701435411fb9e1ab68d61"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/assertions.txt",
+      "sha256": "f971f5349f38ed02b03741f7daf95e33967bdb9a208f9d802fcc1c8eeddedd36"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/coordinate-hits.txt",
+      "sha256": "ba34b702448240e7b9f9a5bfadf59722f58f2e205afbf0d780f4625c1176d8bb"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/legacy-card.png",
+      "sha256": "bbf533c95e714eb1b384a34ed7dde97083e54d67bca961844f3c9e9c8f2882d6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/legacy-disconnect-modal.png",
+      "sha256": "211801ec7c183cee0fc7fb41d80bb217c0be13fe58bb553463a71823b133219c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/legacy-goods-bottom.png",
+      "sha256": "923b0c68e8cf7a6a3c51de563999d0f24bb99b7a8c4382bb02c858b5637a435e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/legacy-goods-quantity.png",
+      "sha256": "203601bf8d8d27d816c2fce39ce93c2fe096e8103c81b8be023e9b3eae45bfc6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/legacy-goods-top.png",
+      "sha256": "771fbf5408ff1edc726b6888249f3c10491bc553f52a0e774199bac882bf60db"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/legacy-lifecycle.txt",
+      "sha256": "d0dca003220c6a05179bbf83f0cba0460f490a71a4faad5866f095e14e84cd9f"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/legacy-refine-retrieve.png",
+      "sha256": "b0ca02edebfb861c3e2375d08a0e4501ea545c975379bf3df9965c22f948cdac"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/legacy-refine.png",
+      "sha256": "0743781638dc75bd0e871ff69a221e7c7cffdabc666ac4ed021bac0a0cae2551"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/legacy-repair-full.png",
+      "sha256": "c7733722ac20d86135c879e46aefd6cd530d80275fe45902c5ebab3fa6065379"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/legacy-reset-1024x768.png",
+      "sha256": "718e52a0df1079d77fab5dff0823b58b2d8d98cb7c5d319a4fb36d5893eaca4d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/legacy-reset-1280x800.png",
+      "sha256": "6ba4420ef13f0c9e3e11e94b0b510f0ef22e92014dd02cadc2da81c2e20918bf"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/legacy-reset-1366x768.png",
+      "sha256": "9307abd4893bee4b08268e04f81e8f8889f09be289f4703c0dd332384e396b42"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/legacy-reset-1440x900.png",
+      "sha256": "5d7a6e9c1c15173e85b1c06b094a5773c037c7c3e7d270d57818628ed4e3abdd"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/legacy-reset-1600x900.png",
+      "sha256": "0270ea3175f839c48f352f53a0057f3c9366895a424af520eddf7709fb8da65f"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/legacy-reset-1920x1080.png",
+      "sha256": "b024b69683e93b115d6d3973a578d2ea688b5090fe5ce983f352af2f1b7d50d3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/legacy-resources.txt",
+      "sha256": "47713d590a1b9214abdef7a0fc33d6c28a2b5a73a0cff9794375a5083020b498"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/legacy-sell-full.png",
+      "sha256": "78b81311bb79aa207b13afd334aeb71de0ef227a133dc7cb331ac6cc1fddb224"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/legacy-trace.txt",
+      "sha256": "29045b7a4836cb6454d0e364d49b55f0b9f285457b344d0e1713b4559be0f088"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/legacy-wrapped-option.png",
+      "sha256": "ff0659f55ad69307331223cc4612065bd036ee8b8e2442c86a2c9a6a470714a3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/metrics.json",
+      "sha256": "f5a19ec757452af3f47553ed3fb0af59e263c3630c747d6a2fd98a331d3ce421"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-card.png",
+      "sha256": "4a06ca8e878d23ec5816da0db90d7ed31b72d065a3d0be750db23019a166eb22"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-disconnect-modal.png",
+      "sha256": "0c1b5d57dc48f8f7d7ff18c95b521ceedcf2afe0c59895e973ee67bb270102b2"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-goods-bottom.png",
+      "sha256": "6c50ac0ebb01842847d7aa7639cb88e7a056479c3ae938cbed1ad77f86050e91"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-goods-quantity.png",
+      "sha256": "2c066a4acdebd693ab0728d351691f802962cad338bf3c2dcddb1d55adff6b05"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-goods-top.png",
+      "sha256": "67ee854b58e6056a392391aabe1fbe2d5ccac8ddc89d4303918669e866f39290"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-group-AccessoryRefineLevel.png",
+      "sha256": "0293eab0a6512d3fd392e20edf7f2c4e33958c3f4c5d0cda9c60e409575ff47e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-group-AccessoryRefineUpgrade.png",
+      "sha256": "d9b5c3d3487c8216b3ffa1b8d79abaa6c23a8772ba791f92a51696f3413f69ac"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-group-AccessoryReset.png",
+      "sha256": "3e8929b587333dde2f88f1a46673d6cb8cc2cb4bc291ab108bc98c78a780f33d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-group-BuySell.png",
+      "sha256": "0ad438b60ff8b5e80764e0942a89a02365ba4f21f79e625b4c638b00fcbb3f28"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-group-CompanionManage.png",
+      "sha256": "9c7b20891fd61f6616773a80c48b9e7947dfa174d9e065c19a1a3764807d3419"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-group-ItemFragment.png",
+      "sha256": "2514715dc404149da337e54fec6c487a7f641ca27562685eeb527fe1276d880c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-group-layouts.txt",
+      "sha256": "42fddcadad1591a1b23f3244ca76a5f550dcb6ca2f1729addec3e71afa93cda0"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-group-MasterRefine.png",
+      "sha256": "3ec5bdfaadb25f582c43e91f2577882fbe61418426060e0ea506e11dd0553706"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-group-None.png",
+      "sha256": "445d0d82bab78e6be2c6a3c25732e5610e3d4f42eaba470ff174f95dce93f240"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-group-Refine.png",
+      "sha256": "41f63c7f7d1cce015b2e73ba7b6e1e4e30a93f4c7c94a5c178dc00ff9d6b1aa1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-group-RefinementStone.png",
+      "sha256": "835c417fa2946b3279007f26657d945cecaaca4ccfc3e368bc818a09ea7d3305"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-group-RefineRetrieve.png",
+      "sha256": "dc1160099c1864d07b42f02aeca42a64f98e3acc5245748fb9c09c126d94af45"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-group-Repair.png",
+      "sha256": "404d5e6b21481f773495be765fdba8f6e5888ba5d738ad4cd028af0267eb176c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-group-reset-BuySell-1024x768-14.png",
+      "sha256": "0ad438b60ff8b5e80764e0942a89a02365ba4f21f79e625b4c638b00fcbb3f28"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-group-reset-BuySell-1024x768-21.png",
+      "sha256": "0ad438b60ff8b5e80764e0942a89a02365ba4f21f79e625b4c638b00fcbb3f28"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-group-reset-BuySell-1280x800-17.png",
+      "sha256": "44dd1e7e743504a5a8760f52daeb71dcf65439e9ec7681ef76ccc6ca2de79c2f"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-group-reset-BuySell-1366x768-16.png",
+      "sha256": "d72d14804d2d1c747b61959dcd7f14dcca5b8ea759e53d65e96ace7b52c38e94"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-group-reset-BuySell-1440x900-18.png",
+      "sha256": "88e0d2a83769ec7d007e2fc99bce2cdd502387b37b0800fd8bd9a43ba1da20d0"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-group-reset-BuySell-1600x900-19.png",
+      "sha256": "0f6f0c184c47071d5a502d20c708ea841cb33e9a282bb1ed759a32318ea1dbc3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-group-reset-BuySell-1920x1080-20.png",
+      "sha256": "28a95bbb9ef256e6843450ded6bcb3bb125a909e00bc2c8c016d5cf8890ce044"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-group-reset-None-1024x768-12.png",
+      "sha256": "440cb2b65949979df0757373695bc7c5e714d0702690e01672025f06a506f5fe"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-group-reset-None-1024x768-5.png",
+      "sha256": "38892c6d1c3f64cfbc999ed06d120b48a0a8d43bb2d92f8fecae83758ee2ce0a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-group-reset-None-1280x800-8.png",
+      "sha256": "ef1b59dfc58b428bcf29f4707a51275599ab45ea48c4a117ad2b6ede9cdede48"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-group-reset-None-1366x768-7.png",
+      "sha256": "c0904ee71959af7f18323e6294f0f7d183998c744ba1f185a5662ba3cfa7899f"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-group-reset-None-1440x900-9.png",
+      "sha256": "b5501601fba071e311d45c32afeb33eac1b8dc24f1b11bf067c3503bc9ac99ed"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-group-reset-None-1600x900-10.png",
+      "sha256": "ebafdab1cd716b3befd68bb92fda342e77d040f16a870c9960360ad51db9cecc"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-group-reset-None-1920x1080-11.png",
+      "sha256": "bd266c0b322e1b6e159267eb6295068f6e9de30f642d9e712cefe9ac85484406"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-group-WeaponCraft.png",
+      "sha256": "d8d693aa742cef8eeb8770eed76a975f4e282ffae1d57d09656f4eb36795bad3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-group-WeaponReset.png",
+      "sha256": "13d9328f15484f8eea0b52a406481463639de5553312272966a1106c8d7f4c76"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-group-WeddingRing.png",
+      "sha256": "ad03db13fccb033da509d91d383b8274807d8e374ab5599ee308590ff922dd6e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-lifecycle.txt",
+      "sha256": "d0dca003220c6a05179bbf83f0cba0460f490a71a4faad5866f095e14e84cd9f"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-long-card-1024x768.png",
+      "sha256": "ffc1f3169bb1008a95700281b2b6efef015aca10e1383ce06d74069b709a484c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-long-card-1280x800.png",
+      "sha256": "fc1c52489c6d7d9843dd686efb5483946b4ccb31b933c7a7888c8a93a8bfc441"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-long-card-1366x768.png",
+      "sha256": "203936e2679b8eddb3a88d9b551da32c3ba97cae7a744da186ecd88e840a2f29"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-long-card-1440x900.png",
+      "sha256": "8a5ba904666787bc29b55f97f2bbb437278d0421790f54c2dcd2b00229501934"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-long-card-1600x900.png",
+      "sha256": "b064ecf8bcfd2d7f2856885a12461d684df57ef91abb96d13d638772cd0011dc"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-long-card-1920x1080.png",
+      "sha256": "8afbb689449e3585dffb9428833b4a29c2fe2e1e88c5f76e0ff13e610cb4aaf0"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-long-card-bottom.png",
+      "sha256": "ffc1f3169bb1008a95700281b2b6efef015aca10e1383ce06d74069b709a484c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-long-card-open-ms.txt",
+      "sha256": "6ae2718959c46e34ae3c07be90b553c52e64af99c12d7bf41e393247249f25ab"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-long-card-partial-line.png",
+      "sha256": "b931558c18614ad5c4a912e360cd72832fa91fd79dfc5ebbe3c843e6797cd513"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-long-card-top.png",
+      "sha256": "995e0fc8a1f0857af7d16fa3745a281810529485c460dce2bef633af47caf7be"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-long-text-reference.png",
+      "sha256": "63ea7a263505137352f230f85a422f09e91ab97d20ca985316bf3e2865a92f02"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-long-text-texture.png",
+      "sha256": "63ea7a263505137352f230f85a422f09e91ab97d20ca985316bf3e2865a92f02"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-paragraph-0-bottom-long-text-reference.png",
+      "sha256": "540cf8ddf77fd1f66ffcc649f94881940f350239284b80e3216d05b32eadb668"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-paragraph-0-bottom-long-text-texture.png",
+      "sha256": "540cf8ddf77fd1f66ffcc649f94881940f350239284b80e3216d05b32eadb668"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-paragraph-0-top-long-text-reference.png",
+      "sha256": "540cf8ddf77fd1f66ffcc649f94881940f350239284b80e3216d05b32eadb668"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-paragraph-0-top-long-text-texture.png",
+      "sha256": "540cf8ddf77fd1f66ffcc649f94881940f350239284b80e3216d05b32eadb668"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-paragraph-1-bottom-long-text-reference.png",
+      "sha256": "3c877d05e4761b12e3f859ddcd81930155c8b2679c4142c6764fa24ed2e61bf1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-paragraph-1-bottom-long-text-texture.png",
+      "sha256": "3c877d05e4761b12e3f859ddcd81930155c8b2679c4142c6764fa24ed2e61bf1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-paragraph-1-top-long-text-reference.png",
+      "sha256": "3c877d05e4761b12e3f859ddcd81930155c8b2679c4142c6764fa24ed2e61bf1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-paragraph-1-top-long-text-texture.png",
+      "sha256": "3c877d05e4761b12e3f859ddcd81930155c8b2679c4142c6764fa24ed2e61bf1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-paragraph-2-bottom-long-text-reference.png",
+      "sha256": "76f9761631c924f05ee0b940de90650b0fdd8f6aafc690b16f6c44256a4d29c5"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-paragraph-2-bottom-long-text-texture.png",
+      "sha256": "76f9761631c924f05ee0b940de90650b0fdd8f6aafc690b16f6c44256a4d29c5"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-paragraph-2-top-long-text-reference.png",
+      "sha256": "fbd146c4875677e71b4aea14983e602bc6b6a30d7afec1da3b69ae006f9dd385"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-paragraph-2-top-long-text-texture.png",
+      "sha256": "fbd146c4875677e71b4aea14983e602bc6b6a30d7afec1da3b69ae006f9dd385"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-paragraph-3-bottom-long-text-reference.png",
+      "sha256": "bea194a346d02dcd2ef465ee055452165c9160e1e376cb9f231bded2a48bfb20"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-paragraph-3-bottom-long-text-texture.png",
+      "sha256": "bea194a346d02dcd2ef465ee055452165c9160e1e376cb9f231bded2a48bfb20"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-paragraph-3-top-long-text-reference.png",
+      "sha256": "bea194a346d02dcd2ef465ee055452165c9160e1e376cb9f231bded2a48bfb20"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-paragraph-3-top-long-text-texture.png",
+      "sha256": "bea194a346d02dcd2ef465ee055452165c9160e1e376cb9f231bded2a48bfb20"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-paragraph-4-bottom-long-text-reference.png",
+      "sha256": "52f16e5b87e95e1883fbb66b55b65a675e943facf62287f7e2ed0ad6ad9ec5a7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-paragraph-4-bottom-long-text-texture.png",
+      "sha256": "52f16e5b87e95e1883fbb66b55b65a675e943facf62287f7e2ed0ad6ad9ec5a7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-paragraph-4-top-long-text-reference.png",
+      "sha256": "52f16e5b87e95e1883fbb66b55b65a675e943facf62287f7e2ed0ad6ad9ec5a7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-paragraph-4-top-long-text-texture.png",
+      "sha256": "52f16e5b87e95e1883fbb66b55b65a675e943facf62287f7e2ed0ad6ad9ec5a7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-paragraph-native-geometry.txt",
+      "sha256": "685fc10cc9db4dc20dd5ac1cc8c20f1ce90e974bf7f7b658e4174573550bf14b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-paragraph-regions-0-bottom.png",
+      "sha256": "d1e374390c4552723138f3d94e2559d8df2627a9f9ad04edb70bf9a6d0b77e07"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-paragraph-regions-0-top.png",
+      "sha256": "d1e374390c4552723138f3d94e2559d8df2627a9f9ad04edb70bf9a6d0b77e07"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-paragraph-regions-1-bottom.png",
+      "sha256": "8a08fc91434512f136a7827e9ae5856e7ba0c326a099cfdd56c08c3306cf2829"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-paragraph-regions-1-top.png",
+      "sha256": "601b5127fca522f4a5349304756939298c2e2c3e4044078a853fba9ac98df7da"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-paragraph-regions-2-bottom.png",
+      "sha256": "f555163fafbc897cf884a5f15a8c8a5eba4c49d7a7d56d4106ad978bd55db2ce"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-paragraph-regions-2-top.png",
+      "sha256": "8ab0edc1fc63180fd91103727d77a381c8e5427882f3385670f23789059f05a5"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-paragraph-regions-3-bottom.png",
+      "sha256": "da5ab869d15a8d5396132b37ff5431295e5f4f6271f50c5eceabd656bcc7fd48"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-paragraph-regions-3-top.png",
+      "sha256": "da5ab869d15a8d5396132b37ff5431295e5f4f6271f50c5eceabd656bcc7fd48"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-paragraph-regions-4-bottom.png",
+      "sha256": "4c0d0b7071ff91dea7a8c6aeaade659f5efac5c2d4e08573020a20d68b8a8f51"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-paragraph-regions-4-top.png",
+      "sha256": "4c0d0b7071ff91dea7a8c6aeaade659f5efac5c2d4e08573020a20d68b8a8f51"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-partial-line-long-text-reference.png",
+      "sha256": "966bb5e8cc0c4cc6428f93a50e5c86a2c4db0e33f84f4ecd89f8ac4913ad16aa"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-partial-line-long-text-texture.png",
+      "sha256": "966bb5e8cc0c4cc6428f93a50e5c86a2c4db0e33f84f4ecd89f8ac4913ad16aa"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-quest-group-BuySell-False.png",
+      "sha256": "350799e8647507486cf8982c00b20ffa0d0e428b45014031d9cd8d1dfca1f7cb"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-quest-group-BuySell-True.png",
+      "sha256": "676d17481aff12c42479d657219c75105b9d192393ba04e98a0189627d6f4f37"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-quest-group-None-False.png",
+      "sha256": "e97c9734c2fe462bd21bb9280273bdfdb2ade20f40ccc99917d817bd1387ff65"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-quest-group-None-True.png",
+      "sha256": "990a33a9ea5b7485a6b6635d2c7b8b838f13e4ae0510e8a1edb24b670b354c8a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-quest-open-layouts.txt",
+      "sha256": "c4b869a10efff4a1e213d3b7cd54664631d1bad7fe2863fdd30d05d955492b8e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-card.png",
+      "sha256": "56ae5a78a655b1c16d354f1252304732eba0a61e860a0f57a05180661ba8d9b5"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-disconnect-modal.png",
+      "sha256": "0c1b5d57dc48f8f7d7ff18c95b521ceedcf2afe0c59895e973ee67bb270102b2"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-goods-bottom.png",
+      "sha256": "6c50ac0ebb01842847d7aa7639cb88e7a056479c3ae938cbed1ad77f86050e91"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-goods-quantity.png",
+      "sha256": "2c066a4acdebd693ab0728d351691f802962cad338bf3c2dcddb1d55adff6b05"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-goods-top.png",
+      "sha256": "67ee854b58e6056a392391aabe1fbe2d5ccac8ddc89d4303918669e866f39290"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-group-AccessoryRefineLevel.png",
+      "sha256": "0293eab0a6512d3fd392e20edf7f2c4e33958c3f4c5d0cda9c60e409575ff47e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-group-AccessoryRefineUpgrade.png",
+      "sha256": "d9b5c3d3487c8216b3ffa1b8d79abaa6c23a8772ba791f92a51696f3413f69ac"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-group-AccessoryReset.png",
+      "sha256": "3e8929b587333dde2f88f1a46673d6cb8cc2cb4bc291ab108bc98c78a780f33d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-group-BuySell.png",
+      "sha256": "0ad438b60ff8b5e80764e0942a89a02365ba4f21f79e625b4c638b00fcbb3f28"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-group-CompanionManage.png",
+      "sha256": "9c7b20891fd61f6616773a80c48b9e7947dfa174d9e065c19a1a3764807d3419"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-group-ItemFragment.png",
+      "sha256": "2514715dc404149da337e54fec6c487a7f641ca27562685eeb527fe1276d880c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-group-layouts.txt",
+      "sha256": "9d759cb7ba14406760985e48ee2a1f1a731dc6088fb1b0e100eb4b2d2928f7f1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-group-MasterRefine.png",
+      "sha256": "3ec5bdfaadb25f582c43e91f2577882fbe61418426060e0ea506e11dd0553706"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-group-None.png",
+      "sha256": "445d0d82bab78e6be2c6a3c25732e5610e3d4f42eaba470ff174f95dce93f240"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-group-Refine.png",
+      "sha256": "41f63c7f7d1cce015b2e73ba7b6e1e4e30a93f4c7c94a5c178dc00ff9d6b1aa1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-group-RefinementStone.png",
+      "sha256": "835c417fa2946b3279007f26657d945cecaaca4ccfc3e368bc818a09ea7d3305"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-group-RefineRetrieve.png",
+      "sha256": "dc1160099c1864d07b42f02aeca42a64f98e3acc5245748fb9c09c126d94af45"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-group-Repair.png",
+      "sha256": "404d5e6b21481f773495be765fdba8f6e5888ba5d738ad4cd028af0267eb176c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-group-reset-BuySell-1024x768-14.png",
+      "sha256": "0ad438b60ff8b5e80764e0942a89a02365ba4f21f79e625b4c638b00fcbb3f28"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-group-reset-BuySell-1024x768-21.png",
+      "sha256": "0ad438b60ff8b5e80764e0942a89a02365ba4f21f79e625b4c638b00fcbb3f28"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-group-reset-BuySell-1280x800-17.png",
+      "sha256": "44dd1e7e743504a5a8760f52daeb71dcf65439e9ec7681ef76ccc6ca2de79c2f"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-group-reset-BuySell-1366x768-16.png",
+      "sha256": "d72d14804d2d1c747b61959dcd7f14dcca5b8ea759e53d65e96ace7b52c38e94"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-group-reset-BuySell-1440x900-18.png",
+      "sha256": "88e0d2a83769ec7d007e2fc99bce2cdd502387b37b0800fd8bd9a43ba1da20d0"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-group-reset-BuySell-1600x900-19.png",
+      "sha256": "0f6f0c184c47071d5a502d20c708ea841cb33e9a282bb1ed759a32318ea1dbc3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-group-reset-BuySell-1920x1080-20.png",
+      "sha256": "28a95bbb9ef256e6843450ded6bcb3bb125a909e00bc2c8c016d5cf8890ce044"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-group-reset-None-1024x768-12.png",
+      "sha256": "440cb2b65949979df0757373695bc7c5e714d0702690e01672025f06a506f5fe"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-group-reset-None-1024x768-5.png",
+      "sha256": "38892c6d1c3f64cfbc999ed06d120b48a0a8d43bb2d92f8fecae83758ee2ce0a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-group-reset-None-1280x800-8.png",
+      "sha256": "ef1b59dfc58b428bcf29f4707a51275599ab45ea48c4a117ad2b6ede9cdede48"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-group-reset-None-1366x768-7.png",
+      "sha256": "c0904ee71959af7f18323e6294f0f7d183998c744ba1f185a5662ba3cfa7899f"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-group-reset-None-1440x900-9.png",
+      "sha256": "b5501601fba071e311d45c32afeb33eac1b8dc24f1b11bf067c3503bc9ac99ed"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-group-reset-None-1600x900-10.png",
+      "sha256": "ebafdab1cd716b3befd68bb92fda342e77d040f16a870c9960360ad51db9cecc"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-group-reset-None-1920x1080-11.png",
+      "sha256": "bd266c0b322e1b6e159267eb6295068f6e9de30f642d9e712cefe9ac85484406"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-group-WeaponCraft.png",
+      "sha256": "d8d693aa742cef8eeb8770eed76a975f4e282ffae1d57d09656f4eb36795bad3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-group-WeaponReset.png",
+      "sha256": "13d9328f15484f8eea0b52a406481463639de5553312272966a1106c8d7f4c76"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-group-WeddingRing.png",
+      "sha256": "ad03db13fccb033da509d91d383b8274807d8e374ab5599ee308590ff922dd6e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-lifecycle.txt",
+      "sha256": "d0dca003220c6a05179bbf83f0cba0460f490a71a4faad5866f095e14e84cd9f"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-long-card-1024x768.png",
+      "sha256": "ffc1f3169bb1008a95700281b2b6efef015aca10e1383ce06d74069b709a484c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-long-card-1280x800.png",
+      "sha256": "35ef2c0d04cbcb60a96cfe89705a9e5ac96dfb1a716c62bdf6165f98ed3516d7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-long-card-1366x768.png",
+      "sha256": "203936e2679b8eddb3a88d9b551da32c3ba97cae7a744da186ecd88e840a2f29"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-long-card-1440x900.png",
+      "sha256": "8a5ba904666787bc29b55f97f2bbb437278d0421790f54c2dcd2b00229501934"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-long-card-1600x900.png",
+      "sha256": "fe349f2b7d5003697c5ff87c2a412019beb749320b874d60bcf17b137c4669ff"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-long-card-1920x1080.png",
+      "sha256": "77f3114cccd184fab40e00ea06df22a6f502504c7ee7584a1556ccb6995b8b11"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-long-card-bottom.png",
+      "sha256": "ffc1f3169bb1008a95700281b2b6efef015aca10e1383ce06d74069b709a484c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-long-card-open-ms.txt",
+      "sha256": "e2b79c6b00bc97ebb7a345ef636f2fe539aaa43946bf7d6c8052a22b22462649"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-long-card-partial-line.png",
+      "sha256": "b931558c18614ad5c4a912e360cd72832fa91fd79dfc5ebbe3c843e6797cd513"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-long-card-top.png",
+      "sha256": "995e0fc8a1f0857af7d16fa3745a281810529485c460dce2bef633af47caf7be"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-long-text-reference.png",
+      "sha256": "63ea7a263505137352f230f85a422f09e91ab97d20ca985316bf3e2865a92f02"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-long-text-texture.png",
+      "sha256": "63ea7a263505137352f230f85a422f09e91ab97d20ca985316bf3e2865a92f02"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-paragraph-0-bottom-long-text-reference.png",
+      "sha256": "540cf8ddf77fd1f66ffcc649f94881940f350239284b80e3216d05b32eadb668"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-paragraph-0-bottom-long-text-texture.png",
+      "sha256": "540cf8ddf77fd1f66ffcc649f94881940f350239284b80e3216d05b32eadb668"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-paragraph-0-top-long-text-reference.png",
+      "sha256": "540cf8ddf77fd1f66ffcc649f94881940f350239284b80e3216d05b32eadb668"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-paragraph-0-top-long-text-texture.png",
+      "sha256": "540cf8ddf77fd1f66ffcc649f94881940f350239284b80e3216d05b32eadb668"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-paragraph-1-bottom-long-text-reference.png",
+      "sha256": "3c877d05e4761b12e3f859ddcd81930155c8b2679c4142c6764fa24ed2e61bf1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-paragraph-1-bottom-long-text-texture.png",
+      "sha256": "3c877d05e4761b12e3f859ddcd81930155c8b2679c4142c6764fa24ed2e61bf1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-paragraph-1-top-long-text-reference.png",
+      "sha256": "3c877d05e4761b12e3f859ddcd81930155c8b2679c4142c6764fa24ed2e61bf1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-paragraph-1-top-long-text-texture.png",
+      "sha256": "3c877d05e4761b12e3f859ddcd81930155c8b2679c4142c6764fa24ed2e61bf1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-paragraph-2-bottom-long-text-reference.png",
+      "sha256": "76f9761631c924f05ee0b940de90650b0fdd8f6aafc690b16f6c44256a4d29c5"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-paragraph-2-bottom-long-text-texture.png",
+      "sha256": "76f9761631c924f05ee0b940de90650b0fdd8f6aafc690b16f6c44256a4d29c5"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-paragraph-2-top-long-text-reference.png",
+      "sha256": "fbd146c4875677e71b4aea14983e602bc6b6a30d7afec1da3b69ae006f9dd385"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-paragraph-2-top-long-text-texture.png",
+      "sha256": "fbd146c4875677e71b4aea14983e602bc6b6a30d7afec1da3b69ae006f9dd385"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-paragraph-3-bottom-long-text-reference.png",
+      "sha256": "bea194a346d02dcd2ef465ee055452165c9160e1e376cb9f231bded2a48bfb20"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-paragraph-3-bottom-long-text-texture.png",
+      "sha256": "bea194a346d02dcd2ef465ee055452165c9160e1e376cb9f231bded2a48bfb20"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-paragraph-3-top-long-text-reference.png",
+      "sha256": "bea194a346d02dcd2ef465ee055452165c9160e1e376cb9f231bded2a48bfb20"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-paragraph-3-top-long-text-texture.png",
+      "sha256": "bea194a346d02dcd2ef465ee055452165c9160e1e376cb9f231bded2a48bfb20"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-paragraph-4-bottom-long-text-reference.png",
+      "sha256": "52f16e5b87e95e1883fbb66b55b65a675e943facf62287f7e2ed0ad6ad9ec5a7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-paragraph-4-bottom-long-text-texture.png",
+      "sha256": "52f16e5b87e95e1883fbb66b55b65a675e943facf62287f7e2ed0ad6ad9ec5a7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-paragraph-4-top-long-text-reference.png",
+      "sha256": "52f16e5b87e95e1883fbb66b55b65a675e943facf62287f7e2ed0ad6ad9ec5a7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-paragraph-4-top-long-text-texture.png",
+      "sha256": "52f16e5b87e95e1883fbb66b55b65a675e943facf62287f7e2ed0ad6ad9ec5a7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-paragraph-native-geometry.txt",
+      "sha256": "685fc10cc9db4dc20dd5ac1cc8c20f1ce90e974bf7f7b658e4174573550bf14b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-paragraph-regions-0-bottom.png",
+      "sha256": "d1e374390c4552723138f3d94e2559d8df2627a9f9ad04edb70bf9a6d0b77e07"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-paragraph-regions-0-top.png",
+      "sha256": "d1e374390c4552723138f3d94e2559d8df2627a9f9ad04edb70bf9a6d0b77e07"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-paragraph-regions-1-bottom.png",
+      "sha256": "8a08fc91434512f136a7827e9ae5856e7ba0c326a099cfdd56c08c3306cf2829"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-paragraph-regions-1-top.png",
+      "sha256": "601b5127fca522f4a5349304756939298c2e2c3e4044078a853fba9ac98df7da"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-paragraph-regions-2-bottom.png",
+      "sha256": "f555163fafbc897cf884a5f15a8c8a5eba4c49d7a7d56d4106ad978bd55db2ce"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-paragraph-regions-2-top.png",
+      "sha256": "8ab0edc1fc63180fd91103727d77a381c8e5427882f3385670f23789059f05a5"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-paragraph-regions-3-bottom.png",
+      "sha256": "da5ab869d15a8d5396132b37ff5431295e5f4f6271f50c5eceabd656bcc7fd48"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-paragraph-regions-3-top.png",
+      "sha256": "da5ab869d15a8d5396132b37ff5431295e5f4f6271f50c5eceabd656bcc7fd48"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-paragraph-regions-4-bottom.png",
+      "sha256": "4c0d0b7071ff91dea7a8c6aeaade659f5efac5c2d4e08573020a20d68b8a8f51"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-paragraph-regions-4-top.png",
+      "sha256": "4c0d0b7071ff91dea7a8c6aeaade659f5efac5c2d4e08573020a20d68b8a8f51"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-partial-line-long-text-reference.png",
+      "sha256": "966bb5e8cc0c4cc6428f93a50e5c86a2c4db0e33f84f4ecd89f8ac4913ad16aa"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-partial-line-long-text-texture.png",
+      "sha256": "966bb5e8cc0c4cc6428f93a50e5c86a2c4db0e33f84f4ecd89f8ac4913ad16aa"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-quest-group-BuySell-False.png",
+      "sha256": "350799e8647507486cf8982c00b20ffa0d0e428b45014031d9cd8d1dfca1f7cb"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-quest-group-BuySell-True.png",
+      "sha256": "676d17481aff12c42479d657219c75105b9d192393ba04e98a0189627d6f4f37"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-quest-group-None-False.png",
+      "sha256": "e97c9734c2fe462bd21bb9280273bdfdb2ade20f40ccc99917d817bd1387ff65"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-quest-group-None-True.png",
+      "sha256": "990a33a9ea5b7485a6b6635d2c7b8b838f13e4ae0510e8a1edb24b670b354c8a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-quest-open-layouts.txt",
+      "sha256": "c4b869a10efff4a1e213d3b7cd54664631d1bad7fe2863fdd30d05d955492b8e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-refine-retrieve.png",
+      "sha256": "aaa1fbd6c8f325ff746a02faaa41cae42a2229dd49344d223137f46c21a58e36"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-refine.png",
+      "sha256": "ec3540c3d962be7e11a5ea073f0f118fa61b95af354bc773992bc7b991f26486"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-repair-full.png",
+      "sha256": "fcbc61885992702f1bdc9338ed6c42f54c997a9cfd2dc012541c4b525fb82ba3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-reset-1024x768.png",
+      "sha256": "f36a852381a16517d91b041cf4d9c3681c04a8c9c0f78ff41e9b17828b6ef1a0"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-reset-1280x800.png",
+      "sha256": "fa98a873b54a1bc29f9d8b8b129df1fe14e26a2220f6caaa6824b308fa0b21c2"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-reset-1366x768.png",
+      "sha256": "38cb09f81efe28a6cb03cf336de1ac4dd2710d06a371cbcad152b6d579c8750e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-reset-1440x900.png",
+      "sha256": "99bdfea045febb45b3472f2dba87ef507b5da451daa1adbdbb228e5e3756ee65"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-reset-1600x900.png",
+      "sha256": "bb379c215eb598cf5c6b4af04e29493f71f11b10801090a27da524b20b1dd5ed"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-reset-1920x1080.png",
+      "sha256": "a2d751db7751caa839dc2fbdd55866114241fd838105225fcbfa209156aaff62"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-sell-full.png",
+      "sha256": "2f1275cc05e765fcfe9763d44640ab0cccf06a4e81777a923b54c8743e4a1f05"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-trace.txt",
+      "sha256": "29045b7a4836cb6454d0e364d49b55f0b9f285457b344d0e1713b4559be0f088"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reentry-wrapped-option.png",
+      "sha256": "f14077e7663a4a04049e99bee0630724a1386bf1be813d0427106f91ccef81e3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-refine-retrieve.png",
+      "sha256": "aaa1fbd6c8f325ff746a02faaa41cae42a2229dd49344d223137f46c21a58e36"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-refine.png",
+      "sha256": "ec3540c3d962be7e11a5ea073f0f118fa61b95af354bc773992bc7b991f26486"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-repair-full.png",
+      "sha256": "fcbc61885992702f1bdc9338ed6c42f54c997a9cfd2dc012541c4b525fb82ba3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reset-1024x768.png",
+      "sha256": "f36a852381a16517d91b041cf4d9c3681c04a8c9c0f78ff41e9b17828b6ef1a0"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reset-1280x800.png",
+      "sha256": "fa98a873b54a1bc29f9d8b8b129df1fe14e26a2220f6caaa6824b308fa0b21c2"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reset-1366x768.png",
+      "sha256": "38cb09f81efe28a6cb03cf336de1ac4dd2710d06a371cbcad152b6d579c8750e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reset-1440x900.png",
+      "sha256": "99bdfea045febb45b3472f2dba87ef507b5da451daa1adbdbb228e5e3756ee65"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reset-1600x900.png",
+      "sha256": "bb379c215eb598cf5c6b4af04e29493f71f11b10801090a27da524b20b1dd5ed"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-reset-1920x1080.png",
+      "sha256": "a2d751db7751caa839dc2fbdd55866114241fd838105225fcbfa209156aaff62"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-sell-full.png",
+      "sha256": "2f1275cc05e765fcfe9763d44640ab0cccf06a4e81777a923b54c8743e4a1f05"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-trace.txt",
+      "sha256": "29045b7a4836cb6454d0e364d49b55f0b9f285457b344d0e1713b4559be0f088"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/official-wrapped-option.png",
+      "sha256": "f14077e7663a4a04049e99bee0630724a1386bf1be813d0427106f91ccef81e3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-npc-v1/tested-runtime.json",
+      "sha256": "f98d41a73d990ef8606f65ba42644383f40359e4375701435411fb9e1ab68d61"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-storage-v1/legacy-resources.txt",
+      "sha256": "47713d590a1b9214abdef7a0fc33d6c28a2b5a73a0cff9794375a5083020b498"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-storage-v1/reset-pixel-probes.txt",
+      "sha256": "4463f4df3f327ef059f5b2a10cca78eb30fc36f37449ad6a8526c145733a4f7b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-storage-v1/tested-runtime.json",
+      "sha256": "f98d41a73d990ef8606f65ba42644383f40359e4375701435411fb9e1ab68d61"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-storage-v1/warehouse-after-reset.png",
+      "sha256": "446d84a005b881f5aad56ec1d1203100425f7a4d2a0f536292b4c56c95448619"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-storage-v1/warehouse-before-reset.png",
+      "sha256": "446d84a005b881f5aad56ec1d1203100425f7a4d2a0f536292b4c56c95448619"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-storage-v1/warehouse-filtered.png",
+      "sha256": "5185cf069e73f007b0bc5f393273153f883635b9462f6973103237d7bc704ffe"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-storage-v1/warehouse-scrolled.png",
+      "sha256": "09f51bff369564c6c9b5e5f9809ce2050f69d1e855921508dd3a2b11f00800b4"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-tooltip-v1/assertions.txt",
+      "sha256": "3f4a4847c3ad9b561cb4708fd33c5042a792d21574e5bc56ee51d5e8a919baf6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-tooltip-v1/legacy-0.png",
+      "sha256": "acb12e3ef5264945d35d041dbe484292f15821c155bf2422eb472fc8d60d5fa8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-tooltip-v1/legacy-1.png",
+      "sha256": "a3a65efa39ed188ab33cc6c7bf310791e5cd356849984db16f6033da79ebeb34"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-tooltip-v1/legacy-2.png",
+      "sha256": "dca9d0bca5bc16acf5b19e85730be56ef101d8bc92af2ea807465f09dd5c3f99"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-tooltip-v1/legacy-3.png",
+      "sha256": "b96ee15572bb6ba757be26756133f1729fb30e80bedddd178ba3b88e557d25f4"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-tooltip-v1/legacy-4.png",
+      "sha256": "15a33d70f50af46fecb17c9b31d20156c505d4587d08b8662e796aad29742892"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-tooltip-v1/legacy-5.png",
+      "sha256": "3f4edff86c56f025ebb53e083f7cd4d10d290f473f68773c84d6be0e00e745ae"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-tooltip-v1/legacy-6.png",
+      "sha256": "08dee32e63937127ed080e2cc8f212d458ea3e502fc8749d63d771f7bdae2ff0"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-tooltip-v1/legacy-resources.txt",
+      "sha256": "47713d590a1b9214abdef7a0fc33d6c28a2b5a73a0cff9794375a5083020b498"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-tooltip-v1/metrics.json",
+      "sha256": "b13da7e0a1662eded7536faf4c529f8ba64c7a36c96ce7481772eb7f1cab943c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-tooltip-v1/official-0.png",
+      "sha256": "3f8ba22106ca225a80b48f80a201a7147edac48d8cbbe51ffed3b81904ed5c1c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-tooltip-v1/official-1.png",
+      "sha256": "1e146c72dceb21f988699b068c4df7fe6f551b0da3e4136821db881a5bed9970"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-tooltip-v1/official-2.png",
+      "sha256": "7e905df0cc3a74d7e50383c6a8c148286e4fef58294283f8086e23aaa47f2d7c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-tooltip-v1/official-3.png",
+      "sha256": "8d2e060555adb26ec48e4da2b100f9fed6d1bb56339ac02c18ba42c823b31fae"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-tooltip-v1/official-4.png",
+      "sha256": "120a75a9bf6e6fee4b54b80099bc2aa8d991a9b144f6ec642261231c996324a8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-tooltip-v1/official-5.png",
+      "sha256": "cf847ea2fe3f2759fc47b94b7fc5da9f3997a47ed9ae3e5bd4301e3c5f426eeb"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-tooltip-v1/official-6.png",
+      "sha256": "032c7ac713acd36d9d17e57656e6ab9010d4f712945f2f386cd31843da2b8b86"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-tooltip-v1/official-resize-1024x768.png",
+      "sha256": "e97d1f3bf764b9a933910a2fcd488a571de62fdf305eb7a8c3a1b8a2bb4be4ed"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-tooltip-v1/official-resize-1280x800.png",
+      "sha256": "efee852cc7bf0ec88f86b5ddd85e3fb8d2b0399e143740ecbfe17e677dd79f36"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-tooltip-v1/official-resize-1366x768.png",
+      "sha256": "205378a371cca72f83f82c7a0f274e0041a37fed327213cc2b9e777b3c3ecd5a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-tooltip-v1/official-resize-1440x900.png",
+      "sha256": "a9222e78fecebc6886c644e30a1476d8bf342f4996667409be64bf420901269f"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-tooltip-v1/official-resize-1600x900.png",
+      "sha256": "c4e9afeea44730a393e2fc4a636d8458275aa4ff36c768f57885732fafafd634"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-tooltip-v1/official-resize-1920x1080.png",
+      "sha256": "b72bd11f8c56a38ebb8d583a50feaaac8bebc7495182f3c3280c1109dcc601b0"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-tooltip-v1/overflow-bottom.png",
+      "sha256": "9f87c6f93708a5da59c37bdd7217585f37a04ded01940b54102900288af69142"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-tooltip-v1/overflow-middle.png",
+      "sha256": "767dc0e652c0b8860a6d1a9861ec4e732564f16120f9910c4bb2e473da9d6435"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-tooltip-v1/overflow-resized.png",
+      "sha256": "70e06e858a7cf7eec04556f20bb848662e6c5582e4f6b0c0520f562b1791b68f"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-tooltip-v1/overflow-top.png",
+      "sha256": "f4d2cd15cdefd09fd421593744f8656c1b80eb4c96eb7180a26ba0ed11215d8f"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-tooltip-v1/rollback-tooltip.png",
+      "sha256": "17d37ed4b09cbdf4898c122cc8275bef9492d5c0a95164edb6735c6b0697e81d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/equipment-gesture-matrix-20261108-tooltip-v1/tested-runtime.json",
+      "sha256": "f98d41a73d990ef8606f65ba42644383f40359e4375701435411fb9e1ab68d61"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/equipment-gesture-matrix/audit-history.py",
+      "sha256": "43b3dd93e1bb748275abd80d37a7d986d4016b83b72bd6cf2e0ed3bac1c1fd92"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/equipment-gesture-matrix/check-whitespace.py",
+      "sha256": "b0a86f69a0f4d2d1028cf29ec177b27a0b21d80f60d2f17ed9eaf8f84c6a104f"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/equipment-gesture-matrix/history-audit.json",
+      "sha256": "b3adc3ce9dd9eecdb586b86d0975c7e8a7b5605c9ca88887752adf596c09f67a"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/equipment-gesture-matrix/history-audit.log",
+      "sha256": "b3adc3ce9dd9eecdb586b86d0975c7e8a7b5605c9ca88887752adf596c09f67a"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/equipment-gesture-matrix/history-audit.receipt.json",
+      "sha256": "8f1ed452ccc75cbb8f105746cbddb2cde40174b77d5bc425b064673a85997ce9"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/equipment-gesture-matrix/item-drop.log",
+      "sha256": "eeae7a966e2bb531d349df0cd49c652131ef64eac2de47fd11ce133ab1273a70"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/equipment-gesture-matrix/item-drop.receipt.json",
+      "sha256": "cc816516fad0a21bfb2903c35198fc943df5fc5b3e16ff425103bcba3a076128"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/equipment-gesture-matrix/item-interactions-diagnostics.log",
+      "sha256": "bb61934e965f2e4dbbe058ffc649974d248911ef8a91f6ea9167e97879f8cfba"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/equipment-gesture-matrix/item-interactions-diagnostics.receipt.json",
+      "sha256": "d30f4501d159803fddec4542482a1da39bc7737ee5073094caf091aa06771180"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/equipment-gesture-matrix/item-interactions-final.log",
+      "sha256": "3955dc0c964742bb67590881173f47f9b6716d38fe2ccbff2cbc933478693374"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/equipment-gesture-matrix/item-interactions-final.receipt.json",
+      "sha256": "65bde98c10c48fca4d53cb8ab498f24b3fa07debd54aba0d4bdad5503ab35a6e"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/equipment-gesture-matrix/item-interactions-v2.log",
+      "sha256": "a2ae492584b7150e4c3448d68e0e787eb80cd77eb23b1cb62d3c6dbf6a223c5f"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/equipment-gesture-matrix/item-interactions-v2.receipt.json",
+      "sha256": "5c618620514a486dfbfa4eaacda3125b5f050ba2263a4303ab26e13c41ef68a9"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/equipment-gesture-matrix/item-interactions.log",
+      "sha256": "34dc7acce6aae8ced70d218a36e437e61d4f22861daa3355a3bdc2110068c44f"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/equipment-gesture-matrix/item-interactions.receipt.json",
+      "sha256": "46cc308c416f00feba96228bbe56d8a2724ff263a462ee1545d48d27d6d147a0"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/equipment-gesture-matrix/item-tooltip.log",
+      "sha256": "e99077cd8fc1aeb60389f50a9a4c1f66fc6ac4d44093c73b8c5e468f702e5d4e"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/equipment-gesture-matrix/item-tooltip.receipt.json",
+      "sha256": "e73194f2db10b9b7197a21d6f23ae5c500798c420bb71b9acbc965f3eb9a1c2e"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/equipment-gesture-matrix/npc.log",
+      "sha256": "2eb281241a67e93ffacfeef3eb3257cb64981cf50b2b53a95124c584663b2e3d"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/equipment-gesture-matrix/npc.receipt.json",
+      "sha256": "907974ff3e62270f812e3bdcd0cf88e14748c3baf711d5cc52545b5d642aeba2"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/equipment-gesture-matrix/prepare-report.py",
+      "sha256": "7fbacd24cabf6582c5aa8f7fdb3090fac155636ffc9731cc7bbb5cb49bd27629"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/equipment-gesture-matrix/README.md",
+      "sha256": "a87c080587db7fff549a653451b1973f26b7e21121b1b3f438c3862e1c273c71"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/equipment-gesture-matrix/run-check.py",
+      "sha256": "8cea69f8c28d781722ec26876840ea3e6bb44ae5ed37e2d213fdab62d1a7c943"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/equipment-gesture-matrix/source-before/tests/game-ui/OfficialUiItemInteractionTests.cs",
+      "sha256": "60da0fe623f888c4a75f759301ee02ec7c5995528bae13f6a03efd73afb76cc3"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/equipment-gesture-matrix/source-before/tests/Run-GameUiItemDropTests.ps1",
+      "sha256": "43cd81f755efbf9e183510b2e27a6620f0975ddc8982672ee930274dfde78b6a"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/equipment-gesture-matrix/source-before/tests/Run-GameUiItemInteractionTests.ps1",
+      "sha256": "bf2896523ee2b1d1c025043a1a104c2cd3d8041d996fa311bfd0c796a91a8645"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/equipment-gesture-matrix/source-before/tests/Run-GameUiItemTooltipTests.ps1",
+      "sha256": "9584b9716d024daf9d76f9d783c10f0ad8395b0f62f37231de9682937a88e637"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/equipment-gesture-matrix/source-before/tests/Run-GameUiNpcTests.ps1",
+      "sha256": "9c0c4b3cda994e154c79714a3ed77cff2cf08f20bce4fdd7df0f362265a7b37a"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/equipment-gesture-matrix/source-before/tests/Run-GameUiStorageSceneTests.ps1",
+      "sha256": "3cba6c0c37627b0cdda5ddbc21f8c2c192881545687f774a6b7113d61e90933e"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/equipment-gesture-matrix/source-before.json",
+      "sha256": "1eff62dbc05ba837a0a84cdda6cd70f8769d8a7e69bd328dc51ec5a2832f569f"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/equipment-gesture-matrix/storage-scene.log",
+      "sha256": "dddec952051f02d804672ad591f2bfd739dac4ee7ed141c0b82c9b1771d5e763"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/equipment-gesture-matrix/storage-scene.receipt.json",
+      "sha256": "64e352f24cb43f08e86f1d27c27c7001a5756770436b667b2ad53fad197036ee"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/equipment-gesture-matrix/task-validation.log",
+      "sha256": "90e3ddffa807ef19523e77855653984be659ff7ab47ec66f04d41348c4cb85b3"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/equipment-gesture-matrix/task-validation.receipt.json",
+      "sha256": "216fa75f7bdd0f55afe6adc5b0ab61b0257223f55315b3c4912ee155b7149dbd"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/equipment-gesture-matrix/tested-runtime.json",
+      "sha256": "f98d41a73d990ef8606f65ba42644383f40359e4375701435411fb9e1ab68d61"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/equipment-gesture-matrix/whitespace.log",
+      "sha256": "d5036b303f1c186877d8c9e3e66ee95b88f6c78ec50d3f825f6ce614b333a40a"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/equipment-gesture-matrix/whitespace.receipt.json",
+      "sha256": "4182909b32481683993ff921a688b3ba755bb4e8c1c9cde83b66ff788c6abccb"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "kind": "official-ui-reference-selection",
+  "productionBindingAllowed": false,
+  "assets": [
+    {
+      "role": "warehouse-background",
+      "sourceLibrary": "UI",
+      "sourceIndex": 511,
+      "logicalSize": [
+        344,
+        438
+      ],
+      "sourceOffset": [
+        0,
+        0
+      ],
+      "pngSha256": "f574ddf094e5f1a0b4d78ccd31da1f9e9b3402ec6be8f9fb9b025358239c85d1",
+      "identification": "explicit-reuse-of-confirmed-shop-trim-not-warehouse-screenshot-match",
+      "alphaVerified": false
+    }
+  ],
+  "unresolved": [
+    "Warehouse native appearance has no screenshot identification; this is an explicit candidate adaptation."
+  ]
+}

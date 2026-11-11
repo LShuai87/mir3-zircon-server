@@ -1,0 +1,2 @@
+HUD GPU: 812688 pixel comparisons across 72 frames; three source-sensitive fills, eight fractions, scene/ancestor clipping and draw-state restoration. Synthetic artwork only.
+HUD layout: 803 checks passed; real controls, native HP/MP/XP setters, geometry, action identity, flags, foreground order, repeated rebind/restore, observer rollback, lifecycle. No game login, packets or final-art acceptance.

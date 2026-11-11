@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "kind": "implementation-scope-correction",
+  "checkedAtLocalDate": "2026-11-08",
+  "authority": "existing_direct_user_instructions",
+  "instructions": [
+    "点击按钮后的弹窗先不进行替换。",
+    "NPC交互卡片也不替换"
+  ],
+  "sourceDecisions": [
+    "docs/design/assets/official-ingame-ui/acceptance/reference/secondary-popup-scope-decision.json",
+    "docs/design/assets/official-ingame-ui/acceptance/reference/npc-card-scope-decision.json"
+  ],
+  "deferredServiceWindows": [
+    "NPCAccessoryLevelDialog",
+    "NPCAccessoryResetDialog",
+    "NPCAccessoryUpgradeDialog",
+    "NPCAdoptCompanionDialog",
+    "NPCCompanionStorageDialog",
+    "NPCItemFragmentDialog",
+    "NPCMasterRefineDialog",
+    "NPCQuestDialog",
+    "NPCRefineDialog",
+    "NPCRefineRetrieveDialog",
+    "NPCRefinementStoneDialog",
+    "NPCRepairDialog",
+    "NPCSellDialog",
+    "NPCWeaponCraftWindow",
+    "NPCWeddingRingDialog"
+  ],
+  "disconnectedSceneBindings": [
+    "GameUiNpcItemServiceBinding: sell",
+    "GameUiNpcItemServiceBinding: repair",
+    "GameUiNpcItemServiceBinding: refine",
+    "UseGameUiRefineRetrieve",
+    "GameUiNpcQuestBinding"
+  ],
+  "standaloneCandidateCode": "retained_without_scene_installation",
+  "preservedScope": [
+    "HUD",
+    "character",
+    "inventory",
+    "belt",
+    "minimap",
+    "chat container with native chat rendering",
+    "item tooltip",
+    "agreed independent shop main view",
+    "independent storage main view"
+  ],
+  "unchangedNativeCardSource": true,
+  "referenceResolution": [
+    1024,
+    768
+  ],
+  "additionalUserScreenshotsRequired": false,
+  "releaseAccepted": false,
+  "runtimeReady": false,
+  "productionBindingAllowed": false
+}

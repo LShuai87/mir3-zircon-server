@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "sourceLibrary": "UI",
+  "mixSha256": "7413bc66c18b631e967da5d77400ed4bf020164bcc1daa4c789666d4edb911a4",
+  "mizSha256": "2bf58eaba339d45c5f5d3d51365bafa0f757ba426f6d3b33cefa3cb3f7e9e4fa",
+  "sourceSize": [
+    20,
+    16
+  ],
+  "frames": [
+    {
+      "role": "big-map",
+      "state": "normal",
+      "sourceIndex": 330,
+      "pngSha256": "120ddc28b1ffd50f28f4fca890f79fe0f5e653d3299bc48007c3ac428cf685e2"
+    },
+    {
+      "role": "big-map",
+      "state": "hover",
+      "sourceIndex": 331,
+      "pngSha256": "a18d704d16106b3ae09fc49d8260e516575024f4eaad7dfa07bffe636bfc15fa"
+    },
+    {
+      "role": "big-map",
+      "state": "pressed",
+      "sourceIndex": 332,
+      "pngSha256": "d560997dadd22242a6071fefd9e141f54cc1d87a74474ec54d2f3f6289cc0bbc"
+    },
+    {
+      "role": "big-map",
+      "state": "disabled",
+      "sourceIndex": 333,
+      "pngSha256": "ad2523155b96d85fbf5a70d2ec703d9d6e2bc20b3c49b1b15796e610263b1f33"
+    },
+    {
+      "role": "transparency",
+      "state": "normal",
+      "sourceIndex": 670,
+      "pngSha256": "b602cec4ecb5bb810cd4504bbd9bb857e00db7d8fc9f555b399a6861aaab21d8"
+    },
+    {
+      "role": "transparency",
+      "state": "hover",
+      "sourceIndex": 671,
+      "pngSha256": "0f0e83b82501ba5fc7c9946e484235edac37029d706cc53458cdfb46ebf49b19"
+    },
+    {
+      "role": "transparency",
+      "state": "pressed",
+      "sourceIndex": 672,
+      "pngSha256": "52a16a1e363cf746dcdc9ffd25b1c648dc866ace97c14b43bedac6b5de6a44f6"
+    },
+    {
+      "role": "transparency",
+      "state": "disabled",
+      "sourceIndex": 673,
+      "pngSha256": "fe3af7b8d969c787622e1b413ea6d0f13d1b5719a34ac4f6c3dcc40b9cd757b6"
+    },
+    {
+      "role": "enlarge",
+      "state": "normal",
+      "sourceIndex": 320,
+      "pngSha256": "bad22b58905217d20a9c3e9ab96826ccfda3eeb6ed754b6510f794fa85f3efbf"
+    },
+    {
+      "role": "enlarge",
+      "state": "hover",
+      "sourceIndex": 321,
+      "pngSha256": "a170accab834cafd9f887277d8d2ca5af7fd3e48b50fb49b2ffccef9bca6b27e"
+    },
+    {
+      "role": "enlarge",
+      "state": "pressed",
+      "sourceIndex": 322,
+      "pngSha256": "df9770dbc47576640f8d11e4c2e4128293adf29a4f24b2a852565a639a6be539"
+    },
+    {
+      "role": "enlarge",
+      "state": "disabled",
+      "sourceIndex": 323,
+      "pngSha256": "e225f0bb33a7c24eb9a7ca51a3ffd76d4701bcff52846d38469940673ff6b97f"
+    },
+    {
+      "role": "reduce",
+      "state": "normal",
+      "sourceIndex": 310,
+      "pngSha256": "fe3ea292436a3971d80e7a34be636b3e2499a37d4c139779f25ac0a5367aab72"
+    },
+    {
+      "role": "reduce",
+      "state": "hover",
+      "sourceIndex": 311,
+      "pngSha256": "95e2f4c1f7065dbec602c147049391e6dca7b4ace176ff109374f2f8cfcd4d4a"
+    },
+    {
+      "role": "reduce",
+      "state": "pressed",
+      "sourceIndex": 312,
+      "pngSha256": "102ee0383e554941db9d101afe4c4c711a1795deface0617847841195e84941e"
+    },
+    {
+      "role": "reduce",
+      "state": "disabled",
+      "sourceIndex": 313,
+      "pngSha256": "b0aaed31585c7a00f8dd0c4b64a3f89a74a2f738b75a0829018d84d759c53412"
+    }
+  ],
+  "output": "Client/Resources/GameUi/minimap-buttons.png",
+  "reference": "User minimap screenshots: mountain, stipple, magnifier plus and minus. Native pixels retained at 1:1."
+}

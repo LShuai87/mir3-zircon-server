@@ -1,0 +1,18 @@
+[
+  {
+    "path": "Client/Client.csproj",
+    "sha256": "70cf7825d8ee207aca9b983cd51ec3f25c7e5999697c9c5de91185e474f0e10a"
+  },
+  {
+    "path": "Client/Envir/GameUiOfficialV1WindowSet.cs",
+    "sha256": "f83fc1fa5ed3461ba5640333dd5efa3ded5e7056a9a6ed9fa3ccd9edc1ad9825"
+  },
+  {
+    "path": "tests/game-ui/OfficialUiNpcTests.cs",
+    "sha256": "827a7f8bcabed73c1ef2b8e9cdaa3facd89141bc9aa48db27e71e3b041b8274d"
+  },
+  {
+    "path": "tests/Run-GameUiNpcTests.ps1",
+    "sha256": "67257dea8e311099b222189ff816a97bbd4c31aa5e85279489b68fb20ac1f717"
+  }
+]

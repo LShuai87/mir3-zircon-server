@@ -1,0 +1,27 @@
+Native filter children: DXLabel {X=5,Y=5,Width=36,Height=15}; DXTextBox {X=46,Y=5,Width=180,Height=16}; DXLabel {X=236,Y=5,Width=36,Height=15}; DXComboBox {X=277,Y=5,Width=95,Height=16}; DXButton {X=389,Y=4,Width=80,Height=18}
+Dynamic capacity refresh starting
+Dynamic capacity refresh completed
+Cycle 0 starting
+Cycle 0 item callback
+Cycle 1 starting
+Cycle 1 item callback
+Cycle 2 starting
+Cycle 2 item callback
+Cycle 3 starting
+Cycle 3 item callback
+Cycle 4 starting
+Cycle 4 item callback
+Cycle 5 starting
+Cycle 5 item callback
+Cycle 6 starting
+Cycle 6 item callback
+Cycle 7 starting
+Cycle 7 item callback
+Failure controls starting
+Reparent rejection starting
+Replacement grid starting
+Observer failures starting
+Reentrant control starting
+Undersized control starting
+Disposal control starting
+Storage layout: 35276 checks passed; real native control dimensions; placeholder plus 0/27/131/1000 capacities; filters, scroll, identity, event delegates, rollback, reentry and disposal. No rendering/network/live acceptance.

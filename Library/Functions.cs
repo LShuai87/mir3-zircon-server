@@ -422,6 +422,9 @@ namespace Library
             }
             return location;
         }
+        // Keep this category identical for carrying totals and replacement checks.
+        public static bool UsesHandWeight(ItemType type) => type == ItemType.Weapon || type == ItemType.Torch;
+
         public static bool CorrectSlot(ItemType type, EquipmentSlot slot)
         {
             switch (slot)
@@ -433,7 +436,8 @@ namespace Library
                 case EquipmentSlot.Helmet:
                     return type == ItemType.Helmet;
                 case EquipmentSlot.Torch:
-                    return type == ItemType.Torch;
+                    // Reserved legacy index. Torch items now share the emblem slot.
+                    return false;
                 case EquipmentSlot.Necklace:
                     return type == ItemType.Necklace;
                 case EquipmentSlot.BraceletL:
@@ -451,7 +455,7 @@ namespace Library
                 case EquipmentSlot.Flower:
                     return type == ItemType.Flower;
                 case EquipmentSlot.Emblem:
-                    return type == ItemType.Emblem;
+                    return type == ItemType.Emblem || type == ItemType.Torch;
                 case EquipmentSlot.HorseArmour:
                     return type == ItemType.HorseArmour;
                 case EquipmentSlot.Shield:

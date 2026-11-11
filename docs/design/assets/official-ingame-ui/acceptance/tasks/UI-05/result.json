@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "taskId": "UI-05",
+  "title": "冻结语义素材与透明规则 G0-2/G0-5",
+  "status": "in_progress",
+  "checkedAtLocalDate": "2026-11-08",
+  "implementationInWorkingTree": true,
+  "implementationCommit": null,
+  "sourcePlanSha256": "f8c0a002b3821fabb54993792c354c4eff35eec51f9cfdc418535017c13069e9",
+  "accomplishments": [
+    "候选92帧的源PNG/输出PNG、尺寸、透明统计及混合规则已建立逐帧追溯；复用已有打包/实绘证据。",
+    "19组按钮四态采用明确调色规则；UI140轮盘及UI423经验填充属于明确适配，未宣称正式版唯一匹配或动态状态已采集。",
+    "独立商品商店UI[511]底图加入93帧候选；原92帧PNG及BC1数据保留，33文件解码/93张PNG/整包复现一致，5类错误输入拒绝及96帧/组合D3D9实绘通过。",
+    "运行候选目录同步至93帧，新增独立商店绑定、两列原商品控件排版及可重试还原；2353项NPC/159787项窗口/180项场景检查、141项Python、4103项目录及354项启动检查通过。最终语义/视觉验收仍待完成。",
+    "商品候选修正为7行两列完整视口；2427项NPC及159787项窗口检查通过，原36×36格、字体、卡片和数量弹窗保持，93帧素材包不变。"
+  ],
+  "evidence": [
+    "docs/design/assets/official-ingame-ui/acceptance/reference-finalization/generated/reference-map.json",
+    "docs/design/assets/official-ingame-ui/acceptance/reference-finalization/reproduction-validation.json",
+    "docs/design/assets/official-ingame-ui/acceptance/compact-wheel/verification.json",
+    "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/verification.json",
+    "docs/design/assets/official-ingame-ui/acceptance/npc-shop-assets/verification.json",
+    "docs/design/assets/official-ingame-ui/acceptance/npc-shop-assets/reproduction-validation.json",
+    "docs/design/assets/official-ingame-ui/acceptance/npc-shop-binding/verification.json",
+    "docs/design/assets/official-ingame-ui/acceptance/npc-shop-seven-rows/verification.json"
+  ],
+  "unresolved": [
+    "逐一审定有效范围全部必需role与原动作/窗口资源需求，冻结唯一语义目录；独立商店底图已补齐，93帧候选审计仍不代表完整性。",
+    "按选定输出逐项完成最终PNG/Zl实绘及黑色/细线/偏移/压缩验收，记录适配决定后关闭G0-2/G0-5。"
+  ],
+  "commandIds": [],
+  "acceptanceCases": [
+    "A02"
+  ],
+  "runtimeReady": false,
+  "releaseAccepted": false
+}

@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "kind": "official-ui-reference-build",
+  "runtimeReady": false,
+  "alphaVerified": false,
+  "decodedManifest": "Decoded/manifest.json",
+  "decodedManifestSha256": "aa66a416aabc5d243d0d791c5fd26ea11a55a3cdc8611b22e175f16a52c14ed9",
+  "referenceManifest": "Package/reference-manifest.json",
+  "referenceManifestSha256": "73670a3331b613aa23d3f6f88981a2a28a2ef7342d8177d81a6c8dba7e7bf22c",
+  "tools": [
+    {
+      "name": "ImageManager.exe",
+      "sha256": "a737b39671032c5a1277123d244c10a490cfacb74a318c8fc4bb2418c0ec6c04"
+    },
+    {
+      "name": "Decode-OfficialUi.py",
+      "sha256": "a45f4b0aae081ff9e329212410cc08d146e1ab55fa46eea65a0ebb559dcc691d"
+    },
+    {
+      "name": "source-libraries.json",
+      "sha256": "70780b5b723aec7b7e37c7f9c8b4423971a2295cff2d8ccf974b91f6acd2dec1"
+    },
+    {
+      "name": "Build-OfficialUi.ps1",
+      "sha256": "db0bd2c18b6aaa19cd8b26f33f99b8bb29aa96036ae3bdcaaf4ad2da0010da0c"
+    },
+    {
+      "name": "DevExpress.BonusSkins.v24.2.dll",
+      "sha256": "7288362ef51f3bdb3ba9ad614353e6271072a8594bb914af8629163b05867616"
+    },
+    {
+      "name": "DevExpress.Data.Desktop.v24.2.dll",
+      "sha256": "f527594a008cfb5da930555266e7b61ce07c0fa2719b63144e843530850a3636"
+    },
+    {
+      "name": "DevExpress.Data.v24.2.dll",
+      "sha256": "1af35b33336f9403b7be5a0ccc9231f6d7a46cffc900f66199a689046cff2be0"
+    },
+    {
+      "name": "DevExpress.Drawing.v24.2.dll",
+      "sha256": "1ee9d03459442bb228991201163451d0b4b385c721a8d7c6dbd60d05dd632703"
+    },
+    {
+      "name": "DevExpress.Pdf.v24.2.Core.dll",
+      "sha256": "0c509be1532ab48b48eaa4bee59d6574888a05c0f19536bb87552d0399c371e6"
+    },
+    {
+      "name": "DevExpress.Pdf.v24.2.Drawing.dll",
+      "sha256": "d578b113c52f427a1e4828ac85ea128a08464d3fc23ce0a643da6d674b8e6b6e"
+    },
+    {
+      "name": "DevExpress.Printing.v24.2.Core.dll",
+      "sha256": "241d8f744f8798cc653ab843f5a7c8d2446445cfc51aa057def3bba92eb5bdbd"
+    },
+    {
+      "name": "DevExpress.Sparkline.v24.2.Core.dll",
+      "sha256": "2a9777d73f12bf75ccb8fe155853e275d8a444176099b102cb8dd9b0f2fcd915"
+    },
+    {
+      "name": "DevExpress.Utils.v24.2.dll",
+      "sha256": "ab82bde2dda4276a64022c9de2cd1d26b9b5f87aba095bc0ca4bbdd108b4f4e6"
+    },
+    {
+      "name": "DevExpress.XtraBars.v24.2.dll",
+      "sha256": "5a7368fc1000670a00b5d73ee64f760d17831aaf354641cc4e570ec1064beb15"
+    },
+    {
+      "name": "DevExpress.XtraEditors.v24.2.dll",
+      "sha256": "99b02be7a5cb32dea772983b166c3c114fd661b4471ab52167c132c997f83227"
+    },
+    {
+      "name": "ImageManager.exe.config",
+      "sha256": "0eae1d14c5f71b8b7627a0054db0f044b74290765c8fca2486d058f9404a09d0"
+    },
+    {
+      "name": "ManagedSquish.dll",
+      "sha256": "9e09cdfeacfa08770ba06be5f34603a5cc8a7baa88a8adbe7666b0957348a03a"
+    },
+    {
+      "name": "NativeSquish_x64.dll",
+      "sha256": "e6d91efb59bac95726f4246db5128fa1488da173250647b8b9b950669a4deea1"
+    },
+    {
+      "name": "NativeSquish_x86.dll",
+      "sha256": "97ed3346d65590f173bd5facad06a27937a57c21f2d76f1ede2443285fa6cefe"
+    }
+  ]
+}

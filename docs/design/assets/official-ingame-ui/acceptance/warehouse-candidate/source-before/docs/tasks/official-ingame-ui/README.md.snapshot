@@ -1,0 +1,751 @@
+# 正式版风格登录后 UI 编码任务
+
+生成日期：2026-11-07。实现起点：`fc581d5`。共 **28 项任务：7 项完成、3 项进行中、18 项未开始**。基础设施已实施并验证，有效范围的正式版运行参考已核对；最终游戏接入和发布验收仍未完成。
+
+依据：[实施方案](../../design/official-ingame-ui-implementation-plan.md)。机器清单：[tasks.json](tasks.json)。JSON 是任务状态、依赖和验收关联的维护入口；修改后同步本清单，禁止两份状态分叉。JSON 中的 `files`、`evidence` 及计划中的路径均相对仓库根目录；文件是否已创建以任务状态和验收记录为准。
+
+当前参考：用户已确认游戏设置及截图基准为 **1024×768、窗口模式**。复用五张有效原图，第06张中文输入图仅留历史档案；33次局部匹配与92帧候选素材来源/透明掩码已核对。UI-02/G0-1参考准备完成；最终素材、布局、动作映射和实绘验收四项门槛继续未关闭。见[参考映射收口](../../design/assets/official-ingame-ui/acceptance/reference-finalization/README.md)、[分辨率确认](../../design/assets/official-ingame-ui/acceptance/reference/resolution-confirmation.json)和[当前实施状态](../../design/assets/official-ingame-ui/acceptance/reference/implementation-blocker.json)。
+
+## 执行边界
+
+当前范围纠偏：[范围执行记录](../../design/assets/official-ingame-ui/acceptance/scope-enforcement/README.md)。二级功能/服务窗口也属于暂缓换肤范围；已撤下出售、修理、精炼、领取和任务五处候选接入。UI-21仅商店主界面继续候选换肤，UI-22/23/24保留原服务样式并回归；已有独立适配器留作历史候选，不由场景入口调用。
+
+显示设置沿用项目当前方案，设置页面不换肤；不要求用户提供游戏或Windows设置截图、参数或修改配置。已有主界面、角色与包裹原图直接复用，当前无需补采。见[显示设置范围决定](../../design/assets/official-ingame-ui/acceptance/reference/display-settings-scope-decision.json)。
+
+最新补充：[NPC卡片范围决定](../../design/assets/official-ingame-ui/acceptance/reference/npc-card-scope-decision.json)优先于下文历史任务描述。NPC交互卡片外框、正文、选项和关闭按钮全部保持现有样式，不要求截图；UI-20仅保留原行为和联动回归，不实施卡片换肤。独立服务窗口按各自有效范围处理，不因本决定自动扩展或排除。
+
+2026-11-07 用户更新：[二级弹窗暂缓决定](../../design/assets/official-ingame-ui/acceptance/reference/secondary-popup-scope-decision.json)。角色、包裹及已约定的NPC主界面继续；其操作触发的额外二级弹窗暂不换肤，不要求正式版截图。按钮原动作和二级窗口流程仍须回归。历史方案不改写，本决定优先。
+
+- 仅改登录后的 HUD、角色、包裹、快捷栏、聊天、小地图外框、物品提示、已约定的 NPC 主窗口及关联仓库；操作按钮额外打开的二级弹窗保留现有样式；不扩展到登录、选区、选角和其他玩法窗口。
+- 保持装备 ID 0..15、包裹 49 格、快捷栏 10 链接、全局物品格 36×36、WindowType 编号及原服务端/协议/持久化语义；复用现有动作 handler，不新增业务包。
+- 所有任务的 `dependsOn` 完成且 `inputGates` 对应证据已关闭，才能开始依赖其结果的实际接入。任务内部可先准备独立夹具；未冻结的最终素材和坐标不以猜测代替。
+- P0..P5 对应方案阶段。由于透明样张需转换基础设施，UI-03/04/08/09/10 可在最终 G0 冻结前实施；执行顺序以依赖为准，不要求把全部 P0 输入先凑齐再写基础工具。
+- 正式版目录只读；输出到独立目录。参考 Zl 用于选图，交付包只包含确认后的登录后 UI；运行资源、数据库和截图不无差别加入 Git。
+- 每项采用独立可审查变更；新增 C# 文件随任务更新传统 csproj 的 Compile Include。修改同一文件的任务按顺序落地并检查差异，尤其 GameScene、DXWindow 和 NPCDialog。
+- 任务完成要求实现、相关验证和证据齐全；编译通过不等于游戏验收。状态可为 `not_started/in_progress/blocked/done`，阻断时写明缺项，不能跳过验收改为 done。
+
+代码基线核对：任务生成时历史关键文件全部匹配。基础设施实现后补录的 [实现快照](../../design/assets/official-ingame-ui/acceptance/baseline/implementation-start/baseline.json) 中，18 个历史文件有 13 个相同、5 个不同，均已记录原因；历史快照不改写。旧运行截图与发包轨迹仍未采集，不能作为已完成的行为基线。
+
+## 当前进度与下一步
+
+已实现[部署清单与版本校验](../../design/assets/official-ingame-ui/acceptance/deployment/README.md)：PowerShell 7、Windows PowerShell 5.1 各通过41项检查，原 Legacy 部署回归均通过。实际客户端未就绪时拒绝部署；成功路径使用隔离测试宿主。UI-26 标为进行中，UI-07/UI-12、实际就绪客户端部署与游戏验收仍未完成；Legacy 默认值和五项 G0 状态不变。
+
+已实现[角色字典属性可选布局](../../design/assets/official-ingame-ui/acceptance/preparatory/character-attributes/README.md)：复用57个原属性值、27个标题与30个Tag图标，按角色/状态/修炼页排版；19,302项控件断言通过，包含原UpdateStats、长数值提示与完整还原。人物预览与美术的后续状态见组合报告；GameScene尚未启用，不改变完成数或G0状态。
+
+已补充[角色原控件可选布局](../../design/assets/official-ingame-ui/acceptance/preparatory/character-controls/README.md)：20个原控件与11个新增标题可替换布局并还原，4,584项断言覆盖复用、长文本、固定复选框及原修炼/头盔事件的隔离本地队列行为；Debug/Release和232节点布局检查通过。本批未覆盖的即时值组合与预览见后续组合报告，最终美术待完成，GameScene未启用，任务完成数与G0状态不变。
+
+已实现[角色页组合与预览裁剪](../../design/assets/official-ingame-ui/acceptance/preparatory/character-composition/README.md)：四项原HUD数值与可选角色布局共同校验，人物预览使用候选锚点并裁剪图像/染色/特效层；2,115项组合检查及既有回归、双构建通过。未执行实际人物渲染验收，最终美术与GameScene接入待完成；任务数与G0不变。
+
+已实现[角色四页与装备格可选布局](../../design/assets/official-ingame-ui/acceptance/preparatory/character-pages/README.md)：复用原16个装备格，9槽在角色页、7槽在扩展装备页；12,173项断言及原聊天/即时值回归通过。该报告仅记录分页与装备，属性排版后续实现见上；角色预览的后续状态见组合报告，最终美术待完成；GameScene尚未启用此适配，不改变任务完成数或G0状态。
+
+当前[布局与角色即时值验证](../../design/assets/official-ingame-ui/acceptance/preparatory/character-readouts/README.md)：231 项、六分辨率、16/49/10 槽位及原属性覆盖检查通过，11 类错误输入均被拒绝；生成 C# 编译/读回和两次生成一致性通过。等级、经验、生命、魔法已实现可选绑定，2474 项控件检查通过；完整皮肤尚未启用，不改变任务完成数或 G0 状态。历史布局快照保持不变。
+
+- 已完成：UI-01 基线、UI-03 解码、UI-04 参考 Zl、UI-08 图片/按钮绑定、UI-09 可选窗口皮肤、UI-10 独立布局存储。逐项证据见各任务的 result.json。
+- 已完成：UI-02 / G0-1有效范围参考准备；五张原图、33次局部匹配和92帧候选素材的来源、层次及透明统计均可追溯，独立复现和43项检查通过。UI-05进行中，完整语义目录与PNG/Zl最终实绘仍待冻结；G0-2/G0-3/G0-4/G0-5继续未关闭。
+- 旧基线已转存4个参考库，保留4,276个索引和2,208张有效图；两次输出逐文件一致。该结果仅对应旧基线，当前资源已出现差异；参考库标记alphaVerified=false，最终交付用OfficialV1包尚未生成。
+- Debug/Release 构建、18 项解码测试、70 项资源检查、8,726 项绑定/读取检查、60 项皮肤检查、14 项 D3D9 实绘检查、2,208 张真实纹理读回及 35 项布局检查均通过；旧回归通过。
+- [基础验证记录](../../design/assets/official-ingame-ui/acceptance/foundations/README.md) 包含命令、日志、哈希和四张合成夹具图。合成图不作为正式版已登录截图，A01..A20 全游戏验收仍未完成。
+
+已准备独立的[HP/MP填充计算](../../design/assets/official-ingame-ui/acceptance/preparatory/fill-geometry/README.md)，几何检查与构建通过；尚未接入HUD，UI-14及A08不标完成。五条异常资源的候选透明层已作格式实验，仍不允许进入生产包。
+
+当前[角色绑定草稿](../../design/assets/official-ingame-ui/acceptance/preparatory/character-composition/character-bindings.draft.json)：16槽、57项字典属性、8个原控件及9个发包动作入口已静态核对；新增4项角色即时数据已实现为可选绑定，默认不启用。最终素材、坐标和真实行为未冻结，UI-06/17/18保持未开始；旧字段草稿保留为历史证据。
+
+已准备[Zl与编译目录校验器](../../design/assets/official-ingame-ui/acceptance/preparatory/catalog/README.md)：真实writer夹具、生成C#编译读回、四态/偏移/补齐及失败发布检查通过；仅允许合成准备包，现已另外生成真实素材接入测试Zl，但尚未生成交付目录或部署正式皮肤，UI-07保持未开始。
+
+已生成[真实素材拼接与Zl测试包](../../design/assets/official-ingame-ui/acceptance/preparatory/composed-assets/README.md)：84帧、19组按钮四态、49格包裹和10格快捷栏；两次产物逐文件一致，553,617个逻辑像素透明度核对及87张客户端实绘通过。该包禁止生产绑定；完整目录、布局和GameScene接入仍未完成。
+
+已编译并验证[真实控件布局宿主](../../design/assets/official-ingame-ui/acceptance/preparatory/scene-layout-host/README.md)：六分辨率145次布局、1,464项断言，覆盖聊天消息/滚动保留、原生输入矩形和按场景保存抑制。尚未接入GameScene构造/resize/聊天重置，UI-11保持未开始；隐藏窗口测试不代替真实输入法验收。
+
+已补充[资源包预检与所有权](../../design/assets/official-ingame-ui/acceptance/preparatory/package-preflight/README.md)：418项检查含288次真实D3D9像素比对通过，验证包/帧哈希、数据边界、文件锁、缓存重传及中途上传失败的整包清理；Debug/Release和控件回归通过。尚未接入启动及GameScene，正式目录未生成，UI-07/UI-12与五项G0状态保持不变。
+
+已补充[聊天与命令区边框素材](../../design/assets/official-ingame-ui/acceptance/preparatory/hud-surfaces/README.md)：3个派生边框的115,528个内部像素透明，原84帧保持不变；32项拼接、16项打包回归和90帧真实D3D9绘制通过，两次构建字节一致。此包共87帧，尚未接入GameScene；任务和G0状态不变。
+
+已完成[角色独立装备底框绑定](../../design/assets/official-ingame-ui/acceptance/preparatory/character-cell-binding/README.md)：原16格及原事件保持，17,249项角色检查、2,115项组合检查与双构建通过；36组D3D9画面完成4,741,812次像素比较，比较区域误差0。底框可替换、清除并随页面还原/销毁解绑；该入口尚未接入GameScene，完整换肤和真实游戏验收未完成。
+
+已完成[真实素材目录编译及加载验证](../../design/assets/official-ingame-ui/acceptance/catalog-compilation/README.md)：88帧与19组按钮四态生成C#目录并纳入Client编译，运行时不读JSON；真实包3,958项断言、792次帧上传检查，既有预检和双构建通过。尚未接入启动/GameScene，character-bindings.json仍待收口、布局仍为提案；五项G0及任务状态不变。
+
+## 输入门槛与执行入口
+
+| 门槛 | 关闭任务 | 必须留下的结果 | 当前状态 |
+| --- | --- | --- | --- |
+| G0-1 | UI-02 | 有效范围运行截图、版本/分辨率/源库关联、层次与透明标注；DPI及客户区未测状态明确 | 已关闭（参考准备） |
+| G0-2 | UI-05 | 全部必需 role、原库/索引、尺寸/偏移、透明/混合、按钮四态 | 未关闭 |
+| G0-3 | UI-06 | 六种分辨率的唯一控件矩形及标注图 | 未关闭 |
+| G0-4 | UI-06 | 原角色字段、快捷键、NPC/主面板入口的完整去向表 | 未关闭 |
+| G0-5 | UI-05 | PNG/Zl 的黑色、边缘、补齐、偏移和压缩实绘对照 | 未关闭 |
+
+建议顺序：**UI-01 → UI-02/03/08 → UI-04/09/10 → UI-05/06 → UI-07/11/12 → UI-13..16 → UI-17..19 → UI-20..25 → UI-27 → UI-28**。UI-26 在 UI-07/12 后即可准备。斜杠表示满足各自依赖后可分别推进；本清单不启动代理或新会话。
+
+六分辨率固定为 1024×768、1366×768、1280×800、1440×900、1600×900、1920×1080，保留 AutoScaleMode.None。角色主页面槽 ID 固定为 0/1/2/4/5/6/7/8/9，扩展页为 3/10/11/12/13/14/15。
+
+## 任务总表
+
+| ID | 阶段 | 编码任务 | 前置任务 | 输入门槛 | 状态 |
+| --- | --- | --- | --- | --- | --- |
+| UI-01 | P0 | 冻结代码、功能与接口基线 | — | — | 已完成 |
+| UI-02 | P0 | 补齐正式版运行参考 G0-1 | UI-01 | — | 已完成 |
+| UI-03 | P1 | 实现参数化 MIX/MIZ 解码器 | UI-01 | — | 已完成 |
+| UI-04 | P1 | 实现显式透明编码与参考 Zl 转存 | UI-03 | — | 已完成 |
+| UI-05 | P0 | 冻结语义素材与透明规则 G0-2/G0-5 | UI-02, UI-03, UI-04 | — | 进行中 |
+| UI-06 | P0 | 冻结布局和属性映射 G0-3/G0-4 | UI-01, UI-02, UI-05 | — | 未开始 |
+| UI-07 | P1 | 生成正式 UI 包和编译目录 | UI-04, UI-05, UI-06 | G0-2, G0-3, G0-4, G0-5 | 未开始 |
+| UI-08 | P1 | 扩展图片绑定与按钮四态 | UI-01 | — | 已完成 |
+| UI-09 | P1 | 实现可选窗口皮肤 | UI-08 | — | 已完成 |
+| UI-10 | P1 | 隔离新旧布局存储 | UI-09 | — | 已完成 |
+| UI-11 | P1 | 建立统一布局与窗口组合入口 | UI-06, UI-09, UI-10 | G0-3, G0-4 | 未开始 |
+| UI-12 | P1 | 接入启动风格、资源预检与生命周期 | UI-07, UI-08, UI-09, UI-10, UI-11 | G0-2, G0-3, G0-4, G0-5 | 未开始 |
+| UI-13 | P2 | 重建 HP/MP、经验与主面板按钮 | UI-12 | G0-1, G0-2, G0-3, G0-4, G0-5 | 未开始 |
+| UI-14 | P2 | 适配包裹 49 格和快捷栏 10 链接 | UI-12, UI-13 | G0-2, G0-3, G0-4, G0-5 | 未开始 |
+| UI-15 | P2 | 适配聊天皮肤、输入与焦点 | UI-12, UI-13 | G0-1, G0-2, G0-3, G0-4, G0-5 | 未开始 |
+| UI-16 | P2 | 适配小地图外框和命中换算 | UI-12, UI-13 | G0-1, G0-2, G0-3, G0-4, G0-5 | 未开始 |
+| UI-17 | P3 | 重建角色四标签与 16 槽 | UI-13, UI-14, UI-15, UI-16 | G0-1, G0-2, G0-3, G0-4, G0-5 | 未开始 |
+| UI-18 | P3 | 接入人物预览和完整属性绑定 | UI-17 | G0-3, G0-4 | 未开始 |
+| UI-19 | P3 | 统一装备提示样式并保留二级弹窗 | UI-17, UI-18 | G0-2, G0-3, G0-4, G0-5 | 未开始 |
+| UI-20 | P4 | 保留 NPC 主卡并回归原交互 | UI-14, UI-18, UI-19 | G0-1, G0-2, G0-3, G0-4, G0-5 | 进行中 |
+| UI-21 | P4 | 适配 NPC 商店并回归原服务 | UI-20 | G0-2, G0-3, G0-4, G0-5 | 未开始 |
+| UI-22 | P4 | 回归 NPC 任务与奖励（保留原样式） | UI-20 | G0-2, G0-3, G0-4, G0-5 | 未开始 |
+| UI-23 | P4 | 回归 NPC 同伴与婚戒（保留原样式） | UI-20 | G0-2, G0-3, G0-4, G0-5 | 未开始 |
+| UI-24 | P4 | 回归 NPC 材料与制造（保留原样式） | UI-20 | G0-2, G0-3, G0-4, G0-5 | 未开始 |
+| UI-25 | P4 | 适配仓库并收口 NPC 组合布局 | UI-11, UI-21, UI-22, UI-23, UI-24 | G0-3, G0-4 | 未开始 |
+| UI-26 | P5 | 接入资源部署和版本校验 | UI-07, UI-12 | — | 进行中 |
+| UI-27 | P5 | 完成自动回归与真实游戏验收 | UI-13, UI-14, UI-15, UI-16, UI-17, UI-18, UI-19, UI-20, UI-21, UI-22, UI-23, UI-24, UI-25, UI-26 | G0-1, G0-2, G0-3, G0-4, G0-5 | 未开始 |
+| UI-28 | P5 | 发布验收包与回退材料 | UI-27 | G0-1, G0-2, G0-3, G0-4, G0-5 | 未开始 |
+
+## 任务明细
+
+每项至少保留 `docs/design/assets/official-ingame-ui/acceptance/tasks/<ID>/result.json`，其中记录任务状态、实际提交、输入基线、执行命令/退出码、用例结果、未解决项和证据路径。新增测试放入该任务所需套件；夹具必须隔离，不读写真实玩家数据。
+
+### UI-01 冻结代码、功能与接口基线
+
+前置：无；输入门槛：无。
+
+修改范围：`docs/design/assets/official-ingame-ui/acceptance/baseline/`；`Client/Scenes/Views/CharacterDialog.cs`；`Client/Scenes/GameScene.cs`；`Client/Scenes/Views/NPCDialog.cs`。
+
+实施内容：
+
+1. 记录实现起点 HEAD、工作区差异、关键源码哈希；对比方案 code-baseline.json，逐项解释差异，保留历史快照。
+2. 导出现有角色字段、16 槽、快捷键、主面板信息、包裹操作、NPC 服务及确认/数量弹框清单；记录旧客户端相同操作的显示、事件和发包基线。
+3. 冻结资源绑定、WindowSkin、布局路由、启动样式上下文及测试入口的最小接口契约；约定 tests/Run-GameUiTests.ps1 的 Assets/Controls/Layout/Bindings/Npc 套件，后续任务逐步实现。
+
+完成条件：
+
+- 基线包含 16 装备槽、49 包裹格、10 快捷链接、17 NPC 窗口和仓库；每项功能有目标页面及验证方式。
+- 未具备运行条件的截图/发包基线标为未采集；关联行为任务不能以空证据验收。
+- 已有未跟踪运行数据库、data 和 build/hud-assets 不作为本任务代码或生成包来源自动提交。
+
+### UI-02 补齐正式版运行参考 G0-1
+
+前置：UI-01；输入门槛：无。
+
+修改范围：`docs/design/assets/official-ingame-ui/acceptance/reference/`。
+
+实施内容：
+
+1. 复用主界面、角色及包裹原图，按用户确认的1024×768配置分析布局；附件像素、未知DPI与未独立测量的客户区分别记录。
+2. 核对透明边界、组合层级、按钮状态和操作区域；27张选图采用精确解码哈希关联已有参考，不能用拼图冒充运行截图。
+3. NPC交互卡片、二级弹窗及显示设置不换肤；当前不要求补图或重新登录。只有明确细节无法判断且影响实现时，才说明具体区域、状态及用途。
+
+完成条件：
+
+- 有效范围的运行图与素材映射、透明和组合证据齐全，未知元数据诚实记录。目前继续实施分析，G0-1尚未关闭。
+
+### UI-03 实现参数化 MIX/MIZ 解码器
+
+前置：UI-01；输入门槛：无。
+
+修改范围：`build/game-ui/Decode-OfficialUi.py`；`build/game-ui/source-libraries.json`；`tests/Run-GameUiTests.ps1`；`tests/game-ui/`。
+
+实施内容：
+
+1. 支持显式源目录、输出目录和源库哈希清单；正式版目录只读，输出不得与源目录重合；默认绑定已记录的四库基线，哈希不符立即停止。
+2. 读取 MIX 偏移表、MIZ 项头、zlib、RGB565、4 字节行对齐及 bottom-up；保留空项、原索引和有符号偏移；导出 PNG 和逐项元数据。
+3. 校验头、数量、偏移/长度、尺寸、解压数据长度及输出路径；损坏输入报告源库/索引并失败，不发布半成品。
+
+完成条件：
+
+- 固定源哈希下四库索引数分别 2045/420/181/1630，有效图分别 1175/349/112/572；重复输出元数据和像素内容一致。
+- 截断、越界、错误压缩、负 offset、行补齐和空项夹具均覆盖；源目录哈希前后不变。
+
+关联验收：A01, A02。
+
+### UI-04 实现显式透明编码与参考 Zl 转存
+
+前置：UI-03；输入门槛：无。
+
+修改范围：`ImageManager/OfficialUiBuilder.cs`；`ImageManager/WTLLibrary.cs`；`ImageManager/Mir3Library.cs`；`ImageManager/ImageManager.csproj`；`tests/game-ui/`。
+
+实施内容：
+
+1. 新增可自动调用的构建入口，参数含输入目录、输出目录、manifest 与 reference/runtime 模式；复用现有 Zl writer；入口不得依赖交互式选文件或写死路径。
+2. 编码器支持显式 opaque/binary-mask 策略；旧 WTL 入口维持原黑色透明默认行为。按实际逻辑尺寸补齐 DXT1 纹理，补齐区透明，保留负 offset。
+3. 逐库输出 Reference/UI.Zl、Interface.Zl、GameInter.Zl、ProgUse.Zl 及 reference-manifest.json，保留全部 4276 索引位置、空项和 2208 有效图；未确认透明规则的图仅按 opaque 保留像素，并标 alphaVerified=false，仅供查图，不能进入交付包。
+4. 连续透明效果不能静默降级，也不写入伪装为当前格式的 DXT5 数据；保留源文件和 PNG，DXT1 参考库不替代原件。
+
+完成条件：
+
+- 现有 MirLibrary 可读取输出的完整头和图像数据，逐项索引/空项/尺寸/offset 与源元数据一致；偏移及长度不溢出当前格式。
+- 不透明纯黑、透明掩码、非 4 倍数尺寸样张均正确；旧 WTL 固定夹具输出不变。
+- 失败只留独立临时结果，既有可用输出包不被替换。
+
+关联验收：A01, A02。
+
+### UI-05 冻结语义素材与透明规则 G0-2/G0-5
+
+前置：UI-02、UI-03、UI-04；输入门槛：无。
+
+修改范围：`build/game-ui/asset-manifest.json`；`docs/design/assets/official-ingame-ui/acceptance/assets/`。
+
+实施内容：
+
+1. 为每个必需 role 明确源库/索引/哈希、裁切与组合、逻辑/纹理尺寸、offset/pivot、alphaMode/blendMode 和按钮四态；枚举所有待改窗口的资源需求。
+2. 确认 HP/MP 壳与填充层组合；补齐小地图、聊天、NPC 准确索引，不按相邻帧猜按钮状态；缺状态图只用明确的 tint 规则。
+3. 实绘对比 PNG 与 Zl 的深黑底、细线、边缘、文字、红蓝色与负 offset；如需复用 UIB，按已识别 BMP 读取且仅抽取范围内区域。
+
+完成条件：
+
+- G0-2 每个必需 role 唯一且来源可追溯，引用完整；G0-5 对照证据通过。
+- 连续透明/特殊混合无法等价重现的必需素材保留阻断，不以勾选完成绕过；登录及其他范围外图不打包。
+
+关联验收：A02。
+
+### UI-06 冻结布局和属性映射 G0-3/G0-4
+
+前置：UI-01、UI-02、UI-05；输入门槛：无。
+
+修改范围：`build/game-ui/layout-official-v1.json`；`build/game-ui/character-bindings.json`；`docs/design/assets/official-ingame-ui/acceptance/layout/`。
+
+实施内容：
+
+1. 为六种分辨率输出逻辑整数矩形及标注图；每个窗口、槽位、属性、按钮、NPC 内容区、聊天输入、小地图 viewport 有唯一 ID。
+2. 明确 slotId/parentTab/visualRect/hitRect/iconRect、人物 pivot、标题拖动区、safeRect、九宫格边距、按钮四态几何与默认窗口组合；校验局部/屏幕坐标转换一致。
+3. 从 UI-01 的完整字段清单生成属性/入口去向表；角色 9 槽与扩展 7 槽、49 格、10 链接保持，主界面与 NPC 的确认按钮可达。
+
+完成条件：
+
+- G0-3 六种分辨率覆盖且必需矩形无缺项；G0-4 原字段和操作入口逐项有去向。
+- 1024×768 的角色+包裹、NPC+包裹、NPC+仓库组合均能操作；地图装饰不占用错误命中区。
+
+关联验收：A03, A05, A06, A07, A14。
+
+### UI-07 生成正式 UI 包和编译目录
+
+前置：UI-04、UI-05、UI-06；输入门槛：G0-2、G0-3、G0-4、G0-5。
+
+修改范围：`ImageManager/OfficialUiBuilder.cs`；`build/game-ui/Build-OfficialUi.ps1`；`Client/Models/GameUi/OfficialUiCatalog.cs`；`Client/Client.csproj`；`ImageManager/ImageManager.csproj`。
+
+实施内容：
+
+1. 将冻结资源裁切/拼接为 Data/GameUI/OfficialV1.Zl，参考库与旧 Data/Interface.Zl 等严格分开；outputIndex 固定且唯一。
+2. 校验输入 JSON 后生成编译进客户端的语义索引、包哈希、尺寸、布局常量和属性映射；运行时不依赖构建 JSON。
+3. 新增 C# 文件显式加入传统 csproj；构建先写临时目录，全部验证通过后才发布匹配的包、生成代码及清单。
+
+完成条件：
+
+- 同输入两次构建资源字节和映射一致；未知 role、冲突索引、缺四态、非法矩形、哈希不符均阻断发布。
+- 当前客户端读取每个必需图成功；EXE 的目录与资源包哈希一致，无法混用旧生成代码和新包。
+
+关联验收：A01, A02。
+
+### UI-08 扩展图片绑定与按钮四态
+
+前置：UI-01；输入门槛：无。
+
+修改范围：`Client/Controls/DXImageControl.cs`；`Client/Controls/DXButton.cs`；`tests/game-ui/`。
+
+实施内容：
+
+1. 按 UI-01 契约提供单入口绑定 Library/Index，同步纹理失效、Size 和 DisplayArea。
+2. 增加可选四态映射；旧按钮沿用默认行为。切态保持逻辑矩形和点击范围，不重复订阅动作。
+
+完成条件：
+
+- 用隔离测试图验证四态切换、换库同索引、换索引、失效/释放和点击只触发一次。
+- 未启用新绑定的旧图片、旧按钮绘制与交互基线通过。
+
+关联验收：A02, A17。
+
+### UI-09 实现可选窗口皮肤
+
+前置：UI-08；输入门槛：无。
+
+修改范围：`Client/Controls/GameUiWindowSkin.cs`；`Client/Controls/DXWindow.cs`；`tests/game-ui/`。
+
+实施内容：
+
+1. 新增可空 WindowSkin；统一 GetSize/GetClientArea/SetClientSize 边距换算，不能在子类隐藏非 virtual 方法。
+2. 实现固定角九宫格、标题/拖动区/关闭按钮和最小尺寸；角色底板逻辑像素 1:1；有皮肤时抑制旧背景/边框重复绘制。
+3. 资源、尺寸、皮肤、透明度变化使缓存和命中区同步失效；保留 Esc、关闭、拖动及 Dispose 行为。
+
+完成条件：
+
+- 客户区双向换算一致、九宫格边界和标题命中正确；透明装饰不拦截地图。
+- 皮肤为空时原窗口几何和交互不变；反复换皮肤/开关无事件累积。
+
+关联验收：A02, A14, A17。
+
+### UI-10 隔离新旧布局存储
+
+前置：UI-09；输入门槛：无。
+
+修改范围：`Client/Envir/GameUiLayoutStore.cs`；`Client/Controls/DXWindow.cs`；`tests/game-ui/`。
+
+实施内容：
+
+1. 将 OfficialV1 读写都路由到配置目录 GameUiLayout.OfficialV1.json，键为 schemaVersion/styleVersion/resolution/windowType；Legacy 仍走旧 Settings。
+2. 仅保存允许的位置、尺寸和可见性；不保存物品、NPC 页面、拖放及业务状态，不变更 WindowType 编号。
+3. 临时文件+原子替换；非法尺寸/坐标、损坏 JSON、未知版本记录原因并回默认；初始化/批量布局抑制写入和递归 resize。
+
+完成条件：
+
+- 自动检查样式/分辨率隔离、未知版本、损坏/缺文件、写失败和边界坐标；失败不破坏最近可用文件。
+- OfficialV1 操作前后旧布局数据库哈希不变；NPC 服务不会因恢复可见性自动打开。
+
+关联验收：A15, A20。
+
+### UI-11 建立统一布局与窗口组合入口
+
+已完成独立[布局协调器准备](../../design/assets/official-ingame-ui/acceptance/preparatory/layout-coordinator/README.md)：六分辨率、九锚点、2,400组随机位置及三种NPC组合通过几何检查，Debug/Release构建和原布局回归通过。尚未接入GameScene，最终布局、滚动/裁剪、聊天输入及命中行为待验收，UI-11与A14/A15不标完成。
+
+前置：UI-06、UI-09、UI-10；输入门槛：G0-3、G0-4。
+
+修改范围：`Client/Envir/GameUiLayoutCoordinator.cs`；`Client/Scenes/GameScene.cs`；`Client/Controls/DXWindow.cs`；`tests/game-ui/`。
+
+实施内容：
+
+1. 按构造/恢复聊天→皮肤尺寸→锚点与组合→匹配布局→clamp→一次输入矩形刷新执行；接入构造尾部、OnSizeChanged、聊天加载和 NPC 组合回调。
+2. 实现 safeRect、标题/关闭/操作区可达及超高内容滚动；HUD 底部、小地图右上、聊天左下，角色/包裹默认分列。
+3. 提供 NPC 上下→左右→区内叠放策略；叠放时当前服务置顶并保留主卡标题/关闭入口；本任务先用模拟窗口验几何，UI-25 再接全量 NPC。
+
+完成条件：
+
+- 六分辨率自动几何检查通过；重复 resize 无保存风暴、递归、聊天标签重建或消息清空。
+- 超大内容仍可滚动访问全部格/确认按钮，模态和提示在正确层级，命中只交给最上层控件。
+
+关联验收：A14, A15。
+
+### UI-12 接入启动风格、资源预检与生命周期
+
+前置：UI-07、UI-08、UI-09、UI-10、UI-11；输入门槛：G0-2、G0-3、G0-4、G0-5。
+
+修改范围：`Client/Envir/Config.cs`；`Client/Program.cs`；`Client/Envir/GameUiAssets.cs`；`Client/Scenes/GameScene.cs`；`Client/Models/MirLibrary.cs`；`Client/Client.csproj`。
+
+实施内容：
+
+1. 新增 GameUiStyle=Legacy/OfficialV1，重启生效；开发默认 Legacy，交付默认值由 UI-28 验收后的独立打包配置确定。
+2. 配置和 D3D 设备就绪后、GameScene 创建前验证包哈希、全部必需帧及可读性；失败整套使用 Legacy，不保留半套新布局。
+3. 独立 MirLibrary 不增加 LibraryFile 枚举；纹理纳入现有 TextureList/设备重置，定义应用/场景/控件的唯一释放责任。
+4. 运行中渲染故障时阻止新的界面操作，保留连接回包处理、记录原因并提示重启；不在购买/拖放中自动重建场景。
+
+完成条件：
+
+- 缺包、坏包、错哈希、缺帧均在进场前整套回 Legacy；无效样式值记录原因并按 Legacy 处理。
+- 样式不能运行中热切；设备重置、返回登录/重登/退出不访问已释放纹理；故障不重复发包。
+
+关联验收：A01, A17, A20。
+
+### UI-13 重建 HP/MP、经验与主面板按钮
+
+前置：UI-12；输入门槛：G0-1、G0-2、G0-3、G0-4、G0-5。
+
+修改范围：`Client/Scenes/Views/MainPanel.cs`；`Client/Scenes/GameScene.cs`；`tests/game-ui/`。
+
+实施内容：
+
+1. 按冻结组合绘制底板、空球、底部向上填充、高光、装饰和文字；ratio 浮点计算，max<=0 取 0，夹紧比率但不伪造显示数值。
+2. 源/目标裁剪使用同一取整规则并从底部移动；保存/恢复裁剪、混合及 D3D 状态。
+3. 经验、攻击/宠物模式和主面板原字段/按钮保留入口；按钮复用现有开关、快捷键和可用条件。
+
+完成条件：
+
+- max=0、负值、0、1、半值、max、超 max 均无非法裁剪/除零，HUD 与角色数据同步。
+- 按球体逐状态实绘；后续地图/聊天绘制无状态泄漏，按钮每次动作与原发包一致。
+
+关联验收：A08, A14。
+
+### UI-14 适配包裹 49 格和快捷栏 10 链接
+
+前置：UI-12、UI-13；输入门槛：G0-2、G0-3、G0-4、G0-5。
+
+修改范围：`Client/Scenes/Views/InventoryDialog.cs`；`Client/Scenes/Views/BeltDialog.cs`；`Client/Controls/DXItemGrid.cs`；`tests/game-ui/`。
+
+实施内容：
+
+1. 从 6×8 候选底图重新拼 7×7 底板，步长保持 35、网格 246×246；保留金币、重量、操作栏和索引 0..48。
+2. 快捷栏确定完整尺寸后只重建一次 Grid 并恢复 10 链接；重复尺寸事件不重复创建控件或订阅。
+3. 保留拆分、堆叠、交换、丢弃、远程出售、分解、提示、超重以及数量/冷却/键位语义。
+
+完成条件：
+
+- 包裹满载且索引 0/47/48 所有原操作和拒绝路径通过；无容量/物品数据变化。
+- 10 链接逐个设置触发，resize、重登、保存恢复后仍正确；发包与旧基线一致。
+
+关联验收：A06, A07。
+
+### UI-15 适配聊天皮肤、输入与焦点
+
+前置：UI-12、UI-13；输入门槛：G0-1、G0-2、G0-3、G0-4、G0-5。
+
+修改范围：`Client/Scenes/Views/ChatTab.cs`；`Client/Scenes/Views/ChatTextBox.cs`；`Client/Scenes/GameScene.cs`。
+
+实施内容：
+
+1. 聊天列表沿用本项目当前字体、字号、颜色、频道标识和排版；只调整位置、可用尺寸与容器裁剪，放入已采主界面中输入栏上方的消息显示框。正式版中文输入截图不作为聊天换肤依据；外框等HUD素材按各自任务核对。
+2. 迁移保留频道/过滤配置，重算坐标和尺寸；重复布局不清消息、不重建标签。
+3. 保留输入焦点隔离、Enter/Esc、历史和滚轮；点击频道/按钮不得向地图透传移动。
+
+完成条件：
+
+- 在本项目客户端验证真实中文 IME 候选与组合输入、发送/取消、长消息、切频道/标签、过滤、滚动和重登；正式版发送因用户报告的15级限制未验证，不作为采集前置，也不要求升级。
+- 输入焦点时游戏快捷键不触发；六分辨率及规定 DPI 输入位置正确，消息不丢失/重复。
+
+关联验收：A09, A14, A16。
+
+
+2026-11-07 用户补充（优先于历史方案中的聊天换肤描述）：消息列表与输入控件分别布局，不把完整聊天窗口嵌入列表框；不改现有频道、过滤、历史、多标签和滚动逻辑，同步实际输入控件的 WinForms 屏幕矩形。 列表样式与当前项目一致；消息仅在指定框内部显示和裁剪，不覆盖输入栏或相邻HUD，布局变化不丢消息、不重建标签。 依据：[聊天范围决定](../../design/assets/official-ingame-ui/acceptance/reference/chat-scope-decision.json)。
+
+### UI-16 适配小地图外框和命中换算
+
+前置：UI-12、UI-13；输入门槛：G0-1、G0-2、G0-3、G0-4、G0-5。
+
+修改范围：`Client/Scenes/Views/MiniMapDialog.cs`；`Client/Scenes/GameScene.cs`；`tests/game-ui/`。
+
+实施内容：
+
+1. 只替换外框、标题与控制按钮；保留原地图库、Panel、ScaleX/Y、标记和切图逻辑。
+2. viewport 变化时同步裁剪、缩放、标记与点击坐标转换；透明装饰层不接收地图输入。
+
+完成条件：
+
+- 换地图、移动跟随、缩放、坐标文字、边缘点击和现有拖动能力通过。
+- 自动边界换算与实绘命中一致；框外透明区不阻断原地图操作。
+
+关联验收：A10, A14。
+
+### UI-17 重建角色四标签与 16 槽
+
+前置：UI-13、UI-14、UI-15、UI-16；输入门槛：G0-1、G0-2、G0-3、G0-4、G0-5。
+
+修改范围：`Client/Scenes/Views/CharacterDialog.cs`；`Client/Controls/DXItemCell.cs`；`tests/game-ui/`。
+
+实施内容：
+
+1. 保留 CharacterDialog 对外字段/Grid 和更新入口；固定角色/扩展装备/状态/修炼四标签，默认角色。角色页 0,1,2,4,5,6,7,8,9，扩展页 3,10,11,12,13,14,15，按 4+3 排列。
+2. 每个 Slot 只持有一个 cell；保留盔甲操作格，覆盖无业务能力的腰带等装饰；左右槽不镜像互换，Torch 不改为腰带。
+3. 若长框确有需求，新增每实例呈现/命中参数并审查硬编码路径；全局 CellWidth/Height=36 不变，穿戴/拖放 handler 复用。
+
+完成条件：
+
+- 16 槽 ID 和 Link 一一对应，命中无重叠；不同左右手镯/戒指可辨识，穿卸/双击/错类型拒绝通过。
+- 隐藏页收到回包仍更新；四标签切换不改装备、不双发；Legacy 及其他 DXItemCell 场景回归通过。
+
+关联验收：A03。
+
+### UI-18 接入人物预览和完整属性绑定
+
+前置：UI-17；输入门槛：G0-3、G0-4。
+
+修改范围：`Client/Scenes/Views/CharacterDialog.cs`；`Client/Scenes/GameScene.cs`；`tests/game-ui/`。
+
+实施内容：
+
+1. 将人物绘制固定基准替换为布局 pivot 并裁剪到预览区，保留职业/性别/装备/盾牌/特效和绘制层级。
+2. 按冻结字段表绑定等级/经验、HP/MP、腕力/肩力、准确/敏捷/舒适/幸运、GetFormat 基础属性及七系攻/强弱元素；物理抗性和原扩展属性保留在状态页。
+3. 沿用 Health/Mana/Experience/Weight/Stats 更新点和对外标签引用；修炼点、条件、确认/取消、发包和回包保持。
+
+完成条件：
+
+- 当前支持职业/性别与装备/特效组合运行正确；预览不裁掉必须显示部分，不改变穿戴状态。
+- 逐字段与旧基线核对；负/零/正抗性、超重、经验上限 0、实时更新和修炼均通过，无 NaN/Infinity 或旧值残留。
+
+关联验收：A04, A05。
+
+### UI-19 统一装备提示样式并保留二级弹窗
+
+前置：UI-17、UI-18；输入门槛：G0-2、G0-3、G0-4、G0-5。
+
+修改范围：`Client/Scenes/GameScene.cs`；`Client/Controls/GameUiWindowSkin.cs`；`Client/Scenes/Views/CharacterDialog.cs`；`Client/Scenes/Views/InventoryDialog.cs`。
+
+实施内容：
+
+1. 保持 CreateItemLabel 内容、条件、比较/预览和定位入口，仅提取边框、文本样式、间距及换行；不重算物品总属性。
+2. 二级弹窗暂不换肤，沿用现有数量/确认/提示及二级功能窗口；保留打开、取消、确认、关闭和层级行为回归。
+
+完成条件：
+
+- 长名、多属性、负值、品质、锁定/未鉴定等实际支持状态与原显示数据一致；四角悬浮仍可读。
+- 比较/预览、禁用条件、弹框叠加、取消与关闭正常；提示不永久残留，未支持字段不补假值。
+
+关联验收：A19。
+
+### UI-20 保留 NPC 主卡并回归原交互
+
+前置：UI-14、UI-18、UI-19；输入门槛：G0-1、G0-2、G0-3、G0-4、G0-5。
+
+修改范围：`Client/Scenes/Views/NPCDialog.cs`；`Client/Scenes/GameScene.cs`；`tests/game-ui/`。
+
+实施内容：
+
+1. NPCDialog主交互卡片保留现有样式，不实施新底板、正文及选项排版或关闭按钮换肤。
+2. 仅核对HUD及布局调整未破坏原打开/关闭、正文/选项更新、点击响应和服务联动；其他独立服务窗口按各自有效范围处理。
+
+完成条件：
+
+- NPC交互卡片不引用OfficialV1新皮肤；原正文、选项、关闭按钮显示及行为保持。
+- 原对话选项发包和服务联动回归通过；不要求正式版卡片样式对照或新视觉布局。
+
+关联验收：A11, A12。
+
+### UI-21 适配 NPC 商店并回归原服务
+
+前置：UI-20；输入门槛：G0-2、G0-3、G0-4、G0-5。
+
+修改范围：`Client/Scenes/Views/NPCDialog.cs`；`tests/game-ui/`。
+
+实施内容：
+
+1. 覆盖 NPCGoodsDialog、NPCSellDialog、NPCRepairDialog、NPCRefineDialog、NPCRefineRetrieveDialog 及 NPCGoodsCell/NPCRefineCell。
+2. 保留商品 7 行视口、出售 7×7、修理 14×5 和原材料/结果槽；重排价格、方式、数量、估价、确认/清空与领取反馈。
+3. 大网格通过可视行/滚动适配而非减容量；数量/确认等二级弹窗沿用现有样式和流程，不套用新皮肤。
+
+完成条件：
+
+- 五窗口逐一正常/取消/不足金币或材料/无效物品/数量边界/服务器拒绝或延迟有记录。
+- 第一个和最后一个格/商品可达；不提前扣物报成功，禁用态和 handler 条件一致，无额外发包。
+
+关联验收：A12。
+
+### UI-22 回归 NPC 任务与奖励（保留原样式）
+
+前置：UI-20；输入门槛：G0-2、G0-3、G0-4、G0-5。
+
+修改范围：`Client/Scenes/Views/NPCDialog.cs`；`tests/game-ui/`。
+
+实施内容：
+
+1. 适配 NPCQuestDialog/NPCQuestRow 的任务列表、正文、进度、奖励区与接受/完成/放弃按钮，长内容可滚动。
+2. 保留必选奖励校验、任务条件、原确认/发包与结果刷新。
+
+完成条件：
+
+- 未选奖励不能完成，正确选择后正常提交；失败回包不报成功，重开/切任务不残留错误选择。
+- 长正文末项及奖励、确认按钮可达；取消/放弃与旧基线一致。
+
+关联验收：A12, A13。
+
+### UI-23 回归 NPC 同伴与婚戒（保留原样式）
+
+前置：UI-20；输入门槛：G0-2、G0-3、G0-4、G0-5。
+
+修改范围：`Client/Scenes/Views/NPCDialog.cs`；`tests/game-ui/`。
+
+实施内容：
+
+1. 覆盖 NPCAdoptCompanionDialog、NPCCompanionStorageDialog、NPCWeddingRingDialog，以及 NPCCompanionStorageRow。
+2. 保留领养预览/条件、寄养取回列表/滚动/费用、婚戒目标和原确认；只改变布局/样式。
+
+完成条件：
+
+- 三窗口逐一选中、操作、取消、条件不满足、服务器拒绝/延迟与重开有记录。
+- 费用和结果保持原规则；关闭/离开 NPC/断线清理选择与辅助卡，不留下孤立窗口。
+
+关联验收：A12。
+
+### UI-24 回归 NPC 材料与制造（保留原样式）
+
+前置：UI-20；输入门槛：G0-2、G0-3、G0-4、G0-5。
+
+修改范围：`Client/Scenes/Views/NPCDialog.cs`；`tests/game-ui/`。
+
+实施内容：
+
+1. 覆盖 NPCRefinementStoneDialog、NPCItemFragmentDialog、NPCMasterRefineDialog、NPCAccessoryUpgradeDialog、NPCAccessoryLevelDialog、NPCAccessoryResetDialog、NPCWeaponCraftWindow；最后一个类名以现有源码 Window 为准。
+2. 逐项重排原有材料/目标格、数量、费用、条件、选项、提交和结果，保留实际原 handler 和所有业务限制。
+
+完成条件：
+
+- 七窗口各有正常、取消、材料/费用不足、无效目标、数量边界及拒绝/延迟验证记录；不适用项写具体原因。
+- 所有目标/材料格可操作，费用/禁用/确认一致；失败回包不在 UI 侧扣除资源或报告成功。
+
+关联验收：A12。
+
+### UI-25 适配仓库并收口 NPC 组合布局
+
+前置：UI-11、UI-21、UI-22、UI-23、UI-24；输入门槛：G0-3、G0-4。
+
+修改范围：`Client/Scenes/Views/StorageDialog.cs`；`Client/Scenes/Views/NPCDialog.cs`；`Client/Envir/GameUiLayoutCoordinator.cs`；`Client/Scenes/GameScene.cs`；`tests/game-ui/`。
+
+实施内容：
+
+1. 仓库保留 13 列动态网格、当前总容量、筛选/滚动和存取；主窗口按范围适配底板，操作后额外弹出的二级窗口保留现有样式。
+2. 将 Response 各分支及相关 resize 的直接 Location 写入统一路由到布局协调器，显隐/尺寸更新后只布局一次。
+3. 落实上下/左右/叠放和服务置顶；主卡隐藏、离开、断线、切场景按原业务联动关闭服务和清理选择，布局存储不干预业务开关。
+
+完成条件：
+
+- 六分辨率下 NPC+包裹、NPC+仓库、主卡超长和大格区组合确认可达；首末格、滚动筛选、存取保持。
+- 17 窗口与仓库逐项列明打开/关闭/重开联动，无孤立窗口或持久化误开服务。
+
+关联验收：A12, A13, A14, A15。
+
+### UI-26 接入资源部署和版本校验
+
+前置：UI-07、UI-12；输入门槛：无。
+
+修改范围：`build/Setup-ClientAssets.ps1`；`build/game-ui/New-GameUiReleaseManifest.ps1`；`tests/Run-ClientAssetsTests.ps1`；`build/game-ui/Build-OfficialUi.ps1`；`docs/build-and-debug.md`。
+
+实施内容：
+
+1. 为部署增加显式 GameUiStyle 和 ReleaseManifestPath 参数；默认 Legacy 兼容现有调用。OfficialV1 强制传入部署清单，将新包加入必需项，复制前校验源包和目标 Zircon.exe 的哈希与清单一致。
+2. 新增编译后清单生成入口，记录 buildId、EXE SHA-256、Zl SHA-256 及 Catalog 所用资源哈希；生成时验证实际包与 Catalog 匹配。构建输出先进入实际 ResourceRoot/Data/GameUI；清单只供构建/部署使用，客户端运行不依赖 JSON。
+3. 保留既有递归复制和用户设置/数据库保护；发布 EXE/资源/清单以同一 buildId 成组验证，不修改正式版源目录。
+
+完成条件：
+
+- 隔离目录中 Legacy 无新包仍可部署；OfficialV1 缺包/错哈希/EXE 版本不匹配即失败，完整匹配可部署。
+- 递归 Zl、重复执行及既有状态保留测试通过；干净目录无本机安装路径依赖。
+
+关联验收：A01, A20。
+
+### UI-27 完成自动回归与真实游戏验收
+
+前置：UI-13、UI-14、UI-15、UI-16、UI-17、UI-18、UI-19、UI-20、UI-21、UI-22、UI-23、UI-24、UI-25、UI-26；输入门槛：G0-1、G0-2、G0-3、G0-4、G0-5。
+
+修改范围：`tests/Run-GameUiTests.ps1`；`tests/game-ui/`；`docs/design/assets/official-ingame-ui/acceptance/`。
+
+实施内容：
+
+1. 构建 Debug/Release 的 Zircon Server.sln（Any CPU，客户端 x86），执行原有四脚本和新增五套件；只读夹具/隔离数据，记录命令、版本、退出码。
+2. 逐项执行原方案 A01..A20；A12 单列 17 窗口。六分辨率×100/125/150% DPI×窗口/全屏共 36 组合冒烟，1024×768 与 1920×1080 的每组合补主要交互。
+3. 重复开关角色/包裹/NPC 各 100 次、重登 10 次，检查 D3D 重置/Alt-Tab/释放；同机同场景预热后 Legacy/OfficialV1 各采 60 秒×3 轮，比帧耗时中位数及 P95，回退不得超过 10%。
+4. 联调采集穿戴、包裹、NPC 的原/新相同操作事件和发包对照；仅使用项目指定的隔离测试环境，环境缺失项标未执行。
+
+完成条件：
+
+- A01..A20 所有必测项有 caseId/buildId/style/resolution/dpi/steps/expected/actual/result/evidencePath，实际失败与未执行不能标通过。
+- 自动测试、截图/输入法、D3D、联机结果分开记录；已知范围内缺陷清零后，才允许进入 UI-28。
+- 本任务中的 A20 先以显式 OfficialV1 启动测试包完成安装/回退演练；不提前改变交付默认值。
+
+关联验收：A01, A02, A03, A04, A05, A06, A07, A08, A09, A10, A11, A12, A13, A14, A15, A16, A17, A18, A19, A20。
+
+### UI-28 发布验收包与回退材料
+
+前置：UI-27；输入门槛：G0-1、G0-2、G0-3、G0-4、G0-5。
+
+修改范围：`build/game-ui/Build-OfficialUi.ps1`；`docs/build-and-debug.md`；`docs/design/assets/official-ingame-ui/acceptance/release/`。
+
+实施内容：
+
+1. 审核同一候选 buildId 的必测报告和已关闭缺陷；全部通过后，仅在交付配置设默认 OfficialV1，开发默认 Legacy 保留。
+2. 交付同一 buildId 的 EXE/依赖/Zl/哈希清单/布局与属性映射/截图/报告；若改配置导致二进制或资源变化，生成新 buildId 并重跑受影响校验和 A20，不能沿用旧结果。
+3. 在独立目录验最终包默认进入 OfficialV1、切 Legacy 重启和旧 EXE+旧资源整包回退；备份用户设置，写出可执行操作步骤。
+
+完成条件：
+
+- 交付包默认样式、哈希、来源和证据互相匹配；无 G0、必测项或范围内缺陷未关闭。
+- 回退不改角色物品/服务器数据/旧布局数据库，无运行中热切换；以质量门槛结项，不声明绝对不存在未知 bug。
+
+关联验收：A20。
+
+## NPC 覆盖责任
+
+下面 17 个窗口必须全部留有独立 A12 记录；不适用输入写明业务原因。四个辅助控件分别随其服务任务实现，不计入窗口数量。仓库由 UI-25 负责。
+
+| 责任任务 | 实际源码窗口类 |
+| --- | --- |
+| UI-20 | `NPCDialog` |
+| UI-21 | `NPCGoodsDialog`, `NPCSellDialog`, `NPCRepairDialog`, `NPCRefineDialog`, `NPCRefineRetrieveDialog` |
+| UI-22 | `NPCQuestDialog` |
+| UI-23 | `NPCAdoptCompanionDialog`, `NPCCompanionStorageDialog`, `NPCWeddingRingDialog` |
+| UI-24 | `NPCRefinementStoneDialog`, `NPCItemFragmentDialog`, `NPCMasterRefineDialog`, `NPCAccessoryUpgradeDialog`, `NPCAccessoryLevelDialog`, `NPCAccessoryResetDialog`, `NPCWeaponCraftWindow` |
+
+## 验收追踪
+
+A01..A20 的操作与期望以原实施方案 §12.1 为准，任务不重新定义另一套标准。下表列开发及专项验证责任，UI-27 汇总全量实际结果；A20 最终发布确认由 UI-28 完成。
+
+| 用例 | 开发/专项验证任务 |
+| --- | --- |
+| A01 | UI-03, UI-04, UI-07, UI-12, UI-26 |
+| A02 | UI-03, UI-04, UI-05, UI-07, UI-08, UI-09 |
+| A03 | UI-06, UI-17 |
+| A04 | UI-18 |
+| A05 | UI-06, UI-18 |
+| A06 | UI-06, UI-14 |
+| A07 | UI-06, UI-14 |
+| A08 | UI-13 |
+| A09 | UI-15 |
+| A10 | UI-16 |
+| A11 | UI-20 |
+| A12 | UI-20, UI-21, UI-22, UI-23, UI-24, UI-25 |
+| A13 | UI-22, UI-25 |
+| A14 | UI-06, UI-09, UI-11, UI-13, UI-15, UI-16, UI-25 |
+| A15 | UI-10, UI-11, UI-25 |
+| A16 | UI-15 |
+| A17 | UI-08, UI-09, UI-12 |
+| A18 | UI-27 |
+| A19 | UI-19 |
+| A20 | UI-10, UI-12, UI-26, UI-28 |
+
+## 验证与交付约定
+
+现有回归入口：`tests/Run-ClientAssetsTests.ps1`、`tests/Run-ClientConnectionAttemptTests.ps1`、`tests/Run-ItemListStorageTests.ps1`、`tests/Run-MonsterHudTests.ps1`。执行前读取参数，先构建需要的客户端；不得为提交任务文档而启动服务器或复制整套游戏资源。
+
+新增 `tests/Run-GameUiTests.ps1` 是待实现入口，由 UI-03 起逐项扩充。Assets 覆盖解码/编码/包；Controls 覆盖绑定/皮肤/四态/生命周期；Layout 覆盖坐标/恢复/组合；Bindings 覆盖槽位/属性/容量；Npc 覆盖选项命中/节流/联动。真实 IME、D3D、联机与性能由 UI-27 采证，不能用静态断言代替。
+
+用例报告固定记录 `caseId/buildId/style/resolution/dpi/steps/expected/actual/result/evidencePath`，result 使用 `not_run/pass/fail/not_applicable`；not_applicable 必须有依据。17 窗口、36 显示组合、重复开关/重登和性能采样均保存明细，不仅写“全部通过”。
+
+退出条件：G0 全部关闭、28 个任务完成、A01..A20 必测全过、范围内已知缺陷清零、最终 buildId 的 EXE/资源/映射/报告一致并完成回退演练。未达条件时保持开发默认 Legacy，不标记已交付，不承诺绝对无未知 bug。
+
+聊天区域的可选几何适配已完成独立验证：895项检查保留消息对象、样式、滚动锚点和原生输入状态，支持恢复旧边距；未启用GameScene接入。见[聊天适配证据](../../design/assets/official-ingame-ui/acceptance/preparatory/chat-geometry/README.md)。
+
+角色等级、经验、生命、魔法的可选绑定已完成：2474项检查通过，复用原HUD文本/提示并覆盖重复绑定和销毁；原16装备格、57属性标签和动作引用保持不变。新皮肤尚未启用，四标签布局和人物预览继续实施。当前字段/布局草稿及日志见[角色即时值接入证据](../../design/assets/official-ingame-ui/acceptance/preparatory/character-readouts/README.md)。
+
+已实现[包裹原49格与主面板布局](../../design/assets/official-ingame-ui/acceptance/preparatory/inventory-layout/README.md)：整体移动原网格，保留原格子、物品数据与按钮事件；金币/重量、长值提示与回退通过6,349项检查。234节点布局合同、角色组合回归及Debug/Release通过。快捷栏和完整皮肤接入待完成，UI-14与G0状态不变。
+
+已实现[快捷栏原10格布局](../../design/assets/official-ingame-ui/acceptance/preparatory/belt-layout/README.md)：启动时可选创建原生横向10格，适配期间保留格子、链接和键位标签，客户区/皮肤变化不重建；恢复原皮肤和尺寸后回到旧版缩放。6,157项检查、包裹6,349项回归、布局合同及Debug/Release通过。正式皮肤尚未接入GameScene，真实游戏验收待完成；UI-14和G0状态保持不变。
+
+
+已实现[小地图可选布局](../../design/assets/official-ingame-ui/acceptance/preparatory/minimap-layout/README.md)：保留原地图控件、标记、缩放、拖动和收起动作，补充实时坐标与明确viewport。538项控件检查、两个位置/三种图像状态下206,040次原生GPU像素比较，以及通用窗口、包裹、快捷栏回归和Debug/Release通过。合成图仅验证裁剪、绘制顺序及底板，正式美术、真实切图和GameScene接入尚未验收；UI-16及G0状态保持不变。
+
+已实现[下方HUD可选布局](../../design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/README.md)：四个独立分区保留26原控件及9按钮事件，血球底部填充、经验左侧填充，并恢复旧控件层级/图像/四态；覆盖禁用/隐藏、观察者异常和分区外部移除/销毁。788项检查及72帧、812,688次GPU像素比较通过，角色即时值/通用控件/布局合同和Debug/Release回归通过。合成图不代替正式美术验收；提醒图标声明对齐、可见属性标题、最终素材及GameScene接入待完成，UI-06/UI-12及G0状态不变。
+
+已完成[角色底纹与独立装备格准备](../../design/assets/official-ingame-ui/acceptance/preparatory/character-surfaces/README.md)：角色四页共用底板清除旧槽位/属性井，保留外框及透明轮廓；新增36×36原生装备格供后续页面控件绘制。45项拼接与16项打包器回归、两次确定性构建及91帧/810,185次D3D9像素比较通过；原87帧中其余86帧不变。此批尚未绑定真实控件或GameScene，UI-05/07/17/18及G0状态不变。
+
+已生成[角色统一映射](../../design/assets/official-ingame-ui/acceptance/character-binding-contract/README.md)：16装备格、57属性、8原控件、4HUD数值、9原发包动作与127几何节点及六位置关联。5组Python与四组原C#回归通过；文件仅用于构建，未启用正式皮肤，统一场景接入和真实游戏验收继续实施。
+
+已完成[四主窗口候选安装与场景生命周期接入](../../design/assets/official-ingame-ui/acceptance/window-set-integration/README.md)：真实88帧包、原格子/事件/数据保留，实际GameScene缩放不重建聊天页，退出先解绑；末段失败回退、重入、故障锁定和原Settings/层级恢复共6,472项检查通过，角色/布局回归及Debug/Release通过。入口仍无启动调用方，HUD/聊天统一事务和实机验收待完成；Legacy、五项G0及任务状态保持不变。
+
+已完成[经验条真实填充与候选包更新](../../design/assets/official-ingame-ui/acceptance/hud-progress-assets/README.md)：91帧包新增真实填充与574×8分段轨道/填充，全部十段保留；72项Python、94项D3D9逐帧/组合像素、4041项目录和6472项四窗口回归通过。仍待HUD/聊天统一事务与实机验收，Legacy、五项G0及任务状态不变。
+
+已完成[聊天外框与原生输入行候选接入](../../design/assets/official-ingame-ui/acceptance/chat-group-binding/README.md)：保留标签、消息、频道、草稿、焦点和 HWND，覆盖原生拖出/合并、浮动位置、透明切换、动态组及失败回退。聊天 940 项、窗口集成 9,202 项、角色四页 17,248 项、角色动作控件 4,584 项及 Debug/Release 通过。完整画面、启动回退、实机 IME/设备 Reset 尚未验收；Legacy、RuntimeReady=false、五项 G0 和任务状态保持。
+
+已补充[启动选择、资源预检与应用资源所有权](../../design/assets/official-ingame-ui/acceptance/startup-selection/README.md)：配置默认 Legacy，Program 在 D3D 后、登录场景前预检，退出先销毁场景再释放包和设备。启动 348 项、资源预检 418 项、窗口集成 9,202 项和 Debug/Release 通过；正式场景启用/运行中故障保护与实机验收仍待完成。RuntimeReady=false、五项 G0 及任务状态保持。
+
+已补充[场景启动接入与运行故障保护](../../design/assets/official-ingame-ui/acceptance/scene-startup/README.md)：GameScene 安装与应用资源借用、干净失败整套回退、回退不完整保留所有权、原生输入保护和连接回包继续处理已接通。窗口集成9,261项、启动348项、资源预检418项及Debug/Release通过；三类D3D错误仅注入验证分支。真实构造/登录重登、完整画面、实机IME与设备Reset仍待验收，Legacy、RuntimeReady=false、五项G0及任务状态保持。
+
+已修复[角色主页底图与属性底框](../../design/assets/official-ingame-ui/acceptance/character-backdrop/README.md)：独立角色分页背景保留龙纹和内边框，原人物及控件继续绘制其上；92帧候选Zl两次构建一致，Debug/Release、138项Python、9267项窗口、7519项物品和180项场景检查通过，最新匹配清单已生成。离线证据不替代最终美术、真实登录、IME与部署验收；默认Legacy、RuntimeReady=false及五项G0保持。
+
+2026-11-08：[角色装备槽位置修正](../../design/assets/official-ingame-ui/acceptance/character-slot-semantics/README.md)。按方案6.2将头盔移到人物上方、鞋移到左下方，图标与命中区同步；新增语义回归，构建、139项Python及带物品/分页/多分辨率检查通过。Zl素材不变，程序匹配清单已更新；默认Legacy，正式验收与G0状态保持。
+
+2026-11-08：[命令轮盘原生底图适配](../../design/assets/official-ingame-ui/acceptance/command-wheel/README.md)。临时矩形边框换为UI[140]原生龙纹画布，其余91帧不变；92帧候选Zl两次构建一致。141项Python、9297项窗口检查及六分辨率272700个命中坐标比较通过；实际离线画面与程序/素材清单已归档。源图140/1270的唯一匹配与最终画面仍未验收，默认Legacy、RuntimeReady=false及五项G0保持。
+
+2026-11-08：[主界面按钮透明命中准备](../../design/assets/official-ingame-ui/acceptance/button-hitmask/README.md)。8个图像按钮显式使用普通态CPU遮罩，透明角穿透，默认及回退行为保留；16,820个源图透明度像素、128,367项遮罩/控件、150,644项窗口检查及完整离线场景通过。Zl不变，程序匹配清单已更新。轮盘坐标未调整，边缘重叠及实机验收继续处理；Legacy、RuntimeReady=false和G0状态保持。
+
+2026-11-08：[紧凑轮盘与点击归属](../../design/assets/official-ingame-ui/acceptance/compact-wheel/README.md)。按既有截图相对位置收紧七按钮、外壳底部对齐，固定绘制与输入层次；228个共享不透明坐标、154,956项窗口、180项完整离线场景及141项Python通过。92帧候选包可复现，其余91帧不变。真实登录/服务器/IME/最终画面及整包部署回退仍待验收；Legacy、RuntimeReady=false、G0和任务状态保持。
+
+已接入[NPC原卡片保留回归](../../design/assets/official-ingame-ui/acceptance/npc-preservation/README.md)：2,084项检查、99次实际坐标点击、27帧实绘、21次Device.Reset与2,399,935个卡片像素一致性检查通过。覆盖原选项、节流、换页释放、观察者限制、15种对话类型、买卖四组合、服务切换、关闭和重入；NPC主卡及从属窗口不接入新皮肤。UI-20进入进行中，仍待前置任务及G0验收；整体发布未通过。
+
+2026-11-08：[有效范围运行参考收口](../../design/assets/official-ingame-ui/acceptance/reference-finalization/README.md)。复用五张原图，完成33次匹配、92帧来源与透明统计及五张标注图；8个文件独立复现一致，43项检查及4类拒绝输入检查通过。UI-02/G0-1参考准备完成，UI-05进入进行中；共7项完成、3项进行中、18项未开始。此前“五项门槛未关闭”为历史时点记录，当前剩四项；Legacy默认、RuntimeReady=false，整体发布未通过。
+
+2026-11-08：[独立商品商店底图补齐](../../design/assets/official-ingame-ui/acceptance/npc-shop-assets/README.md)。UI[511]加入隔离93帧候选，原92帧PNG与BC1数据完全保留；33个解码文件、93张PNG和整包可复现。5类拒绝输入及96帧/组合、1,181,327像素D3D9验证通过。新增素材使5项派生帧索引后移，接入前须同步生成目录；当前92帧运行清单未切换，商店控件尚未换肤。UI-05继续进行中，7项完成/3项进行中/18项未开始；四项G0及发布状态保持。
+
+2026-11-08：[独立商品商店接入](../../design/assets/official-ingame-ui/acceptance/npc-shop-binding/README.md)。候选目录同步93帧，商品窗口复用原格子/选择/滚动/购买，长文字保留完整提示；原NPC交互卡片和数量弹窗保留。2,353项NPC、159,787项窗口、180项完整场景、141项Python、4,103项目录及354项启动检查通过，Debug/Release与配套检查清单已生成。UI-05/UI-20/UI-26及四项G0继续待验收，任务仍为7完成/3进行中/18未开始；Legacy默认，RuntimeReady=false，未发布。
+
+2026-11-08：[商品七行视口修正](../../design/assets/official-ingame-ui/acceptance/npc-shop-seven-rows/README.md)。修正原54px行距只能显示6行的问题，保留36×36格及字体，以46px行距显示7行两列共14商品；第8行无半格，第7行末商品可选，完整文字提示绑定到实际鼠标目标。2427项NPC及159787项窗口检查、Debug/Release和匹配清单通过，93帧Zl不变。原NPC卡片及数量弹窗保留；任务7完成/3进行中/18未开始及四项G0保持，未发布。
+
+2026-11-08：[出售与修理独立窗口候选接入](../../design/assets/official-ingame-ui/acceptance/npc-item-services/README.md)。复用93帧包的商品窗框九宫格，完整保留出售7×7、修理14×5及36×36原格、按钮和业务处理；主NPC卡片与数量弹窗保留。5328项NPC、159787项窗口及180项完整场景检查通过，含实际点击、全容量提交、原数量弹窗、装备修理、设备重置和两个窗口恢复重试。Debug/Release及匹配清单已归档；UI-21仍缺精炼/领取等验收，7完成/3进行中/18未开始及四项G0保持，默认Legacy，未发布。
+
+2026-11-08：[精炼及领取独立窗口候选接入](../../design/assets/official-ingame-ui/acceptance/npc-refine-services/README.md)。保留5/3/1材料槽、原属性/品质/耗时、结果格与事件；领取按原3～7行动态调整，卸载保留当前结果身份、选中和滚动。修正候选精炼左侧越界，并补偿原高级精炼借用其宽度的定位依赖，主卡片和高级精炼样式保持。6245项NPC、159787项窗口和180项完整场景检查、Debug/Release及匹配清单通过，93帧包不变；真实服务和全量异常边界仍未验收，任务与四项G0状态保持，默认Legacy，未发布。
+
+48. [任务与奖励窗口候选接入](../../design/assets/official-ingame-ui/acceptance/npc-quest-services/README.md)：原奖励格/事件保留，正文与进度可滚动，修复行复用后的奖励残留；NPC专项6713项、窗口集成159787项、完整场景180项通过。UI-22和发布门禁继续待验收。
+
+2026-11-08：[有效范围素材用途核对](../../design/assets/official-ingame-ui/acceptance/asset-usage-contract/README.md)。固定1024×768窗口参考，9类界面建立素材/原控件复用清单；93帧分为51帧场景引用、2帧合成原料和40帧未接入按钮。30张源PNG、93张输出PNG及93个Zl数据块核对通过；仓库底板及最终实绘仍待审定。新增自动校验明确拒绝未完成素材验收，UI-05及四项G0状态保持，未发布。

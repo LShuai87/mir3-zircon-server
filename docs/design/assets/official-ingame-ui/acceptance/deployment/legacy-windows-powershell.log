@@ -1,0 +1,16 @@
+Preparing C:\Users\shuai\AppData\Local\Temp\ZirconAssetTests-39819a38ba8d40c790bc0db48a915303\output\Data
+Verified 5 files in C:\Users\shuai\AppData\Local\Temp\ZirconAssetTests-39819a38ba8d40c790bc0db48a915303\output\Data
+Preparing C:\Users\shuai\AppData\Local\Temp\ZirconAssetTests-39819a38ba8d40c790bc0db48a915303\output\Map
+Verified 2 files in C:\Users\shuai\AppData\Local\Temp\ZirconAssetTests-39819a38ba8d40c790bc0db48a915303\output\Map
+Preparing C:\Users\shuai\AppData\Local\Temp\ZirconAssetTests-39819a38ba8d40c790bc0db48a915303\output\Sound
+Verified 1 files in C:\Users\shuai\AppData\Local\Temp\ZirconAssetTests-39819a38ba8d40c790bc0db48a915303\output\Sound
+Assets ready. Start Zircon.exe with working directory: C:\Users\shuai\AppData\Local\Temp\ZirconAssetTests-39819a38ba8d40c790bc0db48a915303\output
+Preparing C:\Users\shuai\AppData\Local\Temp\ZirconAssetTests-39819a38ba8d40c790bc0db48a915303\output\Data
+Verified 5 files in C:\Users\shuai\AppData\Local\Temp\ZirconAssetTests-39819a38ba8d40c790bc0db48a915303\output\Data
+Preparing C:\Users\shuai\AppData\Local\Temp\ZirconAssetTests-39819a38ba8d40c790bc0db48a915303\output\Map
+Verified 2 files in C:\Users\shuai\AppData\Local\Temp\ZirconAssetTests-39819a38ba8d40c790bc0db48a915303\output\Map
+Preparing C:\Users\shuai\AppData\Local\Temp\ZirconAssetTests-39819a38ba8d40c790bc0db48a915303\output\Sound
+Verified 1 files in C:\Users\shuai\AppData\Local\Temp\ZirconAssetTests-39819a38ba8d40c790bc0db48a915303\output\Sound
+Assets ready. Start Zircon.exe with working directory: C:\Users\shuai\AppData\Local\Temp\ZirconAssetTests-39819a38ba8d40c790bc0db48a915303\output
+PASS: deployment, nested assets, idempotence, state preservation, exclusions and invalid inputs.
+Test directory: C:\Users\shuai\AppData\Local\Temp\ZirconAssetTests-39819a38ba8d40c790bc0db48a915303

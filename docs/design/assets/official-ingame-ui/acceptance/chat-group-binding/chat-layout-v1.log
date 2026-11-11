@@ -1,0 +1,3 @@
+tests\game-ui\OfficialUiChatLayoutTests.cs(190,30): error CS0122: “DXControl.Controls”不可访问，因为它具有一定的保护级别
+tests\game-ui\OfficialUiChatLayoutTests.cs(191,33): error CS0122: “DXControl.Controls”不可访问，因为它具有一定的保护级别
+tests\game-ui\OfficialUiChatLayoutTests.cs(201,42): error CS1061: “DXButton”未包含“Right”的定义，并且找不到可接受第一个“DXButton”类型参数的可访问扩展方法“Right”(是否缺少 using 指令或程序集引用?)

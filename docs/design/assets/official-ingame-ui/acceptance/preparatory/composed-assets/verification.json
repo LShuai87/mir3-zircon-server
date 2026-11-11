@@ -1,0 +1,271 @@
+{
+  "schemaVersion": 1,
+  "kind": "official-ui-composed-assets-preparatory-verification",
+  "releaseAccepted": false,
+  "scope": "Real selected UI art composed and packaged as BinaryMask Zl for integration testing; no GameScene binding, runtime style activation or release acceptance.",
+  "sourceChanges": [
+    {
+      "path": "ImageManager/Program.cs",
+      "beforeSha256": "0536eca3bfc4660855fb94268f2e2b5b9a91af0ba777c5f6abf32e752ed05b6b",
+      "afterSha256": "653dcb5972d6b3daaeffa380a05fa131ebb657a269cfcabe7ea74bb177ab82db"
+    },
+    {
+      "path": "ImageManager/ImageManager.csproj",
+      "beforeSha256": "38a9cd5f1659db0b525bc611f150344962a542b1e8a69dfcfe80037c3082a60d",
+      "afterSha256": "aa0ceb689bdca5391e0463e88a087cf19f4dc5467249776d510ae5de1437c997"
+    }
+  ],
+  "sourceHashes": [
+    {
+      "path": "ImageManager/OfficialUiAssetBuilder.cs",
+      "sha256": "4d1ebb40c8668c1c1914a27a6710d0c5f532db4d229e53d810755b475ea36239"
+    },
+    {
+      "path": "ImageManager/Program.cs",
+      "sha256": "653dcb5972d6b3daaeffa380a05fa131ebb657a269cfcabe7ea74bb177ab82db"
+    },
+    {
+      "path": "ImageManager/ImageManager.csproj",
+      "sha256": "aa0ceb689bdca5391e0463e88a087cf19f4dc5467249776d510ae5de1437c997"
+    },
+    {
+      "path": "build/game-ui/Compose-OfficialUi.py",
+      "sha256": "5220ed3c13122fcc8ba36f70a99e04832ab916c1ce412f147e2d53c8e1422763"
+    },
+    {
+      "path": "build/game-ui/composition-recipe.json",
+      "sha256": "d463a781d3bac90fa4ec09d0301a0dcf0f645b6630e99082a5d820448ed2e956"
+    },
+    {
+      "path": "tests/game-ui/test_composed_ui.py",
+      "sha256": "1b9e98f21685d5a6d405cd0f4310a4f2f4e6159804e2d8e6564f0694b2ce2788"
+    },
+    {
+      "path": "tests/game-ui/test_prepared_ui.py",
+      "sha256": "597e9165e67a90ab4d1b936b374824df0040299fe716d375ab13382d57bb0195"
+    },
+    {
+      "path": "tests/game-ui/Verify-ComposedUi.py",
+      "sha256": "f6191b23a313fe146d3a0b9d7c706bda0b642f8cd4e6ff12dd063dca4fb43100"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiComposedRenderTests.cs",
+      "sha256": "24c25bb5e978bad56c5027475f67471db27076efbaf971170cad91d0c26df843"
+    },
+    {
+      "path": "tests/Run-GameUiComposedRenderTests.ps1",
+      "sha256": "3d367433467c8f5487aaf71adf883f9bac3ad29ccf77d55d57fb8a0aab286537"
+    }
+  ],
+  "commands": [
+    {
+      "command": "\"D:/Program Files/Microsoft Visual Studio/2022/Enterprise/MSBuild/Current/Bin/MSBuild.exe\" ImageManager/ImageManager.csproj /t:Build /p:Configuration=Debug /p:Platform=AnyCPU /nologo /v:minimal",
+      "exitCode": 0,
+      "result": "pass",
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/composed-assets/image-manager-build.log",
+      "logSha256": "97a3fa7fefdb484f148d067cbda7a5cc436235d69b9b8486ce6e6f3e61848322"
+    },
+    {
+      "command": "python -m unittest discover -s tests/game-ui -p test_composed_ui.py -v",
+      "exitCode": 0,
+      "result": "pass",
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/composed-assets/composition-tests.log",
+      "logSha256": "a806f3ca2fce7bdaaad611010650254ebc29f0e2718323e81d484de248aca25d"
+    },
+    {
+      "command": "python -m unittest discover -s tests/game-ui -p test_prepared_ui.py -v",
+      "exitCode": 0,
+      "result": "pass",
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/composed-assets/prepared-builder-tests.log",
+      "logSha256": "c4a458a62fd85ea78c1bf64e7441786e392c529da9e0fcf9a621653e950214bd"
+    },
+    {
+      "command": "python build/game-ui/Compose-OfficialUi.py --decoded E:\\workspace\\mir3-ui-work\\selected-reference-20261107-v1\\Decoded --output E:\\workspace\\mir3-ui-work\\composed-art-20261107-verified2-v1 --recipe build/game-ui/composition-recipe.json",
+      "exitCode": 0,
+      "result": "pass",
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/composed-assets/compose-real-1.log",
+      "logSha256": "3c93d8786868399bfbad9325f80f7853e72711bfa310adbc36b32f786de23418"
+    },
+    {
+      "command": "E:/workspace/Debug/ImageManager/ImageManager.exe --official-ui prepared E:\\workspace\\mir3-ui-work\\composed-art-20261107-verified2-v1 E:\\workspace\\mir3-ui-work\\composed-zl-20261107-verified2-v1 E:\\workspace\\mir3-ui-work\\composed-art-20261107-verified2-v1\\composed-manifest.json",
+      "exitCode": 0,
+      "result": "pass",
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/composed-assets/package-real-1.log",
+      "logSha256": "696a076dbe5e063335cacead8b9a3cecfc620fd2832d2bef4dcef7d2c8ef2e20"
+    },
+    {
+      "command": "python build/game-ui/Compose-OfficialUi.py --decoded E:\\workspace\\mir3-ui-work\\selected-reference-20261107-v1\\Decoded --output E:\\workspace\\mir3-ui-work\\composed-art-20261107-verified2-v2 --recipe build/game-ui/composition-recipe.json",
+      "exitCode": 0,
+      "result": "pass",
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/composed-assets/compose-real-2.log",
+      "logSha256": "3c93d8786868399bfbad9325f80f7853e72711bfa310adbc36b32f786de23418"
+    },
+    {
+      "command": "E:/workspace/Debug/ImageManager/ImageManager.exe --official-ui prepared E:\\workspace\\mir3-ui-work\\composed-art-20261107-verified2-v2 E:\\workspace\\mir3-ui-work\\composed-zl-20261107-verified2-v2 E:\\workspace\\mir3-ui-work\\composed-art-20261107-verified2-v2\\composed-manifest.json",
+      "exitCode": 0,
+      "result": "pass",
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/composed-assets/package-real-2.log",
+      "logSha256": "99a8b84688714fbd75052063c1bda3cdf150a1a3e6d2215182618317302ac90e"
+    },
+    {
+      "command": "C:/Users/shuai/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe tests/game-ui/Verify-ComposedUi.py --art E:\\workspace\\mir3-ui-work\\composed-art-20261107-verified2-v1 --package E:\\workspace\\mir3-ui-work\\composed-zl-20261107-verified2-v1 --output E:\\workspace\\mir3-ui-work\\composed-bc1-20261107-verified2-v1",
+      "exitCode": 0,
+      "result": "pass",
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/composed-assets/bc1-pixel-verification.log",
+      "logSha256": "0ee688e60d1af93d7935bbdeddf55fdf16d258d7d93cef96406323cd557953d6"
+    },
+    {
+      "command": "powershell -NoProfile -ExecutionPolicy Bypass -File tests/Run-GameUiComposedRenderTests.ps1 -PackagePath E:\\workspace\\mir3-ui-work\\composed-zl-20261107-verified2-v1 -VerificationPath E:\\workspace\\mir3-ui-work\\composed-bc1-20261107-verified2-v1 -RenderPath E:\\workspace\\mir3-ui-work\\composed-d3d-20261107-verified2-v1",
+      "exitCode": 0,
+      "result": "pass",
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/composed-assets/client-d3d9-verification.log",
+      "logSha256": "135a487e3ce4b4733b3f2c2d52cb9087fca71266a6f2d40aa8d1662496a655c3"
+    },
+    {
+      "command": "powershell -NoProfile -ExecutionPolicy Bypass -File tests/Run-GameUiTests.ps1 -Suite Assets",
+      "exitCode": 0,
+      "result": "pass",
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/composed-assets/reference-regression.log",
+      "logSha256": "d490156277daf885407b0686693562830e82217dee894223d2a5cef85ec6065b"
+    }
+  ],
+  "checks": {
+    "compositionTests": 22,
+    "preparedBuilderTests": 16,
+    "decoderRegressionTests": 18,
+    "legacyAssetAssertions": 70,
+    "realFrames": 84,
+    "buttonSets": 19,
+    "inventoryCells": 49,
+    "shortcutCells": 10,
+    "logicalAlphaPixelsChecked": 553617,
+    "transparentPaddingPixelsChecked": 9983,
+    "opaqueBlackInteriorPixelsPreserved": 3178,
+    "d3d9FramesIncludingOrbStates": 87,
+    "d3d9ComparedPixels": 689967,
+    "opaqueRgbTolerance": 8,
+    "opaqueRgbMeasuredMaxDifference": 5,
+    "transparentRgbTolerance": 0,
+    "renderSize": [
+      1024,
+      768
+    ],
+    "identicalAcrossBuilds": true
+  },
+  "recipes": {
+    "alpha": "edge-connected-exact-black; explicit black-only minimap viewport; never global black key",
+    "inventory": "7x7, cell 36x36, step35; native header/footer",
+    "quickbar": "10 cells, cell36x36, step35; native caps",
+    "offset": "baked zero offsets; orb layers share original source anchor",
+    "buttonStates": "explicit normal source plus hover 115%, pressed75%, disabled grayscale60%; identical alpha"
+  },
+  "outputRoot": "E:\\workspace\\mir3-ui-work\\composed-zl-20261107-verified2-v1",
+  "repeatOutputRoot": "E:\\workspace\\mir3-ui-work\\composed-zl-20261107-verified2-v2",
+  "artifactHashes": [
+    {
+      "path": "OfficialV1.Zl",
+      "sha256": "b5e24522c96677b2af5b988578d90fa6421e79d8de46b552919e34e2ad588dbd"
+    },
+    {
+      "path": "prepared-manifest.json",
+      "sha256": "001aeb110f6134d82f83b76c5c6a55fa408726c571874ee6d6a5d4defeed70e0"
+    },
+    {
+      "path": "composed-manifest.json",
+      "sha256": "d4da5cd667f15c812bd93c8cc5d5e5690f039fb4c02d2e8202549dbe89484ba5"
+    }
+  ],
+  "evidenceHashes": [
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/composed-assets/bc1-pixel-verification.log",
+      "sha256": "0ee688e60d1af93d7935bbdeddf55fdf16d258d7d93cef96406323cd557953d6"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/composed-assets/bc1-verification.json",
+      "sha256": "2970167c9a7ef685ae703db88c2c8c9d5e1d14740ce2dd202f21994eb829d07d"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/composed-assets/client-d3d9-verification.log",
+      "sha256": "135a487e3ce4b4733b3f2c2d52cb9087fca71266a6f2d40aa8d1662496a655c3"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/composed-assets/commands.json",
+      "sha256": "d560cbb0722a4db382727da8bf2023d02c8ba006d9f72243b1a8b808efcddd4e"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/composed-assets/compose-real-1.log",
+      "sha256": "3c93d8786868399bfbad9325f80f7853e72711bfa310adbc36b32f786de23418"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/composed-assets/compose-real-2.log",
+      "sha256": "3c93d8786868399bfbad9325f80f7853e72711bfa310adbc36b32f786de23418"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/composed-assets/composed-manifest.json",
+      "sha256": "d4da5cd667f15c812bd93c8cc5d5e5690f039fb4c02d2e8202549dbe89484ba5"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/composed-assets/composition-tests.log",
+      "sha256": "a806f3ca2fce7bdaaad611010650254ebc29f0e2718323e81d484de248aca25d"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/composed-assets/determinism.json",
+      "sha256": "e62e0975cdd2d54a75490c7984f412c2e46cacdffb6d965932517b38dec0e9b3"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/composed-assets/hud-orb-bc1-states.png",
+      "sha256": "686ddb20b89b3173303a64961b0e230f5ac0ea02476bf4a7bc27b33413a6bf46"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/composed-assets/image-manager-build.log",
+      "sha256": "97a3fa7fefdb484f148d067cbda7a5cc436235d69b9b8486ce6e6f3e61848322"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/composed-assets/inventory-composed.png",
+      "sha256": "e81120b5e9e00e221f9f1e86d0b2c34341a0bf29fdbf163b3621f85fca5ce8d2"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/composed-assets/inventory-d3d9-1024x768.png",
+      "sha256": "2cfde982b8c83248f015d143f02e0e9b160da9727baa59eeb085987752dc1d25"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/composed-assets/minimap-composed.png",
+      "sha256": "eedaf124d200cdab2654b80ad88fc68c2b50837900394522f16472927c3ddee9"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/composed-assets/orb-half-d3d9-1024x768.png",
+      "sha256": "d8d3cb8832722ed65d18fcfc59d3cfc11dc3255ee51f6bc0ef4aa7b377f17a3a"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/composed-assets/package-real-1.log",
+      "sha256": "696a076dbe5e063335cacead8b9a3cecfc620fd2832d2bef4dcef7d2c8ef2e20"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/composed-assets/package-real-2.log",
+      "sha256": "99a8b84688714fbd75052063c1bda3cdf150a1a3e6d2215182618317302ac90e"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/composed-assets/prepared-builder-tests.log",
+      "sha256": "c4a458a62fd85ea78c1bf64e7441786e392c529da9e0fcf9a621653e950214bd"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/composed-assets/prepared-manifest.json",
+      "sha256": "001aeb110f6134d82f83b76c5c6a55fa408726c571874ee6d6a5d4defeed70e0"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/composed-assets/quickbar-composed.png",
+      "sha256": "72040d655eccc6cf5fe68196c6db6d8239a5a35dc3680fc4075b1dc7e527248b"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/composed-assets/reference-regression.log",
+      "sha256": "d490156277daf885407b0686693562830e82217dee894223d2a5cef85ec6065b"
+    }
+  ],
+  "limitations": [
+    "Prepared package only: runtimeReady=false, productionBindingAllowed=false, alphaVerified=false. Existing manifests and immutable plan unchanged.",
+    "Hardware opaque RGB differed by at most5 from the independent integer BC1 decoder; test tolerance8, binary alpha and transparent background exact. This is not a lossless RGB comparison.",
+    "The19 state sets use specified tint fallbacks, not unverified adjacent official frames.",
+    "No GameScene adapter, character tab migration, chat preservation integration or complete asset catalog/layout is delivered by this checkpoint.",
+    "G0-1..G0-5 and A01..A20 remain unclosed/not_run; no new screenshots or user action required."
+  ]
+}

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Imaging;
@@ -8,6 +8,8 @@ using ManagedSquish;
 
 namespace ImageManager
 {
+    public enum Dxt1AlphaMode { Opaque, BinaryMask }
+
     public class WTLLibrary : IDisposable
     {
         private readonly string _fileName;
@@ -530,6 +532,47 @@ namespace ImageManager
             return image;
         }
 
+
+        /// <summary>Explicit UI alpha; the existing one-argument WTL encoder keeps its historical black key.</summary>
+        public static unsafe byte[] GetBytes(Bitmap image, Dxt1AlphaMode alphaMode)
+        {
+            if (image == null) throw new ArgumentNullException(nameof(image));
+            if (alphaMode != Dxt1AlphaMode.Opaque && alphaMode != Dxt1AlphaMode.BinaryMask)
+                throw new ArgumentOutOfRangeException(nameof(alphaMode));
+
+            int width = checked((image.Width + 3) / 4 * 4);
+            int height = checked((image.Height + 3) / 4 * 4);
+            byte[] pixels = new byte[checked(width * height * 4)];
+            BitmapData source = image.LockBits(new Rectangle(0, 0, image.Width, image.Height),
+                ImageLockMode.ReadOnly, PixelFormat.Format32bppArgb);
+            try
+            {
+                for (int y = 0; y < image.Height; y++)
+                {
+                    byte* row = (byte*)source.Scan0 + y * source.Stride;
+                    for (int x = 0; x < image.Width; x++)
+                    {
+                        byte alpha = row[x * 4 + 3];
+                        if ((alphaMode == Dxt1AlphaMode.Opaque && alpha != 255) ||
+                            (alphaMode == Dxt1AlphaMode.BinaryMask && alpha != 0 && alpha != 255))
+                            throw new ArgumentException("DXT1 requires opaque pixels or an explicit binary mask; continuous alpha cannot be discarded.", nameof(image));
+                        int destination = (y * width + x) * 4;
+                        pixels[destination] = row[x * 4 + 2];
+                        pixels[destination + 1] = row[x * 4 + 1];
+                        pixels[destination + 2] = row[x * 4];
+                        pixels[destination + 3] = alpha;
+                    }
+                }
+            }
+            finally { image.UnlockBits(source); }
+
+            // The untouched padding stays RGBA zero, including for opaque logical images.
+            byte[] bytes = new byte[Squish.GetStorageRequirements(width, height, SquishFlags.Dxt1)];
+            fixed (byte* destination = bytes)
+            fixed (byte* input = pixels)
+                Squish.CompressImage((IntPtr)input, width, height, (IntPtr)destination, SquishFlags.Dxt1);
+            return bytes;
+        }
 
         public static unsafe byte[] GetBytes(Bitmap image)
         {

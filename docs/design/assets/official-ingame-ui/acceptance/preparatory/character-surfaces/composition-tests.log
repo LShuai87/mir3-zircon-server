@@ -1,0 +1,50 @@
+test_actual_character_cleanup_and_slot_frame_are_explicit (test_composed_ui.CompositionTests.test_actual_character_cleanup_and_slot_frame_are_explicit) ... ok
+test_actual_recipe_surface_sizes_match_logical_layout (test_composed_ui.CompositionTests.test_actual_recipe_surface_sizes_match_logical_layout) ... ok
+test_black_diagonal_is_not_edge_connected (test_composed_ui.CompositionTests.test_black_diagonal_is_not_edge_connected) ... ok
+test_button_alpha_is_identical_in_all_states (test_composed_ui.CompositionTests.test_button_alpha_is_identical_in_all_states) ... ok
+test_changed_png_fails (test_composed_ui.CompositionTests.test_changed_png_fails) ... ok
+test_changed_selection_fails (test_composed_ui.CompositionTests.test_changed_selection_fails) ... ok
+test_clear_rects_requires_list (test_composed_ui.CompositionTests.test_clear_rects_requires_list) ... ok
+test_cropped_frame_and_cover_pipeline_is_deterministic (test_composed_ui.CompositionTests.test_cropped_frame_and_cover_pipeline_is_deterministic) ... ok
+test_cropped_frame_keeps_native_pixels_and_binary_alpha (test_composed_ui.CompositionTests.test_cropped_frame_keeps_native_pixels_and_binary_alpha) ... ok
+test_cropped_frame_pipeline_keeps_source_provenance_and_zero_output_offset (test_composed_ui.CompositionTests.test_cropped_frame_pipeline_keeps_source_provenance_and_zero_output_offset) ... ok
+test_cropped_frame_rejects_invalid_fields_type_and_geometry (test_composed_ui.CompositionTests.test_cropped_frame_rejects_invalid_fields_type_and_geometry) ... ok
+test_derived_frame_is_deterministic (test_composed_ui.CompositionTests.test_derived_frame_is_deterministic) ... ok
+test_derived_frame_keeps_binary_alpha_and_transparent_corners (test_composed_ui.CompositionTests.test_derived_frame_keeps_binary_alpha_and_transparent_corners) ... ok
+test_derived_frame_keeps_corners_edges_and_transparent_interior (test_composed_ui.CompositionTests.test_derived_frame_keeps_corners_edges_and_transparent_interior) ... ok
+test_derived_frame_list_limit_and_type (test_composed_ui.CompositionTests.test_derived_frame_list_limit_and_type) ... ok
+test_derived_frame_pipeline_records_provenance_and_zero_offset (test_composed_ui.CompositionTests.test_derived_frame_pipeline_records_provenance_and_zero_offset) ... ok
+test_derived_frame_rejects_button_as_source (test_composed_ui.CompositionTests.test_derived_frame_rejects_button_as_source) ... ok
+test_derived_frame_rejects_duplicate_unsafe_role_and_fields (test_composed_ui.CompositionTests.test_derived_frame_rejects_duplicate_unsafe_role_and_fields) ... ok
+test_derived_frame_rejects_unbounded_or_empty_geometry (test_composed_ui.CompositionTests.test_derived_frame_rejects_unbounded_or_empty_geometry) ... ok
+test_derived_frame_rejects_unknown_or_derived_source (test_composed_ui.CompositionTests.test_derived_frame_rejects_unknown_or_derived_source) ... ok
+test_deterministic_outputs (test_composed_ui.CompositionTests.test_deterministic_outputs) ... ok
+test_duplicate_source_fails (test_composed_ui.CompositionTests.test_duplicate_source_fails) ... ok
+test_edge_mask_preserves_enclosed_black_and_source_rgb (test_composed_ui.CompositionTests.test_edge_mask_preserves_enclosed_black_and_source_rgb) ... ok
+test_existing_output_fails_without_changes (test_composed_ui.CompositionTests.test_existing_output_fails_without_changes) ... ok
+test_explicit_hole_is_bounded_and_black_only (test_composed_ui.CompositionTests.test_explicit_hole_is_bounded_and_black_only) ... ok
+test_explicit_hole_rejects_artwork (test_composed_ui.CompositionTests.test_explicit_hole_rejects_artwork) ... ok
+test_explicit_hole_rejects_oob (test_composed_ui.CompositionTests.test_explicit_hole_rejects_oob) ... ok
+test_grid_rejects_changed_count_pitch_and_unknown_fields (test_composed_ui.CompositionTests.test_grid_rejects_changed_count_pitch_and_unknown_fields) ... ok
+test_implicit_alpha_fails (test_composed_ui.CompositionTests.test_implicit_alpha_fails) ... ok
+test_implicit_tint_fails (test_composed_ui.CompositionTests.test_implicit_tint_fails) ... ok
+test_input_mutation_before_publication_fails_atomically (test_composed_ui.CompositionTests.test_input_mutation_before_publication_fails_atomically) ... ok
+test_inventory_geometry_and_native_header_footer (test_composed_ui.CompositionTests.test_inventory_geometry_and_native_header_footer) ... ok
+test_near_black_is_not_erased (test_composed_ui.CompositionTests.test_near_black_is_not_erased) ... ok
+test_nested_output_fails (test_composed_ui.CompositionTests.test_nested_output_fails) ... ok
+test_quickbar_geometry_and_native_caps (test_composed_ui.CompositionTests.test_quickbar_geometry_and_native_caps) ... ok
+test_texture_cover_pipeline_preserves_alpha_and_original_source_provenance (test_composed_ui.CompositionTests.test_texture_cover_pipeline_preserves_alpha_and_original_source_provenance) ... ok
+test_texture_cover_rejects_invalid_source_and_target_rectangles (test_composed_ui.CompositionTests.test_texture_cover_rejects_invalid_source_and_target_rectangles) ... ok
+test_texture_cover_rejects_overlap_but_allows_adjacent_targets (test_composed_ui.CompositionTests.test_texture_cover_rejects_overlap_but_allows_adjacent_targets) ... ok
+test_texture_cover_rejects_transparent_patch_and_silhouette_overwrite (test_composed_ui.CompositionTests.test_texture_cover_rejects_transparent_patch_and_silhouette_overwrite) ... ok
+test_texture_cover_rejects_unbounded_target_lists (test_composed_ui.CompositionTests.test_texture_cover_rejects_unbounded_target_lists) ... ok
+test_texture_cover_rejects_unknown_fields (test_composed_ui.CompositionTests.test_texture_cover_rejects_unknown_fields) ... ok
+test_texture_cover_separate_targets_leave_every_other_pixel_unchanged (test_composed_ui.CompositionTests.test_texture_cover_separate_targets_leave_every_other_pixel_unchanged) ... ok
+test_texture_cover_tiles_native_pixels_and_samples_original_once (test_composed_ui.CompositionTests.test_texture_cover_tiles_native_pixels_and_samples_original_once) ... ok
+test_unsafe_role_fails (test_composed_ui.CompositionTests.test_unsafe_role_fails) ... ok
+test_wrong_source_offset_fails (test_composed_ui.CompositionTests.test_wrong_source_offset_fails) ... ok
+
+----------------------------------------------------------------------
+Ran 45 tests in 1.207s
+
+OK

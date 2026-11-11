@@ -1,0 +1,25 @@
+test_baseline_association_mismatch (test_selected_ui.SelectionTests.test_baseline_association_mismatch) ... ok
+test_boolean_index_is_rejected (test_selected_ui.SelectionTests.test_boolean_index_is_rejected) ... ok
+test_decoded_png_must_match_reviewed_source (test_selected_ui.SelectionTests.test_decoded_png_must_match_reviewed_source) ... ok
+test_deterministic_bytes_and_sparse_indices (test_selected_ui.SelectionTests.test_deterministic_bytes_and_sparse_indices) ... ok
+test_duplicate_json_key_rejected (test_selected_ui.SelectionTests.test_duplicate_json_key_rejected) ... ok
+test_duplicate_roles_rejected (test_selected_ui.SelectionTests.test_duplicate_roles_rejected) ... ok
+test_duplicate_source_rejected (test_selected_ui.SelectionTests.test_duplicate_source_rejected) ... ok
+test_empty_slot_cannot_be_substituted (test_selected_ui.SelectionTests.test_empty_slot_cannot_be_substituted) ... ok
+test_existing_output_preserved (test_selected_ui.SelectionTests.test_existing_output_preserved) ... ok
+test_input_metadata_mutation_is_detected (test_selected_ui.SelectionTests.test_input_metadata_mutation_is_detected) ... ok
+test_output_must_be_disjoint_from_source (test_selected_ui.SelectionTests.test_output_must_be_disjoint_from_source) ... ok
+test_pixel_budget_failure_publishes_nothing (test_selected_ui.SelectionTests.test_pixel_budget_failure_publishes_nothing) ... ok
+test_reference_selection_cannot_enable_runtime (test_selected_ui.SelectionTests.test_reference_selection_cannot_enable_runtime) ... ok
+test_selecting_the_unsupported_record_fails_atomically (test_selected_ui.SelectionTests.test_selecting_the_unsupported_record_fails_atomically) ... ok
+test_signed_offsets_must_match (test_selected_ui.SelectionTests.test_signed_offsets_must_match) ... ok
+test_source_hash_mismatch_is_not_bypassed (test_selected_ui.SelectionTests.test_source_hash_mismatch_is_not_bypassed) ... ok
+test_source_mutation_during_decode_is_detected (test_selected_ui.SelectionTests.test_source_mutation_during_decode_is_detected) ... ok
+test_source_size_must_match (test_selected_ui.SelectionTests.test_source_size_must_match) ... ok
+test_unsafe_library_is_rejected (test_selected_ui.SelectionTests.test_unsafe_library_is_rejected) ... ok
+test_unselected_unsupported_record_does_not_block_but_is_not_marked_decoded (test_selected_ui.SelectionTests.test_unselected_unsupported_record_does_not_block_but_is_not_marked_decoded) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 0.296s
+
+OK

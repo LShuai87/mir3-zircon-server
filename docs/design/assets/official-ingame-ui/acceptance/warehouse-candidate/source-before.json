@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "checkedAtLocalDate": "2026-11-08",
+  "files": [
+    {
+      "path": "build/game-ui/Compose-OfficialUi.py",
+      "sha256": "8203e17b7e2bdac72f47614ff6f843f43356b79d4b55feb38b8170849f9cacb0",
+      "snapshot": "docs/design/assets/official-ingame-ui/acceptance/warehouse-candidate/source-before/build/game-ui/Compose-OfficialUi.py"
+    },
+    {
+      "path": "docs/tasks/official-ingame-ui/tasks.json",
+      "sha256": "958ff7a3b4aa23626a4eeff4267caf5b12c97c90125c4918337b2829bebd5943",
+      "snapshot": "docs/design/assets/official-ingame-ui/acceptance/warehouse-candidate/source-before/docs/tasks/official-ingame-ui/tasks.json"
+    },
+    {
+      "path": "docs/tasks/official-ingame-ui/README.md",
+      "sha256": "6979ba9fc092af0596b250ec1f4e2ba009cda3f76ee119df03674f78e65c7e6d",
+      "snapshot": "docs/design/assets/official-ingame-ui/acceptance/warehouse-candidate/source-before/docs/tasks/official-ingame-ui/README.md.snapshot"
+    }
+  ]
+}

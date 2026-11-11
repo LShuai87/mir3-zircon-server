@@ -1,0 +1,3 @@
+CPU button masks: 34084 checks; 16820 source PNG alpha comparisons; no GPU uploads.
+Button mask checks including real controls: 128367; hover, pressed, disabled, hide/restore, PassThrough, invalid rebind and Legacy reset.
+Window-set integration: 150644 checks passed with real catalog package, eight registered participants plus original chat groups/input and six resolutions, identity/chat retention, actual GameScene resize/disposal, startup scene entry/reentry, clean/dirty rollback, render-fault input containment, loopback heartbeat and teardown. Two glyph-path GPU probes only; no full-scene/live-game/IME acceptance.

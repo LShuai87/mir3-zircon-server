@@ -1,0 +1,141 @@
+{
+  "schemaVersion": 1,
+  "kind": "official-ui-optional-belt-layout-verification",
+  "checkedAtLocalDate": "2026-11-08",
+  "referenceResolution": [
+    1024,
+    768
+  ],
+  "releaseAccepted": false,
+  "sourceChanges": [
+    {
+      "path": "Client/Client.csproj",
+      "beforeSha256": "17f8d0a1992772a1bbe61228dbc26329d518fa3876c6296c95659a93fe0a8d91",
+      "afterSha256": "5310f52443490fe1cc19fe334cc44aa3625d918625ae09ce31a8ba1960b5526b"
+    }
+  ],
+  "sourceHashes": [
+    {
+      "path": "Client/Client.csproj",
+      "sha256": "5310f52443490fe1cc19fe334cc44aa3625d918625ae09ce31a8ba1960b5526b"
+    },
+    {
+      "path": "Client/Scenes/Views/BeltDialog.cs",
+      "sha256": "d8d1435ec5fbd4b41352851e61eb44950f39d116e936f830d5512e7ad696f7b4"
+    },
+    {
+      "path": "Client/Envir/GameUiBeltLayout.cs",
+      "sha256": "1b170a8ae25fe479dc619923513b96754a495fddd4fba42bfb85bb4e85598fa4"
+    },
+    {
+      "path": "Client/Scenes/Views/BeltDialog.GameUi.cs",
+      "sha256": "c2129626e0db12897cc4bb17d10998eeac6b8a0ae768e587c0d5cc56f2d93ac7"
+    },
+    {
+      "path": "tests/Run-GameUiBeltLayoutTests.ps1",
+      "sha256": "4aea444895cef0160fa8d91579efef20e0ff7c33ed4ce27e160cde1873ab545a"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiBeltLayoutTests.cs",
+      "sha256": "c4f11e9448bd2ac552aee54b5dc22d8210934262e3794701b21adef609222733"
+    },
+    {
+      "path": "build/game-ui/layout-official-v1.json",
+      "sha256": "b39fa17ba46f9424a7c5b713a1c77cf7d16b31570a1320232f747239ccd8f509"
+    }
+  ],
+  "priorSourceHashes": [
+    {
+      "path": "Client/Client.csproj",
+      "sha256": "17f8d0a1992772a1bbe61228dbc26329d518fa3876c6296c95659a93fe0a8d91"
+    },
+    {
+      "path": "Client/Scenes/Views/BeltDialog.cs",
+      "sha256": "3382474612ce2a72603e0762627f6ab05b91fb54cce3691a86b2819163ffb5fb"
+    }
+  ],
+  "newlyRegisteredSourceChanges": [
+    {
+      "path": "Client/Scenes/Views/BeltDialog.cs",
+      "beforeSha256": "3382474612ce2a72603e0762627f6ab05b91fb54cce3691a86b2819163ffb5fb",
+      "afterSha256": "d8d1435ec5fbd4b41352851e61eb44950f39d116e936f830d5512e7ad696f7b4"
+    }
+  ],
+  "commands": [
+    {
+      "command": "MSBuild.exe Client/Client.csproj /t:Build /p:Configuration=Debug /p:Platform=AnyCPU /nologo /v:minimal",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/belt-layout/build-debug.log",
+      "logSha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "command": "powershell -NoProfile -File tests/Run-GameUiBeltLayoutTests.ps1",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/belt-layout/belt.log",
+      "logSha256": "f10513866a32dfb52540bfb4eea1e2e07594ede5571bd9140828968d8ae0cf66"
+    },
+    {
+      "command": "powershell -NoProfile -File tests/Run-GameUiInventoryLayoutTests.ps1",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/belt-layout/inventory.log",
+      "logSha256": "35697536193c3522b1b1289b0efa40be97a77fde7e15d70e414f17451d6756ee"
+    },
+    {
+      "command": "powershell -NoProfile -File tests/Run-GameUiLayoutContractTests.ps1 -PythonPath C:/Users/shuai/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/belt-layout/layout.log",
+      "logSha256": "73bbd53121dc7e8a9628ecf8fe0f957dd50c7943e80cf6a1a7bc8c3c50eaa31c"
+    },
+    {
+      "command": "MSBuild.exe Client/Client.csproj /t:Build /p:Configuration=Release /p:Platform=AnyCPU /nologo /v:minimal",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/belt-layout/build-release.log",
+      "logSha256": "c9e24428be1e56c8408af17aacfea3413de3953bfe426d10eb768782f5005ebc"
+    },
+    {
+      "command": "git -c core.whitespace=cr-at-eol diff --check",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/belt-layout/diff-check.log",
+      "logSha256": "e6152b617fd78a357cdb28aa505147a500f21c5baf16655cdaad9642246e1bb8"
+    }
+  ],
+  "results": {
+    "beltAssertions": 6157,
+    "originalCellCount": 10,
+    "originalLinkCount": 10,
+    "enableReplaceDisableCyclesPerOriginalSkin": 8,
+    "originalSkinScenarios": 2,
+    "windowPlacementsPerCycle": 6,
+    "compiledGeometryCheckedAgainstJson": true,
+    "defaultConstructorAndLegacyResizeRetained": true,
+    "skinSwitchPreservesCellsAndLabels": true,
+    "originalMouseClickDelegatesRetained": true,
+    "liveQuickItemAndQuickInfoRetained": true,
+    "liveItemCountRefreshTested": true,
+    "initialAndReplacementObserverFailureRecoveryTested": true,
+    "inventoryRegressionAssertions": 6349,
+    "layoutNodeCount": 234,
+    "layoutInteractiveCount": 109,
+    "layoutPlacements": 60,
+    "deterministicGeneratedFiles": 12,
+    "invalidLayoutContractsRejected": 11,
+    "debugBuild": "pass",
+    "releaseBuild": "pass",
+    "runtimeEnabled": false,
+    "gameAcceptanceExecuted": false
+  },
+  "limitations": [
+    "GameScene does not invoke this optional adapter. OfficialV1 remains incomplete and disabled. This is preparatory evidence, not UI-14 completion or release acceptance.",
+    "BeltDialog() retains its native one-slot initial layout and legacy resizing. BeltDialog(true) initializes a native horizontal ten-slot grid; bind UseGameUiBelt before loading window settings or installing the official skin. Existing vertical or fewer-slot grids are rejected before mutation.",
+    "The active adapter preserves all ten original cells, 36-pixel size, 35-pixel pitch, link entries, slot IDs, key labels and original border hit behavior. It moves the whole grid and suppresses legacy grid rebuilding on client-area changes.",
+    "Enable the adapter before applying the final compatible window skin. Disable restores the original skin, window size, grid bounds and resize flag while rebuilding remains suppressed. Subsequent legacy resizing resumes its original behavior. Arbitrary external replacement or disposal of controls is unsupported; replacement binding validates original identities.",
+    "No actual hotkey/use/drag packet, cooldown rendering, live networking, relogin/settings persistence, IME, performance, rendered artwork or A01..A20 game acceptance is claimed. Isolated fixtures use the real native control tree without a game login.",
+    "1024x768 is the user-confirmed logical baseline. Existing screenshots are reused; no extra login, capture, chat sending or display-setting changes. NPC interaction cards and secondary popups retain legacy styling."
+  ]
+}

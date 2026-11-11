@@ -1,0 +1,9 @@
+System.Exception: Save failed: Chat save failed; previous preferences retained: Invalid chat group identity, selection or geometry.
+   在 OfficialUiChatStoreTests.Check(Boolean condition, String reason)
+   在 OfficialUiChatStoreTests.RoundTrips(String root)
+   在 OfficialUiChatStoreTests.Main(String[] args)
+Exception: E:\workspace\mir3-zircon-server\tests\Run-GameUiChatStoreTests.ps1:27
+Line |
+  27 |      if ($LASTEXITCODE -ne 0) { throw 'Chat store tests failed.' }
+     |                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Chat store tests failed.

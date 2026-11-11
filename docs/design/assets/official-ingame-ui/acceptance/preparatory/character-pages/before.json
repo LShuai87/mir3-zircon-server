@@ -1,0 +1,7 @@
+{
+  "Client/Controls/DXTabControl.cs": "71a63c095cae1e759896388502293bf055ef06b149f71b756ffe7a4f387163e8",
+  "Client/Scenes/Views/CharacterDialog.cs": "e53e95f2d91dc993479cba60620b1f06f7a93c48705a0b38486f8e0894a2f2ec",
+  "Client/Client.csproj": "8a928b763ac3bf51de8eb2e4394d4a655d340af7a2d8dd6e2b4f67de145d5f73",
+  "build/game-ui/Prepare-CharacterBindings.py": "bc8536a8973a74df77843f5948f66f0be43ce90acd695b3bbd7368538913d7d3",
+  "build/game-ui/layout-official-v1.json": "176accf796f2616e5fac295490e4d59bc98f56493c1568d9dfdd3e78683e91bf"
+}

@@ -1,0 +1,5 @@
+System.Exception: official: only implemented independent service windows receive candidate skins: NPCQuestBox
+   在 OfficialUiFullSceneTests.Check(Boolean condition, String message)
+   在 OfficialUiFullSceneTests.NpcCheck(Boolean condition, String message)
+   在 OfficialUiFullSceneTests.ExerciseNpc(GameUiStartupSession owner, MapInfo map, String evidence, String style)
+   在 OfficialUiFullSceneTests.RunNpc(String[] args)

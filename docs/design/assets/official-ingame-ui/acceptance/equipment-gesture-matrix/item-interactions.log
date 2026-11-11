@@ -1,0 +1,9 @@
+tests\game-ui\OfficialUiFullSceneTests.cs(252,25): error CS0103: 当前上下文中不存在名称“ExerciseNativeTransitions”
+tests\game-ui\OfficialUiFullSceneTests.cs(253,25): error CS0103: 当前上下文中不存在名称“ExerciseNativeCharacterRefresh”
+tests\game-ui\OfficialUiFullSceneTests.cs(262,25): error CS0103: 当前上下文中不存在名称“ExerciseNativeTransitions”
+tests\game-ui\OfficialUiFullSceneTests.cs(263,25): error CS0103: 当前上下文中不存在名称“ExerciseNativeCharacterRefresh”
+Exception: E:\workspace\mir3-zircon-server\tests\Run-GameUiItemInteractionTests.ps1:28
+Line |
+  28 |  … TEXITCODE -ne 0) { throw 'ItemInteraction test compilation failed.' }
+     |                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | ItemInteraction test compilation failed.

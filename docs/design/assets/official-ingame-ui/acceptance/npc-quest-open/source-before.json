@@ -1,0 +1,18 @@
+[
+  {
+    "path": "Client/Envir/GameUiOfficialV1WindowSet.cs",
+    "sha256": "0474ee862dc3a71aebdafe66af798cd44c48b843c885560c6a0c8556196593b5"
+  },
+  {
+    "path": "Client/Envir/GameUiNpcGroupLayout.cs",
+    "sha256": "aecfec37cda3dde4547b83ecbd8bde80b671f8054b6dec84c10b71a493781fb5"
+  },
+  {
+    "path": "tests/game-ui/OfficialUiNpcTests.cs",
+    "sha256": "ee3c1302c32a330768e31d81c947c33f79608436cd5b155a347268d1501d499c"
+  },
+  {
+    "path": "tests/game-ui/OfficialUiNpcQuestTests.cs",
+    "sha256": "5b7f36812b54da3801b96f000e2e6973c74b05c32aaccb5b612569d6ac539b55"
+  }
+]

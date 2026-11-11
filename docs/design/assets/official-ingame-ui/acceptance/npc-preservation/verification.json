@@ -1,0 +1,295 @@
+{
+  "schemaVersion": 1,
+  "kind": "official-ingame-ui-npc-original-card-preservation",
+  "checkedAtLocalDate": "2026-11-08",
+  "releaseAccepted": false,
+  "referenceResolution": [
+    1024,
+    768
+  ],
+  "results": {
+    "checks": 2084,
+    "scenes": 3,
+    "presentedFrames": 27,
+    "deviceResets": 21,
+    "coordinateHits": 99,
+    "comparedPixels": 2399935,
+    "dialogTypes": 15,
+    "dependentWindows": 16,
+    "serverConnected": false,
+    "releaseAccepted": false,
+    "pythonTests": 141
+  },
+  "sourceChanges": [
+    {
+      "path": "build/game-ui/README.md",
+      "beforeSha256": "d627febde70cf3c2f3a3c4a3052ea5eb4f9b0fff0f310d760b5b39451c9023d7",
+      "afterSha256": "5cf6d5b06afe8fb24717e0891093a98dfdaa06f450f30a141460873fae2308ea"
+    },
+    {
+      "path": "tests/Run-GameUiTests.ps1",
+      "beforeSha256": "1add9cce0da936e5272db6dbb98c4fa449d77b72a597514c31e01d36a27e859a",
+      "afterSha256": "108f2bf450843c260120d200240b273ecb5fdba634d09723e1a187c33dc17e9c"
+    }
+  ],
+  "sourceHashes": [
+    {
+      "path": "build/game-ui/README.md",
+      "sha256": "5cf6d5b06afe8fb24717e0891093a98dfdaa06f450f30a141460873fae2308ea"
+    },
+    {
+      "path": "tests/Run-GameUiTests.ps1",
+      "sha256": "108f2bf450843c260120d200240b273ecb5fdba634d09723e1a187c33dc17e9c"
+    },
+    {
+      "path": "tests/Run-GameUiNpcTests.ps1",
+      "sha256": "93d0fa0e25ac588c67e54bf491e3061b338bdfd10cfcba3da708ff9085789c39"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiNpcTests.cs",
+      "sha256": "664b85e3b51182de3678dd188f65c085379ae5736b3b7749ed8b66384087c5e1"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiFullSceneTests.cs",
+      "sha256": "95e0b086a7ba20c631d30dab30079d09e683ea5672c61a1f762ac623af5cc306"
+    },
+    {
+      "path": "Client/Scenes/Views/NPCDialog.cs",
+      "sha256": "ad706bbd920d091455cada87917bb011082a61e1548b2b88d37eef3d52a7872c"
+    },
+    {
+      "path": "Client/Scenes/GameScene.cs",
+      "sha256": "89df6b08cf454fd022e3a0a909aa385f0d7ff55f822621648b7db785b8c260ce"
+    },
+    {
+      "path": "Client/Envir/CConnection.cs",
+      "sha256": "423e46eeb1a01089ddc211cc0ebfaf5c79144a1da3bd7b0c981e44d9fe7d1fbc"
+    }
+  ],
+  "commands": [
+    {
+      "command": "powershell -File tests/Run-GameUiTests.ps1 -Suite Npc -PackagePath <92-frame OfficialV1.Zl> -EvidenceDirectory <fresh directory>",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-preservation/npc-verified.log",
+      "logSha256": "9613361113a9edfb283a5bb7a9308cdf0ea835dedf0ad3e5049a40277f9056b8"
+    },
+    {
+      "command": "python build/game-ui/Validate-UiTasks.py",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-preservation/task-validation.log",
+      "logSha256": "5c417d236f0cb0bce034af3a17ed64c8b0a5e1dc068e7a29c8af3bd63c48ad38"
+    },
+    {
+      "command": "python -m unittest discover -s tests/game-ui -p test_*.py -v",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-preservation/python-tests.log",
+      "logSha256": "9d2d5ffa08d1dccc10d92fee4ec110fb9e0dfe1a69a3539f4348ffa3aca0fd3c"
+    },
+    {
+      "command": "PowerShell parser and Npc/Bindings invalid-invocation guards",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-preservation/runner-guards.log",
+      "logSha256": "8bd025a605550dc76753f304ef94f71a52ac02e5f4a67d4fe7e2e915186d6c08"
+    },
+    {
+      "command": "git -c core.whitespace=cr-at-eol diff --check",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-preservation/whitespace-check.log",
+      "logSha256": "79d6e102d3342502fc80ca42def8ff97f6642ce33398d5219dc2f3e921c23f6f"
+    }
+  ],
+  "limitations": [
+    "Offline actual GameScene/D3D9 with synthetic database and socket-free response injection; no live server or final game acceptance.",
+    "Valid space-delimited multi-line options exercise the original parser; no claim that inherited unbroken-word hit regions are fixed.",
+    "WeaponReset keeps the original no-op routing; no service business behavior or new style is added.",
+    "UI-20 is in_progress: candidate regression is verified but predecessor acceptance and G0 gates remain open. Legacy remains default and RuntimeReady=false."
+  ],
+  "diagnostics": [
+    {
+      "run": "npc-first",
+      "result": "fixture incorrectly expected Observer alone to refresh close Enabled; corrected to normal UserChanged path",
+      "location": "E:/workspace/mir3-ui-work/npc-preservation-20261108-v1/npc-first.log"
+    },
+    {
+      "run": "npc-second",
+      "result": "unbroken Chinese long token uses one original word region; changed multiline sample to supported space-delimited words, original parser unchanged",
+      "location": "E:/workspace/mir3-ui-work/npc-preservation-20261108-v1/npc-second.log"
+    },
+    {
+      "run": "npc-final",
+      "result": "unified runner parameter insertion missed CRLF marker; corrected declaration and reran successfully",
+      "location": "E:/workspace/mir3-ui-work/npc-preservation-20261108-v1/npc-final.log"
+    }
+  ],
+  "runtimeContinuity": "docs/design/assets/official-ingame-ui/acceptance/npc-preservation/runtime-continuity.json",
+  "packageSha256": "b469289d105e2404361033c81869b610399d7610edee5143dd7e62d1803ccfa7",
+  "sourcePlanSha256": "f8c0a002b3821fabb54993792c354c4eff35eec51f9cfdc418535017c13069e9",
+  "evidenceHashes": [
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-preservation/npc/assertions.txt",
+      "sha256": "02f49518739527052d22a0fb4b5473df502be330f4ad805b7848f3a994d99b1f"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-preservation/npc/coordinate-hits.txt",
+      "sha256": "59cf381d5f29b6628ef98e8060b2a151ed7c68bd6a1e2b40b6d5e0210aa121a0"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-preservation/npc/legacy-card.png",
+      "sha256": "bbf533c95e714eb1b384a34ed7dde97083e54d67bca961844f3c9e9c8f2882d6"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-preservation/npc/legacy-reset-1024x768.png",
+      "sha256": "718e52a0df1079d77fab5dff0823b58b2d8d98cb7c5d319a4fb36d5893eaca4d"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-preservation/npc/legacy-reset-1280x800.png",
+      "sha256": "6ba4420ef13f0c9e3e11e94b0b510f0ef22e92014dd02cadc2da81c2e20918bf"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-preservation/npc/legacy-reset-1366x768.png",
+      "sha256": "9307abd4893bee4b08268e04f81e8f8889f09be289f4703c0dd332384e396b42"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-preservation/npc/legacy-reset-1440x900.png",
+      "sha256": "5d7a6e9c1c15173e85b1c06b094a5773c037c7c3e7d270d57818628ed4e3abdd"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-preservation/npc/legacy-reset-1600x900.png",
+      "sha256": "0270ea3175f839c48f352f53a0057f3c9366895a424af520eddf7709fb8da65f"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-preservation/npc/legacy-reset-1920x1080.png",
+      "sha256": "b024b69683e93b115d6d3973a578d2ea688b5090fe5ce983f352af2f1b7d50d3"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-preservation/npc/legacy-resources.txt",
+      "sha256": "47713d590a1b9214abdef7a0fc33d6c28a2b5a73a0cff9794375a5083020b498"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-preservation/npc/legacy-trace.txt",
+      "sha256": "6804f5c1feede030d5c06125c8e8c928027d82d37f36a237b9e111becfa63872"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-preservation/npc/legacy-wrapped-option.png",
+      "sha256": "ff0659f55ad69307331223cc4612065bd036ee8b8e2442c86a2c9a6a470714a3"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-preservation/npc/metrics.json",
+      "sha256": "f16549eca17ae4b1239dd47f7ce752aa694de704142af2db697c8ef215ddc0a2"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-preservation/npc/official-card.png",
+      "sha256": "8eca9ae7629a157e425126f2e8b3e1ac890eacecc3658cb1f0a1933e8e54cee8"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-preservation/npc/official-reentry-card.png",
+      "sha256": "8eca9ae7629a157e425126f2e8b3e1ac890eacecc3658cb1f0a1933e8e54cee8"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-preservation/npc/official-reentry-reset-1024x768.png",
+      "sha256": "b4337d0ed1f59efaafe97a0089355e4c54ea82e33a94ef56ebe7e70933302e6d"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-preservation/npc/official-reentry-reset-1280x800.png",
+      "sha256": "8dce2d3c349028741dbf0db3420cc33bb0a3ced42e920804083eea241af00afa"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-preservation/npc/official-reentry-reset-1366x768.png",
+      "sha256": "876916cb60bc2176f9c2606a8124e456c12e6f0867cf54269e2545c3f9989f13"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-preservation/npc/official-reentry-reset-1440x900.png",
+      "sha256": "c4f62b2feed18267de5ba2c75e9e8390bbe4cbba7d72d09aadddbd434d65fdef"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-preservation/npc/official-reentry-reset-1600x900.png",
+      "sha256": "1daed92bd11872e2662204c2d51836849f931cb5f857e79d225cc4892807d432"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-preservation/npc/official-reentry-reset-1920x1080.png",
+      "sha256": "fca61834db774030f4c8e87d2ea70eadb04dab9626615a9e10bdbb6257684d13"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-preservation/npc/official-reentry-trace.txt",
+      "sha256": "6804f5c1feede030d5c06125c8e8c928027d82d37f36a237b9e111becfa63872"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-preservation/npc/official-reentry-wrapped-option.png",
+      "sha256": "5852f354f773a9c05ff9dcf7a0eb12fc3091aaae9278c89fa95c5b1eba4ab256"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-preservation/npc/official-reset-1024x768.png",
+      "sha256": "b4337d0ed1f59efaafe97a0089355e4c54ea82e33a94ef56ebe7e70933302e6d"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-preservation/npc/official-reset-1280x800.png",
+      "sha256": "8dce2d3c349028741dbf0db3420cc33bb0a3ced42e920804083eea241af00afa"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-preservation/npc/official-reset-1366x768.png",
+      "sha256": "876916cb60bc2176f9c2606a8124e456c12e6f0867cf54269e2545c3f9989f13"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-preservation/npc/official-reset-1440x900.png",
+      "sha256": "c4f62b2feed18267de5ba2c75e9e8390bbe4cbba7d72d09aadddbd434d65fdef"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-preservation/npc/official-reset-1600x900.png",
+      "sha256": "1daed92bd11872e2662204c2d51836849f931cb5f857e79d225cc4892807d432"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-preservation/npc/official-reset-1920x1080.png",
+      "sha256": "fca61834db774030f4c8e87d2ea70eadb04dab9626615a9e10bdbb6257684d13"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-preservation/npc/official-trace.txt",
+      "sha256": "6804f5c1feede030d5c06125c8e8c928027d82d37f36a237b9e111becfa63872"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-preservation/npc/official-wrapped-option.png",
+      "sha256": "5852f354f773a9c05ff9dcf7a0eb12fc3091aaae9278c89fa95c5b1eba4ab256"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-preservation/npc/tested-runtime.json",
+      "sha256": "0af29a807ccb3a80365ee593bc096dc988be9a2721946d75e32c08ebc4406616"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-preservation/npc-verified.log",
+      "sha256": "9613361113a9edfb283a5bb7a9308cdf0ea835dedf0ad3e5049a40277f9056b8"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-preservation/python-tests.log",
+      "sha256": "9d2d5ffa08d1dccc10d92fee4ec110fb9e0dfe1a69a3539f4348ffa3aca0fd3c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-preservation/README.md",
+      "sha256": "561710ddaf5c6084aab4e8d61573ebfff9e8b60db6af581faee462b420fc069a"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-preservation/runner-guards.log",
+      "sha256": "8bd025a605550dc76753f304ef94f71a52ac02e5f4a67d4fe7e2e915186d6c08"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-preservation/runtime-audit.json",
+      "sha256": "b9df8dd91abd96c1112f23537dffc730c282dd973a1f37fc5d91bde613ff3c28"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-preservation/runtime-continuity.json",
+      "sha256": "a599211ae00c0755de8d39d1d349dd50828a5596f835d3e261cdcea2671284e4"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-preservation/task-validation.log",
+      "sha256": "5c417d236f0cb0bce034af3a17ed64c8b0a5e1dc068e7a29c8af3bd63c48ad38"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-preservation/whitespace-check.log",
+      "sha256": "79d6e102d3342502fc80ca42def8ff97f6642ce33398d5219dc2f3e921c23f6f"
+    }
+  ],
+  "runtimeAudit": "docs/design/assets/official-ingame-ui/acceptance/npc-preservation/runtime-audit.json"
+}

@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "inventorySha256": "fb4c3c90a9e48d76451b45fee625a848588b1c0f52353e58ffdb16a4a1444f71",
+  "sampleStep": 3,
+  "borderPixels": 8,
+  "topPixels": 30,
+  "minSourceMaxChannel": 28,
+  "excludeCloseWidth": 34,
+  "excludeCloseHeight": 36,
+  "matches": [
+    {
+      "role": "hud-hp-fill",
+      "captureId": "06-chat-chinese-input",
+      "library": "UI",
+      "indices": [
+        142
+      ],
+      "xRange": [
+        38,
+        50
+      ],
+      "yRange": [
+        662,
+        674
+      ],
+      "sampling": "artwork",
+      "minSourceMaxChannel": 40,
+      "excludeRects": [
+        [
+          44,
+          0,
+          9,
+          101
+        ]
+      ]
+    },
+    {
+      "role": "hud-mp-fill",
+      "captureId": "06-chat-chinese-input",
+      "library": "UI",
+      "indices": [
+        143
+      ],
+      "xRange": [
+        92,
+        104
+      ],
+      "yRange": [
+        662,
+        674
+      ],
+      "sampling": "artwork",
+      "minSourceMaxChannel": 40,
+      "excludeRects": [
+        [
+          0,
+          0,
+          8,
+          101
+        ]
+      ]
+    },
+    {
+      "role": "hud-command-shell",
+      "captureId": "06-chat-chinese-input",
+      "library": "UI",
+      "indices": [
+        140,
+        1270
+      ],
+      "xRange": [
+        795,
+        807
+      ],
+      "yRange": [
+        612,
+        621
+      ],
+      "sampling": "artwork",
+      "minSourceMaxChannel": 40,
+      "excludeRects": [
+        [
+          40,
+          30,
+          145,
+          145
+        ]
+      ]
+    }
+  ]
+}

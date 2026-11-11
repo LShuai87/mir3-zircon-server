@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "kind": "official-ui-compact-command-wheel-verification",
+  "releaseAccepted": false,
+  "unchangedArtFrames": 91,
+  "changedArtRoles": [
+    "hud-command-frame"
+  ],
+  "buttonStateSets": 19,
+  "sourceLibrary": "UI",
+  "sourceIndex": 140,
+  "sourceSize": [
+    225,
+    175
+  ],
+  "outputSize": [
+    225,
+    202
+  ],
+  "origin": [
+    0,
+    27
+  ],
+  "exactNativeRgbaPixels": 39375,
+  "transparentCanvasPixels": 6075,
+  "opaqueBlackInteriorPixelsPreserved": 0,
+  "sourcePngSha256": "a22ce21539d63f2b050fe7c026abc0f2789376efa0fd56d2dfafb3e7fc9fbfd0",
+  "artManifestSha256": "4b424d964b2b93412d51500e0eb7886b7daf74c841486821a836b6d6bd2ca182",
+  "packageSha256": "b469289d105e2404361033c81869b610399d7610edee5143dd7e62d1803ccfa7",
+  "deterministicArt": true,
+  "deterministicPackage": true,
+  "sourceIdentification": "explicit native-art adaptation; UI[140] versus UI[1270] is not uniquely resolved by screenshots"
+}

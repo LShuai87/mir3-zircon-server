@@ -1,0 +1,9 @@
+tests\game-ui\OfficialUiWindowSetTests.cs(447,92): error CS1061: “StorageDialog”未包含“OfficialLayoutStore”的定义，并且找不到可接受第一个“StorageDialog”类型参数的可访问扩展方法“OfficialLayoutStore”(是否缺少 using 指令或程序集引用?)
+tests\game-ui\OfficialUiWindowSetTests.cs(487,96): error CS1061: “StorageDialog”未包含“OfficialLayoutStore”的定义，并且找不到可接受第一个“StorageDialog”类型参数的可访问扩展方法“OfficialLayoutStore”(是否缺少 using 指令或程序集引用?)
+WindowSet test compilation failed.
+At E:\workspace\mir3-zircon-server\tests\Run-GameUiWindowSetTests.ps1:34 char:32
++ ...  ($LASTEXITCODE -ne 0) { throw 'WindowSet test compilation failed.' }
++                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (WindowSet test compilation failed.:String) [], RuntimeException
+    + FullyQualifiedErrorId : WindowSet test compilation failed.
+ 

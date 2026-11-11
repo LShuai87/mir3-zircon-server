@@ -1,0 +1,1876 @@
+legacy|actual scene installed requested HUD/character/chat style
+legacy|all original sixteen dependent NPC windows enumerated
+legacy|original NPC frame and close images remain unskinned
+legacy|original NPC window presentation retained
+legacy|server page index resolves exact database record
+legacy|response opens original card and assigns page/NPC identity
+legacy|server page response sends no speculative request
+legacy|opening NPC moves overlapping character panel using original rule
+legacy|opening NPC keeps original storage placement rule
+legacy|option markup stripped while all body content remains
+legacy|three original clickable option labels
+legacy|original option parent/font/underline/color/sound retained
+legacy|target visible and enabled: DXLabel
+legacy|target within viewport
+legacy|real coordinate hits exact NPC target: DXLabel
+legacy|mouse routing did not fault style session
+legacy|option hover uses original red
+legacy|exact packet type NPCButton
+legacy|one packet only NPCButton
+legacy|exact first option ID
+legacy|target visible and enabled: DXLabel
+legacy|target within viewport
+legacy|real coordinate hits exact NPC target: DXLabel
+legacy|mouse routing did not fault style session
+legacy|same option throttled before one-second boundary
+legacy|target visible and enabled: DXLabel
+legacy|target within viewport
+legacy|real coordinate hits exact NPC target: DXLabel
+legacy|mouse routing did not fault style session
+legacy|exact packet type NPCButton
+legacy|one packet only NPCButton
+legacy|distinct option has independent throttle
+legacy|target visible and enabled: DXLabel
+legacy|target within viewport
+legacy|real coordinate hits exact NPC target: DXLabel
+legacy|mouse routing did not fault style session
+legacy|exact packet type NPCButton
+legacy|one packet only NPCButton
+legacy|exact one-second boundary accepts click
+legacy|leaving options restores original yellow
+legacy|observer close button follows original disabled rule
+legacy|target visible and enabled: DXLabel
+legacy|target within viewport
+legacy|real coordinate hits exact NPC target: DXLabel
+legacy|mouse routing did not fault style session
+legacy|target visible and enabled: DXLabel
+legacy|target within viewport
+legacy|real coordinate hits exact NPC target: DXLabel
+legacy|mouse routing did not fault style session
+legacy|observer option/leave clicks send nothing and keep card open
+legacy|leaving observer restores close button
+legacy|server page index resolves exact database record
+legacy|response opens original card and assigns page/NPC identity
+legacy|server page response sends no speculative request
+legacy|page refresh disposes every stale clickable label
+legacy|wrapped option covers all original non-space text without loss or duplication
+legacy|all rectangles of one wrapped option hover together
+legacy|target visible and enabled: DXLabel
+legacy|target within viewport
+legacy|real coordinate hits exact NPC target: DXLabel
+legacy|mouse routing did not fault style session
+legacy|exact packet type NPCButton
+legacy|one packet only NPCButton
+legacy|multi-line option keeps exact 32-bit ID
+legacy|target visible and enabled: DXLabel
+legacy|target within viewport
+legacy|real coordinate hits exact NPC target: DXLabel
+legacy|mouse routing did not fault style session
+legacy|wrapped rectangles share the same throttle
+legacy|target visible and enabled: DXLabel
+legacy|target within viewport
+legacy|real coordinate hits exact NPC target: DXLabel
+legacy|mouse routing did not fault style session
+legacy|exact packet type NPCButton
+legacy|one packet only NPCButton
+legacy|wrapped option accepts boundary on another rectangle
+legacy|target visible and enabled: DXLabel
+legacy|target within viewport
+legacy|real coordinate hits exact NPC target: DXLabel
+legacy|mouse routing did not fault style session
+legacy|exact packet type NPCClose
+legacy|one packet only NPCClose
+legacy|leave option clears open flag and NPC identity
+legacy|leave option hides every dependent service
+legacy|every existing dialog discriminator covered, including original WeaponReset no-op
+legacy|server page index resolves exact database record
+legacy|response opens original card and assigns page/NPC identity
+legacy|server page response sends no speculative request
+legacy|original dependent windows for None
+legacy|dependent window remains unskinned: NPCAccessoryLevelBox
+legacy|dependent window remains unskinned: NPCAccessoryResetBox
+legacy|dependent window remains unskinned: NPCAccessoryUpgradeBox
+legacy|dependent window remains unskinned: NPCAdoptCompanionBox
+legacy|dependent window remains unskinned: NPCCompanionStorageBox
+legacy|dependent window remains unskinned: NPCGoodsBox
+legacy|dependent window remains unskinned: NPCItemFragmentBox
+legacy|dependent window remains unskinned: NPCMasterRefineBox
+legacy|dependent window remains unskinned: NPCQuestBox
+legacy|dependent window remains unskinned: NPCRefineBox
+legacy|dependent window remains unskinned: NPCRefineRetrieveBox
+legacy|dependent window remains unskinned: NPCRefinementStoneBox
+legacy|dependent window remains unskinned: NPCRepairBox
+legacy|dependent window remains unskinned: NPCSellBox
+legacy|dependent window remains unskinned: NPCWeaponCraftBox
+legacy|dependent window remains unskinned: NPCWeddingRingBox
+legacy|target visible and enabled: DXButton
+legacy|target within viewport
+legacy|real coordinate hits exact NPC target: DXButton
+legacy|mouse routing did not fault style session
+legacy|exact packet type NPCClose
+legacy|one packet only NPCClose
+legacy|close button clears original dependent state: None
+legacy|repeated close sends no duplicate: None
+legacy|server page index resolves exact database record
+legacy|response opens original card and assigns page/NPC identity
+legacy|server page response sends no speculative request
+legacy|original dependent windows for BuySell
+legacy|dependent window remains unskinned: NPCAccessoryLevelBox
+legacy|dependent window remains unskinned: NPCAccessoryResetBox
+legacy|dependent window remains unskinned: NPCAccessoryUpgradeBox
+legacy|dependent window remains unskinned: NPCAdoptCompanionBox
+legacy|dependent window remains unskinned: NPCCompanionStorageBox
+legacy|dependent window remains unskinned: NPCGoodsBox
+legacy|dependent window remains unskinned: NPCItemFragmentBox
+legacy|dependent window remains unskinned: NPCMasterRefineBox
+legacy|dependent window remains unskinned: NPCQuestBox
+legacy|dependent window remains unskinned: NPCRefineBox
+legacy|dependent window remains unskinned: NPCRefineRetrieveBox
+legacy|dependent window remains unskinned: NPCRefinementStoneBox
+legacy|dependent window remains unskinned: NPCRepairBox
+legacy|dependent window remains unskinned: NPCSellBox
+legacy|dependent window remains unskinned: NPCWeaponCraftBox
+legacy|dependent window remains unskinned: NPCWeddingRingBox
+legacy|target visible and enabled: DXButton
+legacy|target within viewport
+legacy|real coordinate hits exact NPC target: DXButton
+legacy|mouse routing did not fault style session
+legacy|exact packet type NPCClose
+legacy|one packet only NPCClose
+legacy|close button clears original dependent state: BuySell
+legacy|repeated close sends no duplicate: BuySell
+legacy|server page index resolves exact database record
+legacy|response opens original card and assigns page/NPC identity
+legacy|server page response sends no speculative request
+legacy|original dependent windows for Repair
+legacy|dependent window remains unskinned: NPCAccessoryLevelBox
+legacy|dependent window remains unskinned: NPCAccessoryResetBox
+legacy|dependent window remains unskinned: NPCAccessoryUpgradeBox
+legacy|dependent window remains unskinned: NPCAdoptCompanionBox
+legacy|dependent window remains unskinned: NPCCompanionStorageBox
+legacy|dependent window remains unskinned: NPCGoodsBox
+legacy|dependent window remains unskinned: NPCItemFragmentBox
+legacy|dependent window remains unskinned: NPCMasterRefineBox
+legacy|dependent window remains unskinned: NPCQuestBox
+legacy|dependent window remains unskinned: NPCRefineBox
+legacy|dependent window remains unskinned: NPCRefineRetrieveBox
+legacy|dependent window remains unskinned: NPCRefinementStoneBox
+legacy|dependent window remains unskinned: NPCRepairBox
+legacy|dependent window remains unskinned: NPCSellBox
+legacy|dependent window remains unskinned: NPCWeaponCraftBox
+legacy|dependent window remains unskinned: NPCWeddingRingBox
+legacy|target visible and enabled: DXButton
+legacy|target within viewport
+legacy|real coordinate hits exact NPC target: DXButton
+legacy|mouse routing did not fault style session
+legacy|exact packet type NPCClose
+legacy|one packet only NPCClose
+legacy|close button clears original dependent state: Repair
+legacy|repeated close sends no duplicate: Repair
+legacy|server page index resolves exact database record
+legacy|response opens original card and assigns page/NPC identity
+legacy|server page response sends no speculative request
+legacy|original dependent windows for Refine
+legacy|dependent window remains unskinned: NPCAccessoryLevelBox
+legacy|dependent window remains unskinned: NPCAccessoryResetBox
+legacy|dependent window remains unskinned: NPCAccessoryUpgradeBox
+legacy|dependent window remains unskinned: NPCAdoptCompanionBox
+legacy|dependent window remains unskinned: NPCCompanionStorageBox
+legacy|dependent window remains unskinned: NPCGoodsBox
+legacy|dependent window remains unskinned: NPCItemFragmentBox
+legacy|dependent window remains unskinned: NPCMasterRefineBox
+legacy|dependent window remains unskinned: NPCQuestBox
+legacy|dependent window remains unskinned: NPCRefineBox
+legacy|dependent window remains unskinned: NPCRefineRetrieveBox
+legacy|dependent window remains unskinned: NPCRefinementStoneBox
+legacy|dependent window remains unskinned: NPCRepairBox
+legacy|dependent window remains unskinned: NPCSellBox
+legacy|dependent window remains unskinned: NPCWeaponCraftBox
+legacy|dependent window remains unskinned: NPCWeddingRingBox
+legacy|target visible and enabled: DXButton
+legacy|target within viewport
+legacy|real coordinate hits exact NPC target: DXButton
+legacy|mouse routing did not fault style session
+legacy|exact packet type NPCClose
+legacy|one packet only NPCClose
+legacy|close button clears original dependent state: Refine
+legacy|repeated close sends no duplicate: Refine
+legacy|server page index resolves exact database record
+legacy|response opens original card and assigns page/NPC identity
+legacy|server page response sends no speculative request
+legacy|original dependent windows for RefineRetrieve
+legacy|dependent window remains unskinned: NPCAccessoryLevelBox
+legacy|dependent window remains unskinned: NPCAccessoryResetBox
+legacy|dependent window remains unskinned: NPCAccessoryUpgradeBox
+legacy|dependent window remains unskinned: NPCAdoptCompanionBox
+legacy|dependent window remains unskinned: NPCCompanionStorageBox
+legacy|dependent window remains unskinned: NPCGoodsBox
+legacy|dependent window remains unskinned: NPCItemFragmentBox
+legacy|dependent window remains unskinned: NPCMasterRefineBox
+legacy|dependent window remains unskinned: NPCQuestBox
+legacy|dependent window remains unskinned: NPCRefineBox
+legacy|dependent window remains unskinned: NPCRefineRetrieveBox
+legacy|dependent window remains unskinned: NPCRefinementStoneBox
+legacy|dependent window remains unskinned: NPCRepairBox
+legacy|dependent window remains unskinned: NPCSellBox
+legacy|dependent window remains unskinned: NPCWeaponCraftBox
+legacy|dependent window remains unskinned: NPCWeddingRingBox
+legacy|target visible and enabled: DXButton
+legacy|target within viewport
+legacy|real coordinate hits exact NPC target: DXButton
+legacy|mouse routing did not fault style session
+legacy|exact packet type NPCClose
+legacy|one packet only NPCClose
+legacy|close button clears original dependent state: RefineRetrieve
+legacy|repeated close sends no duplicate: RefineRetrieve
+legacy|server page index resolves exact database record
+legacy|response opens original card and assigns page/NPC identity
+legacy|server page response sends no speculative request
+legacy|original dependent windows for CompanionManage
+legacy|dependent window remains unskinned: NPCAccessoryLevelBox
+legacy|dependent window remains unskinned: NPCAccessoryResetBox
+legacy|dependent window remains unskinned: NPCAccessoryUpgradeBox
+legacy|dependent window remains unskinned: NPCAdoptCompanionBox
+legacy|dependent window remains unskinned: NPCCompanionStorageBox
+legacy|dependent window remains unskinned: NPCGoodsBox
+legacy|dependent window remains unskinned: NPCItemFragmentBox
+legacy|dependent window remains unskinned: NPCMasterRefineBox
+legacy|dependent window remains unskinned: NPCQuestBox
+legacy|dependent window remains unskinned: NPCRefineBox
+legacy|dependent window remains unskinned: NPCRefineRetrieveBox
+legacy|dependent window remains unskinned: NPCRefinementStoneBox
+legacy|dependent window remains unskinned: NPCRepairBox
+legacy|dependent window remains unskinned: NPCSellBox
+legacy|dependent window remains unskinned: NPCWeaponCraftBox
+legacy|dependent window remains unskinned: NPCWeddingRingBox
+legacy|target visible and enabled: DXButton
+legacy|target within viewport
+legacy|real coordinate hits exact NPC target: DXButton
+legacy|mouse routing did not fault style session
+legacy|exact packet type NPCClose
+legacy|one packet only NPCClose
+legacy|close button clears original dependent state: CompanionManage
+legacy|repeated close sends no duplicate: CompanionManage
+legacy|server page index resolves exact database record
+legacy|response opens original card and assigns page/NPC identity
+legacy|server page response sends no speculative request
+legacy|original dependent windows for WeddingRing
+legacy|dependent window remains unskinned: NPCAccessoryLevelBox
+legacy|dependent window remains unskinned: NPCAccessoryResetBox
+legacy|dependent window remains unskinned: NPCAccessoryUpgradeBox
+legacy|dependent window remains unskinned: NPCAdoptCompanionBox
+legacy|dependent window remains unskinned: NPCCompanionStorageBox
+legacy|dependent window remains unskinned: NPCGoodsBox
+legacy|dependent window remains unskinned: NPCItemFragmentBox
+legacy|dependent window remains unskinned: NPCMasterRefineBox
+legacy|dependent window remains unskinned: NPCQuestBox
+legacy|dependent window remains unskinned: NPCRefineBox
+legacy|dependent window remains unskinned: NPCRefineRetrieveBox
+legacy|dependent window remains unskinned: NPCRefinementStoneBox
+legacy|dependent window remains unskinned: NPCRepairBox
+legacy|dependent window remains unskinned: NPCSellBox
+legacy|dependent window remains unskinned: NPCWeaponCraftBox
+legacy|dependent window remains unskinned: NPCWeddingRingBox
+legacy|target visible and enabled: DXButton
+legacy|target within viewport
+legacy|real coordinate hits exact NPC target: DXButton
+legacy|mouse routing did not fault style session
+legacy|exact packet type NPCClose
+legacy|one packet only NPCClose
+legacy|close button clears original dependent state: WeddingRing
+legacy|repeated close sends no duplicate: WeddingRing
+legacy|server page index resolves exact database record
+legacy|response opens original card and assigns page/NPC identity
+legacy|server page response sends no speculative request
+legacy|original dependent windows for RefinementStone
+legacy|dependent window remains unskinned: NPCAccessoryLevelBox
+legacy|dependent window remains unskinned: NPCAccessoryResetBox
+legacy|dependent window remains unskinned: NPCAccessoryUpgradeBox
+legacy|dependent window remains unskinned: NPCAdoptCompanionBox
+legacy|dependent window remains unskinned: NPCCompanionStorageBox
+legacy|dependent window remains unskinned: NPCGoodsBox
+legacy|dependent window remains unskinned: NPCItemFragmentBox
+legacy|dependent window remains unskinned: NPCMasterRefineBox
+legacy|dependent window remains unskinned: NPCQuestBox
+legacy|dependent window remains unskinned: NPCRefineBox
+legacy|dependent window remains unskinned: NPCRefineRetrieveBox
+legacy|dependent window remains unskinned: NPCRefinementStoneBox
+legacy|dependent window remains unskinned: NPCRepairBox
+legacy|dependent window remains unskinned: NPCSellBox
+legacy|dependent window remains unskinned: NPCWeaponCraftBox
+legacy|dependent window remains unskinned: NPCWeddingRingBox
+legacy|target visible and enabled: DXButton
+legacy|target within viewport
+legacy|real coordinate hits exact NPC target: DXButton
+legacy|mouse routing did not fault style session
+legacy|exact packet type NPCClose
+legacy|one packet only NPCClose
+legacy|close button clears original dependent state: RefinementStone
+legacy|repeated close sends no duplicate: RefinementStone
+legacy|server page index resolves exact database record
+legacy|response opens original card and assigns page/NPC identity
+legacy|server page response sends no speculative request
+legacy|original dependent windows for MasterRefine
+legacy|dependent window remains unskinned: NPCAccessoryLevelBox
+legacy|dependent window remains unskinned: NPCAccessoryResetBox
+legacy|dependent window remains unskinned: NPCAccessoryUpgradeBox
+legacy|dependent window remains unskinned: NPCAdoptCompanionBox
+legacy|dependent window remains unskinned: NPCCompanionStorageBox
+legacy|dependent window remains unskinned: NPCGoodsBox
+legacy|dependent window remains unskinned: NPCItemFragmentBox
+legacy|dependent window remains unskinned: NPCMasterRefineBox
+legacy|dependent window remains unskinned: NPCQuestBox
+legacy|dependent window remains unskinned: NPCRefineBox
+legacy|dependent window remains unskinned: NPCRefineRetrieveBox
+legacy|dependent window remains unskinned: NPCRefinementStoneBox
+legacy|dependent window remains unskinned: NPCRepairBox
+legacy|dependent window remains unskinned: NPCSellBox
+legacy|dependent window remains unskinned: NPCWeaponCraftBox
+legacy|dependent window remains unskinned: NPCWeddingRingBox
+legacy|target visible and enabled: DXButton
+legacy|target within viewport
+legacy|real coordinate hits exact NPC target: DXButton
+legacy|mouse routing did not fault style session
+legacy|exact packet type NPCClose
+legacy|one packet only NPCClose
+legacy|close button clears original dependent state: MasterRefine
+legacy|repeated close sends no duplicate: MasterRefine
+legacy|server page index resolves exact database record
+legacy|response opens original card and assigns page/NPC identity
+legacy|server page response sends no speculative request
+legacy|original dependent windows for WeaponReset
+legacy|dependent window remains unskinned: NPCAccessoryLevelBox
+legacy|dependent window remains unskinned: NPCAccessoryResetBox
+legacy|dependent window remains unskinned: NPCAccessoryUpgradeBox
+legacy|dependent window remains unskinned: NPCAdoptCompanionBox
+legacy|dependent window remains unskinned: NPCCompanionStorageBox
+legacy|dependent window remains unskinned: NPCGoodsBox
+legacy|dependent window remains unskinned: NPCItemFragmentBox
+legacy|dependent window remains unskinned: NPCMasterRefineBox
+legacy|dependent window remains unskinned: NPCQuestBox
+legacy|dependent window remains unskinned: NPCRefineBox
+legacy|dependent window remains unskinned: NPCRefineRetrieveBox
+legacy|dependent window remains unskinned: NPCRefinementStoneBox
+legacy|dependent window remains unskinned: NPCRepairBox
+legacy|dependent window remains unskinned: NPCSellBox
+legacy|dependent window remains unskinned: NPCWeaponCraftBox
+legacy|dependent window remains unskinned: NPCWeddingRingBox
+legacy|target visible and enabled: DXButton
+legacy|target within viewport
+legacy|real coordinate hits exact NPC target: DXButton
+legacy|mouse routing did not fault style session
+legacy|exact packet type NPCClose
+legacy|one packet only NPCClose
+legacy|close button clears original dependent state: WeaponReset
+legacy|repeated close sends no duplicate: WeaponReset
+legacy|server page index resolves exact database record
+legacy|response opens original card and assigns page/NPC identity
+legacy|server page response sends no speculative request
+legacy|original dependent windows for ItemFragment
+legacy|dependent window remains unskinned: NPCAccessoryLevelBox
+legacy|dependent window remains unskinned: NPCAccessoryResetBox
+legacy|dependent window remains unskinned: NPCAccessoryUpgradeBox
+legacy|dependent window remains unskinned: NPCAdoptCompanionBox
+legacy|dependent window remains unskinned: NPCCompanionStorageBox
+legacy|dependent window remains unskinned: NPCGoodsBox
+legacy|dependent window remains unskinned: NPCItemFragmentBox
+legacy|dependent window remains unskinned: NPCMasterRefineBox
+legacy|dependent window remains unskinned: NPCQuestBox
+legacy|dependent window remains unskinned: NPCRefineBox
+legacy|dependent window remains unskinned: NPCRefineRetrieveBox
+legacy|dependent window remains unskinned: NPCRefinementStoneBox
+legacy|dependent window remains unskinned: NPCRepairBox
+legacy|dependent window remains unskinned: NPCSellBox
+legacy|dependent window remains unskinned: NPCWeaponCraftBox
+legacy|dependent window remains unskinned: NPCWeddingRingBox
+legacy|target visible and enabled: DXButton
+legacy|target within viewport
+legacy|real coordinate hits exact NPC target: DXButton
+legacy|mouse routing did not fault style session
+legacy|exact packet type NPCClose
+legacy|one packet only NPCClose
+legacy|close button clears original dependent state: ItemFragment
+legacy|repeated close sends no duplicate: ItemFragment
+legacy|server page index resolves exact database record
+legacy|response opens original card and assigns page/NPC identity
+legacy|server page response sends no speculative request
+legacy|original dependent windows for AccessoryRefineUpgrade
+legacy|dependent window remains unskinned: NPCAccessoryLevelBox
+legacy|dependent window remains unskinned: NPCAccessoryResetBox
+legacy|dependent window remains unskinned: NPCAccessoryUpgradeBox
+legacy|dependent window remains unskinned: NPCAdoptCompanionBox
+legacy|dependent window remains unskinned: NPCCompanionStorageBox
+legacy|dependent window remains unskinned: NPCGoodsBox
+legacy|dependent window remains unskinned: NPCItemFragmentBox
+legacy|dependent window remains unskinned: NPCMasterRefineBox
+legacy|dependent window remains unskinned: NPCQuestBox
+legacy|dependent window remains unskinned: NPCRefineBox
+legacy|dependent window remains unskinned: NPCRefineRetrieveBox
+legacy|dependent window remains unskinned: NPCRefinementStoneBox
+legacy|dependent window remains unskinned: NPCRepairBox
+legacy|dependent window remains unskinned: NPCSellBox
+legacy|dependent window remains unskinned: NPCWeaponCraftBox
+legacy|dependent window remains unskinned: NPCWeddingRingBox
+legacy|target visible and enabled: DXButton
+legacy|target within viewport
+legacy|real coordinate hits exact NPC target: DXButton
+legacy|mouse routing did not fault style session
+legacy|exact packet type NPCClose
+legacy|one packet only NPCClose
+legacy|close button clears original dependent state: AccessoryRefineUpgrade
+legacy|repeated close sends no duplicate: AccessoryRefineUpgrade
+legacy|server page index resolves exact database record
+legacy|response opens original card and assigns page/NPC identity
+legacy|server page response sends no speculative request
+legacy|original dependent windows for AccessoryRefineLevel
+legacy|dependent window remains unskinned: NPCAccessoryLevelBox
+legacy|dependent window remains unskinned: NPCAccessoryResetBox
+legacy|dependent window remains unskinned: NPCAccessoryUpgradeBox
+legacy|dependent window remains unskinned: NPCAdoptCompanionBox
+legacy|dependent window remains unskinned: NPCCompanionStorageBox
+legacy|dependent window remains unskinned: NPCGoodsBox
+legacy|dependent window remains unskinned: NPCItemFragmentBox
+legacy|dependent window remains unskinned: NPCMasterRefineBox
+legacy|dependent window remains unskinned: NPCQuestBox
+legacy|dependent window remains unskinned: NPCRefineBox
+legacy|dependent window remains unskinned: NPCRefineRetrieveBox
+legacy|dependent window remains unskinned: NPCRefinementStoneBox
+legacy|dependent window remains unskinned: NPCRepairBox
+legacy|dependent window remains unskinned: NPCSellBox
+legacy|dependent window remains unskinned: NPCWeaponCraftBox
+legacy|dependent window remains unskinned: NPCWeddingRingBox
+legacy|target visible and enabled: DXButton
+legacy|target within viewport
+legacy|real coordinate hits exact NPC target: DXButton
+legacy|mouse routing did not fault style session
+legacy|exact packet type NPCClose
+legacy|one packet only NPCClose
+legacy|close button clears original dependent state: AccessoryRefineLevel
+legacy|repeated close sends no duplicate: AccessoryRefineLevel
+legacy|server page index resolves exact database record
+legacy|response opens original card and assigns page/NPC identity
+legacy|server page response sends no speculative request
+legacy|original dependent windows for AccessoryReset
+legacy|dependent window remains unskinned: NPCAccessoryLevelBox
+legacy|dependent window remains unskinned: NPCAccessoryResetBox
+legacy|dependent window remains unskinned: NPCAccessoryUpgradeBox
+legacy|dependent window remains unskinned: NPCAdoptCompanionBox
+legacy|dependent window remains unskinned: NPCCompanionStorageBox
+legacy|dependent window remains unskinned: NPCGoodsBox
+legacy|dependent window remains unskinned: NPCItemFragmentBox
+legacy|dependent window remains unskinned: NPCMasterRefineBox
+legacy|dependent window remains unskinned: NPCQuestBox
+legacy|dependent window remains unskinned: NPCRefineBox
+legacy|dependent window remains unskinned: NPCRefineRetrieveBox
+legacy|dependent window remains unskinned: NPCRefinementStoneBox
+legacy|dependent window remains unskinned: NPCRepairBox
+legacy|dependent window remains unskinned: NPCSellBox
+legacy|dependent window remains unskinned: NPCWeaponCraftBox
+legacy|dependent window remains unskinned: NPCWeddingRingBox
+legacy|target visible and enabled: DXButton
+legacy|target within viewport
+legacy|real coordinate hits exact NPC target: DXButton
+legacy|mouse routing did not fault style session
+legacy|exact packet type NPCClose
+legacy|one packet only NPCClose
+legacy|close button clears original dependent state: AccessoryReset
+legacy|repeated close sends no duplicate: AccessoryReset
+legacy|server page index resolves exact database record
+legacy|response opens original card and assigns page/NPC identity
+legacy|server page response sends no speculative request
+legacy|original dependent windows for WeaponCraft
+legacy|dependent window remains unskinned: NPCAccessoryLevelBox
+legacy|dependent window remains unskinned: NPCAccessoryResetBox
+legacy|dependent window remains unskinned: NPCAccessoryUpgradeBox
+legacy|dependent window remains unskinned: NPCAdoptCompanionBox
+legacy|dependent window remains unskinned: NPCCompanionStorageBox
+legacy|dependent window remains unskinned: NPCGoodsBox
+legacy|dependent window remains unskinned: NPCItemFragmentBox
+legacy|dependent window remains unskinned: NPCMasterRefineBox
+legacy|dependent window remains unskinned: NPCQuestBox
+legacy|dependent window remains unskinned: NPCRefineBox
+legacy|dependent window remains unskinned: NPCRefineRetrieveBox
+legacy|dependent window remains unskinned: NPCRefinementStoneBox
+legacy|dependent window remains unskinned: NPCRepairBox
+legacy|dependent window remains unskinned: NPCSellBox
+legacy|dependent window remains unskinned: NPCWeaponCraftBox
+legacy|dependent window remains unskinned: NPCWeddingRingBox
+legacy|target visible and enabled: DXButton
+legacy|target within viewport
+legacy|real coordinate hits exact NPC target: DXButton
+legacy|mouse routing did not fault style session
+legacy|exact packet type NPCClose
+legacy|one packet only NPCClose
+legacy|close button clears original dependent state: WeaponCraft
+legacy|repeated close sends no duplicate: WeaponCraft
+legacy|server page index resolves exact database record
+legacy|response opens original card and assigns page/NPC identity
+legacy|server page response sends no speculative request
+legacy|independent buy/sell flags 0
+legacy|goods replacement retains exact original collection 0
+legacy|target visible and enabled: DXButton
+legacy|target within viewport
+legacy|real coordinate hits exact NPC target: DXButton
+legacy|mouse routing did not fault style session
+legacy|exact packet type NPCClose
+legacy|one packet only NPCClose
+legacy|server page index resolves exact database record
+legacy|response opens original card and assigns page/NPC identity
+legacy|server page response sends no speculative request
+legacy|independent buy/sell flags 1
+legacy|goods replacement retains exact original collection 1
+legacy|target visible and enabled: DXButton
+legacy|target within viewport
+legacy|real coordinate hits exact NPC target: DXButton
+legacy|mouse routing did not fault style session
+legacy|exact packet type NPCClose
+legacy|one packet only NPCClose
+legacy|server page index resolves exact database record
+legacy|response opens original card and assigns page/NPC identity
+legacy|server page response sends no speculative request
+legacy|independent buy/sell flags 2
+legacy|goods replacement retains exact original collection 2
+legacy|target visible and enabled: DXButton
+legacy|target within viewport
+legacy|real coordinate hits exact NPC target: DXButton
+legacy|mouse routing did not fault style session
+legacy|exact packet type NPCClose
+legacy|one packet only NPCClose
+legacy|server page index resolves exact database record
+legacy|response opens original card and assigns page/NPC identity
+legacy|server page response sends no speculative request
+legacy|independent buy/sell flags 3
+legacy|goods replacement retains exact original collection 3
+legacy|target visible and enabled: DXButton
+legacy|target within viewport
+legacy|real coordinate hits exact NPC target: DXButton
+legacy|mouse routing did not fault style session
+legacy|exact packet type NPCClose
+legacy|one packet only NPCClose
+legacy|server page index resolves exact database record
+legacy|response opens original card and assigns page/NPC identity
+legacy|server page response sends no speculative request
+legacy|server page index resolves exact database record
+legacy|response opens original card and assigns page/NPC identity
+legacy|server page response sends no speculative request
+legacy|in-place service switch hides previous repair window
+legacy|server page index resolves exact database record
+legacy|response opens original card and assigns page/NPC identity
+legacy|server page response sends no speculative request
+legacy|in-place switch to plain page hides original services
+legacy|target visible and enabled: DXButton
+legacy|target within viewport
+legacy|real coordinate hits exact NPC target: DXButton
+legacy|mouse routing did not fault style session
+legacy|exact packet type NPCClose
+legacy|one packet only NPCClose
+legacy|NPC close also hides independently opened quest card
+legacy|server page index resolves exact database record
+legacy|response opens original card and assigns page/NPC identity
+legacy|server page response sends no speculative request
+legacy|server page index resolves exact database record
+legacy|response opens original card and assigns page/NPC identity
+legacy|server page response sends no speculative request
+legacy|visible page replacement releases stale hit regions
+legacy|target visible and enabled: DXLabel
+legacy|target within viewport
+legacy|real coordinate hits exact NPC target: DXLabel
+legacy|mouse routing did not fault style session
+legacy|exact packet type NPCButton
+legacy|one packet only NPCButton
+legacy|updated page sends updated option ID only
+legacy|exact packet type NPCClose
+legacy|one packet only NPCClose
+legacy|server close preserves original close acknowledgement
+legacy|duplicate server close is idempotent
+legacy|server page index resolves exact database record
+legacy|response opens original card and assigns page/NPC identity
+legacy|server page response sends no speculative request
+legacy|resize/reset retains original NPC control identities
+legacy|resize/reset retains original page/state without skin
+legacy|reset sends no NPC packets
+legacy|resize/reset retains original NPC control identities
+legacy|resize/reset retains original page/state without skin
+legacy|reset sends no NPC packets
+legacy|resize/reset retains original NPC control identities
+legacy|resize/reset retains original page/state without skin
+legacy|reset sends no NPC packets
+legacy|resize/reset retains original NPC control identities
+legacy|resize/reset retains original page/state without skin
+legacy|reset sends no NPC packets
+legacy|resize/reset retains original NPC control identities
+legacy|resize/reset retains original page/state without skin
+legacy|reset sends no NPC packets
+legacy|resize/reset retains original NPC control identities
+legacy|resize/reset retains original page/state without skin
+legacy|reset sends no NPC packets
+legacy|resize/reset retains original NPC control identities
+legacy|resize/reset retains original page/state without skin
+legacy|reset sends no NPC packets
+legacy|target visible and enabled: DXLabel
+legacy|target within viewport
+legacy|real coordinate hits exact NPC target: DXLabel
+legacy|mouse routing did not fault style session
+legacy|exact packet type NPCButton
+legacy|one packet only NPCButton
+legacy|original option hit remains valid after all resets
+legacy|target visible and enabled: DXButton
+legacy|target within viewport
+legacy|real coordinate hits exact NPC target: DXButton
+legacy|mouse routing did not fault style session
+legacy|exact packet type NPCClose
+legacy|one packet only NPCClose
+legacy|NPC lifetime does not fault/dispose UI owner
+legacy|scene exit releases original dialogs and chat tabs
+legacy|candidate accepted through test-only gate
+official|actual scene installed requested HUD/character/chat style
+official|all original sixteen dependent NPC windows enumerated
+official|original NPC frame and close images remain unskinned
+official|original NPC window presentation retained
+official|server page index resolves exact database record
+official|response opens original card and assigns page/NPC identity
+official|server page response sends no speculative request
+official|opening NPC moves overlapping character panel using original rule
+official|opening NPC keeps original storage placement rule
+official|option markup stripped while all body content remains
+official|three original clickable option labels
+official|original option parent/font/underline/color/sound retained
+official|target visible and enabled: DXLabel
+official|target within viewport
+official|real coordinate hits exact NPC target: DXLabel
+official|mouse routing did not fault style session
+official|option hover uses original red
+official|exact packet type NPCButton
+official|one packet only NPCButton
+official|exact first option ID
+official|target visible and enabled: DXLabel
+official|target within viewport
+official|real coordinate hits exact NPC target: DXLabel
+official|mouse routing did not fault style session
+official|same option throttled before one-second boundary
+official|target visible and enabled: DXLabel
+official|target within viewport
+official|real coordinate hits exact NPC target: DXLabel
+official|mouse routing did not fault style session
+official|exact packet type NPCButton
+official|one packet only NPCButton
+official|distinct option has independent throttle
+official|target visible and enabled: DXLabel
+official|target within viewport
+official|real coordinate hits exact NPC target: DXLabel
+official|mouse routing did not fault style session
+official|exact packet type NPCButton
+official|one packet only NPCButton
+official|exact one-second boundary accepts click
+official|leaving options restores original yellow
+official|observer close button follows original disabled rule
+official|target visible and enabled: DXLabel
+official|target within viewport
+official|real coordinate hits exact NPC target: DXLabel
+official|mouse routing did not fault style session
+official|target visible and enabled: DXLabel
+official|target within viewport
+official|real coordinate hits exact NPC target: DXLabel
+official|mouse routing did not fault style session
+official|observer option/leave clicks send nothing and keep card open
+official|leaving observer restores close button
+official|server page index resolves exact database record
+official|response opens original card and assigns page/NPC identity
+official|server page response sends no speculative request
+official|page refresh disposes every stale clickable label
+official|wrapped option covers all original non-space text without loss or duplication
+official|all rectangles of one wrapped option hover together
+official|target visible and enabled: DXLabel
+official|target within viewport
+official|real coordinate hits exact NPC target: DXLabel
+official|mouse routing did not fault style session
+official|exact packet type NPCButton
+official|one packet only NPCButton
+official|multi-line option keeps exact 32-bit ID
+official|target visible and enabled: DXLabel
+official|target within viewport
+official|real coordinate hits exact NPC target: DXLabel
+official|mouse routing did not fault style session
+official|wrapped rectangles share the same throttle
+official|target visible and enabled: DXLabel
+official|target within viewport
+official|real coordinate hits exact NPC target: DXLabel
+official|mouse routing did not fault style session
+official|exact packet type NPCButton
+official|one packet only NPCButton
+official|wrapped option accepts boundary on another rectangle
+official|target visible and enabled: DXLabel
+official|target within viewport
+official|real coordinate hits exact NPC target: DXLabel
+official|mouse routing did not fault style session
+official|exact packet type NPCClose
+official|one packet only NPCClose
+official|leave option clears open flag and NPC identity
+official|leave option hides every dependent service
+official|every existing dialog discriminator covered, including original WeaponReset no-op
+official|server page index resolves exact database record
+official|response opens original card and assigns page/NPC identity
+official|server page response sends no speculative request
+official|original dependent windows for None
+official|dependent window remains unskinned: NPCAccessoryLevelBox
+official|dependent window remains unskinned: NPCAccessoryResetBox
+official|dependent window remains unskinned: NPCAccessoryUpgradeBox
+official|dependent window remains unskinned: NPCAdoptCompanionBox
+official|dependent window remains unskinned: NPCCompanionStorageBox
+official|dependent window remains unskinned: NPCGoodsBox
+official|dependent window remains unskinned: NPCItemFragmentBox
+official|dependent window remains unskinned: NPCMasterRefineBox
+official|dependent window remains unskinned: NPCQuestBox
+official|dependent window remains unskinned: NPCRefineBox
+official|dependent window remains unskinned: NPCRefineRetrieveBox
+official|dependent window remains unskinned: NPCRefinementStoneBox
+official|dependent window remains unskinned: NPCRepairBox
+official|dependent window remains unskinned: NPCSellBox
+official|dependent window remains unskinned: NPCWeaponCraftBox
+official|dependent window remains unskinned: NPCWeddingRingBox
+official|target visible and enabled: DXButton
+official|target within viewport
+official|real coordinate hits exact NPC target: DXButton
+official|mouse routing did not fault style session
+official|exact packet type NPCClose
+official|one packet only NPCClose
+official|close button clears original dependent state: None
+official|repeated close sends no duplicate: None
+official|server page index resolves exact database record
+official|response opens original card and assigns page/NPC identity
+official|server page response sends no speculative request
+official|original dependent windows for BuySell
+official|dependent window remains unskinned: NPCAccessoryLevelBox
+official|dependent window remains unskinned: NPCAccessoryResetBox
+official|dependent window remains unskinned: NPCAccessoryUpgradeBox
+official|dependent window remains unskinned: NPCAdoptCompanionBox
+official|dependent window remains unskinned: NPCCompanionStorageBox
+official|dependent window remains unskinned: NPCGoodsBox
+official|dependent window remains unskinned: NPCItemFragmentBox
+official|dependent window remains unskinned: NPCMasterRefineBox
+official|dependent window remains unskinned: NPCQuestBox
+official|dependent window remains unskinned: NPCRefineBox
+official|dependent window remains unskinned: NPCRefineRetrieveBox
+official|dependent window remains unskinned: NPCRefinementStoneBox
+official|dependent window remains unskinned: NPCRepairBox
+official|dependent window remains unskinned: NPCSellBox
+official|dependent window remains unskinned: NPCWeaponCraftBox
+official|dependent window remains unskinned: NPCWeddingRingBox
+official|target visible and enabled: DXButton
+official|target within viewport
+official|real coordinate hits exact NPC target: DXButton
+official|mouse routing did not fault style session
+official|exact packet type NPCClose
+official|one packet only NPCClose
+official|close button clears original dependent state: BuySell
+official|repeated close sends no duplicate: BuySell
+official|server page index resolves exact database record
+official|response opens original card and assigns page/NPC identity
+official|server page response sends no speculative request
+official|original dependent windows for Repair
+official|dependent window remains unskinned: NPCAccessoryLevelBox
+official|dependent window remains unskinned: NPCAccessoryResetBox
+official|dependent window remains unskinned: NPCAccessoryUpgradeBox
+official|dependent window remains unskinned: NPCAdoptCompanionBox
+official|dependent window remains unskinned: NPCCompanionStorageBox
+official|dependent window remains unskinned: NPCGoodsBox
+official|dependent window remains unskinned: NPCItemFragmentBox
+official|dependent window remains unskinned: NPCMasterRefineBox
+official|dependent window remains unskinned: NPCQuestBox
+official|dependent window remains unskinned: NPCRefineBox
+official|dependent window remains unskinned: NPCRefineRetrieveBox
+official|dependent window remains unskinned: NPCRefinementStoneBox
+official|dependent window remains unskinned: NPCRepairBox
+official|dependent window remains unskinned: NPCSellBox
+official|dependent window remains unskinned: NPCWeaponCraftBox
+official|dependent window remains unskinned: NPCWeddingRingBox
+official|target visible and enabled: DXButton
+official|target within viewport
+official|real coordinate hits exact NPC target: DXButton
+official|mouse routing did not fault style session
+official|exact packet type NPCClose
+official|one packet only NPCClose
+official|close button clears original dependent state: Repair
+official|repeated close sends no duplicate: Repair
+official|server page index resolves exact database record
+official|response opens original card and assigns page/NPC identity
+official|server page response sends no speculative request
+official|original dependent windows for Refine
+official|dependent window remains unskinned: NPCAccessoryLevelBox
+official|dependent window remains unskinned: NPCAccessoryResetBox
+official|dependent window remains unskinned: NPCAccessoryUpgradeBox
+official|dependent window remains unskinned: NPCAdoptCompanionBox
+official|dependent window remains unskinned: NPCCompanionStorageBox
+official|dependent window remains unskinned: NPCGoodsBox
+official|dependent window remains unskinned: NPCItemFragmentBox
+official|dependent window remains unskinned: NPCMasterRefineBox
+official|dependent window remains unskinned: NPCQuestBox
+official|dependent window remains unskinned: NPCRefineBox
+official|dependent window remains unskinned: NPCRefineRetrieveBox
+official|dependent window remains unskinned: NPCRefinementStoneBox
+official|dependent window remains unskinned: NPCRepairBox
+official|dependent window remains unskinned: NPCSellBox
+official|dependent window remains unskinned: NPCWeaponCraftBox
+official|dependent window remains unskinned: NPCWeddingRingBox
+official|target visible and enabled: DXButton
+official|target within viewport
+official|real coordinate hits exact NPC target: DXButton
+official|mouse routing did not fault style session
+official|exact packet type NPCClose
+official|one packet only NPCClose
+official|close button clears original dependent state: Refine
+official|repeated close sends no duplicate: Refine
+official|server page index resolves exact database record
+official|response opens original card and assigns page/NPC identity
+official|server page response sends no speculative request
+official|original dependent windows for RefineRetrieve
+official|dependent window remains unskinned: NPCAccessoryLevelBox
+official|dependent window remains unskinned: NPCAccessoryResetBox
+official|dependent window remains unskinned: NPCAccessoryUpgradeBox
+official|dependent window remains unskinned: NPCAdoptCompanionBox
+official|dependent window remains unskinned: NPCCompanionStorageBox
+official|dependent window remains unskinned: NPCGoodsBox
+official|dependent window remains unskinned: NPCItemFragmentBox
+official|dependent window remains unskinned: NPCMasterRefineBox
+official|dependent window remains unskinned: NPCQuestBox
+official|dependent window remains unskinned: NPCRefineBox
+official|dependent window remains unskinned: NPCRefineRetrieveBox
+official|dependent window remains unskinned: NPCRefinementStoneBox
+official|dependent window remains unskinned: NPCRepairBox
+official|dependent window remains unskinned: NPCSellBox
+official|dependent window remains unskinned: NPCWeaponCraftBox
+official|dependent window remains unskinned: NPCWeddingRingBox
+official|target visible and enabled: DXButton
+official|target within viewport
+official|real coordinate hits exact NPC target: DXButton
+official|mouse routing did not fault style session
+official|exact packet type NPCClose
+official|one packet only NPCClose
+official|close button clears original dependent state: RefineRetrieve
+official|repeated close sends no duplicate: RefineRetrieve
+official|server page index resolves exact database record
+official|response opens original card and assigns page/NPC identity
+official|server page response sends no speculative request
+official|original dependent windows for CompanionManage
+official|dependent window remains unskinned: NPCAccessoryLevelBox
+official|dependent window remains unskinned: NPCAccessoryResetBox
+official|dependent window remains unskinned: NPCAccessoryUpgradeBox
+official|dependent window remains unskinned: NPCAdoptCompanionBox
+official|dependent window remains unskinned: NPCCompanionStorageBox
+official|dependent window remains unskinned: NPCGoodsBox
+official|dependent window remains unskinned: NPCItemFragmentBox
+official|dependent window remains unskinned: NPCMasterRefineBox
+official|dependent window remains unskinned: NPCQuestBox
+official|dependent window remains unskinned: NPCRefineBox
+official|dependent window remains unskinned: NPCRefineRetrieveBox
+official|dependent window remains unskinned: NPCRefinementStoneBox
+official|dependent window remains unskinned: NPCRepairBox
+official|dependent window remains unskinned: NPCSellBox
+official|dependent window remains unskinned: NPCWeaponCraftBox
+official|dependent window remains unskinned: NPCWeddingRingBox
+official|target visible and enabled: DXButton
+official|target within viewport
+official|real coordinate hits exact NPC target: DXButton
+official|mouse routing did not fault style session
+official|exact packet type NPCClose
+official|one packet only NPCClose
+official|close button clears original dependent state: CompanionManage
+official|repeated close sends no duplicate: CompanionManage
+official|server page index resolves exact database record
+official|response opens original card and assigns page/NPC identity
+official|server page response sends no speculative request
+official|original dependent windows for WeddingRing
+official|dependent window remains unskinned: NPCAccessoryLevelBox
+official|dependent window remains unskinned: NPCAccessoryResetBox
+official|dependent window remains unskinned: NPCAccessoryUpgradeBox
+official|dependent window remains unskinned: NPCAdoptCompanionBox
+official|dependent window remains unskinned: NPCCompanionStorageBox
+official|dependent window remains unskinned: NPCGoodsBox
+official|dependent window remains unskinned: NPCItemFragmentBox
+official|dependent window remains unskinned: NPCMasterRefineBox
+official|dependent window remains unskinned: NPCQuestBox
+official|dependent window remains unskinned: NPCRefineBox
+official|dependent window remains unskinned: NPCRefineRetrieveBox
+official|dependent window remains unskinned: NPCRefinementStoneBox
+official|dependent window remains unskinned: NPCRepairBox
+official|dependent window remains unskinned: NPCSellBox
+official|dependent window remains unskinned: NPCWeaponCraftBox
+official|dependent window remains unskinned: NPCWeddingRingBox
+official|target visible and enabled: DXButton
+official|target within viewport
+official|real coordinate hits exact NPC target: DXButton
+official|mouse routing did not fault style session
+official|exact packet type NPCClose
+official|one packet only NPCClose
+official|close button clears original dependent state: WeddingRing
+official|repeated close sends no duplicate: WeddingRing
+official|server page index resolves exact database record
+official|response opens original card and assigns page/NPC identity
+official|server page response sends no speculative request
+official|original dependent windows for RefinementStone
+official|dependent window remains unskinned: NPCAccessoryLevelBox
+official|dependent window remains unskinned: NPCAccessoryResetBox
+official|dependent window remains unskinned: NPCAccessoryUpgradeBox
+official|dependent window remains unskinned: NPCAdoptCompanionBox
+official|dependent window remains unskinned: NPCCompanionStorageBox
+official|dependent window remains unskinned: NPCGoodsBox
+official|dependent window remains unskinned: NPCItemFragmentBox
+official|dependent window remains unskinned: NPCMasterRefineBox
+official|dependent window remains unskinned: NPCQuestBox
+official|dependent window remains unskinned: NPCRefineBox
+official|dependent window remains unskinned: NPCRefineRetrieveBox
+official|dependent window remains unskinned: NPCRefinementStoneBox
+official|dependent window remains unskinned: NPCRepairBox
+official|dependent window remains unskinned: NPCSellBox
+official|dependent window remains unskinned: NPCWeaponCraftBox
+official|dependent window remains unskinned: NPCWeddingRingBox
+official|target visible and enabled: DXButton
+official|target within viewport
+official|real coordinate hits exact NPC target: DXButton
+official|mouse routing did not fault style session
+official|exact packet type NPCClose
+official|one packet only NPCClose
+official|close button clears original dependent state: RefinementStone
+official|repeated close sends no duplicate: RefinementStone
+official|server page index resolves exact database record
+official|response opens original card and assigns page/NPC identity
+official|server page response sends no speculative request
+official|original dependent windows for MasterRefine
+official|dependent window remains unskinned: NPCAccessoryLevelBox
+official|dependent window remains unskinned: NPCAccessoryResetBox
+official|dependent window remains unskinned: NPCAccessoryUpgradeBox
+official|dependent window remains unskinned: NPCAdoptCompanionBox
+official|dependent window remains unskinned: NPCCompanionStorageBox
+official|dependent window remains unskinned: NPCGoodsBox
+official|dependent window remains unskinned: NPCItemFragmentBox
+official|dependent window remains unskinned: NPCMasterRefineBox
+official|dependent window remains unskinned: NPCQuestBox
+official|dependent window remains unskinned: NPCRefineBox
+official|dependent window remains unskinned: NPCRefineRetrieveBox
+official|dependent window remains unskinned: NPCRefinementStoneBox
+official|dependent window remains unskinned: NPCRepairBox
+official|dependent window remains unskinned: NPCSellBox
+official|dependent window remains unskinned: NPCWeaponCraftBox
+official|dependent window remains unskinned: NPCWeddingRingBox
+official|target visible and enabled: DXButton
+official|target within viewport
+official|real coordinate hits exact NPC target: DXButton
+official|mouse routing did not fault style session
+official|exact packet type NPCClose
+official|one packet only NPCClose
+official|close button clears original dependent state: MasterRefine
+official|repeated close sends no duplicate: MasterRefine
+official|server page index resolves exact database record
+official|response opens original card and assigns page/NPC identity
+official|server page response sends no speculative request
+official|original dependent windows for WeaponReset
+official|dependent window remains unskinned: NPCAccessoryLevelBox
+official|dependent window remains unskinned: NPCAccessoryResetBox
+official|dependent window remains unskinned: NPCAccessoryUpgradeBox
+official|dependent window remains unskinned: NPCAdoptCompanionBox
+official|dependent window remains unskinned: NPCCompanionStorageBox
+official|dependent window remains unskinned: NPCGoodsBox
+official|dependent window remains unskinned: NPCItemFragmentBox
+official|dependent window remains unskinned: NPCMasterRefineBox
+official|dependent window remains unskinned: NPCQuestBox
+official|dependent window remains unskinned: NPCRefineBox
+official|dependent window remains unskinned: NPCRefineRetrieveBox
+official|dependent window remains unskinned: NPCRefinementStoneBox
+official|dependent window remains unskinned: NPCRepairBox
+official|dependent window remains unskinned: NPCSellBox
+official|dependent window remains unskinned: NPCWeaponCraftBox
+official|dependent window remains unskinned: NPCWeddingRingBox
+official|target visible and enabled: DXButton
+official|target within viewport
+official|real coordinate hits exact NPC target: DXButton
+official|mouse routing did not fault style session
+official|exact packet type NPCClose
+official|one packet only NPCClose
+official|close button clears original dependent state: WeaponReset
+official|repeated close sends no duplicate: WeaponReset
+official|server page index resolves exact database record
+official|response opens original card and assigns page/NPC identity
+official|server page response sends no speculative request
+official|original dependent windows for ItemFragment
+official|dependent window remains unskinned: NPCAccessoryLevelBox
+official|dependent window remains unskinned: NPCAccessoryResetBox
+official|dependent window remains unskinned: NPCAccessoryUpgradeBox
+official|dependent window remains unskinned: NPCAdoptCompanionBox
+official|dependent window remains unskinned: NPCCompanionStorageBox
+official|dependent window remains unskinned: NPCGoodsBox
+official|dependent window remains unskinned: NPCItemFragmentBox
+official|dependent window remains unskinned: NPCMasterRefineBox
+official|dependent window remains unskinned: NPCQuestBox
+official|dependent window remains unskinned: NPCRefineBox
+official|dependent window remains unskinned: NPCRefineRetrieveBox
+official|dependent window remains unskinned: NPCRefinementStoneBox
+official|dependent window remains unskinned: NPCRepairBox
+official|dependent window remains unskinned: NPCSellBox
+official|dependent window remains unskinned: NPCWeaponCraftBox
+official|dependent window remains unskinned: NPCWeddingRingBox
+official|target visible and enabled: DXButton
+official|target within viewport
+official|real coordinate hits exact NPC target: DXButton
+official|mouse routing did not fault style session
+official|exact packet type NPCClose
+official|one packet only NPCClose
+official|close button clears original dependent state: ItemFragment
+official|repeated close sends no duplicate: ItemFragment
+official|server page index resolves exact database record
+official|response opens original card and assigns page/NPC identity
+official|server page response sends no speculative request
+official|original dependent windows for AccessoryRefineUpgrade
+official|dependent window remains unskinned: NPCAccessoryLevelBox
+official|dependent window remains unskinned: NPCAccessoryResetBox
+official|dependent window remains unskinned: NPCAccessoryUpgradeBox
+official|dependent window remains unskinned: NPCAdoptCompanionBox
+official|dependent window remains unskinned: NPCCompanionStorageBox
+official|dependent window remains unskinned: NPCGoodsBox
+official|dependent window remains unskinned: NPCItemFragmentBox
+official|dependent window remains unskinned: NPCMasterRefineBox
+official|dependent window remains unskinned: NPCQuestBox
+official|dependent window remains unskinned: NPCRefineBox
+official|dependent window remains unskinned: NPCRefineRetrieveBox
+official|dependent window remains unskinned: NPCRefinementStoneBox
+official|dependent window remains unskinned: NPCRepairBox
+official|dependent window remains unskinned: NPCSellBox
+official|dependent window remains unskinned: NPCWeaponCraftBox
+official|dependent window remains unskinned: NPCWeddingRingBox
+official|target visible and enabled: DXButton
+official|target within viewport
+official|real coordinate hits exact NPC target: DXButton
+official|mouse routing did not fault style session
+official|exact packet type NPCClose
+official|one packet only NPCClose
+official|close button clears original dependent state: AccessoryRefineUpgrade
+official|repeated close sends no duplicate: AccessoryRefineUpgrade
+official|server page index resolves exact database record
+official|response opens original card and assigns page/NPC identity
+official|server page response sends no speculative request
+official|original dependent windows for AccessoryRefineLevel
+official|dependent window remains unskinned: NPCAccessoryLevelBox
+official|dependent window remains unskinned: NPCAccessoryResetBox
+official|dependent window remains unskinned: NPCAccessoryUpgradeBox
+official|dependent window remains unskinned: NPCAdoptCompanionBox
+official|dependent window remains unskinned: NPCCompanionStorageBox
+official|dependent window remains unskinned: NPCGoodsBox
+official|dependent window remains unskinned: NPCItemFragmentBox
+official|dependent window remains unskinned: NPCMasterRefineBox
+official|dependent window remains unskinned: NPCQuestBox
+official|dependent window remains unskinned: NPCRefineBox
+official|dependent window remains unskinned: NPCRefineRetrieveBox
+official|dependent window remains unskinned: NPCRefinementStoneBox
+official|dependent window remains unskinned: NPCRepairBox
+official|dependent window remains unskinned: NPCSellBox
+official|dependent window remains unskinned: NPCWeaponCraftBox
+official|dependent window remains unskinned: NPCWeddingRingBox
+official|target visible and enabled: DXButton
+official|target within viewport
+official|real coordinate hits exact NPC target: DXButton
+official|mouse routing did not fault style session
+official|exact packet type NPCClose
+official|one packet only NPCClose
+official|close button clears original dependent state: AccessoryRefineLevel
+official|repeated close sends no duplicate: AccessoryRefineLevel
+official|server page index resolves exact database record
+official|response opens original card and assigns page/NPC identity
+official|server page response sends no speculative request
+official|original dependent windows for AccessoryReset
+official|dependent window remains unskinned: NPCAccessoryLevelBox
+official|dependent window remains unskinned: NPCAccessoryResetBox
+official|dependent window remains unskinned: NPCAccessoryUpgradeBox
+official|dependent window remains unskinned: NPCAdoptCompanionBox
+official|dependent window remains unskinned: NPCCompanionStorageBox
+official|dependent window remains unskinned: NPCGoodsBox
+official|dependent window remains unskinned: NPCItemFragmentBox
+official|dependent window remains unskinned: NPCMasterRefineBox
+official|dependent window remains unskinned: NPCQuestBox
+official|dependent window remains unskinned: NPCRefineBox
+official|dependent window remains unskinned: NPCRefineRetrieveBox
+official|dependent window remains unskinned: NPCRefinementStoneBox
+official|dependent window remains unskinned: NPCRepairBox
+official|dependent window remains unskinned: NPCSellBox
+official|dependent window remains unskinned: NPCWeaponCraftBox
+official|dependent window remains unskinned: NPCWeddingRingBox
+official|target visible and enabled: DXButton
+official|target within viewport
+official|real coordinate hits exact NPC target: DXButton
+official|mouse routing did not fault style session
+official|exact packet type NPCClose
+official|one packet only NPCClose
+official|close button clears original dependent state: AccessoryReset
+official|repeated close sends no duplicate: AccessoryReset
+official|server page index resolves exact database record
+official|response opens original card and assigns page/NPC identity
+official|server page response sends no speculative request
+official|original dependent windows for WeaponCraft
+official|dependent window remains unskinned: NPCAccessoryLevelBox
+official|dependent window remains unskinned: NPCAccessoryResetBox
+official|dependent window remains unskinned: NPCAccessoryUpgradeBox
+official|dependent window remains unskinned: NPCAdoptCompanionBox
+official|dependent window remains unskinned: NPCCompanionStorageBox
+official|dependent window remains unskinned: NPCGoodsBox
+official|dependent window remains unskinned: NPCItemFragmentBox
+official|dependent window remains unskinned: NPCMasterRefineBox
+official|dependent window remains unskinned: NPCQuestBox
+official|dependent window remains unskinned: NPCRefineBox
+official|dependent window remains unskinned: NPCRefineRetrieveBox
+official|dependent window remains unskinned: NPCRefinementStoneBox
+official|dependent window remains unskinned: NPCRepairBox
+official|dependent window remains unskinned: NPCSellBox
+official|dependent window remains unskinned: NPCWeaponCraftBox
+official|dependent window remains unskinned: NPCWeddingRingBox
+official|target visible and enabled: DXButton
+official|target within viewport
+official|real coordinate hits exact NPC target: DXButton
+official|mouse routing did not fault style session
+official|exact packet type NPCClose
+official|one packet only NPCClose
+official|close button clears original dependent state: WeaponCraft
+official|repeated close sends no duplicate: WeaponCraft
+official|server page index resolves exact database record
+official|response opens original card and assigns page/NPC identity
+official|server page response sends no speculative request
+official|independent buy/sell flags 0
+official|goods replacement retains exact original collection 0
+official|target visible and enabled: DXButton
+official|target within viewport
+official|real coordinate hits exact NPC target: DXButton
+official|mouse routing did not fault style session
+official|exact packet type NPCClose
+official|one packet only NPCClose
+official|server page index resolves exact database record
+official|response opens original card and assigns page/NPC identity
+official|server page response sends no speculative request
+official|independent buy/sell flags 1
+official|goods replacement retains exact original collection 1
+official|target visible and enabled: DXButton
+official|target within viewport
+official|real coordinate hits exact NPC target: DXButton
+official|mouse routing did not fault style session
+official|exact packet type NPCClose
+official|one packet only NPCClose
+official|server page index resolves exact database record
+official|response opens original card and assigns page/NPC identity
+official|server page response sends no speculative request
+official|independent buy/sell flags 2
+official|goods replacement retains exact original collection 2
+official|target visible and enabled: DXButton
+official|target within viewport
+official|real coordinate hits exact NPC target: DXButton
+official|mouse routing did not fault style session
+official|exact packet type NPCClose
+official|one packet only NPCClose
+official|server page index resolves exact database record
+official|response opens original card and assigns page/NPC identity
+official|server page response sends no speculative request
+official|independent buy/sell flags 3
+official|goods replacement retains exact original collection 3
+official|target visible and enabled: DXButton
+official|target within viewport
+official|real coordinate hits exact NPC target: DXButton
+official|mouse routing did not fault style session
+official|exact packet type NPCClose
+official|one packet only NPCClose
+official|server page index resolves exact database record
+official|response opens original card and assigns page/NPC identity
+official|server page response sends no speculative request
+official|server page index resolves exact database record
+official|response opens original card and assigns page/NPC identity
+official|server page response sends no speculative request
+official|in-place service switch hides previous repair window
+official|server page index resolves exact database record
+official|response opens original card and assigns page/NPC identity
+official|server page response sends no speculative request
+official|in-place switch to plain page hides original services
+official|target visible and enabled: DXButton
+official|target within viewport
+official|real coordinate hits exact NPC target: DXButton
+official|mouse routing did not fault style session
+official|exact packet type NPCClose
+official|one packet only NPCClose
+official|NPC close also hides independently opened quest card
+official|server page index resolves exact database record
+official|response opens original card and assigns page/NPC identity
+official|server page response sends no speculative request
+official|server page index resolves exact database record
+official|response opens original card and assigns page/NPC identity
+official|server page response sends no speculative request
+official|visible page replacement releases stale hit regions
+official|target visible and enabled: DXLabel
+official|target within viewport
+official|real coordinate hits exact NPC target: DXLabel
+official|mouse routing did not fault style session
+official|exact packet type NPCButton
+official|one packet only NPCButton
+official|updated page sends updated option ID only
+official|exact packet type NPCClose
+official|one packet only NPCClose
+official|server close preserves original close acknowledgement
+official|duplicate server close is idempotent
+official|server page index resolves exact database record
+official|response opens original card and assigns page/NPC identity
+official|server page response sends no speculative request
+official|resize/reset retains original NPC control identities
+official|resize/reset retains original page/state without skin
+official|reset sends no NPC packets
+official|resize/reset retains original NPC control identities
+official|resize/reset retains original page/state without skin
+official|reset sends no NPC packets
+official|resize/reset retains original NPC control identities
+official|resize/reset retains original page/state without skin
+official|reset sends no NPC packets
+official|resize/reset retains original NPC control identities
+official|resize/reset retains original page/state without skin
+official|reset sends no NPC packets
+official|resize/reset retains original NPC control identities
+official|resize/reset retains original page/state without skin
+official|reset sends no NPC packets
+official|resize/reset retains original NPC control identities
+official|resize/reset retains original page/state without skin
+official|reset sends no NPC packets
+official|resize/reset retains original NPC control identities
+official|resize/reset retains original page/state without skin
+official|reset sends no NPC packets
+official|target visible and enabled: DXLabel
+official|target within viewport
+official|real coordinate hits exact NPC target: DXLabel
+official|mouse routing did not fault style session
+official|exact packet type NPCButton
+official|one packet only NPCButton
+official|original option hit remains valid after all resets
+official|target visible and enabled: DXButton
+official|target within viewport
+official|real coordinate hits exact NPC target: DXButton
+official|mouse routing did not fault style session
+official|exact packet type NPCClose
+official|one packet only NPCClose
+official|NPC lifetime does not fault/dispose UI owner
+official|scene exit releases original dialogs and chat tabs
+official|Legacy/Official ordered packets/service geometry/style contract identical
+official-reentry|actual scene installed requested HUD/character/chat style
+official-reentry|all original sixteen dependent NPC windows enumerated
+official-reentry|original NPC frame and close images remain unskinned
+official-reentry|original NPC window presentation retained
+official-reentry|server page index resolves exact database record
+official-reentry|response opens original card and assigns page/NPC identity
+official-reentry|server page response sends no speculative request
+official-reentry|opening NPC moves overlapping character panel using original rule
+official-reentry|opening NPC keeps original storage placement rule
+official-reentry|option markup stripped while all body content remains
+official-reentry|three original clickable option labels
+official-reentry|original option parent/font/underline/color/sound retained
+official-reentry|target visible and enabled: DXLabel
+official-reentry|target within viewport
+official-reentry|real coordinate hits exact NPC target: DXLabel
+official-reentry|mouse routing did not fault style session
+official-reentry|option hover uses original red
+official-reentry|exact packet type NPCButton
+official-reentry|one packet only NPCButton
+official-reentry|exact first option ID
+official-reentry|target visible and enabled: DXLabel
+official-reentry|target within viewport
+official-reentry|real coordinate hits exact NPC target: DXLabel
+official-reentry|mouse routing did not fault style session
+official-reentry|same option throttled before one-second boundary
+official-reentry|target visible and enabled: DXLabel
+official-reentry|target within viewport
+official-reentry|real coordinate hits exact NPC target: DXLabel
+official-reentry|mouse routing did not fault style session
+official-reentry|exact packet type NPCButton
+official-reentry|one packet only NPCButton
+official-reentry|distinct option has independent throttle
+official-reentry|target visible and enabled: DXLabel
+official-reentry|target within viewport
+official-reentry|real coordinate hits exact NPC target: DXLabel
+official-reentry|mouse routing did not fault style session
+official-reentry|exact packet type NPCButton
+official-reentry|one packet only NPCButton
+official-reentry|exact one-second boundary accepts click
+official-reentry|leaving options restores original yellow
+official-reentry|observer close button follows original disabled rule
+official-reentry|target visible and enabled: DXLabel
+official-reentry|target within viewport
+official-reentry|real coordinate hits exact NPC target: DXLabel
+official-reentry|mouse routing did not fault style session
+official-reentry|target visible and enabled: DXLabel
+official-reentry|target within viewport
+official-reentry|real coordinate hits exact NPC target: DXLabel
+official-reentry|mouse routing did not fault style session
+official-reentry|observer option/leave clicks send nothing and keep card open
+official-reentry|leaving observer restores close button
+official-reentry|server page index resolves exact database record
+official-reentry|response opens original card and assigns page/NPC identity
+official-reentry|server page response sends no speculative request
+official-reentry|page refresh disposes every stale clickable label
+official-reentry|wrapped option covers all original non-space text without loss or duplication
+official-reentry|all rectangles of one wrapped option hover together
+official-reentry|target visible and enabled: DXLabel
+official-reentry|target within viewport
+official-reentry|real coordinate hits exact NPC target: DXLabel
+official-reentry|mouse routing did not fault style session
+official-reentry|exact packet type NPCButton
+official-reentry|one packet only NPCButton
+official-reentry|multi-line option keeps exact 32-bit ID
+official-reentry|target visible and enabled: DXLabel
+official-reentry|target within viewport
+official-reentry|real coordinate hits exact NPC target: DXLabel
+official-reentry|mouse routing did not fault style session
+official-reentry|wrapped rectangles share the same throttle
+official-reentry|target visible and enabled: DXLabel
+official-reentry|target within viewport
+official-reentry|real coordinate hits exact NPC target: DXLabel
+official-reentry|mouse routing did not fault style session
+official-reentry|exact packet type NPCButton
+official-reentry|one packet only NPCButton
+official-reentry|wrapped option accepts boundary on another rectangle
+official-reentry|target visible and enabled: DXLabel
+official-reentry|target within viewport
+official-reentry|real coordinate hits exact NPC target: DXLabel
+official-reentry|mouse routing did not fault style session
+official-reentry|exact packet type NPCClose
+official-reentry|one packet only NPCClose
+official-reentry|leave option clears open flag and NPC identity
+official-reentry|leave option hides every dependent service
+official-reentry|every existing dialog discriminator covered, including original WeaponReset no-op
+official-reentry|server page index resolves exact database record
+official-reentry|response opens original card and assigns page/NPC identity
+official-reentry|server page response sends no speculative request
+official-reentry|original dependent windows for None
+official-reentry|dependent window remains unskinned: NPCAccessoryLevelBox
+official-reentry|dependent window remains unskinned: NPCAccessoryResetBox
+official-reentry|dependent window remains unskinned: NPCAccessoryUpgradeBox
+official-reentry|dependent window remains unskinned: NPCAdoptCompanionBox
+official-reentry|dependent window remains unskinned: NPCCompanionStorageBox
+official-reentry|dependent window remains unskinned: NPCGoodsBox
+official-reentry|dependent window remains unskinned: NPCItemFragmentBox
+official-reentry|dependent window remains unskinned: NPCMasterRefineBox
+official-reentry|dependent window remains unskinned: NPCQuestBox
+official-reentry|dependent window remains unskinned: NPCRefineBox
+official-reentry|dependent window remains unskinned: NPCRefineRetrieveBox
+official-reentry|dependent window remains unskinned: NPCRefinementStoneBox
+official-reentry|dependent window remains unskinned: NPCRepairBox
+official-reentry|dependent window remains unskinned: NPCSellBox
+official-reentry|dependent window remains unskinned: NPCWeaponCraftBox
+official-reentry|dependent window remains unskinned: NPCWeddingRingBox
+official-reentry|target visible and enabled: DXButton
+official-reentry|target within viewport
+official-reentry|real coordinate hits exact NPC target: DXButton
+official-reentry|mouse routing did not fault style session
+official-reentry|exact packet type NPCClose
+official-reentry|one packet only NPCClose
+official-reentry|close button clears original dependent state: None
+official-reentry|repeated close sends no duplicate: None
+official-reentry|server page index resolves exact database record
+official-reentry|response opens original card and assigns page/NPC identity
+official-reentry|server page response sends no speculative request
+official-reentry|original dependent windows for BuySell
+official-reentry|dependent window remains unskinned: NPCAccessoryLevelBox
+official-reentry|dependent window remains unskinned: NPCAccessoryResetBox
+official-reentry|dependent window remains unskinned: NPCAccessoryUpgradeBox
+official-reentry|dependent window remains unskinned: NPCAdoptCompanionBox
+official-reentry|dependent window remains unskinned: NPCCompanionStorageBox
+official-reentry|dependent window remains unskinned: NPCGoodsBox
+official-reentry|dependent window remains unskinned: NPCItemFragmentBox
+official-reentry|dependent window remains unskinned: NPCMasterRefineBox
+official-reentry|dependent window remains unskinned: NPCQuestBox
+official-reentry|dependent window remains unskinned: NPCRefineBox
+official-reentry|dependent window remains unskinned: NPCRefineRetrieveBox
+official-reentry|dependent window remains unskinned: NPCRefinementStoneBox
+official-reentry|dependent window remains unskinned: NPCRepairBox
+official-reentry|dependent window remains unskinned: NPCSellBox
+official-reentry|dependent window remains unskinned: NPCWeaponCraftBox
+official-reentry|dependent window remains unskinned: NPCWeddingRingBox
+official-reentry|target visible and enabled: DXButton
+official-reentry|target within viewport
+official-reentry|real coordinate hits exact NPC target: DXButton
+official-reentry|mouse routing did not fault style session
+official-reentry|exact packet type NPCClose
+official-reentry|one packet only NPCClose
+official-reentry|close button clears original dependent state: BuySell
+official-reentry|repeated close sends no duplicate: BuySell
+official-reentry|server page index resolves exact database record
+official-reentry|response opens original card and assigns page/NPC identity
+official-reentry|server page response sends no speculative request
+official-reentry|original dependent windows for Repair
+official-reentry|dependent window remains unskinned: NPCAccessoryLevelBox
+official-reentry|dependent window remains unskinned: NPCAccessoryResetBox
+official-reentry|dependent window remains unskinned: NPCAccessoryUpgradeBox
+official-reentry|dependent window remains unskinned: NPCAdoptCompanionBox
+official-reentry|dependent window remains unskinned: NPCCompanionStorageBox
+official-reentry|dependent window remains unskinned: NPCGoodsBox
+official-reentry|dependent window remains unskinned: NPCItemFragmentBox
+official-reentry|dependent window remains unskinned: NPCMasterRefineBox
+official-reentry|dependent window remains unskinned: NPCQuestBox
+official-reentry|dependent window remains unskinned: NPCRefineBox
+official-reentry|dependent window remains unskinned: NPCRefineRetrieveBox
+official-reentry|dependent window remains unskinned: NPCRefinementStoneBox
+official-reentry|dependent window remains unskinned: NPCRepairBox
+official-reentry|dependent window remains unskinned: NPCSellBox
+official-reentry|dependent window remains unskinned: NPCWeaponCraftBox
+official-reentry|dependent window remains unskinned: NPCWeddingRingBox
+official-reentry|target visible and enabled: DXButton
+official-reentry|target within viewport
+official-reentry|real coordinate hits exact NPC target: DXButton
+official-reentry|mouse routing did not fault style session
+official-reentry|exact packet type NPCClose
+official-reentry|one packet only NPCClose
+official-reentry|close button clears original dependent state: Repair
+official-reentry|repeated close sends no duplicate: Repair
+official-reentry|server page index resolves exact database record
+official-reentry|response opens original card and assigns page/NPC identity
+official-reentry|server page response sends no speculative request
+official-reentry|original dependent windows for Refine
+official-reentry|dependent window remains unskinned: NPCAccessoryLevelBox
+official-reentry|dependent window remains unskinned: NPCAccessoryResetBox
+official-reentry|dependent window remains unskinned: NPCAccessoryUpgradeBox
+official-reentry|dependent window remains unskinned: NPCAdoptCompanionBox
+official-reentry|dependent window remains unskinned: NPCCompanionStorageBox
+official-reentry|dependent window remains unskinned: NPCGoodsBox
+official-reentry|dependent window remains unskinned: NPCItemFragmentBox
+official-reentry|dependent window remains unskinned: NPCMasterRefineBox
+official-reentry|dependent window remains unskinned: NPCQuestBox
+official-reentry|dependent window remains unskinned: NPCRefineBox
+official-reentry|dependent window remains unskinned: NPCRefineRetrieveBox
+official-reentry|dependent window remains unskinned: NPCRefinementStoneBox
+official-reentry|dependent window remains unskinned: NPCRepairBox
+official-reentry|dependent window remains unskinned: NPCSellBox
+official-reentry|dependent window remains unskinned: NPCWeaponCraftBox
+official-reentry|dependent window remains unskinned: NPCWeddingRingBox
+official-reentry|target visible and enabled: DXButton
+official-reentry|target within viewport
+official-reentry|real coordinate hits exact NPC target: DXButton
+official-reentry|mouse routing did not fault style session
+official-reentry|exact packet type NPCClose
+official-reentry|one packet only NPCClose
+official-reentry|close button clears original dependent state: Refine
+official-reentry|repeated close sends no duplicate: Refine
+official-reentry|server page index resolves exact database record
+official-reentry|response opens original card and assigns page/NPC identity
+official-reentry|server page response sends no speculative request
+official-reentry|original dependent windows for RefineRetrieve
+official-reentry|dependent window remains unskinned: NPCAccessoryLevelBox
+official-reentry|dependent window remains unskinned: NPCAccessoryResetBox
+official-reentry|dependent window remains unskinned: NPCAccessoryUpgradeBox
+official-reentry|dependent window remains unskinned: NPCAdoptCompanionBox
+official-reentry|dependent window remains unskinned: NPCCompanionStorageBox
+official-reentry|dependent window remains unskinned: NPCGoodsBox
+official-reentry|dependent window remains unskinned: NPCItemFragmentBox
+official-reentry|dependent window remains unskinned: NPCMasterRefineBox
+official-reentry|dependent window remains unskinned: NPCQuestBox
+official-reentry|dependent window remains unskinned: NPCRefineBox
+official-reentry|dependent window remains unskinned: NPCRefineRetrieveBox
+official-reentry|dependent window remains unskinned: NPCRefinementStoneBox
+official-reentry|dependent window remains unskinned: NPCRepairBox
+official-reentry|dependent window remains unskinned: NPCSellBox
+official-reentry|dependent window remains unskinned: NPCWeaponCraftBox
+official-reentry|dependent window remains unskinned: NPCWeddingRingBox
+official-reentry|target visible and enabled: DXButton
+official-reentry|target within viewport
+official-reentry|real coordinate hits exact NPC target: DXButton
+official-reentry|mouse routing did not fault style session
+official-reentry|exact packet type NPCClose
+official-reentry|one packet only NPCClose
+official-reentry|close button clears original dependent state: RefineRetrieve
+official-reentry|repeated close sends no duplicate: RefineRetrieve
+official-reentry|server page index resolves exact database record
+official-reentry|response opens original card and assigns page/NPC identity
+official-reentry|server page response sends no speculative request
+official-reentry|original dependent windows for CompanionManage
+official-reentry|dependent window remains unskinned: NPCAccessoryLevelBox
+official-reentry|dependent window remains unskinned: NPCAccessoryResetBox
+official-reentry|dependent window remains unskinned: NPCAccessoryUpgradeBox
+official-reentry|dependent window remains unskinned: NPCAdoptCompanionBox
+official-reentry|dependent window remains unskinned: NPCCompanionStorageBox
+official-reentry|dependent window remains unskinned: NPCGoodsBox
+official-reentry|dependent window remains unskinned: NPCItemFragmentBox
+official-reentry|dependent window remains unskinned: NPCMasterRefineBox
+official-reentry|dependent window remains unskinned: NPCQuestBox
+official-reentry|dependent window remains unskinned: NPCRefineBox
+official-reentry|dependent window remains unskinned: NPCRefineRetrieveBox
+official-reentry|dependent window remains unskinned: NPCRefinementStoneBox
+official-reentry|dependent window remains unskinned: NPCRepairBox
+official-reentry|dependent window remains unskinned: NPCSellBox
+official-reentry|dependent window remains unskinned: NPCWeaponCraftBox
+official-reentry|dependent window remains unskinned: NPCWeddingRingBox
+official-reentry|target visible and enabled: DXButton
+official-reentry|target within viewport
+official-reentry|real coordinate hits exact NPC target: DXButton
+official-reentry|mouse routing did not fault style session
+official-reentry|exact packet type NPCClose
+official-reentry|one packet only NPCClose
+official-reentry|close button clears original dependent state: CompanionManage
+official-reentry|repeated close sends no duplicate: CompanionManage
+official-reentry|server page index resolves exact database record
+official-reentry|response opens original card and assigns page/NPC identity
+official-reentry|server page response sends no speculative request
+official-reentry|original dependent windows for WeddingRing
+official-reentry|dependent window remains unskinned: NPCAccessoryLevelBox
+official-reentry|dependent window remains unskinned: NPCAccessoryResetBox
+official-reentry|dependent window remains unskinned: NPCAccessoryUpgradeBox
+official-reentry|dependent window remains unskinned: NPCAdoptCompanionBox
+official-reentry|dependent window remains unskinned: NPCCompanionStorageBox
+official-reentry|dependent window remains unskinned: NPCGoodsBox
+official-reentry|dependent window remains unskinned: NPCItemFragmentBox
+official-reentry|dependent window remains unskinned: NPCMasterRefineBox
+official-reentry|dependent window remains unskinned: NPCQuestBox
+official-reentry|dependent window remains unskinned: NPCRefineBox
+official-reentry|dependent window remains unskinned: NPCRefineRetrieveBox
+official-reentry|dependent window remains unskinned: NPCRefinementStoneBox
+official-reentry|dependent window remains unskinned: NPCRepairBox
+official-reentry|dependent window remains unskinned: NPCSellBox
+official-reentry|dependent window remains unskinned: NPCWeaponCraftBox
+official-reentry|dependent window remains unskinned: NPCWeddingRingBox
+official-reentry|target visible and enabled: DXButton
+official-reentry|target within viewport
+official-reentry|real coordinate hits exact NPC target: DXButton
+official-reentry|mouse routing did not fault style session
+official-reentry|exact packet type NPCClose
+official-reentry|one packet only NPCClose
+official-reentry|close button clears original dependent state: WeddingRing
+official-reentry|repeated close sends no duplicate: WeddingRing
+official-reentry|server page index resolves exact database record
+official-reentry|response opens original card and assigns page/NPC identity
+official-reentry|server page response sends no speculative request
+official-reentry|original dependent windows for RefinementStone
+official-reentry|dependent window remains unskinned: NPCAccessoryLevelBox
+official-reentry|dependent window remains unskinned: NPCAccessoryResetBox
+official-reentry|dependent window remains unskinned: NPCAccessoryUpgradeBox
+official-reentry|dependent window remains unskinned: NPCAdoptCompanionBox
+official-reentry|dependent window remains unskinned: NPCCompanionStorageBox
+official-reentry|dependent window remains unskinned: NPCGoodsBox
+official-reentry|dependent window remains unskinned: NPCItemFragmentBox
+official-reentry|dependent window remains unskinned: NPCMasterRefineBox
+official-reentry|dependent window remains unskinned: NPCQuestBox
+official-reentry|dependent window remains unskinned: NPCRefineBox
+official-reentry|dependent window remains unskinned: NPCRefineRetrieveBox
+official-reentry|dependent window remains unskinned: NPCRefinementStoneBox
+official-reentry|dependent window remains unskinned: NPCRepairBox
+official-reentry|dependent window remains unskinned: NPCSellBox
+official-reentry|dependent window remains unskinned: NPCWeaponCraftBox
+official-reentry|dependent window remains unskinned: NPCWeddingRingBox
+official-reentry|target visible and enabled: DXButton
+official-reentry|target within viewport
+official-reentry|real coordinate hits exact NPC target: DXButton
+official-reentry|mouse routing did not fault style session
+official-reentry|exact packet type NPCClose
+official-reentry|one packet only NPCClose
+official-reentry|close button clears original dependent state: RefinementStone
+official-reentry|repeated close sends no duplicate: RefinementStone
+official-reentry|server page index resolves exact database record
+official-reentry|response opens original card and assigns page/NPC identity
+official-reentry|server page response sends no speculative request
+official-reentry|original dependent windows for MasterRefine
+official-reentry|dependent window remains unskinned: NPCAccessoryLevelBox
+official-reentry|dependent window remains unskinned: NPCAccessoryResetBox
+official-reentry|dependent window remains unskinned: NPCAccessoryUpgradeBox
+official-reentry|dependent window remains unskinned: NPCAdoptCompanionBox
+official-reentry|dependent window remains unskinned: NPCCompanionStorageBox
+official-reentry|dependent window remains unskinned: NPCGoodsBox
+official-reentry|dependent window remains unskinned: NPCItemFragmentBox
+official-reentry|dependent window remains unskinned: NPCMasterRefineBox
+official-reentry|dependent window remains unskinned: NPCQuestBox
+official-reentry|dependent window remains unskinned: NPCRefineBox
+official-reentry|dependent window remains unskinned: NPCRefineRetrieveBox
+official-reentry|dependent window remains unskinned: NPCRefinementStoneBox
+official-reentry|dependent window remains unskinned: NPCRepairBox
+official-reentry|dependent window remains unskinned: NPCSellBox
+official-reentry|dependent window remains unskinned: NPCWeaponCraftBox
+official-reentry|dependent window remains unskinned: NPCWeddingRingBox
+official-reentry|target visible and enabled: DXButton
+official-reentry|target within viewport
+official-reentry|real coordinate hits exact NPC target: DXButton
+official-reentry|mouse routing did not fault style session
+official-reentry|exact packet type NPCClose
+official-reentry|one packet only NPCClose
+official-reentry|close button clears original dependent state: MasterRefine
+official-reentry|repeated close sends no duplicate: MasterRefine
+official-reentry|server page index resolves exact database record
+official-reentry|response opens original card and assigns page/NPC identity
+official-reentry|server page response sends no speculative request
+official-reentry|original dependent windows for WeaponReset
+official-reentry|dependent window remains unskinned: NPCAccessoryLevelBox
+official-reentry|dependent window remains unskinned: NPCAccessoryResetBox
+official-reentry|dependent window remains unskinned: NPCAccessoryUpgradeBox
+official-reentry|dependent window remains unskinned: NPCAdoptCompanionBox
+official-reentry|dependent window remains unskinned: NPCCompanionStorageBox
+official-reentry|dependent window remains unskinned: NPCGoodsBox
+official-reentry|dependent window remains unskinned: NPCItemFragmentBox
+official-reentry|dependent window remains unskinned: NPCMasterRefineBox
+official-reentry|dependent window remains unskinned: NPCQuestBox
+official-reentry|dependent window remains unskinned: NPCRefineBox
+official-reentry|dependent window remains unskinned: NPCRefineRetrieveBox
+official-reentry|dependent window remains unskinned: NPCRefinementStoneBox
+official-reentry|dependent window remains unskinned: NPCRepairBox
+official-reentry|dependent window remains unskinned: NPCSellBox
+official-reentry|dependent window remains unskinned: NPCWeaponCraftBox
+official-reentry|dependent window remains unskinned: NPCWeddingRingBox
+official-reentry|target visible and enabled: DXButton
+official-reentry|target within viewport
+official-reentry|real coordinate hits exact NPC target: DXButton
+official-reentry|mouse routing did not fault style session
+official-reentry|exact packet type NPCClose
+official-reentry|one packet only NPCClose
+official-reentry|close button clears original dependent state: WeaponReset
+official-reentry|repeated close sends no duplicate: WeaponReset
+official-reentry|server page index resolves exact database record
+official-reentry|response opens original card and assigns page/NPC identity
+official-reentry|server page response sends no speculative request
+official-reentry|original dependent windows for ItemFragment
+official-reentry|dependent window remains unskinned: NPCAccessoryLevelBox
+official-reentry|dependent window remains unskinned: NPCAccessoryResetBox
+official-reentry|dependent window remains unskinned: NPCAccessoryUpgradeBox
+official-reentry|dependent window remains unskinned: NPCAdoptCompanionBox
+official-reentry|dependent window remains unskinned: NPCCompanionStorageBox
+official-reentry|dependent window remains unskinned: NPCGoodsBox
+official-reentry|dependent window remains unskinned: NPCItemFragmentBox
+official-reentry|dependent window remains unskinned: NPCMasterRefineBox
+official-reentry|dependent window remains unskinned: NPCQuestBox
+official-reentry|dependent window remains unskinned: NPCRefineBox
+official-reentry|dependent window remains unskinned: NPCRefineRetrieveBox
+official-reentry|dependent window remains unskinned: NPCRefinementStoneBox
+official-reentry|dependent window remains unskinned: NPCRepairBox
+official-reentry|dependent window remains unskinned: NPCSellBox
+official-reentry|dependent window remains unskinned: NPCWeaponCraftBox
+official-reentry|dependent window remains unskinned: NPCWeddingRingBox
+official-reentry|target visible and enabled: DXButton
+official-reentry|target within viewport
+official-reentry|real coordinate hits exact NPC target: DXButton
+official-reentry|mouse routing did not fault style session
+official-reentry|exact packet type NPCClose
+official-reentry|one packet only NPCClose
+official-reentry|close button clears original dependent state: ItemFragment
+official-reentry|repeated close sends no duplicate: ItemFragment
+official-reentry|server page index resolves exact database record
+official-reentry|response opens original card and assigns page/NPC identity
+official-reentry|server page response sends no speculative request
+official-reentry|original dependent windows for AccessoryRefineUpgrade
+official-reentry|dependent window remains unskinned: NPCAccessoryLevelBox
+official-reentry|dependent window remains unskinned: NPCAccessoryResetBox
+official-reentry|dependent window remains unskinned: NPCAccessoryUpgradeBox
+official-reentry|dependent window remains unskinned: NPCAdoptCompanionBox
+official-reentry|dependent window remains unskinned: NPCCompanionStorageBox
+official-reentry|dependent window remains unskinned: NPCGoodsBox
+official-reentry|dependent window remains unskinned: NPCItemFragmentBox
+official-reentry|dependent window remains unskinned: NPCMasterRefineBox
+official-reentry|dependent window remains unskinned: NPCQuestBox
+official-reentry|dependent window remains unskinned: NPCRefineBox
+official-reentry|dependent window remains unskinned: NPCRefineRetrieveBox
+official-reentry|dependent window remains unskinned: NPCRefinementStoneBox
+official-reentry|dependent window remains unskinned: NPCRepairBox
+official-reentry|dependent window remains unskinned: NPCSellBox
+official-reentry|dependent window remains unskinned: NPCWeaponCraftBox
+official-reentry|dependent window remains unskinned: NPCWeddingRingBox
+official-reentry|target visible and enabled: DXButton
+official-reentry|target within viewport
+official-reentry|real coordinate hits exact NPC target: DXButton
+official-reentry|mouse routing did not fault style session
+official-reentry|exact packet type NPCClose
+official-reentry|one packet only NPCClose
+official-reentry|close button clears original dependent state: AccessoryRefineUpgrade
+official-reentry|repeated close sends no duplicate: AccessoryRefineUpgrade
+official-reentry|server page index resolves exact database record
+official-reentry|response opens original card and assigns page/NPC identity
+official-reentry|server page response sends no speculative request
+official-reentry|original dependent windows for AccessoryRefineLevel
+official-reentry|dependent window remains unskinned: NPCAccessoryLevelBox
+official-reentry|dependent window remains unskinned: NPCAccessoryResetBox
+official-reentry|dependent window remains unskinned: NPCAccessoryUpgradeBox
+official-reentry|dependent window remains unskinned: NPCAdoptCompanionBox
+official-reentry|dependent window remains unskinned: NPCCompanionStorageBox
+official-reentry|dependent window remains unskinned: NPCGoodsBox
+official-reentry|dependent window remains unskinned: NPCItemFragmentBox
+official-reentry|dependent window remains unskinned: NPCMasterRefineBox
+official-reentry|dependent window remains unskinned: NPCQuestBox
+official-reentry|dependent window remains unskinned: NPCRefineBox
+official-reentry|dependent window remains unskinned: NPCRefineRetrieveBox
+official-reentry|dependent window remains unskinned: NPCRefinementStoneBox
+official-reentry|dependent window remains unskinned: NPCRepairBox
+official-reentry|dependent window remains unskinned: NPCSellBox
+official-reentry|dependent window remains unskinned: NPCWeaponCraftBox
+official-reentry|dependent window remains unskinned: NPCWeddingRingBox
+official-reentry|target visible and enabled: DXButton
+official-reentry|target within viewport
+official-reentry|real coordinate hits exact NPC target: DXButton
+official-reentry|mouse routing did not fault style session
+official-reentry|exact packet type NPCClose
+official-reentry|one packet only NPCClose
+official-reentry|close button clears original dependent state: AccessoryRefineLevel
+official-reentry|repeated close sends no duplicate: AccessoryRefineLevel
+official-reentry|server page index resolves exact database record
+official-reentry|response opens original card and assigns page/NPC identity
+official-reentry|server page response sends no speculative request
+official-reentry|original dependent windows for AccessoryReset
+official-reentry|dependent window remains unskinned: NPCAccessoryLevelBox
+official-reentry|dependent window remains unskinned: NPCAccessoryResetBox
+official-reentry|dependent window remains unskinned: NPCAccessoryUpgradeBox
+official-reentry|dependent window remains unskinned: NPCAdoptCompanionBox
+official-reentry|dependent window remains unskinned: NPCCompanionStorageBox
+official-reentry|dependent window remains unskinned: NPCGoodsBox
+official-reentry|dependent window remains unskinned: NPCItemFragmentBox
+official-reentry|dependent window remains unskinned: NPCMasterRefineBox
+official-reentry|dependent window remains unskinned: NPCQuestBox
+official-reentry|dependent window remains unskinned: NPCRefineBox
+official-reentry|dependent window remains unskinned: NPCRefineRetrieveBox
+official-reentry|dependent window remains unskinned: NPCRefinementStoneBox
+official-reentry|dependent window remains unskinned: NPCRepairBox
+official-reentry|dependent window remains unskinned: NPCSellBox
+official-reentry|dependent window remains unskinned: NPCWeaponCraftBox
+official-reentry|dependent window remains unskinned: NPCWeddingRingBox
+official-reentry|target visible and enabled: DXButton
+official-reentry|target within viewport
+official-reentry|real coordinate hits exact NPC target: DXButton
+official-reentry|mouse routing did not fault style session
+official-reentry|exact packet type NPCClose
+official-reentry|one packet only NPCClose
+official-reentry|close button clears original dependent state: AccessoryReset
+official-reentry|repeated close sends no duplicate: AccessoryReset
+official-reentry|server page index resolves exact database record
+official-reentry|response opens original card and assigns page/NPC identity
+official-reentry|server page response sends no speculative request
+official-reentry|original dependent windows for WeaponCraft
+official-reentry|dependent window remains unskinned: NPCAccessoryLevelBox
+official-reentry|dependent window remains unskinned: NPCAccessoryResetBox
+official-reentry|dependent window remains unskinned: NPCAccessoryUpgradeBox
+official-reentry|dependent window remains unskinned: NPCAdoptCompanionBox
+official-reentry|dependent window remains unskinned: NPCCompanionStorageBox
+official-reentry|dependent window remains unskinned: NPCGoodsBox
+official-reentry|dependent window remains unskinned: NPCItemFragmentBox
+official-reentry|dependent window remains unskinned: NPCMasterRefineBox
+official-reentry|dependent window remains unskinned: NPCQuestBox
+official-reentry|dependent window remains unskinned: NPCRefineBox
+official-reentry|dependent window remains unskinned: NPCRefineRetrieveBox
+official-reentry|dependent window remains unskinned: NPCRefinementStoneBox
+official-reentry|dependent window remains unskinned: NPCRepairBox
+official-reentry|dependent window remains unskinned: NPCSellBox
+official-reentry|dependent window remains unskinned: NPCWeaponCraftBox
+official-reentry|dependent window remains unskinned: NPCWeddingRingBox
+official-reentry|target visible and enabled: DXButton
+official-reentry|target within viewport
+official-reentry|real coordinate hits exact NPC target: DXButton
+official-reentry|mouse routing did not fault style session
+official-reentry|exact packet type NPCClose
+official-reentry|one packet only NPCClose
+official-reentry|close button clears original dependent state: WeaponCraft
+official-reentry|repeated close sends no duplicate: WeaponCraft
+official-reentry|server page index resolves exact database record
+official-reentry|response opens original card and assigns page/NPC identity
+official-reentry|server page response sends no speculative request
+official-reentry|independent buy/sell flags 0
+official-reentry|goods replacement retains exact original collection 0
+official-reentry|target visible and enabled: DXButton
+official-reentry|target within viewport
+official-reentry|real coordinate hits exact NPC target: DXButton
+official-reentry|mouse routing did not fault style session
+official-reentry|exact packet type NPCClose
+official-reentry|one packet only NPCClose
+official-reentry|server page index resolves exact database record
+official-reentry|response opens original card and assigns page/NPC identity
+official-reentry|server page response sends no speculative request
+official-reentry|independent buy/sell flags 1
+official-reentry|goods replacement retains exact original collection 1
+official-reentry|target visible and enabled: DXButton
+official-reentry|target within viewport
+official-reentry|real coordinate hits exact NPC target: DXButton
+official-reentry|mouse routing did not fault style session
+official-reentry|exact packet type NPCClose
+official-reentry|one packet only NPCClose
+official-reentry|server page index resolves exact database record
+official-reentry|response opens original card and assigns page/NPC identity
+official-reentry|server page response sends no speculative request
+official-reentry|independent buy/sell flags 2
+official-reentry|goods replacement retains exact original collection 2
+official-reentry|target visible and enabled: DXButton
+official-reentry|target within viewport
+official-reentry|real coordinate hits exact NPC target: DXButton
+official-reentry|mouse routing did not fault style session
+official-reentry|exact packet type NPCClose
+official-reentry|one packet only NPCClose
+official-reentry|server page index resolves exact database record
+official-reentry|response opens original card and assigns page/NPC identity
+official-reentry|server page response sends no speculative request
+official-reentry|independent buy/sell flags 3
+official-reentry|goods replacement retains exact original collection 3
+official-reentry|target visible and enabled: DXButton
+official-reentry|target within viewport
+official-reentry|real coordinate hits exact NPC target: DXButton
+official-reentry|mouse routing did not fault style session
+official-reentry|exact packet type NPCClose
+official-reentry|one packet only NPCClose
+official-reentry|server page index resolves exact database record
+official-reentry|response opens original card and assigns page/NPC identity
+official-reentry|server page response sends no speculative request
+official-reentry|server page index resolves exact database record
+official-reentry|response opens original card and assigns page/NPC identity
+official-reentry|server page response sends no speculative request
+official-reentry|in-place service switch hides previous repair window
+official-reentry|server page index resolves exact database record
+official-reentry|response opens original card and assigns page/NPC identity
+official-reentry|server page response sends no speculative request
+official-reentry|in-place switch to plain page hides original services
+official-reentry|target visible and enabled: DXButton
+official-reentry|target within viewport
+official-reentry|real coordinate hits exact NPC target: DXButton
+official-reentry|mouse routing did not fault style session
+official-reentry|exact packet type NPCClose
+official-reentry|one packet only NPCClose
+official-reentry|NPC close also hides independently opened quest card
+official-reentry|server page index resolves exact database record
+official-reentry|response opens original card and assigns page/NPC identity
+official-reentry|server page response sends no speculative request
+official-reentry|server page index resolves exact database record
+official-reentry|response opens original card and assigns page/NPC identity
+official-reentry|server page response sends no speculative request
+official-reentry|visible page replacement releases stale hit regions
+official-reentry|target visible and enabled: DXLabel
+official-reentry|target within viewport
+official-reentry|real coordinate hits exact NPC target: DXLabel
+official-reentry|mouse routing did not fault style session
+official-reentry|exact packet type NPCButton
+official-reentry|one packet only NPCButton
+official-reentry|updated page sends updated option ID only
+official-reentry|exact packet type NPCClose
+official-reentry|one packet only NPCClose
+official-reentry|server close preserves original close acknowledgement
+official-reentry|duplicate server close is idempotent
+official-reentry|server page index resolves exact database record
+official-reentry|response opens original card and assigns page/NPC identity
+official-reentry|server page response sends no speculative request
+official-reentry|resize/reset retains original NPC control identities
+official-reentry|resize/reset retains original page/state without skin
+official-reentry|reset sends no NPC packets
+official-reentry|resize/reset retains original NPC control identities
+official-reentry|resize/reset retains original page/state without skin
+official-reentry|reset sends no NPC packets
+official-reentry|resize/reset retains original NPC control identities
+official-reentry|resize/reset retains original page/state without skin
+official-reentry|reset sends no NPC packets
+official-reentry|resize/reset retains original NPC control identities
+official-reentry|resize/reset retains original page/state without skin
+official-reentry|reset sends no NPC packets
+official-reentry|resize/reset retains original NPC control identities
+official-reentry|resize/reset retains original page/state without skin
+official-reentry|reset sends no NPC packets
+official-reentry|resize/reset retains original NPC control identities
+official-reentry|resize/reset retains original page/state without skin
+official-reentry|reset sends no NPC packets
+official-reentry|resize/reset retains original NPC control identities
+official-reentry|resize/reset retains original page/state without skin
+official-reentry|reset sends no NPC packets
+official-reentry|target visible and enabled: DXLabel
+official-reentry|target within viewport
+official-reentry|real coordinate hits exact NPC target: DXLabel
+official-reentry|mouse routing did not fault style session
+official-reentry|exact packet type NPCButton
+official-reentry|one packet only NPCButton
+official-reentry|original option hit remains valid after all resets
+official-reentry|target visible and enabled: DXButton
+official-reentry|target within viewport
+official-reentry|real coordinate hits exact NPC target: DXButton
+official-reentry|mouse routing did not fault style session
+official-reentry|exact packet type NPCClose
+official-reentry|one packet only NPCClose
+official-reentry|NPC lifetime does not fault/dispose UI owner
+official-reentry|scene exit releases original dialogs and chat tabs
+official-reentry|Legacy/reentry ordered packets/service geometry/style contract identical
+official-reentry|production readiness stays false

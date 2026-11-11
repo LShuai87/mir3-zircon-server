@@ -1,0 +1,1 @@
+Composed UI D3D9: 95 real frames/compositions; 1030655 rendered pixels matched independent BC1 oracle (opaque RGB tolerance 8; measured max 5; transparent RGB exact). Baked offsets and transparent padding verified.

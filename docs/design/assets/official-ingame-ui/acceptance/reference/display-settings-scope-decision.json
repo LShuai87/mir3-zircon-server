@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "documentType": "user-scope-clarification",
+  "recordedAtLocalDate": "2026-11-07",
+  "authority": "direct_user_instruction",
+  "userInstruction": "游戏显示设置按当前的设置方案就可以，无需替换",
+  "implementation": "沿用项目现有显示设置方案及入口，不替换设置页面、不要求改变分辨率、窗口模式或Windows缩放。",
+  "capturePolicy": {
+    "gameSettingsScreenshotRequired": false,
+    "windowsSettingsScreenshotRequired": false,
+    "displaySettingsTextRequired": false,
+    "useCurrentSettings": true,
+    "requestNow": [
+      "完整游戏主界面原图",
+      "角色与包裹同时打开的原图"
+    ]
+  },
+  "verification": "尺寸、坐标和适配由实现方结合原图及项目运行核对；未测元数据保留未确认，不用估计值冒充实测，也不因此要求用户提交设置截图。",
+  "historicalPlanUnchanged": true
+}

@@ -1,0 +1,71 @@
+{
+  "kind": "official-ui-layout-geometry-validation",
+  "releaseAccepted": false,
+  "sourceSha256": "496f406266adb07da791fb677cb456abc499cd395fe43237be297c41bc6833c0",
+  "results": {
+    "nodeCount": 231,
+    "interactiveCount": 109,
+    "hitPairsChecked": 1757,
+    "equipmentSlots": 16,
+    "inventoryCells": 49,
+    "quickbarCells": 10,
+    "statBindings": 57,
+    "existingControlBindings": 8,
+    "additionalImmediateBindings": 4,
+    "hermitPacketActions": 8,
+    "hudEntries": 9,
+    "resolutionCount": 6
+  },
+  "guardChecks": [
+    {
+      "case": "missing-inventory-cell",
+      "result": "rejected",
+      "reason": "inventory.cell.: missing or duplicate cell"
+    },
+    {
+      "case": "duplicate-equipment-slot",
+      "result": "rejected",
+      "reason": "Must bind each of 16 equipment slots once"
+    },
+    {
+      "case": "missing-existing-stat",
+      "result": "rejected",
+      "reason": "Existing 57 stat bindings must remain complete"
+    },
+    {
+      "case": "overlapping-hud-buttons",
+      "result": "rejected",
+      "reason": "Overlapping hit rectangles: commands.CharacterButton, commands.InventoryButton"
+    },
+    {
+      "case": "off-screen-window",
+      "result": "rejected",
+      "reason": "inventory: screen bounds/size mismatch"
+    },
+    {
+      "case": "wrong-shared-grid-border",
+      "result": "rejected",
+      "reason": "Overlapping hit rectangles: inventory.cell.0, inventory.cell.1"
+    },
+    {
+      "case": "chat-recreated-on-resize",
+      "result": "rejected",
+      "reason": "Chat preservation policy changed"
+    },
+    {
+      "case": "scope-changed-to-npc",
+      "result": "rejected",
+      "reason": "Scope drift"
+    },
+    {
+      "case": "production-flag-only",
+      "result": "rejected",
+      "reason": "Proposed geometry cannot be promoted by changing a flag"
+    }
+  ],
+  "limitations": [
+    "Geometry/coverage/overlap checks and design annotations only.",
+    "No actual renderer, preview pivot, native input, event or packet acceptance.",
+    "Generated C# is a proposed candidate, not registered with Client.csproj."
+  ]
+}

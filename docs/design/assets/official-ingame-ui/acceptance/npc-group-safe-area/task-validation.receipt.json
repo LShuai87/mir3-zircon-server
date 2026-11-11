@@ -1,0 +1,8 @@
+{
+  "command": [
+    "python",
+    "build/game-ui/Validate-UiTasks.py"
+  ],
+  "exitCode": 0,
+  "log": "E:/workspace/mir3-zircon-server/docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/task-validation.log"
+}

@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "kind": "official-ui-composition-recipe",
+  "productionBindingAllowed": false,
+  "selectionSha256": "c212a2c7b246e01fd3cce6506b4d04596e2e683a24185806f3758bcb703bfd27",
+  "assets": [
+    {
+      "role": "warehouse-background",
+      "sourceRole": "warehouse-background",
+      "alphaPolicy": "edge-connected-exact-black",
+      "clearRects": [],
+      "transform": {
+        "type": "panel-resize",
+        "size": [
+          508,
+          480
+        ],
+        "sliceInsets": [
+          24,
+          44,
+          24,
+          48
+        ],
+        "sampling": "nearest"
+      },
+      "button": false
+    }
+  ],
+  "buttonTint": {
+    "hover": [
+      115,
+      100
+    ],
+    "pressed": [
+      75,
+      100
+    ],
+    "disabled": [
+      60,
+      100
+    ]
+  },
+  "derivedFrames": [],
+  "compositions": []
+}

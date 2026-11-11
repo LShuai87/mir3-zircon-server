@@ -1,0 +1,213 @@
+{
+  "schemaVersion": 1,
+  "kind": "official-ui-full-scene-offline-construction-render-and-device-reset",
+  "checkedAtLocalDate": "2026-11-08",
+  "referenceResolution": [
+    1024,
+    768
+  ],
+  "releaseAccepted": false,
+  "sourceChanges": [],
+  "sourceHashes": [
+    {
+      "path": "tests/game-ui/OfficialUiFullSceneTests.cs",
+      "sha256": "dfd22b45f8b9f6cbd1eadb15b7fd3170ff2d6e316a295147526a55535148c659"
+    },
+    {
+      "path": "tests/Run-GameUiFullSceneTests.ps1",
+      "sha256": "e3d5fb3b99d993f4b403ee78a5166a55baf10639f63c292c2b85b8791eb7bcd0"
+    }
+  ],
+  "registeredSourcesBefore": {
+    "path": "docs/design/assets/official-ingame-ui/acceptance/full-scene/registered-sources-before.json",
+    "sha256": "cf2711a7a44453233d47d9f911f3d6d1294b286b1ee942fb7d4329eae7ed3043",
+    "count": 144,
+    "allMatchedRegisteredHashes": true,
+    "allUnchangedThisTurn": true
+  },
+  "commands": [
+    {
+      "command": "MSBuild Client/Client.csproj /t:Build /p:Configuration=Debug /p:Platform=AnyCPU /verbosity:minimal /nologo",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/full-scene/build-debug.log",
+      "logSha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "command": "tests/Run-GameUiFullSceneTests.ps1 -PackagePath E:/workspace/mir3-ui-work/hud-progress-zl-20261108-v1/OfficialV1.Zl -EvidenceDirectory E:/workspace/mir3-ui-work/full-scene-evidence-20261108-v1",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/full-scene/full-scene-tests.log",
+      "logSha256": "0d85d4de7905eb608acc989200b5dfcc19842b35b62586889490caf606d4a988"
+    },
+    {
+      "command": "git -c core.whitespace=cr-at-eol diff --check",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/full-scene/diff-check.log",
+      "logSha256": "79d6e102d3342502fc80ca42def8ff97f6642ce33398d5219dc2f3e921c23f6f"
+    },
+    {
+      "command": "python build/game-ui/Validate-UiTasks.py",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/full-scene/task-validation.log",
+      "logSha256": "bd97b8da7f45e591c2200fdbc89f96f1d2e842c6e2c4a7637b8eb6b75c58d56a"
+    }
+  ],
+  "verification": {
+    "checks": 180,
+    "realGameSceneConstructors": 3,
+    "realUserObjectConstructors": 3,
+    "realRenderGameFramesPresented": 17,
+    "additionalCaptureRenders": 17,
+    "distinctCaptureFiles": 16,
+    "explicitRealDeviceResetCalls": 7,
+    "characterPages": 4,
+    "resolutions": [
+      [
+        1024,
+        768
+      ],
+      [
+        1366,
+        768
+      ],
+      [
+        1280,
+        800
+      ],
+      [
+        1440,
+        900
+      ],
+      [
+        1600,
+        900
+      ],
+      [
+        1920,
+        1080
+      ]
+    ],
+    "pixelComparedRegions": 4,
+    "identicalPanelPixels": 690512,
+    "originalEquipmentCells": 16,
+    "originalInventoryVisibleCells": 49,
+    "originalBeltCellsAndLinks": 10,
+    "readOnlyLegacyLibraries": 10,
+    "developmentDefault": "Legacy",
+    "compiledRuntimeReady": false,
+    "productionOfficialActivation": false,
+    "allFiveG0Gates": "open",
+    "taskStatusesUnchanged": true,
+    "registeredSourceCount": 146,
+    "supplementalReportCount": 30
+  },
+  "package": {
+    "path": "E:/workspace/mir3-ui-work/hud-progress-zl-20261108-v1/OfficialV1.Zl",
+    "bytes": 354374,
+    "sha256": "a67995c4a5d928da09b69b89ff199c9abb73821d6b620ad71bec4a62fd1df635"
+  },
+  "tests": {
+    "sceneFixture": "Actual GameScene and UserObject constructors, actual Process/RenderGame/Draw/Device.Reset/disposal. Synthetic empty system/user data and blank 128x128 map in isolated temporary cwd.",
+    "databaseFixture": "Real MirDB Session and typed collections; Client user collections explicitly registered because separate test entry assembly changes MirDB assembly discovery. This does not exercise actual Program or CEnvir.LoadDatabase entry.",
+    "resourceFixture": "10 required old-client Zl libraries read-only from E:/workspace/Debug/Client/Data; exact paths, sizes and hashes in legacy-resources.txt. No official-install files written or loaded for this test.",
+    "entrySequence": "Legacy scene followed by two sequential Official scenes borrowing the same verified application package. No server connection, actual login or real network state.",
+    "reset": "Seven actual calls to DXManager.ResetDevice with live controls/package; AttemptReset checks successful cooperative state. Assert backbuffer sizes, cells/links, chat tabs/history and HWND/draft/selection after every resize. Two 1024x768 resets compare nonempty complete character/inventory panel rectangles byte-for-byte via RGB/alpha pixels.",
+    "captures": "Captured from real D3D MainSurface after drawing and before Present; no reliance on unspecified discard-swap contents.",
+    "guard": "FPSCounter must grow for each CEnvir.RenderGame call; DeviceLost/RequiresRestart must remain false to prevent swallowed render errors from passing.",
+    "unchangedScope": "NPCBox and ConfigBox remain unskinned. Effective scope excludes NPC cards, secondary button popups, settings and pregame UI."
+  },
+  "evidenceFiles": [
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/full-scene/captures/legacy-hud.png",
+      "sha256": "5fa69de2c6da4336331e9f837cd0ded6c24f9b714dda1e36432e8880dc050a09"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/full-scene/captures/legacy-panels.png",
+      "sha256": "d0723781ce5debe099e9ba58f4e2c999706872006bb0ec1594c651cea1634a46"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/full-scene/captures/official-CharacterTab.png",
+      "sha256": "92e0c2577c05b8c319a915198c3e1937606d030c7f2f05d974a05ad07c8ffcf4"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/full-scene/captures/official-extraEquipmentTab.png",
+      "sha256": "07f5b1dfdf1423e68bbb053839d10ab99021195e28776c629ba80e27129dfdb3"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/full-scene/captures/official-HermitTab.png",
+      "sha256": "cdf73d3c2cb3b8f2cab067dcf1b789d9f4c635b7ab13a604d55537f4e565b830"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/full-scene/captures/official-hud.png",
+      "sha256": "79054dc81d412cbf4777939d10b3192b80e9f56d479f25ed7216e17c9e638dd9"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/full-scene/captures/official-panels.png",
+      "sha256": "92e0c2577c05b8c319a915198c3e1937606d030c7f2f05d974a05ad07c8ffcf4"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/full-scene/captures/official-reentry-hud.png",
+      "sha256": "44b149febc2a457112d8af0bde5e898cc15f3dc7ac5689aff1f81ffc697469a1"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/full-scene/captures/official-reentry-panels.png",
+      "sha256": "44b149febc2a457112d8af0bde5e898cc15f3dc7ac5689aff1f81ffc697469a1"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/full-scene/captures/official-reset-1024x768.png",
+      "sha256": "fa18a26537fe34b4d1143cdbab9dfd6e10393967a9a129426a0fa375e3f6f92a"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/full-scene/captures/official-reset-1280x800.png",
+      "sha256": "afee7f59287391898ebbcd4e5a1f71ed530a3da442e91ee8fa8d7c45aed7bc27"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/full-scene/captures/official-reset-1366x768.png",
+      "sha256": "a6c8fc403a8d996629b745ae1ee1e2eb27f21e5f77dbb43ac675c0de9e0fa487"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/full-scene/captures/official-reset-1440x900.png",
+      "sha256": "a1a214e932becd4c280a9b32d9771af3dadfa6bbc65079faa602720d200a1ca6"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/full-scene/captures/official-reset-1600x900.png",
+      "sha256": "ae1bf494b89044b9b0d39ed06dfe279a59d1547d60de691d9d05bd2e11db9e75"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/full-scene/captures/official-reset-1920x1080.png",
+      "sha256": "2661e74e027704f8451eda731cf56c1b5696fc9d0bdbf7eee5a2bc15786e02ab"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/full-scene/captures/official-StatsTab.png",
+      "sha256": "5617577f5b27bfde501f055f39eb5238e60764b7406956d4da05b6657a933ba8"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/full-scene/legacy-resources.txt",
+      "sha256": "47713d590a1b9214abdef7a0fc33d6c28a2b5a73a0cff9794375a5083020b498"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/full-scene/registered-sources-before.json",
+      "sha256": "cf2711a7a44453233d47d9f911f3d6d1294b286b1ee942fb7d4329eae7ed3043"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/full-scene/reset-pixel-probes.txt",
+      "sha256": "2c236cd844574b74b6d502b13ffed99b5cb29783fc53ea00587ca1543a18ac67"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/full-scene/tested-runtime.json",
+      "sha256": "af2f1b91eb24458ec29ea7a9e683ea32e601c7a840c04eae3833acba1adc92ea"
+    }
+  ],
+  "limitations": [
+    "Offline GPU images only; synthetic character, empty equipment/inventory and black synthetic world. No final official-style visual acceptance.",
+    "No real Program/database initialization, persisted gameplay database migration, successful login or network-backed relogin.",
+    "Real active Reset exercised; no physical device loss, driver removal, remote-session switching or multi-adapter acceptance.",
+    "Native HWND/draft/selection retained on hidden test host; live IME composition/candidate-window behavior remains unverified.",
+    "Local ReceiveChat only; no server chat, business packets, live equipment dragging, NPC operations, trade or skill verification.",
+    "Minimap frame only; no real minimap content loaded.",
+    "Tests do not establish zero bugs; all five G0 gates and release acceptance remain open."
+  ]
+}

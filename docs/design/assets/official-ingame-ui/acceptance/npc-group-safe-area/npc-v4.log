@@ -1,0 +1,12 @@
+System.Exception: legacy: real coordinate hits exact NPC target: DXButton
+   在 OfficialUiFullSceneTests.Check(Boolean condition, String message)
+   在 OfficialUiFullSceneTests.NpcCheck(Boolean condition, String message)
+   在 OfficialUiFullSceneTests.NpcClick(GameScene scene, DXControl control, DateTime clock)
+   在 OfficialUiFullSceneTests.ExerciseNpcGoods(GameScene scene, CConnection connection, Boolean official, String evidence, String style, List`1 trace)
+   在 OfficialUiFullSceneTests.ExerciseNpc(GameUiStartupSession owner, MapInfo map, String evidence, String style)
+   在 OfficialUiFullSceneTests.RunNpc(String[] args)
+Exception: E:\workspace\mir3-zircon-server\tests\Run-GameUiNpcTests.ps1:33
+Line |
+  33 |          if ($LASTEXITCODE -ne 0) { throw 'Npc tests failed.' }
+     |                                     ~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Npc tests failed.

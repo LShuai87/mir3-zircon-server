@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "taskId": "UI-20",
+  "status": "in_progress",
+  "releaseAccepted": false,
+  "checkedAtLocalDate": "2026-11-08",
+  "evidence": [
+    "docs/design/assets/official-ingame-ui/acceptance/npc-preservation/verification.json",
+    "docs/design/assets/official-ingame-ui/acceptance/npc-preservation/npc/metrics.json",
+    "docs/design/assets/official-ingame-ui/acceptance/npc-preservation/npc/legacy-trace.txt",
+    "docs/design/assets/official-ingame-ui/acceptance/npc-preservation/npc/official-trace.txt",
+    "docs/design/assets/official-ingame-ui/acceptance/npc-preservation/npc/official-reentry-trace.txt",
+    "docs/design/assets/official-ingame-ui/acceptance/npc-shop-binding/verification.json",
+    "docs/design/assets/official-ingame-ui/acceptance/npc-shop-binding/npc/metrics.json",
+    "docs/design/assets/official-ingame-ui/acceptance/npc-shop-seven-rows/verification.json",
+    "docs/design/assets/official-ingame-ui/acceptance/npc-shop-seven-rows/npc/metrics.json"
+  ],
+  "verified": "NPC原卡片保留回归通过；商品商店复用原控件与购买处理，并修正为7行两列完整视口。最新2427项检查、128次实际坐标命中、27次Device.Reset及2399935个原卡片像素一致，三个场景有序操作/发包记录和数量弹窗几何一致；第7行可选、第8行无半格，字体不纵向裁切，实际文字位置悬停可读取完整提示。",
+  "remaining": [
+    "UI-14/UI-18/UI-19前置验收",
+    "G0-2/G0-3/G0-4/G0-5输入门槛；G0-1已关闭",
+    "真实服务器与最终游戏验收"
+  ]
+}

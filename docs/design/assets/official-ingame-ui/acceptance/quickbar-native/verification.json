@@ -1,0 +1,47 @@
+{
+  "date": "2026-11-10",
+  "source": "UI[430]",
+  "windowSize": [
+    518,
+    44
+  ],
+  "grid": [
+    60,
+    3,
+    410,
+    40
+  ],
+  "cellSize": [
+    41,
+    40
+  ],
+  "slotCount": 10,
+  "changedPackageFrames": [
+    3
+  ],
+  "unchangedPackageFrames": 93,
+  "packageSha256": "3c5fce4902b679dd2b86c5678048cd6c21e5170fa84211b346507aedaf2ce05f",
+  "checks": {
+    "belt": 7181,
+    "hud": 842,
+    "windowSet": 557498,
+    "fullScene": 4328,
+    "renderTrimComparisons": 32
+  },
+  "evidenceDirectory": "E:\\workspace\\mir3-ui-work\\quickbar-native-20261110\\fullscene-02",
+  "limitations": [
+    "Offline native renderer with synthetic user/map; no live account login.",
+    "Full layout CLI remains blocked by the preexisting character binding source hash mismatch.",
+    "Character background was retained from the existing pinned package; full recipe recomposition currently differs on that preexisting surface."
+  ],
+  "deployed": true,
+  "deployment": {
+    "clientPath": "E:/workspace/Debug/Client/Zircon.exe",
+    "clientSha256": "c6b332b3d9c2059c0b76cac046e9dcd91fe0bf91e9737dc7cc99cd46bd6c8b2f",
+    "packagePath": "E:/workspace/Debug/Client/Data/GameUI/OfficialV1.Zl",
+    "packageSha256": "3c5fce4902b679dd2b86c5678048cd6c21e5170fa84211b346507aedaf2ce05f",
+    "backupDirectory": "E:/workspace/mir3-ui-work/quickbar-native-20261110/default-backup-20261110-142416",
+    "verification": "Installed executable and package SHA256 verified; startup style configuration unchanged.",
+    "releaseInspection": "Inspection manifest generated successfully; RuntimeReady=False. OfficialV1 remains accessible through the existing debug opt-in route."
+  }
+}

@@ -1,0 +1,516 @@
+{
+  "schemaVersion": 1,
+  "kind": "official-hud-font-ownership-verification",
+  "checkedAtLocalDate": "2026-11-08",
+  "referenceResolution": [
+    1024,
+    768
+  ],
+  "releaseAccepted": false,
+  "results": {
+    "hudChecks": 796,
+    "fullSceneChecks": 4328,
+    "realGameConstructors": 27,
+    "presentedFrames": 47,
+    "explicitDeviceResets": 9,
+    "identicalPanelPixels": 690512,
+    "productionSourceChanged": true,
+    "realServerBehaviorVerified": false,
+    "finalVisualAcceptance": false
+  },
+  "implementation": [
+    "Clone each temporary readout caption font so disposing the caption cannot dispose the native label font.",
+    "Check reference identity and native font metrics after restore, ten switches, failed initial installation and four external lifecycle paths. Check that cloned caption fonts are released."
+  ],
+  "verifiedBehaviors": [
+    "The new behavioral regression failed against the prior Debug runtime with ArgumentException from Font.GetHeight(Graphics); the fixed runtime passes all 796 HUD checks.",
+    "The 1024x768 candidate render was inspected: the level remains in the lower-left ring and captions retain their appearance. Black world pixels belong to the isolated fixture.",
+    "Full-scene offline regressions cover character packets, Legacy parity, native input retention, scene entry and rendering. Real account/server behavior remains unverified.",
+    "Debug and Release were rebuilt; manifests inspect the actual client, dependencies, compiled catalog and unchanged 94-frame package. Release gates remain false."
+  ],
+  "sourceChanges": [
+    {
+      "path": "Client/Scenes/Views/MainPanel.GameUi.cs",
+      "beforeSha256": "8089b4024b2d8c677bcbe9f24b4a05ec3b9cabc6a12650e14808a05eb06891aa",
+      "afterSha256": "76b7bb9ba450129cdb6f7a0da264d73b68ce1c5998e17eaca316fe200f93dc57"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiHudLayoutTests.cs",
+      "beforeSha256": "4bfe87610772b753d9ed840997590e4dc389765130505b346963cbb17d141e34",
+      "afterSha256": "eb1e64d575190732c49d5d2e6a0c3fe76da2d98b45aa977b53c413089d2f33e8"
+    }
+  ],
+  "firstTrackedSourceChanges": [],
+  "newlyTrackedSources": [],
+  "sourceHashes": [
+    {
+      "path": "Client/Scenes/Views/MainPanel.GameUi.cs",
+      "sha256": "76b7bb9ba450129cdb6f7a0da264d73b68ce1c5998e17eaca316fe200f93dc57"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiHudLayoutTests.cs",
+      "sha256": "eb1e64d575190732c49d5d2e6a0c3fe76da2d98b45aa977b53c413089d2f33e8"
+    }
+  ],
+  "commands": [
+    {
+      "command": [
+        "D:/Program Files/Microsoft Visual Studio/2022/Enterprise/MSBuild/Current/Bin/MSBuild.exe",
+        "Client/Client.csproj",
+        "/t:Build",
+        "/p:Configuration=Debug",
+        "/p:Platform=AnyCPU",
+        "/v:minimal",
+        "/nologo"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/hud-font-ownership/build-debug.log",
+      "logSha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "command": [
+        "D:/Program Files/Microsoft Visual Studio/2022/Enterprise/MSBuild/Current/Bin/MSBuild.exe",
+        "Client/Client.csproj",
+        "/t:Build",
+        "/p:Configuration=Release",
+        "/p:Platform=AnyCPU",
+        "/v:minimal",
+        "/nologo"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/hud-font-ownership/build-release.log",
+      "logSha256": "c9e24428be1e56c8408af17aacfea3413de3953bfe426d10eb768782f5005ebc"
+    },
+    {
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "tests/Run-GameUiFullSceneTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/hud-font-ownership-20261108-fullscene-v1"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/hud-font-ownership/full-scene.log",
+      "logSha256": "6b372d6607e1c4a4258344ca081d356474851f73abf7d50bec43cada10fe58f2"
+    },
+    {
+      "command": [
+        "C:/Users/shuai/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+        "docs/design/assets/official-ingame-ui/acceptance/hud-font-ownership/audit-history.py",
+        "--output",
+        "docs/design/assets/official-ingame-ui/acceptance/hud-font-ownership/history-audit.json"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/hud-font-ownership/history-audit.log",
+      "logSha256": "a677449b59c16918343d8158e175ceb1ec52cb3b146c541703c4f91acecfaf34"
+    },
+    {
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "tests/Run-GameUiHudLayoutTests.ps1"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/hud-font-ownership/hud-layout.log",
+      "logSha256": "0c8824a39936b1177f8b3d354592242861c314f5d61d8028ecf001b11ef01f12"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "build/game-ui/New-GameUiReleaseManifest.ps1",
+        "-ClientDirectory",
+        "E:/workspace/Debug/Client",
+        "-ResourceRoot",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/staged-resources",
+        "-OutputPath",
+        "docs/design/assets/official-ingame-ui/acceptance/hud-font-ownership/debug-build.json"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/hud-font-ownership/manifest-debug.log",
+      "logSha256": "4575159b5e564584a9729efa11569aca1e623f3d0e148f7c4d0c9e23e38282c6"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "build/game-ui/New-GameUiReleaseManifest.ps1",
+        "-ClientDirectory",
+        "E:/workspace/Release/Client",
+        "-ResourceRoot",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/staged-resources",
+        "-OutputPath",
+        "docs/design/assets/official-ingame-ui/acceptance/hud-font-ownership/release-build.json"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/hud-font-ownership/manifest-release.log",
+      "logSha256": "823f9482bb69496a42c13cc85ebd977c1a7c1133be7a5b2110bea00340cc538c"
+    },
+    {
+      "command": [
+        "C:/Users/shuai/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+        "build/game-ui/Validate-UiTasks.py"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/hud-font-ownership/tasks.log",
+      "logSha256": "90e3ddffa807ef19523e77855653984be659ff7ab47ec66f04d41348c4cb85b3"
+    },
+    {
+      "command": [
+        "C:/Users/shuai/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+        "docs/design/assets/official-ingame-ui/acceptance/hud-font-ownership/check-whitespace.py"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/hud-font-ownership/whitespace.log",
+      "logSha256": "348c1a3f7171e60e435ec2620cdea15d8dc8f7c521b491ccee3ce688ed5c60cd"
+    }
+  ],
+  "failedAttempts": [
+    {
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "tests/Run-GameUiHudLayoutTests.ps1"
+      ],
+      "result": "fail",
+      "exitCode": 1,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/hud-font-ownership/before-fix.log",
+      "logSha256": "23c71a1206ba56c9ef37a689dd02c0d4bc1b93e47557817ed7d89c20a97f9af3",
+      "explanation": "Expected regression on the previous Debug runtime: restoring Legacy disposes native readout fonts because temporary captions share ownership. GetHeight(Graphics) throws ArgumentException. The fixed runtime gives captions cloned fonts."
+    }
+  ],
+  "regressionBaselineRuntime": {
+    "report": "docs/design/assets/official-ingame-ui/acceptance/hud-level-bezel/verification.json",
+    "builds": {
+      "debug": {
+        "buildId": "gameui-b6df1f5cdb9330b01328917438c82b5e2cd59889491567c544ec537cae11555f",
+        "client": {
+          "path": "Zircon.exe",
+          "length": 1386496,
+          "sha256": "35466f1fb3dad1ea0690941412730a2a4684665af9a8d84cb47173bfcbf3b318"
+        }
+      },
+      "release": {
+        "buildId": "gameui-fa547b929ec33e17b6620534c45d4e9d8ef3747ce0e52a027411fe0ec211f976",
+        "client": {
+          "path": "Zircon.exe",
+          "length": 1281536,
+          "sha256": "bd0fa7ea73f655cb9646f0a4d48a8b98fc8889e7ad55663af536518f233721f6"
+        }
+      }
+    },
+    "testedRuntime": [
+      {
+        "name": "Zircon.exe",
+        "sha256": "35466f1fb3dad1ea0690941412730a2a4684665af9a8d84cb47173bfcbf3b318"
+      },
+      {
+        "name": "Library.dll",
+        "sha256": "557ba4f45f3cb2db8bbbbb2a336289b0d3d535959190f86ec7efc2bfdd0b0c5b"
+      },
+      {
+        "name": "SlimDX.dll",
+        "sha256": "f23ec20aeaec149ba963d1fb03af3ea1585ccdf1ac207f315361a80ceaadcc05"
+      }
+    ]
+  },
+  "builds": {
+    "debug": {
+      "buildId": "gameui-e69eb10eb419e4fbb434cad8d61077e978aed58dde6abce7dfc56af0bcbbcbfd",
+      "client": {
+        "path": "Zircon.exe",
+        "length": 1386496,
+        "sha256": "9465cf0813fd5c915b0906c536805c66b7c0cfd6ed5360cbb776b0d865c239a2"
+      }
+    },
+    "release": {
+      "buildId": "gameui-61e04e49c0c96da2e49cb62ad12a5a72577200893a42ee79c3883c0ebb5e1296",
+      "client": {
+        "path": "Zircon.exe",
+        "length": 1281536,
+        "sha256": "ddbb7604b64e80101851231a239d78a0708c600fee47c1ddb1a6d042a6af1b63"
+      }
+    }
+  },
+  "runtimeRebuiltThisTurn": true,
+  "package": {
+    "path": "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+    "frameCount": 94,
+    "sha256": "dd45cbf51d976a69d28269ee0d27a985def1ee1693cab2b509b74ae347a880a4"
+  },
+  "candidate": {
+    "path": "E:/workspace/mir3-ui-work/warehouse-assets-20261108-v1/zl-v2/OfficialV1.Zl",
+    "frameCount": 1,
+    "sha256": "471169dfa093b521f3c700c5a993e4e763aa17a45b2e16f440d961c0c7bf4cec"
+  },
+  "sourcePlanSha256": "f8c0a002b3821fabb54993792c354c4eff35eec51f9cfdc418535017c13069e9",
+  "limitations": [
+    "Offline synthetic world and serialized loopback do not establish real account/server behavior, real item transactions, live IME or hardware device loss.",
+    "Source-art coordinates and candidate render are local evidence; final visual acceptance and physical font/DPI coverage remain open. Glyph fit for 1/99/999 is checked in the current renderer context; unusually long values retain native full-value hints.",
+    "Tasks remain 7 done / 3 in_progress / 18 not_started and G0-2/3/4/5 remain open. RuntimeReady=false, productionBindingAllowed=false, releaseAccepted=false. Default Legacy. NPC cards, secondary popups and settings retain existing style. Official installation is read-only; no commit, push or deployment."
+  ],
+  "evidenceHashes": [
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-font-ownership-20261108-fullscene-v1/legacy-hud.png",
+      "sha256": "5fa69de2c6da4336331e9f837cd0ded6c24f9b714dda1e36432e8880dc050a09"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-font-ownership-20261108-fullscene-v1/legacy-panels.png",
+      "sha256": "d0723781ce5debe099e9ba58f4e2c999706872006bb0ec1594c651cea1634a46"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-font-ownership-20261108-fullscene-v1/legacy-refresh-CharacterTab.png",
+      "sha256": "deb2ea995582dde9a2484489b306af4d9e35d7dac17d4366174d62d3f952d136"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-font-ownership-20261108-fullscene-v1/legacy-refresh-HermitTab.png",
+      "sha256": "611a16421a58f99f1656db318609fdc468197f2648d40d216a59abf1e40d97c8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-font-ownership-20261108-fullscene-v1/legacy-refresh-StatsTab.png",
+      "sha256": "95186a20d4b0a8ca306643f8044541a9ce4c51b71d294ddab552b8308c51b9be"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-font-ownership-20261108-fullscene-v1/legacy-resources.txt",
+      "sha256": "47713d590a1b9214abdef7a0fc33d6c28a2b5a73a0cff9794375a5083020b498"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-font-ownership-20261108-fullscene-v1/native-character-refresh-fields.txt",
+      "sha256": "564be2e5cdbdaedc1c4f4d10a6c9c013186f4efe3d3b161ab5086b2f82cb90d6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-font-ownership-20261108-fullscene-v1/native-character-refresh-summary.txt",
+      "sha256": "c4e0e7ea8074ebae2956c6573048c386db3524233e4288dabafc93e3d58cb32a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-font-ownership-20261108-fullscene-v1/native-transition-results.txt",
+      "sha256": "347dfa519804984941ffca7a2251cf69b55d3adf4ff97a29fecc597ac6a886a7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-font-ownership-20261108-fullscene-v1/official-CharacterTab.png",
+      "sha256": "1382e7964f2f94c9fe46dd9a9fc27f667bcadcc78be64c0be55a022eee1dbd91"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-font-ownership-20261108-fullscene-v1/official-extraEquipmentTab.png",
+      "sha256": "e74511332292138b7dc45ec346ce3681e14bb47d2bbfb0f74fe355f836f3b650"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-font-ownership-20261108-fullscene-v1/official-HermitTab.png",
+      "sha256": "8bab85d416a1185c2f5da203b376ffad90c6eb381f2bfc27c36d4dd444d5bf7b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-font-ownership-20261108-fullscene-v1/official-hud.png",
+      "sha256": "a3ed9fb46d3f2ea7866336870126edb781ede274b8f76417e9f72aae47137252"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-font-ownership-20261108-fullscene-v1/official-panels.png",
+      "sha256": "1382e7964f2f94c9fe46dd9a9fc27f667bcadcc78be64c0be55a022eee1dbd91"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-font-ownership-20261108-fullscene-v1/official-reentry-hud.png",
+      "sha256": "4d5f445932c7e4d048ba508acaa2bfcb1803c7d18869e9bc764af69b95ad3e30"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-font-ownership-20261108-fullscene-v1/official-reentry-panels.png",
+      "sha256": "b7850a8f214a6f19efebd33e48487ed5b14a0fcbe3f3acc777b6e656d8637ff6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-font-ownership-20261108-fullscene-v1/official-refresh-CharacterTab.png",
+      "sha256": "a80776c55eef9f7b959cd42c0d011cb5ffba9927831b65411df40a1cbce19954"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-font-ownership-20261108-fullscene-v1/official-refresh-HermitTab.png",
+      "sha256": "16811fe83332c97ba22af2d9e6f1c77c2005f0a6f55d41c46043b0a0206ef385"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-font-ownership-20261108-fullscene-v1/official-refresh-StatsTab.png",
+      "sha256": "7792895566f26b5d544ae6ed0170479be1f614a6bd27d30efb6c48b3ba97b539"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-font-ownership-20261108-fullscene-v1/official-reset-1024x768.png",
+      "sha256": "1382e7964f2f94c9fe46dd9a9fc27f667bcadcc78be64c0be55a022eee1dbd91"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-font-ownership-20261108-fullscene-v1/official-reset-1280x800.png",
+      "sha256": "890626e9c1d9475bb96b04a01eee86bb332cd4c7038d01c24ad6b623041e51da"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-font-ownership-20261108-fullscene-v1/official-reset-1366x768.png",
+      "sha256": "b918a2d477cfcba892c3349064cafc1cfffa4935a0edc3f352e79eef355baccc"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-font-ownership-20261108-fullscene-v1/official-reset-1440x900.png",
+      "sha256": "ae91dd4b848787bf2e6cb836f232507eb9783e772c14eea39e16f3c197c9e1e5"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-font-ownership-20261108-fullscene-v1/official-reset-1600x900.png",
+      "sha256": "d8a5586db32ceee794918ca02586f9105033307ca65991dbdd3c12189328041f"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-font-ownership-20261108-fullscene-v1/official-reset-1920x1080.png",
+      "sha256": "38eb25a69088ffb79783cb97bd708b3b36297ad371032226a6194262dd3f6bdd"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-font-ownership-20261108-fullscene-v1/official-StatsTab.png",
+      "sha256": "0924d7110af8a126404aab4f71759a6e51f977466b7e0408474a919b948e5016"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-font-ownership-20261108-fullscene-v1/reset-pixel-probes.txt",
+      "sha256": "2c236cd844574b74b6d502b13ffed99b5cb29783fc53ea00587ca1543a18ac67"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-font-ownership-20261108-fullscene-v1/tested-runtime.json",
+      "sha256": "5a512971a9353fd3a6f8f6400e6d445e9a716576a620a070d76d58362e3a30d0"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-font-ownership/audit-history.py",
+      "sha256": "43b3dd93e1bb748275abd80d37a7d986d4016b83b72bd6cf2e0ed3bac1c1fd92"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-font-ownership/before-fix.log",
+      "sha256": "23c71a1206ba56c9ef37a689dd02c0d4bc1b93e47557817ed7d89c20a97f9af3"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-font-ownership/before-fix.receipt.json",
+      "sha256": "7efcf830b853f0361e704a8a3d3d6f39b8c8d3fc2432370a9de945e27d117306"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-font-ownership/build-debug.log",
+      "sha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-font-ownership/build-debug.receipt.json",
+      "sha256": "1d117310026dfc456c675345fd7072343f735ff343cc181397d1ca9c7e7a0279"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-font-ownership/build-release.log",
+      "sha256": "c9e24428be1e56c8408af17aacfea3413de3953bfe426d10eb768782f5005ebc"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-font-ownership/build-release.receipt.json",
+      "sha256": "78061535233d3f64949ae0ad6c06e404e0bd132c52cb8ed1da73f655565cb189"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-font-ownership/check-whitespace.py",
+      "sha256": "b0a86f69a0f4d2d1028cf29ec177b27a0b21d80f60d2f17ed9eaf8f84c6a104f"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-font-ownership/debug-build.json",
+      "sha256": "58bb88299b7dd8ac533d7d58d9daeab33614a75b7ac3fc8a73df343e52e21a56"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-font-ownership/full-scene.log",
+      "sha256": "6b372d6607e1c4a4258344ca081d356474851f73abf7d50bec43cada10fe58f2"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-font-ownership/full-scene.receipt.json",
+      "sha256": "721d50e2be254618a78d0fbe0aab0ca60661263a49c01bfc33585c223878a815"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-font-ownership/history-audit.json",
+      "sha256": "a677449b59c16918343d8158e175ceb1ec52cb3b146c541703c4f91acecfaf34"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-font-ownership/history-audit.log",
+      "sha256": "a677449b59c16918343d8158e175ceb1ec52cb3b146c541703c4f91acecfaf34"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-font-ownership/history-audit.receipt.json",
+      "sha256": "b4af62f1ea624785fbcc3527a68ae3a790f6c6f8fab23f636190e4813dc36e89"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-font-ownership/hud-layout.log",
+      "sha256": "0c8824a39936b1177f8b3d354592242861c314f5d61d8028ecf001b11ef01f12"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-font-ownership/hud-layout.receipt.json",
+      "sha256": "bf28b006a4f152f6f0ce590af1addabe0b40cbf7de270869cd9b7ccb05fa72ac"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-font-ownership/manifest-debug.log",
+      "sha256": "4575159b5e564584a9729efa11569aca1e623f3d0e148f7c4d0c9e23e38282c6"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-font-ownership/manifest-debug.receipt.json",
+      "sha256": "e21a0daf363a714da6d711cb287baed8838929bbf302c49f731c00325d01abc0"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-font-ownership/manifest-release.log",
+      "sha256": "823f9482bb69496a42c13cc85ebd977c1a7c1133be7a5b2110bea00340cc538c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-font-ownership/manifest-release.receipt.json",
+      "sha256": "9c88afbfcb76768f9186e4d61f2721952229031e28448ffcd4ca0a706cf3eaab"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-font-ownership/prepare-report.py",
+      "sha256": "f91d8aa2994f8489de1c18fa0cba5e0c55840b461559db1a26c0c96db0ffb9c2"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-font-ownership/README.md",
+      "sha256": "8eb12a4007d204fe970015db61d0dde6027de828bf7fb0ab068af6d3cbe0dfc2"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-font-ownership/release-build.json",
+      "sha256": "b7e9eb690823fc5b718453c4cee5a76c2cc980625dcc89f7a92cd834c65e6494"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-font-ownership/run-check.py",
+      "sha256": "8cea69f8c28d781722ec26876840ea3e6bb44ae5ed37e2d213fdab62d1a7c943"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-font-ownership/source-before/Client/Scenes/Views/MainPanel.GameUi.cs",
+      "sha256": "8089b4024b2d8c677bcbe9f24b4a05ec3b9cabc6a12650e14808a05eb06891aa"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-font-ownership/source-before/tests/game-ui/OfficialUiHudLayoutTests.cs",
+      "sha256": "4bfe87610772b753d9ed840997590e4dc389765130505b346963cbb17d141e34"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-font-ownership/source-before.json",
+      "sha256": "d99068a11097cb86f1b28ff8d3b9d7c803c963b0be6ff882a729a974af471188"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-font-ownership/tasks.log",
+      "sha256": "90e3ddffa807ef19523e77855653984be659ff7ab47ec66f04d41348c4cb85b3"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-font-ownership/tasks.receipt.json",
+      "sha256": "586428b5e84426e18f4a1d5b6f22162c569bfa28432f02bb436b87da07e44fae"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-font-ownership/tested-runtime.json",
+      "sha256": "f98d41a73d990ef8606f65ba42644383f40359e4375701435411fb9e1ab68d61"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-font-ownership/whitespace.log",
+      "sha256": "348c1a3f7171e60e435ec2620cdea15d8dc8f7c521b491ccee3ce688ed5c60cd"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-font-ownership/whitespace.receipt.json",
+      "sha256": "ab1ee3dd20f91a18c79e6e6f8b3aa673235274dbc03bcd470fa620822d6b56d8"
+    }
+  ]
+}

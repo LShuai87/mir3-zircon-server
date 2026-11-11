@@ -1,0 +1,8 @@
+
+  Launcher -> E:\workspace\Release\Launcher\Launcher.exe
+  Patcher -> E:\workspace\Release\Patcher\Patcher.exe
+  Library -> E:\workspace\Release\Library\Library.dll
+  PatchManager -> E:\workspace\Release\PatchManager\PatchManager.exe
+  Server -> E:\workspace\Release\Server\Server.exe
+  Client -> E:\workspace\Release\Client\Zircon.exe
+  ImageManager -> E:\workspace\Release\ImageManager\ImageManager.exe

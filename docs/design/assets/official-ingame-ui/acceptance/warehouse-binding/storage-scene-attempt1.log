@@ -1,0 +1,3 @@
+System.Exception: Reset changed warehouse candidate pixel at 514,344
+   在 OfficialUiFullSceneTests.SamePixels(String before, String after, Rectangle region, String name)
+   在 OfficialUiFullSceneTests.RunStorage(String[] args)

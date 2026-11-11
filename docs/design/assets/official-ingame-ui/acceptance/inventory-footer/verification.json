@@ -1,0 +1,24 @@
+{
+  "date": "2026-11-10",
+  "clientDirectory": "E:/workspace/Debug/Client",
+  "runtime": [
+    {
+      "name": "Zircon.exe",
+      "sha256": "8ac9ec42d83ee90dffca0a5857ec8e765a4c1a82e17a2ca68a00ed827190e5da"
+    },
+    {
+      "name": "Library.dll",
+      "sha256": "557ba4f45f3cb2db8bbbbb2a336289b0d3d535959190f86ec7efc2bfdd0b0c5b"
+    },
+    {
+      "name": "SlimDX.dll",
+      "sha256": "f23ec20aeaec149ba963d1fb03af3ea1585ccdf1ac207f315361a80ceaadcc05"
+    }
+  ],
+  "inventoryChecks": 6393,
+  "windowSetChecks": 284355,
+  "windowSetRuntime": "isolated Debug build; window-set/tested-runtime.json",
+  "previewValidation": "pass",
+  "liveGameAcceptance": false,
+  "runtimeReady": false
+}

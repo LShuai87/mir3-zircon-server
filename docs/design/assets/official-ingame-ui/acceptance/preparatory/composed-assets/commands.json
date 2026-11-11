@@ -1,0 +1,72 @@
+[
+  {
+    "command": "\"D:/Program Files/Microsoft Visual Studio/2022/Enterprise/MSBuild/Current/Bin/MSBuild.exe\" ImageManager/ImageManager.csproj /t:Build /p:Configuration=Debug /p:Platform=AnyCPU /nologo /v:minimal",
+    "exitCode": 0,
+    "result": "pass",
+    "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/composed-assets/image-manager-build.log",
+    "logSha256": "97a3fa7fefdb484f148d067cbda7a5cc436235d69b9b8486ce6e6f3e61848322"
+  },
+  {
+    "command": "python -m unittest discover -s tests/game-ui -p test_composed_ui.py -v",
+    "exitCode": 0,
+    "result": "pass",
+    "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/composed-assets/composition-tests.log",
+    "logSha256": "a806f3ca2fce7bdaaad611010650254ebc29f0e2718323e81d484de248aca25d"
+  },
+  {
+    "command": "python -m unittest discover -s tests/game-ui -p test_prepared_ui.py -v",
+    "exitCode": 0,
+    "result": "pass",
+    "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/composed-assets/prepared-builder-tests.log",
+    "logSha256": "c4a458a62fd85ea78c1bf64e7441786e392c529da9e0fcf9a621653e950214bd"
+  },
+  {
+    "command": "python build/game-ui/Compose-OfficialUi.py --decoded E:\\workspace\\mir3-ui-work\\selected-reference-20261107-v1\\Decoded --output E:\\workspace\\mir3-ui-work\\composed-art-20261107-verified2-v1 --recipe build/game-ui/composition-recipe.json",
+    "exitCode": 0,
+    "result": "pass",
+    "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/composed-assets/compose-real-1.log",
+    "logSha256": "3c93d8786868399bfbad9325f80f7853e72711bfa310adbc36b32f786de23418"
+  },
+  {
+    "command": "E:/workspace/Debug/ImageManager/ImageManager.exe --official-ui prepared E:\\workspace\\mir3-ui-work\\composed-art-20261107-verified2-v1 E:\\workspace\\mir3-ui-work\\composed-zl-20261107-verified2-v1 E:\\workspace\\mir3-ui-work\\composed-art-20261107-verified2-v1\\composed-manifest.json",
+    "exitCode": 0,
+    "result": "pass",
+    "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/composed-assets/package-real-1.log",
+    "logSha256": "696a076dbe5e063335cacead8b9a3cecfc620fd2832d2bef4dcef7d2c8ef2e20"
+  },
+  {
+    "command": "python build/game-ui/Compose-OfficialUi.py --decoded E:\\workspace\\mir3-ui-work\\selected-reference-20261107-v1\\Decoded --output E:\\workspace\\mir3-ui-work\\composed-art-20261107-verified2-v2 --recipe build/game-ui/composition-recipe.json",
+    "exitCode": 0,
+    "result": "pass",
+    "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/composed-assets/compose-real-2.log",
+    "logSha256": "3c93d8786868399bfbad9325f80f7853e72711bfa310adbc36b32f786de23418"
+  },
+  {
+    "command": "E:/workspace/Debug/ImageManager/ImageManager.exe --official-ui prepared E:\\workspace\\mir3-ui-work\\composed-art-20261107-verified2-v2 E:\\workspace\\mir3-ui-work\\composed-zl-20261107-verified2-v2 E:\\workspace\\mir3-ui-work\\composed-art-20261107-verified2-v2\\composed-manifest.json",
+    "exitCode": 0,
+    "result": "pass",
+    "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/composed-assets/package-real-2.log",
+    "logSha256": "99a8b84688714fbd75052063c1bda3cdf150a1a3e6d2215182618317302ac90e"
+  },
+  {
+    "command": "C:/Users/shuai/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe tests/game-ui/Verify-ComposedUi.py --art E:\\workspace\\mir3-ui-work\\composed-art-20261107-verified2-v1 --package E:\\workspace\\mir3-ui-work\\composed-zl-20261107-verified2-v1 --output E:\\workspace\\mir3-ui-work\\composed-bc1-20261107-verified2-v1",
+    "exitCode": 0,
+    "result": "pass",
+    "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/composed-assets/bc1-pixel-verification.log",
+    "logSha256": "0ee688e60d1af93d7935bbdeddf55fdf16d258d7d93cef96406323cd557953d6"
+  },
+  {
+    "command": "powershell -NoProfile -ExecutionPolicy Bypass -File tests/Run-GameUiComposedRenderTests.ps1 -PackagePath E:\\workspace\\mir3-ui-work\\composed-zl-20261107-verified2-v1 -VerificationPath E:\\workspace\\mir3-ui-work\\composed-bc1-20261107-verified2-v1 -RenderPath E:\\workspace\\mir3-ui-work\\composed-d3d-20261107-verified2-v1",
+    "exitCode": 0,
+    "result": "pass",
+    "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/composed-assets/client-d3d9-verification.log",
+    "logSha256": "135a487e3ce4b4733b3f2c2d52cb9087fca71266a6f2d40aa8d1662496a655c3"
+  },
+  {
+    "command": "powershell -NoProfile -ExecutionPolicy Bypass -File tests/Run-GameUiTests.ps1 -Suite Assets",
+    "exitCode": 0,
+    "result": "pass",
+    "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/composed-assets/reference-regression.log",
+    "logSha256": "d490156277daf885407b0686693562830e82217dee894223d2a5cef85ec6065b"
+  }
+]

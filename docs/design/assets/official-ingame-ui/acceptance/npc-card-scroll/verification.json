@@ -1,0 +1,1110 @@
+{
+  "schemaVersion": 1,
+  "kind": "native-npc-long-text-viewport-and-bounded-texture-verification",
+  "checkedAtLocalDate": "2026-11-08",
+  "releaseAccepted": false,
+  "referenceResolution": [
+    1024,
+    768
+  ],
+  "results": {
+    "npcChecks": 17611,
+    "npcCoordinateHits": 733,
+    "npcFrames": 68,
+    "npcResets": 47,
+    "identicalNativeNpcPixels": 2399935,
+    "bodyTextureReferenceMatches": 4,
+    "maximumTestBodyExplicitLines": 904,
+    "windowSetChecks": 165921,
+    "fullSceneChecks": 180,
+    "fullSceneFrames": 17,
+    "fullSceneResets": 7,
+    "identicalFullScenePanelPixels": 690512,
+    "pythonTests": 172,
+    "packageFrames": 94,
+    "longPageOpenMilliseconds": [
+      1982,
+      2144
+    ]
+  },
+  "sourceChanges": [
+    {
+      "path": "Client/Scenes/Views/NPCDialog.cs",
+      "beforeSha256": "9f66535700a744a9bc08744057dcfd6b0df6929817397aa8617c9eb5de389fca",
+      "afterSha256": "7afe01054cc469dcbbb2e879e2585e60e03ff288e30de0049e02259d321dbe90"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiNpcTests.cs",
+      "beforeSha256": "25d1b23c516544f5db02ff59d1cceaea01257417f949ca01291b60865c375767",
+      "afterSha256": "1d8874c1f82d51fe3d58f8dfac280a3fe255a3e53ea542333f9a6f94b34c41a1"
+    },
+    {
+      "path": "Client/Envir/GameUiOfficialV1WindowSet.cs",
+      "beforeSha256": "1d429a9e4bcd4a85cb5beb1972c498395f12ab5f874a9e5e056eabb641d52e7c",
+      "afterSha256": "50def3bd074c1fefff960c61ae6cb72da86cdf7caa56fba3ca2813b41b29b950"
+    }
+  ],
+  "sourceHashes": [
+    {
+      "path": "Client/Controls/DXLabel.cs",
+      "sha256": "cb9f6f8167dbf92201e9fdac237bfa3a790e8f61c2a4ba969dd4943101a296c2"
+    },
+    {
+      "path": "Client/Scenes/Views/NPCDialog.cs",
+      "sha256": "7afe01054cc469dcbbb2e879e2585e60e03ff288e30de0049e02259d321dbe90"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiNpcTests.cs",
+      "sha256": "1d8874c1f82d51fe3d58f8dfac280a3fe255a3e53ea542333f9a6f94b34c41a1"
+    },
+    {
+      "path": "Client/Envir/GameUiOfficialV1WindowSet.cs",
+      "sha256": "50def3bd074c1fefff960c61ae6cb72da86cdf7caa56fba3ca2813b41b29b950"
+    }
+  ],
+  "newlyTrackedSources": [
+    {
+      "path": "Client/Controls/DXLabel.cs",
+      "beforeSha256": "8650a41ef81fef933375b9c22fe9d91432b23b4bb3000684da7fe5e64dd0e196",
+      "baselineSnapshot": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/source-before/Client/Controls/DXLabel.cs"
+    }
+  ],
+  "commands": [
+    {
+      "command": [
+        "D:/Program Files/Microsoft Visual Studio/2022/Enterprise/MSBuild/Current/Bin/MSBuild.exe",
+        "Client/Client.csproj",
+        "/t:Build",
+        "/p:Configuration=Debug",
+        "/p:Platform=AnyCPU",
+        "/v:minimal",
+        "/nologo"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/build-debug-v2.log",
+      "logSha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "command": [
+        "D:/Program Files/Microsoft Visual Studio/2022/Enterprise/MSBuild/Current/Bin/MSBuild.exe",
+        "Client/Client.csproj",
+        "/t:Build",
+        "/p:Configuration=Debug",
+        "/p:Platform=AnyCPU",
+        "/v:minimal",
+        "/nologo"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/build-debug-v3.log",
+      "logSha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "command": [
+        "D:/Program Files/Microsoft Visual Studio/2022/Enterprise/MSBuild/Current/Bin/MSBuild.exe",
+        "Client/Client.csproj",
+        "/t:Build",
+        "/p:Configuration=Debug",
+        "/p:Platform=AnyCPU",
+        "/v:minimal",
+        "/nologo"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/build-debug-v4.log",
+      "logSha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "command": [
+        "D:/Program Files/Microsoft Visual Studio/2022/Enterprise/MSBuild/Current/Bin/MSBuild.exe",
+        "Client/Client.csproj",
+        "/t:Build",
+        "/p:Configuration=Debug",
+        "/p:Platform=AnyCPU",
+        "/v:minimal",
+        "/nologo"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/build-debug-v5.log",
+      "logSha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "command": [
+        "D:/Program Files/Microsoft Visual Studio/2022/Enterprise/MSBuild/Current/Bin/MSBuild.exe",
+        "Client/Client.csproj",
+        "/t:Build",
+        "/p:Configuration=Debug",
+        "/p:Platform=AnyCPU",
+        "/v:minimal",
+        "/nologo"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/build-debug-v6.log",
+      "logSha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "command": [
+        "D:/Program Files/Microsoft Visual Studio/2022/Enterprise/MSBuild/Current/Bin/MSBuild.exe",
+        "Client/Client.csproj",
+        "/t:Build",
+        "/p:Configuration=Debug",
+        "/p:Platform=AnyCPU",
+        "/v:minimal",
+        "/nologo"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/build-debug.log",
+      "logSha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "command": [
+        "D:/Program Files/Microsoft Visual Studio/2022/Enterprise/MSBuild/Current/Bin/MSBuild.exe",
+        "Client/Client.csproj",
+        "/t:Build",
+        "/p:Configuration=Release",
+        "/p:Platform=AnyCPU",
+        "/v:minimal",
+        "/nologo"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/build-release.log",
+      "logSha256": "c9e24428be1e56c8408af17aacfea3413de3953bfe426d10eb768782f5005ebc"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiFullSceneTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/npc-scroll-full-scene-20261108-v1"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/full-scene.log",
+      "logSha256": "0d85d4de7905eb608acc989200b5dfcc19842b35b62586889490caf606d4a988"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "build/game-ui/New-GameUiReleaseManifest.ps1",
+        "-ClientDirectory",
+        "E:/workspace/Debug/Client",
+        "-ResourceRoot",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/staged-resources",
+        "-OutputPath",
+        "E:/workspace/mir3-zircon-server/docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/release-manifest-debug.json"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/manifest-debug.log",
+      "logSha256": "fb2e2a3047e1036325bb1159e022bdcd29c5e4f1ada78f3466fcbcfdeeecc8dd"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "build/game-ui/New-GameUiReleaseManifest.ps1",
+        "-ClientDirectory",
+        "E:/workspace/Release/Client",
+        "-ResourceRoot",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/staged-resources",
+        "-OutputPath",
+        "E:/workspace/mir3-zircon-server/docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/release-manifest-release.json"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/manifest-release.log",
+      "logSha256": "20e328756755d5f352e9211e1d019bfbe7e69e3bf14d99c260943e8b414b3aea"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiNpcTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v5"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/npc-v5.log",
+      "logSha256": "69eb5d5ee932ebad51e3df98f29fb99d8e6df4786776894a8a1c380a0cbbebdd"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiNpcTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v6"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/npc-v6.log",
+      "logSha256": "5a5b22de9473558fc601fdd001452d77fbc9661cac8d7794a444a4a7938b6421"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiNpcTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/npc-v7.log",
+      "logSha256": "ad3f6ef990b955462fc3c3f9f423d13e02cb92e211918f1710f4745d20f011d9"
+    },
+    {
+      "command": [
+        "C:/Users/shuai/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests/game-ui",
+        "-p",
+        "test_*.py"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/python-tests-final.log",
+      "logSha256": "0c855d9e0463df110878dd3b6459d790b01ac0ae2421d7c19e0d9568924b81c9"
+    },
+    {
+      "command": [
+        "C:/Users/shuai/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests/game-ui",
+        "-p",
+        "test_*.py"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/python-tests.log",
+      "logSha256": "c5aeaafca9b8556ec509e3e01de30c99393809dc7482f68a545d731461ecc7bc"
+    },
+    {
+      "command": [
+        "C:/Users/shuai/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+        "build/game-ui/Validate-UiTasks.py"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/task-validation.log",
+      "logSha256": "90e3ddffa807ef19523e77855653984be659ff7ab47ec66f04d41348c4cb85b3"
+    },
+    {
+      "command": [
+        "C:/Users/shuai/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+        "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/check-whitespace.py"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/whitespace.log",
+      "logSha256": "3dc61001f818688f70807a68a2d6e62266ea772e312d230b30a35a5f5a0175ab"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiWindowSetTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/window-set.log",
+      "logSha256": "7268516005f09c2a1283c4de8f08e4192f9df4b73af2b019795f9bab1c1bb222"
+    },
+    {
+      "command": [
+        "C:/Users/shuai/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+        "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/audit-history.py",
+        "--output",
+        "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/history-audit.json"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/history-audit.log",
+      "logSha256": "76e8c901f0aae7d42e5ba0c8b714a95634e57603139249f737853809e632fc23"
+    }
+  ],
+  "builds": {
+    "debug": {
+      "buildId": "gameui-41087e0560da72bf6a5a7fb9aeb7381c3a010f6338dae7237892d07349dad898",
+      "client": {
+        "path": "Zircon.exe",
+        "length": 1357824,
+        "sha256": "77b00e577a18b11348a1a241d2e94d698aef4c6e843cd137d3493df0afc12210"
+      }
+    },
+    "release": {
+      "buildId": "gameui-8436ce9d18e880b1cfeef576b947d73c8d3b68db4188d7e381b84c1e51a6bf46",
+      "client": {
+        "path": "Zircon.exe",
+        "length": 1254912,
+        "sha256": "df090b85cf06e151345ea5d074777f6073fd69698ff308416acda02caa393b60"
+      }
+    }
+  },
+  "package": {
+    "path": "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+    "sha256": "dd45cbf51d976a69d28269ee0d27a985def1ee1693cab2b509b74ae347a880a4",
+    "frameCount": 94
+  },
+  "candidate": {
+    "path": "E:/workspace/mir3-ui-work/warehouse-assets-20261108-v1/zl-v2/OfficialV1.Zl",
+    "sha256": "471169dfa093b521f3c700c5a993e4e763aa17a45b2e16f440d961c0c7bf4cec",
+    "frameCount": 1
+  },
+  "sourcePlanSha256": "f8c0a002b3821fabb54993792c354c4eff35eec51f9cfdc418535017c13069e9",
+  "finalValidation": {
+    "npc": "npc-v7.log",
+    "debug": "build-debug-v6.log",
+    "release": "build-release.log",
+    "python": "python-tests-final.log",
+    "windowSet": "window-set.log",
+    "fullScene": "full-scene.log"
+  },
+  "limitations": [
+    "OfficialV1 only opts into native-card overflow handling. Legacy stays default. RuntimeReady=false, productionBindingAllowed=false and releaseAccepted=false remain.",
+    "The real scrolling body/option transform, fixed close, last action, 1-second shared option throttle, replacement cleanup and six-resolution D3D resets are tested offline. Native frame, text colors and underlined option presentation remain.",
+    "The paragraph viewport body texture matches an independent full-document TextRenderer draw at offset 16 and at the bottom in both Official scenes. This comparison excludes child option-label overlays; native wrapped underlined option visual quality still requires review.",
+    "The 900-line synthetic fixture opens in approximately 2 seconds on this host. No target-hardware performance acceptance or universal text/font/paragraph boundary acceptance is claimed.",
+    "Safe-area coordination for NPC/services/storage/inventory, independently opened quest flow, all 17 window lifecycle combinations, real storage/service actions and final visuals remain incomplete.",
+    "No live server, login, live IME, hardware device loss, release/rollback acceptance, commit, push or deployment was performed. Official installation remains read-only."
+  ],
+  "failedAttempts": [
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiNpcTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v2"
+      ],
+      "result": "fail",
+      "exitCode": 1,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/npc-v2.log",
+      "logSha256": "030c6c4a7aeadcdcf1f49fbad42c3036f6ae215d0911f9de0360f029cef1e344"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiNpcTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v3"
+      ],
+      "result": "fail",
+      "exitCode": 1,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/npc-v3.log",
+      "logSha256": "4c4bde064857b3c48e178ee1378557475bce910b78e99ea387e233c192ca5788"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiNpcTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v4"
+      ],
+      "result": "fail",
+      "exitCode": 1,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/npc-v4.log",
+      "logSha256": "4c4bde064857b3c48e178ee1378557475bce910b78e99ea387e233c192ca5788"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiNpcTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v1"
+      ],
+      "result": "fail",
+      "exitCode": 1,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/npc.log",
+      "logSha256": "36c4105aaae2b58d7e6e7db990069adc2138dcda76d74d56ed9e079eee005334"
+    }
+  ],
+  "evidenceHashes": [
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/assertions.txt",
+      "sha256": "4bf201fa6373818147287f0936a4a93eab04c241604f9d8c6d1b39d97102df2c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/coordinate-hits.txt",
+      "sha256": "5fe91ea63361fa16166e9d145533dbc73b106e8e1cf2fdd5ea413e235e6272d5"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/legacy-card.png",
+      "sha256": "bbf533c95e714eb1b384a34ed7dde97083e54d67bca961844f3c9e9c8f2882d6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/legacy-goods-bottom.png",
+      "sha256": "923b0c68e8cf7a6a3c51de563999d0f24bb99b7a8c4382bb02c858b5637a435e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/legacy-goods-quantity.png",
+      "sha256": "203601bf8d8d27d816c2fce39ce93c2fe096e8103c81b8be023e9b3eae45bfc6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/legacy-goods-top.png",
+      "sha256": "771fbf5408ff1edc726b6888249f3c10491bc553f52a0e774199bac882bf60db"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/legacy-refine-retrieve.png",
+      "sha256": "b0ca02edebfb861c3e2375d08a0e4501ea545c975379bf3df9965c22f948cdac"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/legacy-refine.png",
+      "sha256": "0743781638dc75bd0e871ff69a221e7c7cffdabc666ac4ed021bac0a0cae2551"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/legacy-repair-full.png",
+      "sha256": "c7733722ac20d86135c879e46aefd6cd530d80275fe45902c5ebab3fa6065379"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/legacy-reset-1024x768.png",
+      "sha256": "718e52a0df1079d77fab5dff0823b58b2d8d98cb7c5d319a4fb36d5893eaca4d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/legacy-reset-1280x800.png",
+      "sha256": "6ba4420ef13f0c9e3e11e94b0b510f0ef22e92014dd02cadc2da81c2e20918bf"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/legacy-reset-1366x768.png",
+      "sha256": "9307abd4893bee4b08268e04f81e8f8889f09be289f4703c0dd332384e396b42"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/legacy-reset-1440x900.png",
+      "sha256": "5d7a6e9c1c15173e85b1c06b094a5773c037c7c3e7d270d57818628ed4e3abdd"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/legacy-reset-1600x900.png",
+      "sha256": "0270ea3175f839c48f352f53a0057f3c9366895a424af520eddf7709fb8da65f"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/legacy-reset-1920x1080.png",
+      "sha256": "b024b69683e93b115d6d3973a578d2ea688b5090fe5ce983f352af2f1b7d50d3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/legacy-resources.txt",
+      "sha256": "47713d590a1b9214abdef7a0fc33d6c28a2b5a73a0cff9794375a5083020b498"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/legacy-sell-full.png",
+      "sha256": "78b81311bb79aa207b13afd334aeb71de0ef227a133dc7cb331ac6cc1fddb224"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/legacy-trace.txt",
+      "sha256": "935d55ae7f56c801ef0403b2d4b4b150adf70ebee8d8abca7ff2684b8c001c4d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/legacy-wrapped-option.png",
+      "sha256": "ff0659f55ad69307331223cc4612065bd036ee8b8e2442c86a2c9a6a470714a3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/metrics.json",
+      "sha256": "058e16be552791453b97799e8a1fb3c05e41503b21eeed33b98356c86f2aff26"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/official-card.png",
+      "sha256": "0f2b78045205403779ab7c33e75a3c5f834e7a635c67aefc7e77d52e3dd92487"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/official-goods-bottom.png",
+      "sha256": "80d24c59f7d0ca610e204e9bc12b15184ce2330377f634153302561dd5c1f48e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/official-goods-quantity.png",
+      "sha256": "773109a5e71bfd2ab4e17fd1ff1d0c31d826c57e20d6e71f679c7239f12510ae"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/official-goods-top.png",
+      "sha256": "a4588dc2e6aff8b200a2956968b06c7ec7f3d7fa50e4cbee9bb6109ff9082330"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/official-long-card-1024x768.png",
+      "sha256": "80ed0a85de9834aa2cfa0b9b70413ee863efe1a046ad3bca3cdd0f877e4bac17"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/official-long-card-1280x800.png",
+      "sha256": "69d8c62881743b35ec2fc598db9264b558b97a798ae4ffd3e247829f1f12c0c2"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/official-long-card-1366x768.png",
+      "sha256": "b34d4a753a1a91bdb61379c97815539fbab9a2ea88cf10211f4896dfbbade776"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/official-long-card-1440x900.png",
+      "sha256": "54eeed442ba6cb3ad04ad04f5f7e81e34e3d4c75edc6b3580daebeb487941a92"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/official-long-card-1600x900.png",
+      "sha256": "085c93f89ebc9611f9cd407e972c3faefefd1d6655c1f299ed28c700aa7c5f89"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/official-long-card-1920x1080.png",
+      "sha256": "a90fa9e3be3abcac373bf8981ae4c56aecedfd56dfd819741931caaec2e39228"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/official-long-card-bottom.png",
+      "sha256": "80ed0a85de9834aa2cfa0b9b70413ee863efe1a046ad3bca3cdd0f877e4bac17"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/official-long-card-open-ms.txt",
+      "sha256": "48deb732e8de8fe7995bbc2816520798fcab815f62165af4d53bbc24434c963e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/official-long-card-partial-line.png",
+      "sha256": "debc5e28c60a87d017dd2b0e5233c866c88237c8c6f6e25e8a6a167a1feecf72"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/official-long-card-top.png",
+      "sha256": "0a999d0ad927c6e818a6abbcfdb9a2a00d96d46c3dd0b8d395b617b0b501a4d1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/official-long-text-reference.png",
+      "sha256": "63ea7a263505137352f230f85a422f09e91ab97d20ca985316bf3e2865a92f02"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/official-long-text-texture.png",
+      "sha256": "63ea7a263505137352f230f85a422f09e91ab97d20ca985316bf3e2865a92f02"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/official-partial-line-long-text-reference.png",
+      "sha256": "966bb5e8cc0c4cc6428f93a50e5c86a2c4db0e33f84f4ecd89f8ac4913ad16aa"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/official-partial-line-long-text-texture.png",
+      "sha256": "966bb5e8cc0c4cc6428f93a50e5c86a2c4db0e33f84f4ecd89f8ac4913ad16aa"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/official-reentry-card.png",
+      "sha256": "24e9032cf96175fa418e23fe2d23314efc45f2ca649519ccbbeeafea26cc98bc"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/official-reentry-goods-bottom.png",
+      "sha256": "80d24c59f7d0ca610e204e9bc12b15184ce2330377f634153302561dd5c1f48e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/official-reentry-goods-quantity.png",
+      "sha256": "773109a5e71bfd2ab4e17fd1ff1d0c31d826c57e20d6e71f679c7239f12510ae"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/official-reentry-goods-top.png",
+      "sha256": "a4588dc2e6aff8b200a2956968b06c7ec7f3d7fa50e4cbee9bb6109ff9082330"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/official-reentry-long-card-1024x768.png",
+      "sha256": "80ed0a85de9834aa2cfa0b9b70413ee863efe1a046ad3bca3cdd0f877e4bac17"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/official-reentry-long-card-1280x800.png",
+      "sha256": "69d8c62881743b35ec2fc598db9264b558b97a798ae4ffd3e247829f1f12c0c2"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/official-reentry-long-card-1366x768.png",
+      "sha256": "b34d4a753a1a91bdb61379c97815539fbab9a2ea88cf10211f4896dfbbade776"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/official-reentry-long-card-1440x900.png",
+      "sha256": "54eeed442ba6cb3ad04ad04f5f7e81e34e3d4c75edc6b3580daebeb487941a92"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/official-reentry-long-card-1600x900.png",
+      "sha256": "baebc77bf70f1172dfbab87bf381bf6ffbd27e8cdc873425966d64dfa1fe2cfe"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/official-reentry-long-card-1920x1080.png",
+      "sha256": "a90fa9e3be3abcac373bf8981ae4c56aecedfd56dfd819741931caaec2e39228"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/official-reentry-long-card-bottom.png",
+      "sha256": "80ed0a85de9834aa2cfa0b9b70413ee863efe1a046ad3bca3cdd0f877e4bac17"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/official-reentry-long-card-open-ms.txt",
+      "sha256": "db6529e972a44a4db65c3f460fe66b7313138626d813d03fc7942eaa55327001"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/official-reentry-long-card-partial-line.png",
+      "sha256": "debc5e28c60a87d017dd2b0e5233c866c88237c8c6f6e25e8a6a167a1feecf72"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/official-reentry-long-card-top.png",
+      "sha256": "0a999d0ad927c6e818a6abbcfdb9a2a00d96d46c3dd0b8d395b617b0b501a4d1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/official-reentry-long-text-reference.png",
+      "sha256": "63ea7a263505137352f230f85a422f09e91ab97d20ca985316bf3e2865a92f02"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/official-reentry-long-text-texture.png",
+      "sha256": "63ea7a263505137352f230f85a422f09e91ab97d20ca985316bf3e2865a92f02"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/official-reentry-partial-line-long-text-reference.png",
+      "sha256": "966bb5e8cc0c4cc6428f93a50e5c86a2c4db0e33f84f4ecd89f8ac4913ad16aa"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/official-reentry-partial-line-long-text-texture.png",
+      "sha256": "966bb5e8cc0c4cc6428f93a50e5c86a2c4db0e33f84f4ecd89f8ac4913ad16aa"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/official-reentry-refine-retrieve.png",
+      "sha256": "6a426d5b60771fbe87155f1a6aeb0e9402c9e08d99cb4b60ad1fc77d71009ab8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/official-reentry-refine.png",
+      "sha256": "863191b6bbe505d2d23cc163b0f582bb402f70a2e67296e547a8092a9ef0e3e7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/official-reentry-repair-full.png",
+      "sha256": "4db1938fa4264426979a3a20b2dc46469f5bab70a5d5f85761522f385c998048"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/official-reentry-reset-1024x768.png",
+      "sha256": "914fc17ee2ad5aa305df83f8db2abb5845709319c87f0965f02e6c0b5882bf95"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/official-reentry-reset-1280x800.png",
+      "sha256": "b47a5ef9e7de6846fb320d74e16f9d4cc046e167a157e7b7b65a2b1675fe5bb9"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/official-reentry-reset-1366x768.png",
+      "sha256": "8162077eae9315cc95cbe35c2cf4e5b512e0d9c5a46946c9f1e53dc9c14a274f"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/official-reentry-reset-1440x900.png",
+      "sha256": "8a06bb7bc78f0b62505e29c7ff9dfc51fef6b0cf1e3a4e4a559861001f157cbc"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/official-reentry-reset-1600x900.png",
+      "sha256": "899530229c656fae04903642213ac06b42e95d8ca350f54ec17966a9183449b2"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/official-reentry-reset-1920x1080.png",
+      "sha256": "7b5c07ba2d583f190ed459c2115abb1398243110bf87aba86bb7ed687404442a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/official-reentry-sell-full.png",
+      "sha256": "33f9a26fc2b593c6ef23e98922f8568e3c4ab41547eedc41274f4fd8109bf6e6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/official-reentry-trace.txt",
+      "sha256": "935d55ae7f56c801ef0403b2d4b4b150adf70ebee8d8abca7ff2684b8c001c4d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/official-reentry-wrapped-option.png",
+      "sha256": "d26978a42c5b6bc4e2d0b20a25f3a364e07f877494efb454fb43c77ce64008d9"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/official-refine-retrieve.png",
+      "sha256": "6a426d5b60771fbe87155f1a6aeb0e9402c9e08d99cb4b60ad1fc77d71009ab8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/official-refine.png",
+      "sha256": "5d9aecb5f34c9e5113d42e137453c328888c763d9e187a5cce84e4ca5b927b55"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/official-repair-full.png",
+      "sha256": "4db1938fa4264426979a3a20b2dc46469f5bab70a5d5f85761522f385c998048"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/official-reset-1024x768.png",
+      "sha256": "914fc17ee2ad5aa305df83f8db2abb5845709319c87f0965f02e6c0b5882bf95"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/official-reset-1280x800.png",
+      "sha256": "b47a5ef9e7de6846fb320d74e16f9d4cc046e167a157e7b7b65a2b1675fe5bb9"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/official-reset-1366x768.png",
+      "sha256": "8162077eae9315cc95cbe35c2cf4e5b512e0d9c5a46946c9f1e53dc9c14a274f"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/official-reset-1440x900.png",
+      "sha256": "8a06bb7bc78f0b62505e29c7ff9dfc51fef6b0cf1e3a4e4a559861001f157cbc"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/official-reset-1600x900.png",
+      "sha256": "899530229c656fae04903642213ac06b42e95d8ca350f54ec17966a9183449b2"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/official-reset-1920x1080.png",
+      "sha256": "0731353ff36fc6d6c5dfee50c5c8f09003062be73c7a223ca1bb696b28ecdc99"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/official-sell-full.png",
+      "sha256": "33f9a26fc2b593c6ef23e98922f8568e3c4ab41547eedc41274f4fd8109bf6e6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/official-trace.txt",
+      "sha256": "935d55ae7f56c801ef0403b2d4b4b150adf70ebee8d8abca7ff2684b8c001c4d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/official-wrapped-option.png",
+      "sha256": "d26978a42c5b6bc4e2d0b20a25f3a364e07f877494efb454fb43c77ce64008d9"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-card-scroll-20261108-v7/tested-runtime.json",
+      "sha256": "1da45ff75359ed23b0cd6b1bbd199d80d02200e550a7c20ae9cfe637ff914b35"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-scroll-full-scene-20261108-v1/legacy-hud.png",
+      "sha256": "5fa69de2c6da4336331e9f837cd0ded6c24f9b714dda1e36432e8880dc050a09"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-scroll-full-scene-20261108-v1/legacy-panels.png",
+      "sha256": "d0723781ce5debe099e9ba58f4e2c999706872006bb0ec1594c651cea1634a46"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-scroll-full-scene-20261108-v1/legacy-resources.txt",
+      "sha256": "47713d590a1b9214abdef7a0fc33d6c28a2b5a73a0cff9794375a5083020b498"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-scroll-full-scene-20261108-v1/official-CharacterTab.png",
+      "sha256": "43a1af56f6c3bfd96763e2bdc70b81fcda2ad9bddce1aa09a95ffa0b5055eac8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-scroll-full-scene-20261108-v1/official-extraEquipmentTab.png",
+      "sha256": "fd2f77d0befc66bba22a81f66c6636dd2b169066f24bb721f5170886176243ca"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-scroll-full-scene-20261108-v1/official-HermitTab.png",
+      "sha256": "0bb2f47907de068dd949e5a6e35913be047868970d2da053ff4d83516c1971df"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-scroll-full-scene-20261108-v1/official-hud.png",
+      "sha256": "f7b7f3da32cebfb201acb870a8ad2bd75d8d912e19edb5574b893b87c5758faf"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-scroll-full-scene-20261108-v1/official-panels.png",
+      "sha256": "43a1af56f6c3bfd96763e2bdc70b81fcda2ad9bddce1aa09a95ffa0b5055eac8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-scroll-full-scene-20261108-v1/official-reentry-hud.png",
+      "sha256": "39be0066510de06ba2465cc008c6379ffbc4c556c67be4870b3a750f99696f4b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-scroll-full-scene-20261108-v1/official-reentry-panels.png",
+      "sha256": "8a0a2644ac845d99ab8104c3cc9acdd0573cdff950c0706b3a8b1a2bd2d4d2a8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-scroll-full-scene-20261108-v1/official-reset-1024x768.png",
+      "sha256": "43a1af56f6c3bfd96763e2bdc70b81fcda2ad9bddce1aa09a95ffa0b5055eac8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-scroll-full-scene-20261108-v1/official-reset-1280x800.png",
+      "sha256": "6da4d263d19f1aae323e49c0f41f848bd9fb075cb94dafb02df4e2f0749ef8a4"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-scroll-full-scene-20261108-v1/official-reset-1366x768.png",
+      "sha256": "bccd5d8071878413408790dbe90b5d5a1ea48d880be4cec00c916469bc30f495"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-scroll-full-scene-20261108-v1/official-reset-1440x900.png",
+      "sha256": "1b0be5742da74968aba14f74293e474a1324d346421cab3b9692607f90f43a06"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-scroll-full-scene-20261108-v1/official-reset-1600x900.png",
+      "sha256": "ddc79b57cfef144f95511d28a92a7ad2351a7a8d74ed73ca4e19a4a5f8f44ba7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-scroll-full-scene-20261108-v1/official-reset-1920x1080.png",
+      "sha256": "686e3cc1df80daea96d79cdb643655e960d5a1d3d48b39e03ad3ecfcac005f7a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-scroll-full-scene-20261108-v1/official-StatsTab.png",
+      "sha256": "dc665d7ec9343b3bdbdd2fd5bbc16f245d961d0ab217de3d7af7e82be17d8664"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-scroll-full-scene-20261108-v1/reset-pixel-probes.txt",
+      "sha256": "2c236cd844574b74b6d502b13ffed99b5cb29783fc53ea00587ca1543a18ac67"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-scroll-full-scene-20261108-v1/tested-runtime.json",
+      "sha256": "1da45ff75359ed23b0cd6b1bbd199d80d02200e550a7c20ae9cfe637ff914b35"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/audit-history.py",
+      "sha256": "43b3dd93e1bb748275abd80d37a7d986d4016b83b72bd6cf2e0ed3bac1c1fd92"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/build-debug-v2.log",
+      "sha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/build-debug-v2.receipt.json",
+      "sha256": "736a0ad59c796347142256e5b6ca8344b6905201fd043c99210c451c9ac00458"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/build-debug-v3.log",
+      "sha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/build-debug-v3.receipt.json",
+      "sha256": "148407469bb298539ab4826f8f231f0a5ed52e3da54af4f6eafee8998aa644de"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/build-debug-v4.log",
+      "sha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/build-debug-v4.receipt.json",
+      "sha256": "6ca49dd469793b601c939adccf162db597412c47d0f4c49a567e6d9afd0f8242"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/build-debug-v5.log",
+      "sha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/build-debug-v5.receipt.json",
+      "sha256": "b2692f633f7c8cfa458a39b2510a9901b3cc8086074e6bbfa253aeddc53f4ba5"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/build-debug-v6.log",
+      "sha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/build-debug-v6.receipt.json",
+      "sha256": "8924cb506264aa3af9d23013294e7953ad531a350ea6763d68e4cad2be75fac8"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/build-debug.log",
+      "sha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/build-debug.receipt.json",
+      "sha256": "23be8dba006b82eb49385c200dd25ab439b70cbfd617821cab950d23849d55fd"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/build-release.log",
+      "sha256": "c9e24428be1e56c8408af17aacfea3413de3953bfe426d10eb768782f5005ebc"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/build-release.receipt.json",
+      "sha256": "5e05b4ed1d42904fc82ec3a8c2c933423b14cc04953abc023fc534051cd341c3"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/check-whitespace.py",
+      "sha256": "b0a86f69a0f4d2d1028cf29ec177b27a0b21d80f60d2f17ed9eaf8f84c6a104f"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/full-scene.log",
+      "sha256": "0d85d4de7905eb608acc989200b5dfcc19842b35b62586889490caf606d4a988"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/full-scene.receipt.json",
+      "sha256": "b265ba70554f879ef5645777ff7759d60479d3fcf1c9ee7ddad5405647d8b3ec"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/manifest-debug.log",
+      "sha256": "fb2e2a3047e1036325bb1159e022bdcd29c5e4f1ada78f3466fcbcfdeeecc8dd"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/manifest-debug.receipt.json",
+      "sha256": "c2894e248ee96d69712c603319f5a608c8dc6773f888a9470f25fdeaa297a5b3"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/manifest-release.log",
+      "sha256": "20e328756755d5f352e9211e1d019bfbe7e69e3bf14d99c260943e8b414b3aea"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/manifest-release.receipt.json",
+      "sha256": "67a9a3c207527ef7c7ee64c31bd54847166210ac8dc5dc3d7a9d0c871a4c1b89"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/npc-v2.log",
+      "sha256": "030c6c4a7aeadcdcf1f49fbad42c3036f6ae215d0911f9de0360f029cef1e344"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/npc-v2.receipt.json",
+      "sha256": "489b68bfc1a9401487288b086b9bf374b7d50239a2621126bb1fe0f291cf6593"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/npc-v3.log",
+      "sha256": "4c4bde064857b3c48e178ee1378557475bce910b78e99ea387e233c192ca5788"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/npc-v3.receipt.json",
+      "sha256": "4e7b7a53a565db1f2d94f9be2e1bb3859090048026a9dac746c2dd63862fcf51"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/npc-v4.log",
+      "sha256": "4c4bde064857b3c48e178ee1378557475bce910b78e99ea387e233c192ca5788"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/npc-v4.receipt.json",
+      "sha256": "1e026bd7d903b7a6a6f6a508f1fd6cb8d9118847ebe2b8f25f7ab541a67cbec4"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/npc-v5.log",
+      "sha256": "69eb5d5ee932ebad51e3df98f29fb99d8e6df4786776894a8a1c380a0cbbebdd"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/npc-v5.receipt.json",
+      "sha256": "2bcf662d21d28a88d93f71cdc6410aef4f3a664c2531acf3769fb4c3aae2ddf4"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/npc-v6.log",
+      "sha256": "5a5b22de9473558fc601fdd001452d77fbc9661cac8d7794a444a4a7938b6421"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/npc-v6.receipt.json",
+      "sha256": "9809d1b60505daa331ffb61792f3beed318dd47b23d9a5fe26a30369826749a7"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/npc-v7.log",
+      "sha256": "ad3f6ef990b955462fc3c3f9f423d13e02cb92e211918f1710f4745d20f011d9"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/npc-v7.receipt.json",
+      "sha256": "8f58871103f4a9ebe06b0ad23b14b9fbdb39da331c54e7a2e36f00cc9825e800"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/npc.log",
+      "sha256": "36c4105aaae2b58d7e6e7db990069adc2138dcda76d74d56ed9e079eee005334"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/npc.receipt.json",
+      "sha256": "3494b8181b6abf57cd4b7b88f478b9850c072596a7ee24dca38e9f5ad4a53332"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/python-tests-final.log",
+      "sha256": "0c855d9e0463df110878dd3b6459d790b01ac0ae2421d7c19e0d9568924b81c9"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/python-tests-final.receipt.json",
+      "sha256": "3281c557f717d3d88acea7017b3094168d21842c4e0609093afaff15460c0fe6"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/python-tests.log",
+      "sha256": "c5aeaafca9b8556ec509e3e01de30c99393809dc7482f68a545d731461ecc7bc"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/python-tests.receipt.json",
+      "sha256": "829a360dbf91aa4e220801b6ec7b11e4ddfab1a849f240310bee0ccdda57e53b"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/README.md",
+      "sha256": "c7c2c2c5fda00c08b1a395713f400677fac01111b3b171ab19be8dd19dc7c529"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/release-manifest-debug.json",
+      "sha256": "1ebcea06e982268fe5aa44ee7518fa004f26f74d1447127c8548201b891bd02f"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/release-manifest-release.json",
+      "sha256": "10fa4eb89b25fcdb9709102b2d68fa0040db2b019cc9c49a504292344af74447"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/run-check.py",
+      "sha256": "8cea69f8c28d781722ec26876840ea3e6bb44ae5ed37e2d213fdab62d1a7c943"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/slow-parser-observation.json",
+      "sha256": "93dcae9037c8c59887a032ac526f949985890e1685d18c9332d0a39e40a1a772"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/source-before/Client/Controls/DXLabel.cs",
+      "sha256": "8650a41ef81fef933375b9c22fe9d91432b23b4bb3000684da7fe5e64dd0e196"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/source-before/Client/Envir/GameUiOfficialV1WindowSet.cs",
+      "sha256": "1d429a9e4bcd4a85cb5beb1972c498395f12ab5f874a9e5e056eabb641d52e7c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/source-before/Client/Scenes/Views/NPCDialog.cs",
+      "sha256": "9f66535700a744a9bc08744057dcfd6b0df6929817397aa8617c9eb5de389fca"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/source-before/tests/game-ui/OfficialUiNpcTests.cs",
+      "sha256": "25d1b23c516544f5db02ff59d1cceaea01257417f949ca01291b60865c375767"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/source-before.json",
+      "sha256": "7fd69f28b76ed267b9f33d9c998282e0b887a5537b3dec1e381e687f7e000959"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/task-validation.log",
+      "sha256": "90e3ddffa807ef19523e77855653984be659ff7ab47ec66f04d41348c4cb85b3"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/task-validation.receipt.json",
+      "sha256": "94cc019520a7940eabcd643ea8fd7b5cd4fcdc90a7f4e387cd7ae58d01aaff63"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/tested-runtime.json",
+      "sha256": "1da45ff75359ed23b0cd6b1bbd199d80d02200e550a7c20ae9cfe637ff914b35"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/whitespace.log",
+      "sha256": "3dc61001f818688f70807a68a2d6e62266ea772e312d230b30a35a5f5a0175ab"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/whitespace.receipt.json",
+      "sha256": "3666ec3f17eb4e2c3baf706fc6326468a4a3c254e469e479acfc04309cb98d97"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/window-set.log",
+      "sha256": "7268516005f09c2a1283c4de8f08e4192f9df4b73af2b019795f9bab1c1bb222"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/window-set.receipt.json",
+      "sha256": "77eb502952156674330eef8cb909ca79245a584e01ca135f5d24b84e20ab9413"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/history-audit.json",
+      "sha256": "76e8c901f0aae7d42e5ba0c8b714a95634e57603139249f737853809e632fc23"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/history-audit.log",
+      "sha256": "76e8c901f0aae7d42e5ba0c8b714a95634e57603139249f737853809e632fc23"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-card-scroll/history-audit.receipt.json",
+      "sha256": "bc763419774d362f4bc2d1d35e4c06d1c86decee72321e70247c50171879fb75"
+    }
+  ]
+}

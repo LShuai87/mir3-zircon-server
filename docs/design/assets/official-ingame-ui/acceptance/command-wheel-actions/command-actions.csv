@@ -1,0 +1,7 @@
+clockwise,button,target,opened,closed,other_windows_unchanged
+1,InventoryButton,inventory,true,true,true
+2,SpellButton,skills,true,true,true
+3,ConfigButton,settings,true,true,true
+4,GuildButton,guild,true,true,true
+5,QuestButton,quests,true,true,true
+6,GroupButton,group,true,true,true

@@ -1,0 +1,358 @@
+{
+  "schemaVersion": 1,
+  "kind": "official-ingame-ui-secondary-service-scope-enforcement",
+  "checkedAtLocalDate": "2026-11-08",
+  "releaseAccepted": false,
+  "referenceResolution": [
+    1024,
+    768
+  ],
+  "results": {
+    "deferredServiceWindows": 15,
+    "disconnectedCandidateBindings": 5,
+    "npcChecks": 6621,
+    "npcScenes": 3,
+    "npcCoordinateHits": 707,
+    "npcPresentedFrames": 48,
+    "npcDeviceResets": 33,
+    "identicalOriginalCardPixels": 2399935,
+    "orderedPacketAndActionTracesEqual": true,
+    "deferredServiceGeometryAndCloseStyleCompared": true,
+    "windowSetChecks": 159787,
+    "fullSceneChecks": 180,
+    "fullScenePresentedFrames": 17,
+    "fullSceneDeviceResets": 7,
+    "fullSceneIdenticalPanelPixels": 690512,
+    "runtimeReady": false,
+    "productionBindingAllowed": false,
+    "legacyDefault": true
+  },
+  "sourceChanges": [
+    {
+      "path": "Client/Envir/GameUiOfficialV1WindowSet.cs",
+      "beforeSha256": "961616a912149a016e2123000a979c1498eecec936436c6721939f2d7e971a43",
+      "afterSha256": "cfeea738a915890e0d82534f5e9179ec5b3f2c300dfc051dac8e5508d92a5e50"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiNpcTests.cs",
+      "beforeSha256": "c5ab70ba329f2d5cf29ffeb6c77e849633aa81710f7fc2d2b171db8b091d6b74",
+      "afterSha256": "36e6f3003458aba27a03dc8d8e0142271f22a8c55cfd62881498648a305bdc90"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiNpcItemServiceTests.cs",
+      "beforeSha256": "c2054e5286bfe38768ac0235b1d3951be8129f7f7712afa3a2c3f9f652d1a37e",
+      "afterSha256": "9083b5f8aeb14ed8f97a140c0b904a003031e10f2abf22d2b1b5b2e5ec3a4cfd"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiNpcRefineTests.cs",
+      "beforeSha256": "dcd5b499dc172e70c59d4a8198dad6196da5d8af2daaa276773892d4c2094e29",
+      "afterSha256": "041855d9d5823be70fe5b8ad5709ab038f153d8a88d03fcd5d6726a11c5df54c"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiNpcQuestTests.cs",
+      "beforeSha256": "9c8cacf7e2bb7946d7dc2c666a634e8c1f15eb0b5dcb072de58bb002b27bdbf4",
+      "afterSha256": "5b7f36812b54da3801b96f000e2e6973c74b05c32aaccb5b612569d6ac539b55"
+    }
+  ],
+  "sourceHashes": [
+    {
+      "path": "Client/Envir/GameUiOfficialV1WindowSet.cs",
+      "sha256": "cfeea738a915890e0d82534f5e9179ec5b3f2c300dfc051dac8e5508d92a5e50"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiNpcTests.cs",
+      "sha256": "36e6f3003458aba27a03dc8d8e0142271f22a8c55cfd62881498648a305bdc90"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiNpcItemServiceTests.cs",
+      "sha256": "9083b5f8aeb14ed8f97a140c0b904a003031e10f2abf22d2b1b5b2e5ec3a4cfd"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiNpcRefineTests.cs",
+      "sha256": "041855d9d5823be70fe5b8ad5709ab038f153d8a88d03fcd5d6726a11c5df54c"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiNpcQuestTests.cs",
+      "sha256": "5b7f36812b54da3801b96f000e2e6973c74b05c32aaccb5b612569d6ac539b55"
+    }
+  ],
+  "commands": [
+    {
+      "command": "MSBuild Client/Client.csproj /t:Build /p:Configuration=Debug /p:Platform=AnyCPU /v:minimal /nologo",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/scope-enforcement/build-debug.log",
+      "logSha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "command": "MSBuild Client/Client.csproj /t:Build /p:Configuration=Release /p:Platform=AnyCPU /v:minimal /nologo",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/scope-enforcement/build-release.log",
+      "logSha256": "c9e24428be1e56c8408af17aacfea3413de3953bfe426d10eb768782f5005ebc"
+    },
+    {
+      "command": "tests/Run-GameUiNpcTests.ps1 -PackagePath E:/workspace/mir3-ui-work/npc-shop-assets-20261108-v1/zl/OfficialV1.Zl -CompilerPath \"D:/Program Files/Microsoft Visual Studio/2022/Enterprise/MSBuild/Current/Bin/Roslyn/csc.exe\" -EvidenceDirectory E:/workspace/mir3-ui-work/scope-enforcement-20261108-v2/npc",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/scope-enforcement/npc-test.log",
+      "logSha256": "0cd864dd4fefa330d99dd182c86f8c242bdcb610c8b1a04d51d697bfdcb117ff"
+    },
+    {
+      "command": "tests/Run-GameUiWindowSetTests.ps1 -PackagePath E:/workspace/mir3-ui-work/npc-shop-assets-20261108-v1/zl/OfficialV1.Zl -CompilerPath \"D:/Program Files/Microsoft Visual Studio/2022/Enterprise/MSBuild/Current/Bin/Roslyn/csc.exe\" -EvidenceDirectory E:/workspace/mir3-ui-work/scope-enforcement-20261108-v2/window-set",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/scope-enforcement/window-set-test.log",
+      "logSha256": "c054dda8e876e3d8eeada36656bb5ebf0bf9d573beb3a05c234422a808bb4242"
+    },
+    {
+      "command": "tests/Run-GameUiFullSceneTests.ps1 -PackagePath E:/workspace/mir3-ui-work/npc-shop-assets-20261108-v1/zl/OfficialV1.Zl -CompilerPath \"D:/Program Files/Microsoft Visual Studio/2022/Enterprise/MSBuild/Current/Bin/Roslyn/csc.exe\" -EvidenceDirectory E:/workspace/mir3-ui-work/scope-enforcement-20261108-v2/full-scene",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/scope-enforcement/full-scene-test.log",
+      "logSha256": "0d85d4de7905eb608acc989200b5dfcc19842b35b62586889490caf606d4a988"
+    },
+    {
+      "command": "build/game-ui/New-GameUiReleaseManifest.ps1 -ClientDirectory E:/workspace/Debug/Client -ResourceRoot E:/workspace/mir3-ui-work/npc-shop-binding-20261108-v1/staged-resources -OutputPath E:/workspace/mir3-ui-work/scope-enforcement-20261108-v2/verified-debug.json",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/scope-enforcement/manifest-debug.log",
+      "logSha256": "ab235256c43b28498544f7a7e72f298e209e2eb06f9c80f71540d54ff22f0b23"
+    },
+    {
+      "command": "build/game-ui/New-GameUiReleaseManifest.ps1 -ClientDirectory E:/workspace/Release/Client -ResourceRoot E:/workspace/mir3-ui-work/npc-shop-binding-20261108-v1/staged-resources -OutputPath E:/workspace/mir3-ui-work/scope-enforcement-20261108-v2/verified-release.json",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/scope-enforcement/manifest-release.log",
+      "logSha256": "edb2fd1236e6a5c70cdd960282013df0dc1ba342d1ad4b63d59c5618f821ae5b"
+    },
+    {
+      "command": "Python audit: binaries/dependencies/package vs manifests; tested-runtime vs Debug; byte equality of three ordered NPC traces",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/scope-enforcement/runtime-audit.log",
+      "logSha256": "2182dc9819039c2713e5530fb3b3d5c6995865ed1d6a0c812545b3c59099c924"
+    },
+    {
+      "command": "git -c core.whitespace=cr-at-eol diff --check -- changed paths; explicit source and documentation whitespace scan",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/scope-enforcement/whitespace.log",
+      "logSha256": "fb4f98b5834763561b07c13022a7f63cf57b4594966cb7209837fe618933632a"
+    },
+    {
+      "command": "python build/game-ui/Validate-UiTasks.py",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/scope-enforcement/task-validation.log",
+      "logSha256": "90e3ddffa807ef19523e77855653984be659ff7ab47ec66f04d41348c4cb85b3"
+    }
+  ],
+  "failedAttempts": [
+    {
+      "log": "docs/design/assets/official-ingame-ui/acceptance/scope-enforcement/npc-test-v1-error.log",
+      "reason": "Relative Tee-Object log path changed with the temporary runner directory; not a passing recorded command."
+    },
+    {
+      "log": "docs/design/assets/official-ingame-ui/acceptance/scope-enforcement/evidence-write-v1-error.log",
+      "validationLog": "docs/design/assets/official-ingame-ui/acceptance/scope-enforcement/task-validation-v1-error.log",
+      "reason": "Missing Write-Host log prevented report assembly; task validation correctly failed until the new source transitions were recorded."
+    },
+    {
+      "log": "docs/design/assets/official-ingame-ui/acceptance/scope-enforcement/task-validation-v2-error.log",
+      "reason": "Archived README Markdown links are relative to its original directory; preserved its bytes with a .md.snapshot extension so it is treated as historical source data rather than a live document."
+    }
+  ],
+  "limitations": [
+    "Socket-free synthetic response tests do not establish live-server acceptance.",
+    "Native service styling is deferred by the user; retained standalone candidate adapters are not installed or revalidated as deliverable UI.",
+    "G0-2/3/4/5, Chinese IME, final visuals and release rollback remain incomplete."
+  ],
+  "supersededInstalledStylingReports": [
+    "docs/design/assets/official-ingame-ui/acceptance/npc-item-services/verification.json",
+    "docs/design/assets/official-ingame-ui/acceptance/npc-refine-services/verification.json",
+    "docs/design/assets/official-ingame-ui/acceptance/npc-quest-services/verification.json"
+  ],
+  "evidenceHashes": [
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/scope-enforcement/build-debug.log",
+      "sha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/scope-enforcement/build-release.log",
+      "sha256": "c9e24428be1e56c8408af17aacfea3413de3953bfe426d10eb768782f5005ebc"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/scope-enforcement/evidence-write-v1-error.log",
+      "sha256": "d8117cfc78f12609fa83feacd8f3a00c5a5333c9177d4b1a24efb462f1a86d09"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/scope-enforcement/full-scene/official-hud.png",
+      "sha256": "0d72ce7b9c9ed1d0c807333ef4c62517a0f9d90d6f49015ba946f1b0882384ac"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/scope-enforcement/full-scene/official-panels.png",
+      "sha256": "43a1af56f6c3bfd96763e2bdc70b81fcda2ad9bddce1aa09a95ffa0b5055eac8"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/scope-enforcement/full-scene/reset-pixel-probes.txt",
+      "sha256": "2c236cd844574b74b6d502b13ffed99b5cb29783fc53ea00587ca1543a18ac67"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/scope-enforcement/full-scene/tested-runtime.json",
+      "sha256": "f510df0d35a049c3013d0419867451853c326f53db9df5b390ca7db27185919c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/scope-enforcement/full-scene-test.log",
+      "sha256": "0d85d4de7905eb608acc989200b5dfcc19842b35b62586889490caf606d4a988"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/scope-enforcement/manifest-debug.log",
+      "sha256": "ab235256c43b28498544f7a7e72f298e209e2eb06f9c80f71540d54ff22f0b23"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/scope-enforcement/manifest-release.log",
+      "sha256": "edb2fd1236e6a5c70cdd960282013df0dc1ba342d1ad4b63d59c5618f821ae5b"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/scope-enforcement/npc/assertions.txt",
+      "sha256": "5687af1c27e745d11ba3247c269b218b99e4329679421c7848e453e23c6fac4e"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/scope-enforcement/npc/coordinate-hits.txt",
+      "sha256": "609a940446a52f9b2acf935f7d8ca258f9c1edf0d0c28fe0da3e4eb76792c797"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/scope-enforcement/npc/legacy-repair-full.png",
+      "sha256": "c7733722ac20d86135c879e46aefd6cd530d80275fe45902c5ebab3fa6065379"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/scope-enforcement/npc/legacy-trace.txt",
+      "sha256": "935d55ae7f56c801ef0403b2d4b4b150adf70ebee8d8abca7ff2684b8c001c4d"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/scope-enforcement/npc/metrics.json",
+      "sha256": "07d3d1e9cdff2bc77063e6e1b45a338a299d8a0b6480d386081e637a08b6cc93"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/scope-enforcement/npc/official-reentry-trace.txt",
+      "sha256": "935d55ae7f56c801ef0403b2d4b4b150adf70ebee8d8abca7ff2684b8c001c4d"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/scope-enforcement/npc/official-refine.png",
+      "sha256": "78aa0e1d127f9ce50f47dfd15261eee9d5f9144da24be5fa07c671329ead10c8"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/scope-enforcement/npc/official-repair-full.png",
+      "sha256": "d768f2b7e0cee8e4d7cbed164ed8842dfc4544b5f9028614ef65aa0ff4674b44"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/scope-enforcement/npc/official-sell-full.png",
+      "sha256": "458ce77c8e2bb728d78be855e122890b2e55c15175408be34a68d77261fd092e"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/scope-enforcement/npc/official-trace.txt",
+      "sha256": "935d55ae7f56c801ef0403b2d4b4b150adf70ebee8d8abca7ff2684b8c001c4d"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/scope-enforcement/npc/tested-runtime.json",
+      "sha256": "f510df0d35a049c3013d0419867451853c326f53db9df5b390ca7db27185919c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/scope-enforcement/npc-test-v1-error.log",
+      "sha256": "6cb9d2e90bc10728936b1bd6bd6840cee8092da4b27d546fbdf3ec200d2789ab"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/scope-enforcement/npc-test.log",
+      "sha256": "0cd864dd4fefa330d99dd182c86f8c242bdcb610c8b1a04d51d697bfdcb117ff"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/scope-enforcement/README.md",
+      "sha256": "a2a086263ef5b333300dab1bfdfddc50735014ee0b8f521a184cfaf29f691d24"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/scope-enforcement/release-debug.json",
+      "sha256": "3a91806de0a1a283c388f5440b111e2a78a2fd423713f50ccd496a9c8ec526f1"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/scope-enforcement/release-release.json",
+      "sha256": "f1904fe455623370d03ee6c2208dae32d920162ff4c55e48d8c094b8ed10d53c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/scope-enforcement/runtime-audit.json",
+      "sha256": "566f671ac554a3e1a9220ebb6b31605ef013cfb18906dced53d6db8394ba7350"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/scope-enforcement/runtime-audit.log",
+      "sha256": "2182dc9819039c2713e5530fb3b3d5c6995865ed1d6a0c812545b3c59099c924"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/scope-enforcement/scope-audit.json",
+      "sha256": "3a4fc2ab8879a61501c04386defa2fcd75cfb456b8756f5c8a1d12ffa4fe982d"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/scope-enforcement/source-before/Client__Envir__GameUiOfficialV1WindowSet.cs",
+      "sha256": "961616a912149a016e2123000a979c1498eecec936436c6721939f2d7e971a43"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/scope-enforcement/source-before/docs__tasks__official-ingame-ui__README.md.snapshot",
+      "sha256": "bdb1681f3b91ab2f878a3b20d94f49ed6ce2748b68238895fb1ed62354a228f1"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/scope-enforcement/source-before/docs__tasks__official-ingame-ui__tasks.json",
+      "sha256": "97605987f923f9aa23d664d9553046955e332de6def34e9dbfe4ce3475dde80d"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/scope-enforcement/source-before/tests__game-ui__OfficialUiNpcItemServiceTests.cs",
+      "sha256": "c2054e5286bfe38768ac0235b1d3951be8129f7f7712afa3a2c3f9f652d1a37e"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/scope-enforcement/source-before/tests__game-ui__OfficialUiNpcQuestTests.cs",
+      "sha256": "9c8cacf7e2bb7946d7dc2c666a634e8c1f15eb0b5dcb072de58bb002b27bdbf4"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/scope-enforcement/source-before/tests__game-ui__OfficialUiNpcRefineTests.cs",
+      "sha256": "dcd5b499dc172e70c59d4a8198dad6196da5d8af2daaa276773892d4c2094e29"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/scope-enforcement/source-before/tests__game-ui__OfficialUiNpcTests.cs",
+      "sha256": "c5ab70ba329f2d5cf29ffeb6c77e849633aa81710f7fc2d2b171db8b091d6b74"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/scope-enforcement/source-before.json",
+      "sha256": "3997930f7577c3d5c5b9d9f0c4dfe2a6726e36a6517c61534516f4a6714cef5a"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/scope-enforcement/task-validation-v1-error.log",
+      "sha256": "fed5a772a088162565552ae315302ada22856fd389e35f37fb5dfdac0d9f808c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/scope-enforcement/task-validation-v2-error.log",
+      "sha256": "cd3180fa6e3ee2a842eb59f9793bb9e3e64a2095ff9fe292b9aafbd0273c7b45"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/scope-enforcement/task-validation.log",
+      "sha256": "90e3ddffa807ef19523e77855653984be659ff7ab47ec66f04d41348c4cb85b3"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/scope-enforcement/whitespace.log",
+      "sha256": "fb4f98b5834763561b07c13022a7f63cf57b4594966cb7209837fe618933632a"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/scope-enforcement/window-set/button-hitmask-cpu.txt",
+      "sha256": "8c02ba0d543cdf1f7ebeb48c8e6f52a83dde10de6fcca3b43899d8982e666927"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/scope-enforcement/window-set/legacy-glyph-restored.png",
+      "sha256": "0a53fff02c059efc67e4808ccfbd669c8560f8a164c6da2f2f6970301adcf2ff"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/scope-enforcement/window-set/legacy-glyph-suppressed.png",
+      "sha256": "5a739a1abe0ce2f11461d1c429810d6256b07eabeb58321d7f9ba821f84b2cab"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/scope-enforcement/window-set-test.log",
+      "sha256": "c054dda8e876e3d8eeada36656bb5ebf0bf9d573beb3a05c234422a808bb4242"
+    }
+  ]
+}

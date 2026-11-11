@@ -1,0 +1,1 @@
+Runner pipeline failed while Tee-Object resolved a relative log path inside the temporary test directory: Could not find a part of the path C:\Users\shuai\AppData\Local\Temp\ZirconNpcTests-e4a2c710ea0a4d67bb77d2c4ceafc8ec\docs\design\assets\official-ingame-ui\acceptance\scope-enforcement\npc-test-v1.log. This attempt is not claimed as a passing recorded command.

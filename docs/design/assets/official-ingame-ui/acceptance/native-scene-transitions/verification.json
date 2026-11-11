@@ -1,0 +1,1181 @@
+{
+  "schemaVersion": 1,
+  "kind": "official-native-scene-transitions-verification",
+  "checkedAtLocalDate": "2026-11-08",
+  "referenceResolution": [
+    1024,
+    768
+  ],
+  "releaseAccepted": false,
+  "results": {
+    "fullSceneChecks": 911,
+    "windowSetChecks": 168890,
+    "realGameConstructors": 25,
+    "presentedFrames": 39,
+    "explicitDeviceResets": 9,
+    "identicalPanelPixels": 690512,
+    "nativeGameEntriesViaPacket": 22,
+    "serializedLoopbackPackets": 64,
+    "transitionEvidenceRows": 78,
+    "styles": [
+      "Legacy",
+      "OfficialV1"
+    ],
+    "inGameDisconnectReasons": 8,
+    "nativeLoginDispatchVerified": true,
+    "nativeGameLogoutDispatchVerified": true,
+    "nativeSelectLogoutDispatchVerified": true,
+    "nativeStartGameDispatchVerified": true,
+    "nativeReturnToLoginVerified": true,
+    "loopbackSocketEofVerified": true,
+    "modalFocusLifecycleVerified": true,
+    "realAccountLoginVerified": false,
+    "realServerReconnectVerified": false,
+    "liveImeVerified": false
+  },
+  "implementation": [
+    "DXMessageBox restores its prior editor through one helper for hiding and disposal. It clears HiddenBox before callbacks and rejects disposed native editors or disposing ancestors; normal live-editor focus restoration remains intact.",
+    "CConnection now handles AnotherUserPassword, which Server/Envir/SEnvir.cs emits during account security handling, with the original native modal and ReturnToLogin callback. Server authority and account security logic are unchanged.",
+    "Window runner records the exact SHA256 identities of the three tested runtime files alongside successful evidence.",
+    "Full-scene runner compiles a new partial harness that uses actual TCP receive/deserialization and BaseConnection.Process dispatch, normal LoginScene/SelectScene/GameScene constructors, native disconnect modal buttons and CEnvir.ReturnToLogin."
+  ],
+  "verifiedBehaviors": [
+    "Both Legacy and candidate OfficialV1 traverse serialized login/start-game/game-logout/select-logout, direct ReturnToLogin and idempotent repeated ReturnToLogin; all data and peers are synthetic and isolated.",
+    "A real loopback peer EOF reaches native disconnect processing; the timeout is advanced explicitly to avoid waiting two seconds. The scene remains alive until native acknowledgement.",
+    "All eight in-game disconnect enum reasons use native modal acknowledgement and return to login; ServerClosing exercises the close button, other reasons exercise OK. WrongVersion belongs to login/version handling and is outside this in-game matrix.",
+    "Each retired game scene releases its controls, original WinForms editor, chat pages, Official adapters, startup borrower and static topology listener. The application owner and verified package remain alive for subsequent scene entry.",
+    "Ten Official reentries restore the saved tab name and system filter, use a fresh editor with an initially empty draft and discard prior-scene history; each new system message is delivered once.",
+    "Native modal OK/close/hide retain the live editor HWND/draft/selection. Disposing a previously hidden modal cannot steal newer focus. Modal disposal rejects an already disposed editor and a live editor under a disposing ancestor.",
+    "Existing complete scene coverage still renders four character pages, six resolutions, actual device resets, original item/chat/input retention and identical panel pixels. Final Debug binary also passes 168890 window/startup/chat integration checks.",
+    "Debug and Release compile and match new inspection manifests; source plan, package, task states and release gates are preserved."
+  ],
+  "sourceChanges": [
+    {
+      "path": "tests/game-ui/OfficialUiFullSceneTests.cs",
+      "beforeSha256": "95e0b086a7ba20c631d30dab30079d09e683ea5672c61a1f762ac623af5cc306",
+      "afterSha256": "5838a24cd926a6d04c849b2edd19f2c7ecc132d9e1aca02ec5222d8bbe2af3cb"
+    },
+    {
+      "path": "tests/Run-GameUiFullSceneTests.ps1",
+      "beforeSha256": "e3d5fb3b99d993f4b403ee78a5166a55baf10639f63c292c2b85b8791eb7bcd0",
+      "afterSha256": "d1beda854b779283d326bf5f7481de8f0e5db1912274e8d6b1c9d5452a2e849b"
+    },
+    {
+      "path": "Client/Envir/CConnection.cs",
+      "beforeSha256": "423e46eeb1a01089ddc211cc0ebfaf5c79144a1da3bd7b0c981e44d9fe7d1fbc",
+      "afterSha256": "c1fed150672060a0f87bb443eed33a6d52eae4511eddf6ed0ed6922f5e2fdc46"
+    },
+    {
+      "path": "tests/Run-GameUiWindowSetTests.ps1",
+      "beforeSha256": "28b89b6548b60728468ee0311ae3fc6b98d6a724dc0a7abb031c5a59327e9c6d",
+      "afterSha256": "8a66dc84484a1413ec5d3c34041e7c0b048401ea117ff2f8527268d6f34016b2"
+    }
+  ],
+  "firstTrackedSourceChanges": [
+    {
+      "path": "Client/Controls/DXMessageBox.cs",
+      "beforeSha256": "d2e7f34114a0123c840a34ac8d37c118feeccbfa500e1f30fa9808f91cfe55ba",
+      "afterSha256": "757b3b7bc7736f6a66c499f674549720a3a6a9f6b14dd2203380ca6b03902d9b"
+    }
+  ],
+  "newlyTrackedSources": [
+    {
+      "path": "Client/Scenes/LoginScene.cs",
+      "sha256": "ce27d89c1bbcc383b8b7cef38287a40245c03b66fcfc396cc6a5508d4437a42d",
+      "createdThisRound": false
+    },
+    {
+      "path": "Client/Scenes/SelectScene.cs",
+      "sha256": "c266b17c620c4852e8972e9689884ca028ec6c3f93b4de52c2f83ba31b6339ad",
+      "createdThisRound": false
+    },
+    {
+      "path": "Client/Controls/DXMessageBox.cs",
+      "sha256": "757b3b7bc7736f6a66c499f674549720a3a6a9f6b14dd2203380ca6b03902d9b",
+      "createdThisRound": false
+    },
+    {
+      "path": "Library/Network/BaseConnection.cs",
+      "sha256": "2408a3fcf1cf060239d3cc1bb08544c4d10e6cd958c32d86d6f9a3c88b42d749",
+      "createdThisRound": false
+    },
+    {
+      "path": "Library/Network/Packet.cs",
+      "sha256": "aed519285bf0fbe1859c3b954d8b4990be5c6926bbfbc13cb52a3a412f66ea33",
+      "createdThisRound": false
+    },
+    {
+      "path": "tests/game-ui/OfficialUiNativeSceneTransitionTests.cs",
+      "sha256": "5e99ed611b99a5d81b7d321546f2e7a14efb398fd793ab3e7c5607d40d95976f",
+      "createdThisRound": true
+    },
+    {
+      "path": "Server/Envir/SEnvir.cs",
+      "sha256": "e4806f720f847cb44556cacf6928b7d974f303d5bac2088d43d8587c5a1424a9",
+      "createdThisRound": false
+    }
+  ],
+  "sourceHashes": [
+    {
+      "path": "tests/game-ui/OfficialUiFullSceneTests.cs",
+      "sha256": "5838a24cd926a6d04c849b2edd19f2c7ecc132d9e1aca02ec5222d8bbe2af3cb"
+    },
+    {
+      "path": "tests/Run-GameUiFullSceneTests.ps1",
+      "sha256": "d1beda854b779283d326bf5f7481de8f0e5db1912274e8d6b1c9d5452a2e849b"
+    },
+    {
+      "path": "Client/Envir/CEnvir.cs",
+      "sha256": "0ee69c9035ae21a9486cfc4bca99ec4435ca31c39cc94df3995ebb9527ce4919"
+    },
+    {
+      "path": "Client/Envir/CConnection.cs",
+      "sha256": "c1fed150672060a0f87bb443eed33a6d52eae4511eddf6ed0ed6922f5e2fdc46"
+    },
+    {
+      "path": "Client/Scenes/GameScene.cs",
+      "sha256": "9e5ab5f140a301c895626a952c19983236ec8434985511aa3f6937a964d0f94e"
+    },
+    {
+      "path": "Client/Scenes/LoginScene.cs",
+      "sha256": "ce27d89c1bbcc383b8b7cef38287a40245c03b66fcfc396cc6a5508d4437a42d"
+    },
+    {
+      "path": "Client/Scenes/SelectScene.cs",
+      "sha256": "c266b17c620c4852e8972e9689884ca028ec6c3f93b4de52c2f83ba31b6339ad"
+    },
+    {
+      "path": "Client/Controls/DXMessageBox.cs",
+      "sha256": "757b3b7bc7736f6a66c499f674549720a3a6a9f6b14dd2203380ca6b03902d9b"
+    },
+    {
+      "path": "Client/Envir/GameUiStartupSession.cs",
+      "sha256": "d044bd514f839ab2656d433ef0e39f4f84770916803d5fc566e929de9667c40b"
+    },
+    {
+      "path": "Client/Envir/GameUiOfficialV1WindowSet.cs",
+      "sha256": "35ada8411ee7c2036ef8759ab268199de73210681b08b780fa5cf285aebdcef2"
+    },
+    {
+      "path": "Client/Envir/GameUiOfficialV1ChatSet.cs",
+      "sha256": "01611900bc742f6258e8408066ca6936ad25b05d21ea734b2ed58717f5b66de9"
+    },
+    {
+      "path": "Client/Envir/GameUiChatGroupBinding.cs",
+      "sha256": "8ad5dd1769c1dcd75c6b76492af95daf3526768e0accf53e726084e83da6edd4"
+    },
+    {
+      "path": "Client/Scenes/Views/ChatTab.cs",
+      "sha256": "a4ac0c7392a1c50c9649e6a4ab5e26829af4ca8c007fd9f2cbe238d21815c6d2"
+    },
+    {
+      "path": "Library/Network/BaseConnection.cs",
+      "sha256": "2408a3fcf1cf060239d3cc1bb08544c4d10e6cd958c32d86d6f9a3c88b42d749"
+    },
+    {
+      "path": "Library/Network/Packet.cs",
+      "sha256": "aed519285bf0fbe1859c3b954d8b4990be5c6926bbfbc13cb52a3a412f66ea33"
+    },
+    {
+      "path": "tests/Run-GameUiWindowSetTests.ps1",
+      "sha256": "8a66dc84484a1413ec5d3c34041e7c0b048401ea117ff2f8527268d6f34016b2"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiNativeSceneTransitionTests.cs",
+      "sha256": "5e99ed611b99a5d81b7d321546f2e7a14efb398fd793ab3e7c5607d40d95976f"
+    },
+    {
+      "path": "Server/Envir/SEnvir.cs",
+      "sha256": "e4806f720f847cb44556cacf6928b7d974f303d5bac2088d43d8587c5a1424a9"
+    }
+  ],
+  "commands": [
+    {
+      "command": [
+        "C:/Users/shuai/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+        "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/audit-history.py",
+        "--output",
+        "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/history-audit.json"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/audit.log",
+      "logSha256": "444b0857f8c4cea532e2d733505b44da704cf58e7828c5b53bc1239ba4090e36"
+    },
+    {
+      "command": [
+        "D:/Program Files/Microsoft Visual Studio/2022/Enterprise/MSBuild/Current/Bin/MSBuild.exe",
+        "Client/Client.csproj",
+        "/t:Build",
+        "/p:Configuration=Debug",
+        "/p:Platform=AnyCPU",
+        "/v:minimal",
+        "/nologo"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/build-debug-final.log",
+      "logSha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "command": [
+        "D:/Program Files/Microsoft Visual Studio/2022/Enterprise/MSBuild/Current/Bin/MSBuild.exe",
+        "Client/Client.csproj",
+        "/t:Build",
+        "/p:Configuration=Debug",
+        "/p:Platform=AnyCPU",
+        "/v:minimal",
+        "/nologo"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/build-debug-v2.log",
+      "logSha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "command": [
+        "D:/Program Files/Microsoft Visual Studio/2022/Enterprise/MSBuild/Current/Bin/MSBuild.exe",
+        "Client/Client.csproj",
+        "/t:Build",
+        "/p:Configuration=Debug",
+        "/p:Platform=AnyCPU",
+        "/v:minimal",
+        "/nologo"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/build-debug.log",
+      "logSha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "command": [
+        "D:/Program Files/Microsoft Visual Studio/2022/Enterprise/MSBuild/Current/Bin/MSBuild.exe",
+        "Client/Client.csproj",
+        "/t:Build",
+        "/p:Configuration=Release",
+        "/p:Platform=AnyCPU",
+        "/v:minimal",
+        "/nologo"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/build-release-final.log",
+      "logSha256": "c9e24428be1e56c8408af17aacfea3413de3953bfe426d10eb768782f5005ebc"
+    },
+    {
+      "command": [
+        "D:/Program Files/Microsoft Visual Studio/2022/Enterprise/MSBuild/Current/Bin/MSBuild.exe",
+        "Client/Client.csproj",
+        "/t:Build",
+        "/p:Configuration=Release",
+        "/p:Platform=AnyCPU",
+        "/v:minimal",
+        "/nologo"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/build-release.log",
+      "logSha256": "c9e24428be1e56c8408af17aacfea3413de3953bfe426d10eb768782f5005ebc"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiFullSceneTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-final-v2"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/full-scene-final-v2.log",
+      "logSha256": "213bb98d931622f3d94ce0097feed5771321f312958f0e1d32edc121c9e1a260"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiFullSceneTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-final"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/full-scene-final.log",
+      "logSha256": "443cfd982e64771a517a009d13b4135946857cf4eb847e56659c37e76c884d32"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiFullSceneTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-v4"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/full-scene-v4.log",
+      "logSha256": "11496a68979078b0063c173ec68a66e9d9703498bf661698531f51e842b35cea"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "build/game-ui/New-GameUiReleaseManifest.ps1",
+        "-ClientDirectory",
+        "E:/workspace/Debug/Client",
+        "-ResourceRoot",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/staged-resources",
+        "-OutputPath",
+        "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/debug-build.json"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/manifest-debug.log",
+      "logSha256": "21bdfc067eaa8a0d1813478cb89146bd5d180b94fd0cce99744de7b1261837ad"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "build/game-ui/New-GameUiReleaseManifest.ps1",
+        "-ClientDirectory",
+        "E:/workspace/Release/Client",
+        "-ResourceRoot",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/staged-resources",
+        "-OutputPath",
+        "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/release-build.json"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/manifest-release.log",
+      "logSha256": "8dd8efa8e7dcd818b91c19a4f22c231ad9e2ca0ea919b986c2171f11db38af79"
+    },
+    {
+      "command": [
+        "C:/Users/shuai/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+        "build/game-ui/Validate-UiTasks.py"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/tasks.log",
+      "logSha256": "90e3ddffa807ef19523e77855653984be659ff7ab47ec66f04d41348c4cb85b3"
+    },
+    {
+      "command": [
+        "C:/Users/shuai/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+        "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/check-whitespace.py"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/whitespace.log",
+      "logSha256": "a128f79f00204b7adc39aa3c0d607c046b43abb35563e2bfaa144744d67943d3"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiWindowSetTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/native-scene-window-set-20261108-final-v2"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/window-set-final.log",
+      "logSha256": "7a6ad5ea9bf68d161c07a4e52fbc2678b80dc996fa5f3672f58132b4fbf4aaaa"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiWindowSetTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/native-scene-window-set-20261108-final"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/window-set.log",
+      "logSha256": "7a6ad5ea9bf68d161c07a4e52fbc2678b80dc996fa5f3672f58132b4fbf4aaaa"
+    }
+  ],
+  "failedAttempts": [
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiFullSceneTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-v2"
+      ],
+      "result": "fail",
+      "exitCode": 1,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/full-scene-v2.log",
+      "logSha256": "001ad239a0ad9bce776e60ff082b9a22a042887208cb51a31c3292eb6986959c",
+      "explanation": "Real Legacy failure: native disconnect modal close returns to login, disposal restores an already disposed editor and throws NullReferenceException."
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiFullSceneTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-v3"
+      ],
+      "result": "fail",
+      "exitCode": 1,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/full-scene-v3.log",
+      "logSha256": "7207e2641f746ec48caf24636a9ea42e26c67cbd500283b1daac6ac51fabfa44",
+      "explanation": "First edit added the helper but CRLF anchors left its call sites unchanged; cleanup again reached the original failure. Both call sites were then corrected and original-body diagnostics were added."
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiFullSceneTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-v5"
+      ],
+      "result": "fail",
+      "exitCode": 1,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/full-scene-v5.log",
+      "logSha256": "e5487f463ea7b89e0d607b2bfcebd2522fd1c798d0c6a22f5609049bb0f89dec",
+      "explanation": "Expanded serialized disconnect coverage reproduced ArgumentOutOfRangeException for server-emitted AnotherUserPassword; native handling was then added."
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiFullSceneTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-v1"
+      ],
+      "result": "fail",
+      "exitCode": 1,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/full-scene.log",
+      "logSha256": "f89474756ba7bac71c33a9e25f1fc62e7b5834a842ca7ab0aab010abe56f88be",
+      "explanation": "Harness compilation accessed protected DXControl.Controls; corrected to test-only reflection without changing production visibility."
+    }
+  ],
+  "regressionBaselineRuntime": {
+    "report": "docs/design/assets/official-ingame-ui/acceptance/chat-persistence-routing/verification.json",
+    "builds": {
+      "debug": {
+        "buildId": "gameui-a2bd3a13d0f5ee9ce56309784dcc4e4e6c16840e698d63fa3de21e03374faa8a",
+        "client": {
+          "path": "Zircon.exe",
+          "length": 1385984,
+          "sha256": "4f37b313b37f8d7ed0c40258af868699d7d45d85e58db3f8d03cce238723fbb1"
+        }
+      },
+      "release": {
+        "buildId": "gameui-2a171b65dc456f5bb290f7be81154e74b7a142fd9a693aa84ac52a86bf6124eb",
+        "client": {
+          "path": "Zircon.exe",
+          "length": 1281024,
+          "sha256": "8a153b06d9b65e41ce3cae3dd33ef5d41c3951c18ecf743806df1eb05c884114"
+        }
+      }
+    },
+    "testedRuntime": [
+      {
+        "name": "Zircon.exe",
+        "sha256": "4f37b313b37f8d7ed0c40258af868699d7d45d85e58db3f8d03cce238723fbb1"
+      },
+      {
+        "name": "Library.dll",
+        "sha256": "557ba4f45f3cb2db8bbbbb2a336289b0d3d535959190f86ec7efc2bfdd0b0c5b"
+      },
+      {
+        "name": "SlimDX.dll",
+        "sha256": "f23ec20aeaec149ba963d1fb03af3ea1585ccdf1ac207f315361a80ceaadcc05"
+      }
+    ]
+  },
+  "builds": {
+    "debug": {
+      "buildId": "gameui-98846b0594bcc6e2761eba36f16fcfc4528487bf0fb101b7d4ac1af396583cc8",
+      "client": {
+        "path": "Zircon.exe",
+        "length": 1386496,
+        "sha256": "d00803a052f3288fe05c00d0cdba7299456525088aaadeb74650a2aeba594f5c"
+      }
+    },
+    "release": {
+      "buildId": "gameui-5edcc508681b937e5748795f3872048404f0111eacc748a45f7d0ca77d34859c",
+      "client": {
+        "path": "Zircon.exe",
+        "length": 1281536,
+        "sha256": "619d363c40aff09d448cd8aedfa39bc7fc492017f26202b48b806ef0f7d2aab9"
+      }
+    }
+  },
+  "runtimeRebuiltThisTurn": true,
+  "package": {
+    "path": "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+    "frameCount": 94,
+    "sha256": "dd45cbf51d976a69d28269ee0d27a985def1ee1693cab2b509b74ae347a880a4"
+  },
+  "candidate": {
+    "path": "E:/workspace/mir3-ui-work/warehouse-assets-20261108-v1/zl-v2/OfficialV1.Zl",
+    "frameCount": 1,
+    "sha256": "471169dfa093b521f3c700c5a993e4e763aa17a45b2e16f440d961c0c7bf4cec"
+  },
+  "sourcePlanSha256": "f8c0a002b3821fabb54993792c354c4eff35eec51f9cfdc418535017c13069e9",
+  "limitations": [
+    "The actual client scene and packet paths run on loopback peers with synthetic account/world data and existing legacy resources. No real account authentication, remote game server reconnect, server transaction or final visual acceptance is claimed.",
+    "The disconnect matrix covers eight in-game reasons. Login-only WrongVersion/closing the process is outside it; no unsupported reason is fabricated. Socket EOF timeout advancement exercises the native branch without validating wall-clock timeout timing.",
+    "Device.Reset is real; hardware device-loss, physical monitor/fonts and live Chinese IME candidate/composition behavior remain unverified.",
+    "Real storage/service transactions, remaining UI field/equipment-slot semantics and final user visual acceptance remain open.",
+    "Task counts remain 7 done / 3 in_progress / 18 not_started; G0-2/3/4/5 remain open. Legacy default; RuntimeReady=false, productionBindingAllowed=false, releaseAccepted=false. NPC card and secondary popup styles remain native. No commit/push/deployment; official installation remains read-only."
+  ],
+  "evidenceHashes": [
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-final/legacy-hud.png",
+      "sha256": "5fa69de2c6da4336331e9f837cd0ded6c24f9b714dda1e36432e8880dc050a09"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-final/legacy-panels.png",
+      "sha256": "d0723781ce5debe099e9ba58f4e2c999706872006bb0ec1594c651cea1634a46"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-final/legacy-resources.txt",
+      "sha256": "47713d590a1b9214abdef7a0fc33d6c28a2b5a73a0cff9794375a5083020b498"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-final/native-transition-results.txt",
+      "sha256": "0853a20fb1b4f626032576c6a5d28ae29f6128b544baf308f01da35b49679323"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-final/official-CharacterTab.png",
+      "sha256": "43a1af56f6c3bfd96763e2bdc70b81fcda2ad9bddce1aa09a95ffa0b5055eac8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-final/official-extraEquipmentTab.png",
+      "sha256": "fd2f77d0befc66bba22a81f66c6636dd2b169066f24bb721f5170886176243ca"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-final/official-HermitTab.png",
+      "sha256": "4f638a46988d05fdf41f695893510dc4b19dc85b5ca24a8ef781e63a17fe6348"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-final/official-hud.png",
+      "sha256": "0d72ce7b9c9ed1d0c807333ef4c62517a0f9d90d6f49015ba946f1b0882384ac"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-final/official-panels.png",
+      "sha256": "43a1af56f6c3bfd96763e2bdc70b81fcda2ad9bddce1aa09a95ffa0b5055eac8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-final/official-reentry-hud.png",
+      "sha256": "39be0066510de06ba2465cc008c6379ffbc4c556c67be4870b3a750f99696f4b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-final/official-reentry-panels.png",
+      "sha256": "8a0a2644ac845d99ab8104c3cc9acdd0573cdff950c0706b3a8b1a2bd2d4d2a8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-final/official-reset-1024x768.png",
+      "sha256": "43a1af56f6c3bfd96763e2bdc70b81fcda2ad9bddce1aa09a95ffa0b5055eac8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-final/official-reset-1280x800.png",
+      "sha256": "6da4d263d19f1aae323e49c0f41f848bd9fb075cb94dafb02df4e2f0749ef8a4"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-final/official-reset-1366x768.png",
+      "sha256": "bccd5d8071878413408790dbe90b5d5a1ea48d880be4cec00c916469bc30f495"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-final/official-reset-1440x900.png",
+      "sha256": "1b0be5742da74968aba14f74293e474a1324d346421cab3b9692607f90f43a06"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-final/official-reset-1600x900.png",
+      "sha256": "ddc79b57cfef144f95511d28a92a7ad2351a7a8d74ed73ca4e19a4a5f8f44ba7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-final/official-reset-1920x1080.png",
+      "sha256": "686e3cc1df80daea96d79cdb643655e960d5a1d3d48b39e03ad3ecfcac005f7a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-final/official-StatsTab.png",
+      "sha256": "dc665d7ec9343b3bdbdd2fd5bbc16f245d961d0ab217de3d7af7e82be17d8664"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-final/reset-pixel-probes.txt",
+      "sha256": "2c236cd844574b74b6d502b13ffed99b5cb29783fc53ea00587ca1543a18ac67"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-final/tested-runtime.json",
+      "sha256": "c5f482911a680f18a6100ef8fad3b19b1380dcc5d9f7c33779615618ec1cc3d6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-final-v2/legacy-hud.png",
+      "sha256": "5fa69de2c6da4336331e9f837cd0ded6c24f9b714dda1e36432e8880dc050a09"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-final-v2/legacy-panels.png",
+      "sha256": "d0723781ce5debe099e9ba58f4e2c999706872006bb0ec1594c651cea1634a46"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-final-v2/legacy-resources.txt",
+      "sha256": "47713d590a1b9214abdef7a0fc33d6c28a2b5a73a0cff9794375a5083020b498"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-final-v2/native-transition-results.txt",
+      "sha256": "0853a20fb1b4f626032576c6a5d28ae29f6128b544baf308f01da35b49679323"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-final-v2/official-CharacterTab.png",
+      "sha256": "b4b3273ea7fe024e1da3c4ab72e906b309dd31def6a4938525f0f423558617f9"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-final-v2/official-extraEquipmentTab.png",
+      "sha256": "df27a20ebdd13b8ff0ebc51f0fb0ee33cdcab2aa7d7794b37988b5b9320e2cd7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-final-v2/official-HermitTab.png",
+      "sha256": "0bb2f47907de068dd949e5a6e35913be047868970d2da053ff4d83516c1971df"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-final-v2/official-hud.png",
+      "sha256": "0d72ce7b9c9ed1d0c807333ef4c62517a0f9d90d6f49015ba946f1b0882384ac"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-final-v2/official-panels.png",
+      "sha256": "43a1af56f6c3bfd96763e2bdc70b81fcda2ad9bddce1aa09a95ffa0b5055eac8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-final-v2/official-reentry-hud.png",
+      "sha256": "39be0066510de06ba2465cc008c6379ffbc4c556c67be4870b3a750f99696f4b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-final-v2/official-reentry-panels.png",
+      "sha256": "8a0a2644ac845d99ab8104c3cc9acdd0573cdff950c0706b3a8b1a2bd2d4d2a8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-final-v2/official-reset-1024x768.png",
+      "sha256": "b4b3273ea7fe024e1da3c4ab72e906b309dd31def6a4938525f0f423558617f9"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-final-v2/official-reset-1280x800.png",
+      "sha256": "af32acc8d7571360daac40337e2949fdb2670eedca37320b51ca647bf7510403"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-final-v2/official-reset-1366x768.png",
+      "sha256": "277e8fb3b301c0c91832821025542bf1c9d3d75e045316cd889bf044f92d4f0b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-final-v2/official-reset-1440x900.png",
+      "sha256": "1b0be5742da74968aba14f74293e474a1324d346421cab3b9692607f90f43a06"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-final-v2/official-reset-1600x900.png",
+      "sha256": "ab6c15927b6c08f69cf66b3ae1dd0527bcef39c291e28d1d31ec97c32343c185"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-final-v2/official-reset-1920x1080.png",
+      "sha256": "686e3cc1df80daea96d79cdb643655e960d5a1d3d48b39e03ad3ecfcac005f7a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-final-v2/official-StatsTab.png",
+      "sha256": "32f85a2ec2db0d73ec22538ff5d33b555f13599d22a42f5d82165e8c5f25d653"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-final-v2/reset-pixel-probes.txt",
+      "sha256": "2c236cd844574b74b6d502b13ffed99b5cb29783fc53ea00587ca1543a18ac67"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-final-v2/tested-runtime.json",
+      "sha256": "c5f482911a680f18a6100ef8fad3b19b1380dcc5d9f7c33779615618ec1cc3d6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-v2/legacy-hud.png",
+      "sha256": "5fa69de2c6da4336331e9f837cd0ded6c24f9b714dda1e36432e8880dc050a09"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-v2/legacy-panels.png",
+      "sha256": "d0723781ce5debe099e9ba58f4e2c999706872006bb0ec1594c651cea1634a46"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-v2/legacy-resources.txt",
+      "sha256": "47713d590a1b9214abdef7a0fc33d6c28a2b5a73a0cff9794375a5083020b498"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-v3/legacy-hud.png",
+      "sha256": "5fa69de2c6da4336331e9f837cd0ded6c24f9b714dda1e36432e8880dc050a09"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-v3/legacy-panels.png",
+      "sha256": "d0723781ce5debe099e9ba58f4e2c999706872006bb0ec1594c651cea1634a46"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-v3/legacy-resources.txt",
+      "sha256": "47713d590a1b9214abdef7a0fc33d6c28a2b5a73a0cff9794375a5083020b498"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-v4/legacy-hud.png",
+      "sha256": "5fa69de2c6da4336331e9f837cd0ded6c24f9b714dda1e36432e8880dc050a09"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-v4/legacy-panels.png",
+      "sha256": "d0723781ce5debe099e9ba58f4e2c999706872006bb0ec1594c651cea1634a46"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-v4/legacy-resources.txt",
+      "sha256": "47713d590a1b9214abdef7a0fc33d6c28a2b5a73a0cff9794375a5083020b498"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-v4/native-transition-results.txt",
+      "sha256": "bdb9706aa39357ad6120742d4f2fc530dcdcb96b71d0f62395237efe3c059acb"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-v4/official-CharacterTab.png",
+      "sha256": "43a1af56f6c3bfd96763e2bdc70b81fcda2ad9bddce1aa09a95ffa0b5055eac8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-v4/official-extraEquipmentTab.png",
+      "sha256": "fd2f77d0befc66bba22a81f66c6636dd2b169066f24bb721f5170886176243ca"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-v4/official-HermitTab.png",
+      "sha256": "4f638a46988d05fdf41f695893510dc4b19dc85b5ca24a8ef781e63a17fe6348"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-v4/official-hud.png",
+      "sha256": "0d72ce7b9c9ed1d0c807333ef4c62517a0f9d90d6f49015ba946f1b0882384ac"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-v4/official-panels.png",
+      "sha256": "43a1af56f6c3bfd96763e2bdc70b81fcda2ad9bddce1aa09a95ffa0b5055eac8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-v4/official-reentry-hud.png",
+      "sha256": "39be0066510de06ba2465cc008c6379ffbc4c556c67be4870b3a750f99696f4b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-v4/official-reentry-panels.png",
+      "sha256": "8a0a2644ac845d99ab8104c3cc9acdd0573cdff950c0706b3a8b1a2bd2d4d2a8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-v4/official-reset-1024x768.png",
+      "sha256": "43a1af56f6c3bfd96763e2bdc70b81fcda2ad9bddce1aa09a95ffa0b5055eac8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-v4/official-reset-1280x800.png",
+      "sha256": "6da4d263d19f1aae323e49c0f41f848bd9fb075cb94dafb02df4e2f0749ef8a4"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-v4/official-reset-1366x768.png",
+      "sha256": "bccd5d8071878413408790dbe90b5d5a1ea48d880be4cec00c916469bc30f495"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-v4/official-reset-1440x900.png",
+      "sha256": "1b0be5742da74968aba14f74293e474a1324d346421cab3b9692607f90f43a06"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-v4/official-reset-1600x900.png",
+      "sha256": "ddc79b57cfef144f95511d28a92a7ad2351a7a8d74ed73ca4e19a4a5f8f44ba7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-v4/official-reset-1920x1080.png",
+      "sha256": "686e3cc1df80daea96d79cdb643655e960d5a1d3d48b39e03ad3ecfcac005f7a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-v4/official-StatsTab.png",
+      "sha256": "dc665d7ec9343b3bdbdd2fd5bbc16f245d961d0ab217de3d7af7e82be17d8664"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-v4/reset-pixel-probes.txt",
+      "sha256": "2c236cd844574b74b6d502b13ffed99b5cb29783fc53ea00587ca1543a18ac67"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-v4/tested-runtime.json",
+      "sha256": "fad9642f89134af5a9de2362582b600a1590a5750c8d9585cd5995fd59aaa4f5"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-v5/legacy-hud.png",
+      "sha256": "5fa69de2c6da4336331e9f837cd0ded6c24f9b714dda1e36432e8880dc050a09"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-v5/legacy-panels.png",
+      "sha256": "d0723781ce5debe099e9ba58f4e2c999706872006bb0ec1594c651cea1634a46"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-v5/legacy-resources.txt",
+      "sha256": "47713d590a1b9214abdef7a0fc33d6c28a2b5a73a0cff9794375a5083020b498"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-transitions-20261108-v5/native-transition-failed-progress.txt",
+      "sha256": "e5286958ed1b37b1b2e15926b50887ecff5cd9526eb1c8f404efe5a1d437c59d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-window-set-20261108-final/button-hitmask-cpu.txt",
+      "sha256": "8c02ba0d543cdf1f7ebeb48c8e6f52a83dde10de6fcca3b43899d8982e666927"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-window-set-20261108-final/chat-persistence-legacy.db",
+      "sha256": "972f5ef9898f2cab38e3248330d31ffe9a69185ac4f66263cec086b8e173bc04"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-window-set-20261108-final/chat-persistence-results.txt",
+      "sha256": "d56bd9b90060c225a2efca1ec18c55fed9c21926f6e860fca5e5bfcea8296afc"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-window-set-20261108-final/chat-persistence-saved.json",
+      "sha256": "bb9b0e24d00bc5dec5c1648dce9f9dd249ce2efeda407edbd92af85e60a78ae9"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-window-set-20261108-final/chat-reconstruction-results.txt",
+      "sha256": "6c2f662715d829f457c148575f558d2d7dbdf15a96b7fb910e78a8d89715f77b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-window-set-20261108-final/layout-persistence-legacy.db",
+      "sha256": "4d9e4e960d7ba8fce0a0912793f12675ed4ff77db13ae823b0d7b53c943d2918"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-window-set-20261108-final/layout-persistence-results.txt",
+      "sha256": "ed11120c29f9eaa7a195223529c6f68ee13aaa60138b01b3d69f9bb274d6bf31"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-window-set-20261108-final/layout-persistence-saved.json",
+      "sha256": "b0326ef274ff5d8e6ded212ddcedf694c77a6eccfd0425458d7e20c3ccfae93a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-window-set-20261108-final/legacy-glyph-restored.png",
+      "sha256": "0a53fff02c059efc67e4808ccfbd669c8560f8a164c6da2f2f6970301adcf2ff"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-window-set-20261108-final/legacy-glyph-suppressed.png",
+      "sha256": "5a739a1abe0ce2f11461d1c429810d6256b07eabeb58321d7f9ba821f84b2cab"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-window-set-20261108-final-v2/button-hitmask-cpu.txt",
+      "sha256": "8c02ba0d543cdf1f7ebeb48c8e6f52a83dde10de6fcca3b43899d8982e666927"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-window-set-20261108-final-v2/chat-persistence-legacy.db",
+      "sha256": "972f5ef9898f2cab38e3248330d31ffe9a69185ac4f66263cec086b8e173bc04"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-window-set-20261108-final-v2/chat-persistence-results.txt",
+      "sha256": "d56bd9b90060c225a2efca1ec18c55fed9c21926f6e860fca5e5bfcea8296afc"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-window-set-20261108-final-v2/chat-persistence-saved.json",
+      "sha256": "acfbefdf409eb611b51ec537c794724c55fb86921156213185e71bd6377a8054"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-window-set-20261108-final-v2/chat-reconstruction-results.txt",
+      "sha256": "6c2f662715d829f457c148575f558d2d7dbdf15a96b7fb910e78a8d89715f77b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-window-set-20261108-final-v2/layout-persistence-legacy.db",
+      "sha256": "4d9e4e960d7ba8fce0a0912793f12675ed4ff77db13ae823b0d7b53c943d2918"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-window-set-20261108-final-v2/layout-persistence-results.txt",
+      "sha256": "ed11120c29f9eaa7a195223529c6f68ee13aaa60138b01b3d69f9bb274d6bf31"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-window-set-20261108-final-v2/layout-persistence-saved.json",
+      "sha256": "b0326ef274ff5d8e6ded212ddcedf694c77a6eccfd0425458d7e20c3ccfae93a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-window-set-20261108-final-v2/legacy-glyph-restored.png",
+      "sha256": "0a53fff02c059efc67e4808ccfbd669c8560f8a164c6da2f2f6970301adcf2ff"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-window-set-20261108-final-v2/legacy-glyph-suppressed.png",
+      "sha256": "5a739a1abe0ce2f11461d1c429810d6256b07eabeb58321d7f9ba821f84b2cab"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-scene-window-set-20261108-final-v2/tested-runtime.json",
+      "sha256": "c5f482911a680f18a6100ef8fad3b19b1380dcc5d9f7c33779615618ec1cc3d6"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/audit-history.py",
+      "sha256": "43b3dd93e1bb748275abd80d37a7d986d4016b83b72bd6cf2e0ed3bac1c1fd92"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/audit.log",
+      "sha256": "444b0857f8c4cea532e2d733505b44da704cf58e7828c5b53bc1239ba4090e36"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/audit.receipt.json",
+      "sha256": "c87da5d719707a3611470f8693fa6bc2543f7754af8f2b263a11a2a714e4dfcf"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/build-debug-final.log",
+      "sha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/build-debug-final.receipt.json",
+      "sha256": "61a452ccf5d665e7912e2e49f9a09c1197ea435cee2b9b9cb5a09da2d3f22739"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/build-debug-v2.log",
+      "sha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/build-debug-v2.receipt.json",
+      "sha256": "bb45f2493d8e88fb38e8ab0450cffbbad0c77dcdeeeea06319b6744b4d1afec9"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/build-debug.log",
+      "sha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/build-debug.receipt.json",
+      "sha256": "363c7d7a4a86e7be7c3bd37f27095f55dfb34d06c678d1b543337391c5cb0a86"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/build-release-final.log",
+      "sha256": "c9e24428be1e56c8408af17aacfea3413de3953bfe426d10eb768782f5005ebc"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/build-release-final.receipt.json",
+      "sha256": "d1658ba459ab78c5a7e668725ca9ec7df9346151cc6b4dbaba6864c81b380943"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/build-release.log",
+      "sha256": "c9e24428be1e56c8408af17aacfea3413de3953bfe426d10eb768782f5005ebc"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/build-release.receipt.json",
+      "sha256": "f372b5287d8518e44e4c6ccb2ac8c11778027824275df748ed89c89b5461a92d"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/check-whitespace.py",
+      "sha256": "4181256b5824846d6bbef30349d6741a2511e6cd7b65185e31bbaf0f3d228cfb"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/debug-build.json",
+      "sha256": "8578c835fd52532cce8d4b757f006dc675754a7d14f9bc5403ed6764a5334a82"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/full-scene-final-v2.log",
+      "sha256": "213bb98d931622f3d94ce0097feed5771321f312958f0e1d32edc121c9e1a260"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/full-scene-final-v2.receipt.json",
+      "sha256": "59a831f80bf4a90b7d16e30aae0c1e68a76b7cd37c23fd2d594cd3af104f91e7"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/full-scene-final.log",
+      "sha256": "443cfd982e64771a517a009d13b4135946857cf4eb847e56659c37e76c884d32"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/full-scene-final.receipt.json",
+      "sha256": "ec370c8483ccaf1ab547d13270d3319f13f3c7e814d534a76f19a741a781026e"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/full-scene-v2.log",
+      "sha256": "001ad239a0ad9bce776e60ff082b9a22a042887208cb51a31c3292eb6986959c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/full-scene-v2.receipt.json",
+      "sha256": "7f9da254ac688881042ca43b835d41adde14c6676a71539962afb240339a1689"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/full-scene-v3.log",
+      "sha256": "7207e2641f746ec48caf24636a9ea42e26c67cbd500283b1daac6ac51fabfa44"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/full-scene-v3.receipt.json",
+      "sha256": "ebaf09b0bfd19b1c66effdf6db7e0f2fd9be7dc53780f64e16ec0f8a372cd613"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/full-scene-v4.log",
+      "sha256": "11496a68979078b0063c173ec68a66e9d9703498bf661698531f51e842b35cea"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/full-scene-v4.receipt.json",
+      "sha256": "f7d40b94939d29caa6cdb282428a2ff0bf360b0d5ba537351731cbd9b93f8643"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/full-scene-v5.log",
+      "sha256": "e5487f463ea7b89e0d607b2bfcebd2522fd1c798d0c6a22f5609049bb0f89dec"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/full-scene-v5.receipt.json",
+      "sha256": "49bf5c226db3673c2f8a317db19b06a341e19d0f23c9cd0e7b9f730e2ec158db"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/full-scene.log",
+      "sha256": "f89474756ba7bac71c33a9e25f1fc62e7b5834a842ca7ab0aab010abe56f88be"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/full-scene.receipt.json",
+      "sha256": "f06dbf5d21d162e44b0a0c3ccbd93f5217000cbdf932ab70c84adf61cbbfcebe"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/history-audit.json",
+      "sha256": "444b0857f8c4cea532e2d733505b44da704cf58e7828c5b53bc1239ba4090e36"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/manifest-debug.log",
+      "sha256": "21bdfc067eaa8a0d1813478cb89146bd5d180b94fd0cce99744de7b1261837ad"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/manifest-debug.receipt.json",
+      "sha256": "af0f6102721e1643d7545a3cf668208a7f030363676dc1368da37891594acad1"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/manifest-release.log",
+      "sha256": "8dd8efa8e7dcd818b91c19a4f22c231ad9e2ca0ea919b986c2171f11db38af79"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/manifest-release.receipt.json",
+      "sha256": "177d4c1f334be0c7e6f9426c86eeb2f52ab62721a69e785899ad4af4769929d9"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/prepare-report.py",
+      "sha256": "9480ae4e67dd938f5b71bc5251d99f84ebe9f6ed5772c6d817096a0c281c319e"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/README.md",
+      "sha256": "f21b49182858e4fff27712bf9a38031179707c0a1aee3bbc94c3d19a0ca94731"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/release-build.json",
+      "sha256": "a4c2d185cad4c1b29d7efc9ee892172815c8100b6e04f83a148ca733cb004d92"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/run-check.py",
+      "sha256": "8cea69f8c28d781722ec26876840ea3e6bb44ae5ed37e2d213fdab62d1a7c943"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/source-before/Client/Controls/DXMessageBox.cs",
+      "sha256": "d2e7f34114a0123c840a34ac8d37c118feeccbfa500e1f30fa9808f91cfe55ba"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/source-before/Client/Envir/CConnection.cs",
+      "sha256": "423e46eeb1a01089ddc211cc0ebfaf5c79144a1da3bd7b0c981e44d9fe7d1fbc"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/source-before/Client/Envir/CEnvir.cs",
+      "sha256": "0ee69c9035ae21a9486cfc4bca99ec4435ca31c39cc94df3995ebb9527ce4919"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/source-before/Client/Envir/GameUiChatGroupBinding.cs",
+      "sha256": "8ad5dd1769c1dcd75c6b76492af95daf3526768e0accf53e726084e83da6edd4"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/source-before/Client/Envir/GameUiOfficialV1ChatSet.cs",
+      "sha256": "01611900bc742f6258e8408066ca6936ad25b05d21ea734b2ed58717f5b66de9"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/source-before/Client/Envir/GameUiOfficialV1WindowSet.cs",
+      "sha256": "35ada8411ee7c2036ef8759ab268199de73210681b08b780fa5cf285aebdcef2"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/source-before/Client/Envir/GameUiStartupSession.cs",
+      "sha256": "d044bd514f839ab2656d433ef0e39f4f84770916803d5fc566e929de9667c40b"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/source-before/Client/Scenes/GameScene.cs",
+      "sha256": "9e5ab5f140a301c895626a952c19983236ec8434985511aa3f6937a964d0f94e"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/source-before/Client/Scenes/LoginScene.cs",
+      "sha256": "ce27d89c1bbcc383b8b7cef38287a40245c03b66fcfc396cc6a5508d4437a42d"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/source-before/Client/Scenes/SelectScene.cs",
+      "sha256": "c266b17c620c4852e8972e9689884ca028ec6c3f93b4de52c2f83ba31b6339ad"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/source-before/Client/Scenes/Views/ChatTab.cs",
+      "sha256": "a4ac0c7392a1c50c9649e6a4ab5e26829af4ca8c007fd9f2cbe238d21815c6d2"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/source-before/Library/Network/BaseConnection.cs",
+      "sha256": "2408a3fcf1cf060239d3cc1bb08544c4d10e6cd958c32d86d6f9a3c88b42d749"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/source-before/Library/Network/Packet.cs",
+      "sha256": "aed519285bf0fbe1859c3b954d8b4990be5c6926bbfbc13cb52a3a412f66ea33"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/source-before/tests/game-ui/OfficialUiFullSceneTests.cs",
+      "sha256": "95e0b086a7ba20c631d30dab30079d09e683ea5672c61a1f762ac623af5cc306"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/source-before/tests/Run-GameUiFullSceneTests.ps1",
+      "sha256": "e3d5fb3b99d993f4b403ee78a5166a55baf10639f63c292c2b85b8791eb7bcd0"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/source-before/tests/Run-GameUiWindowSetTests.ps1",
+      "sha256": "28b89b6548b60728468ee0311ae3fc6b98d6a724dc0a7abb031c5a59327e9c6d"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/source-before.json",
+      "sha256": "53fcaaf54d0313a70d7eda2f38cc440425e8f9fe1c893598f0866a4596dc19a4"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/tasks.log",
+      "sha256": "90e3ddffa807ef19523e77855653984be659ff7ab47ec66f04d41348c4cb85b3"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/tasks.receipt.json",
+      "sha256": "3f13670b9b3c3c249ed956f63239d6ae49ef031230ddaeb70402591d739a66a3"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/tested-runtime.json",
+      "sha256": "c5f482911a680f18a6100ef8fad3b19b1380dcc5d9f7c33779615618ec1cc3d6"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/whitespace.log",
+      "sha256": "a128f79f00204b7adc39aa3c0d607c046b43abb35563e2bfaa144744d67943d3"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/whitespace.receipt.json",
+      "sha256": "0554b15c1e8894672e4a9c2d219d1c675ed4f04498425df1c4795dc50fe24151"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/window-set-final.log",
+      "sha256": "7a6ad5ea9bf68d161c07a4e52fbc2678b80dc996fa5f3672f58132b4fbf4aaaa"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/window-set-final.receipt.json",
+      "sha256": "7c20ca10043dd5d8e3a8cdadafea068fbfcc58c2472cf71cb9fbb4c7f3fd33ff"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/window-set.log",
+      "sha256": "7a6ad5ea9bf68d161c07a4e52fbc2678b80dc996fa5f3672f58132b4fbf4aaaa"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/window-set.receipt.json",
+      "sha256": "ea73215f7b9e1fe48500407c4f624d726029bd2e08521df21c3408fe4c2c6e64"
+    }
+  ]
+}

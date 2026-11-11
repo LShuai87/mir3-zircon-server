@@ -1,0 +1,7 @@
+{
+  "Client/Envir/GameUiOfficialV1WindowSet.cs": "961616a912149a016e2123000a979c1498eecec936436c6721939f2d7e971a43",
+  "tests/game-ui/OfficialUiNpcTests.cs": "c5ab70ba329f2d5cf29ffeb6c77e849633aa81710f7fc2d2b171db8b091d6b74",
+  "tests/game-ui/OfficialUiNpcItemServiceTests.cs": "c2054e5286bfe38768ac0235b1d3951be8129f7f7712afa3a2c3f9f652d1a37e",
+  "tests/game-ui/OfficialUiNpcRefineTests.cs": "dcd5b499dc172e70c59d4a8198dad6196da5d8af2daaa276773892d4c2094e29",
+  "tests/game-ui/OfficialUiNpcQuestTests.cs": "9c8cacf7e2bb7946d7dc2c666a634e8c1f15eb0b5dcb072de58bb002b27bdbf4"
+}

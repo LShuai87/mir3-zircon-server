@@ -1,0 +1,161 @@
+{
+  "schemaVersion": 1,
+  "kind": "official-ui-local-border-matching",
+  "coordinateSpace": "original screenshot pixels including title bar; ranges are half-open",
+  "metric": "mean absolute RGB channel error (0..255); no scaling or alpha fitting",
+  "method": "visually selected candidates and local placement search on sampled source borders or artwork",
+  "limitations": [
+    "Local search supports visual identification; it does not prove global uniqueness.",
+    "JPEG compression and live text/controls affect the error; no exact pixel identity claimed.",
+    "Artwork samples omit dark pixels and specified occlusions; this is not a transparency rule.",
+    "Source PNGs are opaque diagnostic renders; transparency and blend semantics remain unverified.",
+    "Placements locate source bitmaps; they are not client coordinates, final layouts or hitboxes.",
+    "Candidates have different dimensions/sample counts; errors are descriptive, not calibrated confidence.",
+    "Current snapshot is pinned; exact historical source hashes at each capture are not proven."
+  ],
+  "specSha256": "43c5ce97847caf9d3f12eefb1e7af8ebe17a08eb2e9014efed5b56fb411c0cda",
+  "inventorySha256": "fb4c3c90a9e48d76451b45fee625a848588b1c0f52353e58ffdb16a4a1444f71",
+  "scriptSha256": "af38bb65497b4f9b66cbfc8546fc0c317f820448d57806675d5c1d912e3b6761",
+  "matches": [
+    {
+      "role": "hud-hp-fill",
+      "captureId": "06-chat-chinese-input",
+      "captureSha256": "69b96babce26f036862ce232a9d1e43a37002a9ded9eb71004829f7cc96c5ca4",
+      "candidates": [
+        {
+          "library": "UI",
+          "index": 142,
+          "sourceOffset": 536395,
+          "width": 53,
+          "height": 101,
+          "offsetX": -69,
+          "offsetY": -26,
+          "pngSha256": "7f7450264ed93b428641cddfac7d9cdaecf299b7935f5b086f5b07636343de60",
+          "samples": 365,
+          "sampling": "artwork",
+          "bestPlacements": [
+            {
+              "meanAbsoluteChannelError": 7.46484,
+              "x": 39,
+              "y": 668
+            },
+            {
+              "meanAbsoluteChannelError": 8.382648,
+              "x": 40,
+              "y": 667
+            },
+            {
+              "meanAbsoluteChannelError": 8.902283,
+              "x": 40,
+              "y": 668
+            }
+          ]
+        }
+      ],
+      "bestCandidateIndex": 142
+    },
+    {
+      "role": "hud-mp-fill",
+      "captureId": "06-chat-chinese-input",
+      "captureSha256": "69b96babce26f036862ce232a9d1e43a37002a9ded9eb71004829f7cc96c5ca4",
+      "candidates": [
+        {
+          "library": "UI",
+          "index": 143,
+          "sourceOffset": 540053,
+          "width": 48,
+          "height": 101,
+          "offsetX": -16,
+          "offsetY": -26,
+          "pngSha256": "89e3d84dbbd1dc19d5c0333780f73610d79cbeb6edfc307fd3ae6618ccb13a54",
+          "samples": 324,
+          "sampling": "artwork",
+          "bestPlacements": [
+            {
+              "meanAbsoluteChannelError": 9.949588,
+              "x": 96,
+              "y": 666
+            },
+            {
+              "meanAbsoluteChannelError": 10.855967,
+              "x": 95,
+              "y": 667
+            },
+            {
+              "meanAbsoluteChannelError": 10.930041,
+              "x": 95,
+              "y": 666
+            }
+          ]
+        }
+      ],
+      "bestCandidateIndex": 143
+    },
+    {
+      "role": "hud-command-shell",
+      "captureId": "06-chat-chinese-input",
+      "captureSha256": "69b96babce26f036862ce232a9d1e43a37002a9ded9eb71004829f7cc96c5ca4",
+      "candidates": [
+        {
+          "library": "UI",
+          "index": 1270,
+          "sourceOffset": 7232773,
+          "width": 225,
+          "height": 175,
+          "offsetX": 0,
+          "offsetY": 0,
+          "pngSha256": "b14b85ae5249b5899bbd865e91882ab47dc7f81ff8d64f4b6837b6fa31c5fb5e",
+          "samples": 666,
+          "sampling": "artwork",
+          "bestPlacements": [
+            {
+              "meanAbsoluteChannelError": 21.55956,
+              "x": 800,
+              "y": 619
+            },
+            {
+              "meanAbsoluteChannelError": 33.183183,
+              "x": 799,
+              "y": 619
+            },
+            {
+              "meanAbsoluteChannelError": 34.365866,
+              "x": 800,
+              "y": 618
+            }
+          ]
+        },
+        {
+          "library": "UI",
+          "index": 140,
+          "sourceOffset": 472449,
+          "width": 225,
+          "height": 175,
+          "offsetX": -112,
+          "offsetY": -87,
+          "pngSha256": "a22ce21539d63f2b050fe7c026abc0f2789376efa0fd56d2dfafb3e7fc9fbfd0",
+          "samples": 696,
+          "sampling": "artwork",
+          "bestPlacements": [
+            {
+              "meanAbsoluteChannelError": 22.190134,
+              "x": 800,
+              "y": 619
+            },
+            {
+              "meanAbsoluteChannelError": 33.241858,
+              "x": 799,
+              "y": 619
+            },
+            {
+              "meanAbsoluteChannelError": 34.385536,
+              "x": 800,
+              "y": 618
+            }
+          ]
+        }
+      ],
+      "bestCandidateIndex": 1270
+    }
+  ]
+}

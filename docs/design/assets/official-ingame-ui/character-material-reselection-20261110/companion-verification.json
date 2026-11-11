@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "result": "pass",
+  "verifiedAt": "2026-11-11T08:34:42.724391+08:00",
+  "runtimeReady": false,
+  "productionBindingAllowed": false,
+  "nativeCarrier": "UI[130] 296x436",
+  "nativeButton": "UI[3304] 57x24 -> 56x22 nine-slice with four explicit states",
+  "package": {
+    "fileName": "OfficialV1.Zl",
+    "sha256": "a92a9153937181f0ecafdb335ad4ffcefdd5853353786efb6494b1242c19c766",
+    "byteLength": 723718,
+    "slotCount": 99
+  },
+  "preservedFrames": 94,
+  "preservedBc1PayloadsCompared": 94,
+  "frameCount": 99,
+  "buttonGroups": 20,
+  "code": [
+    "Client/Scenes/Views/CharacterDialog.GameUiCompanions.cs",
+    "Client/Scenes/Views/CharacterDialog.GameUi.cs",
+    "Client/Envir/GameUiOfficialV1WindowSet.cs",
+    "Client/Envir/GameUiOfficialV1Catalog.g.cs"
+  ],
+  "verifiedBehaviors": [
+    "Native coordinate hits for status, cultivation, eight cultivation actions, confirmation, close.",
+    "Role stays selected and visible.",
+    "No overlapping/out-of-bounds companion rows.",
+    "Live native stat label identity and packet refresh parity.",
+    "Close remains clickable after cultivation clicks.",
+    "Sibling docking, toggle/switch, drag, hide/reopen, parent change, supported resolution reflow.",
+    "Six-resolution Direct3D resets, scene reentry, rollback and disposal."
+  ],
+  "builds": {
+    "Debug": {
+      "result": "pass",
+      "executableSha256": "3bde5cede2e471760ea498dec03ed4e60810d31eab74a8e74ef5cd45e9b654b2",
+      "librarySha256": "4c1255be4a4d98fc829275bf6bf1d39dc66327dd4e434e51accf87a91e0ac027"
+    },
+    "Release": {
+      "result": "pass",
+      "executableSha256": "a3c4b6a8a515e015398d7fbaf4cbda64e6520d1234f8746def2a9756f4f1e178",
+      "librarySha256": "f6b5df3e890cfc935e853f39f15e6ea6e937ebbbf36dbb6cd62da508abbec95c"
+    }
+  },
+  "tests": {
+    "fullscene": {
+      "result": "pass",
+      "summary": "Full-scene offline integration: 5929 checks passed; 27 real constructors, 49 presented frames, 11 explicit Device.Reset calls; 690512 identical panel pixels. Real legacy resources, synthetic user/map, three character pages, six resolutions, scene reentry, cell/chat/native-input retention. Synthetic loopback covers native login/scene dispatch; no real account login, server behavior, hardware device-loss, live IME or final visual acceptance.",
+      "log": "E:\\workspace\\mir3-ui-work\\character-external-cards-20261111\\test-fullscene-input-v3.log"
+    },
+    "assets": {
+      "result": "pass",
+      "summary": "OK",
+      "log": "E:\\workspace\\mir3-ui-work\\character-external-cards-20261111\\test-asset-usage.log"
+    },
+    "CharacterPage": {
+      "result": "pass",
+      "summary": "Character pages: 14790 checks passed; original 16 cells/data/handlers; three pages, six placements, 25 enable/replace/disable cycles, legacy tab regression, equipment-frame lifecycle and disposal. Optional GPU results are reported separately; no packets or game acceptance.",
+      "log": "E:\\workspace\\mir3-ui-work\\character-external-cards-20261111\\final-CharacterPage.log"
+    },
+    "CharacterAttribute": {
+      "result": "pass",
+      "summary": "Character attributes: 20035 checks passed; 57 original values, 27 captions, 30 Tag icons; compiled catalog, three pages, six placements, 12 cycles, real UpdateStats, rollback and disposal. No render/packets/game acceptance.",
+      "log": "E:\\workspace\\mir3-ui-work\\character-external-cards-20261111\\final-CharacterAttribute.log"
+    },
+    "CharacterControl": {
+      "result": "pass",
+      "summary": "Character controls: 4009 checks passed; 20 original controls, 4 added captions, fixed checkboxes, six placements, eight cycles, original local packet queues/confirm/cancel, rollback and disposal. No network, rendering or game acceptance.",
+      "log": "E:\\workspace\\mir3-ui-work\\character-external-cards-20261111\\final-CharacterControl.log"
+    },
+    "CharacterComposition": {
+      "result": "pass",
+      "summary": "Character composition: 1923 checks passed; compiled JSON geometry, 300 clip cases, live HUD mirrors, six placements, eight cycles, cross-layout rejection and teardown. No rendering/network/game acceptance.",
+      "log": "E:\\workspace\\mir3-ui-work\\character-external-cards-20261111\\final-CharacterComposition.log"
+    },
+    "CharacterReadout": {
+      "result": "pass",
+      "summary": "Character readouts: 2474 checks passed; real character/HUD controls; real HP/MP/XP setters, three cultures, six placements, 100 rebindings and disposal. No game/login/render/packets or full LevelChanged/StatsChanged acceptance.",
+      "log": "E:\\workspace\\mir3-ui-work\\character-external-cards-20261111\\final-CharacterReadout.log"
+    },
+    "WindowSet": {
+      "result": "pass",
+      "summary": "Window-set integration: 557559 checks passed with real catalog package, eight registered participants plus original chat groups/input and six resolutions, identity/chat retention, actual GameScene resize/disposal, startup scene entry/reentry, clean/dirty rollback, render-fault input containment, loopback heartbeat and teardown. GPU probes cover glyph restoration and empty/half/full orb foreground; six native wheel actions checked; no full-scene/live-game/IME acceptance.",
+      "log": "E:\\workspace\\mir3-ui-work\\character-external-cards-20261111\\final-WindowSet.log"
+    },
+    "Catalog": {
+      "result": "pass",
+      "summary": "OfficialV1 actual catalog passed: 4347 checks; 891 frame uploads verified; 99 frames; 20 button groups; 3 owner lifetimes; runtime disabled.",
+      "log": "E:\\workspace\\mir3-ui-work\\character-external-cards-20261111\\final-Catalog.log"
+    },
+    "ItemInteraction": {
+      "result": "pass",
+      "summary": "Filled-item offline integration: 20131 checks passed; 3 real scenes, 2040 coordinate hits, 15 presented frames, 6 device resets. 15 active equip/unequip slots and retired Torch index, 49 filled bag cells, 17 automatic-wear cases per gesture, full-pair replacement, hidden-page success/refusal, right-click remove and native double-click no-remove, split cancel/confirm, 10 belt links/keys/mouse uses. Legacy/Official/reentry traces identical. Socket-free queue and synthetic response injection; no live server or IME acceptance.",
+      "log": "E:\\workspace\\mir3-ui-work\\character-external-cards-20261111\\final-ItemInteraction.log"
+    },
+    "LayoutContract": {
+      "result": "pass",
+      "summary": "PASS: all 11 generated files byte-identical.",
+      "log": "E:\\workspace\\mir3-ui-work\\character-external-cards-20261111\\final-LayoutContract.log"
+    }
+  },
+  "evidenceDirectory": "E:\\workspace\\mir3-ui-work\\character-external-cards-20261111\\fullscene-input-v3",
+  "sourceEvidence": "companion-source.json",
+  "layoutEvidence": "companion-layout.json",
+  "runtimeStaging": "runtime-staging.json",
+  "limitations": [
+    "Synthetic offline account/map, no live player login or live server validation.",
+    "No hardware device-loss or live IME acceptance.",
+    "Final visual acceptance remains with user; production gates stay disabled."
+  ],
+  "runningServerRestarted": false
+}

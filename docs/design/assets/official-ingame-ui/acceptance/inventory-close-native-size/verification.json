@@ -1,0 +1,43 @@
+{
+  "date": "2026-11-10",
+  "nativeSize": [
+    21,
+    22
+  ],
+  "previousSize": [
+    18,
+    18
+  ],
+  "closeRect": [
+    247,
+    8,
+    21,
+    22
+  ],
+  "slotCount": 49,
+  "inventoryChecks": 10253,
+  "windowSetChecks": 284355,
+  "sourceArtReproductionPassed": true,
+  "previewValidationPassed": true,
+  "runtimeReady": false,
+  "liveGameAcceptance": false,
+  "files": {
+    "client": {
+      "path": "E:\\workspace\\Debug\\Client\\Zircon.exe",
+      "sha256": "cf3fa8f44d3f6b5b46676d67cc3016a2c058b9afeed451f2976f0c9e0989c879"
+    },
+    "closeArt": {
+      "path": "E:\\workspace\\mir3-zircon-server\\Client\\Resources\\GameUi\\inventory-close.png",
+      "sha256": "b21f405684f1c658f6135e429969bc4d215cd752c5b0268ca1039274f4ed0bcb"
+    },
+    "layout": {
+      "path": "E:\\workspace\\mir3-zircon-server\\build\\game-ui\\layout-official-v1.json",
+      "sha256": "0e0aba03dd2cf9bb1526f36bb754eb1065f06da6ad3dd1c784b71bfb42cd674f"
+    }
+  },
+  "layoutValidator": {
+    "passed": false,
+    "error": "ValueError: Binding source outside workspace or hash mismatch",
+    "reason": "Existing character-bindings.draft.json digest differs from bindingSourceSha256; binding file and expected digest unchanged in this close-button adjustment."
+  }
+}

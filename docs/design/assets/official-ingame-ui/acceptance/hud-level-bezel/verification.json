@@ -1,0 +1,740 @@
+{
+  "schemaVersion": 1,
+  "kind": "official-hud-level-bezel-verification",
+  "checkedAtLocalDate": "2026-11-08",
+  "referenceResolution": [
+    1024,
+    768
+  ],
+  "releaseAccepted": false,
+  "results": {
+    "hudChecks": 676,
+    "fullSceneChecks": 4328,
+    "realGameConstructors": 27,
+    "presentedFrames": 47,
+    "explicitDeviceResets": 9,
+    "identicalPanelPixels": 690512,
+    "rejectedInvalidContracts": 15,
+    "layoutResolutions": 6,
+    "productionSourceChanged": true,
+    "realServerBehaviorVerified": false,
+    "finalVisualAcceptance": false
+  },
+  "implementation": [
+    "Move the native level label into source UI[141] lower-left ring at (12,158,28,26); retain its native font and add NoPadding only while the Official HUD is installed.",
+    "Align HP and MP numeric labels to their own fill widths and reject overlap between all four orb value labels in both runtime and static contracts.",
+    "Independently check source-art ring bounds, 1/99/999 glyphs plus outlines with the renderer Graphics context, three cultures, complete hints and existing lifecycle/action/resource refresh regressions."
+  ],
+  "verifiedBehaviors": [
+    "The offline 1024x768 candidate render was inspected: level2 occupies the previously empty lower-left ring. The black world is an isolated fixture.",
+    "Native HP/MP/experience setters and full hints remain intact; long HP/MP strings can use the existing ellipsis inside the narrower fill widths.",
+    "Repeated install/restore and lifecycle rollback retain original controls, button actions, draw formats and chat input identity.",
+    "Debug and Release were rebuilt; manifests inspect the actual client, dependencies, compiled catalog and unchanged 94-frame package. Release gates remain false."
+  ],
+  "sourceChanges": [
+    {
+      "path": "Client/Envir/GameUiHudLayout.cs",
+      "beforeSha256": "19d1606bead9f098913863e9ffe6454fb614321597797360b3b94557972f442b",
+      "afterSha256": "bdc34a9bc4eac6c3ec51d661fe47e2d28a4b5be3d2eb36b66c5bd0d18c3159e4"
+    },
+    {
+      "path": "build/game-ui/layout-official-v1.json",
+      "beforeSha256": "da4f31ddeafb449b0312e3331ede61368a203aa2cc766b561e96910475481caf",
+      "afterSha256": "ec689f3104c025deedd7a98bae202c12d998d0f49af4fc223816eff5fe9c22bc"
+    },
+    {
+      "path": "build/game-ui/Validate-OfficialUiLayout.py",
+      "beforeSha256": "f081127a00a44626de23ac6630f9384dbf1217cc3c40d2cda5fb1d2119b55620",
+      "afterSha256": "43b7538c172e7d02b683fd263bc2a5137e407498185ecb61d0a05d2abd70d48d"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiHudLayoutTests.cs",
+      "beforeSha256": "35c2206fa9817f81911a52a8408d398a1169a20bdb075549e696d8c54114ca6e",
+      "afterSha256": "4bfe87610772b753d9ed840997590e4dc389765130505b346963cbb17d141e34"
+    },
+    {
+      "path": "Client/Scenes/Views/MainPanel.GameUi.cs",
+      "beforeSha256": "df5fed0e440c3e8e155d87332a7a18c55da47b89c29543c1bd896a99ed38efc9",
+      "afterSha256": "8089b4024b2d8c677bcbe9f24b4a05ec3b9cabc6a12650e14808a05eb06891aa"
+    }
+  ],
+  "firstTrackedSourceChanges": [],
+  "newlyTrackedSources": [],
+  "sourceHashes": [
+    {
+      "path": "Client/Envir/GameUiHudLayout.cs",
+      "sha256": "bdc34a9bc4eac6c3ec51d661fe47e2d28a4b5be3d2eb36b66c5bd0d18c3159e4"
+    },
+    {
+      "path": "build/game-ui/layout-official-v1.json",
+      "sha256": "ec689f3104c025deedd7a98bae202c12d998d0f49af4fc223816eff5fe9c22bc"
+    },
+    {
+      "path": "build/game-ui/Validate-OfficialUiLayout.py",
+      "sha256": "43b7538c172e7d02b683fd263bc2a5137e407498185ecb61d0a05d2abd70d48d"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiHudLayoutTests.cs",
+      "sha256": "4bfe87610772b753d9ed840997590e4dc389765130505b346963cbb17d141e34"
+    },
+    {
+      "path": "Client/Scenes/Views/MainPanel.GameUi.cs",
+      "sha256": "8089b4024b2d8c677bcbe9f24b4a05ec3b9cabc6a12650e14808a05eb06891aa"
+    }
+  ],
+  "commands": [
+    {
+      "command": [
+        "D:/Program Files/Microsoft Visual Studio/2022/Enterprise/MSBuild/Current/Bin/MSBuild.exe",
+        "Client/Client.csproj",
+        "/t:Build",
+        "/p:Configuration=Debug",
+        "/p:Platform=AnyCPU",
+        "/v:minimal",
+        "/nologo"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/hud-level-bezel/build-debug-v2.log",
+      "logSha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "command": [
+        "D:/Program Files/Microsoft Visual Studio/2022/Enterprise/MSBuild/Current/Bin/MSBuild.exe",
+        "Client/Client.csproj",
+        "/t:Build",
+        "/p:Configuration=Debug",
+        "/p:Platform=AnyCPU",
+        "/v:minimal",
+        "/nologo"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/hud-level-bezel/build-debug.log",
+      "logSha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "command": [
+        "D:/Program Files/Microsoft Visual Studio/2022/Enterprise/MSBuild/Current/Bin/MSBuild.exe",
+        "Client/Client.csproj",
+        "/t:Build",
+        "/p:Configuration=Release",
+        "/p:Platform=AnyCPU",
+        "/v:minimal",
+        "/nologo"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/hud-level-bezel/build-release.log",
+      "logSha256": "c9e24428be1e56c8408af17aacfea3413de3953bfe426d10eb768782f5005ebc"
+    },
+    {
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "tests/Run-GameUiFullSceneTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/hud-level-bezel-20261108-fullscene-v1"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/hud-level-bezel/full-scene.log",
+      "logSha256": "6b372d6607e1c4a4258344ca081d356474851f73abf7d50bec43cada10fe58f2"
+    },
+    {
+      "command": [
+        "C:/Users/shuai/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+        "docs/design/assets/official-ingame-ui/acceptance/hud-level-bezel/audit-history.py",
+        "--output",
+        "docs/design/assets/official-ingame-ui/acceptance/hud-level-bezel/history-audit.json"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/hud-level-bezel/history-audit.log",
+      "logSha256": "f8770e5ebd866b7ccbfb20cbae664891cf77597e92a5ce070cb1814b0ee8d3a0"
+    },
+    {
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "tests/Run-GameUiHudLayoutTests.ps1"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/hud-level-bezel/hud-layout-final.log",
+      "logSha256": "2705a9183e5f11b8b430199e7e4a0040f36b701b069f440337ec2f1ecb895a16"
+    },
+    {
+      "command": [
+        "C:/Users/shuai/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+        "build/game-ui/Validate-OfficialUiLayout.py",
+        "--guards",
+        "--output",
+        "E:/workspace/mir3-ui-work/hud-level-bezel-20261108-layout-v2"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/hud-level-bezel/layout-contract-v2.log",
+      "logSha256": "01c74b1e17707e48afd00bed5cc34420ca6b3dec88f8d2e32f347c2a9076d8f2"
+    },
+    {
+      "command": [
+        "C:/Users/shuai/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+        "build/game-ui/Validate-OfficialUiLayout.py",
+        "--guards",
+        "--output",
+        "E:/workspace/mir3-ui-work/hud-level-bezel-20261108-layout-v1"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/hud-level-bezel/layout-contract.log",
+      "logSha256": "01c74b1e17707e48afd00bed5cc34420ca6b3dec88f8d2e32f347c2a9076d8f2"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "build/game-ui/New-GameUiReleaseManifest.ps1",
+        "-ClientDirectory",
+        "E:/workspace/Debug/Client",
+        "-ResourceRoot",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/staged-resources",
+        "-OutputPath",
+        "docs/design/assets/official-ingame-ui/acceptance/hud-level-bezel/debug-build.json"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/hud-level-bezel/manifest-debug.log",
+      "logSha256": "062c46bff2370a78efc49eb43829be2e3f316ab94395265fd2ce910bc3cec5ca"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "build/game-ui/New-GameUiReleaseManifest.ps1",
+        "-ClientDirectory",
+        "E:/workspace/Release/Client",
+        "-ResourceRoot",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/staged-resources",
+        "-OutputPath",
+        "docs/design/assets/official-ingame-ui/acceptance/hud-level-bezel/release-build.json"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/hud-level-bezel/manifest-release.log",
+      "logSha256": "f9c87508dbe7b89de79d17c6f516728d3383fc2843841b88adcdd2bb14a02e9a"
+    },
+    {
+      "command": [
+        "C:/Users/shuai/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+        "build/game-ui/Validate-UiTasks.py"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/hud-level-bezel/tasks.log",
+      "logSha256": "90e3ddffa807ef19523e77855653984be659ff7ab47ec66f04d41348c4cb85b3"
+    },
+    {
+      "command": [
+        "C:/Users/shuai/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+        "docs/design/assets/official-ingame-ui/acceptance/hud-level-bezel/check-whitespace.py"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/hud-level-bezel/whitespace.log",
+      "logSha256": "1991a66c3ada36440412021231b2d996d825551084fb1d9f3f7dd07ad14c6975"
+    }
+  ],
+  "failedAttempts": [
+    {
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "tests/Run-GameUiHudLayoutTests.ps1"
+      ],
+      "result": "fail",
+      "exitCode": 1,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/hud-level-bezel/before-fix.log",
+      "logSha256": "b52231e48e47cb92c4f1ba45cb8b8114b2aedbe5aeb59f6cf52ac2eed30ae56f",
+      "explanation": "Expected regression: the new independent source-art bezel assertion rejected the prior runtime with the level above the orb."
+    },
+    {
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "tests/Run-GameUiHudLayoutTests.ps1"
+      ],
+      "result": "fail",
+      "exitCode": 1,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/hud-level-bezel/hud-layout-diagnostics.log",
+      "logSha256": "e09a2129f8af5cab02dfcd725e5e7529a25e87714f3c172275ae12df8b816386",
+      "explanation": "Recorded native font 10pt, measured width32 and bounds28. The final test uses the Graphics-aware overload matching DXLabel rendering; the 28x26 ring fits the resulting glyphs and outline."
+    },
+    {
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "tests/Run-GameUiHudLayoutTests.ps1"
+      ],
+      "result": "fail",
+      "exitCode": 1,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/hud-level-bezel/hud-layout-v2.log",
+      "logSha256": "05c04611c39f041937ed968c34daec208418fe5536b9a3185dd3657b859429f5",
+      "explanation": "The context-free TextRenderer measurement reported 32px for three digits, including GDI padding despite NoPadding. A diagnostic run identified the discrepancy."
+    },
+    {
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "tests/Run-GameUiHudLayoutTests.ps1"
+      ],
+      "result": "fail",
+      "exitCode": 1,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/hud-level-bezel/hud-layout.log",
+      "logSha256": "530b505254d6f58a0e3a58592c0d88c784279d73fb64c70c9512a18c18237076",
+      "explanation": "The first 24x18 rectangle was too short for the native font and outline; it was enlarged to the 28x26 ring bounds."
+    }
+  ],
+  "regressionBaselineRuntime": {
+    "report": "docs/design/assets/official-ingame-ui/acceptance/native-character-refresh/verification.json",
+    "builds": {
+      "debug": {
+        "buildId": "gameui-98846b0594bcc6e2761eba36f16fcfc4528487bf0fb101b7d4ac1af396583cc8",
+        "client": {
+          "path": "Zircon.exe",
+          "length": 1386496,
+          "sha256": "d00803a052f3288fe05c00d0cdba7299456525088aaadeb74650a2aeba594f5c"
+        }
+      },
+      "release": {
+        "buildId": "gameui-5edcc508681b937e5748795f3872048404f0111eacc748a45f7d0ca77d34859c",
+        "client": {
+          "path": "Zircon.exe",
+          "length": 1281536,
+          "sha256": "619d363c40aff09d448cd8aedfa39bc7fc492017f26202b48b806ef0f7d2aab9"
+        }
+      }
+    },
+    "testedRuntime": [
+      {
+        "name": "Zircon.exe",
+        "sha256": "d00803a052f3288fe05c00d0cdba7299456525088aaadeb74650a2aeba594f5c"
+      },
+      {
+        "name": "Library.dll",
+        "sha256": "557ba4f45f3cb2db8bbbbb2a336289b0d3d535959190f86ec7efc2bfdd0b0c5b"
+      },
+      {
+        "name": "SlimDX.dll",
+        "sha256": "f23ec20aeaec149ba963d1fb03af3ea1585ccdf1ac207f315361a80ceaadcc05"
+      }
+    ]
+  },
+  "builds": {
+    "debug": {
+      "buildId": "gameui-b6df1f5cdb9330b01328917438c82b5e2cd59889491567c544ec537cae11555f",
+      "client": {
+        "path": "Zircon.exe",
+        "length": 1386496,
+        "sha256": "35466f1fb3dad1ea0690941412730a2a4684665af9a8d84cb47173bfcbf3b318"
+      }
+    },
+    "release": {
+      "buildId": "gameui-fa547b929ec33e17b6620534c45d4e9d8ef3747ce0e52a027411fe0ec211f976",
+      "client": {
+        "path": "Zircon.exe",
+        "length": 1281536,
+        "sha256": "bd0fa7ea73f655cb9646f0a4d48a8b98fc8889e7ad55663af536518f233721f6"
+      }
+    }
+  },
+  "runtimeRebuiltThisTurn": true,
+  "package": {
+    "path": "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+    "frameCount": 94,
+    "sha256": "dd45cbf51d976a69d28269ee0d27a985def1ee1693cab2b509b74ae347a880a4"
+  },
+  "candidate": {
+    "path": "E:/workspace/mir3-ui-work/warehouse-assets-20261108-v1/zl-v2/OfficialV1.Zl",
+    "frameCount": 1,
+    "sha256": "471169dfa093b521f3c700c5a993e4e763aa17a45b2e16f440d961c0c7bf4cec"
+  },
+  "sourcePlanSha256": "f8c0a002b3821fabb54993792c354c4eff35eec51f9cfdc418535017c13069e9",
+  "limitations": [
+    "Offline synthetic world and serialized loopback do not establish real account/server behavior, real item transactions, live IME or hardware device loss.",
+    "Source-art coordinates and candidate render are local evidence; final visual acceptance and physical font/DPI coverage remain open. Glyph fit for 1/99/999 is checked in the current renderer context; unusually long values retain native full-value hints.",
+    "Tasks remain 7 done / 3 in_progress / 18 not_started and G0-2/3/4/5 remain open. RuntimeReady=false, productionBindingAllowed=false, releaseAccepted=false. Default Legacy. NPC cards, secondary popups and settings retain existing style. Official installation is read-only; no commit, push or deployment."
+  ],
+  "evidenceHashes": [
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-level-bezel-20261108-fullscene-v1/legacy-hud.png",
+      "sha256": "5fa69de2c6da4336331e9f837cd0ded6c24f9b714dda1e36432e8880dc050a09"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-level-bezel-20261108-fullscene-v1/legacy-panels.png",
+      "sha256": "d0723781ce5debe099e9ba58f4e2c999706872006bb0ec1594c651cea1634a46"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-level-bezel-20261108-fullscene-v1/legacy-refresh-CharacterTab.png",
+      "sha256": "25f8bdf12a4b921842196fb1f8865be70c53f04df7d2e8d3f19994a09ade0751"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-level-bezel-20261108-fullscene-v1/legacy-refresh-HermitTab.png",
+      "sha256": "02d3a5bda866f6ef13342f7244346bbf4e8d245e958ccab4fa648071e814483d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-level-bezel-20261108-fullscene-v1/legacy-refresh-StatsTab.png",
+      "sha256": "8b0c35283e35c09b176768e7f9a8272208f7f209be3b6924a3cfb1b90fdbd57c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-level-bezel-20261108-fullscene-v1/legacy-resources.txt",
+      "sha256": "47713d590a1b9214abdef7a0fc33d6c28a2b5a73a0cff9794375a5083020b498"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-level-bezel-20261108-fullscene-v1/native-character-refresh-fields.txt",
+      "sha256": "564be2e5cdbdaedc1c4f4d10a6c9c013186f4efe3d3b161ab5086b2f82cb90d6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-level-bezel-20261108-fullscene-v1/native-character-refresh-summary.txt",
+      "sha256": "c4e0e7ea8074ebae2956c6573048c386db3524233e4288dabafc93e3d58cb32a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-level-bezel-20261108-fullscene-v1/native-transition-results.txt",
+      "sha256": "347dfa519804984941ffca7a2251cf69b55d3adf4ff97a29fecc597ac6a886a7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-level-bezel-20261108-fullscene-v1/official-CharacterTab.png",
+      "sha256": "1382e7964f2f94c9fe46dd9a9fc27f667bcadcc78be64c0be55a022eee1dbd91"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-level-bezel-20261108-fullscene-v1/official-extraEquipmentTab.png",
+      "sha256": "e74511332292138b7dc45ec346ce3681e14bb47d2bbfb0f74fe355f836f3b650"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-level-bezel-20261108-fullscene-v1/official-HermitTab.png",
+      "sha256": "8bab85d416a1185c2f5da203b376ffad90c6eb381f2bfc27c36d4dd444d5bf7b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-level-bezel-20261108-fullscene-v1/official-hud.png",
+      "sha256": "22834bf6e11a8e4b926fec92d9197c7adb23a6a4386e1d82c95458dad06a935e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-level-bezel-20261108-fullscene-v1/official-panels.png",
+      "sha256": "1382e7964f2f94c9fe46dd9a9fc27f667bcadcc78be64c0be55a022eee1dbd91"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-level-bezel-20261108-fullscene-v1/official-reentry-hud.png",
+      "sha256": "4d5f445932c7e4d048ba508acaa2bfcb1803c7d18869e9bc764af69b95ad3e30"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-level-bezel-20261108-fullscene-v1/official-reentry-panels.png",
+      "sha256": "4d5f445932c7e4d048ba508acaa2bfcb1803c7d18869e9bc764af69b95ad3e30"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-level-bezel-20261108-fullscene-v1/official-refresh-CharacterTab.png",
+      "sha256": "f2792b9f61b2b0e3e37d234326a3fc39cee77b5d8bfc33f94a25eaf9d973f5f4"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-level-bezel-20261108-fullscene-v1/official-refresh-HermitTab.png",
+      "sha256": "16811fe83332c97ba22af2d9e6f1c77c2005f0a6f55d41c46043b0a0206ef385"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-level-bezel-20261108-fullscene-v1/official-refresh-StatsTab.png",
+      "sha256": "7792895566f26b5d544ae6ed0170479be1f614a6bd27d30efb6c48b3ba97b539"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-level-bezel-20261108-fullscene-v1/official-reset-1024x768.png",
+      "sha256": "1382e7964f2f94c9fe46dd9a9fc27f667bcadcc78be64c0be55a022eee1dbd91"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-level-bezel-20261108-fullscene-v1/official-reset-1280x800.png",
+      "sha256": "890626e9c1d9475bb96b04a01eee86bb332cd4c7038d01c24ad6b623041e51da"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-level-bezel-20261108-fullscene-v1/official-reset-1366x768.png",
+      "sha256": "b918a2d477cfcba892c3349064cafc1cfffa4935a0edc3f352e79eef355baccc"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-level-bezel-20261108-fullscene-v1/official-reset-1440x900.png",
+      "sha256": "ae91dd4b848787bf2e6cb836f232507eb9783e772c14eea39e16f3c197c9e1e5"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-level-bezel-20261108-fullscene-v1/official-reset-1600x900.png",
+      "sha256": "d8a5586db32ceee794918ca02586f9105033307ca65991dbdd3c12189328041f"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-level-bezel-20261108-fullscene-v1/official-reset-1920x1080.png",
+      "sha256": "38eb25a69088ffb79783cb97bd708b3b36297ad371032226a6194262dd3f6bdd"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-level-bezel-20261108-fullscene-v1/official-StatsTab.png",
+      "sha256": "0924d7110af8a126404aab4f71759a6e51f977466b7e0408474a919b948e5016"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-level-bezel-20261108-fullscene-v1/reset-pixel-probes.txt",
+      "sha256": "2c236cd844574b74b6d502b13ffed99b5cb29783fc53ea00587ca1543a18ac67"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-level-bezel-20261108-fullscene-v1/tested-runtime.json",
+      "sha256": "3e689adf53314fbaae830826ceb6b1f6f06f8cf5a740402049d0d8eaa1bbf58d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-level-bezel-20261108-layout-v2/annotations/1024x768-character-inventory.png",
+      "sha256": "a183be60a462d49de76c24cdb3f08bcacabdfeca4b713a23adebf036f83be217"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-level-bezel-20261108-layout-v2/annotations/1280x800-character-inventory.png",
+      "sha256": "a367bc16425d7a55c18e52ba6fdcf8c47c02e3bf463e42c028b7c0ee6609abc4"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-level-bezel-20261108-layout-v2/annotations/1366x768-character-inventory.png",
+      "sha256": "6c8ea42894373ebf1e0dd36a67d69db7f7780536a86ee866fb2c5d7605bf0009"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-level-bezel-20261108-layout-v2/annotations/1440x900-character-inventory.png",
+      "sha256": "d8378f909bebf5d343198f17d1d9d87a19888df9f2c9909eb875f0a2a6f4fc79"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-level-bezel-20261108-layout-v2/annotations/1600x900-character-inventory.png",
+      "sha256": "ff55842e7810185d413b07b28360477f64563317f515c14ab079aa3cae171d49"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-level-bezel-20261108-layout-v2/annotations/1920x1080-character-inventory.png",
+      "sha256": "6753139b22054405a44ecb2d76fe12a25118055973e7f022350a6bd159afc769"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-level-bezel-20261108-layout-v2/annotations/character-character.png",
+      "sha256": "3afd18f987335c96da295085b6cc55d6e271a7b73d584972af2c80bde3c12b0f"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-level-bezel-20261108-layout-v2/annotations/character-extraEquipment.png",
+      "sha256": "87e66013834d1d34c2cf11b8f7fd78cd70f2d58c844f2de7127e9e885d0e0aff"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-level-bezel-20261108-layout-v2/annotations/character-hermit.png",
+      "sha256": "0b8ffe26dd4a8fe6a437268b6c4ba1d9cecf07e05a807ac5148604c041c215d9"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-level-bezel-20261108-layout-v2/annotations/character-status.png",
+      "sha256": "4e872d839d025e8086101ef4f8a921ef7c75e99041ead7ea067c634cf79ce8c6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-level-bezel-20261108-layout-v2/OfficialUiLayout.Generated.cs",
+      "sha256": "f98e1a216a0151892d442f82b5967dda5a25f6c12041a5a5b9af667bc53e05f1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/hud-level-bezel-20261108-layout-v2/validation.json",
+      "sha256": "06e8ff61398d331729f3ce763b8b888aa1e6ceb4f84469cc884b1bc39a1345b0"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-level-bezel/audit-history.py",
+      "sha256": "43b3dd93e1bb748275abd80d37a7d986d4016b83b72bd6cf2e0ed3bac1c1fd92"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-level-bezel/before-fix.log",
+      "sha256": "b52231e48e47cb92c4f1ba45cb8b8114b2aedbe5aeb59f6cf52ac2eed30ae56f"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-level-bezel/before-fix.receipt.json",
+      "sha256": "c323c1576bb72434f3552734a7f1832cdb43149612835551dd5f4454f92fc8ea"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-level-bezel/build-debug-v2.log",
+      "sha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-level-bezel/build-debug-v2.receipt.json",
+      "sha256": "e616f4eb3ca099f3df6860d087b6475036b7d1fb6e5ac7f2367201fd5b1c57f0"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-level-bezel/build-debug.log",
+      "sha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-level-bezel/build-debug.receipt.json",
+      "sha256": "0ccd98d9c7d0ec28eece4985b5fd75977da34faf2b3d355384751780fde0b3c9"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-level-bezel/build-release.log",
+      "sha256": "c9e24428be1e56c8408af17aacfea3413de3953bfe426d10eb768782f5005ebc"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-level-bezel/build-release.receipt.json",
+      "sha256": "30890699c99090f3a5919245738c6db57b4f4c96dbd49d438392370b63054c47"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-level-bezel/check-whitespace.py",
+      "sha256": "b0a86f69a0f4d2d1028cf29ec177b27a0b21d80f60d2f17ed9eaf8f84c6a104f"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-level-bezel/debug-build.json",
+      "sha256": "649b5e6b05bae6045d2566350a51b4dc9fc7471eac8bebdb96f215531102725b"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-level-bezel/full-scene.log",
+      "sha256": "6b372d6607e1c4a4258344ca081d356474851f73abf7d50bec43cada10fe58f2"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-level-bezel/full-scene.receipt.json",
+      "sha256": "cf5716fac8d386ddb2df715d5bfdb2cb106737ff154f863753840c564aa23cf8"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-level-bezel/history-audit.json",
+      "sha256": "f8770e5ebd866b7ccbfb20cbae664891cf77597e92a5ce070cb1814b0ee8d3a0"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-level-bezel/history-audit.log",
+      "sha256": "f8770e5ebd866b7ccbfb20cbae664891cf77597e92a5ce070cb1814b0ee8d3a0"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-level-bezel/history-audit.receipt.json",
+      "sha256": "fc08f95af9531fab9f9d1f188e81346d3478d820b5ae574841118a57d71d2497"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-level-bezel/hud-layout-diagnostics.log",
+      "sha256": "e09a2129f8af5cab02dfcd725e5e7529a25e87714f3c172275ae12df8b816386"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-level-bezel/hud-layout-diagnostics.receipt.json",
+      "sha256": "7397e69cce6fe4e9650d8a926841981af628de863796cf6e465d167f5011243e"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-level-bezel/hud-layout-final.log",
+      "sha256": "2705a9183e5f11b8b430199e7e4a0040f36b701b069f440337ec2f1ecb895a16"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-level-bezel/hud-layout-final.receipt.json",
+      "sha256": "b37637394ef20e9dee59112c96a60ba5d46b475fb491c541b999963e9d1096cc"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-level-bezel/hud-layout-v2.log",
+      "sha256": "05c04611c39f041937ed968c34daec208418fe5536b9a3185dd3657b859429f5"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-level-bezel/hud-layout-v2.receipt.json",
+      "sha256": "fb4d3d061ce1aeb88944dcfe3ddba88b5431efff33c8c16851015225ecb852a0"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-level-bezel/hud-layout.log",
+      "sha256": "530b505254d6f58a0e3a58592c0d88c784279d73fb64c70c9512a18c18237076"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-level-bezel/hud-layout.receipt.json",
+      "sha256": "7d2f9fb5842e9468de4feea95d7da6a99285aa101188050e5ff73f80ab1c846a"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-level-bezel/layout-contract-v2.log",
+      "sha256": "01c74b1e17707e48afd00bed5cc34420ca6b3dec88f8d2e32f347c2a9076d8f2"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-level-bezel/layout-contract-v2.receipt.json",
+      "sha256": "8c1fa66aca80294aba1767b22b973fd6cbefce8db35854b292a5430e665961ba"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-level-bezel/layout-contract.log",
+      "sha256": "01c74b1e17707e48afd00bed5cc34420ca6b3dec88f8d2e32f347c2a9076d8f2"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-level-bezel/layout-contract.receipt.json",
+      "sha256": "60cd7c08e030a6c96d635c4520b0b8d3ccb11dc16349bb88ab30adf3d5c425fb"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-level-bezel/manifest-debug.log",
+      "sha256": "062c46bff2370a78efc49eb43829be2e3f316ab94395265fd2ce910bc3cec5ca"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-level-bezel/manifest-debug.receipt.json",
+      "sha256": "703707bc4e7747836b5f7db60f9b010cfeb592734f87ee7f0b0dd33600118abd"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-level-bezel/manifest-release.log",
+      "sha256": "f9c87508dbe7b89de79d17c6f516728d3383fc2843841b88adcdd2bb14a02e9a"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-level-bezel/manifest-release.receipt.json",
+      "sha256": "a2e600c102e25dc8d2f0ee4c15c9826057f12b170454c68188d28a17b9aad046"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-level-bezel/prepare-report.py",
+      "sha256": "ed675bfaf93b43687295a5f5d1af34c9d23fd03a04661568aa9668756c766012"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-level-bezel/README.md",
+      "sha256": "f3b4fc8f3c5f27c39244f13058919cdf8057ec9817beef8cbaf75d15c4048926"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-level-bezel/release-build.json",
+      "sha256": "0d1ebe076509e78b3f6e816450dd1c32c9afa23aba08db2c02f7f94574a48ed2"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-level-bezel/run-check.py",
+      "sha256": "8cea69f8c28d781722ec26876840ea3e6bb44ae5ed37e2d213fdab62d1a7c943"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-level-bezel/source-before/build/game-ui/layout-official-v1.json",
+      "sha256": "da4f31ddeafb449b0312e3331ede61368a203aa2cc766b561e96910475481caf"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-level-bezel/source-before/build/game-ui/Validate-OfficialUiLayout.py",
+      "sha256": "f081127a00a44626de23ac6630f9384dbf1217cc3c40d2cda5fb1d2119b55620"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-level-bezel/source-before/Client/Envir/GameUiHudLayout.cs",
+      "sha256": "19d1606bead9f098913863e9ffe6454fb614321597797360b3b94557972f442b"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-level-bezel/source-before/Client/Scenes/Views/MainPanel.GameUi.cs",
+      "sha256": "df5fed0e440c3e8e155d87332a7a18c55da47b89c29543c1bd896a99ed38efc9"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-level-bezel/source-before/tests/game-ui/OfficialUiHudLayoutTests.cs",
+      "sha256": "35c2206fa9817f81911a52a8408d398a1169a20bdb075549e696d8c54114ca6e"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-level-bezel/source-before.json",
+      "sha256": "b37870c9e35473f0aad4acaea72683f51ac71e54b57ee901eb387ea51782facf"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-level-bezel/tasks.log",
+      "sha256": "90e3ddffa807ef19523e77855653984be659ff7ab47ec66f04d41348c4cb85b3"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-level-bezel/tasks.receipt.json",
+      "sha256": "8688971c9273149b1f227a72a14f216e5f21c652cb75d88d39dcf48e5d9e8a9f"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-level-bezel/tested-runtime.json",
+      "sha256": "96bff68882a0749fd8f74ba3a3251b75c5206cd1f7bbd4e18f04e1195c388447"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-level-bezel/whitespace.log",
+      "sha256": "1991a66c3ada36440412021231b2d996d825551084fb1d9f3f7dd07ad14c6975"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/hud-level-bezel/whitespace.receipt.json",
+      "sha256": "e6d8fab42f8fdf965a2bedc9670131d87d15a7e0c1a568e900016e665f0ca378"
+    }
+  ]
+}

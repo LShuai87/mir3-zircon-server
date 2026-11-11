@@ -1136,7 +1136,7 @@ namespace Client.Controls
         }
         public void InvokeMouseClick()
         {
-            if (!IsEnabled) return;
+            if (CEnvir.GameUiOperationsBlocked || !IsEnabled) return;
 
             MouseClick?.Invoke(this, null);
         }

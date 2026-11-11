@@ -1,0 +1,6 @@
+Native filter children: DXLabel {X=5,Y=5,Width=36,Height=15}; DXTextBox {X=46,Y=5,Width=180,Height=16}; DXLabel {X=236,Y=5,Width=36,Height=15}; DXComboBox {X=277,Y=5,Width=95,Height=16}; DXButton {X=389,Y=4,Width=80,Height=18}
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 MirDB.DBObject.OnChanged(Object oldValue, Object newValue, String propertyName)
+   在 Library.SystemModels.ItemInfo.set_ItemName(String value)
+   在 OfficialUiStorageLayoutTests.Adapt(TestScene root, GameScene scene)
+   在 OfficialUiStorageLayoutTests.Main(String[] args)

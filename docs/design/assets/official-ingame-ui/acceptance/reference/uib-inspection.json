@@ -1,0 +1,94 @@
+{
+  "kind": "diagnostic-uib-inspection",
+  "source": "E:\\Program Files\\ShengquGames\\Mir3\\Data",
+  "files": [
+    {
+      "name": "GAME.UIB",
+      "bytes": 1572920,
+      "sha256": "080477ef633cd71ae378b3acc96471b3f0774d55210b45b756f43f86ec0764a9",
+      "format": "BMP",
+      "size": [
+        1024,
+        768
+      ],
+      "mode": "RGB",
+      "snapshot": "E:\\workspace\\mir3-ui-work\\runtime-reference-20261107\\UibInspection\\GAME.UIB",
+      "sourceUnchangedAfterInspection": true,
+      "bmpBitsPerPixel": 16,
+      "content": "Shanda/Shengqu startup logo",
+      "scopeDecision": "excluded: startup branding, outside logged-in game UI"
+    },
+    {
+      "name": "GameEx.uib",
+      "bytes": 3145784,
+      "sha256": "4288a8819c32829030988fcdc41be0f2bd5c762b2671ee7e3d17adf5cf600626",
+      "format": "BMP",
+      "size": [
+        1024,
+        768
+      ],
+      "mode": "RGB",
+      "snapshot": "E:\\workspace\\mir3-ui-work\\runtime-reference-20261107\\UibInspection\\GameEx.uib",
+      "sourceUnchangedAfterInspection": true,
+      "bmpBitsPerPixel": 32,
+      "content": "Shanda/Shengqu startup logo",
+      "scopeDecision": "excluded: startup branding, outside logged-in game UI"
+    },
+    {
+      "name": "GameEx2.uib",
+      "bytes": 3145784,
+      "sha256": "4288a8819c32829030988fcdc41be0f2bd5c762b2671ee7e3d17adf5cf600626",
+      "format": "BMP",
+      "size": [
+        1024,
+        768
+      ],
+      "mode": "RGB",
+      "snapshot": "E:\\workspace\\mir3-ui-work\\runtime-reference-20261107\\UibInspection\\GameEx2.uib",
+      "sourceUnchangedAfterInspection": true,
+      "bmpBitsPerPixel": 32,
+      "content": "Shanda/Shengqu startup logo",
+      "scopeDecision": "excluded: startup branding, outside logged-in game UI"
+    },
+    {
+      "name": "GameEx3.uib",
+      "bytes": 3145784,
+      "sha256": "4288a8819c32829030988fcdc41be0f2bd5c762b2671ee7e3d17adf5cf600626",
+      "format": "BMP",
+      "size": [
+        1024,
+        768
+      ],
+      "mode": "RGB",
+      "snapshot": "E:\\workspace\\mir3-ui-work\\runtime-reference-20261107\\UibInspection\\GameEx3.uib",
+      "sourceUnchangedAfterInspection": true,
+      "bmpBitsPerPixel": 32,
+      "content": "Shanda/Shengqu startup logo",
+      "scopeDecision": "excluded: startup branding, outside logged-in game UI"
+    },
+    {
+      "name": "WEMADE.UIB",
+      "bytes": 691254,
+      "sha256": "4697764245a63f951334bb2052271d598873175af240a269d6b73ea09f1494b2",
+      "format": "BMP",
+      "size": [
+        640,
+        360
+      ],
+      "mode": "RGB",
+      "snapshot": "E:\\workspace\\mir3-ui-work\\runtime-reference-20261107\\UibInspection\\WEMADE.UIB",
+      "sourceUnchangedAfterInspection": true,
+      "bmpBitsPerPixel": 24,
+      "content": "WeMade startup logo",
+      "scopeDecision": "excluded: startup branding, outside logged-in game UI"
+    }
+  ],
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-07T09:01:49.293293+00:00",
+  "snapshotDirectory": "E:\\workspace\\mir3-ui-work\\runtime-reference-20261107\\UibInspection",
+  "includedInRuntimeAssets": false,
+  "limitations": [
+    "Pillow renders the BMP first image for visual inspection; original bytes are preserved.",
+    "These five files do not supply any missing logged-in HUD, chat or minimap artwork."
+  ]
+}

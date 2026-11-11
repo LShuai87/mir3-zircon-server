@@ -1,0 +1,326 @@
+{
+  "schemaVersion": 1,
+  "kind": "native-window-layout-persistence-and-reentry-verification",
+  "checkedAtLocalDate": "2026-11-08",
+  "referenceResolution": [
+    1024,
+    768
+  ],
+  "releaseAccepted": false,
+  "results": {
+    "windowSetChecks": 167851,
+    "layoutStoreChecks": 35,
+    "startupOwners": 2,
+    "scenes": 13,
+    "entryResolutionCases": 12,
+    "resolutions": [
+      "1024x768",
+      "1366x768",
+      "1280x800",
+      "1440x900",
+      "1600x900",
+      "1920x1080"
+    ],
+    "nativeWindowTypes": [
+      "InventoryBox",
+      "CharacterBox",
+      "BeltBox",
+      "MiniMapBox",
+      "StorageBox"
+    ],
+    "windowResolutionRows": 390,
+    "persistedRecords": 30,
+    "legacyUsersDbSha256": "4d9e4e960d7ba8fce0a0912793f12675ed4ff77db13ae823b0d7b53c943d2918",
+    "disposition": "No production defect reproduced. Added native scene/file persistence regression only."
+  },
+  "verifiedBehaviors": [
+    "Native movement and visibility setters write separate OfficialV1 records for all six resolutions.",
+    "Each resolution restores geometry and permitted visibility on fresh scene entry with the same owner and with a new startup owner reading disk.",
+    "Later resize restores matching geometry without replaying saved visibility. Both saved true and saved false cases are covered.",
+    "Attach, resize and scene disposal do not overwrite saved layout. Atomic writes leave no temporary file.",
+    "Real serialized Legacy Users.db remains byte-identical after all 13 scene disposals and saves.",
+    "The original NPC main card retains native styling and no Official persistence binding; scene entry and resize keep it closed."
+  ],
+  "sourceChanges": [
+    {
+      "path": "tests/game-ui/OfficialUiSceneStartupTests.cs",
+      "beforeSha256": "158261f5662e8e86dad944ed4a2d71a1570431171ce656622328ba1492c37e36",
+      "afterSha256": "83feb9af3b15bcec864dd15948915fdd1ac322243c8f261592a5959b0925e5a7"
+    },
+    {
+      "path": "tests/Run-GameUiWindowSetTests.ps1",
+      "beforeSha256": "6171d5bdb5af8ccc842f333da6245e7e360f422fb5f80819e0e0befc9cbff341",
+      "afterSha256": "86217a3f4a202bf13226aaa4c74dc5af0a0bc0b359e8d85427d4b274903c1dbb"
+    }
+  ],
+  "sourceHashes": [
+    {
+      "path": "tests/game-ui/OfficialUiSceneStartupTests.cs",
+      "sha256": "83feb9af3b15bcec864dd15948915fdd1ac322243c8f261592a5959b0925e5a7"
+    },
+    {
+      "path": "tests/Run-GameUiWindowSetTests.ps1",
+      "sha256": "86217a3f4a202bf13226aaa4c74dc5af0a0bc0b359e8d85427d4b274903c1dbb"
+    }
+  ],
+  "commands": [
+    {
+      "command": [
+        "C:/Users/shuai/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+        "docs/design/assets/official-ingame-ui/acceptance/layout-persistence-reentry/audit-history.py",
+        "--output",
+        "docs/design/assets/official-ingame-ui/acceptance/layout-persistence-reentry/history-audit.json"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/layout-persistence-reentry/history-audit.log",
+      "logSha256": "53c4e15ea9487f5ea954ea889e4ce564a1a35525da896d9ea5e33538e9d36283"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiTests.ps1",
+        "-Suite",
+        "Layout",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/layout-persistence-reentry/layout-store.log",
+      "logSha256": "cf0154f933896b9bf41f685995b9ad2eb9aae9111a98a79030cf026d143eb002"
+    },
+    {
+      "command": [
+        "C:/Users/shuai/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+        "build/game-ui/Validate-UiTasks.py"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/layout-persistence-reentry/tasks.log",
+      "logSha256": "90e3ddffa807ef19523e77855653984be659ff7ab47ec66f04d41348c4cb85b3"
+    },
+    {
+      "command": [
+        "C:/Users/shuai/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+        "docs/design/assets/official-ingame-ui/acceptance/layout-persistence-reentry/check-whitespace.py"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/layout-persistence-reentry/whitespace.log",
+      "logSha256": "62ded4792066b4857101e2e62ea774212f10799c729622fa7c89234618e6a75b"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiWindowSetTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/layout-persistence-reentry-20261108-v1"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/layout-persistence-reentry/window-set-v1.log",
+      "logSha256": "8d559ff7f087c5a58bc1695b6471d3cddbd19fa2e192c715c478db0b05849e66"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiWindowSetTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/layout-persistence-reentry-20261108-v2"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/layout-persistence-reentry/window-set-v2.log",
+      "logSha256": "c6aac9e3973705b0d2011fb8d1d398bef0d43d939c1dde3fc7d2459eb4be31ec"
+    }
+  ],
+  "builds": {
+    "debug": {
+      "buildId": "gameui-e72bf339f656ac5ed8c1e4e7c5ce51a511c08d7f4080090a1b476908a81fda73",
+      "client": {
+        "path": "Zircon.exe",
+        "length": 1367040,
+        "sha256": "30e2766c08896d7e8498e6369a8de4761e3b322a51fd90d36572b773a04f1e08"
+      }
+    },
+    "release": {
+      "buildId": "gameui-edd47d1608c0226d618a6986cbf92c749351e564fa86af39efbb1f13ad2478c6",
+      "client": {
+        "path": "Zircon.exe",
+        "length": 1263104,
+        "sha256": "5eef19c45b1f56eda1df0b7b3626a765f5ece271705d2cd6525aefd605783653"
+      }
+    }
+  },
+  "runtimeRebuiltThisTurn": false,
+  "reusedRuntimeEvidence": "docs/design/assets/official-ingame-ui/acceptance/npc-lifecycle/verification.json",
+  "package": {
+    "path": "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+    "frameCount": 94,
+    "sha256": "dd45cbf51d976a69d28269ee0d27a985def1ee1693cab2b509b74ae347a880a4"
+  },
+  "candidate": {
+    "path": "E:/workspace/mir3-ui-work/warehouse-assets-20261108-v1/zl-v2/OfficialV1.Zl",
+    "frameCount": 1,
+    "sha256": "471169dfa093b521f3c700c5a993e4e763aa17a45b2e16f440d961c0c7bf4cec"
+  },
+  "sourcePlanSha256": "f8c0a002b3821fabb54993792c354c4eff35eec51f9cfdc418535017c13069e9",
+  "limitations": [
+    "SceneFixture bypasses constructor network/world setup; tests use real production windows, startup sessions, setters, scene resize, disposal, and real files. This is not a game process restart or live account relogin.",
+    "Five persistent window types are covered. The NPC-card check covers closed startup/resize only; all seventeen services retain the prior lifecycle report coverage.",
+    "Geometry uses each native window default permitted size. This round does not exercise user resizing of custom-size windows.",
+    "Chat settings serialization, loading saved tab topology and style isolation of chat geometry remain to be reviewed. Existing chat resize/identity assertions in the window-set suite still pass.",
+    "No production code, runtime resource, gate, official installation or historical report was edited. Debug/Release binaries are reused and hash-verified, not rebuilt this round.",
+    "Live login/reconnect, real storage/service transactions, remaining UI semantics and final visual acceptance remain open.",
+    "Legacy remains default; RuntimeReady=false, productionBindingAllowed=false, releaseAccepted=false. No commit, push or deployment."
+  ],
+  "evidenceHashes": [
+    {
+      "path": "E:/workspace/mir3-ui-work/layout-persistence-reentry-20261108-v1/button-hitmask-cpu.txt",
+      "sha256": "8c02ba0d543cdf1f7ebeb48c8e6f52a83dde10de6fcca3b43899d8982e666927"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/layout-persistence-reentry-20261108-v1/layout-persistence-legacy.db",
+      "sha256": "4d9e4e960d7ba8fce0a0912793f12675ed4ff77db13ae823b0d7b53c943d2918"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/layout-persistence-reentry-20261108-v1/layout-persistence-results.txt",
+      "sha256": "57705bd08afb6ff12c23263d4ce6952404f17ef7ce369ad84ee0524cf49fe7d6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/layout-persistence-reentry-20261108-v1/layout-persistence-saved.json",
+      "sha256": "b0326ef274ff5d8e6ded212ddcedf694c77a6eccfd0425458d7e20c3ccfae93a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/layout-persistence-reentry-20261108-v1/legacy-glyph-restored.png",
+      "sha256": "0a53fff02c059efc67e4808ccfbd669c8560f8a164c6da2f2f6970301adcf2ff"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/layout-persistence-reentry-20261108-v1/legacy-glyph-suppressed.png",
+      "sha256": "5a739a1abe0ce2f11461d1c429810d6256b07eabeb58321d7f9ba821f84b2cab"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/layout-persistence-reentry-20261108-v2/button-hitmask-cpu.txt",
+      "sha256": "8c02ba0d543cdf1f7ebeb48c8e6f52a83dde10de6fcca3b43899d8982e666927"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/layout-persistence-reentry-20261108-v2/layout-persistence-legacy.db",
+      "sha256": "4d9e4e960d7ba8fce0a0912793f12675ed4ff77db13ae823b0d7b53c943d2918"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/layout-persistence-reentry-20261108-v2/layout-persistence-results.txt",
+      "sha256": "ed11120c29f9eaa7a195223529c6f68ee13aaa60138b01b3d69f9bb274d6bf31"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/layout-persistence-reentry-20261108-v2/layout-persistence-saved.json",
+      "sha256": "b0326ef274ff5d8e6ded212ddcedf694c77a6eccfd0425458d7e20c3ccfae93a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/layout-persistence-reentry-20261108-v2/legacy-glyph-restored.png",
+      "sha256": "0a53fff02c059efc67e4808ccfbd669c8560f8a164c6da2f2f6970301adcf2ff"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/layout-persistence-reentry-20261108-v2/legacy-glyph-suppressed.png",
+      "sha256": "5a739a1abe0ce2f11461d1c429810d6256b07eabeb58321d7f9ba821f84b2cab"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/layout-persistence-reentry/audit-history.py",
+      "sha256": "43b3dd93e1bb748275abd80d37a7d986d4016b83b72bd6cf2e0ed3bac1c1fd92"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/layout-persistence-reentry/check-whitespace.py",
+      "sha256": "b0a86f69a0f4d2d1028cf29ec177b27a0b21d80f60d2f17ed9eaf8f84c6a104f"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/layout-persistence-reentry/history-audit.json",
+      "sha256": "53c4e15ea9487f5ea954ea889e4ce564a1a35525da896d9ea5e33538e9d36283"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/layout-persistence-reentry/history-audit.log",
+      "sha256": "53c4e15ea9487f5ea954ea889e4ce564a1a35525da896d9ea5e33538e9d36283"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/layout-persistence-reentry/history-audit.receipt.json",
+      "sha256": "fba8a8b64adb0b94310a620fde17c9d930c4086471bd7007c4df3ff361a46280"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/layout-persistence-reentry/layout-store.log",
+      "sha256": "cf0154f933896b9bf41f685995b9ad2eb9aae9111a98a79030cf026d143eb002"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/layout-persistence-reentry/layout-store.receipt.json",
+      "sha256": "140bdcf6922ca84c02392813cdce14bd1363514345bacb8721e18d28b249e7cc"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/layout-persistence-reentry/prepare-report.py",
+      "sha256": "71f206d12f3a22b52e92ed97e49c1ded1dd80c1f3fe521266b2cffeee3b31766"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/layout-persistence-reentry/README.md",
+      "sha256": "241adddc5a00c4dd30a60ae50306799a9adad0476173cd65352542d58d064d39"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/layout-persistence-reentry/run-check.py",
+      "sha256": "8cea69f8c28d781722ec26876840ea3e6bb44ae5ed37e2d213fdab62d1a7c943"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/layout-persistence-reentry/source-before/tests/game-ui/OfficialUiSceneStartupTests.cs",
+      "sha256": "158261f5662e8e86dad944ed4a2d71a1570431171ce656622328ba1492c37e36"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/layout-persistence-reentry/source-before/tests/Run-GameUiWindowSetTests.ps1",
+      "sha256": "6171d5bdb5af8ccc842f333da6245e7e360f422fb5f80819e0e0befc9cbff341"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/layout-persistence-reentry/source-before.json",
+      "sha256": "4e0fd0ecc0c2976a3ad17592e123b1c6b8ab379d6c277308e3b8f79a9c2fc784"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/layout-persistence-reentry/tasks.log",
+      "sha256": "90e3ddffa807ef19523e77855653984be659ff7ab47ec66f04d41348c4cb85b3"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/layout-persistence-reentry/tasks.receipt.json",
+      "sha256": "01c888e01e55789a5cd3f8a8232065fc8ba2f376c3a77e0a12670e5e06c1c69f"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/layout-persistence-reentry/tested-runtime.json",
+      "sha256": "b848136ccbea00cb19df60680d38fa93f3fb6f368111967de60de9ec46a810bc"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/layout-persistence-reentry/whitespace.log",
+      "sha256": "62ded4792066b4857101e2e62ea774212f10799c729622fa7c89234618e6a75b"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/layout-persistence-reentry/whitespace.receipt.json",
+      "sha256": "784192da4b7d51ca84c9189fa2a7b7c1869ccd165655e3473ec88fcbb5448d26"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/layout-persistence-reentry/window-set-v1.log",
+      "sha256": "8d559ff7f087c5a58bc1695b6471d3cddbd19fa2e192c715c478db0b05849e66"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/layout-persistence-reentry/window-set-v1.receipt.json",
+      "sha256": "a1fc61e8848100374eabe5b55b059fca1c0384c2c68a4f0adbc9da5fe7b6f201"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/layout-persistence-reentry/window-set-v2.log",
+      "sha256": "c6aac9e3973705b0d2011fb8d1d398bef0d43d939c1dde3fc7d2459eb4be31ec"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/layout-persistence-reentry/window-set-v2.receipt.json",
+      "sha256": "27b69c80c72ad2e6b9305543e72a1b727d94db926afee88660cf2f01cd11c0f9"
+    }
+  ]
+}

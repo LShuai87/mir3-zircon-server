@@ -1,0 +1,1418 @@
+{
+  "schemaVersion": 1,
+  "createdAtLocalDate": "2026-11-07",
+  "status": "in_progress",
+  "implementationStarted": true,
+  "sourcePlan": "docs/design/official-ingame-ui-implementation-plan.md",
+  "sourcePlanSha256": "f8c0a002b3821fabb54993792c354c4eff35eec51f9cfdc418535017c13069e9",
+  "baselineCommit": "fc581d5cf96a81b49c557a15675a7386efac8825",
+  "sourceCodeBaselineComparison": "Historical design snapshot is unchanged. Implementation-start snapshot was recorded after foundation edits: 13 of 18 historical files match, 5 differ with per-file explanations. See acceptance/baseline/implementation-start/baseline.json.",
+  "currentInputGates": {
+    "G0-1": "closed",
+    "G0-2": "not_closed",
+    "G0-3": "not_closed",
+    "G0-4": "not_closed",
+    "G0-5": "not_closed"
+  },
+  "tasks": [
+    {
+      "id": "UI-01",
+      "stage": "P0",
+      "title": "冻结代码、功能与接口基线",
+      "status": "done",
+      "dependsOn": [],
+      "inputGates": [],
+      "files": [
+        "docs/design/assets/official-ingame-ui/acceptance/baseline/",
+        "Client/Scenes/Views/CharacterDialog.cs",
+        "Client/Scenes/GameScene.cs",
+        "Client/Scenes/Views/NPCDialog.cs"
+      ],
+      "work": [
+        "记录实现起点 HEAD、工作区差异、关键源码哈希；对比方案 code-baseline.json，逐项解释差异，保留历史快照。",
+        "导出现有角色字段、16 槽、快捷键、主面板信息、包裹操作、NPC 服务及确认/数量弹框清单；记录旧客户端相同操作的显示、事件和发包基线。",
+        "冻结资源绑定、WindowSkin、布局路由、启动样式上下文及测试入口的最小接口契约；约定 tests/Run-GameUiTests.ps1 的 Assets/Controls/Layout/Bindings/Npc 套件，后续任务逐步实现。"
+      ],
+      "acceptance": [
+        "基线包含 16 装备槽、49 包裹格、10 快捷链接、17 NPC 窗口和仓库；每项功能有目标页面及验证方式。",
+        "未具备运行条件的截图/发包基线标为未采集；关联行为任务不能以空证据验收。",
+        "已有未跟踪运行数据库、data 和 build/hud-assets 不作为本任务代码或生成包来源自动提交。"
+      ],
+      "acceptanceCases": [],
+      "npcWindows": [],
+      "evidence": [
+        "docs/design/assets/official-ingame-ui/acceptance/tasks/UI-01/result.json"
+      ],
+      "completionScope": "仅完成本任务的基础设施和对应自动验证；关联 A01..A20 仍须 UI-27/28 按方案执行。"
+    },
+    {
+      "id": "UI-02",
+      "stage": "P0",
+      "title": "补齐正式版运行参考 G0-1",
+      "status": "done",
+      "dependsOn": [
+        "UI-01"
+      ],
+      "inputGates": [],
+      "files": [
+        "docs/design/assets/official-ingame-ui/acceptance/reference/"
+      ],
+      "work": [
+        "复用已归档的主界面、角色与包裹运行原图，配置基准采用用户确认的1024×768；单独记录附件像素、未知DPI与未独立测量的客户区，不要求重复截图或修改显示设置。",
+        "逐图标出透明边界、组合层级和可操作区域；官网 2018 年角色图仅作历史参考，不能冒充当前运行图。",
+        "只核对有效换肤范围；NPC交互卡片和按钮触发的二级弹窗保留现有样式。项目新增标签及格子按既有语义适配，不要求正式版提供对应截图。"
+      ],
+      "acceptance": [
+        "有效范围已有运行截图并完成素材、透明边界与组合映射；未知元数据明确标注，禁止用素材拼图冒充运行截图。G0-1按当前有效范围核对通过；最终素材、布局及实机验收由后续门槛负责。"
+      ],
+      "acceptanceCases": [],
+      "npcWindows": [],
+      "evidence": [
+        "docs/design/assets/official-ingame-ui/acceptance/tasks/UI-02/result.json"
+      ],
+      "referenceCaptureRequest": "docs/design/assets/official-ingame-ui/acceptance/reference/capture-request.json",
+      "latestAvailabilityCheck": "docs/design/assets/official-ingame-ui/acceptance/reference/availability.json",
+      "remainingWork": [],
+      "latestRuntimeProcessCheck": "docs/design/assets/official-ingame-ui/acceptance/reference/process-metadata-check.json",
+      "blockerEvidence": "docs/design/assets/official-ingame-ui/acceptance/reference/implementation-blocker.json",
+      "scopeDecision": "docs/design/assets/official-ingame-ui/acceptance/reference/chat-scope-decision.json",
+      "latestRuntimeObservation": "docs/design/assets/official-ingame-ui/acceptance/reference/runtime-observation-20261107T121828020Z.json",
+      "scopeDecisions": [
+        "docs/design/assets/official-ingame-ui/acceptance/reference/secondary-popup-scope-decision.json",
+        "docs/design/assets/official-ingame-ui/acceptance/reference/npc-card-scope-decision.json"
+      ],
+      "secondaryPopupScope": "操作按钮额外打开的二级弹窗不换肤、不要求正式版采图；已约定的主界面继续实施，原交互保留并回归。",
+      "npcInteractionCardScope": "NPC交互卡片保留现有外框、正文、选项和关闭按钮样式；不补采正式版卡片截图，不接入新皮肤，原行为仍回归。",
+      "referenceResolutionConfirmation": "docs/design/assets/official-ingame-ui/acceptance/reference/resolution-confirmation.json",
+      "preparatoryEvidence": [
+        "docs/design/assets/official-ingame-ui/acceptance/preparatory/selected-assets/verification.json"
+      ],
+      "referenceGateClosure": "docs/design/assets/official-ingame-ui/acceptance/reference-finalization/gate-closure.json",
+      "finalReferenceMap": "docs/design/assets/official-ingame-ui/acceptance/reference-finalization/generated/reference-map.json"
+    },
+    {
+      "id": "UI-03",
+      "stage": "P1",
+      "title": "实现参数化 MIX/MIZ 解码器",
+      "status": "done",
+      "dependsOn": [
+        "UI-01"
+      ],
+      "inputGates": [],
+      "files": [
+        "build/game-ui/Decode-OfficialUi.py",
+        "build/game-ui/source-libraries.json",
+        "tests/Run-GameUiTests.ps1",
+        "tests/game-ui/"
+      ],
+      "work": [
+        "支持显式源目录、输出目录和源库哈希清单；正式版目录只读，输出不得与源目录重合；默认绑定已记录的四库基线，哈希不符立即停止。",
+        "读取 MIX 偏移表、MIZ 项头、zlib、RGB565、4 字节行对齐及 bottom-up；保留空项、原索引和有符号偏移；导出 PNG 和逐项元数据。",
+        "校验头、数量、偏移/长度、尺寸、解压数据长度及输出路径；损坏输入报告源库/索引并失败，不发布半成品。"
+      ],
+      "acceptance": [
+        "固定源哈希下四库索引数分别 2045/420/181/1630，有效图分别 1175/349/112/572；重复输出元数据和像素内容一致。",
+        "截断、越界、错误压缩、负 offset、行补齐和空项夹具均覆盖；源目录哈希前后不变。"
+      ],
+      "acceptanceCases": [
+        "A01",
+        "A02"
+      ],
+      "npcWindows": [],
+      "evidence": [
+        "docs/design/assets/official-ingame-ui/acceptance/tasks/UI-03/result.json"
+      ],
+      "completionScope": "仅完成本任务的基础设施和对应自动验证；关联 A01..A20 仍须 UI-27/28 按方案执行。"
+    },
+    {
+      "id": "UI-04",
+      "stage": "P1",
+      "title": "实现显式透明编码与参考 Zl 转存",
+      "status": "done",
+      "dependsOn": [
+        "UI-03"
+      ],
+      "inputGates": [],
+      "files": [
+        "ImageManager/OfficialUiBuilder.cs",
+        "ImageManager/WTLLibrary.cs",
+        "ImageManager/Mir3Library.cs",
+        "ImageManager/ImageManager.csproj",
+        "tests/game-ui/"
+      ],
+      "work": [
+        "新增可自动调用的构建入口，参数含输入目录、输出目录、manifest 与 reference/runtime 模式；复用现有 Zl writer；入口不得依赖交互式选文件或写死路径。",
+        "编码器支持显式 opaque/binary-mask 策略；旧 WTL 入口维持原黑色透明默认行为。按实际逻辑尺寸补齐 DXT1 纹理，补齐区透明，保留负 offset。",
+        "逐库输出 Reference/UI.Zl、Interface.Zl、GameInter.Zl、ProgUse.Zl 及 reference-manifest.json，保留全部 4276 索引位置、空项和 2208 有效图；未确认透明规则的图仅按 opaque 保留像素，并标 alphaVerified=false，仅供查图，不能进入交付包。",
+        "连续透明效果不能静默降级，也不写入伪装为当前格式的 DXT5 数据；保留源文件和 PNG，DXT1 参考库不替代原件。"
+      ],
+      "acceptance": [
+        "现有 MirLibrary 可读取输出的完整头和图像数据，逐项索引/空项/尺寸/offset 与源元数据一致；偏移及长度不溢出当前格式。",
+        "不透明纯黑、透明掩码、非 4 倍数尺寸样张均正确；旧 WTL 固定夹具输出不变。",
+        "失败只留独立临时结果，既有可用输出包不被替换。"
+      ],
+      "acceptanceCases": [
+        "A01",
+        "A02"
+      ],
+      "npcWindows": [],
+      "evidence": [
+        "docs/design/assets/official-ingame-ui/acceptance/tasks/UI-04/result.json"
+      ],
+      "completionScope": "仅完成本任务的基础设施和对应自动验证；关联 A01..A20 仍须 UI-27/28 按方案执行。"
+    },
+    {
+      "id": "UI-05",
+      "stage": "P0",
+      "title": "冻结语义素材与透明规则 G0-2/G0-5",
+      "status": "in_progress",
+      "dependsOn": [
+        "UI-02",
+        "UI-03",
+        "UI-04"
+      ],
+      "inputGates": [],
+      "files": [
+        "build/game-ui/asset-manifest.json",
+        "docs/design/assets/official-ingame-ui/acceptance/assets/"
+      ],
+      "work": [
+        "为每个必需 role 明确源库/索引/哈希、裁切与组合、逻辑/纹理尺寸、offset/pivot、alphaMode/blendMode 和按钮四态；枚举所有待改窗口的资源需求。",
+        "确认 HP/MP 壳与填充层组合；补齐小地图、聊天、NPC 准确索引，不按相邻帧猜按钮状态；缺状态图只用明确的 tint 规则。",
+        "实绘对比 PNG 与 Zl 的深黑底、细线、边缘、文字、红蓝色与负 offset；如需复用 UIB，按已识别 BMP 读取且仅抽取范围内区域。"
+      ],
+      "acceptance": [
+        "G0-2 每个必需 role 唯一且来源可追溯，引用完整；G0-5 对照证据通过。",
+        "连续透明/特殊混合无法等价重现的必需素材保留阻断，不以勾选完成绕过；登录及其他范围外图不打包。"
+      ],
+      "acceptanceCases": [
+        "A02"
+      ],
+      "npcWindows": [],
+      "evidence": [
+        "docs/design/assets/official-ingame-ui/acceptance/tasks/UI-05/result.json"
+      ],
+      "scopeDecisions": [
+        "docs/design/assets/official-ingame-ui/acceptance/reference/secondary-popup-scope-decision.json",
+        "docs/design/assets/official-ingame-ui/acceptance/reference/npc-card-scope-decision.json"
+      ],
+      "secondaryPopupScope": "操作按钮额外打开的二级弹窗不换肤、不要求正式版采图；已约定的主界面继续实施，原交互保留并回归。",
+      "npcInteractionCardScope": "NPC交互卡片保留现有外框、正文、选项和关闭按钮样式；不补采正式版卡片截图，不接入新皮肤，原行为仍回归。",
+      "preparatoryEvidence": [
+        "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-surfaces/README.md",
+        "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-surfaces/verification.json",
+        "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-surfaces/README.md",
+        "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-surfaces/verification.json",
+        "docs/design/assets/official-ingame-ui/acceptance/catalog-compilation/README.md",
+        "docs/design/assets/official-ingame-ui/acceptance/catalog-compilation/verification.json",
+        "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/README.md",
+        "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/verification.json",
+        "docs/design/assets/official-ingame-ui/acceptance/reference-finalization/generated/reference-map.json",
+        "docs/design/assets/official-ingame-ui/acceptance/reference-finalization/reproduction-validation.json",
+        "docs/design/assets/official-ingame-ui/acceptance/npc-shop-assets/README.md",
+        "docs/design/assets/official-ingame-ui/acceptance/npc-shop-assets/verification.json",
+        "docs/design/assets/official-ingame-ui/acceptance/npc-shop-assets/reproduction-validation.json",
+        "docs/design/assets/official-ingame-ui/acceptance/npc-shop-binding/README.md",
+        "docs/design/assets/official-ingame-ui/acceptance/npc-shop-binding/verification.json",
+        "docs/design/assets/official-ingame-ui/acceptance/asset-usage-contract/README.md",
+        "docs/design/assets/official-ingame-ui/acceptance/asset-usage-contract/verification.json",
+        "docs/design/assets/official-ingame-ui/acceptance/asset-usage-contract/asset-audit-final.json",
+        "build/game-ui/asset-usage-official-v1.json",
+        "docs/design/assets/official-ingame-ui/acceptance/warehouse-binding/README.md",
+        "docs/design/assets/official-ingame-ui/acceptance/warehouse-binding/verification.json"
+      ],
+      "remainingWork": [
+        "有效范围9类界面已建立用途清单，当前93帧中51帧由场景引用、2帧仅供合成、40帧按钮未接入；仍须逐项审定原字段/操作的复用覆盖，不能以素材帧数代替完成度。",
+        "独立仓库底板复用UI[511]；原控件可恢复布局接口及1024×768隔离GPU验证通过，但尚未合并93帧包、更新用途合同或由场景换肤入口安装；真实存取、组合定位及最终视觉审定待完成，仓库用途缺项继续保留。",
+        "完成最终PNG/Zl实绘及暗底/细线/文字/红蓝边缘/负offset/压缩验收后，再关闭G0-2/G0-5。"
+      ]
+    },
+    {
+      "id": "UI-06",
+      "stage": "P0",
+      "title": "冻结布局和属性映射 G0-3/G0-4",
+      "status": "not_started",
+      "dependsOn": [
+        "UI-01",
+        "UI-02",
+        "UI-05"
+      ],
+      "inputGates": [],
+      "files": [
+        "build/game-ui/layout-official-v1.json",
+        "build/game-ui/character-bindings.json",
+        "docs/design/assets/official-ingame-ui/acceptance/layout/"
+      ],
+      "work": [
+        "为六种分辨率输出逻辑整数矩形及标注图；每个窗口、槽位、属性、按钮、NPC 内容区、聊天输入、小地图 viewport 有唯一 ID。",
+        "明确 slotId/parentTab/visualRect/hitRect/iconRect、人物 pivot、标题拖动区、safeRect、九宫格边距、按钮四态几何与默认窗口组合；校验局部/屏幕坐标转换一致。",
+        "从 UI-01 的完整字段清单生成属性/入口去向表；角色 9 槽与扩展 7 槽、49 格、10 链接保持，主界面与 NPC 的确认按钮可达。"
+      ],
+      "acceptance": [
+        "G0-3 六种分辨率覆盖且必需矩形无缺项；G0-4 原字段和操作入口逐项有去向。",
+        "1024×768 的角色+包裹、NPC+包裹、NPC+仓库组合均能操作；地图装饰不占用错误命中区。"
+      ],
+      "acceptanceCases": [
+        "A03",
+        "A05",
+        "A06",
+        "A07",
+        "A14"
+      ],
+      "npcWindows": [],
+      "evidence": [
+        "docs/design/assets/official-ingame-ui/acceptance/tasks/UI-06/result.json",
+        "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-attributes/verification.json",
+        "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-controls/verification.json",
+        "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-composition/verification.json",
+        "docs/design/assets/official-ingame-ui/acceptance/preparatory/inventory-layout/verification.json",
+        "docs/design/assets/official-ingame-ui/acceptance/preparatory/belt-layout/verification.json",
+        "docs/design/assets/official-ingame-ui/acceptance/preparatory/minimap-layout/verification.json",
+        "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/verification.json"
+      ],
+      "preparatoryEvidence": [
+        "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-bindings/README.md",
+        "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-bindings/character-bindings.draft.json",
+        "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-bindings/validation.json",
+        "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-bindings/guard-checks.json",
+        "docs/design/assets/official-ingame-ui/acceptance/preparatory/layout-contract/verification.json",
+        "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-readouts/verification.json",
+        "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-pages/verification.json",
+        "docs/design/assets/official-ingame-ui/acceptance/preparatory/inventory-layout/README.md",
+        "docs/design/assets/official-ingame-ui/acceptance/preparatory/belt-layout/README.md",
+        "docs/design/assets/official-ingame-ui/acceptance/preparatory/minimap-layout/README.md",
+        "docs/design/assets/official-ingame-ui/acceptance/character-binding-contract/verification.json",
+        "docs/design/assets/official-ingame-ui/acceptance/character-slot-semantics/verification.json"
+      ],
+      "scopeDecisions": [
+        "docs/design/assets/official-ingame-ui/acceptance/reference/secondary-popup-scope-decision.json",
+        "docs/design/assets/official-ingame-ui/acceptance/reference/npc-card-scope-decision.json"
+      ],
+      "secondaryPopupScope": "操作按钮额外打开的二级弹窗不换肤、不要求正式版采图；已约定的主界面继续实施，原交互保留并回归。",
+      "npcInteractionCardScope": "NPC交互卡片保留现有外框、正文、选项和关闭按钮样式；不补采正式版卡片截图，不接入新皮肤，原行为仍回归。"
+    },
+    {
+      "id": "UI-07",
+      "stage": "P1",
+      "title": "生成正式 UI 包和编译目录",
+      "status": "not_started",
+      "dependsOn": [
+        "UI-04",
+        "UI-05",
+        "UI-06"
+      ],
+      "inputGates": [
+        "G0-2",
+        "G0-3",
+        "G0-4",
+        "G0-5"
+      ],
+      "files": [
+        "ImageManager/OfficialUiBuilder.cs",
+        "build/game-ui/Build-OfficialUi.ps1",
+        "Client/Models/GameUi/OfficialUiCatalog.cs",
+        "Client/Client.csproj",
+        "ImageManager/ImageManager.csproj"
+      ],
+      "work": [
+        "将冻结资源裁切/拼接为 Data/GameUI/OfficialV1.Zl，参考库与旧 Data/Interface.Zl 等严格分开；outputIndex 固定且唯一。",
+        "校验输入 JSON 后生成编译进客户端的语义索引、包哈希、尺寸、布局常量和属性映射；运行时不依赖构建 JSON。",
+        "新增 C# 文件显式加入传统 csproj；构建先写临时目录，全部验证通过后才发布匹配的包、生成代码及清单。"
+      ],
+      "acceptance": [
+        "同输入两次构建资源字节和映射一致；未知 role、冲突索引、缺四态、非法矩形、哈希不符均阻断发布。",
+        "当前客户端读取每个必需图成功；EXE 的目录与资源包哈希一致，无法混用旧生成代码和新包。"
+      ],
+      "acceptanceCases": [
+        "A01",
+        "A02"
+      ],
+      "npcWindows": [],
+      "evidence": [
+        "docs/design/assets/official-ingame-ui/acceptance/tasks/UI-07/result.json"
+      ],
+      "preparatoryEvidence": [
+        "docs/design/assets/official-ingame-ui/acceptance/preparatory/catalog/README.md",
+        "docs/design/assets/official-ingame-ui/acceptance/preparatory/catalog/validation.json",
+        "docs/design/assets/official-ingame-ui/acceptance/preparatory/catalog/catalog-tests.log",
+        "docs/design/assets/official-ingame-ui/acceptance/preparatory/package-preflight/README.md",
+        "docs/design/assets/official-ingame-ui/acceptance/preparatory/package-preflight/verification.json",
+        "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-surfaces/README.md",
+        "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-surfaces/verification.json",
+        "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-surfaces/README.md",
+        "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-surfaces/verification.json",
+        "docs/design/assets/official-ingame-ui/acceptance/catalog-compilation/README.md",
+        "docs/design/assets/official-ingame-ui/acceptance/catalog-compilation/verification.json",
+        "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/README.md",
+        "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/verification.json"
+      ]
+    },
+    {
+      "id": "UI-08",
+      "stage": "P1",
+      "title": "扩展图片绑定与按钮四态",
+      "status": "done",
+      "dependsOn": [
+        "UI-01"
+      ],
+      "inputGates": [],
+      "files": [
+        "Client/Controls/DXImageControl.cs",
+        "Client/Controls/DXButton.cs",
+        "tests/game-ui/"
+      ],
+      "work": [
+        "按 UI-01 契约提供单入口绑定 Library/Index，同步纹理失效、Size 和 DisplayArea。",
+        "增加可选四态映射；旧按钮沿用默认行为。切态保持逻辑矩形和点击范围，不重复订阅动作。"
+      ],
+      "acceptance": [
+        "用隔离测试图验证四态切换、换库同索引、换索引、失效/释放和点击只触发一次。",
+        "未启用新绑定的旧图片、旧按钮绘制与交互基线通过。"
+      ],
+      "acceptanceCases": [
+        "A02",
+        "A17"
+      ],
+      "npcWindows": [],
+      "evidence": [
+        "docs/design/assets/official-ingame-ui/acceptance/tasks/UI-08/result.json"
+      ],
+      "completionScope": "仅完成本任务的基础设施和对应自动验证；关联 A01..A20 仍须 UI-27/28 按方案执行。"
+    },
+    {
+      "id": "UI-09",
+      "stage": "P1",
+      "title": "实现可选窗口皮肤",
+      "status": "done",
+      "dependsOn": [
+        "UI-08"
+      ],
+      "inputGates": [],
+      "files": [
+        "Client/Controls/GameUiWindowSkin.cs",
+        "Client/Controls/DXWindow.cs",
+        "tests/game-ui/"
+      ],
+      "work": [
+        "新增可空 WindowSkin；统一 GetSize/GetClientArea/SetClientSize 边距换算，不能在子类隐藏非 virtual 方法。",
+        "实现固定角九宫格、标题/拖动区/关闭按钮和最小尺寸；角色底板逻辑像素 1:1；有皮肤时抑制旧背景/边框重复绘制。",
+        "资源、尺寸、皮肤、透明度变化使缓存和命中区同步失效；保留 Esc、关闭、拖动及 Dispose 行为。"
+      ],
+      "acceptance": [
+        "客户区双向换算一致、九宫格边界和标题命中正确；透明装饰不拦截地图。",
+        "皮肤为空时原窗口几何和交互不变；反复换皮肤/开关无事件累积。"
+      ],
+      "acceptanceCases": [
+        "A02",
+        "A14",
+        "A17"
+      ],
+      "npcWindows": [],
+      "evidence": [
+        "docs/design/assets/official-ingame-ui/acceptance/tasks/UI-09/result.json"
+      ],
+      "completionScope": "仅完成本任务的基础设施和对应自动验证；关联 A01..A20 仍须 UI-27/28 按方案执行。"
+    },
+    {
+      "id": "UI-10",
+      "stage": "P1",
+      "title": "隔离新旧布局存储",
+      "status": "done",
+      "dependsOn": [
+        "UI-09"
+      ],
+      "inputGates": [],
+      "files": [
+        "Client/Envir/GameUiLayoutStore.cs",
+        "Client/Controls/DXWindow.cs",
+        "tests/game-ui/"
+      ],
+      "work": [
+        "将 OfficialV1 读写都路由到配置目录 GameUiLayout.OfficialV1.json，键为 schemaVersion/styleVersion/resolution/windowType；Legacy 仍走旧 Settings。",
+        "仅保存允许的位置、尺寸和可见性；不保存物品、NPC 页面、拖放及业务状态，不变更 WindowType 编号。",
+        "临时文件+原子替换；非法尺寸/坐标、损坏 JSON、未知版本记录原因并回默认；初始化/批量布局抑制写入和递归 resize。"
+      ],
+      "acceptance": [
+        "自动检查样式/分辨率隔离、未知版本、损坏/缺文件、写失败和边界坐标；失败不破坏最近可用文件。",
+        "OfficialV1 操作前后旧布局数据库哈希不变；NPC 服务不会因恢复可见性自动打开。"
+      ],
+      "acceptanceCases": [
+        "A15",
+        "A20"
+      ],
+      "npcWindows": [],
+      "evidence": [
+        "docs/design/assets/official-ingame-ui/acceptance/tasks/UI-10/result.json"
+      ],
+      "completionScope": "仅完成本任务的基础设施和对应自动验证；关联 A01..A20 仍须 UI-27/28 按方案执行。"
+    },
+    {
+      "id": "UI-11",
+      "stage": "P1",
+      "title": "建立统一布局与窗口组合入口",
+      "status": "not_started",
+      "dependsOn": [
+        "UI-06",
+        "UI-09",
+        "UI-10"
+      ],
+      "inputGates": [
+        "G0-3",
+        "G0-4"
+      ],
+      "files": [
+        "Client/Envir/GameUiLayoutCoordinator.cs",
+        "Client/Envir/GameUiSceneLayoutHost.cs",
+        "Client/Scenes/GameScene.cs",
+        "Client/Controls/DXWindow.cs",
+        "tests/game-ui/"
+      ],
+      "work": [
+        "按构造/恢复聊天→皮肤尺寸→锚点与组合→匹配布局→clamp→一次输入矩形刷新执行；接入构造尾部、OnSizeChanged、聊天加载和 NPC 组合回调。",
+        "实现 safeRect、标题/关闭/操作区可达及超高内容滚动；HUD 底部、小地图右上、聊天左下，角色/包裹默认分列。",
+        "提供 NPC 上下→左右→区内叠放策略；叠放时当前服务置顶并保留主卡标题/关闭入口；本任务先用模拟窗口验几何，UI-25 再接全量 NPC。"
+      ],
+      "acceptance": [
+        "六分辨率自动几何检查通过；重复 resize 无保存风暴、递归、聊天标签重建或消息清空。",
+        "超大内容仍可滚动访问全部格/确认按钮，模态和提示在正确层级，命中只交给最上层控件。"
+      ],
+      "acceptanceCases": [
+        "A14",
+        "A15"
+      ],
+      "npcWindows": [],
+      "evidence": [
+        "docs/design/assets/official-ingame-ui/acceptance/tasks/UI-11/result.json"
+      ],
+      "preparatoryEvidence": [
+        "docs/design/assets/official-ingame-ui/acceptance/preparatory/layout-coordinator/verification.json",
+        "docs/design/assets/official-ingame-ui/acceptance/preparatory/scene-layout-host/verification.json",
+        "docs/design/assets/official-ingame-ui/acceptance/character-binding-contract/verification.json"
+      ],
+      "remainingWork": [
+        "将已编译并通过真实控件验证的布局宿主接入GameScene构造、resize、显式聊天重置及有效窗口组合回调。",
+        "完成G0-3/G0-4的最终坐标与字段绑定；验证真实输入法、过滤、发包和最终窗口交互后才能关闭任务。"
+      ]
+    },
+    {
+      "id": "UI-12",
+      "stage": "P1",
+      "title": "接入启动风格、资源预检与生命周期",
+      "status": "not_started",
+      "dependsOn": [
+        "UI-07",
+        "UI-08",
+        "UI-09",
+        "UI-10",
+        "UI-11"
+      ],
+      "inputGates": [
+        "G0-2",
+        "G0-3",
+        "G0-4",
+        "G0-5"
+      ],
+      "files": [
+        "Client/Envir/Config.cs",
+        "Client/Program.cs",
+        "Client/Envir/GameUiAssets.cs",
+        "Client/Scenes/GameScene.cs",
+        "Client/Models/MirLibrary.cs",
+        "Client/Client.csproj"
+      ],
+      "work": [
+        "新增 GameUiStyle=Legacy/OfficialV1，重启生效；开发默认 Legacy，交付默认值由 UI-28 验收后的独立打包配置确定。",
+        "配置和 D3D 设备就绪后、GameScene 创建前验证包哈希、全部必需帧及可读性；失败整套使用 Legacy，不保留半套新布局。",
+        "独立 MirLibrary 不增加 LibraryFile 枚举；纹理纳入现有 TextureList/设备重置，定义应用/场景/控件的唯一释放责任。",
+        "运行中渲染故障时阻止新的界面操作，保留连接回包处理、记录原因并提示重启；不在购买/拖放中自动重建场景。"
+      ],
+      "acceptance": [
+        "缺包、坏包、错哈希、缺帧均在进场前整套回 Legacy；无效样式值记录原因并按 Legacy 处理。",
+        "样式不能运行中热切；设备重置、返回登录/重登/退出不访问已释放纹理；故障不重复发包。"
+      ],
+      "acceptanceCases": [
+        "A01",
+        "A17",
+        "A20"
+      ],
+      "npcWindows": [],
+      "evidence": [
+        "docs/design/assets/official-ingame-ui/acceptance/tasks/UI-12/result.json",
+        "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/verification.json"
+      ],
+      "preparatoryEvidence": [
+        "docs/design/assets/official-ingame-ui/acceptance/preparatory/package-preflight/README.md",
+        "docs/design/assets/official-ingame-ui/acceptance/preparatory/package-preflight/verification.json",
+        "docs/design/assets/official-ingame-ui/acceptance/catalog-compilation/README.md",
+        "docs/design/assets/official-ingame-ui/acceptance/catalog-compilation/verification.json",
+        "docs/design/assets/official-ingame-ui/acceptance/character-binding-contract/verification.json",
+        "docs/design/assets/official-ingame-ui/acceptance/startup-selection/README.md",
+        "docs/design/assets/official-ingame-ui/acceptance/startup-selection/verification.json",
+        "docs/design/assets/official-ingame-ui/acceptance/scene-startup/README.md",
+        "docs/design/assets/official-ingame-ui/acceptance/scene-startup/verification.json",
+        "docs/design/assets/official-ingame-ui/acceptance/full-scene/README.md",
+        "docs/design/assets/official-ingame-ui/acceptance/full-scene/verification.json"
+      ]
+    },
+    {
+      "id": "UI-13",
+      "stage": "P2",
+      "title": "重建 HP/MP、经验与主面板按钮",
+      "status": "not_started",
+      "dependsOn": [
+        "UI-12"
+      ],
+      "inputGates": [
+        "G0-1",
+        "G0-2",
+        "G0-3",
+        "G0-4",
+        "G0-5"
+      ],
+      "files": [
+        "Client/Scenes/Views/MainPanel.cs",
+        "Client/Scenes/GameScene.cs",
+        "tests/game-ui/"
+      ],
+      "work": [
+        "按冻结组合绘制底板、空球、底部向上填充、高光、装饰和文字；ratio 浮点计算，max<=0 取 0，夹紧比率但不伪造显示数值。",
+        "源/目标裁剪使用同一取整规则并从底部移动；保存/恢复裁剪、混合及 D3D 状态。",
+        "经验、攻击/宠物模式和主面板原字段/按钮保留入口；按钮复用现有开关、快捷键和可用条件。"
+      ],
+      "acceptance": [
+        "max=0、负值、0、1、半值、max、超 max 均无非法裁剪/除零，HUD 与角色数据同步。",
+        "按球体逐状态实绘；后续地图/聊天绘制无状态泄漏，按钮每次动作与原发包一致。"
+      ],
+      "acceptanceCases": [
+        "A08",
+        "A14"
+      ],
+      "npcWindows": [],
+      "evidence": [
+        "docs/design/assets/official-ingame-ui/acceptance/tasks/UI-13/result.json"
+      ]
+    },
+    {
+      "id": "UI-14",
+      "stage": "P2",
+      "title": "适配包裹 49 格和快捷栏 10 链接",
+      "status": "not_started",
+      "dependsOn": [
+        "UI-12",
+        "UI-13"
+      ],
+      "inputGates": [
+        "G0-2",
+        "G0-3",
+        "G0-4",
+        "G0-5"
+      ],
+      "files": [
+        "Client/Scenes/Views/InventoryDialog.cs",
+        "Client/Scenes/Views/BeltDialog.cs",
+        "Client/Controls/DXItemGrid.cs",
+        "tests/game-ui/"
+      ],
+      "work": [
+        "从 6×8 候选底图重新拼 7×7 底板，步长保持 35、网格 246×246；保留金币、重量、操作栏和索引 0..48。",
+        "快捷栏确定完整尺寸后只重建一次 Grid 并恢复 10 链接；重复尺寸事件不重复创建控件或订阅。",
+        "保留拆分、堆叠、交换、丢弃、远程出售、分解、提示、超重以及数量/冷却/键位语义。"
+      ],
+      "acceptance": [
+        "包裹满载且索引 0/47/48 所有原操作和拒绝路径通过；无容量/物品数据变化。",
+        "10 链接逐个设置触发，resize、重登、保存恢复后仍正确；发包与旧基线一致。"
+      ],
+      "acceptanceCases": [
+        "A06",
+        "A07"
+      ],
+      "npcWindows": [],
+      "evidence": [
+        "docs/design/assets/official-ingame-ui/acceptance/tasks/UI-14/result.json",
+        "docs/design/assets/official-ingame-ui/acceptance/preparatory/inventory-layout/verification.json",
+        "docs/design/assets/official-ingame-ui/acceptance/preparatory/belt-layout/verification.json"
+      ],
+      "preparatoryEvidence": [
+        "docs/design/assets/official-ingame-ui/acceptance/preparatory/inventory-layout/README.md",
+        "docs/design/assets/official-ingame-ui/acceptance/preparatory/belt-layout/README.md",
+        "docs/design/assets/official-ingame-ui/acceptance/item-interactions/README.md",
+        "docs/design/assets/official-ingame-ui/acceptance/item-interactions/verification.json",
+        "docs/design/assets/official-ingame-ui/acceptance/item-drops/README.md",
+        "docs/design/assets/official-ingame-ui/acceptance/item-drops/verification.json"
+      ]
+    },
+    {
+      "id": "UI-15",
+      "stage": "P2",
+      "title": "适配聊天皮肤、输入与焦点",
+      "status": "not_started",
+      "dependsOn": [
+        "UI-12",
+        "UI-13"
+      ],
+      "inputGates": [
+        "G0-1",
+        "G0-2",
+        "G0-3",
+        "G0-4",
+        "G0-5"
+      ],
+      "files": [
+        "Client/Scenes/Views/ChatTab.cs",
+        "Client/Scenes/Views/ChatTextBox.cs",
+        "Client/Scenes/GameScene.cs"
+      ],
+      "work": [
+        "聊天列表沿用本项目当前字体、字号、颜色、频道标识和排版；只调整位置、可用尺寸与容器裁剪，放入已采主界面中输入栏上方的消息显示框。正式版中文输入截图不作为聊天换肤依据；外框等HUD素材按各自任务核对。",
+        "迁移保留频道/过滤配置，重算坐标和尺寸；重复布局不清消息、不重建标签。",
+        "保留输入焦点隔离、Enter/Esc、历史和滚轮；点击频道/按钮不得向地图透传移动。",
+        "消息列表与输入控件分别布局，不把完整聊天窗口嵌入列表框；不改现有频道、过滤、历史、多标签和滚动逻辑，同步实际输入控件的 WinForms 屏幕矩形。"
+      ],
+      "acceptance": [
+        "在本项目客户端验证真实中文 IME 候选与组合输入、发送/取消、长消息、切频道/标签、过滤、滚动和重登；正式版发送因用户报告的15级限制未验证，不作为采集前置，也不要求升级。",
+        "输入焦点时游戏快捷键不触发；六分辨率及规定 DPI 输入位置正确，消息不丢失/重复。",
+        "列表样式与当前项目一致；消息仅在指定框内部显示和裁剪，不覆盖输入栏或相邻HUD，布局变化不丢消息、不重建标签。"
+      ],
+      "acceptanceCases": [
+        "A09",
+        "A14",
+        "A16"
+      ],
+      "npcWindows": [],
+      "evidence": [
+        "docs/design/assets/official-ingame-ui/acceptance/tasks/UI-15/result.json"
+      ],
+      "scopeDecision": "docs/design/assets/official-ingame-ui/acceptance/reference/chat-scope-decision.json",
+      "preparatoryEvidence": [
+        "docs/design/assets/official-ingame-ui/acceptance/preparatory/chat-geometry/verification.json",
+        "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-surfaces/README.md",
+        "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-surfaces/verification.json"
+      ]
+    },
+    {
+      "id": "UI-16",
+      "stage": "P2",
+      "title": "适配小地图外框和命中换算",
+      "status": "not_started",
+      "dependsOn": [
+        "UI-12",
+        "UI-13"
+      ],
+      "inputGates": [
+        "G0-1",
+        "G0-2",
+        "G0-3",
+        "G0-4",
+        "G0-5"
+      ],
+      "files": [
+        "Client/Scenes/Views/MiniMapDialog.cs",
+        "Client/Scenes/GameScene.cs",
+        "tests/game-ui/"
+      ],
+      "work": [
+        "只替换外框、标题与控制按钮；保留原地图库、Panel、ScaleX/Y、标记和切图逻辑。",
+        "viewport 变化时同步裁剪、缩放、标记与点击坐标转换；透明装饰层不接收地图输入。"
+      ],
+      "acceptance": [
+        "换地图、移动跟随、缩放、坐标文字、边缘点击和现有拖动能力通过。",
+        "自动边界换算与实绘命中一致；框外透明区不阻断原地图操作。"
+      ],
+      "acceptanceCases": [
+        "A10",
+        "A14"
+      ],
+      "npcWindows": [],
+      "evidence": [
+        "docs/design/assets/official-ingame-ui/acceptance/tasks/UI-16/result.json",
+        "docs/design/assets/official-ingame-ui/acceptance/preparatory/minimap-layout/verification.json"
+      ],
+      "preparatoryEvidence": [
+        "docs/design/assets/official-ingame-ui/acceptance/preparatory/minimap-layout/README.md"
+      ]
+    },
+    {
+      "id": "UI-17",
+      "stage": "P3",
+      "title": "重建角色四标签与 16 槽",
+      "status": "not_started",
+      "dependsOn": [
+        "UI-13",
+        "UI-14",
+        "UI-15",
+        "UI-16"
+      ],
+      "inputGates": [
+        "G0-1",
+        "G0-2",
+        "G0-3",
+        "G0-4",
+        "G0-5"
+      ],
+      "files": [
+        "Client/Scenes/Views/CharacterDialog.cs",
+        "Client/Controls/DXItemCell.cs",
+        "tests/game-ui/"
+      ],
+      "work": [
+        "保留 CharacterDialog 对外字段/Grid 和更新入口；固定角色/扩展装备/状态/修炼四标签，默认角色。角色页 0,1,2,4,5,6,7,8,9，扩展页 3,10,11,12,13,14,15，按 4+3 排列。",
+        "每个 Slot 只持有一个 cell；保留盔甲操作格，覆盖无业务能力的腰带等装饰；左右槽不镜像互换，Torch 不改为腰带。",
+        "若长框确有需求，新增每实例呈现/命中参数并审查硬编码路径；全局 CellWidth/Height=36 不变，穿戴/拖放 handler 复用。"
+      ],
+      "acceptance": [
+        "16 槽 ID 和 Link 一一对应，命中无重叠；不同左右手镯/戒指可辨识，穿卸/双击/错类型拒绝通过。",
+        "隐藏页收到回包仍更新；四标签切换不改装备、不双发；Legacy 及其他 DXItemCell 场景回归通过。"
+      ],
+      "acceptanceCases": [
+        "A03"
+      ],
+      "npcWindows": [],
+      "evidence": [
+        "docs/design/assets/official-ingame-ui/acceptance/tasks/UI-17/result.json",
+        "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-attributes/verification.json",
+        "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-controls/verification.json",
+        "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-composition/verification.json"
+      ],
+      "preparatoryEvidence": [
+        "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-pages/verification.json",
+        "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-surfaces/README.md",
+        "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-surfaces/verification.json",
+        "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-cell-binding/README.md",
+        "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-cell-binding/verification.json",
+        "docs/design/assets/official-ingame-ui/acceptance/item-interactions/README.md",
+        "docs/design/assets/official-ingame-ui/acceptance/item-interactions/verification.json",
+        "docs/design/assets/official-ingame-ui/acceptance/item-drops/README.md",
+        "docs/design/assets/official-ingame-ui/acceptance/item-drops/verification.json",
+        "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/README.md",
+        "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/verification.json",
+        "docs/design/assets/official-ingame-ui/acceptance/character-slot-semantics/verification.json"
+      ]
+    },
+    {
+      "id": "UI-18",
+      "stage": "P3",
+      "title": "接入人物预览和完整属性绑定",
+      "status": "not_started",
+      "dependsOn": [
+        "UI-17"
+      ],
+      "inputGates": [
+        "G0-3",
+        "G0-4"
+      ],
+      "files": [
+        "Client/Scenes/Views/CharacterDialog.cs",
+        "Client/Scenes/GameScene.cs",
+        "tests/game-ui/"
+      ],
+      "work": [
+        "将人物绘制固定基准替换为布局 pivot 并裁剪到预览区，保留职业/性别/装备/盾牌/特效和绘制层级。",
+        "按冻结字段表绑定等级/经验、HP/MP、腕力/肩力、准确/敏捷/舒适/幸运、GetFormat 基础属性及七系攻/强弱元素；物理抗性和原扩展属性保留在状态页。",
+        "沿用 Health/Mana/Experience/Weight/Stats 更新点和对外标签引用；修炼点、条件、确认/取消、发包和回包保持。"
+      ],
+      "acceptance": [
+        "当前支持职业/性别与装备/特效组合运行正确；预览不裁掉必须显示部分，不改变穿戴状态。",
+        "逐字段与旧基线核对；负/零/正抗性、超重、经验上限 0、实时更新和修炼均通过，无 NaN/Infinity 或旧值残留。"
+      ],
+      "acceptanceCases": [
+        "A04",
+        "A05"
+      ],
+      "npcWindows": [],
+      "evidence": [
+        "docs/design/assets/official-ingame-ui/acceptance/tasks/UI-18/result.json",
+        "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-attributes/verification.json",
+        "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-controls/verification.json",
+        "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-composition/verification.json"
+      ],
+      "preparatoryEvidence": [
+        "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-readouts/verification.json",
+        "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-pages/verification.json",
+        "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-surfaces/README.md",
+        "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-surfaces/verification.json",
+        "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-cell-binding/README.md",
+        "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-cell-binding/verification.json",
+        "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/README.md",
+        "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/verification.json",
+        "docs/design/assets/official-ingame-ui/acceptance/character-slot-semantics/verification.json"
+      ]
+    },
+    {
+      "id": "UI-19",
+      "stage": "P3",
+      "title": "统一装备提示样式并保留二级弹窗",
+      "status": "not_started",
+      "dependsOn": [
+        "UI-17",
+        "UI-18"
+      ],
+      "inputGates": [
+        "G0-2",
+        "G0-3",
+        "G0-4",
+        "G0-5"
+      ],
+      "files": [
+        "Client/Scenes/GameScene.cs",
+        "Client/Controls/GameUiWindowSkin.cs",
+        "Client/Scenes/Views/CharacterDialog.cs",
+        "Client/Scenes/Views/InventoryDialog.cs"
+      ],
+      "work": [
+        "保持 CreateItemLabel 内容、条件、比较/预览和定位入口，仅提取边框、文本样式、间距及换行；不重算物品总属性。",
+        "二级弹窗暂不换肤，沿用现有数量/确认/提示及二级功能窗口；保留打开、取消、确认、关闭和层级行为回归。"
+      ],
+      "acceptance": [
+        "长名、多属性、负值、品质、锁定/未鉴定等实际支持状态与原显示数据一致；四角悬浮仍可读。",
+        "比较/预览、禁用条件、弹框叠加、取消与关闭正常；提示不永久残留，未支持字段不补假值。"
+      ],
+      "acceptanceCases": [
+        "A19"
+      ],
+      "npcWindows": [],
+      "evidence": [
+        "docs/design/assets/official-ingame-ui/acceptance/tasks/UI-19/result.json"
+      ],
+      "scopeDecisions": [
+        "docs/design/assets/official-ingame-ui/acceptance/reference/secondary-popup-scope-decision.json"
+      ],
+      "secondaryPopupScope": "操作按钮额外打开的二级弹窗不换肤、不要求正式版采图；已约定的主界面继续实施，原交互保留并回归。"
+    },
+    {
+      "id": "UI-20",
+      "stage": "P4",
+      "title": "保留 NPC 主卡并回归原交互",
+      "status": "in_progress",
+      "dependsOn": [
+        "UI-14",
+        "UI-18",
+        "UI-19"
+      ],
+      "inputGates": [
+        "G0-1",
+        "G0-2",
+        "G0-3",
+        "G0-4",
+        "G0-5"
+      ],
+      "files": [
+        "Client/Scenes/Views/NPCDialog.cs",
+        "Client/Scenes/GameScene.cs",
+        "tests/game-ui/"
+      ],
+      "work": [
+        "NPCDialog主交互卡片保留现有样式，不实施新底板、正文及选项排版或关闭按钮换肤。",
+        "仅核对HUD及布局调整未破坏原打开/关闭、正文/选项更新、点击响应和服务联动；其他独立服务窗口按各自有效范围处理。"
+      ],
+      "acceptance": [
+        "NPC交互卡片不引用OfficialV1新皮肤；原正文、选项、关闭按钮显示及行为保持。",
+        "原对话选项发包和服务联动回归通过；不要求正式版卡片样式对照或新视觉布局。"
+      ],
+      "acceptanceCases": [
+        "A11",
+        "A12"
+      ],
+      "npcWindows": [
+        "NPCDialog"
+      ],
+      "evidence": [
+        "docs/design/assets/official-ingame-ui/acceptance/tasks/UI-20/result.json"
+      ],
+      "scopeDecisions": [
+        "docs/design/assets/official-ingame-ui/acceptance/reference/secondary-popup-scope-decision.json",
+        "docs/design/assets/official-ingame-ui/acceptance/reference/npc-card-scope-decision.json"
+      ],
+      "secondaryPopupScope": "操作按钮额外打开的二级弹窗不换肤、不要求正式版采图；已约定的主界面继续实施，原交互保留并回归。",
+      "npcInteractionCardScope": "NPC交互卡片保留现有外框、正文、选项和关闭按钮样式；不补采正式版卡片截图，不接入新皮肤，原行为仍回归。",
+      "progressReport": "docs/design/assets/official-ingame-ui/acceptance/npc-preservation/verification.json",
+      "preparatoryEvidence": [
+        "docs/design/assets/official-ingame-ui/acceptance/npc-shop-binding/README.md",
+        "docs/design/assets/official-ingame-ui/acceptance/npc-shop-binding/verification.json"
+      ]
+    },
+    {
+      "id": "UI-21",
+      "stage": "P4",
+      "title": "适配 NPC 商店并回归原服务",
+      "status": "not_started",
+      "dependsOn": [
+        "UI-20"
+      ],
+      "inputGates": [
+        "G0-2",
+        "G0-3",
+        "G0-4",
+        "G0-5"
+      ],
+      "files": [
+        "Client/Scenes/Views/NPCDialog.cs",
+        "tests/game-ui/"
+      ],
+      "work": [
+        "仅 NPCGoodsDialog 商店主界面继续候选换肤，保留原七行商品视口、数量/价格及购买流程。",
+        "NPCSellDialog、NPCRepairDialog、NPCRefineDialog、NPCRefineRetrieveDialog 属于暂缓换肤的服务窗口；不在场景风格入口安装候选窗框或重排适配器。",
+        "原出售7×7、修理14×5、精炼5/3/1材料槽、结果滚动及数量/确认弹窗保持现有样式；回归原选择、费用、取消和请求。"
+      ],
+      "acceptance": [
+        "五窗口逐一正常/取消/不足金币或材料/无效物品/数量边界/服务器拒绝或延迟有记录。",
+        "第一个和最后一个格/商品可达；不提前扣物报成功，禁用态和 handler 条件一致，无额外发包。"
+      ],
+      "acceptanceCases": [
+        "A12"
+      ],
+      "npcWindows": [
+        "NPCGoodsDialog",
+        "NPCSellDialog",
+        "NPCRepairDialog",
+        "NPCRefineDialog",
+        "NPCRefineRetrieveDialog"
+      ],
+      "evidence": [
+        "docs/design/assets/official-ingame-ui/acceptance/tasks/UI-21/result.json"
+      ],
+      "scopeDecisions": [
+        "docs/design/assets/official-ingame-ui/acceptance/reference/secondary-popup-scope-decision.json"
+      ],
+      "secondaryPopupScope": "服务窗口及数量/确认等二级弹窗保持现有样式和布局；仅已约定商店主界面继续候选换肤，原流程仍需回归。",
+      "effectiveStylingScope": "shop_main_view_only",
+      "scopeEnforcementReport": "docs/design/assets/official-ingame-ui/acceptance/scope-enforcement/verification.json"
+    },
+    {
+      "id": "UI-22",
+      "stage": "P4",
+      "title": "回归 NPC 任务与奖励（保留原样式）",
+      "status": "not_started",
+      "dependsOn": [
+        "UI-20"
+      ],
+      "inputGates": [
+        "G0-2",
+        "G0-3",
+        "G0-4",
+        "G0-5"
+      ],
+      "files": [
+        "Client/Scenes/Views/NPCDialog.cs",
+        "tests/game-ui/"
+      ],
+      "work": [
+        "NPCQuestDialog 为暂缓换肤服务窗口；保持原窗框、正文/进度父控件、六行任务及5个固定/3个可选奖励格。",
+        "不在场景安装候选任务窗框或文字滚动容器；现有任务身份/奖励选择修复保留，原接受/完成条件和发包继续回归。"
+      ],
+      "acceptance": [
+        "未选奖励不能完成，正确选择后正常提交；失败回包不报成功，重开/切任务不残留错误选择。",
+        "长正文末项及奖励、确认按钮可达；取消/放弃与旧基线一致。",
+        "Legacy、Official候选与重入场景中均未安装服务皮肤或新布局；不要求正式版服务截图或样式对照。"
+      ],
+      "acceptanceCases": [
+        "A12",
+        "A13"
+      ],
+      "npcWindows": [
+        "NPCQuestDialog"
+      ],
+      "evidence": [
+        "docs/design/assets/official-ingame-ui/acceptance/tasks/UI-22/result.json"
+      ],
+      "scopeDecisions": [
+        "docs/design/assets/official-ingame-ui/acceptance/reference/secondary-popup-scope-decision.json"
+      ],
+      "secondaryPopupScope": "服务窗口及数量/确认等二级弹窗保持现有样式和布局；仅已约定商店主界面继续候选换肤，原流程仍需回归。",
+      "effectiveStylingScope": "retain_native_style",
+      "scopeEnforcementReport": "docs/design/assets/official-ingame-ui/acceptance/scope-enforcement/verification.json"
+    },
+    {
+      "id": "UI-23",
+      "stage": "P4",
+      "title": "回归 NPC 同伴与婚戒（保留原样式）",
+      "status": "not_started",
+      "dependsOn": [
+        "UI-20"
+      ],
+      "inputGates": [
+        "G0-2",
+        "G0-3",
+        "G0-4",
+        "G0-5"
+      ],
+      "files": [
+        "Client/Scenes/Views/NPCDialog.cs",
+        "tests/game-ui/"
+      ],
+      "work": [
+        "NPCAdoptCompanionDialog、NPCCompanionStorageDialog、NPCWeddingRingDialog 及 NPCCompanionStorageRow 保持原样式和布局，不新增换肤适配器。",
+        "回归原领养条件/预览、原寄养取回列表/滚动及婚戒目标与提交规则；原有确认框保持现有样式。"
+      ],
+      "acceptance": [
+        "三窗口逐一选中、操作、取消、条件不满足、服务器拒绝/延迟与重开有记录。",
+        "费用和结果保持原规则；关闭/离开 NPC/断线清理选择与辅助卡，不留下孤立窗口。",
+        "Legacy、Official候选与重入场景中均未安装服务皮肤或新布局；不要求正式版服务截图或样式对照。"
+      ],
+      "acceptanceCases": [
+        "A12"
+      ],
+      "npcWindows": [
+        "NPCAdoptCompanionDialog",
+        "NPCCompanionStorageDialog",
+        "NPCWeddingRingDialog"
+      ],
+      "evidence": [
+        "docs/design/assets/official-ingame-ui/acceptance/tasks/UI-23/result.json"
+      ],
+      "scopeDecisions": [
+        "docs/design/assets/official-ingame-ui/acceptance/reference/secondary-popup-scope-decision.json"
+      ],
+      "secondaryPopupScope": "服务窗口及数量/确认等二级弹窗保持现有样式和布局；仅已约定商店主界面继续候选换肤，原流程仍需回归。",
+      "effectiveStylingScope": "retain_native_style",
+      "scopeEnforcementReport": "docs/design/assets/official-ingame-ui/acceptance/scope-enforcement/verification.json"
+    },
+    {
+      "id": "UI-24",
+      "stage": "P4",
+      "title": "回归 NPC 材料与制造（保留原样式）",
+      "status": "not_started",
+      "dependsOn": [
+        "UI-20"
+      ],
+      "inputGates": [
+        "G0-2",
+        "G0-3",
+        "G0-4",
+        "G0-5"
+      ],
+      "files": [
+        "Client/Scenes/Views/NPCDialog.cs",
+        "tests/game-ui/"
+      ],
+      "work": [
+        "NPCRefinementStoneDialog、NPCItemFragmentDialog、NPCMasterRefineDialog、NPCAccessoryUpgradeDialog、NPCAccessoryLevelDialog、NPCAccessoryResetDialog、NPCWeaponCraftWindow 均保留原样式和布局。",
+        "不实施材料、目标、费用、条件、选项或提交区域的换肤/重排；仅回归原业务限制、请求及拒绝/延迟反馈。"
+      ],
+      "acceptance": [
+        "七窗口各有正常、取消、材料/费用不足、无效目标、数量边界及拒绝/延迟验证记录；不适用项写具体原因。",
+        "所有目标/材料格可操作，费用/禁用/确认一致；失败回包不在 UI 侧扣除资源或报告成功。",
+        "Legacy、Official候选与重入场景中均未安装服务皮肤或新布局；不要求正式版服务截图或样式对照。"
+      ],
+      "acceptanceCases": [
+        "A12"
+      ],
+      "npcWindows": [
+        "NPCRefinementStoneDialog",
+        "NPCItemFragmentDialog",
+        "NPCMasterRefineDialog",
+        "NPCAccessoryUpgradeDialog",
+        "NPCAccessoryLevelDialog",
+        "NPCAccessoryResetDialog",
+        "NPCWeaponCraftWindow"
+      ],
+      "evidence": [
+        "docs/design/assets/official-ingame-ui/acceptance/tasks/UI-24/result.json"
+      ],
+      "scopeDecisions": [
+        "docs/design/assets/official-ingame-ui/acceptance/reference/secondary-popup-scope-decision.json"
+      ],
+      "secondaryPopupScope": "服务窗口及数量/确认等二级弹窗保持现有样式和布局；仅已约定商店主界面继续候选换肤，原流程仍需回归。",
+      "effectiveStylingScope": "retain_native_style",
+      "scopeEnforcementReport": "docs/design/assets/official-ingame-ui/acceptance/scope-enforcement/verification.json"
+    },
+    {
+      "id": "UI-25",
+      "stage": "P4",
+      "title": "适配仓库并收口 NPC 组合布局",
+      "status": "not_started",
+      "dependsOn": [
+        "UI-11",
+        "UI-21",
+        "UI-22",
+        "UI-23",
+        "UI-24"
+      ],
+      "inputGates": [
+        "G0-3",
+        "G0-4"
+      ],
+      "files": [
+        "Client/Scenes/Views/StorageDialog.cs",
+        "Client/Scenes/Views/NPCDialog.cs",
+        "Client/Envir/GameUiLayoutCoordinator.cs",
+        "Client/Scenes/GameScene.cs",
+        "tests/game-ui/"
+      ],
+      "work": [
+        "仓库保留 13 列动态网格、当前总容量、筛选/滚动和存取；主窗口按范围适配底板，操作后额外弹出的二级窗口保留现有样式。",
+        "将 Response 各分支及相关 resize 的直接 Location 写入统一路由到布局协调器，显隐/尺寸更新后只布局一次。",
+        "落实上下/左右/叠放和服务置顶；主卡隐藏、离开、断线、切场景按原业务联动关闭服务和清理选择，布局存储不干预业务开关。"
+      ],
+      "acceptance": [
+        "六分辨率下 NPC+包裹、NPC+仓库、主卡超长和大格区组合确认可达；首末格、滚动筛选、存取保持。",
+        "17 窗口与仓库逐项列明打开/关闭/重开联动，无孤立窗口或持久化误开服务。"
+      ],
+      "acceptanceCases": [
+        "A12",
+        "A13",
+        "A14",
+        "A15"
+      ],
+      "npcWindows": [],
+      "evidence": [
+        "docs/design/assets/official-ingame-ui/acceptance/tasks/UI-25/result.json"
+      ],
+      "scopeDecisions": [
+        "docs/design/assets/official-ingame-ui/acceptance/reference/secondary-popup-scope-decision.json",
+        "docs/design/assets/official-ingame-ui/acceptance/reference/npc-card-scope-decision.json"
+      ],
+      "secondaryPopupScope": "操作按钮额外打开的二级弹窗不换肤、不要求正式版采图；已约定的主界面继续实施，原交互保留并回归。",
+      "npcInteractionCardScope": "NPC交互卡片保留现有外框、正文、选项和关闭按钮样式；不补采正式版卡片截图，不接入新皮肤，原行为仍回归。",
+      "preparatoryEvidence": [
+        "docs/design/assets/official-ingame-ui/acceptance/warehouse-binding/README.md",
+        "docs/design/assets/official-ingame-ui/acceptance/warehouse-binding/verification.json"
+      ]
+    },
+    {
+      "id": "UI-26",
+      "stage": "P5",
+      "title": "接入资源部署和版本校验",
+      "status": "in_progress",
+      "dependsOn": [
+        "UI-07",
+        "UI-12"
+      ],
+      "inputGates": [],
+      "files": [
+        "build/Setup-ClientAssets.ps1",
+        "build/game-ui/New-GameUiReleaseManifest.ps1",
+        "tests/Run-ClientAssetsTests.ps1",
+        "build/game-ui/Build-OfficialUi.ps1",
+        "docs/build-and-debug.md",
+        "build/game-ui/GameUiReleaseTools.ps1",
+        "build/game-ui/Read-GameUiReleaseContract.ps1",
+        "tests/Run-GameUiReleaseTests.ps1",
+        "tests/game-ui/GameUiReleaseFixture.cs",
+        "build/game-ui/README.md"
+      ],
+      "work": [
+        "为部署增加显式 GameUiStyle 和 ReleaseManifestPath 参数；默认 Legacy 兼容现有调用。OfficialV1 强制传入部署清单，将新包加入必需项，复制前校验源包和目标 Zircon.exe 的哈希与清单一致。",
+        "新增编译后清单生成入口，记录 buildId、EXE SHA-256、Zl SHA-256 及 Catalog 所用资源哈希；生成时验证实际包与 Catalog 匹配。构建输出先进入实际 ResourceRoot/Data/GameUI；清单只供构建/部署使用，客户端运行不依赖 JSON。",
+        "保留既有递归复制和用户设置/数据库保护；发布 EXE/资源/清单以同一 buildId 成组验证，不修改正式版源目录。"
+      ],
+      "acceptance": [
+        "隔离目录中 Legacy 无新包仍可部署；OfficialV1 缺包/错哈希/EXE 版本不匹配即失败，完整匹配可部署。",
+        "递归 Zl、重复执行及既有状态保留测试通过；干净目录无本机安装路径依赖。"
+      ],
+      "acceptanceCases": [
+        "A01",
+        "A20"
+      ],
+      "npcWindows": [],
+      "evidence": [
+        "docs/design/assets/official-ingame-ui/acceptance/tasks/UI-26/result.json"
+      ],
+      "preparatoryEvidence": [
+        "docs/design/assets/official-ingame-ui/acceptance/deployment/verification.json",
+        "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/README.md",
+        "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/verification.json",
+        "docs/design/assets/official-ingame-ui/acceptance/character-slot-semantics/verification.json",
+        "docs/design/assets/official-ingame-ui/acceptance/npc-shop-binding/README.md",
+        "docs/design/assets/official-ingame-ui/acceptance/npc-shop-binding/verification.json"
+      ]
+    },
+    {
+      "id": "UI-27",
+      "stage": "P5",
+      "title": "完成自动回归与真实游戏验收",
+      "status": "not_started",
+      "dependsOn": [
+        "UI-13",
+        "UI-14",
+        "UI-15",
+        "UI-16",
+        "UI-17",
+        "UI-18",
+        "UI-19",
+        "UI-20",
+        "UI-21",
+        "UI-22",
+        "UI-23",
+        "UI-24",
+        "UI-25",
+        "UI-26"
+      ],
+      "inputGates": [
+        "G0-1",
+        "G0-2",
+        "G0-3",
+        "G0-4",
+        "G0-5"
+      ],
+      "files": [
+        "tests/Run-GameUiTests.ps1",
+        "tests/game-ui/",
+        "docs/design/assets/official-ingame-ui/acceptance/"
+      ],
+      "work": [
+        "构建 Debug/Release 的 Zircon Server.sln（Any CPU，客户端 x86），执行原有四脚本和新增五套件；只读夹具/隔离数据，记录命令、版本、退出码。",
+        "逐项执行原方案 A01..A20；A12 单列 17 窗口。六分辨率×100/125/150% DPI×窗口/全屏共 36 组合冒烟，1024×768 与 1920×1080 的每组合补主要交互。",
+        "重复开关角色/包裹/NPC 各 100 次、重登 10 次，检查 D3D 重置/Alt-Tab/释放；同机同场景预热后 Legacy/OfficialV1 各采 60 秒×3 轮，比帧耗时中位数及 P95，回退不得超过 10%。",
+        "联调采集穿戴、包裹、NPC 的原/新相同操作事件和发包对照；仅使用项目指定的隔离测试环境，环境缺失项标未执行。"
+      ],
+      "acceptance": [
+        "A01..A20 所有必测项有 caseId/buildId/style/resolution/dpi/steps/expected/actual/result/evidencePath，实际失败与未执行不能标通过。",
+        "自动测试、截图/输入法、D3D、联机结果分开记录；已知范围内缺陷清零后，才允许进入 UI-28。",
+        "本任务中的 A20 先以显式 OfficialV1 启动测试包完成安装/回退演练；不提前改变交付默认值。"
+      ],
+      "acceptanceCases": [
+        "A01",
+        "A02",
+        "A03",
+        "A04",
+        "A05",
+        "A06",
+        "A07",
+        "A08",
+        "A09",
+        "A10",
+        "A11",
+        "A12",
+        "A13",
+        "A14",
+        "A15",
+        "A16",
+        "A17",
+        "A18",
+        "A19",
+        "A20"
+      ],
+      "npcWindows": [],
+      "evidence": [
+        "docs/design/assets/official-ingame-ui/acceptance/tasks/UI-27/result.json"
+      ],
+      "scopeDecisions": [
+        "docs/design/assets/official-ingame-ui/acceptance/reference/secondary-popup-scope-decision.json",
+        "docs/design/assets/official-ingame-ui/acceptance/reference/npc-card-scope-decision.json"
+      ],
+      "secondaryPopupScope": "操作按钮额外打开的二级弹窗不换肤、不要求正式版采图；已约定的主界面继续实施，原交互保留并回归。",
+      "npcInteractionCardScope": "NPC交互卡片保留现有外框、正文、选项和关闭按钮样式；不补采正式版卡片截图，不接入新皮肤，原行为仍回归。",
+      "preparatoryEvidence": [
+        "docs/design/assets/official-ingame-ui/acceptance/item-interactions/README.md",
+        "docs/design/assets/official-ingame-ui/acceptance/item-interactions/verification.json",
+        "docs/design/assets/official-ingame-ui/acceptance/item-drops/README.md",
+        "docs/design/assets/official-ingame-ui/acceptance/item-drops/verification.json",
+        "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/README.md",
+        "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/verification.json",
+        "docs/design/assets/official-ingame-ui/acceptance/character-slot-semantics/verification.json"
+      ]
+    },
+    {
+      "id": "UI-28",
+      "stage": "P5",
+      "title": "发布验收包与回退材料",
+      "status": "not_started",
+      "dependsOn": [
+        "UI-27"
+      ],
+      "inputGates": [
+        "G0-1",
+        "G0-2",
+        "G0-3",
+        "G0-4",
+        "G0-5"
+      ],
+      "files": [
+        "build/game-ui/Build-OfficialUi.ps1",
+        "docs/build-and-debug.md",
+        "docs/design/assets/official-ingame-ui/acceptance/release/"
+      ],
+      "work": [
+        "审核同一候选 buildId 的必测报告和已关闭缺陷；全部通过后，仅在交付配置设默认 OfficialV1，开发默认 Legacy 保留。",
+        "交付同一 buildId 的 EXE/依赖/Zl/哈希清单/布局与属性映射/截图/报告；若改配置导致二进制或资源变化，生成新 buildId 并重跑受影响校验和 A20，不能沿用旧结果。",
+        "在独立目录验最终包默认进入 OfficialV1、切 Legacy 重启和旧 EXE+旧资源整包回退；备份用户设置，写出可执行操作步骤。"
+      ],
+      "acceptance": [
+        "交付包默认样式、哈希、来源和证据互相匹配；无 G0、必测项或范围内缺陷未关闭。",
+        "回退不改角色物品/服务器数据/旧布局数据库，无运行中热切换；以质量门槛结项，不声明绝对不存在未知 bug。"
+      ],
+      "acceptanceCases": [
+        "A20"
+      ],
+      "npcWindows": [],
+      "evidence": [
+        "docs/design/assets/official-ingame-ui/acceptance/tasks/UI-28/result.json"
+      ],
+      "scopeDecisions": [
+        "docs/design/assets/official-ingame-ui/acceptance/reference/secondary-popup-scope-decision.json",
+        "docs/design/assets/official-ingame-ui/acceptance/reference/npc-card-scope-decision.json"
+      ],
+      "secondaryPopupScope": "操作按钮额外打开的二级弹窗不换肤、不要求正式版采图；已约定的主界面继续实施，原交互保留并回归。",
+      "npcInteractionCardScope": "NPC交互卡片保留现有外框、正文、选项和关闭按钮样式；不补采正式版卡片截图，不接入新皮肤，原行为仍回归。"
+    }
+  ],
+  "updatedAtLocalDate": "2026-11-08",
+  "validationReport": "docs/design/assets/official-ingame-ui/acceptance/foundations/verification.json",
+  "statusCounts": {
+    "done": 7,
+    "in_progress": 3,
+    "blocked": 0,
+    "not_started": 18
+  },
+  "nextAction": "沿用1024×768窗口基准及已有截图；将仓库隔离底板合并完整包并更新编译目录/用途合同，接入可恢复仓库布局及NPC组合定位，验证原存取请求与重开/切场景；继续字段/操作和视觉审定以推进UI-05/UI-06。NPC卡片与二级弹窗保留原样式，Legacy默认，RuntimeReady=false，G0-2/3/4/5未关闭。",
+  "supplementalImplementationReports": [
+    "docs/design/assets/official-ingame-ui/acceptance/preparatory/fill-geometry/verification.json",
+    "docs/design/assets/official-ingame-ui/acceptance/preparatory/catalog/validation.json",
+    "docs/design/assets/official-ingame-ui/acceptance/preparatory/layout-coordinator/verification.json",
+    "docs/design/assets/official-ingame-ui/acceptance/preparatory/selected-assets/verification.json",
+    "docs/design/assets/official-ingame-ui/acceptance/preparatory/composed-assets/verification.json",
+    "docs/design/assets/official-ingame-ui/acceptance/preparatory/scene-layout-host/verification.json",
+    "docs/design/assets/official-ingame-ui/acceptance/preparatory/layout-contract/verification.json",
+    "docs/design/assets/official-ingame-ui/acceptance/preparatory/chat-geometry/verification.json",
+    "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-readouts/verification.json",
+    "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-pages/verification.json",
+    "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-attributes/verification.json",
+    "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-controls/verification.json",
+    "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-composition/verification.json",
+    "docs/design/assets/official-ingame-ui/acceptance/preparatory/inventory-layout/verification.json",
+    "docs/design/assets/official-ingame-ui/acceptance/preparatory/belt-layout/verification.json",
+    "docs/design/assets/official-ingame-ui/acceptance/preparatory/minimap-layout/verification.json",
+    "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-layout/verification.json",
+    "docs/design/assets/official-ingame-ui/acceptance/preparatory/package-preflight/verification.json",
+    "docs/design/assets/official-ingame-ui/acceptance/preparatory/hud-surfaces/verification.json",
+    "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-surfaces/verification.json",
+    "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-cell-binding/verification.json",
+    "docs/design/assets/official-ingame-ui/acceptance/catalog-compilation/verification.json",
+    "docs/design/assets/official-ingame-ui/acceptance/character-binding-contract/verification.json",
+    "docs/design/assets/official-ingame-ui/acceptance/window-set-integration/verification.json",
+    "docs/design/assets/official-ingame-ui/acceptance/hud-progress-assets/verification.json",
+    "docs/design/assets/official-ingame-ui/acceptance/hud-transaction/verification.json",
+    "docs/design/assets/official-ingame-ui/acceptance/chat-group-binding/verification.json",
+    "docs/design/assets/official-ingame-ui/acceptance/startup-selection/verification.json",
+    "docs/design/assets/official-ingame-ui/acceptance/scene-startup/verification.json",
+    "docs/design/assets/official-ingame-ui/acceptance/full-scene/verification.json",
+    "docs/design/assets/official-ingame-ui/acceptance/deployment/verification.json",
+    "docs/design/assets/official-ingame-ui/acceptance/item-interactions/verification.json",
+    "docs/design/assets/official-ingame-ui/acceptance/item-drops/verification.json",
+    "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/verification.json",
+    "docs/design/assets/official-ingame-ui/acceptance/character-slot-semantics/verification.json",
+    "docs/design/assets/official-ingame-ui/acceptance/command-wheel/verification.json",
+    "docs/design/assets/official-ingame-ui/acceptance/button-hitmask/verification.json",
+    "docs/design/assets/official-ingame-ui/acceptance/compact-wheel/verification.json",
+    "docs/design/assets/official-ingame-ui/acceptance/item-tooltip/verification.json",
+    "docs/design/assets/official-ingame-ui/acceptance/item-tooltip-overflow/verification.json",
+    "docs/design/assets/official-ingame-ui/acceptance/npc-preservation/verification.json",
+    "docs/design/assets/official-ingame-ui/acceptance/reference-finalization/verification.json",
+    "docs/design/assets/official-ingame-ui/acceptance/npc-shop-assets/verification.json",
+    "docs/design/assets/official-ingame-ui/acceptance/npc-shop-binding/verification.json",
+    "docs/design/assets/official-ingame-ui/acceptance/npc-shop-seven-rows/verification.json",
+    "docs/design/assets/official-ingame-ui/acceptance/npc-item-services/verification.json",
+    "docs/design/assets/official-ingame-ui/acceptance/npc-refine-services/verification.json",
+    "docs/design/assets/official-ingame-ui/acceptance/npc-quest-services/verification.json",
+    "docs/design/assets/official-ingame-ui/acceptance/scope-enforcement/verification.json",
+    "docs/design/assets/official-ingame-ui/acceptance/asset-usage-contract/verification.json",
+    "docs/design/assets/official-ingame-ui/acceptance/warehouse-candidate/verification.json",
+    "docs/design/assets/official-ingame-ui/acceptance/warehouse-binding/verification.json"
+  ],
+  "scopeDecisions": [
+    "docs/design/assets/official-ingame-ui/acceptance/reference/secondary-popup-scope-decision.json",
+    "docs/design/assets/official-ingame-ui/acceptance/reference/npc-card-scope-decision.json",
+    "docs/design/assets/official-ingame-ui/acceptance/reference/display-settings-scope-decision.json"
+  ],
+  "scopeEnforcementReport": "docs/design/assets/official-ingame-ui/acceptance/scope-enforcement/verification.json"
+}

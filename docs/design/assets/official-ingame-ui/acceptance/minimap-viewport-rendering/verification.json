@@ -1,0 +1,60 @@
+{
+  "date": "2026-11-11",
+  "scope": "Consistent minimap viewport positioning, clipping and lifecycle at normal/enlarged/collapsed sizes",
+  "builds": {
+    "Debug": "pass",
+    "Release": "pass"
+  },
+  "minimap": {
+    "status": "pass",
+    "checks": 3352592,
+    "cpuChecks": 1424,
+    "matrix": {
+      "frames": 49,
+      "pixelComparisons": 2918520,
+      "sourceSizes": 6,
+      "viewportSizes": 2
+    },
+    "baselineRender": {
+      "viewportPixels": 206040,
+      "outsideTitlePixels": 195480,
+      "changedTitlePixels": 4696,
+      "titleFrames": 6
+    },
+    "renderDirectory": "verified-render"
+  },
+  "windowSet": {
+    "status": "pass",
+    "checks": 562065,
+    "resolutionCount": 6
+  },
+  "routingContract": {
+    "status": "pass",
+    "manifestSha256": "2c0f3601e66f80f491e85ea77ac38cd7b280bf4b794957bb2ad8bf74a6571567"
+  },
+  "fullLayoutContract": {
+    "status": "blocked-existing",
+    "error": "Overlap outside alpha-tested wheel edges: commands.CharacterButton, commands.BeltButton",
+    "commands": [
+      "python build/game-ui/Validate-OfficialUiLayout.py --guards",
+      "python build/game-ui/Assemble-CharacterBindings.py --check"
+    ]
+  },
+  "limitations": [
+    "No live server login or real map file loading.",
+    "Map fixtures are synthetic; official frame and footer artwork are also rendered in the baseline screenshots.",
+    "Viewport enlargement retains source image and marker pixel scale.",
+    "Native opacity still blends individual layers.",
+    "Full layout generation remains blocked by the existing command wheel overlap."
+  ],
+  "runtime": [
+    {
+      "path": "E:\\workspace\\Debug\\Client\\Zircon.exe",
+      "sha256": "bf723745060e300ced4c9445a2f59320b6ad59f64974d612f82a1a3b98a2392f"
+    },
+    {
+      "path": "E:\\workspace\\Release\\Client\\Zircon.exe",
+      "sha256": "64f622e2c29b03262d95e31eed88b05215d610c1f5c4d7406261afcdfff92cba"
+    }
+  ]
+}

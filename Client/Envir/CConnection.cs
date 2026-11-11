@@ -105,6 +105,9 @@ namespace Client.Envir
                 case DisconnectReason.AnotherUser:
                     DXMessageBox.Show("与服务器失去连接\n原因: 其他人正在登陆你的账号.", "失去连接", DialogAction.ReturnToLogin);
                     break;
+                case DisconnectReason.AnotherUserPassword:
+                    DXMessageBox.Show("与服务器失去连接\n原因: 账号安全信息发生变化，请确认账号安全后重新登录.", "失去连接", DialogAction.ReturnToLogin);
+                    break;
                 case DisconnectReason.AnotherUserAdmin:
                     DXMessageBox.Show("与服务器失去连接\n原因: 管理员登陆了你的账号.", "失去连接", DialogAction.ReturnToLogin);
                     break;

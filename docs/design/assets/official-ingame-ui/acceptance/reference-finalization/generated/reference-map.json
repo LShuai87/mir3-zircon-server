@@ -1,0 +1,4178 @@
+{
+  "schemaVersion": 1,
+  "kind": "scoped-runtime-reference-map",
+  "checkedAtLocalDate": "2026-11-08",
+  "configuredResolution": [
+    1024,
+    768
+  ],
+  "windowMode": "windowed",
+  "metadata": {
+    "runtimeVersion": "1.15.0.7269",
+    "launcherVersion": "1.9.3.137",
+    "source": "reference/availability.json and runtime-source-libraries.json",
+    "dpiPercent": null,
+    "measuredClientRect": null,
+    "screenshotPixels": "1026x795 runtime originals; 1280x959 settings attachment; neither equals measured client bounds"
+  },
+  "ignoredCaptureIds": [
+    "06-chat-chinese-input"
+  ],
+  "settingsCapture": "reference/captures/07-resolution-settings-user.png",
+  "observations": [
+    {
+      "role": "character",
+      "captureId": "02-character",
+      "sourceLibrary": "UI",
+      "sourceIndex": 2765,
+      "sourcePngSha256": "98efced4a423a11ebef3b97d1f851bc9570053b8dbc48c046a136e4d98c5ccc3",
+      "sourceSize": [
+        412,
+        562
+      ],
+      "sourceOffset": [
+        0,
+        0
+      ],
+      "screenshotBitmapRect": [
+        11,
+        76,
+        412,
+        562
+      ],
+      "meanAbsoluteChannelError": 7.416368,
+      "confidenceBoundary": "local JPEG comparison; not client coordinates, alpha fitting or hit rectangles",
+      "identification": "local visual correspondence"
+    },
+    {
+      "role": "character",
+      "captureId": "03-character-inventory",
+      "sourceLibrary": "UI",
+      "sourceIndex": 2765,
+      "sourcePngSha256": "98efced4a423a11ebef3b97d1f851bc9570053b8dbc48c046a136e4d98c5ccc3",
+      "sourceSize": [
+        412,
+        562
+      ],
+      "sourceOffset": [
+        0,
+        0
+      ],
+      "screenshotBitmapRect": [
+        11,
+        76,
+        412,
+        562
+      ],
+      "meanAbsoluteChannelError": 7.4092,
+      "confidenceBoundary": "local JPEG comparison; not client coordinates, alpha fitting or hit rectangles",
+      "identification": "local visual correspondence"
+    },
+    {
+      "role": "character",
+      "captureId": "04-equipment-tooltip",
+      "sourceLibrary": "UI",
+      "sourceIndex": 2765,
+      "sourcePngSha256": "98efced4a423a11ebef3b97d1f851bc9570053b8dbc48c046a136e4d98c5ccc3",
+      "sourceSize": [
+        412,
+        562
+      ],
+      "sourceOffset": [
+        0,
+        0
+      ],
+      "screenshotBitmapRect": [
+        11,
+        76,
+        412,
+        562
+      ],
+      "meanAbsoluteChannelError": 7.407607,
+      "confidenceBoundary": "local JPEG comparison; not client coordinates, alpha fitting or hit rectangles",
+      "identification": "local visual correspondence"
+    },
+    {
+      "role": "inventory",
+      "captureId": "03-character-inventory",
+      "sourceLibrary": "UI",
+      "sourceIndex": 120,
+      "sourcePngSha256": "80c4f90370c17c01879a86a61b4f8114684a3e29cf87810f44ff11ba1ee8f53a",
+      "sourceSize": [
+        276,
+        494
+      ],
+      "sourceOffset": [
+        0,
+        0
+      ],
+      "screenshotBitmapRect": [
+        739,
+        106,
+        276,
+        494
+      ],
+      "meanAbsoluteChannelError": 8.526244,
+      "confidenceBoundary": "local JPEG comparison; not client coordinates, alpha fitting or hit rectangles",
+      "identification": "local visual correspondence"
+    },
+    {
+      "role": "inventory",
+      "captureId": "04-equipment-tooltip",
+      "sourceLibrary": "UI",
+      "sourceIndex": 120,
+      "sourcePngSha256": "80c4f90370c17c01879a86a61b4f8114684a3e29cf87810f44ff11ba1ee8f53a",
+      "sourceSize": [
+        276,
+        494
+      ],
+      "sourceOffset": [
+        0,
+        0
+      ],
+      "screenshotBitmapRect": [
+        739,
+        106,
+        276,
+        494
+      ],
+      "meanAbsoluteChannelError": 8.697342,
+      "confidenceBoundary": "local JPEG comparison; not client coordinates, alpha fitting or hit rectangles",
+      "identification": "local visual correspondence"
+    },
+    {
+      "role": "inventory",
+      "captureId": "05-npc-dialog-shop-inventory",
+      "sourceLibrary": "UI",
+      "sourceIndex": 120,
+      "sourcePngSha256": "80c4f90370c17c01879a86a61b4f8114684a3e29cf87810f44ff11ba1ee8f53a",
+      "sourceSize": [
+        276,
+        494
+      ],
+      "sourceOffset": [
+        0,
+        0
+      ],
+      "screenshotBitmapRect": [
+        426,
+        108,
+        276,
+        494
+      ],
+      "meanAbsoluteChannelError": 8.036128,
+      "confidenceBoundary": "local JPEG comparison; not client coordinates, alpha fitting or hit rectangles",
+      "identification": "local visual correspondence"
+    },
+    {
+      "role": "npc-shop",
+      "captureId": "05-npc-dialog-shop-inventory",
+      "sourceLibrary": "UI",
+      "sourceIndex": 511,
+      "sourcePngSha256": "f574ddf094e5f1a0b4d78ccd31da1f9e9b3402ec6be8f9fb9b025358239c85d1",
+      "sourceSize": [
+        344,
+        438
+      ],
+      "sourceOffset": [
+        0,
+        0
+      ],
+      "screenshotBitmapRect": [
+        1,
+        215,
+        344,
+        438
+      ],
+      "meanAbsoluteChannelError": 5.564856,
+      "confidenceBoundary": "local JPEG comparison; not client coordinates, alpha fitting or hit rectangles",
+      "identification": "local visual correspondence"
+    },
+    {
+      "role": "hud-orb-shell",
+      "captureId": "01-overview",
+      "sourceLibrary": "UI",
+      "sourceIndex": 141,
+      "sourcePngSha256": "0db64d4ba0cfa505e876ff3a4a55a29ea3577cb8793c2485f9fa9e092314581e",
+      "sourceSize": [
+        225,
+        202
+      ],
+      "sourceOffset": [
+        -112,
+        -101
+      ],
+      "screenshotBitmapRect": [
+        1,
+        592,
+        225,
+        202
+      ],
+      "meanAbsoluteChannelError": 8.814855,
+      "confidenceBoundary": "local JPEG comparison; not client coordinates, alpha fitting or hit rectangles",
+      "identification": "local visual correspondence"
+    },
+    {
+      "role": "quickbar-base",
+      "captureId": "01-overview",
+      "sourceLibrary": "UI",
+      "sourceIndex": 430,
+      "sourcePngSha256": "b5a5b7fd81a9e59092c3d205a3c020a8b184275d0d5dd9f9f274d2d1bfad579b",
+      "sourceSize": [
+        518,
+        44
+      ],
+      "sourceOffset": [
+        0,
+        0
+      ],
+      "screenshotBitmapRect": [
+        254,
+        611,
+        518,
+        44
+      ],
+      "meanAbsoluteChannelError": 6.797728,
+      "confidenceBoundary": "local JPEG comparison; not client coordinates, alpha fitting or hit rectangles",
+      "identification": "local visual correspondence"
+    },
+    {
+      "role": "minimap-frame",
+      "captureId": "01-overview",
+      "sourceLibrary": "UI",
+      "sourceIndex": 342,
+      "sourcePngSha256": "a29c643cb7148e085b4bc63246ae07132890356fd4e556f319e78160cc9d162b",
+      "sourceSize": [
+        166,
+        198
+      ],
+      "sourceOffset": [
+        0,
+        0
+      ],
+      "screenshotBitmapRect": [
+        859,
+        26,
+        166,
+        198
+      ],
+      "meanAbsoluteChannelError": 12.025794,
+      "confidenceBoundary": "local JPEG comparison; not client coordinates, alpha fitting or hit rectangles",
+      "identification": "local visual correspondence"
+    },
+    {
+      "role": "chat-speaker-icon",
+      "captureId": "01-overview",
+      "sourceLibrary": "UI",
+      "sourceIndex": 210,
+      "sourcePngSha256": "428d2a1584b74128bc298620bb4c997fea3a924b7a477dc5f00ece11a8e4fa2b",
+      "sourceSize": [
+        31,
+        24
+      ],
+      "sourceOffset": [
+        0,
+        0
+      ],
+      "screenshotBitmapRect": [
+        190,
+        657,
+        31,
+        24
+      ],
+      "meanAbsoluteChannelError": 17.570175,
+      "confidenceBoundary": "local JPEG comparison; not client coordinates, alpha fitting or hit rectangles",
+      "identification": "local visual correspondence"
+    },
+    {
+      "role": "chat-two-person-icon",
+      "captureId": "01-overview",
+      "sourceLibrary": "UI",
+      "sourceIndex": 220,
+      "sourcePngSha256": "378f901cf4ea81d5501b0fb597d7b9c772bd29b2950e666726c9f5bb372d89bb",
+      "sourceSize": [
+        31,
+        24
+      ],
+      "sourceOffset": [
+        0,
+        0
+      ],
+      "screenshotBitmapRect": [
+        190,
+        681,
+        31,
+        24
+      ],
+      "meanAbsoluteChannelError": 18.512821,
+      "confidenceBoundary": "local JPEG comparison; not client coordinates, alpha fitting or hit rectangles",
+      "identification": "local visual correspondence"
+    },
+    {
+      "role": "chat-person-icon",
+      "captureId": "01-overview",
+      "sourceLibrary": "UI",
+      "sourceIndex": 200,
+      "sourcePngSha256": "4335c3a1de2e9ca9f84832a210ddd785ec12487e53cc2054f3a3a911b1d3fb84",
+      "sourceSize": [
+        31,
+        24
+      ],
+      "sourceOffset": [
+        0,
+        0
+      ],
+      "screenshotBitmapRect": [
+        190,
+        705,
+        31,
+        24
+      ],
+      "meanAbsoluteChannelError": 21.623932,
+      "confidenceBoundary": "local JPEG comparison; not client coordinates, alpha fitting or hit rectangles",
+      "identification": "local visual correspondence"
+    },
+    {
+      "role": "chat-group-icon",
+      "captureId": "01-overview",
+      "sourceLibrary": "UI",
+      "sourceIndex": 240,
+      "sourcePngSha256": "eacee10ab1771bffc843d76cdc5143cd4b18c33615075a43b7a2ca249bc98f0a",
+      "sourceSize": [
+        31,
+        24
+      ],
+      "sourceOffset": [
+        0,
+        0
+      ],
+      "screenshotBitmapRect": [
+        190,
+        729,
+        31,
+        24
+      ],
+      "meanAbsoluteChannelError": 19.288288,
+      "confidenceBoundary": "local JPEG comparison; not client coordinates, alpha fitting or hit rectangles",
+      "identification": "local visual correspondence"
+    },
+    {
+      "role": "chat-flag-icon",
+      "captureId": "01-overview",
+      "sourceLibrary": "UI",
+      "sourceIndex": 230,
+      "sourcePngSha256": "02da1e28c5881907b87f23d290a9329b5dba0237f5444e71865a1657d28496ad",
+      "sourceSize": [
+        31,
+        24
+      ],
+      "sourceOffset": [
+        0,
+        0
+      ],
+      "screenshotBitmapRect": [
+        190,
+        753,
+        31,
+        24
+      ],
+      "meanAbsoluteChannelError": 17.466667,
+      "confidenceBoundary": "local JPEG comparison; not client coordinates, alpha fitting or hit rectangles",
+      "identification": "local visual correspondence"
+    },
+    {
+      "role": "minimap-collapse-button",
+      "captureId": "01-overview",
+      "sourceLibrary": "UI",
+      "sourceIndex": 290,
+      "sourcePngSha256": "3e6101cbdb894fe6837a30e486ebd02dac261c9fb4d31cb491e3235d80c28915",
+      "sourceSize": [
+        20,
+        16
+      ],
+      "sourceOffset": [
+        0,
+        0
+      ],
+      "screenshotBitmapRect": [
+        1004,
+        28,
+        20,
+        16
+      ],
+      "meanAbsoluteChannelError": 4.633333,
+      "confidenceBoundary": "local JPEG comparison; not client coordinates, alpha fitting or hit rectangles",
+      "identification": "local visual correspondence"
+    },
+    {
+      "role": "minimap-zoom-in-button",
+      "captureId": "01-overview",
+      "sourceLibrary": "UI",
+      "sourceIndex": 320,
+      "sourcePngSha256": "b445e0e98f9af596ac667cdb418a69eb7b21a74e8516d8c2e27b3b50a898903c",
+      "sourceSize": [
+        20,
+        16
+      ],
+      "sourceOffset": [
+        0,
+        0
+      ],
+      "screenshotBitmapRect": [
+        1004,
+        203,
+        20,
+        16
+      ],
+      "meanAbsoluteChannelError": 7.966667,
+      "confidenceBoundary": "local JPEG comparison; not client coordinates, alpha fitting or hit rectangles",
+      "identification": "local visual correspondence"
+    },
+    {
+      "role": "minimap-mountain-button",
+      "captureId": "01-overview",
+      "sourceLibrary": "UI",
+      "sourceIndex": 330,
+      "sourcePngSha256": "b079683191095bcf57657d6aa0b22dde55a25662b4e2f2d03d22e7e2efc235bc",
+      "sourceSize": [
+        20,
+        16
+      ],
+      "sourceOffset": [
+        0,
+        0
+      ],
+      "screenshotBitmapRect": [
+        864,
+        203,
+        20,
+        16
+      ],
+      "meanAbsoluteChannelError": 6.608333,
+      "confidenceBoundary": "local JPEG comparison; not client coordinates, alpha fitting or hit rectangles",
+      "identification": "local visual correspondence"
+    },
+    {
+      "role": "hud-shop-icon",
+      "captureId": "01-overview",
+      "sourceLibrary": "UI",
+      "sourceIndex": 280,
+      "sourcePngSha256": "087979259ce5299d75824c076f43a4dd3debe8ca0b939a0de4d8eb0e5ccb63a2",
+      "sourceSize": [
+        40,
+        40
+      ],
+      "sourceOffset": [
+        0,
+        0
+      ],
+      "screenshotBitmapRect": [
+        980,
+        615,
+        40,
+        40
+      ],
+      "meanAbsoluteChannelError": 12.879365,
+      "confidenceBoundary": "local JPEG comparison; not client coordinates, alpha fitting or hit rectangles",
+      "identification": "local visual correspondence"
+    },
+    {
+      "role": "hud-command-center",
+      "captureId": "01-overview",
+      "sourceLibrary": "UI",
+      "sourceIndex": 380,
+      "sourcePngSha256": "081003bba8f10baa5e8084c05ec586a2fbcc224c7f27c4e0619e515d4e4729b4",
+      "sourceSize": [
+        58,
+        58
+      ],
+      "sourceOffset": [
+        0,
+        0
+      ],
+      "screenshotBitmapRect": [
+        885,
+        686,
+        58,
+        58
+      ],
+      "meanAbsoluteChannelError": 10.139021,
+      "confidenceBoundary": "local JPEG comparison; not client coordinates, alpha fitting or hit rectangles",
+      "identification": "local visual correspondence"
+    },
+    {
+      "role": "hud-command-top",
+      "captureId": "01-overview",
+      "sourceLibrary": "UI",
+      "sourceIndex": 350,
+      "sourcePngSha256": "9d39186fb139255652fc576c144479fc8ce93626896e63a8f1c915b504786e2e",
+      "sourceSize": [
+        54,
+        32
+      ],
+      "sourceOffset": [
+        0,
+        0
+      ],
+      "screenshotBitmapRect": [
+        888,
+        659,
+        54,
+        32
+      ],
+      "meanAbsoluteChannelError": 10.366667,
+      "confidenceBoundary": "local JPEG comparison; not client coordinates, alpha fitting or hit rectangles",
+      "identification": "local visual correspondence"
+    },
+    {
+      "role": "hud-command-upper-left",
+      "captureId": "01-overview",
+      "sourceLibrary": "UI",
+      "sourceIndex": 360,
+      "sourcePngSha256": "2228f572ddf6eefa1bdb4344b6bbe9f325f3b26ffa4efbccced28891e57e878d",
+      "sourceSize": [
+        42,
+        50
+      ],
+      "sourceOffset": [
+        0,
+        0
+      ],
+      "screenshotBitmapRect": [
+        855,
+        668,
+        42,
+        50
+      ],
+      "meanAbsoluteChannelError": 10.151852,
+      "confidenceBoundary": "local JPEG comparison; not client coordinates, alpha fitting or hit rectangles",
+      "identification": "local visual correspondence"
+    },
+    {
+      "role": "hud-command-upper-right",
+      "captureId": "01-overview",
+      "sourceLibrary": "UI",
+      "sourceIndex": 370,
+      "sourcePngSha256": "9409eaa3f6b5339a5ba0c107f459443e871f81c0781b6ba7c67770862eed90c7",
+      "sourceSize": [
+        42,
+        50
+      ],
+      "sourceOffset": [
+        0,
+        0
+      ],
+      "screenshotBitmapRect": [
+        930,
+        666,
+        42,
+        50
+      ],
+      "meanAbsoluteChannelError": 9.549828,
+      "confidenceBoundary": "local JPEG comparison; not client coordinates, alpha fitting or hit rectangles",
+      "identification": "local visual correspondence"
+    },
+    {
+      "role": "hud-command-lower-left",
+      "captureId": "01-overview",
+      "sourceLibrary": "UI",
+      "sourceIndex": 390,
+      "sourcePngSha256": "38672b7c06a8ceb579a355400c37378803d3d7ec177e22077492f875c881fbfa",
+      "sourceSize": [
+        42,
+        50
+      ],
+      "sourceOffset": [
+        0,
+        0
+      ],
+      "screenshotBitmapRect": [
+        856,
+        718,
+        42,
+        50
+      ],
+      "meanAbsoluteChannelError": 10.094118,
+      "confidenceBoundary": "local JPEG comparison; not client coordinates, alpha fitting or hit rectangles",
+      "identification": "local visual correspondence"
+    },
+    {
+      "role": "hud-command-lower-right",
+      "captureId": "01-overview",
+      "sourceLibrary": "UI",
+      "sourceIndex": 400,
+      "sourcePngSha256": "1284984c415429350daa2978125f4f8689e68410a54a6aee7b5be00f35630d03",
+      "sourceSize": [
+        42,
+        50
+      ],
+      "sourceOffset": [
+        0,
+        0
+      ],
+      "screenshotBitmapRect": [
+        931,
+        717,
+        42,
+        50
+      ],
+      "meanAbsoluteChannelError": 11.744681,
+      "confidenceBoundary": "local JPEG comparison; not client coordinates, alpha fitting or hit rectangles",
+      "identification": "local visual correspondence"
+    },
+    {
+      "role": "hud-command-bottom",
+      "captureId": "01-overview",
+      "sourceLibrary": "UI",
+      "sourceIndex": 410,
+      "sourcePngSha256": "c86a5c9c4777a0531136c3213a75228cad0ab45bdc0783026afbf715894e5143",
+      "sourceSize": [
+        54,
+        32
+      ],
+      "sourceOffset": [
+        0,
+        0
+      ],
+      "screenshotBitmapRect": [
+        885,
+        744,
+        54,
+        32
+      ],
+      "meanAbsoluteChannelError": 10.016064,
+      "confidenceBoundary": "local JPEG comparison; not client coordinates, alpha fitting or hit rectangles",
+      "identification": "local visual correspondence"
+    },
+    {
+      "role": "hud-horse-icon",
+      "captureId": "01-overview",
+      "sourceLibrary": "UI",
+      "sourceIndex": 180,
+      "sourcePngSha256": "b1cff4ae6f3f3e4e7c5d672b105ca84b72090dc24b710202794f36515ec620e5",
+      "sourceSize": [
+        31,
+        24
+      ],
+      "sourceOffset": [
+        0,
+        0
+      ],
+      "screenshotBitmapRect": [
+        803,
+        681,
+        31,
+        24
+      ],
+      "meanAbsoluteChannelError": 16.785714,
+      "confidenceBoundary": "local JPEG comparison; not client coordinates, alpha fitting or hit rectangles",
+      "identification": "local visual correspondence"
+    },
+    {
+      "role": "hud-handshake-icon",
+      "captureId": "01-overview",
+      "sourceLibrary": "UI",
+      "sourceIndex": 190,
+      "sourcePngSha256": "90c3e882470ad58e0862db1b39568fadbe623ccb7671bea533db8c7b5267b456",
+      "sourceSize": [
+        31,
+        24
+      ],
+      "sourceOffset": [
+        0,
+        0
+      ],
+      "screenshotBitmapRect": [
+        803,
+        705,
+        31,
+        24
+      ],
+      "meanAbsoluteChannelError": 20.461538,
+      "confidenceBoundary": "local JPEG comparison; not client coordinates, alpha fitting or hit rectangles",
+      "identification": "local visual correspondence"
+    },
+    {
+      "role": "hud-exit-icon",
+      "captureId": "01-overview",
+      "sourceLibrary": "UI",
+      "sourceIndex": 160,
+      "sourcePngSha256": "690427c7d319b9bd31bbf7218af885523dedb9d333b765a21af50d2bf8dfeff6",
+      "sourceSize": [
+        22,
+        18
+      ],
+      "sourceOffset": [
+        0,
+        0
+      ],
+      "screenshotBitmapRect": [
+        990,
+        759,
+        22,
+        18
+      ],
+      "meanAbsoluteChannelError": 8.884058,
+      "confidenceBoundary": "local JPEG comparison; not client coordinates, alpha fitting or hit rectangles",
+      "identification": "local visual correspondence"
+    },
+    {
+      "role": "bottom-segmented-frame",
+      "captureId": "01-overview",
+      "sourceLibrary": "UI",
+      "sourceIndex": 422,
+      "sourcePngSha256": "c3620274c9b6fd141ddc310b67877b0930b44d3cb6b6eb02c0b56b637bfb1470",
+      "sourceSize": [
+        611,
+        10
+      ],
+      "sourceOffset": [
+        0,
+        0
+      ],
+      "screenshotBitmapRect": [
+        188,
+        781,
+        611,
+        10
+      ],
+      "meanAbsoluteChannelError": 14.663469,
+      "confidenceBoundary": "local JPEG comparison; not client coordinates, alpha fitting or hit rectangles",
+      "identification": "local visual correspondence"
+    },
+    {
+      "role": "hud-hp-fill",
+      "captureId": "01-overview",
+      "sourceLibrary": "UI",
+      "sourceIndex": 142,
+      "sourcePngSha256": "7f7450264ed93b428641cddfac7d9cdaecf299b7935f5b086f5b07636343de60",
+      "sourceSize": [
+        53,
+        101
+      ],
+      "sourceOffset": [
+        -69,
+        -26
+      ],
+      "screenshotBitmapRect": [
+        41,
+        667,
+        53,
+        101
+      ],
+      "meanAbsoluteChannelError": 14.520115,
+      "confidenceBoundary": "local JPEG comparison; not client coordinates, alpha fitting or hit rectangles",
+      "identification": "local visual correspondence"
+    },
+    {
+      "role": "hud-mp-fill",
+      "captureId": "01-overview",
+      "sourceLibrary": "UI",
+      "sourceIndex": 143,
+      "sourcePngSha256": "89e3d84dbbd1dc19d5c0333780f73610d79cbeb6edfc307fd3ae6618ccb13a54",
+      "sourceSize": [
+        48,
+        101
+      ],
+      "sourceOffset": [
+        -16,
+        -26
+      ],
+      "screenshotBitmapRect": [
+        97,
+        667,
+        48,
+        101
+      ],
+      "meanAbsoluteChannelError": 17.583924,
+      "confidenceBoundary": "local JPEG comparison; not client coordinates, alpha fitting or hit rectangles",
+      "identification": "local visual correspondence"
+    },
+    {
+      "role": "hud-command-shell",
+      "captureId": "01-overview",
+      "sourceLibrary": "UI",
+      "sourceIndex": 140,
+      "sourcePngSha256": "a22ce21539d63f2b050fe7c026abc0f2789376efa0fd56d2dfafb3e7fc9fbfd0",
+      "sourceSize": [
+        225,
+        175
+      ],
+      "sourceOffset": [
+        -112,
+        -87
+      ],
+      "screenshotBitmapRect": [
+        800,
+        619,
+        225,
+        175
+      ],
+      "meanAbsoluteChannelError": 17.125496,
+      "confidenceBoundary": "local JPEG comparison; not client coordinates, alpha fitting or hit rectangles",
+      "identification": "explicit source adaptation; 140/1270 visually ambiguous"
+    }
+  ],
+  "views": [
+    {
+      "captureId": "02-character",
+      "originalPath": "docs/design/assets/official-ingame-ui/acceptance/reference/captures/02-character.jpg",
+      "originalSha256": "571e96dbafabedb997d454e6ce7a3768e2ddd5f7dd3357d8c6f69537671c6274",
+      "originalPixelSize": {
+        "width": 1026,
+        "height": 795
+      },
+      "annotatedImage": "02-character-annotated.png",
+      "annotatedSha256": "ccdb0408af123436f0fb79af9caa422aed65291a956361332be8f384050c18ce",
+      "regions": [
+        {
+          "label": "character / UI[2765]",
+          "rect": [
+            11,
+            76,
+            412,
+            562
+          ],
+          "kind": "reference",
+          "note": "",
+          "precision": "manual reference area; not a runtime hit rectangle"
+        },
+        {
+          "label": "Character preview",
+          "rect": [
+            30,
+            168,
+            172,
+            200
+          ],
+          "kind": "dynamic",
+          "note": "",
+          "precision": "manual reference area; not a runtime hit rectangle"
+        },
+        {
+          "label": "Equipment and tabs",
+          "rect": [
+            16,
+            165,
+            223,
+            290
+          ],
+          "kind": "action",
+          "note": "",
+          "precision": "manual reference area; not a runtime hit rectangle"
+        },
+        {
+          "label": "Main attributes",
+          "rect": [
+            280,
+            172,
+            121,
+            235
+          ],
+          "kind": "dynamic",
+          "note": "",
+          "precision": "manual reference area; not a runtime hit rectangle"
+        },
+        {
+          "label": "Element and combat attributes",
+          "rect": [
+            31,
+            475,
+            369,
+            120
+          ],
+          "kind": "dynamic",
+          "note": "",
+          "precision": "manual reference area; not a runtime hit rectangle"
+        },
+        {
+          "label": "Character close",
+          "rect": [
+            398,
+            88,
+            20,
+            20
+          ],
+          "kind": "action",
+          "note": "",
+          "precision": "manual reference area; not a runtime hit rectangle"
+        }
+      ]
+    },
+    {
+      "captureId": "03-character-inventory",
+      "originalPath": "docs/design/assets/official-ingame-ui/acceptance/reference/captures/03-character-inventory.jpg",
+      "originalSha256": "11ac2f41784e123da471b799fd0d6aab7cf44deec36186248e14f3f696a09436",
+      "originalPixelSize": {
+        "width": 1026,
+        "height": 795
+      },
+      "annotatedImage": "03-character-inventory-annotated.png",
+      "annotatedSha256": "96035f716afa0bdb04f69b2e575d14f46cbf79aaf07185ee0bf19558a3e7461b",
+      "regions": [
+        {
+          "label": "character / UI[2765]",
+          "rect": [
+            11,
+            76,
+            412,
+            562
+          ],
+          "kind": "reference",
+          "note": "",
+          "precision": "manual reference area; not a runtime hit rectangle"
+        },
+        {
+          "label": "inventory / UI[120]",
+          "rect": [
+            739,
+            106,
+            276,
+            494
+          ],
+          "kind": "reference",
+          "note": "",
+          "precision": "manual reference area; not a runtime hit rectangle"
+        },
+        {
+          "label": "Character preview",
+          "rect": [
+            30,
+            168,
+            172,
+            200
+          ],
+          "kind": "dynamic",
+          "note": "",
+          "precision": "manual reference area; not a runtime hit rectangle"
+        },
+        {
+          "label": "Equipment and tabs",
+          "rect": [
+            16,
+            165,
+            223,
+            290
+          ],
+          "kind": "action",
+          "note": "",
+          "precision": "manual reference area; not a runtime hit rectangle"
+        },
+        {
+          "label": "Main attributes",
+          "rect": [
+            280,
+            172,
+            121,
+            235
+          ],
+          "kind": "dynamic",
+          "note": "",
+          "precision": "manual reference area; not a runtime hit rectangle"
+        },
+        {
+          "label": "Element and combat attributes",
+          "rect": [
+            31,
+            475,
+            369,
+            120
+          ],
+          "kind": "dynamic",
+          "note": "",
+          "precision": "manual reference area; not a runtime hit rectangle"
+        },
+        {
+          "label": "Character close",
+          "rect": [
+            398,
+            88,
+            20,
+            20
+          ],
+          "kind": "action",
+          "note": "",
+          "precision": "manual reference area; not a runtime hit rectangle"
+        },
+        {
+          "label": "Bag item grid (reference 6x8)",
+          "rect": [
+            754,
+            155,
+            246,
+            328
+          ],
+          "kind": "action",
+          "note": "",
+          "precision": "manual reference area; not a runtime hit rectangle"
+        },
+        {
+          "label": "Bag totals and actions",
+          "rect": [
+            751,
+            486,
+            249,
+            99
+          ],
+          "kind": "dynamic",
+          "note": "",
+          "precision": "manual reference area; not a runtime hit rectangle"
+        },
+        {
+          "label": "Bag close",
+          "rect": [
+            990,
+            117,
+            20,
+            20
+          ],
+          "kind": "action",
+          "note": "",
+          "precision": "manual reference area; not a runtime hit rectangle"
+        }
+      ]
+    },
+    {
+      "captureId": "04-equipment-tooltip",
+      "originalPath": "docs/design/assets/official-ingame-ui/acceptance/reference/captures/04-equipment-tooltip.jpg",
+      "originalSha256": "939e94172ae916a04787c1086a6958e2b5e9ca43f8dbb33ddae4e3b628f17f3a",
+      "originalPixelSize": {
+        "width": 1026,
+        "height": 795
+      },
+      "annotatedImage": "04-equipment-tooltip-annotated.png",
+      "annotatedSha256": "e16758c52a6f1ce13db059ee65ab5f6fc1f540620cdaf85d4fe1cf97a08b7724",
+      "regions": [
+        {
+          "label": "character / UI[2765]",
+          "rect": [
+            11,
+            76,
+            412,
+            562
+          ],
+          "kind": "reference",
+          "note": "",
+          "precision": "manual reference area; not a runtime hit rectangle"
+        },
+        {
+          "label": "inventory / UI[120]",
+          "rect": [
+            739,
+            106,
+            276,
+            494
+          ],
+          "kind": "reference",
+          "note": "",
+          "precision": "manual reference area; not a runtime hit rectangle"
+        },
+        {
+          "label": "Character preview",
+          "rect": [
+            30,
+            168,
+            172,
+            200
+          ],
+          "kind": "dynamic",
+          "note": "",
+          "precision": "manual reference area; not a runtime hit rectangle"
+        },
+        {
+          "label": "Equipment and tabs",
+          "rect": [
+            16,
+            165,
+            223,
+            290
+          ],
+          "kind": "action",
+          "note": "",
+          "precision": "manual reference area; not a runtime hit rectangle"
+        },
+        {
+          "label": "Main attributes",
+          "rect": [
+            280,
+            172,
+            121,
+            235
+          ],
+          "kind": "dynamic",
+          "note": "",
+          "precision": "manual reference area; not a runtime hit rectangle"
+        },
+        {
+          "label": "Element and combat attributes",
+          "rect": [
+            31,
+            475,
+            369,
+            120
+          ],
+          "kind": "dynamic",
+          "note": "",
+          "precision": "manual reference area; not a runtime hit rectangle"
+        },
+        {
+          "label": "Character close",
+          "rect": [
+            398,
+            88,
+            20,
+            20
+          ],
+          "kind": "action",
+          "note": "",
+          "precision": "manual reference area; not a runtime hit rectangle"
+        },
+        {
+          "label": "Bag item grid (reference 6x8)",
+          "rect": [
+            754,
+            155,
+            246,
+            328
+          ],
+          "kind": "action",
+          "note": "",
+          "precision": "manual reference area; not a runtime hit rectangle"
+        },
+        {
+          "label": "Bag totals and actions",
+          "rect": [
+            751,
+            486,
+            249,
+            99
+          ],
+          "kind": "dynamic",
+          "note": "",
+          "precision": "manual reference area; not a runtime hit rectangle"
+        },
+        {
+          "label": "Bag close",
+          "rect": [
+            990,
+            117,
+            20,
+            20
+          ],
+          "kind": "action",
+          "note": "",
+          "precision": "manual reference area; not a runtime hit rectangle"
+        },
+        {
+          "label": "Item tooltip: dynamic project text",
+          "rect": [
+            754,
+            200,
+            170,
+            158
+          ],
+          "kind": "dynamic",
+          "note": "Overlays bag cells; screenshot does not establish a separate bitmap or fixed height.",
+          "precision": "manual reference area; not a runtime hit rectangle"
+        }
+      ]
+    },
+    {
+      "captureId": "05-npc-dialog-shop-inventory",
+      "originalPath": "docs/design/assets/official-ingame-ui/acceptance/reference/captures/05-npc-dialog-shop-inventory.jpg",
+      "originalSha256": "55aa95d6399d190ad832efcb81a4ef620d4a6ed1cb39e5252b6004cb030567bb",
+      "originalPixelSize": {
+        "width": 1026,
+        "height": 795
+      },
+      "annotatedImage": "05-npc-dialog-shop-inventory-annotated.png",
+      "annotatedSha256": "0219c08a4c836ef9034e992d6bae6cebefc58a2a70f6d21f8912246b2adf54c0",
+      "regions": [
+        {
+          "label": "inventory / UI[120]",
+          "rect": [
+            426,
+            108,
+            276,
+            494
+          ],
+          "kind": "reference",
+          "note": "",
+          "precision": "manual reference area; not a runtime hit rectangle"
+        },
+        {
+          "label": "npc-shop / UI[511]",
+          "rect": [
+            1,
+            215,
+            344,
+            438
+          ],
+          "kind": "reference",
+          "note": "",
+          "precision": "manual reference area; not a runtime hit rectangle"
+        },
+        {
+          "label": "NPC interaction card: preserve current style",
+          "rect": [
+            1,
+            26,
+            418,
+            195
+          ],
+          "kind": "excluded",
+          "note": "",
+          "precision": "manual reference area; not a runtime hit rectangle"
+        },
+        {
+          "label": "Independent NPC shop product list",
+          "rect": [
+            23,
+            272,
+            280,
+            215
+          ],
+          "kind": "action",
+          "note": "",
+          "precision": "manual reference area; not a runtime hit rectangle"
+        },
+        {
+          "label": "NPC service actions: preserve original handlers",
+          "rect": [
+            22,
+            616,
+            276,
+            24
+          ],
+          "kind": "action",
+          "note": "",
+          "precision": "manual reference area; not a runtime hit rectangle"
+        },
+        {
+          "label": "Bag item grid (reference 6x8)",
+          "rect": [
+            441,
+            157,
+            246,
+            328
+          ],
+          "kind": "action",
+          "note": "",
+          "precision": "manual reference area; not a runtime hit rectangle"
+        }
+      ]
+    },
+    {
+      "captureId": "01-overview",
+      "originalPath": "docs/design/assets/official-ingame-ui/acceptance/reference/captures/01-overview.jpg",
+      "originalSha256": "d5912e87139eb0264edd4ce5949fa5bc3f88e097a554999708270b58380679b1",
+      "originalPixelSize": {
+        "width": 1026,
+        "height": 795
+      },
+      "annotatedImage": "01-overview-annotated.png",
+      "annotatedSha256": "f0b2721bb5dd7498c69e34f7008d82c7e885f5b266ed940e1c37395871da2d76",
+      "regions": [
+        {
+          "label": "hud-orb-shell / UI[141]",
+          "rect": [
+            1,
+            592,
+            225,
+            202
+          ],
+          "kind": "reference",
+          "note": "",
+          "precision": "manual reference area; not a runtime hit rectangle"
+        },
+        {
+          "label": "quickbar-base / UI[430]",
+          "rect": [
+            254,
+            611,
+            518,
+            44
+          ],
+          "kind": "reference",
+          "note": "",
+          "precision": "manual reference area; not a runtime hit rectangle"
+        },
+        {
+          "label": "minimap-frame / UI[342]",
+          "rect": [
+            859,
+            26,
+            166,
+            198
+          ],
+          "kind": "reference",
+          "note": "",
+          "precision": "manual reference area; not a runtime hit rectangle"
+        },
+        {
+          "label": "chat-speaker-icon / UI[210]",
+          "rect": [
+            190,
+            657,
+            31,
+            24
+          ],
+          "kind": "reference",
+          "note": "",
+          "precision": "manual reference area; not a runtime hit rectangle"
+        },
+        {
+          "label": "chat-two-person-icon / UI[220]",
+          "rect": [
+            190,
+            681,
+            31,
+            24
+          ],
+          "kind": "reference",
+          "note": "",
+          "precision": "manual reference area; not a runtime hit rectangle"
+        },
+        {
+          "label": "chat-person-icon / UI[200]",
+          "rect": [
+            190,
+            705,
+            31,
+            24
+          ],
+          "kind": "reference",
+          "note": "",
+          "precision": "manual reference area; not a runtime hit rectangle"
+        },
+        {
+          "label": "chat-group-icon / UI[240]",
+          "rect": [
+            190,
+            729,
+            31,
+            24
+          ],
+          "kind": "reference",
+          "note": "",
+          "precision": "manual reference area; not a runtime hit rectangle"
+        },
+        {
+          "label": "chat-flag-icon / UI[230]",
+          "rect": [
+            190,
+            753,
+            31,
+            24
+          ],
+          "kind": "reference",
+          "note": "",
+          "precision": "manual reference area; not a runtime hit rectangle"
+        },
+        {
+          "label": "minimap-collapse-button / UI[290]",
+          "rect": [
+            1004,
+            28,
+            20,
+            16
+          ],
+          "kind": "reference",
+          "note": "",
+          "precision": "manual reference area; not a runtime hit rectangle"
+        },
+        {
+          "label": "minimap-zoom-in-button / UI[320]",
+          "rect": [
+            1004,
+            203,
+            20,
+            16
+          ],
+          "kind": "reference",
+          "note": "",
+          "precision": "manual reference area; not a runtime hit rectangle"
+        },
+        {
+          "label": "minimap-mountain-button / UI[330]",
+          "rect": [
+            864,
+            203,
+            20,
+            16
+          ],
+          "kind": "reference",
+          "note": "",
+          "precision": "manual reference area; not a runtime hit rectangle"
+        },
+        {
+          "label": "hud-shop-icon / UI[280]",
+          "rect": [
+            980,
+            615,
+            40,
+            40
+          ],
+          "kind": "reference",
+          "note": "",
+          "precision": "manual reference area; not a runtime hit rectangle"
+        },
+        {
+          "label": "hud-command-center / UI[380]",
+          "rect": [
+            885,
+            686,
+            58,
+            58
+          ],
+          "kind": "reference",
+          "note": "",
+          "precision": "manual reference area; not a runtime hit rectangle"
+        },
+        {
+          "label": "hud-command-top / UI[350]",
+          "rect": [
+            888,
+            659,
+            54,
+            32
+          ],
+          "kind": "reference",
+          "note": "",
+          "precision": "manual reference area; not a runtime hit rectangle"
+        },
+        {
+          "label": "hud-command-upper-left / UI[360]",
+          "rect": [
+            855,
+            668,
+            42,
+            50
+          ],
+          "kind": "reference",
+          "note": "",
+          "precision": "manual reference area; not a runtime hit rectangle"
+        },
+        {
+          "label": "hud-command-upper-right / UI[370]",
+          "rect": [
+            930,
+            666,
+            42,
+            50
+          ],
+          "kind": "reference",
+          "note": "",
+          "precision": "manual reference area; not a runtime hit rectangle"
+        },
+        {
+          "label": "hud-command-lower-left / UI[390]",
+          "rect": [
+            856,
+            718,
+            42,
+            50
+          ],
+          "kind": "reference",
+          "note": "",
+          "precision": "manual reference area; not a runtime hit rectangle"
+        },
+        {
+          "label": "hud-command-lower-right / UI[400]",
+          "rect": [
+            931,
+            717,
+            42,
+            50
+          ],
+          "kind": "reference",
+          "note": "",
+          "precision": "manual reference area; not a runtime hit rectangle"
+        },
+        {
+          "label": "hud-command-bottom / UI[410]",
+          "rect": [
+            885,
+            744,
+            54,
+            32
+          ],
+          "kind": "reference",
+          "note": "",
+          "precision": "manual reference area; not a runtime hit rectangle"
+        },
+        {
+          "label": "hud-horse-icon / UI[180]",
+          "rect": [
+            803,
+            681,
+            31,
+            24
+          ],
+          "kind": "reference",
+          "note": "",
+          "precision": "manual reference area; not a runtime hit rectangle"
+        },
+        {
+          "label": "hud-handshake-icon / UI[190]",
+          "rect": [
+            803,
+            705,
+            31,
+            24
+          ],
+          "kind": "reference",
+          "note": "",
+          "precision": "manual reference area; not a runtime hit rectangle"
+        },
+        {
+          "label": "hud-exit-icon / UI[160]",
+          "rect": [
+            990,
+            759,
+            22,
+            18
+          ],
+          "kind": "reference",
+          "note": "",
+          "precision": "manual reference area; not a runtime hit rectangle"
+        },
+        {
+          "label": "bottom-segmented-frame / UI[422]",
+          "rect": [
+            188,
+            781,
+            611,
+            10
+          ],
+          "kind": "reference",
+          "note": "",
+          "precision": "manual reference area; not a runtime hit rectangle"
+        },
+        {
+          "label": "hud-hp-fill / UI[142]",
+          "rect": [
+            41,
+            667,
+            53,
+            101
+          ],
+          "kind": "reference",
+          "note": "",
+          "precision": "manual reference area; not a runtime hit rectangle"
+        },
+        {
+          "label": "hud-mp-fill / UI[143]",
+          "rect": [
+            97,
+            667,
+            48,
+            101
+          ],
+          "kind": "reference",
+          "note": "",
+          "precision": "manual reference area; not a runtime hit rectangle"
+        },
+        {
+          "label": "hud-command-shell / UI[140]",
+          "rect": [
+            800,
+            619,
+            225,
+            175
+          ],
+          "kind": "reference",
+          "note": "",
+          "precision": "manual reference area; not a runtime hit rectangle"
+        },
+        {
+          "label": "Chat history: keep project rendering",
+          "rect": [
+            224,
+            657,
+            574,
+            106
+          ],
+          "kind": "dynamic",
+          "note": "",
+          "precision": "manual reference area; not a runtime hit rectangle"
+        },
+        {
+          "label": "Chat input: keep HWND / IME / draft",
+          "rect": [
+            224,
+            763,
+            574,
+            17
+          ],
+          "kind": "action",
+          "note": "",
+          "precision": "manual reference area; not a runtime hit rectangle"
+        },
+        {
+          "label": "Minimap viewport: clear explicit hole",
+          "rect": [
+            870,
+            47,
+            150,
+            152
+          ],
+          "kind": "transparent",
+          "note": "",
+          "precision": "manual reference area; not a runtime hit rectangle"
+        },
+        {
+          "label": "Game world behind HUD cutouts",
+          "rect": [
+            1,
+            592,
+            225,
+            75
+          ],
+          "kind": "transparent",
+          "note": "Only surrounding cutouts show through; enclosed black panels stay opaque.",
+          "precision": "manual reference area; not a runtime hit rectangle"
+        },
+        {
+          "label": "World / quest overlays: outside this skin",
+          "rect": [
+            854,
+            230,
+            171,
+            244
+          ],
+          "kind": "excluded",
+          "note": "",
+          "precision": "manual reference area; not a runtime hit rectangle"
+        }
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "role": "character",
+      "sourceRole": "character",
+      "outputIndex": 0,
+      "sourceLibrary": "UI",
+      "sourceIndex": 2765,
+      "sourceSize": [
+        412,
+        562
+      ],
+      "sourcePngSha256": "98efced4a423a11ebef3b97d1f851bc9570053b8dbc48c046a136e4d98c5ccc3",
+      "outputSize": [
+        412,
+        562
+      ],
+      "outputPngSha256": "991c354c61cf451d95048556917e83797e33363144eaed36537e773fdd4ed021",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 2777,
+        "opaque": 228767,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "inventory",
+      "sourceRole": "inventory",
+      "outputIndex": 1,
+      "sourceLibrary": "UI",
+      "sourceIndex": 120,
+      "sourceSize": [
+        276,
+        494
+      ],
+      "sourcePngSha256": "80c4f90370c17c01879a86a61b4f8114684a3e29cf87810f44ff11ba1ee8f53a",
+      "outputSize": [
+        276,
+        412
+      ],
+      "outputPngSha256": "1374c9460e2f0905491bcf25cfdce1e13ff22c41fb52e9648e0028feb0878bdd",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 3098,
+        "opaque": 110614,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "hud-orb-shell",
+      "sourceRole": "hud-orb-shell",
+      "outputIndex": 2,
+      "sourceLibrary": "UI",
+      "sourceIndex": 141,
+      "sourceSize": [
+        225,
+        202
+      ],
+      "sourcePngSha256": "0db64d4ba0cfa505e876ff3a4a55a29ea3577cb8793c2485f9fa9e092314581e",
+      "outputSize": [
+        225,
+        202
+      ],
+      "outputPngSha256": "374ed5a1ec9de99a0710ad1acc69874fb98809e819cafa182eb1205f819461a4",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 8830,
+        "opaque": 36620,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "quickbar-base",
+      "sourceRole": "quickbar-base",
+      "outputIndex": 3,
+      "sourceLibrary": "UI",
+      "sourceIndex": 430,
+      "sourceSize": [
+        518,
+        44
+      ],
+      "sourcePngSha256": "b5a5b7fd81a9e59092c3d205a3c020a8b184275d0d5dd9f9f274d2d1bfad579b",
+      "outputSize": [
+        459,
+        44
+      ],
+      "outputPngSha256": "c5cb9ab87170459864c92cc18b7a6c7d951f698b9bab844cfdaf01c940b851b8",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 2863,
+        "opaque": 17333,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "minimap-frame",
+      "sourceRole": "minimap-frame",
+      "outputIndex": 4,
+      "sourceLibrary": "UI",
+      "sourceIndex": 342,
+      "sourceSize": [
+        166,
+        198
+      ],
+      "sourcePngSha256": "a29c643cb7148e085b4bc63246ae07132890356fd4e556f319e78160cc9d162b",
+      "outputSize": [
+        166,
+        198
+      ],
+      "outputPngSha256": "b161ca8c34bb042635f626339b58ee8b7478fa3cc99cb22afb3666fefb732c7b",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 23895,
+        "opaque": 8973,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "chat-speaker-icon",
+      "sourceRole": "chat-speaker-icon",
+      "outputIndex": 5,
+      "sourceLibrary": "UI",
+      "sourceIndex": 210,
+      "sourceSize": [
+        31,
+        24
+      ],
+      "sourcePngSha256": "428d2a1584b74128bc298620bb4c997fea3a924b7a477dc5f00ece11a8e4fa2b",
+      "outputSize": [
+        31,
+        24
+      ],
+      "outputPngSha256": "8535650249528b12204b0bfac4daf5851541a9c8f5e3c14a3a9c5fced25ec5ed",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 4,
+        "opaque": 740,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "chat-speaker-icon-hover",
+      "sourceRole": "chat-speaker-icon",
+      "outputIndex": 6,
+      "sourceLibrary": "UI",
+      "sourceIndex": 210,
+      "sourceSize": [
+        31,
+        24
+      ],
+      "sourcePngSha256": "428d2a1584b74128bc298620bb4c997fea3a924b7a477dc5f00ece11a8e4fa2b",
+      "outputSize": [
+        31,
+        24
+      ],
+      "outputPngSha256": "13d8982616ee9611861a81666df7446025ddf0c808a7f76e9c21f5ba8e32ecbd",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 4,
+        "opaque": 740,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "chat-speaker-icon-pressed",
+      "sourceRole": "chat-speaker-icon",
+      "outputIndex": 7,
+      "sourceLibrary": "UI",
+      "sourceIndex": 210,
+      "sourceSize": [
+        31,
+        24
+      ],
+      "sourcePngSha256": "428d2a1584b74128bc298620bb4c997fea3a924b7a477dc5f00ece11a8e4fa2b",
+      "outputSize": [
+        31,
+        24
+      ],
+      "outputPngSha256": "e3492c6e505388db25777511e36db15704a744cb839ed5f4b403bc05ebfa4ab8",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 4,
+        "opaque": 740,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "chat-speaker-icon-disabled",
+      "sourceRole": "chat-speaker-icon",
+      "outputIndex": 8,
+      "sourceLibrary": "UI",
+      "sourceIndex": 210,
+      "sourceSize": [
+        31,
+        24
+      ],
+      "sourcePngSha256": "428d2a1584b74128bc298620bb4c997fea3a924b7a477dc5f00ece11a8e4fa2b",
+      "outputSize": [
+        31,
+        24
+      ],
+      "outputPngSha256": "67578e10a26a52beb1c95308c4e0e59f8925d8318fab2e8aee45a6bfcbdd93fc",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 4,
+        "opaque": 740,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "chat-two-person-icon",
+      "sourceRole": "chat-two-person-icon",
+      "outputIndex": 9,
+      "sourceLibrary": "UI",
+      "sourceIndex": 220,
+      "sourceSize": [
+        31,
+        24
+      ],
+      "sourcePngSha256": "378f901cf4ea81d5501b0fb597d7b9c772bd29b2950e666726c9f5bb372d89bb",
+      "outputSize": [
+        31,
+        24
+      ],
+      "outputPngSha256": "bea29762c6eff8f8f323c375a2e43ba9d42c5857b4ed728b8cccc81532a0950b",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 4,
+        "opaque": 740,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "chat-two-person-icon-hover",
+      "sourceRole": "chat-two-person-icon",
+      "outputIndex": 10,
+      "sourceLibrary": "UI",
+      "sourceIndex": 220,
+      "sourceSize": [
+        31,
+        24
+      ],
+      "sourcePngSha256": "378f901cf4ea81d5501b0fb597d7b9c772bd29b2950e666726c9f5bb372d89bb",
+      "outputSize": [
+        31,
+        24
+      ],
+      "outputPngSha256": "8d04862cc9a0a35b35081d19a3e7fc2578ebc25d9fa518216882799d792a0df0",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 4,
+        "opaque": 740,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "chat-two-person-icon-pressed",
+      "sourceRole": "chat-two-person-icon",
+      "outputIndex": 11,
+      "sourceLibrary": "UI",
+      "sourceIndex": 220,
+      "sourceSize": [
+        31,
+        24
+      ],
+      "sourcePngSha256": "378f901cf4ea81d5501b0fb597d7b9c772bd29b2950e666726c9f5bb372d89bb",
+      "outputSize": [
+        31,
+        24
+      ],
+      "outputPngSha256": "5f5e1042da905c3e88125f7d7d8c4f13518503cb1ab38e4d4cefe2d3591ac79a",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 4,
+        "opaque": 740,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "chat-two-person-icon-disabled",
+      "sourceRole": "chat-two-person-icon",
+      "outputIndex": 12,
+      "sourceLibrary": "UI",
+      "sourceIndex": 220,
+      "sourceSize": [
+        31,
+        24
+      ],
+      "sourcePngSha256": "378f901cf4ea81d5501b0fb597d7b9c772bd29b2950e666726c9f5bb372d89bb",
+      "outputSize": [
+        31,
+        24
+      ],
+      "outputPngSha256": "8c6434c41d6d1ffcd0050000bc591ebdae1b17b49750823205200a78df42f86a",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 4,
+        "opaque": 740,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "chat-person-icon",
+      "sourceRole": "chat-person-icon",
+      "outputIndex": 13,
+      "sourceLibrary": "UI",
+      "sourceIndex": 200,
+      "sourceSize": [
+        31,
+        24
+      ],
+      "sourcePngSha256": "4335c3a1de2e9ca9f84832a210ddd785ec12487e53cc2054f3a3a911b1d3fb84",
+      "outputSize": [
+        31,
+        24
+      ],
+      "outputPngSha256": "29184563100608b43b5deb0cb806f1327d09e49d2bea823d0dffa56465647da6",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 4,
+        "opaque": 740,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "chat-person-icon-hover",
+      "sourceRole": "chat-person-icon",
+      "outputIndex": 14,
+      "sourceLibrary": "UI",
+      "sourceIndex": 200,
+      "sourceSize": [
+        31,
+        24
+      ],
+      "sourcePngSha256": "4335c3a1de2e9ca9f84832a210ddd785ec12487e53cc2054f3a3a911b1d3fb84",
+      "outputSize": [
+        31,
+        24
+      ],
+      "outputPngSha256": "cdf6162562c9af8bff739153c89f6bfaafe1ea589bd55e33d2d6543027cb76b5",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 4,
+        "opaque": 740,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "chat-person-icon-pressed",
+      "sourceRole": "chat-person-icon",
+      "outputIndex": 15,
+      "sourceLibrary": "UI",
+      "sourceIndex": 200,
+      "sourceSize": [
+        31,
+        24
+      ],
+      "sourcePngSha256": "4335c3a1de2e9ca9f84832a210ddd785ec12487e53cc2054f3a3a911b1d3fb84",
+      "outputSize": [
+        31,
+        24
+      ],
+      "outputPngSha256": "7dc7893279235d4d76d1f970a3064e28646bff76962c27c2b4d681a7a5daa554",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 4,
+        "opaque": 740,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "chat-person-icon-disabled",
+      "sourceRole": "chat-person-icon",
+      "outputIndex": 16,
+      "sourceLibrary": "UI",
+      "sourceIndex": 200,
+      "sourceSize": [
+        31,
+        24
+      ],
+      "sourcePngSha256": "4335c3a1de2e9ca9f84832a210ddd785ec12487e53cc2054f3a3a911b1d3fb84",
+      "outputSize": [
+        31,
+        24
+      ],
+      "outputPngSha256": "6be7cca77298ceec95578d1dad72ab314032bb1c26d6e6b8d78c512802047492",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 4,
+        "opaque": 740,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "chat-group-icon",
+      "sourceRole": "chat-group-icon",
+      "outputIndex": 17,
+      "sourceLibrary": "UI",
+      "sourceIndex": 240,
+      "sourceSize": [
+        31,
+        24
+      ],
+      "sourcePngSha256": "eacee10ab1771bffc843d76cdc5143cd4b18c33615075a43b7a2ca249bc98f0a",
+      "outputSize": [
+        31,
+        24
+      ],
+      "outputPngSha256": "8457fee38ccbd0badf3580baa3f6004ae05cbe5457170991f009ae13e391ae34",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 4,
+        "opaque": 740,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "chat-group-icon-hover",
+      "sourceRole": "chat-group-icon",
+      "outputIndex": 18,
+      "sourceLibrary": "UI",
+      "sourceIndex": 240,
+      "sourceSize": [
+        31,
+        24
+      ],
+      "sourcePngSha256": "eacee10ab1771bffc843d76cdc5143cd4b18c33615075a43b7a2ca249bc98f0a",
+      "outputSize": [
+        31,
+        24
+      ],
+      "outputPngSha256": "689bb9d5d1811ef8e48f14c5ae4f838b1a5ead4a12beb0dd74ffed71992aaadb",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 4,
+        "opaque": 740,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "chat-group-icon-pressed",
+      "sourceRole": "chat-group-icon",
+      "outputIndex": 19,
+      "sourceLibrary": "UI",
+      "sourceIndex": 240,
+      "sourceSize": [
+        31,
+        24
+      ],
+      "sourcePngSha256": "eacee10ab1771bffc843d76cdc5143cd4b18c33615075a43b7a2ca249bc98f0a",
+      "outputSize": [
+        31,
+        24
+      ],
+      "outputPngSha256": "9a58a646df792dc15a5e2e005b19ee2eb212e359a9d9c1d783ddff74adcbf81c",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 4,
+        "opaque": 740,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "chat-group-icon-disabled",
+      "sourceRole": "chat-group-icon",
+      "outputIndex": 20,
+      "sourceLibrary": "UI",
+      "sourceIndex": 240,
+      "sourceSize": [
+        31,
+        24
+      ],
+      "sourcePngSha256": "eacee10ab1771bffc843d76cdc5143cd4b18c33615075a43b7a2ca249bc98f0a",
+      "outputSize": [
+        31,
+        24
+      ],
+      "outputPngSha256": "632dd75580c7b592e84c4f7ee1d964d87810562424191985f6246904d39154eb",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 4,
+        "opaque": 740,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "chat-flag-icon",
+      "sourceRole": "chat-flag-icon",
+      "outputIndex": 21,
+      "sourceLibrary": "UI",
+      "sourceIndex": 230,
+      "sourceSize": [
+        31,
+        24
+      ],
+      "sourcePngSha256": "02da1e28c5881907b87f23d290a9329b5dba0237f5444e71865a1657d28496ad",
+      "outputSize": [
+        31,
+        24
+      ],
+      "outputPngSha256": "2aaa574abdb046ff5ffc089c4299e3ad262076260bec9c74c3f3763aeac6ec7e",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 4,
+        "opaque": 740,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "chat-flag-icon-hover",
+      "sourceRole": "chat-flag-icon",
+      "outputIndex": 22,
+      "sourceLibrary": "UI",
+      "sourceIndex": 230,
+      "sourceSize": [
+        31,
+        24
+      ],
+      "sourcePngSha256": "02da1e28c5881907b87f23d290a9329b5dba0237f5444e71865a1657d28496ad",
+      "outputSize": [
+        31,
+        24
+      ],
+      "outputPngSha256": "7525b9fbb3349d17642653e3d1d8879cac59cabccb3e7bcc0c39dad7f6e566e9",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 4,
+        "opaque": 740,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "chat-flag-icon-pressed",
+      "sourceRole": "chat-flag-icon",
+      "outputIndex": 23,
+      "sourceLibrary": "UI",
+      "sourceIndex": 230,
+      "sourceSize": [
+        31,
+        24
+      ],
+      "sourcePngSha256": "02da1e28c5881907b87f23d290a9329b5dba0237f5444e71865a1657d28496ad",
+      "outputSize": [
+        31,
+        24
+      ],
+      "outputPngSha256": "c4fdb33edaebd411b8d8df6aee20f2dec78f36f42f606514c45f9a2e2f243401",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 4,
+        "opaque": 740,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "chat-flag-icon-disabled",
+      "sourceRole": "chat-flag-icon",
+      "outputIndex": 24,
+      "sourceLibrary": "UI",
+      "sourceIndex": 230,
+      "sourceSize": [
+        31,
+        24
+      ],
+      "sourcePngSha256": "02da1e28c5881907b87f23d290a9329b5dba0237f5444e71865a1657d28496ad",
+      "outputSize": [
+        31,
+        24
+      ],
+      "outputPngSha256": "9d22b87fca47b97ada6757a747ac20d5071eda9f9698bb215e74da7db37b8f91",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 4,
+        "opaque": 740,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "minimap-collapse-button",
+      "sourceRole": "minimap-collapse-button",
+      "outputIndex": 25,
+      "sourceLibrary": "UI",
+      "sourceIndex": 290,
+      "sourceSize": [
+        20,
+        16
+      ],
+      "sourcePngSha256": "3e6101cbdb894fe6837a30e486ebd02dac261c9fb4d31cb491e3235d80c28915",
+      "outputSize": [
+        20,
+        16
+      ],
+      "outputPngSha256": "35bda172c5f1bd33395df970fae0ad33d1f60220260c6c63bba38fb78ba4a1a7",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 4,
+        "opaque": 316,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "minimap-collapse-button-hover",
+      "sourceRole": "minimap-collapse-button",
+      "outputIndex": 26,
+      "sourceLibrary": "UI",
+      "sourceIndex": 290,
+      "sourceSize": [
+        20,
+        16
+      ],
+      "sourcePngSha256": "3e6101cbdb894fe6837a30e486ebd02dac261c9fb4d31cb491e3235d80c28915",
+      "outputSize": [
+        20,
+        16
+      ],
+      "outputPngSha256": "d6e32d362a7a8fa269af374a36c80fe29ff855b01efb672154427f05f2fe81f5",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 4,
+        "opaque": 316,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "minimap-collapse-button-pressed",
+      "sourceRole": "minimap-collapse-button",
+      "outputIndex": 27,
+      "sourceLibrary": "UI",
+      "sourceIndex": 290,
+      "sourceSize": [
+        20,
+        16
+      ],
+      "sourcePngSha256": "3e6101cbdb894fe6837a30e486ebd02dac261c9fb4d31cb491e3235d80c28915",
+      "outputSize": [
+        20,
+        16
+      ],
+      "outputPngSha256": "eec775387b048deec56482cc89f79458c9746f49dad83a02e0a489ae9b8cf9ae",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 4,
+        "opaque": 316,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "minimap-collapse-button-disabled",
+      "sourceRole": "minimap-collapse-button",
+      "outputIndex": 28,
+      "sourceLibrary": "UI",
+      "sourceIndex": 290,
+      "sourceSize": [
+        20,
+        16
+      ],
+      "sourcePngSha256": "3e6101cbdb894fe6837a30e486ebd02dac261c9fb4d31cb491e3235d80c28915",
+      "outputSize": [
+        20,
+        16
+      ],
+      "outputPngSha256": "69810666b827001b54991c4b806f40e9548ff3d5c4f174144602fb698c6067a0",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 4,
+        "opaque": 316,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "minimap-zoom-in-button",
+      "sourceRole": "minimap-zoom-in-button",
+      "outputIndex": 29,
+      "sourceLibrary": "UI",
+      "sourceIndex": 320,
+      "sourceSize": [
+        20,
+        16
+      ],
+      "sourcePngSha256": "b445e0e98f9af596ac667cdb418a69eb7b21a74e8516d8c2e27b3b50a898903c",
+      "outputSize": [
+        20,
+        16
+      ],
+      "outputPngSha256": "141976de014b205bc0d16bbb019c4278927589985fce4874f7763bfc336bf2d1",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 4,
+        "opaque": 316,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "minimap-zoom-in-button-hover",
+      "sourceRole": "minimap-zoom-in-button",
+      "outputIndex": 30,
+      "sourceLibrary": "UI",
+      "sourceIndex": 320,
+      "sourceSize": [
+        20,
+        16
+      ],
+      "sourcePngSha256": "b445e0e98f9af596ac667cdb418a69eb7b21a74e8516d8c2e27b3b50a898903c",
+      "outputSize": [
+        20,
+        16
+      ],
+      "outputPngSha256": "e6b62411b8144711f393a2843157035de392e43feea27a91e0169202d8699a99",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 4,
+        "opaque": 316,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "minimap-zoom-in-button-pressed",
+      "sourceRole": "minimap-zoom-in-button",
+      "outputIndex": 31,
+      "sourceLibrary": "UI",
+      "sourceIndex": 320,
+      "sourceSize": [
+        20,
+        16
+      ],
+      "sourcePngSha256": "b445e0e98f9af596ac667cdb418a69eb7b21a74e8516d8c2e27b3b50a898903c",
+      "outputSize": [
+        20,
+        16
+      ],
+      "outputPngSha256": "9c08d2fd5556f8c6d11f7114cea6e8ddfd23dba57ceae71f8da76084de90419a",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 4,
+        "opaque": 316,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "minimap-zoom-in-button-disabled",
+      "sourceRole": "minimap-zoom-in-button",
+      "outputIndex": 32,
+      "sourceLibrary": "UI",
+      "sourceIndex": 320,
+      "sourceSize": [
+        20,
+        16
+      ],
+      "sourcePngSha256": "b445e0e98f9af596ac667cdb418a69eb7b21a74e8516d8c2e27b3b50a898903c",
+      "outputSize": [
+        20,
+        16
+      ],
+      "outputPngSha256": "c3692576d67b87275d857635f6baaeb808a9b168a9707bfea2b98988f61789b1",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 4,
+        "opaque": 316,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "minimap-mountain-button",
+      "sourceRole": "minimap-mountain-button",
+      "outputIndex": 33,
+      "sourceLibrary": "UI",
+      "sourceIndex": 330,
+      "sourceSize": [
+        20,
+        16
+      ],
+      "sourcePngSha256": "b079683191095bcf57657d6aa0b22dde55a25662b4e2f2d03d22e7e2efc235bc",
+      "outputSize": [
+        20,
+        16
+      ],
+      "outputPngSha256": "d3a484abd48529ad340f9574ff92f79b26d8db5a47948c4fffdfc4aa2c027972",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 4,
+        "opaque": 316,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "minimap-mountain-button-hover",
+      "sourceRole": "minimap-mountain-button",
+      "outputIndex": 34,
+      "sourceLibrary": "UI",
+      "sourceIndex": 330,
+      "sourceSize": [
+        20,
+        16
+      ],
+      "sourcePngSha256": "b079683191095bcf57657d6aa0b22dde55a25662b4e2f2d03d22e7e2efc235bc",
+      "outputSize": [
+        20,
+        16
+      ],
+      "outputPngSha256": "fa91081f697f08d47192958d7f617ab9efbcfa13b008fb0686a01da9f2f5777e",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 4,
+        "opaque": 316,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "minimap-mountain-button-pressed",
+      "sourceRole": "minimap-mountain-button",
+      "outputIndex": 35,
+      "sourceLibrary": "UI",
+      "sourceIndex": 330,
+      "sourceSize": [
+        20,
+        16
+      ],
+      "sourcePngSha256": "b079683191095bcf57657d6aa0b22dde55a25662b4e2f2d03d22e7e2efc235bc",
+      "outputSize": [
+        20,
+        16
+      ],
+      "outputPngSha256": "c4ecbd03b275fa68b5b0daee77879b6ea82514b5e469ffeefe87c191d8c0467e",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 4,
+        "opaque": 316,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "minimap-mountain-button-disabled",
+      "sourceRole": "minimap-mountain-button",
+      "outputIndex": 36,
+      "sourceLibrary": "UI",
+      "sourceIndex": 330,
+      "sourceSize": [
+        20,
+        16
+      ],
+      "sourcePngSha256": "b079683191095bcf57657d6aa0b22dde55a25662b4e2f2d03d22e7e2efc235bc",
+      "outputSize": [
+        20,
+        16
+      ],
+      "outputPngSha256": "7a353512171939c04eba4dc61a7b5c459094691acd0883a6e8ec31f71256559d",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 4,
+        "opaque": 316,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "hud-shop-icon",
+      "sourceRole": "hud-shop-icon",
+      "outputIndex": 37,
+      "sourceLibrary": "UI",
+      "sourceIndex": 280,
+      "sourceSize": [
+        40,
+        40
+      ],
+      "sourcePngSha256": "087979259ce5299d75824c076f43a4dd3debe8ca0b939a0de4d8eb0e5ccb63a2",
+      "outputSize": [
+        40,
+        40
+      ],
+      "outputPngSha256": "efba454d1ff844462c7eec99bda0241c67405bd60869cac6d9d4f3e744d8550e",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 214,
+        "opaque": 1386,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "hud-shop-icon-hover",
+      "sourceRole": "hud-shop-icon",
+      "outputIndex": 38,
+      "sourceLibrary": "UI",
+      "sourceIndex": 280,
+      "sourceSize": [
+        40,
+        40
+      ],
+      "sourcePngSha256": "087979259ce5299d75824c076f43a4dd3debe8ca0b939a0de4d8eb0e5ccb63a2",
+      "outputSize": [
+        40,
+        40
+      ],
+      "outputPngSha256": "d7208753d287542d7f950eaf92e8c1afcf3d9e62569a2a37e2797312e1c82a16",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 214,
+        "opaque": 1386,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "hud-shop-icon-pressed",
+      "sourceRole": "hud-shop-icon",
+      "outputIndex": 39,
+      "sourceLibrary": "UI",
+      "sourceIndex": 280,
+      "sourceSize": [
+        40,
+        40
+      ],
+      "sourcePngSha256": "087979259ce5299d75824c076f43a4dd3debe8ca0b939a0de4d8eb0e5ccb63a2",
+      "outputSize": [
+        40,
+        40
+      ],
+      "outputPngSha256": "d2495f6082dee18bb65cdf334c684574331e86ed7da415094a179eeb79b5e579",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 214,
+        "opaque": 1386,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "hud-shop-icon-disabled",
+      "sourceRole": "hud-shop-icon",
+      "outputIndex": 40,
+      "sourceLibrary": "UI",
+      "sourceIndex": 280,
+      "sourceSize": [
+        40,
+        40
+      ],
+      "sourcePngSha256": "087979259ce5299d75824c076f43a4dd3debe8ca0b939a0de4d8eb0e5ccb63a2",
+      "outputSize": [
+        40,
+        40
+      ],
+      "outputPngSha256": "53db64530972a9a4f520c4cb3aa2c366bccec58a246fe58e1ab5de8f99e6a590",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 214,
+        "opaque": 1386,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "hud-command-center",
+      "sourceRole": "hud-command-center",
+      "outputIndex": 41,
+      "sourceLibrary": "UI",
+      "sourceIndex": 380,
+      "sourceSize": [
+        58,
+        58
+      ],
+      "sourcePngSha256": "081003bba8f10baa5e8084c05ec586a2fbcc224c7f27c4e0619e515d4e4729b4",
+      "outputSize": [
+        58,
+        58
+      ],
+      "outputPngSha256": "f7d184668925943307c939dfb7e8022de9072066f5795d1532f3b103c0969990",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 658,
+        "opaque": 2706,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "hud-command-center-hover",
+      "sourceRole": "hud-command-center",
+      "outputIndex": 42,
+      "sourceLibrary": "UI",
+      "sourceIndex": 380,
+      "sourceSize": [
+        58,
+        58
+      ],
+      "sourcePngSha256": "081003bba8f10baa5e8084c05ec586a2fbcc224c7f27c4e0619e515d4e4729b4",
+      "outputSize": [
+        58,
+        58
+      ],
+      "outputPngSha256": "2c253b2406029e2a2238d4fc607824a9821ede3fb871511ef2ebaf63cfbd368d",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 658,
+        "opaque": 2706,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "hud-command-center-pressed",
+      "sourceRole": "hud-command-center",
+      "outputIndex": 43,
+      "sourceLibrary": "UI",
+      "sourceIndex": 380,
+      "sourceSize": [
+        58,
+        58
+      ],
+      "sourcePngSha256": "081003bba8f10baa5e8084c05ec586a2fbcc224c7f27c4e0619e515d4e4729b4",
+      "outputSize": [
+        58,
+        58
+      ],
+      "outputPngSha256": "9a177e413b3136add79f0db572f0f14ef000e8ee010b3e19811a7b3e93f0501e",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 658,
+        "opaque": 2706,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "hud-command-center-disabled",
+      "sourceRole": "hud-command-center",
+      "outputIndex": 44,
+      "sourceLibrary": "UI",
+      "sourceIndex": 380,
+      "sourceSize": [
+        58,
+        58
+      ],
+      "sourcePngSha256": "081003bba8f10baa5e8084c05ec586a2fbcc224c7f27c4e0619e515d4e4729b4",
+      "outputSize": [
+        58,
+        58
+      ],
+      "outputPngSha256": "f0bb798c86df5850c45b75e53968484ec24d963d2f92da68b0bee28befb8ba73",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 658,
+        "opaque": 2706,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "hud-command-top",
+      "sourceRole": "hud-command-top",
+      "outputIndex": 45,
+      "sourceLibrary": "UI",
+      "sourceIndex": 350,
+      "sourceSize": [
+        54,
+        32
+      ],
+      "sourcePngSha256": "9d39186fb139255652fc576c144479fc8ce93626896e63a8f1c915b504786e2e",
+      "outputSize": [
+        54,
+        32
+      ],
+      "outputPngSha256": "bb36e2442506d89ce30175ff22c6af74d91cf1dde81c646fa7273559149f0b70",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 425,
+        "opaque": 1303,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "hud-command-top-hover",
+      "sourceRole": "hud-command-top",
+      "outputIndex": 46,
+      "sourceLibrary": "UI",
+      "sourceIndex": 350,
+      "sourceSize": [
+        54,
+        32
+      ],
+      "sourcePngSha256": "9d39186fb139255652fc576c144479fc8ce93626896e63a8f1c915b504786e2e",
+      "outputSize": [
+        54,
+        32
+      ],
+      "outputPngSha256": "dff2058cde48444f34a62afb0a67db17440356535e324ca641f4fd828a54b501",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 425,
+        "opaque": 1303,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "hud-command-top-pressed",
+      "sourceRole": "hud-command-top",
+      "outputIndex": 47,
+      "sourceLibrary": "UI",
+      "sourceIndex": 350,
+      "sourceSize": [
+        54,
+        32
+      ],
+      "sourcePngSha256": "9d39186fb139255652fc576c144479fc8ce93626896e63a8f1c915b504786e2e",
+      "outputSize": [
+        54,
+        32
+      ],
+      "outputPngSha256": "5d972d692535e3d3c33f20658e604a2568d6e1f139848e4e96faebe3743fb435",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 425,
+        "opaque": 1303,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "hud-command-top-disabled",
+      "sourceRole": "hud-command-top",
+      "outputIndex": 48,
+      "sourceLibrary": "UI",
+      "sourceIndex": 350,
+      "sourceSize": [
+        54,
+        32
+      ],
+      "sourcePngSha256": "9d39186fb139255652fc576c144479fc8ce93626896e63a8f1c915b504786e2e",
+      "outputSize": [
+        54,
+        32
+      ],
+      "outputPngSha256": "c94545a4ed080921636aed705d6db8e778c9b0f63bdc3de752dd415d9de9d84d",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 425,
+        "opaque": 1303,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "hud-command-upper-left",
+      "sourceRole": "hud-command-upper-left",
+      "outputIndex": 49,
+      "sourceLibrary": "UI",
+      "sourceIndex": 360,
+      "sourceSize": [
+        42,
+        50
+      ],
+      "sourcePngSha256": "2228f572ddf6eefa1bdb4344b6bbe9f325f3b26ffa4efbccced28891e57e878d",
+      "outputSize": [
+        42,
+        50
+      ],
+      "outputPngSha256": "9d55cd4664566145fb8dcd1ced678fb56093599d99b104267c3e05cb4c94e1b5",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 824,
+        "opaque": 1276,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "hud-command-upper-left-hover",
+      "sourceRole": "hud-command-upper-left",
+      "outputIndex": 50,
+      "sourceLibrary": "UI",
+      "sourceIndex": 360,
+      "sourceSize": [
+        42,
+        50
+      ],
+      "sourcePngSha256": "2228f572ddf6eefa1bdb4344b6bbe9f325f3b26ffa4efbccced28891e57e878d",
+      "outputSize": [
+        42,
+        50
+      ],
+      "outputPngSha256": "0aa67a3743e21b194df3fe0059288b67d201baa388debca1e65087ba3e9d4e79",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 824,
+        "opaque": 1276,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "hud-command-upper-left-pressed",
+      "sourceRole": "hud-command-upper-left",
+      "outputIndex": 51,
+      "sourceLibrary": "UI",
+      "sourceIndex": 360,
+      "sourceSize": [
+        42,
+        50
+      ],
+      "sourcePngSha256": "2228f572ddf6eefa1bdb4344b6bbe9f325f3b26ffa4efbccced28891e57e878d",
+      "outputSize": [
+        42,
+        50
+      ],
+      "outputPngSha256": "793045bc34bc204a292f61af3fb024e122669931c973f7d9be9fddb6efd35619",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 824,
+        "opaque": 1276,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "hud-command-upper-left-disabled",
+      "sourceRole": "hud-command-upper-left",
+      "outputIndex": 52,
+      "sourceLibrary": "UI",
+      "sourceIndex": 360,
+      "sourceSize": [
+        42,
+        50
+      ],
+      "sourcePngSha256": "2228f572ddf6eefa1bdb4344b6bbe9f325f3b26ffa4efbccced28891e57e878d",
+      "outputSize": [
+        42,
+        50
+      ],
+      "outputPngSha256": "49ad7d29c0bdd39dcf3623beffb81bd0fff00718cd7fe6398c08cdb960feff10",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 824,
+        "opaque": 1276,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "hud-command-upper-right",
+      "sourceRole": "hud-command-upper-right",
+      "outputIndex": 53,
+      "sourceLibrary": "UI",
+      "sourceIndex": 370,
+      "sourceSize": [
+        42,
+        50
+      ],
+      "sourcePngSha256": "9409eaa3f6b5339a5ba0c107f459443e871f81c0781b6ba7c67770862eed90c7",
+      "outputSize": [
+        42,
+        50
+      ],
+      "outputPngSha256": "2fdaf84c57d0cd9555b2ea3722bb1e7d64a4573babf21d347e8c8daa7cdb6fba",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 832,
+        "opaque": 1268,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "hud-command-upper-right-hover",
+      "sourceRole": "hud-command-upper-right",
+      "outputIndex": 54,
+      "sourceLibrary": "UI",
+      "sourceIndex": 370,
+      "sourceSize": [
+        42,
+        50
+      ],
+      "sourcePngSha256": "9409eaa3f6b5339a5ba0c107f459443e871f81c0781b6ba7c67770862eed90c7",
+      "outputSize": [
+        42,
+        50
+      ],
+      "outputPngSha256": "a40d1b8f75c8a9085039e22af8054898d357a0b3aff383ee642efd21122d9066",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 832,
+        "opaque": 1268,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "hud-command-upper-right-pressed",
+      "sourceRole": "hud-command-upper-right",
+      "outputIndex": 55,
+      "sourceLibrary": "UI",
+      "sourceIndex": 370,
+      "sourceSize": [
+        42,
+        50
+      ],
+      "sourcePngSha256": "9409eaa3f6b5339a5ba0c107f459443e871f81c0781b6ba7c67770862eed90c7",
+      "outputSize": [
+        42,
+        50
+      ],
+      "outputPngSha256": "13156a4a1ffd480dba9b51eb84bb7d371f635b955858a7abc26ac2fbeb845f4f",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 832,
+        "opaque": 1268,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "hud-command-upper-right-disabled",
+      "sourceRole": "hud-command-upper-right",
+      "outputIndex": 56,
+      "sourceLibrary": "UI",
+      "sourceIndex": 370,
+      "sourceSize": [
+        42,
+        50
+      ],
+      "sourcePngSha256": "9409eaa3f6b5339a5ba0c107f459443e871f81c0781b6ba7c67770862eed90c7",
+      "outputSize": [
+        42,
+        50
+      ],
+      "outputPngSha256": "276787296f58514b6ff1b9ddf707338fa989e651296a360f5ccec8d2352dc2f1",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 832,
+        "opaque": 1268,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "hud-command-lower-left",
+      "sourceRole": "hud-command-lower-left",
+      "outputIndex": 57,
+      "sourceLibrary": "UI",
+      "sourceIndex": 390,
+      "sourceSize": [
+        42,
+        50
+      ],
+      "sourcePngSha256": "38672b7c06a8ceb579a355400c37378803d3d7ec177e22077492f875c881fbfa",
+      "outputSize": [
+        42,
+        50
+      ],
+      "outputPngSha256": "d16bda56705e5c13077e41cd039011e06bd77db1b93d9ffd2c22312690b8330b",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 810,
+        "opaque": 1290,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "hud-command-lower-left-hover",
+      "sourceRole": "hud-command-lower-left",
+      "outputIndex": 58,
+      "sourceLibrary": "UI",
+      "sourceIndex": 390,
+      "sourceSize": [
+        42,
+        50
+      ],
+      "sourcePngSha256": "38672b7c06a8ceb579a355400c37378803d3d7ec177e22077492f875c881fbfa",
+      "outputSize": [
+        42,
+        50
+      ],
+      "outputPngSha256": "365d0fb890c70eb1c33e1bd8a5a526e63fbf6c54f4199c16212ec018a94aa487",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 810,
+        "opaque": 1290,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "hud-command-lower-left-pressed",
+      "sourceRole": "hud-command-lower-left",
+      "outputIndex": 59,
+      "sourceLibrary": "UI",
+      "sourceIndex": 390,
+      "sourceSize": [
+        42,
+        50
+      ],
+      "sourcePngSha256": "38672b7c06a8ceb579a355400c37378803d3d7ec177e22077492f875c881fbfa",
+      "outputSize": [
+        42,
+        50
+      ],
+      "outputPngSha256": "161ad7bce9fbf1ff7edc358daa21c8c116b89c5eaaae40000c324636fe2024ba",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 810,
+        "opaque": 1290,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "hud-command-lower-left-disabled",
+      "sourceRole": "hud-command-lower-left",
+      "outputIndex": 60,
+      "sourceLibrary": "UI",
+      "sourceIndex": 390,
+      "sourceSize": [
+        42,
+        50
+      ],
+      "sourcePngSha256": "38672b7c06a8ceb579a355400c37378803d3d7ec177e22077492f875c881fbfa",
+      "outputSize": [
+        42,
+        50
+      ],
+      "outputPngSha256": "ef4f313bbfb3aaa4cbcc5b70c887e00c0d791ef4a45558a76826d781c4f46967",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 810,
+        "opaque": 1290,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "hud-command-lower-right",
+      "sourceRole": "hud-command-lower-right",
+      "outputIndex": 61,
+      "sourceLibrary": "UI",
+      "sourceIndex": 400,
+      "sourceSize": [
+        42,
+        50
+      ],
+      "sourcePngSha256": "1284984c415429350daa2978125f4f8689e68410a54a6aee7b5be00f35630d03",
+      "outputSize": [
+        42,
+        50
+      ],
+      "outputPngSha256": "2d1fceeb597eb50d4da10fe6a4497b053d5e10812d227695de7ca25d04a60d1a",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 758,
+        "opaque": 1342,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "hud-command-lower-right-hover",
+      "sourceRole": "hud-command-lower-right",
+      "outputIndex": 62,
+      "sourceLibrary": "UI",
+      "sourceIndex": 400,
+      "sourceSize": [
+        42,
+        50
+      ],
+      "sourcePngSha256": "1284984c415429350daa2978125f4f8689e68410a54a6aee7b5be00f35630d03",
+      "outputSize": [
+        42,
+        50
+      ],
+      "outputPngSha256": "3ef266971c036bc30df13482bedf2ab61e05b16ae2de3c8de11ade3204176e4f",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 758,
+        "opaque": 1342,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "hud-command-lower-right-pressed",
+      "sourceRole": "hud-command-lower-right",
+      "outputIndex": 63,
+      "sourceLibrary": "UI",
+      "sourceIndex": 400,
+      "sourceSize": [
+        42,
+        50
+      ],
+      "sourcePngSha256": "1284984c415429350daa2978125f4f8689e68410a54a6aee7b5be00f35630d03",
+      "outputSize": [
+        42,
+        50
+      ],
+      "outputPngSha256": "6cc277afb1db9ba3bc8918c92cc414fad7088bd1caf8611a0d201d76eac67ad5",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 758,
+        "opaque": 1342,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "hud-command-lower-right-disabled",
+      "sourceRole": "hud-command-lower-right",
+      "outputIndex": 64,
+      "sourceLibrary": "UI",
+      "sourceIndex": 400,
+      "sourceSize": [
+        42,
+        50
+      ],
+      "sourcePngSha256": "1284984c415429350daa2978125f4f8689e68410a54a6aee7b5be00f35630d03",
+      "outputSize": [
+        42,
+        50
+      ],
+      "outputPngSha256": "f2716cf2c7c36b0ef4b11be543e18cded1ba5b0d1426d4442e47168ac8579380",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 758,
+        "opaque": 1342,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "hud-command-bottom",
+      "sourceRole": "hud-command-bottom",
+      "outputIndex": 65,
+      "sourceLibrary": "UI",
+      "sourceIndex": 410,
+      "sourceSize": [
+        54,
+        32
+      ],
+      "sourcePngSha256": "c86a5c9c4777a0531136c3213a75228cad0ab45bdc0783026afbf715894e5143",
+      "outputSize": [
+        54,
+        32
+      ],
+      "outputPngSha256": "933c6010f640843361ae37b4c8512c78c9f151564336e6c81ab8b64233fc6863",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 402,
+        "opaque": 1326,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "hud-command-bottom-hover",
+      "sourceRole": "hud-command-bottom",
+      "outputIndex": 66,
+      "sourceLibrary": "UI",
+      "sourceIndex": 410,
+      "sourceSize": [
+        54,
+        32
+      ],
+      "sourcePngSha256": "c86a5c9c4777a0531136c3213a75228cad0ab45bdc0783026afbf715894e5143",
+      "outputSize": [
+        54,
+        32
+      ],
+      "outputPngSha256": "1160f42c95ed988b79653bdb945f93b2d9b0467eb7f5d6e5a38257a11237ab35",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 402,
+        "opaque": 1326,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "hud-command-bottom-pressed",
+      "sourceRole": "hud-command-bottom",
+      "outputIndex": 67,
+      "sourceLibrary": "UI",
+      "sourceIndex": 410,
+      "sourceSize": [
+        54,
+        32
+      ],
+      "sourcePngSha256": "c86a5c9c4777a0531136c3213a75228cad0ab45bdc0783026afbf715894e5143",
+      "outputSize": [
+        54,
+        32
+      ],
+      "outputPngSha256": "195705ab62d60b73676a032a10f983f963b2be0e68222a40556239f40f43a15b",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 402,
+        "opaque": 1326,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "hud-command-bottom-disabled",
+      "sourceRole": "hud-command-bottom",
+      "outputIndex": 68,
+      "sourceLibrary": "UI",
+      "sourceIndex": 410,
+      "sourceSize": [
+        54,
+        32
+      ],
+      "sourcePngSha256": "c86a5c9c4777a0531136c3213a75228cad0ab45bdc0783026afbf715894e5143",
+      "outputSize": [
+        54,
+        32
+      ],
+      "outputPngSha256": "6530295ac893c0bf779730a1a934bdbcfc7538c0333c0524d780f3fd5ec5eeb7",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 402,
+        "opaque": 1326,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "hud-horse-icon",
+      "sourceRole": "hud-horse-icon",
+      "outputIndex": 69,
+      "sourceLibrary": "UI",
+      "sourceIndex": 180,
+      "sourceSize": [
+        31,
+        24
+      ],
+      "sourcePngSha256": "b1cff4ae6f3f3e4e7c5d672b105ca84b72090dc24b710202794f36515ec620e5",
+      "outputSize": [
+        31,
+        24
+      ],
+      "outputPngSha256": "57ca598e06c20f44a0a477900703683c810fee996ff01d70b21da65a59948e33",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 4,
+        "opaque": 740,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "hud-horse-icon-hover",
+      "sourceRole": "hud-horse-icon",
+      "outputIndex": 70,
+      "sourceLibrary": "UI",
+      "sourceIndex": 180,
+      "sourceSize": [
+        31,
+        24
+      ],
+      "sourcePngSha256": "b1cff4ae6f3f3e4e7c5d672b105ca84b72090dc24b710202794f36515ec620e5",
+      "outputSize": [
+        31,
+        24
+      ],
+      "outputPngSha256": "85f80792ffbf54e1b3a852892843f76b6dc94e559d392f6d96d19e53137e24a8",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 4,
+        "opaque": 740,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "hud-horse-icon-pressed",
+      "sourceRole": "hud-horse-icon",
+      "outputIndex": 71,
+      "sourceLibrary": "UI",
+      "sourceIndex": 180,
+      "sourceSize": [
+        31,
+        24
+      ],
+      "sourcePngSha256": "b1cff4ae6f3f3e4e7c5d672b105ca84b72090dc24b710202794f36515ec620e5",
+      "outputSize": [
+        31,
+        24
+      ],
+      "outputPngSha256": "2fc34a02880a166d6d7c3088e0a6532cea033a236f9efe259155a8bff7098aa3",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 4,
+        "opaque": 740,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "hud-horse-icon-disabled",
+      "sourceRole": "hud-horse-icon",
+      "outputIndex": 72,
+      "sourceLibrary": "UI",
+      "sourceIndex": 180,
+      "sourceSize": [
+        31,
+        24
+      ],
+      "sourcePngSha256": "b1cff4ae6f3f3e4e7c5d672b105ca84b72090dc24b710202794f36515ec620e5",
+      "outputSize": [
+        31,
+        24
+      ],
+      "outputPngSha256": "aeeaf4cd42d4c97f80bd85ddc9619bbb2605c821ce67bc814bc97f899e286118",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 4,
+        "opaque": 740,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "hud-handshake-icon",
+      "sourceRole": "hud-handshake-icon",
+      "outputIndex": 73,
+      "sourceLibrary": "UI",
+      "sourceIndex": 190,
+      "sourceSize": [
+        31,
+        24
+      ],
+      "sourcePngSha256": "90c3e882470ad58e0862db1b39568fadbe623ccb7671bea533db8c7b5267b456",
+      "outputSize": [
+        31,
+        24
+      ],
+      "outputPngSha256": "dd7ef57fa1197892b0662b1d23342fc0da90e5922214a7d795d69ab6b94940c1",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 4,
+        "opaque": 740,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "hud-handshake-icon-hover",
+      "sourceRole": "hud-handshake-icon",
+      "outputIndex": 74,
+      "sourceLibrary": "UI",
+      "sourceIndex": 190,
+      "sourceSize": [
+        31,
+        24
+      ],
+      "sourcePngSha256": "90c3e882470ad58e0862db1b39568fadbe623ccb7671bea533db8c7b5267b456",
+      "outputSize": [
+        31,
+        24
+      ],
+      "outputPngSha256": "7ece58102967875edae7b6e7837f826c0f4268612cf22c06fae1bd46ce569fd9",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 4,
+        "opaque": 740,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "hud-handshake-icon-pressed",
+      "sourceRole": "hud-handshake-icon",
+      "outputIndex": 75,
+      "sourceLibrary": "UI",
+      "sourceIndex": 190,
+      "sourceSize": [
+        31,
+        24
+      ],
+      "sourcePngSha256": "90c3e882470ad58e0862db1b39568fadbe623ccb7671bea533db8c7b5267b456",
+      "outputSize": [
+        31,
+        24
+      ],
+      "outputPngSha256": "09c56e5dfaee128732fcc36f8934f8d2a1fd04124f86ee3d4b42388218cba295",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 4,
+        "opaque": 740,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "hud-handshake-icon-disabled",
+      "sourceRole": "hud-handshake-icon",
+      "outputIndex": 76,
+      "sourceLibrary": "UI",
+      "sourceIndex": 190,
+      "sourceSize": [
+        31,
+        24
+      ],
+      "sourcePngSha256": "90c3e882470ad58e0862db1b39568fadbe623ccb7671bea533db8c7b5267b456",
+      "outputSize": [
+        31,
+        24
+      ],
+      "outputPngSha256": "856134eb48e402870c63c05dc8e7cba2f0553a9a58fbd5643bef01af756fdac5",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 4,
+        "opaque": 740,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "hud-exit-icon",
+      "sourceRole": "hud-exit-icon",
+      "outputIndex": 77,
+      "sourceLibrary": "UI",
+      "sourceIndex": 160,
+      "sourceSize": [
+        22,
+        18
+      ],
+      "sourcePngSha256": "690427c7d319b9bd31bbf7218af885523dedb9d333b765a21af50d2bf8dfeff6",
+      "outputSize": [
+        22,
+        18
+      ],
+      "outputPngSha256": "690427c7d319b9bd31bbf7218af885523dedb9d333b765a21af50d2bf8dfeff6",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 0,
+        "opaque": 396,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "hud-exit-icon-hover",
+      "sourceRole": "hud-exit-icon",
+      "outputIndex": 78,
+      "sourceLibrary": "UI",
+      "sourceIndex": 160,
+      "sourceSize": [
+        22,
+        18
+      ],
+      "sourcePngSha256": "690427c7d319b9bd31bbf7218af885523dedb9d333b765a21af50d2bf8dfeff6",
+      "outputSize": [
+        22,
+        18
+      ],
+      "outputPngSha256": "f1205e17982a14cb12ecd7d5e7424189ce9b346eb99c8c676296d057215e9021",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 0,
+        "opaque": 396,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "hud-exit-icon-pressed",
+      "sourceRole": "hud-exit-icon",
+      "outputIndex": 79,
+      "sourceLibrary": "UI",
+      "sourceIndex": 160,
+      "sourceSize": [
+        22,
+        18
+      ],
+      "sourcePngSha256": "690427c7d319b9bd31bbf7218af885523dedb9d333b765a21af50d2bf8dfeff6",
+      "outputSize": [
+        22,
+        18
+      ],
+      "outputPngSha256": "77d4e75d4413831cc81d35c249029e808aa5a812cd669b69651e4330c90b8e61",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 0,
+        "opaque": 396,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "hud-exit-icon-disabled",
+      "sourceRole": "hud-exit-icon",
+      "outputIndex": 80,
+      "sourceLibrary": "UI",
+      "sourceIndex": 160,
+      "sourceSize": [
+        22,
+        18
+      ],
+      "sourcePngSha256": "690427c7d319b9bd31bbf7218af885523dedb9d333b765a21af50d2bf8dfeff6",
+      "outputSize": [
+        22,
+        18
+      ],
+      "outputPngSha256": "f71c51568a606af9b15fcd1ff34a097e27c6ac671b9f38684c1aac5961580ef1",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 0,
+        "opaque": 396,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "bottom-segmented-frame",
+      "sourceRole": "bottom-segmented-frame",
+      "outputIndex": 81,
+      "sourceLibrary": "UI",
+      "sourceIndex": 422,
+      "sourceSize": [
+        611,
+        10
+      ],
+      "sourcePngSha256": "c3620274c9b6fd141ddc310b67877b0930b44d3cb6b6eb02c0b56b637bfb1470",
+      "outputSize": [
+        611,
+        10
+      ],
+      "outputPngSha256": "c3620274c9b6fd141ddc310b67877b0930b44d3cb6b6eb02c0b56b637bfb1470",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 0,
+        "opaque": 6110,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "hud-hp-fill",
+      "sourceRole": "hud-hp-fill",
+      "outputIndex": 82,
+      "sourceLibrary": "UI",
+      "sourceIndex": 142,
+      "sourceSize": [
+        53,
+        101
+      ],
+      "sourcePngSha256": "7f7450264ed93b428641cddfac7d9cdaecf299b7935f5b086f5b07636343de60",
+      "outputSize": [
+        53,
+        101
+      ],
+      "outputPngSha256": "6b71ebe1881fdca211616fd9697d838fb285bdbbe0f7f6fb08e433a381d7ab87",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 888,
+        "opaque": 4465,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "hud-mp-fill",
+      "sourceRole": "hud-mp-fill",
+      "outputIndex": 83,
+      "sourceLibrary": "UI",
+      "sourceIndex": 143,
+      "sourceSize": [
+        48,
+        101
+      ],
+      "sourcePngSha256": "89e3d84dbbd1dc19d5c0333780f73610d79cbeb6edfc307fd3ae6618ccb13a54",
+      "outputSize": [
+        48,
+        101
+      ],
+      "outputPngSha256": "e9359db502a8c5a36553e219aee977a388218a2755f33e75bb005bb429dd0a1a",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 925,
+        "opaque": 3923,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "bottom-segmented-fill",
+      "sourceRole": "bottom-segmented-fill",
+      "outputIndex": 84,
+      "sourceLibrary": "UI",
+      "sourceIndex": 423,
+      "sourceSize": [
+        611,
+        10
+      ],
+      "sourcePngSha256": "cf2cad90505f7ff53e76f49a7d844a3d9d9d4c27c8418e673640a8c1e8583be9",
+      "outputSize": [
+        611,
+        10
+      ],
+      "outputPngSha256": "fc64e392bf21e1f6ae764c4baf2f2af2f1eef95c1f13d6b2deb5d0d39be23e54",
+      "screenshotEvidence": "paired source art adaptation, not runtime identification",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 2630,
+        "opaque": 3480,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "character-main-background",
+      "sourceRole": "character",
+      "outputIndex": 85,
+      "sourceLibrary": "UI",
+      "sourceIndex": 2765,
+      "sourceSize": [
+        412,
+        562
+      ],
+      "sourcePngSha256": "98efced4a423a11ebef3b97d1f851bc9570053b8dbc48c046a136e4d98c5ccc3",
+      "outputSize": [
+        412,
+        498
+      ],
+      "outputPngSha256": "68dc19806111eaf932ffe56a277c2251837fff0639a08533347b2013c4524260",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 2,
+        "opaque": 205174,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "hud-command-frame",
+      "sourceRole": "hud-command-shell",
+      "outputIndex": 86,
+      "sourceLibrary": "UI",
+      "sourceIndex": 140,
+      "sourceSize": [
+        225,
+        175
+      ],
+      "sourcePngSha256": "a22ce21539d63f2b050fe7c026abc0f2789376efa0fd56d2dfafb3e7fc9fbfd0",
+      "outputSize": [
+        225,
+        202
+      ],
+      "outputPngSha256": "736014bfa7084bce47fe08b7f5474fe5a0075072c536ea1315bd26257dba819a",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 11439,
+        "opaque": 34011,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "chat-history-frame",
+      "sourceRole": "bottom-segmented-frame",
+      "outputIndex": 87,
+      "sourceLibrary": "UI",
+      "sourceIndex": 422,
+      "sourceSize": [
+        611,
+        10
+      ],
+      "sourcePngSha256": "c3620274c9b6fd141ddc310b67877b0930b44d3cb6b6eb02c0b56b637bfb1470",
+      "outputSize": [
+        574,
+        106
+      ],
+      "outputPngSha256": "93acd55c74de189fe6e9f6d61123dc0d40f7cbfeb4d44ca0a64e6632471128a0",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 59488,
+        "opaque": 1356,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "chat-input-frame",
+      "sourceRole": "bottom-segmented-frame",
+      "outputIndex": 88,
+      "sourceLibrary": "UI",
+      "sourceIndex": 422,
+      "sourceSize": [
+        611,
+        10
+      ],
+      "sourcePngSha256": "c3620274c9b6fd141ddc310b67877b0930b44d3cb6b6eb02c0b56b637bfb1470",
+      "outputSize": [
+        574,
+        22
+      ],
+      "outputPngSha256": "60f8004d6459e653b2dc24318b85a36a5938d00de8557a6e1b9c77a7a1f73965",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 11440,
+        "opaque": 1188,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "equipment-cell-frame",
+      "sourceRole": "inventory",
+      "outputIndex": 89,
+      "sourceLibrary": "UI",
+      "sourceIndex": 120,
+      "sourceSize": [
+        276,
+        494
+      ],
+      "sourcePngSha256": "80c4f90370c17c01879a86a61b4f8114684a3e29cf87810f44ff11ba1ee8f53a",
+      "outputSize": [
+        36,
+        36
+      ],
+      "outputPngSha256": "a5f2303dd387e62dc8c0ca4f5e8a58cf33cd5680c0f443ee8946aa894ed27ff9",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 0,
+        "opaque": 1296,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "hud-experience-track",
+      "sourceRole": "bottom-segmented-frame",
+      "outputIndex": 90,
+      "sourceLibrary": "UI",
+      "sourceIndex": 422,
+      "sourceSize": [
+        611,
+        10
+      ],
+      "sourcePngSha256": "c3620274c9b6fd141ddc310b67877b0930b44d3cb6b6eb02c0b56b637bfb1470",
+      "outputSize": [
+        574,
+        8
+      ],
+      "outputPngSha256": "df1defadb535e77643a49f1a16d24b511a04ab1c22742a824ff85827661eecf5",
+      "screenshotEvidence": "active runtime source correspondence",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 0,
+        "opaque": 4592,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    },
+    {
+      "role": "hud-experience-fill",
+      "sourceRole": "bottom-segmented-fill",
+      "outputIndex": 91,
+      "sourceLibrary": "UI",
+      "sourceIndex": 423,
+      "sourceSize": [
+        611,
+        10
+      ],
+      "sourcePngSha256": "cf2cad90505f7ff53e76f49a7d844a3d9d9d4c27c8418e673640a8c1e8583be9",
+      "outputSize": [
+        574,
+        8
+      ],
+      "outputPngSha256": "1bf56253b1c246e323d6b24f0c9339c042fcb54822676732ba1c18cc15c66601",
+      "screenshotEvidence": "paired source art adaptation, not runtime identification",
+      "outputAlphaMode": "BinaryMask",
+      "outputBlendMode": "Normal",
+      "alphaPixels": {
+        "transparent": 2420,
+        "opaque": 2172,
+        "intermediate": 0
+      },
+      "opacityBoundary": "candidate output mask; does not prove official runtime alpha semantics"
+    }
+  ],
+  "alphaPreview": {
+    "path": "candidate-alpha-preview.png",
+    "sha256": "13ac8c1fe363a70dc4f04e83e911e3775c1b78ad9a03bd049dd422daeeb302c9"
+  },
+  "layers": [
+    {
+      "id": "hud-orb",
+      "order": [
+        "world",
+        "orb-shell",
+        "HP bottom crop",
+        "MP bottom crop",
+        "dynamic labels"
+      ],
+      "sourceOffsetRule": "fill source offset minus shell offset, baked exactly once; not fitted from JPEG"
+    },
+    {
+      "id": "chat",
+      "order": [
+        "container frame",
+        "existing project history/tab/filter controls",
+        "existing input HWND"
+      ],
+      "scope": "reposition and frame only; keep content, selection, floating and IME"
+    },
+    {
+      "id": "minimap",
+      "order": [
+        "map Panel/Image and markers",
+        "frame with explicit viewport hole",
+        "title/coordinate/button controls"
+      ]
+    },
+    {
+      "id": "character",
+      "order": [
+        "adapted frame",
+        "existing preview/equipment/attributes",
+        "tooltip overlay"
+      ]
+    },
+    {
+      "id": "inventory",
+      "order": [
+        "adapted frame",
+        "49 existing item cells",
+        "tooltip overlay"
+      ]
+    },
+    {
+      "id": "npc",
+      "order": [
+        "original interaction card unchanged",
+        "independent service + inventory"
+      ],
+      "scope": "interaction card and secondary confirmation/quantity popups excluded"
+    }
+  ],
+  "adaptations": [
+    {
+      "id": "inventory",
+      "reference": "UI[120], 276x494, 6x8 cells",
+      "project": "276x412, 7x7, 49 cells; 36x36 globally"
+    },
+    {
+      "id": "character",
+      "reference": "UI[2765], 412x562, official labels/slots",
+      "project": "4 existing project tabs, all 16 equipment IDs and project attributes; no official slot numbering"
+    },
+    {
+      "id": "quickbar",
+      "reference": "UI[430], 518x44",
+      "project": "459x44, 10 existing links"
+    },
+    {
+      "id": "command-shell",
+      "reference": "UI[140] and UI[1270] remain visually ambiguous",
+      "project": "UI[140] deliberately selected; 225x175 pasted at (0,27) into 225x202 canvas"
+    },
+    {
+      "id": "experience",
+      "reference": "UI[422] border is visible; UI[423] is paired source art",
+      "project": "574x8 segmented track/fill bound to existing project experience"
+    },
+    {
+      "id": "button-states",
+      "reference": "normal appearance only; no live hover/pressed/disabled transitions captured",
+      "project": "explicit deterministic tint states; preserved existing handlers"
+    },
+    {
+      "id": "tooltip",
+      "reference": "runtime text overlay in capture04, variable content",
+      "project": "procedural project frame/layout retaining all original item text"
+    }
+  ],
+  "evidenceBoundary": "Reference availability, shape, layering and mask traceability only. G0-2/3/4/5 and real server/IME/release acceptance remain separate.",
+  "inputs": [
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/reference-finalization/effective-matching-spec.json",
+      "sha256": "7432c6b1b2e9a7978ee2b24175c0003e0f3d9cae510b6f1ffa07182ed0e6854c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/reference-finalization/panel-matching.json",
+      "sha256": "beda412d7451d2c4e1183fcb8c0fa4345daf607052e6d12047d07826a4cd67e3"
+    },
+    {
+      "path": "build/game-ui/asset-manifest.json",
+      "sha256": "77946f30a67f8d433d0a0a8c1e2660faf2464239045995075808d57a5b9a7f58"
+    },
+    {
+      "path": "build/game-ui/composition-recipe.json",
+      "sha256": "35e3f1b7e3495a6222c53d5150471fe50eed8db83f29949d86da9d832b2e7ca9"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/reference/resolution-confirmation.json",
+      "sha256": "c10e6788120aebc91b0ab2d0800315e5f49aad229f64763a3270b0873703668a"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/reference/availability.json",
+      "sha256": "c7e09eddd35237f0c7ddeeca14b7312b40c8bf4747b1e7adc450d282cd00263c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/reference/runtime-source-libraries.json",
+      "sha256": "1ab7914a73b4266ebe2ab402e714d027743ffc9589889b0612d56ece14dc5570"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/reference/source-comparison.json",
+      "sha256": "ec3eb7d57cd8d3f4d11da3d0e510c798bcaa30ffc9f9e9dca73bc1a41f56ea25"
+    }
+  ],
+  "generatorSha256": "ff661777cf6710746536d50225b75f69a02a30624ad7977a66a36b0a644376bd",
+  "releaseAccepted": false,
+  "runtimeReady": false
+}

@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-07T12:19:45.1363913+00:00",
+  "command": "Get-CimInstance Win32_Process -Filter \"Name='Mir3.dat' OR Name='Mir3.exe'\"",
+  "processes": [
+    {
+      "Name": "Mir3.exe",
+      "ProcessId": 21856,
+      "ExecutablePath": null,
+      "CreationDate": "2026-11-07T20:14:45.608868+08:00"
+    },
+    {
+      "Name": "Mir3.dat",
+      "ProcessId": 18000,
+      "ExecutablePath": null,
+      "CreationDate": "2026-11-07T20:14:50.954308+08:00"
+    }
+  ],
+  "limitation": "ExecutablePath is unavailable from this process metadata query; application path and window identity are independently returned by sky."
+}

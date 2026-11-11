@@ -1,0 +1,4 @@
+System.Exception: Primary chat docking differs
+   在 OfficialUiWindowSetTests.Check(Boolean value, String detail)
+   在 OfficialUiWindowSetTests.ExerciseChat(TestScene root, GameUiVerifiedPackage package)
+   在 OfficialUiWindowSetTests.Main(String[] args)

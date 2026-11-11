@@ -1,0 +1,10 @@
+test_cannot_replace_input (test_character_binding_contract.CharacterContractTests.test_cannot_replace_input) ... ok
+test_deterministic_publication_and_stale_refusal (test_character_binding_contract.CharacterContractTests.test_deterministic_publication_and_stale_refusal) ... ok
+test_reject_independent_routing_or_geometry_drift (test_character_binding_contract.CharacterContractTests.test_reject_independent_routing_or_geometry_drift) ... ok
+test_sources_and_complete_join (test_character_binding_contract.CharacterContractTests.test_sources_and_complete_join) ... ok
+test_stable_packet_and_equipment_identities (test_character_binding_contract.CharacterContractTests.test_stable_packet_and_equipment_identities) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 1.091s
+
+OK

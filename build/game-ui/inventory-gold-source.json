@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "sourceLibrary": "UI",
+  "sourceFileVersion": "1.15.0.7269",
+  "capturedAt": "2026-11-10",
+  "mixSha256": "f35e10788b025359ecb35291d17608cd16d2f86414368569481239896261d819",
+  "mizSha256": "9142a25182b48469faa5120a94db73f02b2a17e4161ebf8c3e12804d4ca7af5c",
+  "sourceSize": [
+    80,
+    20
+  ],
+  "targetSize": [
+    209,
+    20
+  ],
+  "slicePadding": 2,
+  "frames": [
+    {
+      "state": "normal",
+      "sourceIndex": 124,
+      "pngSha256": "a4e24fe6b35f1c9ba15c0aa7b4e31126a298417594fca66fd6e9ec5e5c94d871"
+    }
+  ],
+  "reference": "Official UI[124], inventory gold field",
+  "output": "Client/Resources/GameUi/inventory-gold.png"
+}

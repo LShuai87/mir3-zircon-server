@@ -1382,7 +1382,7 @@ namespace Client.Controls
                     GameScene.Game.CharacterBox.Grid[(int)EquipmentSlot.Armour].ToEquipment(this);
                     break;
                 case ItemType.Torch:
-                    GameScene.Game.CharacterBox.Grid[(int)EquipmentSlot.Torch].ToEquipment(this);
+                    GameScene.Game.CharacterBox.Grid[(int)EquipmentSlot.Emblem].ToEquipment(this);
                     break;
                 case ItemType.Helmet:
                     GameScene.Game.CharacterBox.Grid[(int)EquipmentSlot.Helmet].ToEquipment(this);

@@ -1,0 +1,6 @@
+CPU button masks: 17256 checks; 0 source PNG alpha comparisons; no GPU uploads.
+Button mask checks including real controls: 111539; hover, pressed, disabled, hide/restore, PassThrough, invalid rebind and Legacy reset.
+System.Exception: Command hit changed at {X=198,Y=174}; expected original visible control=False
+   在 OfficialUiWindowSetTests.CommandDecorationHits(MainPanel hud)
+   在 OfficialUiWindowSetTests.Exercise(TestScene root, GameScene game, GameUiVerifiedPackage package, String directory)
+   在 OfficialUiWindowSetTests.Main(String[] args)

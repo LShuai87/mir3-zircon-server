@@ -34,6 +34,43 @@ namespace Client.Scenes.Views
             Size = new Size(30, 30);
         }
 
+        // Buff icons grow to the right in the native layout. Preserve their right edge
+        // when the grid grows, then resolve saved positions against the actual minimap.
+        public override void OnSizeChanged(Size oValue, Size nValue)
+        {
+            base.OnSizeChanged(oValue, nValue);
+            var scene = Parent as GameScene;
+            if (scene?.MiniMapBox?.GameUiMiniMapLayout == null) return;
+            Location = new Point(Math.Max(0, Location.X + oValue.Width - nValue.Width), Location.Y);
+            ArrangeAroundMiniMap();
+        }
+
+        public void ArrangeAroundMiniMap()
+        {
+            if (IsDisposed) return;
+            var scene = Parent as GameScene;
+            var map = scene?.MiniMapBox;
+            if (map?.GameUiMiniMapLayout == null) return;
+            Location = new Point(Math.Max(0, Math.Min(Location.X, scene.Size.Width - Size.Width)),
+                Math.Max(0, Math.Min(Location.Y, scene.Size.Height - Size.Height)));
+            if (!map.IsVisible) return;
+            var bounds = new Rectangle(Location, Size);
+            var exclusion = new Rectangle(map.Location, map.Size);
+            exclusion.Inflate(5, 5);
+            if (!bounds.IntersectsWith(exclusion)) return;
+
+            Point position;
+            if (exclusion.Left >= Size.Width)
+                position = new Point(exclusion.Left - Size.Width, Location.Y);
+            else if (scene.Size.Width - exclusion.Right >= Size.Width)
+                position = new Point(exclusion.Right, Location.Y);
+            else if (scene.Size.Height - exclusion.Bottom >= Size.Height)
+                position = new Point(Location.X, exclusion.Bottom);
+            else
+                position = new Point(Location.X, Math.Max(0, exclusion.Top - Size.Height));
+            Location = position;
+        }
+
         #region Methods
         public void BuffsChanged()
         {
@@ -406,6 +443,7 @@ namespace Client.Scenes.Views
 
         public override void Process()
         {
+            ArrangeAroundMiniMap();
             base.Process();
 
             foreach (KeyValuePair<ClientBuffInfo, DXImageControl> pair in Icons)

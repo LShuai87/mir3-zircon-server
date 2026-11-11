@@ -1,0 +1,15 @@
+test_actual_writer_catalog_roundtrip (__main__.CatalogTests.test_actual_writer_catalog_roundtrip) ... ok
+test_binary_mask_and_repeated_state_are_explicit (__main__.CatalogTests.test_binary_mask_and_repeated_state_are_explicit) ... ok
+test_binary_structure_and_alpha (__main__.CatalogTests.test_binary_structure_and_alpha) ... ok
+test_cli_rejects_without_publication (__main__.CatalogTests.test_cli_rejects_without_publication) ... ok
+test_duplicate_and_nonfinite_json (__main__.CatalogTests.test_duplicate_and_nonfinite_json) ... ok
+test_manifest_negative_contracts (__main__.CatalogTests.test_manifest_negative_contracts) ... ok
+test_publication_rejects_and_rolls_back (__main__.CatalogTests.test_publication_rejects_and_rolls_back) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 1.218s
+
+OK
+Compiled catalog checks passed: 51
+Binary/alpha negative cases passed: 12
+Manifest negative cases passed: 34

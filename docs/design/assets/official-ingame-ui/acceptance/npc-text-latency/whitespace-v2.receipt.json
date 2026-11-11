@@ -1,0 +1,8 @@
+{
+  "command": [
+    "python",
+    "docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/check-whitespace.py"
+  ],
+  "exitCode": 0,
+  "log": "E:/workspace/mir3-zircon-server/docs/design/assets/official-ingame-ui/acceptance/npc-text-latency/whitespace-v2.log"
+}

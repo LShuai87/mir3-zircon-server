@@ -1,0 +1,10 @@
+[
+  {
+    "path": "tests/game-ui/OfficialUiSceneStartupTests.cs",
+    "sha256": "158261f5662e8e86dad944ed4a2d71a1570431171ce656622328ba1492c37e36"
+  },
+  {
+    "path": "tests/Run-GameUiWindowSetTests.ps1",
+    "sha256": "6171d5bdb5af8ccc842f333da6245e7e360f422fb5f80819e0e0befc9cbff341"
+  }
+]

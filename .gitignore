@@ -1,3 +1,12 @@
 # Byte-compiled / optimized / DLL files
 .vs
 obj
+# Python UI conversion tests
+build/game-ui/__pycache__/
+tests/game-ui/__pycache__/
+# Local game assets and runtime database
+/data/
+/System.db
+# Python bytecode caches
+__pycache__/
+*.py[cod]

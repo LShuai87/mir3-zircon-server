@@ -1,0 +1,1458 @@
+{
+  "schemaVersion": 1,
+  "kind": "official-ui-local-border-matching",
+  "coordinateSpace": "original screenshot pixels including title bar; ranges are half-open",
+  "metric": "mean absolute RGB channel error (0..255); no scaling or alpha fitting",
+  "method": "visually selected candidates and local placement search on sampled source borders or artwork",
+  "limitations": [
+    "Local search supports visual identification; it does not prove global uniqueness.",
+    "JPEG compression and live text/controls affect the error; no exact pixel identity claimed.",
+    "Artwork samples omit dark pixels and specified occlusions; this is not a transparency rule.",
+    "Source PNGs are opaque diagnostic renders; transparency and blend semantics remain unverified.",
+    "Placements locate source bitmaps; they are not client coordinates, final layouts or hitboxes.",
+    "Candidates have different dimensions/sample counts; errors are descriptive, not calibrated confidence.",
+    "Current snapshot is pinned; exact historical source hashes at each capture are not proven."
+  ],
+  "specSha256": "a6ef1c8411733fc8389bb0aa555a661f0fdc0e49cd490f0c97588c890aec3bd1",
+  "inventorySha256": "fb4c3c90a9e48d76451b45fee625a848588b1c0f52353e58ffdb16a4a1444f71",
+  "scriptSha256": "af38bb65497b4f9b66cbfc8546fc0c317f820448d57806675d5c1d912e3b6761",
+  "matches": [
+    {
+      "role": "character",
+      "captureId": "02-character",
+      "captureSha256": "571e96dbafabedb997d454e6ce7a3768e2ddd5f7dd3357d8c6f69537671c6274",
+      "candidates": [
+        {
+          "library": "UI",
+          "index": 2765,
+          "sourceOffset": 26058732,
+          "width": 412,
+          "height": 562,
+          "offsetX": 0,
+          "offsetY": 0,
+          "pngSha256": "98efced4a423a11ebef3b97d1f851bc9570053b8dbc48c046a136e4d98c5ccc3",
+          "samples": 1674,
+          "sampling": "border",
+          "bestPlacements": [
+            {
+              "meanAbsoluteChannelError": 7.416368,
+              "x": 11,
+              "y": 76
+            },
+            {
+              "meanAbsoluteChannelError": 9.844683,
+              "x": 12,
+              "y": 76
+            },
+            {
+              "meanAbsoluteChannelError": 12.444444,
+              "x": 10,
+              "y": 76
+            }
+          ]
+        },
+        {
+          "library": "UI",
+          "index": 1830,
+          "sourceOffset": 18292301,
+          "width": 412,
+          "height": 503,
+          "offsetX": 0,
+          "offsetY": 0,
+          "pngSha256": "c95bbadee804a7210501a625e3ef0bb2f4846874f4f3c3efde502396c501af31",
+          "samples": 1480,
+          "sampling": "border",
+          "bestPlacements": [
+            {
+              "meanAbsoluteChannelError": 10.716216,
+              "x": 11,
+              "y": 76
+            },
+            {
+              "meanAbsoluteChannelError": 12.585135,
+              "x": 12,
+              "y": 76
+            },
+            {
+              "meanAbsoluteChannelError": 15.015315,
+              "x": 10,
+              "y": 76
+            }
+          ]
+        },
+        {
+          "library": "UI",
+          "index": 1530,
+          "sourceOffset": 12368647,
+          "width": 412,
+          "height": 503,
+          "offsetX": 32,
+          "offsetY": 107,
+          "pngSha256": "4b2b83856de1d6f1cdf94540a06547602abd356677a7a9a9eb62a4a3cb108a86",
+          "samples": 1480,
+          "sampling": "border",
+          "bestPlacements": [
+            {
+              "meanAbsoluteChannelError": 10.717568,
+              "x": 11,
+              "y": 76
+            },
+            {
+              "meanAbsoluteChannelError": 12.574775,
+              "x": 12,
+              "y": 76
+            },
+            {
+              "meanAbsoluteChannelError": 15.001802,
+              "x": 10,
+              "y": 76
+            }
+          ]
+        },
+        {
+          "library": "UI",
+          "index": 1720,
+          "sourceOffset": 16285218,
+          "width": 412,
+          "height": 503,
+          "offsetX": 0,
+          "offsetY": 0,
+          "pngSha256": "377beed10e925cd0b99b5b1f13d49228e2f595aff2ff2c956de882d4f8017837",
+          "samples": 1480,
+          "sampling": "border",
+          "bestPlacements": [
+            {
+              "meanAbsoluteChannelError": 10.717568,
+              "x": 11,
+              "y": 76
+            },
+            {
+              "meanAbsoluteChannelError": 12.574775,
+              "x": 12,
+              "y": 76
+            },
+            {
+              "meanAbsoluteChannelError": 15.001802,
+              "x": 10,
+              "y": 76
+            }
+          ]
+        },
+        {
+          "library": "UI",
+          "index": 100,
+          "sourceOffset": 165579,
+          "width": 366,
+          "height": 484,
+          "offsetX": 0,
+          "offsetY": 0,
+          "pngSha256": "1a9f3c4f47a560e6463b082c7496fdc7597b9215573fb923a77527c134892828",
+          "samples": 1279,
+          "sampling": "border",
+          "bestPlacements": [
+            {
+              "meanAbsoluteChannelError": 23.381027,
+              "x": 9,
+              "y": 75
+            },
+            {
+              "meanAbsoluteChannelError": 24.23117,
+              "x": 8,
+              "y": 75
+            },
+            {
+              "meanAbsoluteChannelError": 25.099557,
+              "x": 7,
+              "y": 75
+            }
+          ]
+        }
+      ],
+      "bestCandidateIndex": 2765
+    },
+    {
+      "role": "character",
+      "captureId": "03-character-inventory",
+      "captureSha256": "11ac2f41784e123da471b799fd0d6aab7cf44deec36186248e14f3f696a09436",
+      "candidates": [
+        {
+          "library": "UI",
+          "index": 2765,
+          "sourceOffset": 26058732,
+          "width": 412,
+          "height": 562,
+          "offsetX": 0,
+          "offsetY": 0,
+          "pngSha256": "98efced4a423a11ebef3b97d1f851bc9570053b8dbc48c046a136e4d98c5ccc3",
+          "samples": 1674,
+          "sampling": "border",
+          "bestPlacements": [
+            {
+              "meanAbsoluteChannelError": 7.4092,
+              "x": 11,
+              "y": 76
+            },
+            {
+              "meanAbsoluteChannelError": 9.845082,
+              "x": 12,
+              "y": 76
+            },
+            {
+              "meanAbsoluteChannelError": 12.440661,
+              "x": 10,
+              "y": 76
+            }
+          ]
+        }
+      ],
+      "bestCandidateIndex": 2765
+    },
+    {
+      "role": "character",
+      "captureId": "04-equipment-tooltip",
+      "captureSha256": "939e94172ae916a04787c1086a6958e2b5e9ca43f8dbb33ddae4e3b628f17f3a",
+      "candidates": [
+        {
+          "library": "UI",
+          "index": 2765,
+          "sourceOffset": 26058732,
+          "width": 412,
+          "height": 562,
+          "offsetX": 0,
+          "offsetY": 0,
+          "pngSha256": "98efced4a423a11ebef3b97d1f851bc9570053b8dbc48c046a136e4d98c5ccc3",
+          "samples": 1674,
+          "sampling": "border",
+          "bestPlacements": [
+            {
+              "meanAbsoluteChannelError": 7.407607,
+              "x": 11,
+              "y": 76
+            },
+            {
+              "meanAbsoluteChannelError": 9.851454,
+              "x": 12,
+              "y": 76
+            },
+            {
+              "meanAbsoluteChannelError": 12.439466,
+              "x": 10,
+              "y": 76
+            }
+          ]
+        }
+      ],
+      "bestCandidateIndex": 2765
+    },
+    {
+      "role": "inventory",
+      "captureId": "03-character-inventory",
+      "captureSha256": "11ac2f41784e123da471b799fd0d6aab7cf44deec36186248e14f3f696a09436",
+      "candidates": [
+        {
+          "library": "UI",
+          "index": 120,
+          "sourceOffset": 293333,
+          "width": 276,
+          "height": 494,
+          "offsetX": 0,
+          "offsetY": 0,
+          "pngSha256": "80c4f90370c17c01879a86a61b4f8114684a3e29cf87810f44ff11ba1ee8f53a",
+          "samples": 978,
+          "sampling": "border",
+          "bestPlacements": [
+            {
+              "meanAbsoluteChannelError": 8.526244,
+              "x": 739,
+              "y": 106
+            },
+            {
+              "meanAbsoluteChannelError": 12.306748,
+              "x": 740,
+              "y": 106
+            },
+            {
+              "meanAbsoluteChannelError": 17.071234,
+              "x": 738,
+              "y": 106
+            }
+          ]
+        },
+        {
+          "library": "UI",
+          "index": 125,
+          "sourceOffset": 387290,
+          "width": 276,
+          "height": 446,
+          "offsetX": 0,
+          "offsetY": 0,
+          "pngSha256": "345474cde99cb27ad2829ac7e421389f428b929b3141ca33a1172353e2d8869b",
+          "samples": 859,
+          "sampling": "border",
+          "bestPlacements": [
+            {
+              "meanAbsoluteChannelError": 13.488941,
+              "x": 739,
+              "y": 106
+            },
+            {
+              "meanAbsoluteChannelError": 15.968956,
+              "x": 740,
+              "y": 106
+            },
+            {
+              "meanAbsoluteChannelError": 19.486224,
+              "x": 738,
+              "y": 106
+            }
+          ]
+        },
+        {
+          "library": "UI",
+          "index": 122,
+          "sourceOffset": 343187,
+          "width": 276,
+          "height": 424,
+          "offsetX": 0,
+          "offsetY": 0,
+          "pngSha256": "49cac9c9ef7a8189aaaf8cdd6a304efdf3b28b4410e81280d369d0eaf998b0b4",
+          "samples": 933,
+          "sampling": "border",
+          "bestPlacements": [
+            {
+              "meanAbsoluteChannelError": 19.830654,
+              "x": 739,
+              "y": 106
+            },
+            {
+              "meanAbsoluteChannelError": 22.516613,
+              "x": 740,
+              "y": 106
+            },
+            {
+              "meanAbsoluteChannelError": 25.624866,
+              "x": 738,
+              "y": 106
+            }
+          ]
+        }
+      ],
+      "bestCandidateIndex": 120
+    },
+    {
+      "role": "inventory",
+      "captureId": "04-equipment-tooltip",
+      "captureSha256": "939e94172ae916a04787c1086a6958e2b5e9ca43f8dbb33ddae4e3b628f17f3a",
+      "candidates": [
+        {
+          "library": "UI",
+          "index": 120,
+          "sourceOffset": 293333,
+          "width": 276,
+          "height": 494,
+          "offsetX": 0,
+          "offsetY": 0,
+          "pngSha256": "80c4f90370c17c01879a86a61b4f8114684a3e29cf87810f44ff11ba1ee8f53a",
+          "samples": 978,
+          "sampling": "border",
+          "bestPlacements": [
+            {
+              "meanAbsoluteChannelError": 8.697342,
+              "x": 739,
+              "y": 106
+            },
+            {
+              "meanAbsoluteChannelError": 12.352079,
+              "x": 740,
+              "y": 106
+            },
+            {
+              "meanAbsoluteChannelError": 16.982618,
+              "x": 738,
+              "y": 106
+            }
+          ]
+        }
+      ],
+      "bestCandidateIndex": 120
+    },
+    {
+      "role": "inventory",
+      "captureId": "05-npc-dialog-shop-inventory",
+      "captureSha256": "55aa95d6399d190ad832efcb81a4ef620d4a6ed1cb39e5252b6004cb030567bb",
+      "candidates": [
+        {
+          "library": "UI",
+          "index": 120,
+          "sourceOffset": 293333,
+          "width": 276,
+          "height": 494,
+          "offsetX": 0,
+          "offsetY": 0,
+          "pngSha256": "80c4f90370c17c01879a86a61b4f8114684a3e29cf87810f44ff11ba1ee8f53a",
+          "samples": 978,
+          "sampling": "border",
+          "bestPlacements": [
+            {
+              "meanAbsoluteChannelError": 8.036128,
+              "x": 426,
+              "y": 108
+            },
+            {
+              "meanAbsoluteChannelError": 11.974438,
+              "x": 427,
+              "y": 108
+            },
+            {
+              "meanAbsoluteChannelError": 16.90184,
+              "x": 425,
+              "y": 108
+            }
+          ]
+        },
+        {
+          "library": "UI",
+          "index": 125,
+          "sourceOffset": 387290,
+          "width": 276,
+          "height": 446,
+          "offsetX": 0,
+          "offsetY": 0,
+          "pngSha256": "345474cde99cb27ad2829ac7e421389f428b929b3141ca33a1172353e2d8869b",
+          "samples": 859,
+          "sampling": "border",
+          "bestPlacements": [
+            {
+              "meanAbsoluteChannelError": 13.573147,
+              "x": 426,
+              "y": 108
+            },
+            {
+              "meanAbsoluteChannelError": 16.164532,
+              "x": 427,
+              "y": 108
+            },
+            {
+              "meanAbsoluteChannelError": 19.682189,
+              "x": 425,
+              "y": 108
+            }
+          ]
+        },
+        {
+          "library": "UI",
+          "index": 122,
+          "sourceOffset": 343187,
+          "width": 276,
+          "height": 424,
+          "offsetX": 0,
+          "offsetY": 0,
+          "pngSha256": "49cac9c9ef7a8189aaaf8cdd6a304efdf3b28b4410e81280d369d0eaf998b0b4",
+          "samples": 933,
+          "sampling": "border",
+          "bestPlacements": [
+            {
+              "meanAbsoluteChannelError": 19.97642,
+              "x": 426,
+              "y": 108
+            },
+            {
+              "meanAbsoluteChannelError": 22.387281,
+              "x": 427,
+              "y": 108
+            },
+            {
+              "meanAbsoluteChannelError": 25.746695,
+              "x": 425,
+              "y": 108
+            }
+          ]
+        }
+      ],
+      "bestCandidateIndex": 120
+    },
+    {
+      "role": "npc-dialog",
+      "captureId": "05-npc-dialog-shop-inventory",
+      "captureSha256": "55aa95d6399d190ad832efcb81a4ef620d4a6ed1cb39e5252b6004cb030567bb",
+      "candidates": [
+        {
+          "library": "UI",
+          "index": 510,
+          "sourceOffset": 836533,
+          "width": 417,
+          "height": 197,
+          "offsetX": 0,
+          "offsetY": 0,
+          "pngSha256": "3a66889d847c6b445dd84e5a774863f7b42c84711a5f1620f2e1ea9d5109d702",
+          "samples": 1197,
+          "sampling": "border",
+          "bestPlacements": [
+            {
+              "meanAbsoluteChannelError": 4.180451,
+              "x": 1,
+              "y": 26
+            },
+            {
+              "meanAbsoluteChannelError": 6.839599,
+              "x": 2,
+              "y": 26
+            },
+            {
+              "meanAbsoluteChannelError": 8.732665,
+              "x": 0,
+              "y": 26
+            }
+          ]
+        },
+        {
+          "library": "UI",
+          "index": 518,
+          "sourceOffset": 999085,
+          "width": 417,
+          "height": 285,
+          "offsetX": 0,
+          "offsetY": 0,
+          "pngSha256": "d4782d5cd15f89bbb81c13fd555695dc7a15bf4e220d86a1e0eb73bc1148f86f",
+          "samples": 1391,
+          "sampling": "border",
+          "bestPlacements": [
+            {
+              "meanAbsoluteChannelError": 15.405464,
+              "x": 1,
+              "y": 27
+            },
+            {
+              "meanAbsoluteChannelError": 16.675294,
+              "x": 3,
+              "y": 26
+            },
+            {
+              "meanAbsoluteChannelError": 16.73041,
+              "x": 3,
+              "y": 27
+            }
+          ]
+        },
+        {
+          "library": "UI",
+          "index": 517,
+          "sourceOffset": 960398,
+          "width": 417,
+          "height": 327,
+          "offsetX": 0,
+          "offsetY": 0,
+          "pngSha256": "1c77b07ebfcfeb3e56bcd1791702b36a5ea75b156008074a8228b5c0151ee48d",
+          "samples": 1423,
+          "sampling": "border",
+          "bestPlacements": [
+            {
+              "meanAbsoluteChannelError": 16.685875,
+              "x": 2,
+              "y": 26
+            },
+            {
+              "meanAbsoluteChannelError": 16.727805,
+              "x": 1,
+              "y": 26
+            },
+            {
+              "meanAbsoluteChannelError": 18.108691,
+              "x": 3,
+              "y": 26
+            }
+          ]
+        }
+      ],
+      "bestCandidateIndex": 510
+    },
+    {
+      "role": "npc-shop",
+      "captureId": "05-npc-dialog-shop-inventory",
+      "captureSha256": "55aa95d6399d190ad832efcb81a4ef620d4a6ed1cb39e5252b6004cb030567bb",
+      "candidates": [
+        {
+          "library": "UI",
+          "index": 511,
+          "sourceOffset": 864296,
+          "width": 344,
+          "height": 438,
+          "offsetX": 0,
+          "offsetY": 0,
+          "pngSha256": "f574ddf094e5f1a0b4d78ccd31da1f9e9b3402ec6be8f9fb9b025358239c85d1",
+          "samples": 1123,
+          "sampling": "border",
+          "bestPlacements": [
+            {
+              "meanAbsoluteChannelError": 5.564856,
+              "x": 1,
+              "y": 215
+            },
+            {
+              "meanAbsoluteChannelError": 11.905907,
+              "x": 2,
+              "y": 215
+            },
+            {
+              "meanAbsoluteChannelError": 13.653903,
+              "x": 3,
+              "y": 215
+            }
+          ]
+        }
+      ],
+      "bestCandidateIndex": 511
+    },
+    {
+      "role": "hud-orb-shell",
+      "captureId": "06-chat-chinese-input",
+      "captureSha256": "69b96babce26f036862ce232a9d1e43a37002a9ded9eb71004829f7cc96c5ca4",
+      "candidates": [
+        {
+          "library": "UI",
+          "index": 141,
+          "sourceOffset": 503689,
+          "width": 225,
+          "height": 202,
+          "offsetX": -112,
+          "offsetY": -101,
+          "pngSha256": "0db64d4ba0cfa505e876ff3a4a55a29ea3577cb8793c2485f9fa9e092314581e",
+          "samples": 929,
+          "sampling": "artwork",
+          "bestPlacements": [
+            {
+              "meanAbsoluteChannelError": 8.904557,
+              "x": 1,
+              "y": 592
+            },
+            {
+              "meanAbsoluteChannelError": 27.344456,
+              "x": 2,
+              "y": 592
+            },
+            {
+              "meanAbsoluteChannelError": 30.861141,
+              "x": 0,
+              "y": 592
+            }
+          ]
+        }
+      ],
+      "bestCandidateIndex": 141
+    },
+    {
+      "role": "quickbar-base",
+      "captureId": "06-chat-chinese-input",
+      "captureSha256": "69b96babce26f036862ce232a9d1e43a37002a9ded9eb71004829f7cc96c5ca4",
+      "candidates": [
+        {
+          "library": "UI",
+          "index": 430,
+          "sourceOffset": 688567,
+          "width": 518,
+          "height": 44,
+          "offsetX": 0,
+          "offsetY": 0,
+          "pngSha256": "b5a5b7fd81a9e59092c3d205a3c020a8b184275d0d5dd9f9f274d2d1bfad579b",
+          "samples": 763,
+          "sampling": "artwork",
+          "bestPlacements": [
+            {
+              "meanAbsoluteChannelError": 6.841852,
+              "x": 254,
+              "y": 611
+            },
+            {
+              "meanAbsoluteChannelError": 19.685889,
+              "x": 253,
+              "y": 611
+            },
+            {
+              "meanAbsoluteChannelError": 19.845784,
+              "x": 255,
+              "y": 611
+            }
+          ]
+        }
+      ],
+      "bestCandidateIndex": 430
+    },
+    {
+      "role": "minimap-frame",
+      "captureId": "06-chat-chinese-input",
+      "captureSha256": "69b96babce26f036862ce232a9d1e43a37002a9ded9eb71004829f7cc96c5ca4",
+      "candidates": [
+        {
+          "library": "UI",
+          "index": 342,
+          "sourceOffset": 627829,
+          "width": 166,
+          "height": 198,
+          "offsetX": 0,
+          "offsetY": 0,
+          "pngSha256": "a29c643cb7148e085b4bc63246ae07132890356fd4e556f319e78160cc9d162b",
+          "samples": 336,
+          "sampling": "border",
+          "bestPlacements": [
+            {
+              "meanAbsoluteChannelError": 12.318452,
+              "x": 859,
+              "y": 26
+            },
+            {
+              "meanAbsoluteChannelError": 14.769841,
+              "x": 859,
+              "y": 27
+            },
+            {
+              "meanAbsoluteChannelError": 21.607143,
+              "x": 858,
+              "y": 26
+            }
+          ]
+        }
+      ],
+      "bestCandidateIndex": 342
+    },
+    {
+      "role": "chat-speaker-icon",
+      "captureId": "06-chat-chinese-input",
+      "captureSha256": "69b96babce26f036862ce232a9d1e43a37002a9ded9eb71004829f7cc96c5ca4",
+      "candidates": [
+        {
+          "library": "UI",
+          "index": 210,
+          "sourceOffset": 571201,
+          "width": 31,
+          "height": 24,
+          "offsetX": 0,
+          "offsetY": 0,
+          "pngSha256": "428d2a1584b74128bc298620bb4c997fea3a924b7a477dc5f00ece11a8e4fa2b",
+          "samples": 38,
+          "sampling": "artwork",
+          "bestPlacements": [
+            {
+              "meanAbsoluteChannelError": 17.570175,
+              "x": 190,
+              "y": 657
+            },
+            {
+              "meanAbsoluteChannelError": 23.473684,
+              "x": 189,
+              "y": 657
+            },
+            {
+              "meanAbsoluteChannelError": 24.482456,
+              "x": 191,
+              "y": 657
+            }
+          ]
+        }
+      ],
+      "bestCandidateIndex": 210
+    },
+    {
+      "role": "chat-two-person-icon",
+      "captureId": "06-chat-chinese-input",
+      "captureSha256": "69b96babce26f036862ce232a9d1e43a37002a9ded9eb71004829f7cc96c5ca4",
+      "candidates": [
+        {
+          "library": "UI",
+          "index": 220,
+          "sourceOffset": 574359,
+          "width": 31,
+          "height": 24,
+          "offsetX": 0,
+          "offsetY": 0,
+          "pngSha256": "378f901cf4ea81d5501b0fb597d7b9c772bd29b2950e666726c9f5bb372d89bb",
+          "samples": 39,
+          "sampling": "artwork",
+          "bestPlacements": [
+            {
+              "meanAbsoluteChannelError": 18.512821,
+              "x": 190,
+              "y": 681
+            },
+            {
+              "meanAbsoluteChannelError": 26.940171,
+              "x": 190,
+              "y": 680
+            },
+            {
+              "meanAbsoluteChannelError": 28.410256,
+              "x": 190,
+              "y": 729
+            }
+          ]
+        }
+      ],
+      "bestCandidateIndex": 220
+    },
+    {
+      "role": "chat-person-icon",
+      "captureId": "06-chat-chinese-input",
+      "captureSha256": "69b96babce26f036862ce232a9d1e43a37002a9ded9eb71004829f7cc96c5ca4",
+      "candidates": [
+        {
+          "library": "UI",
+          "index": 200,
+          "sourceOffset": 567926,
+          "width": 31,
+          "height": 24,
+          "offsetX": 0,
+          "offsetY": 0,
+          "pngSha256": "4335c3a1de2e9ca9f84832a210ddd785ec12487e53cc2054f3a3a911b1d3fb84",
+          "samples": 39,
+          "sampling": "artwork",
+          "bestPlacements": [
+            {
+              "meanAbsoluteChannelError": 21.623932,
+              "x": 190,
+              "y": 705
+            },
+            {
+              "meanAbsoluteChannelError": 23.871795,
+              "x": 190,
+              "y": 681
+            },
+            {
+              "meanAbsoluteChannelError": 29.25641,
+              "x": 190,
+              "y": 680
+            }
+          ]
+        }
+      ],
+      "bestCandidateIndex": 200
+    },
+    {
+      "role": "chat-group-icon",
+      "captureId": "06-chat-chinese-input",
+      "captureSha256": "69b96babce26f036862ce232a9d1e43a37002a9ded9eb71004829f7cc96c5ca4",
+      "candidates": [
+        {
+          "library": "UI",
+          "index": 240,
+          "sourceOffset": 581144,
+          "width": 31,
+          "height": 24,
+          "offsetX": 0,
+          "offsetY": 0,
+          "pngSha256": "eacee10ab1771bffc843d76cdc5143cd4b18c33615075a43b7a2ca249bc98f0a",
+          "samples": 37,
+          "sampling": "artwork",
+          "bestPlacements": [
+            {
+              "meanAbsoluteChannelError": 19.288288,
+              "x": 190,
+              "y": 729
+            },
+            {
+              "meanAbsoluteChannelError": 27.144144,
+              "x": 190,
+              "y": 681
+            },
+            {
+              "meanAbsoluteChannelError": 28.873874,
+              "x": 189,
+              "y": 729
+            }
+          ]
+        }
+      ],
+      "bestCandidateIndex": 240
+    },
+    {
+      "role": "chat-flag-icon",
+      "captureId": "06-chat-chinese-input",
+      "captureSha256": "69b96babce26f036862ce232a9d1e43a37002a9ded9eb71004829f7cc96c5ca4",
+      "candidates": [
+        {
+          "library": "UI",
+          "index": 230,
+          "sourceOffset": 577656,
+          "width": 31,
+          "height": 24,
+          "offsetX": 0,
+          "offsetY": 0,
+          "pngSha256": "02da1e28c5881907b87f23d290a9329b5dba0237f5444e71865a1657d28496ad",
+          "samples": 35,
+          "sampling": "artwork",
+          "bestPlacements": [
+            {
+              "meanAbsoluteChannelError": 17.466667,
+              "x": 190,
+              "y": 753
+            },
+            {
+              "meanAbsoluteChannelError": 24.257143,
+              "x": 189,
+              "y": 753
+            },
+            {
+              "meanAbsoluteChannelError": 24.761905,
+              "x": 191,
+              "y": 753
+            }
+          ]
+        }
+      ],
+      "bestCandidateIndex": 230
+    },
+    {
+      "role": "minimap-collapse-button",
+      "captureId": "06-chat-chinese-input",
+      "captureSha256": "69b96babce26f036862ce232a9d1e43a37002a9ded9eb71004829f7cc96c5ca4",
+      "candidates": [
+        {
+          "library": "UI",
+          "index": 290,
+          "sourceOffset": 617487,
+          "width": 20,
+          "height": 16,
+          "offsetX": 0,
+          "offsetY": 0,
+          "pngSha256": "3e6101cbdb894fe6837a30e486ebd02dac261c9fb4d31cb491e3235d80c28915",
+          "samples": 40,
+          "sampling": "artwork",
+          "bestPlacements": [
+            {
+              "meanAbsoluteChannelError": 4.441667,
+              "x": 1004,
+              "y": 28
+            },
+            {
+              "meanAbsoluteChannelError": 5.358333,
+              "x": 1001,
+              "y": 28
+            },
+            {
+              "meanAbsoluteChannelError": 7.425,
+              "x": 1003,
+              "y": 28
+            }
+          ]
+        }
+      ],
+      "bestCandidateIndex": 290
+    },
+    {
+      "role": "minimap-zoom-in-button",
+      "captureId": "06-chat-chinese-input",
+      "captureSha256": "69b96babce26f036862ce232a9d1e43a37002a9ded9eb71004829f7cc96c5ca4",
+      "candidates": [
+        {
+          "library": "UI",
+          "index": 320,
+          "sourceOffset": 620221,
+          "width": 20,
+          "height": 16,
+          "offsetX": 0,
+          "offsetY": 0,
+          "pngSha256": "b445e0e98f9af596ac667cdb418a69eb7b21a74e8516d8c2e27b3b50a898903c",
+          "samples": 40,
+          "sampling": "artwork",
+          "bestPlacements": [
+            {
+              "meanAbsoluteChannelError": 8.441667,
+              "x": 1004,
+              "y": 203
+            },
+            {
+              "meanAbsoluteChannelError": 12.775,
+              "x": 1004,
+              "y": 202
+            },
+            {
+              "meanAbsoluteChannelError": 19.575,
+              "x": 1003,
+              "y": 203
+            }
+          ]
+        }
+      ],
+      "bestCandidateIndex": 320
+    },
+    {
+      "role": "minimap-mountain-button",
+      "captureId": "06-chat-chinese-input",
+      "captureSha256": "69b96babce26f036862ce232a9d1e43a37002a9ded9eb71004829f7cc96c5ca4",
+      "candidates": [
+        {
+          "library": "UI",
+          "index": 330,
+          "sourceOffset": 621515,
+          "width": 20,
+          "height": 16,
+          "offsetX": 0,
+          "offsetY": 0,
+          "pngSha256": "b079683191095bcf57657d6aa0b22dde55a25662b4e2f2d03d22e7e2efc235bc",
+          "samples": 40,
+          "sampling": "artwork",
+          "bestPlacements": [
+            {
+              "meanAbsoluteChannelError": 6.858333,
+              "x": 864,
+              "y": 203
+            },
+            {
+              "meanAbsoluteChannelError": 13.691667,
+              "x": 865,
+              "y": 203
+            },
+            {
+              "meanAbsoluteChannelError": 15.75,
+              "x": 864,
+              "y": 202
+            }
+          ]
+        }
+      ],
+      "bestCandidateIndex": 330
+    },
+    {
+      "role": "hud-shop-icon",
+      "captureId": "06-chat-chinese-input",
+      "captureSha256": "69b96babce26f036862ce232a9d1e43a37002a9ded9eb71004829f7cc96c5ca4",
+      "candidates": [
+        {
+          "library": "UI",
+          "index": 280,
+          "sourceOffset": 609786,
+          "width": 40,
+          "height": 40,
+          "offsetX": 0,
+          "offsetY": 0,
+          "pngSha256": "087979259ce5299d75824c076f43a4dd3debe8ca0b939a0de4d8eb0e5ccb63a2",
+          "samples": 105,
+          "sampling": "artwork",
+          "bestPlacements": [
+            {
+              "meanAbsoluteChannelError": 12.831746,
+              "x": 980,
+              "y": 615
+            },
+            {
+              "meanAbsoluteChannelError": 25.031746,
+              "x": 981,
+              "y": 615
+            },
+            {
+              "meanAbsoluteChannelError": 28.946032,
+              "x": 980,
+              "y": 616
+            }
+          ]
+        }
+      ],
+      "bestCandidateIndex": 280
+    },
+    {
+      "role": "hud-command-center",
+      "captureId": "06-chat-chinese-input",
+      "captureSha256": "69b96babce26f036862ce232a9d1e43a37002a9ded9eb71004829f7cc96c5ca4",
+      "candidates": [
+        {
+          "library": "UI",
+          "index": 380,
+          "sourceOffset": 649918,
+          "width": 58,
+          "height": 58,
+          "offsetX": 0,
+          "offsetY": 0,
+          "pngSha256": "081003bba8f10baa5e8084c05ec586a2fbcc224c7f27c4e0619e515d4e4729b4",
+          "samples": 211,
+          "sampling": "artwork",
+          "bestPlacements": [
+            {
+              "meanAbsoluteChannelError": 10.139021,
+              "x": 885,
+              "y": 686
+            },
+            {
+              "meanAbsoluteChannelError": 25.338073,
+              "x": 886,
+              "y": 686
+            },
+            {
+              "meanAbsoluteChannelError": 25.516588,
+              "x": 885,
+              "y": 687
+            }
+          ]
+        }
+      ],
+      "bestCandidateIndex": 380
+    },
+    {
+      "role": "hud-command-top",
+      "captureId": "06-chat-chinese-input",
+      "captureSha256": "69b96babce26f036862ce232a9d1e43a37002a9ded9eb71004829f7cc96c5ca4",
+      "candidates": [
+        {
+          "library": "UI",
+          "index": 350,
+          "sourceOffset": 630327,
+          "width": 54,
+          "height": 32,
+          "offsetX": 0,
+          "offsetY": 0,
+          "pngSha256": "9d39186fb139255652fc576c144479fc8ce93626896e63a8f1c915b504786e2e",
+          "samples": 90,
+          "sampling": "artwork",
+          "bestPlacements": [
+            {
+              "meanAbsoluteChannelError": 10.366667,
+              "x": 888,
+              "y": 659
+            },
+            {
+              "meanAbsoluteChannelError": 26.4,
+              "x": 889,
+              "y": 659
+            },
+            {
+              "meanAbsoluteChannelError": 27.192593,
+              "x": 887,
+              "y": 659
+            }
+          ]
+        }
+      ],
+      "bestCandidateIndex": 350
+    },
+    {
+      "role": "hud-command-upper-left",
+      "captureId": "06-chat-chinese-input",
+      "captureSha256": "69b96babce26f036862ce232a9d1e43a37002a9ded9eb71004829f7cc96c5ca4",
+      "candidates": [
+        {
+          "library": "UI",
+          "index": 360,
+          "sourceOffset": 637211,
+          "width": 42,
+          "height": 50,
+          "offsetX": 0,
+          "offsetY": 0,
+          "pngSha256": "2228f572ddf6eefa1bdb4344b6bbe9f325f3b26ffa4efbccced28891e57e878d",
+          "samples": 90,
+          "sampling": "artwork",
+          "bestPlacements": [
+            {
+              "meanAbsoluteChannelError": 10.151852,
+              "x": 855,
+              "y": 668
+            },
+            {
+              "meanAbsoluteChannelError": 27.507407,
+              "x": 856,
+              "y": 668
+            },
+            {
+              "meanAbsoluteChannelError": 29.448148,
+              "x": 854,
+              "y": 668
+            }
+          ]
+        }
+      ],
+      "bestCandidateIndex": 360
+    },
+    {
+      "role": "hud-command-upper-right",
+      "captureId": "06-chat-chinese-input",
+      "captureSha256": "69b96babce26f036862ce232a9d1e43a37002a9ded9eb71004829f7cc96c5ca4",
+      "candidates": [
+        {
+          "library": "UI",
+          "index": 370,
+          "sourceOffset": 643448,
+          "width": 42,
+          "height": 50,
+          "offsetX": 0,
+          "offsetY": 0,
+          "pngSha256": "9409eaa3f6b5339a5ba0c107f459443e871f81c0781b6ba7c67770862eed90c7",
+          "samples": 97,
+          "sampling": "artwork",
+          "bestPlacements": [
+            {
+              "meanAbsoluteChannelError": 9.549828,
+              "x": 930,
+              "y": 666
+            },
+            {
+              "meanAbsoluteChannelError": 26.549828,
+              "x": 931,
+              "y": 667
+            },
+            {
+              "meanAbsoluteChannelError": 27.312715,
+              "x": 930,
+              "y": 667
+            }
+          ]
+        }
+      ],
+      "bestCandidateIndex": 370
+    },
+    {
+      "role": "hud-command-lower-left",
+      "captureId": "06-chat-chinese-input",
+      "captureSha256": "69b96babce26f036862ce232a9d1e43a37002a9ded9eb71004829f7cc96c5ca4",
+      "candidates": [
+        {
+          "library": "UI",
+          "index": 390,
+          "sourceOffset": 663364,
+          "width": 42,
+          "height": 50,
+          "offsetX": 0,
+          "offsetY": 0,
+          "pngSha256": "38672b7c06a8ceb579a355400c37378803d3d7ec177e22077492f875c881fbfa",
+          "samples": 85,
+          "sampling": "artwork",
+          "bestPlacements": [
+            {
+              "meanAbsoluteChannelError": 10.094118,
+              "x": 856,
+              "y": 718
+            },
+            {
+              "meanAbsoluteChannelError": 26.690196,
+              "x": 855,
+              "y": 718
+            },
+            {
+              "meanAbsoluteChannelError": 28.760784,
+              "x": 857,
+              "y": 718
+            }
+          ]
+        }
+      ],
+      "bestCandidateIndex": 390
+    },
+    {
+      "role": "hud-command-lower-right",
+      "captureId": "06-chat-chinese-input",
+      "captureSha256": "69b96babce26f036862ce232a9d1e43a37002a9ded9eb71004829f7cc96c5ca4",
+      "candidates": [
+        {
+          "library": "UI",
+          "index": 400,
+          "sourceOffset": 670038,
+          "width": 42,
+          "height": 50,
+          "offsetX": 0,
+          "offsetY": 0,
+          "pngSha256": "1284984c415429350daa2978125f4f8689e68410a54a6aee7b5be00f35630d03",
+          "samples": 94,
+          "sampling": "artwork",
+          "bestPlacements": [
+            {
+              "meanAbsoluteChannelError": 11.744681,
+              "x": 931,
+              "y": 717
+            },
+            {
+              "meanAbsoluteChannelError": 33.241135,
+              "x": 932,
+              "y": 717
+            },
+            {
+              "meanAbsoluteChannelError": 33.556738,
+              "x": 931,
+              "y": 718
+            }
+          ]
+        }
+      ],
+      "bestCandidateIndex": 400
+    },
+    {
+      "role": "hud-command-bottom",
+      "captureId": "06-chat-chinese-input",
+      "captureSha256": "69b96babce26f036862ce232a9d1e43a37002a9ded9eb71004829f7cc96c5ca4",
+      "candidates": [
+        {
+          "library": "UI",
+          "index": 410,
+          "sourceOffset": 676729,
+          "width": 54,
+          "height": 32,
+          "offsetX": 0,
+          "offsetY": 0,
+          "pngSha256": "c86a5c9c4777a0531136c3213a75228cad0ab45bdc0783026afbf715894e5143",
+          "samples": 83,
+          "sampling": "artwork",
+          "bestPlacements": [
+            {
+              "meanAbsoluteChannelError": 10.016064,
+              "x": 885,
+              "y": 744
+            },
+            {
+              "meanAbsoluteChannelError": 26.425703,
+              "x": 886,
+              "y": 744
+            },
+            {
+              "meanAbsoluteChannelError": 32.646586,
+              "x": 885,
+              "y": 745
+            }
+          ]
+        }
+      ],
+      "bestCandidateIndex": 410
+    },
+    {
+      "role": "hud-horse-icon",
+      "captureId": "06-chat-chinese-input",
+      "captureSha256": "69b96babce26f036862ce232a9d1e43a37002a9ded9eb71004829f7cc96c5ca4",
+      "candidates": [
+        {
+          "library": "UI",
+          "index": 180,
+          "sourceOffset": 560890,
+          "width": 31,
+          "height": 24,
+          "offsetX": 0,
+          "offsetY": 0,
+          "pngSha256": "b1cff4ae6f3f3e4e7c5d672b105ca84b72090dc24b710202794f36515ec620e5",
+          "samples": 42,
+          "sampling": "artwork",
+          "bestPlacements": [
+            {
+              "meanAbsoluteChannelError": 16.785714,
+              "x": 803,
+              "y": 681
+            },
+            {
+              "meanAbsoluteChannelError": 24.809524,
+              "x": 803,
+              "y": 680
+            },
+            {
+              "meanAbsoluteChannelError": 26.833333,
+              "x": 802,
+              "y": 681
+            }
+          ]
+        }
+      ],
+      "bestCandidateIndex": 180
+    },
+    {
+      "role": "hud-handshake-icon",
+      "captureId": "06-chat-chinese-input",
+      "captureSha256": "69b96babce26f036862ce232a9d1e43a37002a9ded9eb71004829f7cc96c5ca4",
+      "candidates": [
+        {
+          "library": "UI",
+          "index": 190,
+          "sourceOffset": 564418,
+          "width": 31,
+          "height": 24,
+          "offsetX": 0,
+          "offsetY": 0,
+          "pngSha256": "90c3e882470ad58e0862db1b39568fadbe623ccb7671bea533db8c7b5267b456",
+          "samples": 39,
+          "sampling": "artwork",
+          "bestPlacements": [
+            {
+              "meanAbsoluteChannelError": 20.461538,
+              "x": 803,
+              "y": 705
+            },
+            {
+              "meanAbsoluteChannelError": 28.273504,
+              "x": 804,
+              "y": 705
+            },
+            {
+              "meanAbsoluteChannelError": 29.794872,
+              "x": 802,
+              "y": 705
+            }
+          ]
+        }
+      ],
+      "bestCandidateIndex": 190
+    },
+    {
+      "role": "hud-exit-icon",
+      "captureId": "06-chat-chinese-input",
+      "captureSha256": "69b96babce26f036862ce232a9d1e43a37002a9ded9eb71004829f7cc96c5ca4",
+      "candidates": [
+        {
+          "library": "UI",
+          "index": 160,
+          "sourceOffset": 556005,
+          "width": 22,
+          "height": 18,
+          "offsetX": 0,
+          "offsetY": 0,
+          "pngSha256": "690427c7d319b9bd31bbf7218af885523dedb9d333b765a21af50d2bf8dfeff6",
+          "samples": 46,
+          "sampling": "artwork",
+          "bestPlacements": [
+            {
+              "meanAbsoluteChannelError": 8.869565,
+              "x": 990,
+              "y": 759
+            },
+            {
+              "meanAbsoluteChannelError": 19.782609,
+              "x": 989,
+              "y": 759
+            },
+            {
+              "meanAbsoluteChannelError": 24.478261,
+              "x": 992,
+              "y": 759
+            }
+          ]
+        }
+      ],
+      "bestCandidateIndex": 160
+    },
+    {
+      "role": "bottom-segmented-frame",
+      "captureId": "06-chat-chinese-input",
+      "captureSha256": "69b96babce26f036862ce232a9d1e43a37002a9ded9eb71004829f7cc96c5ca4",
+      "candidates": [
+        {
+          "library": "UI",
+          "index": 422,
+          "sourceOffset": 685364,
+          "width": 611,
+          "height": 10,
+          "offsetX": 0,
+          "offsetY": 0,
+          "pngSha256": "c3620274c9b6fd141ddc310b67877b0930b44d3cb6b6eb02c0b56b637bfb1470",
+          "samples": 417,
+          "sampling": "artwork",
+          "bestPlacements": [
+            {
+              "meanAbsoluteChannelError": 14.667466,
+              "x": 188,
+              "y": 781
+            },
+            {
+              "meanAbsoluteChannelError": 17.152678,
+              "x": 189,
+              "y": 781
+            },
+            {
+              "meanAbsoluteChannelError": 17.234213,
+              "x": 187,
+              "y": 781
+            }
+          ]
+        }
+      ],
+      "bestCandidateIndex": 422
+    }
+  ]
+}

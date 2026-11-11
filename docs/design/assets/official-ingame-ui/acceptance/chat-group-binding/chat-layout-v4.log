@@ -1,0 +1,6 @@
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 Client.Controls.DXControl.OnParentChanged(DXControl oValue, DXControl nValue)
+   在 Client.Controls.DXTab.OnParentChanged(DXControl oValue, DXControl nValue)
+   在 Client.Controls.DXControl.set_Parent(DXControl value)
+   在 OfficialUiChatLayoutTests.Groups()
+   在 OfficialUiChatLayoutTests.Main()

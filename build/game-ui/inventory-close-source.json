@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "sourceLibrary": "UI",
+  "sourceFileVersion": "1.15.0.7269",
+  "capturedAt": "2026-11-10",
+  "mixSha256": "f35e10788b025359ecb35291d17608cd16d2f86414368569481239896261d819",
+  "mizSha256": "9142a25182b48469faa5120a94db73f02b2a17e4161ebf8c3e12804d4ca7af5c",
+  "sourceSize": [
+    21,
+    22
+  ],
+  "targetSize": [
+    21,
+    22
+  ],
+  "slicePadding": 3,
+  "frames": [
+    {
+      "state": "normal",
+      "sourceIndex": 40,
+      "pngSha256": "4503fc683289f4e4ca9afc07178128e7532f130478970def4a7695ccc2f4599b"
+    },
+    {
+      "state": "hover",
+      "sourceIndex": 41,
+      "pngSha256": "976a5623ee42d603b778addf4eb8c45920d53cf5f80d885ca592d15f0ad14331"
+    },
+    {
+      "state": "pressed",
+      "sourceIndex": 42,
+      "pngSha256": "4b84c2f113e14676e2c86dbcac7d7afa6081e2636bf0d78be6900fd5360baf1e"
+    },
+    {
+      "state": "disabled",
+      "sourceIndex": 43,
+      "pngSha256": "2eb7558df370cb159b67610e4af3a3d6f70c81a9116519da6922e5cdc38181b4"
+    }
+  ],
+  "reference": "Official UI[40..43], square red close button",
+  "output": "Client/Resources/GameUi/inventory-close.png"
+}

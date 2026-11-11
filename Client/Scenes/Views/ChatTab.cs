@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -18,6 +18,13 @@ namespace Client.Scenes.Views
     {
         #region Properties
         public static List<ChatTab> Tabs = new List<ChatTab>();
+        // Scoped adapters discover native tab creation, moves, drops and removal.
+        public static event EventHandler GameUiTopologyChanged;
+        public override void OnParentChanged(DXControl oldParent, DXControl newParent)
+        {
+            base.OnParentChanged(oldParent, newParent);
+            if (TextPanel != null) GameUiTopologyChanged?.Invoke(this, EventArgs.Empty);
+        }
 
 
         public DXImageControl AlertIcon;
@@ -29,6 +36,49 @@ namespace Client.Scenes.Views
 
         public List<DXLabel> History = new List<DXLabel>();
 
+        public GameUiChatViewportLayout GameUiViewportLayout { get; private set; }
+        public override Size Size
+        {
+            get => base.Size;
+            set => base.Size = GameUiViewportLayout?.ConstrainSize(value) ?? value;
+        }
+        public override Size GetAcceptableResize(Size size)
+            => GameUiViewportLayout?.ConstrainSize(base.GetAcceptableResize(size)) ?? base.GetAcceptableResize(size);
+
+        public void UseGameUiViewport(GameUiChatViewportLayout layout)
+        {
+            if (IsDisposed) throw new ObjectDisposedException(nameof(ChatTab));
+            if (layout != null && layout.ConstrainSize(Size) != Size)
+                throw new ArgumentException("Set the chat body to a valid size before applying its geometry.", nameof(layout));
+            var anchor = new GameUiChatScrollAnchor(this);
+            GameUiViewportLayout = layout;
+            if (layout == null) ScrollBar.Size = new Size(14, ScrollBar.Size.Height);
+            LayoutChatContent();
+            ResizeChat();
+            anchor.Restore();
+        }
+
+        private void LayoutChatContent()
+        {
+            if (GameUiViewportLayout != null)
+            {
+                Rectangle history, scrollbar;
+                GameUiViewportLayout.GetBounds(Size, out history, out scrollbar);
+                TextPanel.Location = history.Location;
+                TextPanel.Size = history.Size;
+                ScrollBar.Location = scrollbar.Location;
+                ScrollBar.Size = scrollbar.Size;
+                ScrollBar.VisibleSize = history.Height;
+                return;
+            }
+            TextPanel.Location = new Point(ResizeBuffer, ResizeBuffer);
+            TextPanel.Size = new Size(Size.Width - ScrollBar.Size.Width - 1 - ResizeBuffer*2, Size.Height - ResizeBuffer*2);
+            ScrollBar.VisibleSize = TextPanel.Size.Height;
+            ScrollBar.Location = new Point(Size.Width - ScrollBar.Size.Width - ResizeBuffer, ResizeBuffer);
+            ScrollBar.Size = new Size(14, Size.Height - ResizeBuffer*2);
+        }
+
+
         public override void OnSizeChanged(Size oValue, Size nValue)
         {
             base.OnSizeChanged(oValue, nValue);
@@ -36,15 +86,11 @@ namespace Client.Scenes.Views
             // DrawTexture = true;
             if (ScrollBar == null || TextPanel == null) return;
 
-            TextPanel.Location = new Point(ResizeBuffer, ResizeBuffer);
-            TextPanel.Size = new Size(Size.Width - ScrollBar.Size.Width - 1 - ResizeBuffer*2, Size.Height - ResizeBuffer*2);
-
-            ScrollBar.VisibleSize = TextPanel.Size.Height;
-            ScrollBar.Location = new Point(Size.Width - ScrollBar.Size.Width - ResizeBuffer, ResizeBuffer);
-            ScrollBar.Size = new Size(14, Size.Height - ResizeBuffer*2);
-
+            var anchor = GameUiViewportLayout == null ? null : new GameUiChatScrollAnchor(this);
+            LayoutChatContent();
             if (!IsResizing)
                 ResizeChat();
+            anchor?.Restore();
             
         }
         public override void OnIsResizingChanged(bool oValue, bool nValue)
@@ -111,6 +157,8 @@ namespace Client.Scenes.Views
 
             MouseWheel += ScrollBar.DoMouseWheel;
             Tabs.Add(this);
+            TabButton.IsMovingChanged += (sender, args) =>
+            { if (!TabButton.IsMoving) GameUiTopologyChanged?.Invoke(this, EventArgs.Empty); };
         }
 
         #region Methods
@@ -119,6 +167,7 @@ namespace Client.Scenes.Views
         {
             if (!IsResizing)
             {
+                var anchor = GameUiViewportLayout == null ? null : new GameUiChatScrollAnchor(this);
                 foreach (DXLabel label in History)
                 {
                     if (label.Size.Width == TextPanel.Size.Width) continue;
@@ -131,6 +180,7 @@ namespace Client.Scenes.Views
 
                 UpdateItems();
                 UpdateScrollBar();
+                anchor?.Restore();
             }
         }
         public void UpdateItems()
@@ -426,6 +476,7 @@ namespace Client.Scenes.Views
             if (disposing)
             {
                 Tabs.Remove(this);
+                GameUiTopologyChanged?.Invoke(this, EventArgs.Empty);
 
                 if (Panel != null)
                 {

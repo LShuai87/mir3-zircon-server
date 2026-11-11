@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
@@ -119,6 +119,27 @@ namespace Client.Envir
                 Thread.Sleep(1);
 
             return index >= 0 && index < Images.Length && Images[index] != null;
+        }
+
+        // Copy once during binding, before mutating controls. Independent of GPU lifetime.
+        public GameUiButtonHitMask ReadButtonHitMask(int index)
+        {
+            MirImage image = GetImage(index);
+            if (image == null || image.Position <= 0 || image.Width <= 0 || image.Height <= 0)
+                throw new ArgumentException("Button hit mask requires a present image payload.", nameof(index));
+            byte[] payload;
+            lock (_BReader)
+            {
+                long previous = _BReader.BaseStream.Position;
+                try
+                {
+                    _BReader.BaseStream.Seek(image.Position, SeekOrigin.Begin);
+                    payload = _BReader.ReadBytes(image.ImageDataSize);
+                    if (payload.Length != image.ImageDataSize) throw new EndOfStreamException("Truncated button image payload.");
+                }
+                finally { _BReader.BaseStream.Seek(previous, SeekOrigin.Begin); }
+            }
+            return GameUiButtonHitMask.FromBc1(new Size(image.Width, image.Height), payload);
         }
 
         public bool VisiblePixel(int index, Point location, bool accurate = true, bool offSet = false)
@@ -381,10 +402,12 @@ namespace Client.Envir
         {
             if (disposing)
             {
+                if (IsDisposed) return;
                 IsDisposed = true;
 
-                foreach (MirImage image in Images)
-                    image.Dispose();
+                if (Images != null)
+                    foreach (MirImage image in Images)
+                        image?.Dispose();
 
 
                 Images = null;

@@ -1,0 +1,1388 @@
+{
+  "schemaVersion": 1,
+  "kind": "native-npc-service-auxiliary-safe-area-group-layout-verification",
+  "checkedAtLocalDate": "2026-11-08",
+  "releaseAccepted": false,
+  "referenceResolution": [
+    1024,
+    768
+  ],
+  "results": {
+    "npcChecks": 23821,
+    "npcScenes": 3,
+    "npcCoordinateHits": 763,
+    "npcFrames": 126,
+    "npcResets": 75,
+    "identicalNativeNpcPixels": 2399935,
+    "groupResponseMilliseconds": [
+      3236,
+      2970,
+      3093,
+      3217,
+      2927,
+      3106,
+      3044,
+      2902,
+      2988,
+      3023,
+      2973,
+      3054,
+      2974,
+      3064,
+      3018,
+      3328,
+      3035,
+      2995,
+      3121,
+      3089,
+      2960,
+      3003,
+      3074,
+      2959,
+      3159,
+      3046,
+      2950,
+      3104,
+      3089,
+      2974
+    ],
+    "windowSetSummary": "Window-set integration: 165921 checks passed with real catalog package, eight registered participants plus original chat groups/input and six resolutions, identity/chat retention, actual GameScene resize/disposal, startup scene entry/reentry, clean/dirty rollback, render-fault input containment, loopback heartbeat and teardown. Two glyph-path GPU probes only; no full-scene/live-game/IME acceptance.",
+    "fullSceneSummary": "Full-scene offline integration: 180 checks passed; 3 real constructors, 17 presented frames, 7 explicit Device.Reset calls; 690512 identical panel pixels. Real legacy resources, synthetic user/map, four character pages, six resolutions, scene reentry, cell/chat/native-input retention. No login, server behavior, hardware device-loss, live IME or final visual acceptance.",
+    "pythonTests": 172,
+    "packageFrames": 94
+  },
+  "sourceChanges": [
+    {
+      "path": "Client/Client.csproj",
+      "beforeSha256": "58d0d56c114d99353e868859c454922bff7b899c83dd09200d38c0f6e8c31880",
+      "afterSha256": "87fa39cb90b7c7e52a4089cb001f3a1f27f98dd9f97655850cf0d7b56e60dd63"
+    },
+    {
+      "path": "Client/Scenes/Views/NPCDialog.cs",
+      "beforeSha256": "7afe01054cc469dcbbb2e879e2585e60e03ff288e30de0049e02259d321dbe90",
+      "afterSha256": "2372fdf6322c51156bd48cc52e173f70604c6d185ba64b1832cdd8337ecc31f4"
+    },
+    {
+      "path": "Client/Envir/GameUiOfficialV1WindowSet.cs",
+      "beforeSha256": "50def3bd074c1fefff960c61ae6cb72da86cdf7caa56fba3ca2813b41b29b950",
+      "afterSha256": "0474ee862dc3a71aebdafe66af798cd44c48b843c885560c6a0c8556196593b5"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiNpcTests.cs",
+      "beforeSha256": "1d8874c1f82d51fe3d58f8dfac280a3fe255a3e53ea542333f9a6f94b34c41a1",
+      "afterSha256": "50d6490fafb8686814191bba17034351d718e500032371436346e2b8f08638c3"
+    },
+    {
+      "path": "Client/Controls/DXWindow.cs",
+      "beforeSha256": "ba9b735edb8dd9e96071ff4af502af334ed6f8258cf9b8f3dcab7b6b75ccb615",
+      "afterSha256": "fcb585d6836c00052c86d5eb74b16e65f5110d9702909d4391d76b1864e31dfe"
+    }
+  ],
+  "sourceHashes": [
+    {
+      "path": "Client/Client.csproj",
+      "sha256": "87fa39cb90b7c7e52a4089cb001f3a1f27f98dd9f97655850cf0d7b56e60dd63"
+    },
+    {
+      "path": "Client/Scenes/Views/NPCDialog.cs",
+      "sha256": "2372fdf6322c51156bd48cc52e173f70604c6d185ba64b1832cdd8337ecc31f4"
+    },
+    {
+      "path": "Client/Envir/GameUiOfficialV1WindowSet.cs",
+      "sha256": "0474ee862dc3a71aebdafe66af798cd44c48b843c885560c6a0c8556196593b5"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiNpcTests.cs",
+      "sha256": "50d6490fafb8686814191bba17034351d718e500032371436346e2b8f08638c3"
+    },
+    {
+      "path": "Client/Controls/DXWindow.cs",
+      "sha256": "fcb585d6836c00052c86d5eb74b16e65f5110d9702909d4391d76b1864e31dfe"
+    },
+    {
+      "path": "Client/Envir/GameUiNpcGroupLayout.cs",
+      "sha256": "aecfec37cda3dde4547b83ecbd8bde80b671f8054b6dec84c10b71a493781fb5"
+    }
+  ],
+  "newlyTrackedSources": [
+    {
+      "path": "Client/Envir/GameUiNpcGroupLayout.cs",
+      "baseline": "new source file"
+    }
+  ],
+  "commands": [
+    {
+      "command": [
+        "D:/Program Files/Microsoft Visual Studio/2022/Enterprise/MSBuild/Current/Bin/MSBuild.exe",
+        "Client/Client.csproj",
+        "/t:Build",
+        "/p:Configuration=Debug",
+        "/p:Platform=AnyCPU",
+        "/v:minimal",
+        "/nologo"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/build-debug-v2.log",
+      "logSha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "command": [
+        "D:/Program Files/Microsoft Visual Studio/2022/Enterprise/MSBuild/Current/Bin/MSBuild.exe",
+        "Client/Client.csproj",
+        "/t:Build",
+        "/p:Configuration=Debug",
+        "/p:Platform=AnyCPU",
+        "/v:minimal",
+        "/nologo"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/build-debug-v3.log",
+      "logSha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "command": [
+        "D:/Program Files/Microsoft Visual Studio/2022/Enterprise/MSBuild/Current/Bin/MSBuild.exe",
+        "Client/Client.csproj",
+        "/t:Build",
+        "/p:Configuration=Debug",
+        "/p:Platform=AnyCPU",
+        "/v:minimal",
+        "/nologo"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/build-debug.log",
+      "logSha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "command": [
+        "D:/Program Files/Microsoft Visual Studio/2022/Enterprise/MSBuild/Current/Bin/MSBuild.exe",
+        "Client/Client.csproj",
+        "/t:Build",
+        "/p:Configuration=Release",
+        "/p:Platform=AnyCPU",
+        "/v:minimal",
+        "/nologo"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/build-release.log",
+      "logSha256": "c9e24428be1e56c8408af17aacfea3413de3953bfe426d10eb768782f5005ebc"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiFullSceneTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/npc-group-full-scene-20261108-v1"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/full-scene.log",
+      "logSha256": "0d85d4de7905eb608acc989200b5dfcc19842b35b62586889490caf606d4a988"
+    },
+    {
+      "command": [
+        "python",
+        "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/audit-history.py",
+        "--output",
+        "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/history-audit.json"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/history-audit.log",
+      "logSha256": "3c896da09a2ab4a16d48ddbeb09d9d94f7c7d77842e86a7f197029ce949707b8"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "build/game-ui/New-GameUiReleaseManifest.ps1",
+        "-ClientDirectory",
+        "E:/workspace/Debug/Client",
+        "-ResourceRoot",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/staged-resources",
+        "-OutputPath",
+        "E:/workspace/mir3-zircon-server/docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/release-manifest-debug.json"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/manifest-debug.log",
+      "logSha256": "6fc5cd950f9951e2d6fd247434194745dc135ef8676a1055fb68ea402cd89a57"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "build/game-ui/New-GameUiReleaseManifest.ps1",
+        "-ClientDirectory",
+        "E:/workspace/Release/Client",
+        "-ResourceRoot",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/staged-resources",
+        "-OutputPath",
+        "E:/workspace/mir3-zircon-server/docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/release-manifest-release.json"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/manifest-release.log",
+      "logSha256": "63909c811e588ba481ea19c8bc32a18cba3a38e8e59e5be4b057a940ddabe8c0"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiNpcTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/npc-v10.log",
+      "logSha256": "66f5a2d042fc0808c96bad6ac2377a8eef7fa4d1387e4a968fad8128ab957b2d"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiNpcTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v7"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/npc-v7.log",
+      "logSha256": "e96583a6cfeac2f2308751d27f931b17fe529ed1d14f575e303a5a430d914304"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiNpcTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v8"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/npc-v8.log",
+      "logSha256": "ba4a4b136ba0b7c8a3b6944a0b8dd0f8b4620fc5387a8ec26207c5f48469ac60"
+    },
+    {
+      "command": [
+        "C:/Users/shuai/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests/game-ui",
+        "-p",
+        "test_*.py"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/python-tests.log",
+      "logSha256": "61b494d06e90d5e61d4807c7c18d820484e8274c4357d19be46a687aebc691c9"
+    },
+    {
+      "command": [
+        "python",
+        "build/game-ui/Validate-UiTasks.py"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/task-validation.log",
+      "logSha256": "90e3ddffa807ef19523e77855653984be659ff7ab47ec66f04d41348c4cb85b3"
+    },
+    {
+      "command": [
+        "C:/Users/shuai/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+        "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/check-whitespace.py"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/whitespace.log",
+      "logSha256": "8737bf43ac4a2f1937373acf7e6d1c6b354d668891177f02615e28e93d1a390e"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiWindowSetTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/npc-group-window-set-20261108-v1"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/window-set.log",
+      "logSha256": "7268516005f09c2a1283c4de8f08e4192f9df4b73af2b019795f9bab1c1bb222"
+    }
+  ],
+  "builds": {
+    "debug": {
+      "buildId": "gameui-8c98946c023a4f82e62a23ff4af8f2053b26315138cb475705e8524f4a253e73",
+      "client": {
+        "path": "Zircon.exe",
+        "length": 1366528,
+        "sha256": "fc7b89732dc583a13cf507ebc147254e2634057c75075d791262dc6641b15480"
+      }
+    },
+    "release": {
+      "buildId": "gameui-f029f1cdbb0d7f14ee536ecced4dbc4fa14d1b24fbf40a8ca6a3f86f7bce7137",
+      "client": {
+        "path": "Zircon.exe",
+        "length": 1263104,
+        "sha256": "1752c7e73afaa0ec9efdc5ceee7b1136c7ec328018563f0bf52dabcda7c8b2c8"
+      }
+    }
+  },
+  "package": {
+    "path": "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+    "frameCount": 94,
+    "sha256": "dd45cbf51d976a69d28269ee0d27a985def1ee1693cab2b509b74ae347a880a4"
+  },
+  "candidate": {
+    "path": "E:/workspace/mir3-ui-work/warehouse-assets-20261108-v1/zl-v2/OfficialV1.Zl",
+    "frameCount": 1,
+    "sha256": "471169dfa093b521f3c700c5a993e4e763aa17a45b2e16f440d961c0c7bf4cec"
+  },
+  "sourcePlanSha256": "f8c0a002b3821fabb54993792c354c4eff35eec51f9cfdc418535017c13069e9",
+  "finalValidation": {
+    "npc": "npc-v10.log",
+    "debug": "build-debug-v3.log",
+    "release": "build-release.log",
+    "python": "python-tests.log",
+    "windowSet": "window-set.log",
+    "fullScene": "full-scene.log"
+  },
+  "limitations": [
+    "OfficialV1 group-only geometry changes; Legacy remains default. RuntimeReady=false, productionBindingAllowed=false and releaseAccepted=false.",
+    "Complete window bounds and close routing are checked for 15 dialog types in six resolutions and repeated scene entry. None/BuySell group fixtures also perform real device resets.",
+    "Layering preserves primary title/close strips and foreground service bodies, not simultaneous visibility of every underlying body. Native modal and tooltip root ordering and stationary hover refresh have targeted checks.",
+    "Independent quest opening callbacks, all concurrent quest/service combinations and full lifecycle/manual foreground sequences remain unaccepted.",
+    "Thirty synthetic 80-line response fixtures took 2902-3328 ms end to end. The source of this delay is unprofiled; the 5000 ms fixture ceiling is not an interactive performance acceptance criterion.",
+    "No live server, real storage/service acceptance, live IME, target-hardware performance or final visual/release/rollback acceptance. No commit, push or deployment; official installation is read-only."
+  ],
+  "failedAttempts": [
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiNpcTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v2"
+      ],
+      "result": "fail",
+      "exitCode": 1,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/npc-v2.log",
+      "logSha256": "e857fa542fec3b11188c9179f4d146bd831a8f35bf2c8ae8ebce2c4c805304ca"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiNpcTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v3"
+      ],
+      "result": "fail",
+      "exitCode": 1,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/npc-v3.log",
+      "logSha256": "3b03f0ee7dc672e431aaba062b48602c6a98c4b7d7a86584eb61b763250bb3ef"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiNpcTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v4"
+      ],
+      "result": "fail",
+      "exitCode": 1,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/npc-v4.log",
+      "logSha256": "11163272914299f8102f7d92818f1fd4a894d75949b49f9df4c4bb034f781fda"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiNpcTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v5"
+      ],
+      "result": "fail",
+      "exitCode": 1,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/npc-v5.log",
+      "logSha256": "c48245a767ab176f2463179831cfebecc8fa8137cfcac8ef1baf7049110a8c7a"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiNpcTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v6"
+      ],
+      "result": "fail",
+      "exitCode": 1,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/npc-v6.log",
+      "logSha256": "c48245a767ab176f2463179831cfebecc8fa8137cfcac8ef1baf7049110a8c7a"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiNpcTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v9"
+      ],
+      "result": "fail",
+      "exitCode": 1,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/npc-v9.log",
+      "logSha256": "80c48cd59247b2cc806ba4382099438bf1bc72d66b8c10e128ee36c72c8edc70"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiNpcTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v1"
+      ],
+      "result": "fail",
+      "exitCode": 1,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/npc.log",
+      "logSha256": "e30a751108b00264a9e076d6068cfd29be3c47e5524f814ac9be536aac3b24fb"
+    }
+  ],
+  "evidenceHashes": [
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-full-scene-20261108-v1/legacy-hud.png",
+      "sha256": "5fa69de2c6da4336331e9f837cd0ded6c24f9b714dda1e36432e8880dc050a09"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-full-scene-20261108-v1/legacy-panels.png",
+      "sha256": "d0723781ce5debe099e9ba58f4e2c999706872006bb0ec1594c651cea1634a46"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-full-scene-20261108-v1/legacy-resources.txt",
+      "sha256": "47713d590a1b9214abdef7a0fc33d6c28a2b5a73a0cff9794375a5083020b498"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-full-scene-20261108-v1/official-CharacterTab.png",
+      "sha256": "43a1af56f6c3bfd96763e2bdc70b81fcda2ad9bddce1aa09a95ffa0b5055eac8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-full-scene-20261108-v1/official-extraEquipmentTab.png",
+      "sha256": "fd2f77d0befc66bba22a81f66c6636dd2b169066f24bb721f5170886176243ca"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-full-scene-20261108-v1/official-HermitTab.png",
+      "sha256": "0bb2f47907de068dd949e5a6e35913be047868970d2da053ff4d83516c1971df"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-full-scene-20261108-v1/official-hud.png",
+      "sha256": "0d72ce7b9c9ed1d0c807333ef4c62517a0f9d90d6f49015ba946f1b0882384ac"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-full-scene-20261108-v1/official-panels.png",
+      "sha256": "43a1af56f6c3bfd96763e2bdc70b81fcda2ad9bddce1aa09a95ffa0b5055eac8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-full-scene-20261108-v1/official-reentry-hud.png",
+      "sha256": "39be0066510de06ba2465cc008c6379ffbc4c556c67be4870b3a750f99696f4b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-full-scene-20261108-v1/official-reentry-panels.png",
+      "sha256": "8a0a2644ac845d99ab8104c3cc9acdd0573cdff950c0706b3a8b1a2bd2d4d2a8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-full-scene-20261108-v1/official-reset-1024x768.png",
+      "sha256": "43a1af56f6c3bfd96763e2bdc70b81fcda2ad9bddce1aa09a95ffa0b5055eac8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-full-scene-20261108-v1/official-reset-1280x800.png",
+      "sha256": "6da4d263d19f1aae323e49c0f41f848bd9fb075cb94dafb02df4e2f0749ef8a4"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-full-scene-20261108-v1/official-reset-1366x768.png",
+      "sha256": "bccd5d8071878413408790dbe90b5d5a1ea48d880be4cec00c916469bc30f495"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-full-scene-20261108-v1/official-reset-1440x900.png",
+      "sha256": "1b0be5742da74968aba14f74293e474a1324d346421cab3b9692607f90f43a06"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-full-scene-20261108-v1/official-reset-1600x900.png",
+      "sha256": "ddc79b57cfef144f95511d28a92a7ad2351a7a8d74ed73ca4e19a4a5f8f44ba7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-full-scene-20261108-v1/official-reset-1920x1080.png",
+      "sha256": "686e3cc1df80daea96d79cdb643655e960d5a1d3d48b39e03ad3ecfcac005f7a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-full-scene-20261108-v1/official-StatsTab.png",
+      "sha256": "dc665d7ec9343b3bdbdd2fd5bbc16f245d961d0ab217de3d7af7e82be17d8664"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-full-scene-20261108-v1/reset-pixel-probes.txt",
+      "sha256": "2c236cd844574b74b6d502b13ffed99b5cb29783fc53ea00587ca1543a18ac67"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-full-scene-20261108-v1/tested-runtime.json",
+      "sha256": "86376629655e78e274dde15d803d0988acd06c91d2794b1cbcb97512589e42cd"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/assertions.txt",
+      "sha256": "52302c58f9681671aceaf0a6540e042b3d78c070b48ab30140b4fa6f1e659d60"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/coordinate-hits.txt",
+      "sha256": "8f1b6abd83b681be961e428eeb27567eb76ec0c817b69798c9658fa2f3b3f153"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/legacy-card.png",
+      "sha256": "bbf533c95e714eb1b384a34ed7dde97083e54d67bca961844f3c9e9c8f2882d6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/legacy-goods-bottom.png",
+      "sha256": "923b0c68e8cf7a6a3c51de563999d0f24bb99b7a8c4382bb02c858b5637a435e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/legacy-goods-quantity.png",
+      "sha256": "203601bf8d8d27d816c2fce39ce93c2fe096e8103c81b8be023e9b3eae45bfc6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/legacy-goods-top.png",
+      "sha256": "771fbf5408ff1edc726b6888249f3c10491bc553f52a0e774199bac882bf60db"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/legacy-refine-retrieve.png",
+      "sha256": "b0ca02edebfb861c3e2375d08a0e4501ea545c975379bf3df9965c22f948cdac"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/legacy-refine.png",
+      "sha256": "0743781638dc75bd0e871ff69a221e7c7cffdabc666ac4ed021bac0a0cae2551"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/legacy-repair-full.png",
+      "sha256": "c7733722ac20d86135c879e46aefd6cd530d80275fe45902c5ebab3fa6065379"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/legacy-reset-1024x768.png",
+      "sha256": "718e52a0df1079d77fab5dff0823b58b2d8d98cb7c5d319a4fb36d5893eaca4d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/legacy-reset-1280x800.png",
+      "sha256": "6ba4420ef13f0c9e3e11e94b0b510f0ef22e92014dd02cadc2da81c2e20918bf"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/legacy-reset-1366x768.png",
+      "sha256": "9307abd4893bee4b08268e04f81e8f8889f09be289f4703c0dd332384e396b42"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/legacy-reset-1440x900.png",
+      "sha256": "5d7a6e9c1c15173e85b1c06b094a5773c037c7c3e7d270d57818628ed4e3abdd"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/legacy-reset-1600x900.png",
+      "sha256": "0270ea3175f839c48f352f53a0057f3c9366895a424af520eddf7709fb8da65f"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/legacy-reset-1920x1080.png",
+      "sha256": "b024b69683e93b115d6d3973a578d2ea688b5090fe5ce983f352af2f1b7d50d3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/legacy-resources.txt",
+      "sha256": "47713d590a1b9214abdef7a0fc33d6c28a2b5a73a0cff9794375a5083020b498"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/legacy-sell-full.png",
+      "sha256": "78b81311bb79aa207b13afd334aeb71de0ef227a133dc7cb331ac6cc1fddb224"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/legacy-trace.txt",
+      "sha256": "91c82d2086833279a797ee32cca8872a03d8474feee7557aab631281914e6b8a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/legacy-wrapped-option.png",
+      "sha256": "ff0659f55ad69307331223cc4612065bd036ee8b8e2442c86a2c9a6a470714a3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/metrics.json",
+      "sha256": "98db0cbfd456f1e33b87ddc278b65953227e2ee1f51f57aec1a0e84dbb77cb0d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-card.png",
+      "sha256": "0f2b78045205403779ab7c33e75a3c5f834e7a635c67aefc7e77d52e3dd92487"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-goods-bottom.png",
+      "sha256": "28126a2c308d877e5b8a12e34af35324a1f9eff570a94e0eb96494ae792d4210"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-goods-quantity.png",
+      "sha256": "64e83eca43cb5f9e009cbc84573a4d10311872e0c34954085fa3c47b35867bab"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-goods-top.png",
+      "sha256": "1699c23697fbe693c0e986963bc605e6f38fe5a8b959b1371e77ee07adfd2081"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-group-AccessoryRefineLevel.png",
+      "sha256": "0feb89a68c76e1ed2d026c6196aedc53b9c10966b6c2fd8f004a058b153d9413"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-group-AccessoryRefineUpgrade.png",
+      "sha256": "789c01202674062fd4da686fb9275a256ecd9328cc35b2cf9d95de9b2b7bbe6b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-group-AccessoryReset.png",
+      "sha256": "da97a32a328f5934eeeb90a98267abfa06debfdc85450e3e66d71aa1d7457cc8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-group-BuySell.png",
+      "sha256": "5f63cdbb520d68e8041c5538778463f59fd3079fff329647c5aac91433bbdd9a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-group-CompanionManage.png",
+      "sha256": "f24ba23228a428b45ad6a958a2c94a9aa189cae506a006ae3aea21fe4bf2e72a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-group-ItemFragment.png",
+      "sha256": "b7b5a26b607bfdfb9a6f7938bf90899ef8988f6ddfdf19dceae4610184e42d89"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-group-layouts.txt",
+      "sha256": "28981d1969ba3764f3c99b16569653d89f4c557be2cae74ad56fa1581521d346"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-group-MasterRefine.png",
+      "sha256": "7b79741e6ee3bffb22c01abbbb7a5f2b48d8db87029ac7ae6135571ccc4ed750"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-group-None.png",
+      "sha256": "68346c502e9b707aa042bf2e87c59db65cb8e2ebc014d6825b9780dca7ab7c5b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-group-Refine.png",
+      "sha256": "4508aa5050629aee83f7e113a5ad120bd859034db0429e91e977489c432f90c4"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-group-RefinementStone.png",
+      "sha256": "513d63c4cc391ab8c4406f8a99d4e7f92d352eb3e30420f7ce17fb0fff92b0df"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-group-RefineRetrieve.png",
+      "sha256": "6d5173cfc4cf6dc0a35fe1a77c55523adaf1c49f296cf464b53e7ef611db3a8f"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-group-Repair.png",
+      "sha256": "33e6e9c4c50b8c3014a568f2fab3518f58b9006174e5c2cb6de7ecd6907f1abf"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-group-reset-BuySell-1024x768-11.png",
+      "sha256": "5f63cdbb520d68e8041c5538778463f59fd3079fff329647c5aac91433bbdd9a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-group-reset-BuySell-1024x768-18.png",
+      "sha256": "5f63cdbb520d68e8041c5538778463f59fd3079fff329647c5aac91433bbdd9a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-group-reset-BuySell-1280x800-14.png",
+      "sha256": "60019e050f20e88699723a239ba984c2715869bb53234a3ffe11f8d808b7a08d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-group-reset-BuySell-1366x768-13.png",
+      "sha256": "7289d4f835cab8517e0d113a30c8e091dc7988dae63e91c4becb71b19ade0b44"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-group-reset-BuySell-1440x900-15.png",
+      "sha256": "ec1c0e4905e7208a47479644b649721e0a5233777fbf746931ebbe962b6bf559"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-group-reset-BuySell-1600x900-16.png",
+      "sha256": "b5097aaf23ef40a484410d4bff3cecedaa706b1c5388b5965522abd7643341fc"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-group-reset-BuySell-1920x1080-17.png",
+      "sha256": "66b8bd38abd4726bc79dd9ae41a08cd4b4bb39419c5aa26c0d24c0b338036bda"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-group-reset-None-1024x768-2.png",
+      "sha256": "68346c502e9b707aa042bf2e87c59db65cb8e2ebc014d6825b9780dca7ab7c5b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-group-reset-None-1024x768-9.png",
+      "sha256": "68346c502e9b707aa042bf2e87c59db65cb8e2ebc014d6825b9780dca7ab7c5b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-group-reset-None-1280x800-5.png",
+      "sha256": "d44339d4e6d8db1179e29f936dc31d23021ecea09d81e954b9d2f2950ceec51b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-group-reset-None-1366x768-4.png",
+      "sha256": "1ad3fe071bb79a43be8744953741e2cd9d0d5e7e1ddd5d0db0f8615de8c00e6a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-group-reset-None-1440x900-6.png",
+      "sha256": "087ad7ed609b972654f1fe47987ad95a022b0b841acdc1621c5d6c881684c5b0"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-group-reset-None-1600x900-7.png",
+      "sha256": "815c2db150346713786712f21505a8b9138d874503b738b20504d241aa86d30e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-group-reset-None-1920x1080-8.png",
+      "sha256": "87638d9e562ae31bee667d889f71d462d29f11549bdc147443fec722b3403443"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-group-WeaponCraft.png",
+      "sha256": "0cec1c8e3d29ca0cd858fdf5f160395e945fe0a8ca52d490dd1bb111012f0733"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-group-WeaponReset.png",
+      "sha256": "59873a5a22bb41430fa93cbd4e5a79f6d05552a7543c935bd4c8279439f59c6d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-group-WeddingRing.png",
+      "sha256": "f3c15f33c57f5d2104d5304eca94b1bf3d58f6e6d84e0a29e60e9e587e196040"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-long-card-1024x768.png",
+      "sha256": "b54dbb90ee816caf7e8ce88e8938e58db9699ca746ac56619e537aabd29317d0"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-long-card-1280x800.png",
+      "sha256": "d5247047b57fc4a4ccfa941693378d05b8c9635d93c5014b025458b00649a9fc"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-long-card-1366x768.png",
+      "sha256": "b55ab3338eb65b583ca33cfc58a937c5842bb00a363738de01796dd6b1d74b66"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-long-card-1440x900.png",
+      "sha256": "665a37a21a65083e4d3c0980408c08764ce82bf01a783998b3c71a108f3d5266"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-long-card-1600x900.png",
+      "sha256": "f03ca94d4feceb28382b75e47043f774a5d763a52b1cc6e59548906ffcd0a3a4"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-long-card-1920x1080.png",
+      "sha256": "266742077100d1727cbe11211f2e1f9ab29c4ed83d62d3093b2e7cb4c882a397"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-long-card-bottom.png",
+      "sha256": "b54dbb90ee816caf7e8ce88e8938e58db9699ca746ac56619e537aabd29317d0"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-long-card-open-ms.txt",
+      "sha256": "3510a92fc7dd04f69b1aeeef5489ef168dbf1d9c4d528b8f4af4240a8b295ab4"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-long-card-partial-line.png",
+      "sha256": "382cf651c1bf649d422fcffa975b7021cb7a1485ab692cdf36fe17fb772cb58e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-long-card-top.png",
+      "sha256": "d154b3c83f92432d87fe900abb6fbb975094d02a2d6ed3fa6af781a6966f3b3d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-long-text-reference.png",
+      "sha256": "63ea7a263505137352f230f85a422f09e91ab97d20ca985316bf3e2865a92f02"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-long-text-texture.png",
+      "sha256": "63ea7a263505137352f230f85a422f09e91ab97d20ca985316bf3e2865a92f02"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-partial-line-long-text-reference.png",
+      "sha256": "966bb5e8cc0c4cc6428f93a50e5c86a2c4db0e33f84f4ecd89f8ac4913ad16aa"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-partial-line-long-text-texture.png",
+      "sha256": "966bb5e8cc0c4cc6428f93a50e5c86a2c4db0e33f84f4ecd89f8ac4913ad16aa"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-reentry-card.png",
+      "sha256": "0f2b78045205403779ab7c33e75a3c5f834e7a635c67aefc7e77d52e3dd92487"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-reentry-goods-bottom.png",
+      "sha256": "d10c146cf2332fabd74374d8806e5f9741b16ba2f0a84d6f9d5e3d409cc2117d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-reentry-goods-quantity.png",
+      "sha256": "64e83eca43cb5f9e009cbc84573a4d10311872e0c34954085fa3c47b35867bab"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-reentry-goods-top.png",
+      "sha256": "1699c23697fbe693c0e986963bc605e6f38fe5a8b959b1371e77ee07adfd2081"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-reentry-group-AccessoryRefineLevel.png",
+      "sha256": "0feb89a68c76e1ed2d026c6196aedc53b9c10966b6c2fd8f004a058b153d9413"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-reentry-group-AccessoryRefineUpgrade.png",
+      "sha256": "789c01202674062fd4da686fb9275a256ecd9328cc35b2cf9d95de9b2b7bbe6b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-reentry-group-AccessoryReset.png",
+      "sha256": "da97a32a328f5934eeeb90a98267abfa06debfdc85450e3e66d71aa1d7457cc8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-reentry-group-BuySell.png",
+      "sha256": "5f63cdbb520d68e8041c5538778463f59fd3079fff329647c5aac91433bbdd9a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-reentry-group-CompanionManage.png",
+      "sha256": "f24ba23228a428b45ad6a958a2c94a9aa189cae506a006ae3aea21fe4bf2e72a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-reentry-group-ItemFragment.png",
+      "sha256": "b7b5a26b607bfdfb9a6f7938bf90899ef8988f6ddfdf19dceae4610184e42d89"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-reentry-group-layouts.txt",
+      "sha256": "da1d814c1a07d583f4378b22a2bffacddaa907d5fa03a7e651ea27d71ff441dc"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-reentry-group-MasterRefine.png",
+      "sha256": "7b79741e6ee3bffb22c01abbbb7a5f2b48d8db87029ac7ae6135571ccc4ed750"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-reentry-group-None.png",
+      "sha256": "68346c502e9b707aa042bf2e87c59db65cb8e2ebc014d6825b9780dca7ab7c5b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-reentry-group-Refine.png",
+      "sha256": "4508aa5050629aee83f7e113a5ad120bd859034db0429e91e977489c432f90c4"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-reentry-group-RefinementStone.png",
+      "sha256": "513d63c4cc391ab8c4406f8a99d4e7f92d352eb3e30420f7ce17fb0fff92b0df"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-reentry-group-RefineRetrieve.png",
+      "sha256": "6d5173cfc4cf6dc0a35fe1a77c55523adaf1c49f296cf464b53e7ef611db3a8f"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-reentry-group-Repair.png",
+      "sha256": "33e6e9c4c50b8c3014a568f2fab3518f58b9006174e5c2cb6de7ecd6907f1abf"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-reentry-group-reset-BuySell-1024x768-11.png",
+      "sha256": "5f63cdbb520d68e8041c5538778463f59fd3079fff329647c5aac91433bbdd9a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-reentry-group-reset-BuySell-1024x768-18.png",
+      "sha256": "5f63cdbb520d68e8041c5538778463f59fd3079fff329647c5aac91433bbdd9a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-reentry-group-reset-BuySell-1280x800-14.png",
+      "sha256": "60019e050f20e88699723a239ba984c2715869bb53234a3ffe11f8d808b7a08d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-reentry-group-reset-BuySell-1366x768-13.png",
+      "sha256": "7289d4f835cab8517e0d113a30c8e091dc7988dae63e91c4becb71b19ade0b44"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-reentry-group-reset-BuySell-1440x900-15.png",
+      "sha256": "ec1c0e4905e7208a47479644b649721e0a5233777fbf746931ebbe962b6bf559"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-reentry-group-reset-BuySell-1600x900-16.png",
+      "sha256": "b5097aaf23ef40a484410d4bff3cecedaa706b1c5388b5965522abd7643341fc"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-reentry-group-reset-BuySell-1920x1080-17.png",
+      "sha256": "66b8bd38abd4726bc79dd9ae41a08cd4b4bb39419c5aa26c0d24c0b338036bda"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-reentry-group-reset-None-1024x768-2.png",
+      "sha256": "68346c502e9b707aa042bf2e87c59db65cb8e2ebc014d6825b9780dca7ab7c5b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-reentry-group-reset-None-1024x768-9.png",
+      "sha256": "68346c502e9b707aa042bf2e87c59db65cb8e2ebc014d6825b9780dca7ab7c5b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-reentry-group-reset-None-1280x800-5.png",
+      "sha256": "d44339d4e6d8db1179e29f936dc31d23021ecea09d81e954b9d2f2950ceec51b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-reentry-group-reset-None-1366x768-4.png",
+      "sha256": "1ad3fe071bb79a43be8744953741e2cd9d0d5e7e1ddd5d0db0f8615de8c00e6a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-reentry-group-reset-None-1440x900-6.png",
+      "sha256": "087ad7ed609b972654f1fe47987ad95a022b0b841acdc1621c5d6c881684c5b0"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-reentry-group-reset-None-1600x900-7.png",
+      "sha256": "f951fd0c179c9afbae487ec96efbc654b1311a4debdbebf1c2ca34bf62bfc93d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-reentry-group-reset-None-1920x1080-8.png",
+      "sha256": "87638d9e562ae31bee667d889f71d462d29f11549bdc147443fec722b3403443"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-reentry-group-WeaponCraft.png",
+      "sha256": "0cec1c8e3d29ca0cd858fdf5f160395e945fe0a8ca52d490dd1bb111012f0733"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-reentry-group-WeaponReset.png",
+      "sha256": "59873a5a22bb41430fa93cbd4e5a79f6d05552a7543c935bd4c8279439f59c6d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-reentry-group-WeddingRing.png",
+      "sha256": "f3c15f33c57f5d2104d5304eca94b1bf3d58f6e6d84e0a29e60e9e587e196040"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-reentry-long-card-1024x768.png",
+      "sha256": "b54dbb90ee816caf7e8ce88e8938e58db9699ca746ac56619e537aabd29317d0"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-reentry-long-card-1280x800.png",
+      "sha256": "9af5d5190590baef30643a68935da1600322be27fe22afbcdefb99835486360a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-reentry-long-card-1366x768.png",
+      "sha256": "b55ab3338eb65b583ca33cfc58a937c5842bb00a363738de01796dd6b1d74b66"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-reentry-long-card-1440x900.png",
+      "sha256": "665a37a21a65083e4d3c0980408c08764ce82bf01a783998b3c71a108f3d5266"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-reentry-long-card-1600x900.png",
+      "sha256": "792dbd50a93b47560b02c8c1bd2a0d8aec1f8db6e7357e88cdc4c0cf9dd38d18"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-reentry-long-card-1920x1080.png",
+      "sha256": "343c8ce461c764e57c1b570bcd13674141d2b621d46778cc33e407c9ab477f7f"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-reentry-long-card-bottom.png",
+      "sha256": "b54dbb90ee816caf7e8ce88e8938e58db9699ca746ac56619e537aabd29317d0"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-reentry-long-card-open-ms.txt",
+      "sha256": "82887006d04d939ffca870bc268a940df6cf01dbdf12e228ccf476d07d7c9424"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-reentry-long-card-partial-line.png",
+      "sha256": "382cf651c1bf649d422fcffa975b7021cb7a1485ab692cdf36fe17fb772cb58e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-reentry-long-card-top.png",
+      "sha256": "d154b3c83f92432d87fe900abb6fbb975094d02a2d6ed3fa6af781a6966f3b3d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-reentry-long-text-reference.png",
+      "sha256": "63ea7a263505137352f230f85a422f09e91ab97d20ca985316bf3e2865a92f02"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-reentry-long-text-texture.png",
+      "sha256": "63ea7a263505137352f230f85a422f09e91ab97d20ca985316bf3e2865a92f02"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-reentry-partial-line-long-text-reference.png",
+      "sha256": "966bb5e8cc0c4cc6428f93a50e5c86a2c4db0e33f84f4ecd89f8ac4913ad16aa"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-reentry-partial-line-long-text-texture.png",
+      "sha256": "966bb5e8cc0c4cc6428f93a50e5c86a2c4db0e33f84f4ecd89f8ac4913ad16aa"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-reentry-refine-retrieve.png",
+      "sha256": "162e890082c288a3d43ec41f89b50b37d3fa38e0c3ea18846fadd2295e2bef7e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-reentry-refine.png",
+      "sha256": "37a9f8e43b3903a77edae564928e85c85a422583b1e0f1eec65894fc77cf2b49"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-reentry-repair-full.png",
+      "sha256": "405a5fdf27645cb97b87691cf2e1b08fd734dcaa1370d8052ce602dd13386d17"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-reentry-reset-1024x768.png",
+      "sha256": "b23ebfbbf33922fe2f863509032d879ddf3d14bd569d57beadb417a02e0a15b8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-reentry-reset-1280x800.png",
+      "sha256": "d1ec9b51d29b2e5931cb48055f57c4e2e0229dc5d8ed2a950e5508d6f5773f5a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-reentry-reset-1366x768.png",
+      "sha256": "d7cea0b802505a77da7e495fa8dc1b092940b3088212f9f03b19d44cd9b3a4d2"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-reentry-reset-1440x900.png",
+      "sha256": "dfbceb3b8cfc600a6f8b707206f4b594a37417ad53a2b4628e2a787c992e4891"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-reentry-reset-1600x900.png",
+      "sha256": "217cce3ffb4be7a12b8b9dd80e29641a7c4d49251b2c6a3820f6c110beff3122"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-reentry-reset-1920x1080.png",
+      "sha256": "caf615323b22db269fd245c591d2fa2e9521f25e8fcadcf8f81f6d84bbd7406c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-reentry-sell-full.png",
+      "sha256": "b0d539c5ec1dab7ab258526f8660184d9f29417d884ac7bf94b980c4e22712a5"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-reentry-trace.txt",
+      "sha256": "91c82d2086833279a797ee32cca8872a03d8474feee7557aab631281914e6b8a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-reentry-wrapped-option.png",
+      "sha256": "d26978a42c5b6bc4e2d0b20a25f3a364e07f877494efb454fb43c77ce64008d9"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-refine-retrieve.png",
+      "sha256": "162e890082c288a3d43ec41f89b50b37d3fa38e0c3ea18846fadd2295e2bef7e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-refine.png",
+      "sha256": "37a9f8e43b3903a77edae564928e85c85a422583b1e0f1eec65894fc77cf2b49"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-repair-full.png",
+      "sha256": "405a5fdf27645cb97b87691cf2e1b08fd734dcaa1370d8052ce602dd13386d17"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-reset-1024x768.png",
+      "sha256": "b23ebfbbf33922fe2f863509032d879ddf3d14bd569d57beadb417a02e0a15b8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-reset-1280x800.png",
+      "sha256": "d1ec9b51d29b2e5931cb48055f57c4e2e0229dc5d8ed2a950e5508d6f5773f5a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-reset-1366x768.png",
+      "sha256": "d7cea0b802505a77da7e495fa8dc1b092940b3088212f9f03b19d44cd9b3a4d2"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-reset-1440x900.png",
+      "sha256": "dfbceb3b8cfc600a6f8b707206f4b594a37417ad53a2b4628e2a787c992e4891"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-reset-1600x900.png",
+      "sha256": "217cce3ffb4be7a12b8b9dd80e29641a7c4d49251b2c6a3820f6c110beff3122"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-reset-1920x1080.png",
+      "sha256": "caf615323b22db269fd245c591d2fa2e9521f25e8fcadcf8f81f6d84bbd7406c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-sell-full.png",
+      "sha256": "b0d539c5ec1dab7ab258526f8660184d9f29417d884ac7bf94b980c4e22712a5"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-trace.txt",
+      "sha256": "91c82d2086833279a797ee32cca8872a03d8474feee7557aab631281914e6b8a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/official-wrapped-option.png",
+      "sha256": "d26978a42c5b6bc4e2d0b20a25f3a364e07f877494efb454fb43c77ce64008d9"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-safe-area-20261108-v10/tested-runtime.json",
+      "sha256": "86376629655e78e274dde15d803d0988acd06c91d2794b1cbcb97512589e42cd"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-window-set-20261108-v1/button-hitmask-cpu.txt",
+      "sha256": "8c02ba0d543cdf1f7ebeb48c8e6f52a83dde10de6fcca3b43899d8982e666927"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-window-set-20261108-v1/legacy-glyph-restored.png",
+      "sha256": "0a53fff02c059efc67e4808ccfbd669c8560f8a164c6da2f2f6970301adcf2ff"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-group-window-set-20261108-v1/legacy-glyph-suppressed.png",
+      "sha256": "5a739a1abe0ce2f11461d1c429810d6256b07eabeb58321d7f9ba821f84b2cab"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/audit-history.py",
+      "sha256": "43b3dd93e1bb748275abd80d37a7d986d4016b83b72bd6cf2e0ed3bac1c1fd92"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/build-debug-v2.log",
+      "sha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/build-debug-v2.receipt.json",
+      "sha256": "b962f8fd041de375c62f108b1853cde8f5f9179692b9ae65fd59be80dea72241"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/build-debug-v3.log",
+      "sha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/build-debug-v3.receipt.json",
+      "sha256": "180cf2d90d8739111f519db15da9a92d2cc701b0a2b27262136c8a1c32525c62"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/build-debug.log",
+      "sha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/build-debug.receipt.json",
+      "sha256": "ae334fb3692bf54b51eac0fbd02e6feedee8e21ce71251a49de61ef0e3ced454"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/build-release.log",
+      "sha256": "c9e24428be1e56c8408af17aacfea3413de3953bfe426d10eb768782f5005ebc"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/build-release.receipt.json",
+      "sha256": "7f760ede9a485a778bdf1cd14cfcddb1a99aa02fa256417cb740c3f2223ef19a"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/check-whitespace.py",
+      "sha256": "b0a86f69a0f4d2d1028cf29ec177b27a0b21d80f60d2f17ed9eaf8f84c6a104f"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/full-scene.log",
+      "sha256": "0d85d4de7905eb608acc989200b5dfcc19842b35b62586889490caf606d4a988"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/full-scene.receipt.json",
+      "sha256": "f3ca41a5b9be24951fd2b0e069ca708171144af71cfdd1de6dbd05f4a7d03db3"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/history-audit.json",
+      "sha256": "3c896da09a2ab4a16d48ddbeb09d9d94f7c7d77842e86a7f197029ce949707b8"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/history-audit.log",
+      "sha256": "3c896da09a2ab4a16d48ddbeb09d9d94f7c7d77842e86a7f197029ce949707b8"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/history-audit.receipt.json",
+      "sha256": "34a1b2dc25fe4e9d8d477f9bad7996ae9bfec4110844fc49bfd746bfadac7431"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/manifest-debug.log",
+      "sha256": "6fc5cd950f9951e2d6fd247434194745dc135ef8676a1055fb68ea402cd89a57"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/manifest-debug.receipt.json",
+      "sha256": "353d1e6bb7f8180b9a442da52d2a93f0b5d98697d43892fb73da2c5749ab699f"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/manifest-release.log",
+      "sha256": "63909c811e588ba481ea19c8bc32a18cba3a38e8e59e5be4b057a940ddabe8c0"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/manifest-release.receipt.json",
+      "sha256": "a7ae8f9ec4d78fd344a9b929fec79c2a638231a02314f7412c956494745b337f"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/npc-v10.log",
+      "sha256": "66f5a2d042fc0808c96bad6ac2377a8eef7fa4d1387e4a968fad8128ab957b2d"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/npc-v10.receipt.json",
+      "sha256": "5ba7532bfac1c3621481facff397e4b0aa1b854891acb0724175eb5279075076"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/npc-v2.log",
+      "sha256": "e857fa542fec3b11188c9179f4d146bd831a8f35bf2c8ae8ebce2c4c805304ca"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/npc-v2.receipt.json",
+      "sha256": "24e71ba964593fcd6eab54a4e1c35c2ddea9f44406644da88901ca916a50a99d"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/npc-v3.log",
+      "sha256": "3b03f0ee7dc672e431aaba062b48602c6a98c4b7d7a86584eb61b763250bb3ef"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/npc-v3.receipt.json",
+      "sha256": "7a8f7e37a4e6af7988a012948eb31f4fe3265fa75cc71f1aa9ab0666cd784e1e"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/npc-v4.log",
+      "sha256": "11163272914299f8102f7d92818f1fd4a894d75949b49f9df4c4bb034f781fda"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/npc-v4.receipt.json",
+      "sha256": "cc6ed6d036ccc74b6a891cb7b94f89b986a5f50b4531f9a96aa3a44528e717f6"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/npc-v5.log",
+      "sha256": "c48245a767ab176f2463179831cfebecc8fa8137cfcac8ef1baf7049110a8c7a"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/npc-v5.receipt.json",
+      "sha256": "9425fc38542e8cc88acf4801a257ae1d90774db1ea170d23ab954c6672d7a1aa"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/npc-v6.log",
+      "sha256": "c48245a767ab176f2463179831cfebecc8fa8137cfcac8ef1baf7049110a8c7a"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/npc-v6.receipt.json",
+      "sha256": "78d4a1bab37de4a5ba5223718ebc2a248a7f0d9ad6aec8185178a501d0570caa"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/npc-v7.log",
+      "sha256": "e96583a6cfeac2f2308751d27f931b17fe529ed1d14f575e303a5a430d914304"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/npc-v7.receipt.json",
+      "sha256": "833bd68887a6a67f99597685720928f89ce29bf1fea070bfdda0943ad8584ef0"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/npc-v8.log",
+      "sha256": "ba4a4b136ba0b7c8a3b6944a0b8dd0f8b4620fc5387a8ec26207c5f48469ac60"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/npc-v8.receipt.json",
+      "sha256": "e5698581f8669ecd26cc374f0fd6e552d39d7c1e43278c9c9eb3308f1c6f8966"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/npc-v9.log",
+      "sha256": "80c48cd59247b2cc806ba4382099438bf1bc72d66b8c10e128ee36c72c8edc70"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/npc-v9.receipt.json",
+      "sha256": "4d6b39f5bbffab7d9d67324aba75081d31f0eff24bb77e6ada07984cb9f109d9"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/npc.log",
+      "sha256": "e30a751108b00264a9e076d6068cfd29be3c47e5524f814ac9be536aac3b24fb"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/npc.receipt.json",
+      "sha256": "48e8cd89e1139b0ae3138ca8c8837f9bca0edc2334434b23b82e0370669f503b"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/prepare-report.py",
+      "sha256": "4866dcd0d7508f63f7908fc975574d3df2976bf1126892dcb648620c5e2b08fc"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/python-tests.log",
+      "sha256": "61b494d06e90d5e61d4807c7c18d820484e8274c4357d19be46a687aebc691c9"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/python-tests.receipt.json",
+      "sha256": "1f4bb6cad1395f39e13c082ee71e2e5f6429f57232b1831e7e68cbff0151e450"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/README.md",
+      "sha256": "b69f7bd4c68f7e89ddacb148d0a00f4e825e48b95bc5ca6edf249c3c7a6f0f01"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/release-manifest-debug.json",
+      "sha256": "e7570d6211b330dfab2578c5e7be99c48456e4735668fdfe98bc63fab8758d6d"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/release-manifest-release.json",
+      "sha256": "bfa76b9fa234a88bddc487cac20b373b3fd71f216cd7bf073d4d22df4802bd62"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/run-check.py",
+      "sha256": "8cea69f8c28d781722ec26876840ea3e6bb44ae5ed37e2d213fdab62d1a7c943"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/source-before/Client/Client.csproj",
+      "sha256": "58d0d56c114d99353e868859c454922bff7b899c83dd09200d38c0f6e8c31880"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/source-before/Client/Controls/DXWindow.cs",
+      "sha256": "ba9b735edb8dd9e96071ff4af502af334ed6f8258cf9b8f3dcab7b6b75ccb615"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/source-before/Client/Envir/GameUiOfficialV1WindowSet.cs",
+      "sha256": "50def3bd074c1fefff960c61ae6cb72da86cdf7caa56fba3ca2813b41b29b950"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/source-before/Client/Scenes/Views/NPCDialog.cs",
+      "sha256": "7afe01054cc469dcbbb2e879e2585e60e03ff288e30de0049e02259d321dbe90"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/source-before/tests/game-ui/OfficialUiNpcTests.cs",
+      "sha256": "1d8874c1f82d51fe3d58f8dfac280a3fe255a3e53ea542333f9a6f94b34c41a1"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/source-before.json",
+      "sha256": "5244e51be34702f45d1d9a284414ce29171b80097c2b282f9a711036a4663212"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/task-validation.log",
+      "sha256": "90e3ddffa807ef19523e77855653984be659ff7ab47ec66f04d41348c4cb85b3"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/task-validation.receipt.json",
+      "sha256": "fae7d5b0a378784e708dc6d329f21c0ac8766d6877e7a8eb2e174607f4ff449a"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/tested-runtime.json",
+      "sha256": "86376629655e78e274dde15d803d0988acd06c91d2794b1cbcb97512589e42cd"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/whitespace.log",
+      "sha256": "8737bf43ac4a2f1937373acf7e6d1c6b354d668891177f02615e28e93d1a390e"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/whitespace.receipt.json",
+      "sha256": "929d8ea36e6c3e445dbe5211b33be84427e5c7e66ca895792b711b76a5202aaf"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/window-set.log",
+      "sha256": "7268516005f09c2a1283c4de8f08e4192f9df4b73af2b019795f9bab1c1bb222"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-group-safe-area/window-set.receipt.json",
+      "sha256": "a362939d1428d7a36f44e30be15e95df63c28e367e6ae814eff74062e8acda25"
+    }
+  ]
+}

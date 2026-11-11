@@ -1,0 +1,3 @@
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 OfficialUiChatLayoutTests.Groups()
+   在 OfficialUiChatLayoutTests.Main()

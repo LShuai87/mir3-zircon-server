@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "documentType": "user-scope-clarification",
+  "recordedAtLocalDate": "2026-11-07",
+  "authority": "direct_user_instruction",
+  "userInstruction": "点击按钮后的弹窗先不进行替换。",
+  "effectiveScope": {
+    "continueStyling": [
+      "登录后常驻HUD、按钮、小地图外框",
+      "角色、包裹及已约定的NPC对话/商店主界面",
+      "物品悬浮提示；聊天列表按独立决定保留当前样式"
+    ],
+    "deferStyling": [
+      "主界面或面板内操作按钮额外打开的二级弹窗，包括数量输入、确认/取消、提示及二级功能/服务窗口"
+    ],
+    "boundary": "角色、包裹及已约定的NPC主界面仍属本次范围；其按钮触发的额外二级窗口保留现有样式。不能仅以窗口是否由点击打开判断角色/包裹也被排除。",
+    "behavior": "按钮原动作及发包保持，二级窗口仍按原流程打开、取消、确认和关闭。外观暂缓不等于删除功能。"
+  },
+  "capturePolicy": {
+    "secondaryPopupScreenshotsRequired": false,
+    "removeManualCaptureItem": "06-quantity.png",
+    "mainViewScreenshotsStillRequired": true
+  },
+  "acceptancePolicy": {
+    "secondaryPopupOfficialStylingRequired": false,
+    "existingPopupBehaviorRegressionRequired": true,
+    "deferredWorkIsNotCompleted": true
+  },
+  "historicalPlan": "docs/design/official-ingame-ui-implementation-plan.md",
+  "historicalPlanUnchanged": true,
+  "supersedes": "历史方案及任务中要求为二级弹窗套用正式版皮肤、补采其正式版截图的条款；不撤销原流程回归要求。"
+}

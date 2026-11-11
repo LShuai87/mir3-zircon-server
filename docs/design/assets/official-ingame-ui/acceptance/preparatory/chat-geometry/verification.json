@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "kind": "official-ui-optional-chat-geometry-verification",
+  "releaseAccepted": false,
+  "sourceChanges": [
+    {
+      "path": "Client/Client.csproj",
+      "beforeSha256": "ed20567a74a2962000d50041acef549f01b2c9824f443546e44200ee2ee45a6f",
+      "afterSha256": "91c57d8fd1690a625c414ff0dd1fd0cbc24def2b13d8d7a63a6abc21fbc30568"
+    },
+    {
+      "path": "Client/Envir/GameUiSceneLayoutHost.cs",
+      "beforeSha256": "dd0192909f1211e0b70b6a5092a8367b76a1f03e45abfbcbc107e1f864fa5f17",
+      "afterSha256": "a95698fbbf404040bb6ca74f4d6a45fe485027503ac0b571b243c1e024a2c465"
+    }
+  ],
+  "sourceHashes": [
+    {
+      "path": "Client/Client.csproj",
+      "sha256": "91c57d8fd1690a625c414ff0dd1fd0cbc24def2b13d8d7a63a6abc21fbc30568"
+    },
+    {
+      "path": "Client/Envir/GameUiChatLayout.cs",
+      "sha256": "856f0b0d378b8557faacb84c542618056f172459bb544c5e5c8d203589e90e16"
+    },
+    {
+      "path": "Client/Envir/GameUiSceneLayoutHost.cs",
+      "sha256": "a95698fbbf404040bb6ca74f4d6a45fe485027503ac0b571b243c1e024a2c465"
+    },
+    {
+      "path": "Client/Scenes/Views/ChatTab.cs",
+      "sha256": "a9a9b55062b26f227a3be6a1b0009c501b5c5be650eb1654249000c7f9765268"
+    },
+    {
+      "path": "Client/Scenes/Views/ChatTextBox.cs",
+      "sha256": "b934fa791772a81651bd3bc82c73e10a89e94086dafc67c7985c402d1ee06ab4"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiChatLayoutTests.cs",
+      "sha256": "77e861cde2e7270dfb1e881c5296c1b4d29d07340bf8a1b688712b093f88fe77"
+    },
+    {
+      "path": "tests/Run-GameUiChatLayoutTests.ps1",
+      "sha256": "07f3586315a2999f959f07ed6986d71689eaaa1f3d4d2ef2113453df27ce9674"
+    }
+  ],
+  "commands": [
+    {
+      "command": "MSBuild.exe Client/Client.csproj /t:Build /p:Configuration=Debug /p:Platform=AnyCPU /nologo /v:minimal",
+      "exitCode": 0,
+      "result": "pass",
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/chat-geometry/client-debug-build.log",
+      "logSha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "command": "powershell -NoProfile -File tests/Run-GameUiChatLayoutTests.ps1",
+      "exitCode": 0,
+      "result": "pass",
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/chat-geometry/chat-tests.log",
+      "logSha256": "ec1b5ab4c410d818409e896d851077dfc45f99b681b2999d87c74211d4fe6c9a"
+    },
+    {
+      "command": "powershell -NoProfile -File tests/Run-GameUiSceneLayoutHostTests.ps1",
+      "exitCode": 0,
+      "result": "pass",
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/chat-geometry/host-regression.log",
+      "logSha256": "ce6a3eebdc7571d073fd99ae5b81c4281844dc584ad2d87182dc7ab27bc9cc32"
+    },
+    {
+      "command": "tests/Run-GameUiTests.ps1 -Suite Controls,Layout",
+      "exitCode": 0,
+      "result": "pass",
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/chat-geometry/controls-layout-regression.log",
+      "logSha256": "95744feee4682e54f91fd470908faa6dbb09ec4a9a2eae6e192e40e3d40ed126"
+    },
+    {
+      "command": "MSBuild.exe Client/Client.csproj /t:Build /p:Configuration=Release /p:Platform=AnyCPU /nologo /v:minimal",
+      "exitCode": 0,
+      "result": "pass",
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/chat-geometry/client-release-build.log",
+      "logSha256": "c9e24428be1e56c8408af17aacfea3413de3953bfe426d10eb768782f5005ebc"
+    }
+  ],
+  "results": {
+    "chatChecks": 895,
+    "hostRegressionChecks": 1464,
+    "hostRealControlLayouts": 145,
+    "windowSkinChecks": 60,
+    "controlReaderChecks": 26,
+    "layoutStoreChecks": 35,
+    "resolutions": 6,
+    "legacyUsersDbUnchangedSha256": "890c13348dd10d14cb0118ec3fcea171c85face9739985a958f47d72b54cbc15"
+  },
+  "limitations": [
+    "Geometry is opt-in per existing ChatTab/ChatTextBox instance. GameScene does not enable it; no production skin activation.",
+    "Hidden-target real-control tests cover retained messages, fonts/colors/channel tags, scroll anchors, native HWND/draft/selection/active reference and parent movement. Actual IME composition/candidate placement, key routing, filtering and packets still need game acceptance.",
+    "Tab-header positioning, frame/scrollbar art and replacing the clipped options text with an icon remain part of the final skin adapter.",
+    "No official game login, chat sending or repeat screenshots are required for this preparation."
+  ]
+}

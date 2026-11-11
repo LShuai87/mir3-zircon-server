@@ -1,0 +1,674 @@
+{
+  "schemaVersion": 1,
+  "kind": "warehouse-combined-package-catalog-and-regression-verification",
+  "checkedAtLocalDate": "2026-11-08",
+  "releaseAccepted": false,
+  "referenceResolution": [
+    1024,
+    768
+  ],
+  "results": {
+    "previousFramesUnchanged": 93,
+    "packageFrames": 94,
+    "warehouseIndex": 93,
+    "repeatedPackageByteIdentical": true,
+    "pythonTests": 172,
+    "assetUsageTests": 22,
+    "catalogChecks": 4131,
+    "frameUploads": 846,
+    "startupChecks": 357,
+    "windowSetChecks": 159787,
+    "npcChecks": 6621,
+    "npcCoordinateHits": 707,
+    "identicalNativeNpcPixels": 2399935,
+    "storageSceneChecks": 62,
+    "identicalWarehousePixels": 243840,
+    "fullSceneChecks": 180,
+    "debugBuild": "pass",
+    "releaseBuild": "pass",
+    "productionSceneInstalled": false,
+    "runtimeReady": false,
+    "productionBindingAllowed": false,
+    "layoutFrozen": false,
+    "gateClosureAllowed": false
+  },
+  "sourceChanges": [
+    {
+      "path": "Client/Envir/GameUiOfficialV1Catalog.g.cs",
+      "beforeSha256": "2ce904702a7e07fbd49d7f706e84e3e70f2e952b9ed623e5f7143e5a67c2afbe",
+      "afterSha256": "56f023649cc4fdd1fa9c9de4b0a8f554b45aea5a4a9bb5ac1fb307c03ab5737c"
+    },
+    {
+      "path": "build/game-ui/Compose-OfficialUi.py",
+      "beforeSha256": "01d6ea0aa10872a7a2e052468b8b0dc90579aec45f221d40a4ddf51d9a24081f",
+      "afterSha256": "5473a04cf4f16443cfd6daf8a91354bb406346d319b1f8deb442caf90d885542"
+    },
+    {
+      "path": "build/game-ui/Validate-OfficialUiAssets.py",
+      "beforeSha256": "e2772653be066d6373b6baa0f617ad4323dc71aaf63d1c1e59c1ddf850bf890e",
+      "afterSha256": "6668486a0f57e869c48b3c6c9d8d3d75b9c26dc0534bb3d1f14fac4d8280e218"
+    },
+    {
+      "path": "build/game-ui/asset-manifest.json",
+      "beforeSha256": "0d682d87f1a0a4cab0c297294d7d232282588788bb13c3a9964835fcc49d9247",
+      "afterSha256": "ff87c5736be6d5b3243162d6fda6079a8aa1e6f7bb342ad3fe3c990297b3b57f"
+    },
+    {
+      "path": "build/game-ui/asset-usage-official-v1.json",
+      "beforeSha256": "c41ddd7ba21d28bfbf72431ba8308683535025cf2b5a36e30a946e1384fb7d49",
+      "afterSha256": "171615c4fa736e349d47df6cba011aeacd0ee2ba054b9560b8de20fec19a4ac9"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiCatalogTests.cs",
+      "beforeSha256": "49d8279db4fe142c69a93b8ba1775ce1c6c60381bb64365dcea87271902f8004",
+      "afterSha256": "39653a483357316bc7942c710184543dc668fa3fa20ded360041ee7d7abcc2bb"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiStartupTests.cs",
+      "beforeSha256": "7490b213ca9b56b1176919e18977ff2a52179e9e4b0d15201ac97db43291140d",
+      "afterSha256": "cb424875b50735b673ff889c3952526a733a3810bb4c6ee3baba3c5fd73deefc"
+    },
+    {
+      "path": "tests/game-ui/test_official_ui_asset_usage.py",
+      "beforeSha256": "7fe20fa059a613f56e9acb3ce498a2058260480b14b7a480ba3f2108ec25f23b",
+      "afterSha256": "72220a031c23a4ddbcea9089a304a6701f09cb73a691a9d3523d63f52842dd8c"
+    }
+  ],
+  "sourceHashes": [
+    {
+      "path": "Client/Envir/GameUiOfficialV1Catalog.g.cs",
+      "sha256": "56f023649cc4fdd1fa9c9de4b0a8f554b45aea5a4a9bb5ac1fb307c03ab5737c"
+    },
+    {
+      "path": "build/game-ui/Compose-OfficialUi.py",
+      "sha256": "5473a04cf4f16443cfd6daf8a91354bb406346d319b1f8deb442caf90d885542"
+    },
+    {
+      "path": "build/game-ui/Validate-OfficialUiAssets.py",
+      "sha256": "6668486a0f57e869c48b3c6c9d8d3d75b9c26dc0534bb3d1f14fac4d8280e218"
+    },
+    {
+      "path": "build/game-ui/asset-manifest.json",
+      "sha256": "ff87c5736be6d5b3243162d6fda6079a8aa1e6f7bb342ad3fe3c990297b3b57f"
+    },
+    {
+      "path": "build/game-ui/asset-usage-official-v1.json",
+      "sha256": "171615c4fa736e349d47df6cba011aeacd0ee2ba054b9560b8de20fec19a4ac9"
+    },
+    {
+      "path": "build/game-ui/warehouse-combined-composition-recipe.json",
+      "sha256": "54205741d366e19a39be06920d2a4c9cefc8b71e8c18e67a7fc4604f2d890321"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/audit-history.py",
+      "sha256": "43b3dd93e1bb748275abd80d37a7d986d4016b83b72bd6cf2e0ed3bac1c1fd92"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/check-whitespace.py",
+      "sha256": "2a953187630c29da526e0b25180462e8e764f13046d772517758ece5657cfa8c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/diagnose-character-composition.py",
+      "sha256": "845ba1f54f343de89113cbc3321d6bebc0cb23f29c8f2499980baffa66229064"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/run-check.py",
+      "sha256": "8cea69f8c28d781722ec26876840ea3e6bb44ae5ed37e2d213fdab62d1a7c943"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/verify-merged-package.py",
+      "sha256": "8a6cdefe885ecd92369835c66316fe4c35e865c93f79975fd53b3310ac7edc3e"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiCatalogTests.cs",
+      "sha256": "39653a483357316bc7942c710184543dc668fa3fa20ded360041ee7d7abcc2bb"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiStartupTests.cs",
+      "sha256": "cb424875b50735b673ff889c3952526a733a3810bb4c6ee3baba3c5fd73deefc"
+    },
+    {
+      "path": "tests/game-ui/test_official_ui_asset_usage.py",
+      "sha256": "72220a031c23a4ddbcea9089a304a6701f09cb73a691a9d3523d63f52842dd8c"
+    },
+    {
+      "path": "tests/game-ui/test_official_ui_frame_order.py",
+      "sha256": "6c41802893af9d10655673325a79829b4c0d388d5e84db52bd9df1549d161174"
+    }
+  ],
+  "commands": [
+    {
+      "command": "bundled-python build/game-ui/Compose-OfficialUi.py --decoded E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/decoded --output E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/art --recipe build/game-ui/warehouse-combined-composition-recipe.json",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/compose-v2.log",
+      "logSha256": "10cc3427d9e87108263aaf7a9ff35b79ab856a60eff142ebde1135f21ea929fd"
+    },
+    {
+      "command": "ImageManager.exe --official-ui prepared E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/art E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/art/composed-manifest.json",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/package-v2.log",
+      "logSha256": "db8cfd50da65a59e4933e9e735cf671b315d161709af85f51bbc370ab5592abc"
+    },
+    {
+      "command": "python build/game-ui/Compile-UiCatalog.py --manifest build/game-ui/asset-manifest.json --prepared E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/prepared-manifest.json --package E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl --recipe build/game-ui/warehouse-combined-composition-recipe.json --selection build/game-ui/npc-shop-selection.json --source-libraries build/game-ui/selection-source-libraries.json --output E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/GameUiOfficialV1Catalog.g.cs",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/compile-catalog-v2.log",
+      "logSha256": "d8dd0dfa5780310b424757c1104fad45d0b91f68e17f614b91c3bd4a5492b3fb"
+    },
+    {
+      "command": "Compile-UiCatalog.py --check with same inputs, output Client/Envir/GameUiOfficialV1Catalog.g.cs",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/catalog-stale-check.log",
+      "logSha256": "d8dd0dfa5780310b424757c1104fad45d0b91f68e17f614b91c3bd4a5492b3fb"
+    },
+    {
+      "command": "bundled-python -m unittest discover -s tests/game-ui -p test_*.py",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/python-regressions.log",
+      "logSha256": "3901854b1059f0e70e4e3c5368c5e6f490c12148566d6509701b25abd36407a5"
+    },
+    {
+      "command": "python tests/game-ui/test_official_ui_asset_usage.py",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/usage-tests.log",
+      "logSha256": "5ebbc3906b5558a339149cf36f7cb76f6db893db4b701d33e59a816a495bd012"
+    },
+    {
+      "command": "python build/game-ui/Validate-OfficialUiAssets.py --artifacts E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2 --output docs/design/assets/official-ingame-ui/acceptance/warehouse-package/usage-audit.json",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/usage-audit.log",
+      "logSha256": "2199ad4805a44e42854b69d4121ea9b1fd4adac667650e9322f8432aab4e65cc"
+    },
+    {
+      "command": "MSBuild Client/Client.csproj /t:Build /p:Configuration=Debug /p:Platform=AnyCPU /v:minimal /nologo",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/build-debug.log",
+      "logSha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "command": "MSBuild Client/Client.csproj /t:Build /p:Configuration=Release /p:Platform=AnyCPU /v:minimal /nologo",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/build-release.log",
+      "logSha256": "c9e24428be1e56c8408af17aacfea3413de3953bfe426d10eb768782f5005ebc"
+    },
+    {
+      "command": "pwsh -NoProfile -File tests/Run-GameUiCatalogTests.ps1 -PackagePath E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/catalog-tests.log",
+      "logSha256": "04e0fa17e1035ecd7d136e68c62f0d9314c16be3f252f0d0995fcf3cd1c3ebfe"
+    },
+    {
+      "command": "C:\\Users\\shuai\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe build/game-ui/Compose-OfficialUi.py --decoded E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/decoded --output E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/art-repeat --recipe build/game-ui/warehouse-combined-composition-recipe.json",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/compose-repeat.log",
+      "logSha256": "10cc3427d9e87108263aaf7a9ff35b79ab856a60eff142ebde1135f21ea929fd"
+    },
+    {
+      "command": "pwsh -NoProfile -File tests/Run-GameUiFullSceneTests.ps1 -PackagePath E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl -EvidenceDirectory E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/full-scene-evidence",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/full-scene-tests.log",
+      "logSha256": "0d85d4de7905eb608acc989200b5dfcc19842b35b62586889490caf606d4a988"
+    },
+    {
+      "command": "pwsh -NoProfile -File build/game-ui/New-GameUiReleaseManifest.ps1 -ClientDirectory E:/workspace/Debug/Client -ResourceRoot E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/staged-resources -OutputPath E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/debug-release-manifest.json",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/manifest-debug.log",
+      "logSha256": "1f2ee4958e828cae7e3dc322ea1aaddd1883bacf5bd5accad80fcb346800a91a"
+    },
+    {
+      "command": "pwsh -NoProfile -File build/game-ui/New-GameUiReleaseManifest.ps1 -ClientDirectory E:/workspace/Release/Client -ResourceRoot E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/staged-resources -OutputPath E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/release-release-manifest.json",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/manifest-release.log",
+      "logSha256": "848714e6da8135f3517152e66513775d065bf5766c4f8172d451c0e85bcb4b3c"
+    },
+    {
+      "command": "python docs/design/assets/official-ingame-ui/acceptance/warehouse-package/verify-merged-package.py --repeat --output docs/design/assets/official-ingame-ui/acceptance/warehouse-package/merged-content-repeat.json",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/merged-content-repeat.log",
+      "logSha256": "08d4c4928d80290e46438f7a47a939e7fb567d9c54b604f5613edb7282ed35c2"
+    },
+    {
+      "command": "pwsh -NoProfile -File tests/Run-GameUiNpcTests.ps1 -PackagePath E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl -EvidenceDirectory E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/npc-evidence",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/npc-tests.log",
+      "logSha256": "0cd864dd4fefa330d99dd182c86f8c242bdcb610c8b1a04d51d697bfdcb117ff"
+    },
+    {
+      "command": "E:/workspace/Debug/ImageManager/ImageManager.exe --official-ui prepared E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/art-repeat E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl-repeat E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/art-repeat/composed-manifest.json",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/package-repeat.log",
+      "logSha256": "91cb902c3c09f3b5caf7cabc5567c8e54f7a2d0b75d3782b82fcc75c3af4c578"
+    },
+    {
+      "command": "pwsh -NoProfile -File tests/Run-GameUiStartupTests.ps1 -PackagePath E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/startup-tests.log",
+      "logSha256": "8846d434e02f1b53691852aa18132518e5c54c1b78ecbd0c1c974fc4d838d142"
+    },
+    {
+      "command": "pwsh -NoProfile -File tests/Run-GameUiStorageSceneTests.ps1 -CandidatePath E:/workspace/mir3-ui-work/warehouse-assets-20261108-v1/zl-v2/OfficialV1.Zl -PackagePath E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl -EvidenceDirectory E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/storage-scene-evidence",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/storage-scene-tests.log",
+      "logSha256": "61ba7d4ea0549ecff0a2344aa3b896fa8efc232aaf523c26628e672c0bfcb68e"
+    },
+    {
+      "command": "python docs/design/assets/official-ingame-ui/acceptance/warehouse-package/check-whitespace.py",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/whitespace-v2.log",
+      "logSha256": "c2b9e866c0929d2ec0bb6c3267534b5ae746915dfaa30f29f560f3a1c98df191"
+    },
+    {
+      "command": "pwsh -NoProfile -File tests/Run-GameUiWindowSetTests.ps1 -PackagePath E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl -EvidenceDirectory E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/window-set-evidence",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/window-set-tests.log",
+      "logSha256": "c054dda8e876e3d8eeada36656bb5ebf0bf9d573beb3a05c234422a808bb4242"
+    },
+    {
+      "command": "python build/game-ui/Validate-UiTasks.py",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/task-validation.log",
+      "logSha256": "90e3ddffa807ef19523e77855653984be659ff7ab47ec66f04d41348c4cb85b3"
+    },
+    {
+      "command": "python docs/design/assets/official-ingame-ui/acceptance/warehouse-package/audit-history.py --output docs/design/assets/official-ingame-ui/acceptance/warehouse-package/history-audit.json",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/history-audit.log",
+      "logSha256": "1ce7e0cba88db73a32caaa73fe143cfbcd4510fe01f8dd8b043292575b4c3d75"
+    }
+  ],
+  "builds": {
+    "debug": {
+      "buildId": "gameui-64676eaef8634ba9aa187cd15ce4a94c31f19ee9871cce6c582fe2219b5e9716",
+      "client": {
+        "path": "Zircon.exe",
+        "length": 1351680,
+        "sha256": "43a7ffe7af20205feff6c791af46cccc382d3970f7f2bbbc50b01f410ebd25fb"
+      }
+    },
+    "release": {
+      "buildId": "gameui-9c849c839275a5e87a3c8010aa5c3db8d3e4c12ac6bc8ab6eb976e83df0b2eed",
+      "client": {
+        "path": "Zircon.exe",
+        "length": 1249280,
+        "sha256": "40d000a3caeec1e97009beba86e0e6ea6a4df0bb94f760cf2e4a9bf22b6c74b1"
+      }
+    }
+  },
+  "package": {
+    "path": "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+    "sha256": "dd45cbf51d976a69d28269ee0d27a985def1ee1693cab2b509b74ae347a880a4",
+    "frameCount": 94
+  },
+  "candidate": {
+    "path": "E:/workspace/mir3-ui-work/warehouse-assets-20261108-v1/zl-v2/OfficialV1.Zl",
+    "sha256": "471169dfa093b521f3c700c5a993e4e763aa17a45b2e16f440d961c0c7bf4cec",
+    "frameCount": 1
+  },
+  "limitations": [
+    "Warehouse frame is catalogued but not installed by WindowSet; no NPC Response placement change in this step.",
+    "Frozen 93 frames reproduce only under the recorded toolchain; alternate environment was rejected. Specific Pillow implementation root cause was not isolated.",
+    "Warehouse trim explicitly reuses shop UI[511], not identified official warehouse art.",
+    "Storage GPU fixture still directly installs the isolated one-frame package, not a production catalog binding.",
+    "No live server storage actions, IME, final visual or release acceptance; default Legacy and all open task/gate states retained."
+  ],
+  "failedAttempts": [
+    {
+      "log": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/merged-content.log",
+      "reason": "System Python3.14.3/Pillow12.2.0 produced a different character-main-background. Recreated under matching Python3.12.14/Pillow13.0.0 and verified all 93 frames; rejected v1 retained."
+    },
+    {
+      "log": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/compile-catalog.log",
+      "reason": "Compiler correctly refused replacing an existing output; generated to new external path, then copied verified output to source."
+    },
+    {
+      "log": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/whitespace.log",
+      "reason": "Initial checker scanned unchanged legacy files containing prior whitespace. Limited extra scan to this step changed/new files while keeping tracked diff check; source untouched."
+    }
+  ],
+  "sourcePlanSha256": "f8c0a002b3821fabb54993792c354c4eff35eec51f9cfdc418535017c13069e9",
+  "evidenceHashes": [
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/audit-history.py",
+      "sha256": "43b3dd93e1bb748275abd80d37a7d986d4016b83b72bd6cf2e0ed3bac1c1fd92"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/build-debug.log",
+      "sha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/build-release.log",
+      "sha256": "c9e24428be1e56c8408af17aacfea3413de3953bfe426d10eb768782f5005ebc"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/catalog-stale-check.log",
+      "sha256": "d8dd0dfa5780310b424757c1104fad45d0b91f68e17f614b91c3bd4a5492b3fb"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/catalog-tests.log",
+      "sha256": "04e0fa17e1035ecd7d136e68c62f0d9314c16be3f252f0d0995fcf3cd1c3ebfe"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/catalog-tests.receipt.json",
+      "sha256": "8813f7a7d1b817477464799ebe4bf358c2309090eb8c323f9f066ef063dee638"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/character-bundled-diagnosis.log",
+      "sha256": "bd0f0646433a503d72e7153ebbcabdca2b8f60fc8d31c33c162671e3f4683b73"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/character-diagnosis.log",
+      "sha256": "5f9d8d5e708a2e4f364851e50e80ceae8437fdf3530a7aa025b2a9a6a7a93d84"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/check-whitespace.py",
+      "sha256": "2a953187630c29da526e0b25180462e8e764f13046d772517758ece5657cfa8c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/compile-catalog-v2.log",
+      "sha256": "d8dd0dfa5780310b424757c1104fad45d0b91f68e17f614b91c3bd4a5492b3fb"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/compile-catalog.log",
+      "sha256": "e866923c8e9adc170abca59c88bd251c3f5b043ea5d40146005aca2fda10c98f"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/compose-repeat.log",
+      "sha256": "10cc3427d9e87108263aaf7a9ff35b79ab856a60eff142ebde1135f21ea929fd"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/compose-repeat.receipt.json",
+      "sha256": "f5d0510f46e4f87e83ba5f45f10094db916381820314f417192c2081a55a8286"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/compose-v2.log",
+      "sha256": "10cc3427d9e87108263aaf7a9ff35b79ab856a60eff142ebde1135f21ea929fd"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/compose.log",
+      "sha256": "10cc3427d9e87108263aaf7a9ff35b79ab856a60eff142ebde1135f21ea929fd"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/composition-toolchain.json",
+      "sha256": "d3942be2a08ff5e33ae3d4dca022a5988f51369bce51b1dc0e46c450f85be3af"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/debug-release-manifest.json",
+      "sha256": "0e7016612e3088b784837e4cbc397af0c8c87ad42889c9f54d3b8d15f3c22039"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/diagnose-character-composition.py",
+      "sha256": "845ba1f54f343de89113cbc3321d6bebc0cb23f29c8f2499980baffa66229064"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/frame-order-tests.log",
+      "sha256": "638d287c0b0a39696192d173099f90dfd19c0b1b2df974802576f431e7c9eb0b"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/full-scene-evidence-tested-runtime.json",
+      "sha256": "5554a8bdf069f0b5c0ee81899bed5be131cfc8483a94fbfffaf871cf2c75ce98"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/full-scene-tests.log",
+      "sha256": "0d85d4de7905eb608acc989200b5dfcc19842b35b62586889490caf606d4a988"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/full-scene-tests.receipt.json",
+      "sha256": "8526913fc3fb05d99014fe227661b2e10ca6719291cdaa8fb9802211dcd63968"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/history-audit.json",
+      "sha256": "1ce7e0cba88db73a32caaa73fe143cfbcd4510fe01f8dd8b043292575b4c3d75"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/history-audit.log",
+      "sha256": "1ce7e0cba88db73a32caaa73fe143cfbcd4510fe01f8dd8b043292575b4c3d75"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/history-audit.receipt.json",
+      "sha256": "f1c8567076e1cf20e56c04837dbaadb6413516ba6b0939912bda6ac2060e9dd0"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/manifest-debug.log",
+      "sha256": "1f2ee4958e828cae7e3dc322ea1aaddd1883bacf5bd5accad80fcb346800a91a"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/manifest-debug.receipt.json",
+      "sha256": "2daafd6a68526467799168d5a27884db3c240e86cbc6e33eb0da533ba36ef2ec"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/manifest-release.log",
+      "sha256": "848714e6da8135f3517152e66513775d065bf5766c4f8172d451c0e85bcb4b3c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/manifest-release.receipt.json",
+      "sha256": "2b00e2781a9fa4e1ab3c98e07b102feda21ff9287bb89457044202d202f1d6a4"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/merged-content-repeat.json",
+      "sha256": "b3aa4727ebcdcf37db1a8496176ab99259ad8ed6b7c600327cd3441ad7122897"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/merged-content-repeat.log",
+      "sha256": "08d4c4928d80290e46438f7a47a939e7fb567d9c54b604f5613edb7282ed35c2"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/merged-content-repeat.receipt.json",
+      "sha256": "322c7f113fb57593fb06509784c38cd274ef13f81c5ca7501c2cdedba0d15137"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/merged-content-v2.log",
+      "sha256": "a92f4bb78d1512eaafd1c0dd5b1fafd9f269be793748b976de0f9333752e9455"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/merged-content.json",
+      "sha256": "8d8b5a1b2cb8682977c5d65d3fc4d1bee50a62f501947601b134f6633862d6f0"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/merged-content.log",
+      "sha256": "6c0e019fbf1909974ce2d1e6129a3922e8e0b95b3c28103c153289f2ea3ce331"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/npc-evidence-metrics.json",
+      "sha256": "07d3d1e9cdff2bc77063e6e1b45a338a299d8a0b6480d386081e637a08b6cc93"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/npc-evidence-tested-runtime.json",
+      "sha256": "5554a8bdf069f0b5c0ee81899bed5be131cfc8483a94fbfffaf871cf2c75ce98"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/npc-tests.log",
+      "sha256": "0cd864dd4fefa330d99dd182c86f8c242bdcb610c8b1a04d51d697bfdcb117ff"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/npc-tests.receipt.json",
+      "sha256": "74e33ac92506a858e56470a71093e8042097c03465165500f693d5e53393ece2"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/package-repeat.log",
+      "sha256": "91cb902c3c09f3b5caf7cabc5567c8e54f7a2d0b75d3782b82fcc75c3af4c578"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/package-repeat.receipt.json",
+      "sha256": "a04651e47ee75f219403b24d0ef8b44118e278680a79d0bae010f3dfbc798855"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/package-v2.log",
+      "sha256": "db8cfd50da65a59e4933e9e735cf671b315d161709af85f51bbc370ab5592abc"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/package.log",
+      "sha256": "cea581732203205bb5e11d33161231f27ec2ff8508bf30786e2654bb106446ba"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/prepared-manifest.json",
+      "sha256": "2fdf1aee921c9bd14be32b031ea06889f0396af7d34646c1e1d495e83073c918"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/python-regressions.log",
+      "sha256": "3901854b1059f0e70e4e3c5368c5e6f490c12148566d6509701b25abd36407a5"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/README.md",
+      "sha256": "2da55df9589e3fc37a1b0d15812bafee3685e3b388d10b95b052875df94d3e82"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/release-release-manifest.json",
+      "sha256": "a97129fabadda5ac05c8b5cf389ba1d51e239c57d6e94dd0388b2a73bff98aea"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/run-check.py",
+      "sha256": "8cea69f8c28d781722ec26876840ea3e6bb44ae5ed37e2d213fdab62d1a7c943"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/source-before/build/game-ui/asset-manifest.json",
+      "sha256": "0d682d87f1a0a4cab0c297294d7d232282588788bb13c3a9964835fcc49d9247"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/source-before/build/game-ui/asset-usage-official-v1.json",
+      "sha256": "c41ddd7ba21d28bfbf72431ba8308683535025cf2b5a36e30a946e1384fb7d49"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/source-before/build/game-ui/Compose-OfficialUi.py",
+      "sha256": "01d6ea0aa10872a7a2e052468b8b0dc90579aec45f221d40a4ddf51d9a24081f"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/source-before/build/game-ui/Validate-OfficialUiAssets.py",
+      "sha256": "e2772653be066d6373b6baa0f617ad4323dc71aaf63d1c1e59c1ddf850bf890e"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/source-before/Client/Envir/GameUiOfficialV1Catalog.g.cs",
+      "sha256": "2ce904702a7e07fbd49d7f706e84e3e70f2e952b9ed623e5f7143e5a67c2afbe"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/source-before/Client/Envir/GameUiOfficialV1WindowSet.cs",
+      "sha256": "cfeea738a915890e0d82534f5e9179ec5b3f2c300dfc051dac8e5508d92a5e50"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/source-before/Client/Scenes/GameScene.cs",
+      "sha256": "89df6b08cf454fd022e3a0a909aa385f0d7ff55f822621648b7db785b8c260ce"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/source-before/Client/Scenes/Views/NPCDialog.cs",
+      "sha256": "57ac6a9b0ebcd1407fbf85e01e0dbfcf554824afe11af54325c989ee4cbb7010"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/source-before/docs/tasks/official-ingame-ui/README.md.snapshot",
+      "sha256": "fcdbae6c580e6b48102a62819b2f064a1ba97ecab20a68aab29b17a10ecfeaf2"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/source-before/docs/tasks/official-ingame-ui/tasks.json",
+      "sha256": "8e7a166952a70b6d1970321d05a7bad4fd767ff97ae4313d3965e00190b2fede"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/source-before/tests/game-ui/OfficialUiCatalogTests.cs",
+      "sha256": "49d8279db4fe142c69a93b8ba1775ce1c6c60381bb64365dcea87271902f8004"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/source-before/tests/game-ui/OfficialUiStartupTests.cs",
+      "sha256": "7490b213ca9b56b1176919e18977ff2a52179e9e4b0d15201ac97db43291140d"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/source-before/tests/game-ui/test_official_ui_asset_usage.py",
+      "sha256": "7fe20fa059a613f56e9acb3ce498a2058260480b14b7a480ba3f2108ec25f23b"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/source-before.json",
+      "sha256": "e2845e244e1dd3e83592c4da4612bcecc9474fb39b1175e0d2268e126355ef36"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/startup-tests.log",
+      "sha256": "8846d434e02f1b53691852aa18132518e5c54c1b78ecbd0c1c974fc4d838d142"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/startup-tests.receipt.json",
+      "sha256": "e515a6a836c49ee5709614b286e7d1cc2e21bd4b3a07f6a853cff4780cef876e"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/storage-scene-evidence-tested-runtime.json",
+      "sha256": "5554a8bdf069f0b5c0ee81899bed5be131cfc8483a94fbfffaf871cf2c75ce98"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/storage-scene-tests.log",
+      "sha256": "61ba7d4ea0549ecff0a2344aa3b896fa8efc232aaf523c26628e672c0bfcb68e"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/storage-scene-tests.receipt.json",
+      "sha256": "211b84fa0a22fe01662b2622a64ca4d3d53d75c36139d8303d1cb490122bb352"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/task-validation.log",
+      "sha256": "90e3ddffa807ef19523e77855653984be659ff7ab47ec66f04d41348c4cb85b3"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/task-validation.receipt.json",
+      "sha256": "556260867a1330daa40efabbc485f794a5d96568bc00438d39a65181f35ff033"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/tested-runtime.json",
+      "sha256": "5554a8bdf069f0b5c0ee81899bed5be131cfc8483a94fbfffaf871cf2c75ce98"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/usage-audit.json",
+      "sha256": "59a30cf3cb1bdc4c5e78e1d09b1ab96b77fd1e2f2c7c9cce3b5d7485667ee874"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/usage-audit.log",
+      "sha256": "2199ad4805a44e42854b69d4121ea9b1fd4adac667650e9322f8432aab4e65cc"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/usage-tests.log",
+      "sha256": "5ebbc3906b5558a339149cf36f7cb76f6db893db4b701d33e59a816a495bd012"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/verify-merged-package.py",
+      "sha256": "8a6cdefe885ecd92369835c66316fe4c35e865c93f79975fd53b3310ac7edc3e"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/whitespace-v2.log",
+      "sha256": "c2b9e866c0929d2ec0bb6c3267534b5ae746915dfaa30f29f560f3a1c98df191"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/whitespace-v2.receipt.json",
+      "sha256": "024a4c5132347c72770135661a73f8a0008e0ff58127b4f9ca3db990efad9279"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/whitespace.log",
+      "sha256": "5f09f8fae0921366ba47dbc4ed4ba094db7516b672b6ce2ca508c0983ca60054"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/whitespace.receipt.json",
+      "sha256": "80db2714d3368f749aa55e2f1633ff53ee912dc004a2b5ffdad2f4e80aa0e0a6"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/window-set-tests.log",
+      "sha256": "c054dda8e876e3d8eeada36656bb5ebf0bf9d573beb3a05c234422a808bb4242"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/warehouse-package/window-set-tests.receipt.json",
+      "sha256": "4c9891897efa5a9c29e0c08c823f4f1a6ee762c2dd60d4221716370f53dfe20d"
+    }
+  ]
+}

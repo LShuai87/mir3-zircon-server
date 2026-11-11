@@ -183,6 +183,8 @@ namespace Server.Models
                 Inventory[item.Slot] = item;
             }
 
+            NormalizeSharedEmblemSlot();
+
             ItemReviveTime = info.ItemReviveTime;
             ItemTime = SEnvir.Now;
 
@@ -201,6 +203,40 @@ namespace Server.Models
                 GameMaster = true;
                 Observer = true;
             }
+        }
+
+        // Upgrade once on login without changing enum values or recreating player items.
+        internal void NormalizeSharedEmblemSlot()
+        {
+            UserItem torch = Equipment[(int)EquipmentSlot.Torch];
+            if (torch == null) return;
+            if (Equipment[(int)EquipmentSlot.Emblem] == null)
+            {
+                torch.Slot = Globals.EquipmentOffSet + (int)EquipmentSlot.Emblem;
+                Equipment[(int)EquipmentSlot.Emblem] = torch;
+            }
+            else
+            {
+                int bagSlot = Array.FindIndex(Inventory, item => item == null);
+                if (bagSlot >= 0)
+                {
+                    torch.Slot = bagSlot;
+                    Inventory[bagSlot] = torch;
+                }
+                else
+                {
+                    MailInfo mail = SEnvir.MailInfoList.CreateNewObject();
+                    mail.Account = Character.Account;
+                    mail.Sender = "系统";
+                    mail.Subject = "勋章与照明装备栏调整";
+                    mail.Message = "勋章与蜡烛、火把现共用一个装备格。原照明装备已退回，请领取。";
+                    torch.Character = null;
+                    torch.Slot = 0;
+                    torch.Mail = mail;
+                    mail.HasItem = true;
+                }
+            }
+            Equipment[(int)EquipmentSlot.Torch] = null;
         }
 
         public override void Process()
@@ -335,20 +371,21 @@ namespace Server.Models
 
             TorchTime = SEnvir.Now.AddSeconds(10);
 
-            DamageItem(GridType.Equipment, (int)EquipmentSlot.Torch, Config.TorchRate);
-
-            UserItem torch = Equipment[(int)EquipmentSlot.Torch];
+            UserItem torch = Equipment[(int)EquipmentSlot.Emblem];
+            if (torch == null || torch.Info.ItemType != ItemType.Torch) return;
+            DamageItem(GridType.Equipment, (int)EquipmentSlot.Emblem, Config.TorchRate);
             if (torch == null || torch.CurrentDurability != 0 || torch.Info.Durability <= 0) return;
 
             RemoveItem(torch);
-            Equipment[(int)EquipmentSlot.Torch] = null;
+            Equipment[(int)EquipmentSlot.Emblem] = null;
             torch.Delete();
 
             RefreshWeight();
+            RefreshStats();
 
             Enqueue(new S.ItemChanged
             {
-                Link = new CellLinkInfo { GridType = GridType.Equipment, Slot = (int)EquipmentSlot.Torch },
+                Link = new CellLinkInfo { GridType = GridType.Equipment, Slot = (int)EquipmentSlot.Emblem },
                 Success = true,
             });
         }
@@ -7530,18 +7567,11 @@ namespace Server.Models
             if (!Functions.CorrectSlot(item.Info.ItemType, slot) || !CanUseItem(item))
                 return false;
 
-            switch (item.Info.ItemType)
-            {
-                case ItemType.Weapon:
-                case ItemType.Torch:
-                case ItemType.Shield:
-                    if (HandWeight - (Equipment[(int)slot]?.Info.Weight ?? 0) + item.Weight > Stats[Stat.HandWeight]) return false;
-                    break;
-                default:
-                    if (WearWeight - (Equipment[(int)slot]?.Info.Weight ?? 0) + item.Weight > Stats[Stat.WearWeight]) return false;
-                    break;
-
-            }
+            UserItem previous = Equipment[(int)slot];
+            bool hand = Functions.UsesHandWeight(item.Info.ItemType);
+            int previousWeight = previous != null && Functions.UsesHandWeight(previous.Info.ItemType) == hand ? previous.Weight : 0;
+            int weight = (hand ? HandWeight : WearWeight) - previousWeight + item.Weight;
+            if (weight > Stats[hand ? Stat.HandWeight : Stat.WearWeight]) return false;
             return true;
         }
 
@@ -16159,6 +16189,8 @@ namespace Server.Models
                             continue;
                     }
 
+                    // Shared-slot torches burn over time; medals retain ordinary combat wear.
+                    if (Equipment[i]?.Info.ItemType == ItemType.Torch) continue;
                     update = DamageItem(GridType.Equipment, i, SEnvir.Random.Next(2) + 1, true) || update;
                 }
 

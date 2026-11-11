@@ -1,0 +1,174 @@
+{
+    "checks":  41,
+    "results":  [
+                    {
+                        "name":  "actual compiled readiness remains false",
+                        "result":  "pass"
+                    },
+                    {
+                        "name":  "actual compiled frames and button groups are present",
+                        "result":  "pass"
+                    },
+                    {
+                        "name":  "buildId survives JSON round trip",
+                        "result":  "pass"
+                    },
+                    {
+                        "name":  "actual package hash matches catalog",
+                        "result":  "pass"
+                    },
+                    {
+                        "name":  "manifest generation is byte deterministic",
+                        "result":  "pass"
+                    },
+                    {
+                        "name":  "existing manifest cannot be overwritten",
+                        "result":  "pass"
+                    },
+                    {
+                        "name":  "existing manifest preserved",
+                        "result":  "pass"
+                    },
+                    {
+                        "name":  "fixture readiness substitution is unique",
+                        "result":  "pass"
+                    },
+                    {
+                        "name":  "fixture alone has compiled readiness true",
+                        "result":  "pass"
+                    },
+                    {
+                        "name":  "same resource contract frames in real and fixture clients",
+                        "result":  "pass"
+                    },
+                    {
+                        "name":  "Official requires explicit manifest",
+                        "result":  "pass"
+                    },
+                    {
+                        "name":  "unready actual client manifest cannot deploy",
+                        "result":  "pass"
+                    },
+                    {
+                        "name":  "rejected preflight changed no target files",
+                        "result":  "pass"
+                    },
+                    {
+                        "name":  "Official matching build deployed",
+                        "result":  "pass"
+                    },
+                    {
+                        "name":  "deployed manifest is same build",
+                        "result":  "pass"
+                    },
+                    {
+                        "name":  "preserved Zircon.ini",
+                        "result":  "pass"
+                    },
+                    {
+                        "name":  "preserved Data\\Users.db",
+                        "result":  "pass"
+                    },
+                    {
+                        "name":  "preserved Data\\System.db",
+                        "result":  "pass"
+                    },
+                    {
+                        "name":  "preserved Zircon.exe",
+                        "result":  "pass"
+                    },
+                    {
+                        "name":  "preserved SlimDX.dll",
+                        "result":  "pass"
+                    },
+                    {
+                        "name":  "preserved Zircon.exe.config",
+                        "result":  "pass"
+                    },
+                    {
+                        "name":  "nested Zl deployed with exact hash",
+                        "result":  "pass"
+                    },
+                    {
+                        "name":  "deployment did not modify source",
+                        "result":  "pass"
+                    },
+                    {
+                        "name":  "bad buildId rejected",
+                        "result":  "pass"
+                    },
+                    {
+                        "name":  "forged resource contract rejected against compiled client",
+                        "result":  "pass"
+                    },
+                    {
+                        "name":  "dependency traversal rejected",
+                        "result":  "pass"
+                    },
+                    {
+                        "name":  "duplicate dependency rejected",
+                        "result":  "pass"
+                    },
+                    {
+                        "name":  "omitted dependency rejected",
+                        "result":  "pass"
+                    },
+                    {
+                        "name":  "truncated source package rejected before copy",
+                        "result":  "pass"
+                    },
+                    {
+                        "name":  "manifest generation rejects actual corrupt package",
+                        "result":  "pass"
+                    },
+                    {
+                        "name":  "failed generation publishes no manifest",
+                        "result":  "pass"
+                    },
+                    {
+                        "name":  "same-length corrupt source package rejected",
+                        "result":  "pass"
+                    },
+                    {
+                        "name":  "missing package rejected before copy",
+                        "result":  "pass"
+                    },
+                    {
+                        "name":  "changed Zircon.exe rejected",
+                        "result":  "pass"
+                    },
+                    {
+                        "name":  "changed SlimDX.dll rejected",
+                        "result":  "pass"
+                    },
+                    {
+                        "name":  "negative deployment checks preserved existing output",
+                        "result":  "pass"
+                    },
+                    {
+                        "name":  "all targets checked before first target copy",
+                        "result":  "pass"
+                    },
+                    {
+                        "name":  "first target unchanged when second target invalid",
+                        "result":  "pass"
+                    },
+                    {
+                        "name":  "source cannot contain destination",
+                        "result":  "pass"
+                    },
+                    {
+                        "name":  "destination cannot contain source",
+                        "result":  "pass"
+                    },
+                    {
+                        "name":  "manifest cannot override real compiled readiness false",
+                        "result":  "pass"
+                    }
+                ],
+    "actualRuntimeReady":  false,
+    "actualFrameCount":  91,
+    "actualButtonCount":  19,
+    "officialSuccessUsesTestOnlyCompiledReadyFixture":  true,
+    "gameAcceptanceExecuted":  false
+}

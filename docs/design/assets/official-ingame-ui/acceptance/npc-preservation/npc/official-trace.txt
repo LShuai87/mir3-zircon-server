@@ -1,0 +1,50 @@
+style|{Width=509, Height=205}|{X=9,Y=16,Width=491,Height=180}|False|False|False|True|{X=19,Y=26}|{Width=471, Height=160}|[Font: Name=Microsoft Sans Serif, Size=8, Units=3, GdiCharSet=1, GdiVerticalFont=False]|-3758493|False|Left, Default, Top, WordBreak, WordEllipsis|{X=483,Y=5}|{Width=21, Height=21}|Interface|15|True
+packet|NPCButton|17
+packet|NPCButton|29
+packet|NPCButton|17
+packet|NPCButton|2147483647
+packet|NPCButton|2147483647
+packet|NPCClose
+packet|NPCClose
+service|BuySell|NPCGoodsBox|{X=0,Y=205}|{Width=245, Height=140}
+service|BuySell|NPCSellBox|{X=245,Y=205}|{Width=264, Height=342}
+packet|NPCClose
+service|Repair|NPCRepairBox|{X=0,Y=205}|{Width=509, Height=292}
+packet|NPCClose
+service|Refine|NPCRefineBox|{X=0,Y=205}|{Width=509, Height=170}
+packet|NPCClose
+service|RefineRetrieve|NPCRefineRetrieveBox|{X=0,Y=205}|{Width=509, Height=226}
+packet|NPCClose
+service|CompanionManage|NPCAdoptCompanionBox|{X=216,Y=205}|{Width=293, Height=176}
+service|CompanionManage|NPCCompanionStorageBox|{X=0,Y=205}|{Width=216, Height=395}
+packet|NPCClose
+service|WeddingRing|NPCWeddingRingBox|{X=431,Y=205}|{Width=78, Height=110}
+packet|NPCClose
+service|RefinementStone|NPCRefinementStoneBox|{X=0,Y=205}|{Width=509, Height=176}
+packet|NPCClose
+service|MasterRefine|NPCMasterRefineBox|{X=0,Y=205}|{Width=509, Height=170}
+packet|NPCClose
+packet|NPCClose
+service|ItemFragment|NPCItemFragmentBox|{X=245,Y=205}|{Width=264, Height=202}
+packet|NPCClose
+service|AccessoryRefineUpgrade|NPCAccessoryUpgradeBox|{X=0,Y=205}|{Width=509, Height=176}
+packet|NPCClose
+service|AccessoryRefineLevel|NPCAccessoryLevelBox|{X=245,Y=205}|{Width=264, Height=262}
+packet|NPCClose
+service|AccessoryReset|NPCAccessoryResetBox|{X=391,Y=205}|{Width=118, Height=130}
+packet|NPCClose
+service|WeaponCraft|NPCWeaponCraftBox|{X=241,Y=205}|{Width=268, Height=326}
+packet|NPCClose
+buy-sell|0|False|False|{X=0,Y=205}|{X=0,Y=205}
+packet|NPCClose
+buy-sell|1|True|False|{X=0,Y=205}|{X=245,Y=205}
+packet|NPCClose
+buy-sell|2|False|True|{X=0,Y=205}|{X=0,Y=205}
+packet|NPCClose
+buy-sell|3|True|True|{X=0,Y=205}|{X=245,Y=205}
+packet|NPCClose
+packet|NPCClose
+packet|NPCButton|61
+packet|NPCClose
+packet|NPCButton|29
+packet|NPCClose

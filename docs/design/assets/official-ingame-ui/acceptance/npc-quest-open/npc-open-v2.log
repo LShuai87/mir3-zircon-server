@@ -1,0 +1,18 @@
+System.InvalidOperationException: NPC group has no reachable title/close layout at this resolution.
+   在 Client.Envir.GameUiNpcGroupLayout.Apply(GameScene game, Size resolution)
+   在 Client.Scenes.Views.NPCDialog.ApplyServiceLocations()
+   在 Client.Envir.GameUiOfficialV1WindowSet.NpcCompanionVisibilityChanged(Object sender, EventArgs e)
+   在 Client.Controls.DXWindow.OnVisibleChanged(Boolean oValue, Boolean nValue)
+   在 Client.Controls.DXControl.set_Visible(Boolean value)
+   在 Client.Scenes.Views.NPCQuestDialog.UpdateQuestDisplay()
+   在 Client.Scenes.Views.NPCQuestDialog.OnNPCInfoChanged(NPCInfo oValue, NPCInfo nValue)
+   在 Client.Scenes.Views.NPCQuestDialog.set_NPCInfo(NPCInfo value)
+   在 OfficialUiFullSceneTests.ExerciseNpcQuestOpenLayout(GameScene scene, CConnection connection, NPCInfo npc, String evidence, String style)
+   在 OfficialUiFullSceneTests.ExerciseNpcQuestServices(GameScene scene, CConnection connection, Boolean official, String evidence, String style, List`1 trace)
+   在 OfficialUiFullSceneTests.ExerciseNpc(GameUiStartupSession owner, MapInfo map, String evidence, String style)
+   在 OfficialUiFullSceneTests.RunNpc(String[] args)
+Exception: E:\workspace\mir3-zircon-server\tests\Run-GameUiNpcTests.ps1:33
+Line |
+  33 |          if ($LASTEXITCODE -ne 0) { throw 'Npc tests failed.' }
+     |                                     ~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Npc tests failed.

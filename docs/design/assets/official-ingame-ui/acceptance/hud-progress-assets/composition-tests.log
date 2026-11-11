@@ -1,0 +1,9 @@
+.............................................E:\workspace\mir3-zircon-server\tests\game-ui\test_composed_ui.py:26: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+  self.assertTrue(set(result.getdata()) <= set(image.getdata()))
+E:\workspace\mir3-zircon-server\tests\game-ui\test_composed_ui.py:27: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+  self.assertEqual({0, 255}, set(result.getchannel('A').getdata()))
+..
+----------------------------------------------------------------------
+Ran 47 tests in 1.217s
+
+OK

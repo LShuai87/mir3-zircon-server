@@ -1,0 +1,7 @@
+checkpoints=17
+serializedPackets=26
+legacyParityFields=0
+originalAttributeLabels=57
+fieldsPerCheckpoint=68
+style=legacy
+releaseAccepted=false

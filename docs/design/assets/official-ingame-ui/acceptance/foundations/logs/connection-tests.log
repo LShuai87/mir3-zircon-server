@@ -1,0 +1,4 @@
+PASS: successful handoff retains socket ownership
+PASS: 200 cancellations complete safely; subsequent connection succeeds
+PASS: refused connection yields a failed result
+PASS: synchronous connection failure yields a failed result

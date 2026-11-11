@@ -1,0 +1,6 @@
+tests\game-ui\OfficialUiMiniMapLayoutTests.cs(157,29): error CS0144: 无法创建抽象类型或接口“DXWindow”的实例
+Exception: E:\workspace\mir3-zircon-server\tests\Run-GameUiMiniMapLayoutTests.ps1:29
+Line |
+  29 |  … STEXITCODE -ne 0) { throw 'Minimap layout test compilation failed.' }
+     |                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Minimap layout test compilation failed.

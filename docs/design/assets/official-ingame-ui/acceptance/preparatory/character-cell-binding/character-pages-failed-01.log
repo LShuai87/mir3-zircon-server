@@ -1,0 +1,11 @@
+System.Exception: Page replacement duplicated/lost frame hooks
+   在 OfficialUiCharacterPageTests.Check(Boolean value, String message)
+   在 OfficialUiCharacterPageTests.CellFrames()
+   在 OfficialUiCharacterPageTests.Main(String[] args)
+Character page tests failed.
+At E:\workspace\mir3-zircon-server\tests\Run-GameUiCharacterPageTests.ps1:37 char:127
++ ... ; if ($LASTEXITCODE -ne 0) { throw 'Character page tests failed.' } }
++                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (Character page tests failed.:String) [], RuntimeException
+    + FullyQualifiedErrorId : Character page tests failed.
+ 

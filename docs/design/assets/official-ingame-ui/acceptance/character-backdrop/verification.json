@@ -1,0 +1,553 @@
+{
+  "schemaVersion": 1,
+  "kind": "official-ui-character-page-artwork-restoration",
+  "checkedAtLocalDate": "2026-11-08",
+  "referenceResolution": [
+    1024,
+    768
+  ],
+  "windowMode": "windowed",
+  "releaseAccepted": false,
+  "sourceChanges": [
+    {
+      "path": "Client/Envir/GameUiOfficialV1Catalog.g.cs",
+      "beforeSha256": "8918aa6c9101fd32d37d6078a2d8614064b049970eaf800a1044e2ef1ca628a5",
+      "afterSha256": "76f7bd8a6e7d3ffa8b0f12e5cfc81d0757f39d4bea6e19e82a786308e9d4d1bd"
+    },
+    {
+      "path": "Client/Envir/GameUiOfficialV1WindowSet.cs",
+      "beforeSha256": "db00d951605c5c0801810fc6a91757877e4d1f37dbc8c5ad46bbbcb9ef643851",
+      "afterSha256": "fdb7739afcd983bc6351b6348319baaa24a1a3f1229f7fc060febee4c004abde"
+    },
+    {
+      "path": "Client/Scenes/Views/CharacterDialog.GameUi.cs",
+      "beforeSha256": "6f3a99744f68bd0eb4aff92a8b72982161fa8b0812cab67acfeee3f8842ae7e8",
+      "afterSha256": "873dc0a8b291caf1521e9f91c3e38ee4d8eefeac4691740f2e3c9bdd22b978a4"
+    },
+    {
+      "path": "Client/Scenes/Views/CharacterDialog.cs",
+      "beforeSha256": "a8f69388197d52d6aa2aa40f90eb21e044af7db8847e8709c57e5a1d2df0a7fb",
+      "afterSha256": "e633b29bc866f12722af0434859ad40fda0f88dd70e74a87e3a7baf61e8cff74"
+    },
+    {
+      "path": "build/game-ui/Compose-OfficialUi.py",
+      "beforeSha256": "5656fa2ec69e3b3cee23a9efc15952f11ac68dbc15767ec8c083780186094331",
+      "afterSha256": "9f8c2cfd1121a2966a6eb65932e1af9d1226912b1cf176870961e18c635a89ce"
+    },
+    {
+      "path": "build/game-ui/asset-manifest.json",
+      "beforeSha256": "e0af804567c06dadbc1899174b1070902ac977078cc6ae1fc08498480e1c9689",
+      "afterSha256": "843e2c92fa632a5d38cf4b34ebf05c6f5c0efe2a558557a5809e014597f3c9c0"
+    },
+    {
+      "path": "build/game-ui/character-bindings.json",
+      "beforeSha256": "2e3bc26da7b77e02e15484ccd7e924cb171d982950ef6426cf374bd3a5b3e36c",
+      "afterSha256": "99978681ca8d1d5e5cab18d923be40cb94e8abf60d964977cd054e4da32177e5"
+    },
+    {
+      "path": "build/game-ui/composition-recipe.json",
+      "beforeSha256": "1360876ba522819e30e14fa8c005a62460fa69c712de1a11da0fe1620a7559f3",
+      "afterSha256": "a4c05532825dab9be9a99094dd0a00da7dd659bc75534dbc617913ab13908ddd"
+    },
+    {
+      "path": "build/game-ui/layout-official-v1.json",
+      "beforeSha256": "85c1e8399367b6ae44a77c175aac4b581020735ba23d5576eff9ae81eca01e15",
+      "afterSha256": "99ce647e526840323f44877ec6815bd193c3851343f6831d2ba4572c72026d25"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-composition/character-bindings.draft.json",
+      "beforeSha256": "8a6a9a2aff584018f65c23e0a373c8dd653e0ee6872a8fa3e797e7e5d0cd2ace",
+      "afterSha256": "b821dc4b762a99ae9e8f03010d093fae24c28090a73e4598d95453f992f4dc31"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiCatalogTests.cs",
+      "beforeSha256": "1f504bcd676a4521cd271253970a87250804bdd8b30db3fcdb8c425794612bdb",
+      "afterSha256": "4f88e87a02da0f200f31f05fcb02469af14a69601d9ab44c7b0cd2af6968a458"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiStartupTests.cs",
+      "beforeSha256": "ba5da85b214600660c14a3a6c8743400e74d1bcf3f63e2569fe2594fb6f505be",
+      "afterSha256": "a7335e3ca46f021d916a13040d027c95b19d213354cfb1796a1fe9883c46e5e6"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiWindowSetTests.cs",
+      "beforeSha256": "d0cca444648931f75e2855d2b6131817d02b9bace723b1af797e4cb14f4613fd",
+      "afterSha256": "d08188368d0c7eaf665f43d974ccafb156500d1fa99f46812bcc6d29765397dc"
+    },
+    {
+      "path": "tests/game-ui/test_composed_ui.py",
+      "beforeSha256": "40af13e9248dc8b190a99b7bad24ca9dcfd946ecd04dfc0db2f8b695ed635b4e",
+      "afterSha256": "ea431ca48fc93ec6db2094131002faf3d377c629e558ed2c9881de4572098239"
+    }
+  ],
+  "sourceHashes": [
+    {
+      "path": "Client/Envir/GameUiOfficialV1Catalog.g.cs",
+      "sha256": "76f7bd8a6e7d3ffa8b0f12e5cfc81d0757f39d4bea6e19e82a786308e9d4d1bd"
+    },
+    {
+      "path": "Client/Envir/GameUiOfficialV1WindowSet.cs",
+      "sha256": "fdb7739afcd983bc6351b6348319baaa24a1a3f1229f7fc060febee4c004abde"
+    },
+    {
+      "path": "Client/Scenes/Views/CharacterDialog.GameUi.cs",
+      "sha256": "873dc0a8b291caf1521e9f91c3e38ee4d8eefeac4691740f2e3c9bdd22b978a4"
+    },
+    {
+      "path": "Client/Scenes/Views/CharacterDialog.cs",
+      "sha256": "e633b29bc866f12722af0434859ad40fda0f88dd70e74a87e3a7baf61e8cff74"
+    },
+    {
+      "path": "build/game-ui/Compose-OfficialUi.py",
+      "sha256": "9f8c2cfd1121a2966a6eb65932e1af9d1226912b1cf176870961e18c635a89ce"
+    },
+    {
+      "path": "build/game-ui/asset-manifest.json",
+      "sha256": "843e2c92fa632a5d38cf4b34ebf05c6f5c0efe2a558557a5809e014597f3c9c0"
+    },
+    {
+      "path": "build/game-ui/character-bindings.json",
+      "sha256": "99978681ca8d1d5e5cab18d923be40cb94e8abf60d964977cd054e4da32177e5"
+    },
+    {
+      "path": "build/game-ui/composition-recipe.json",
+      "sha256": "a4c05532825dab9be9a99094dd0a00da7dd659bc75534dbc617913ab13908ddd"
+    },
+    {
+      "path": "build/game-ui/layout-official-v1.json",
+      "sha256": "99ce647e526840323f44877ec6815bd193c3851343f6831d2ba4572c72026d25"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-composition/character-bindings.draft.json",
+      "sha256": "b821dc4b762a99ae9e8f03010d093fae24c28090a73e4598d95453f992f4dc31"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiCatalogTests.cs",
+      "sha256": "4f88e87a02da0f200f31f05fcb02469af14a69601d9ab44c7b0cd2af6968a458"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiStartupTests.cs",
+      "sha256": "a7335e3ca46f021d916a13040d027c95b19d213354cfb1796a1fe9883c46e5e6"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiWindowSetTests.cs",
+      "sha256": "d08188368d0c7eaf665f43d974ccafb156500d1fa99f46812bcc6d29765397dc"
+    },
+    {
+      "path": "tests/game-ui/test_composed_ui.py",
+      "sha256": "ea431ca48fc93ec6db2094131002faf3d377c629e558ed2c9881de4572098239"
+    }
+  ],
+  "registeredSourcesBefore": {
+    "path": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/registered-sources-before.json",
+    "sha256": "fa57d2ce40d873fb4d8102b0e8620844b5168df02b01a11d284eaf62528c06db",
+    "count": 159,
+    "allMatchedRegisteredHashes": true,
+    "unchangedCount": 145,
+    "changedWithExplicitTransitionCount": 14
+  },
+  "commands": [
+    {
+      "command": "MSBuild Client/Client.csproj /t:Build /p:Configuration=Debug /p:Platform=AnyCPU /nologo /v:minimal",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/build-debug.log",
+      "logSha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "command": "MSBuild Client/Client.csproj /t:Build /p:Configuration=Release /p:Platform=AnyCPU /nologo /v:minimal",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/build-release.log",
+      "logSha256": "c9e24428be1e56c8408af17aacfea3413de3953bfe426d10eb768782f5005ebc"
+    },
+    {
+      "command": "python -m unittest discover -s tests/game-ui -p test_composed_ui.py",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/composition-tests.log",
+      "logSha256": "a4e3e149a6b983c1e7c7069acf8f206b919b291e98dd8ed739a2026e1ebcc61c"
+    },
+    {
+      "command": "python -m unittest discover -s tests/game-ui -p test_*.py",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/python-regression.log",
+      "logSha256": "5f639257cd034e516cf4da4a9c4f560f605f044be722daff797924335e9fb139"
+    },
+    {
+      "command": "python build/game-ui/Compose-OfficialUi.py --decoded E:\\workspace\\mir3-ui-work\\hud-progress-selected-20261108-v1\\Decoded --output E:\\workspace\\mir3-ui-work\\character-art-20261108-v1\\art-v3 --recipe build/game-ui/composition-recipe.json",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/compose-final.log",
+      "logSha256": "a54fd9a966fb83e2bd09fa4a2f41bd38fd25ad73e01f1fff1ce9df247297fccc"
+    },
+    {
+      "command": "python build/game-ui/Compose-OfficialUi.py --decoded E:\\workspace\\mir3-ui-work\\hud-progress-selected-20261108-v1\\Decoded --output E:\\workspace\\mir3-ui-work\\character-art-20261108-v1\\art-repeat --recipe build/game-ui/composition-recipe.json",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/compose-repeat.log",
+      "logSha256": "a54fd9a966fb83e2bd09fa4a2f41bd38fd25ad73e01f1fff1ce9df247297fccc"
+    },
+    {
+      "command": "Compare SHA256 of all 129 composed files and the two independently packed OfficialV1.Zl files",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/determinism.log",
+      "logSha256": "adcf96a72d3127edbe4925fd003dff3a8e6aa68e9fbdbf6728e8598e2ff4ed8d"
+    },
+    {
+      "command": "python tests/game-ui/Verify-ComposedUi.py --art E:\\workspace\\mir3-ui-work\\character-art-20261108-v1\\art-v3 --package E:\\workspace\\mir3-ui-work\\character-art-20261108-v1\\zl-final --output E:\\workspace\\mir3-ui-work\\character-art-20261108-v1\\bc1",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/bc1.log",
+      "logSha256": "5035110bd74c7ab7eb8653d21e0063f4b46fe2e0264a4d9d52cccc883e4fcc1d"
+    },
+    {
+      "command": "pwsh -NoProfile -File tests/Run-GameUiComposedRenderTests.ps1 -PackagePath E:\\workspace\\mir3-ui-work\\character-art-20261108-v1\\zl-final -VerificationPath E:\\workspace\\mir3-ui-work\\character-art-20261108-v1\\bc1 -RenderPath E:\\workspace\\mir3-ui-work\\character-art-20261108-v1\\render-final",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/render.log",
+      "logSha256": "8ee65c819d8c871cc5735a2d0cdf1568ac0af1b2a84c974ca0de82f08213f9fa"
+    },
+    {
+      "command": "pwsh -NoProfile -File tests/Run-GameUiCatalogTests.ps1 -PackagePath E:\\workspace\\mir3-ui-work\\character-art-20261108-v1\\zl-final\\OfficialV1.Zl",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/catalog-tests.log",
+      "logSha256": "2eee26e017914144a6e92043909273c63efc0db17a9388b0a8f0df5bc443b09a"
+    },
+    {
+      "command": "pwsh -NoProfile -File tests/Run-GameUiStartupTests.ps1 -PackagePath E:\\workspace\\mir3-ui-work\\character-art-20261108-v1\\zl-final\\OfficialV1.Zl",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/startup-tests.log",
+      "logSha256": "9c69c072b79c3e362371df0ef87f46a17d6ab9959c7d62a4b7bf4d746a5bd3ff"
+    },
+    {
+      "command": "pwsh -NoProfile -File tests/Run-GameUiWindowSetTests.ps1 -PackagePath E:\\workspace\\mir3-ui-work\\character-art-20261108-v1\\zl-final\\OfficialV1.Zl -EvidenceDirectory E:\\workspace\\mir3-ui-work\\character-art-20261108-v1\\window-set",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/window-set.log",
+      "logSha256": "2d22e601a523fd4d1b3aeeeee1695e0362b21f8e942eb157fa9438819bf07f29"
+    },
+    {
+      "command": "pwsh -NoProfile -File tests/Run-GameUiFullSceneTests.ps1 -PackagePath E:\\workspace\\mir3-ui-work\\character-art-20261108-v1\\zl-final\\OfficialV1.Zl -EvidenceDirectory E:\\workspace\\mir3-ui-work\\character-art-20261108-v1\\scene-final",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/scene-final.log",
+      "logSha256": "0d85d4de7905eb608acc989200b5dfcc19842b35b62586889490caf606d4a988"
+    },
+    {
+      "command": "pwsh -NoProfile -File tests/Run-GameUiItemInteractionTests.ps1 -PackagePath E:\\workspace\\mir3-ui-work\\character-art-20261108-v1\\zl-final\\OfficialV1.Zl -EvidenceDirectory E:\\workspace\\mir3-ui-work\\character-art-20261108-v1\\item-regression",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/item-regression.log",
+      "logSha256": "ab9c87311be86e46702bd4397142393e28f9dd184bc5dcb5d1274cd8458620a5"
+    },
+    {
+      "command": "Windows SysWOW64 powershell.exe -NoProfile -ExecutionPolicy Bypass -File build/game-ui/New-GameUiReleaseManifest.ps1 -ClientDirectory E:/workspace/Debug/Client -ResourceRoot E:\\workspace\\mir3-ui-work\\character-art-20261108-v1\\resources -OutputPath E:\\workspace\\mir3-ui-work\\character-art-20261108-v1\\release-debug.json",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/release-debug.log",
+      "logSha256": "e84eac4be2e3d7e7d902fbd301e7751ba7701b0851d85c6d94b08bd857e34775"
+    },
+    {
+      "command": "Windows SysWOW64 powershell.exe -NoProfile -ExecutionPolicy Bypass -File build/game-ui/New-GameUiReleaseManifest.ps1 -ClientDirectory E:/workspace/Release/Client -ResourceRoot E:\\workspace\\mir3-ui-work\\character-art-20261108-v1\\resources -OutputPath E:\\workspace\\mir3-ui-work\\character-art-20261108-v1\\release-release.json",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/release-release.log",
+      "logSha256": "2c287047465555362e09e17259bbd113b5a818ca4b191f05a0d4e80f77dd7d1a"
+    },
+    {
+      "command": "C:\\Users\\shuai\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe build/game-ui/Compile-UiCatalog.py --manifest build/game-ui/asset-manifest.json --prepared E:\\workspace\\mir3-ui-work\\character-art-20261108-v1\\zl-final\\prepared-manifest.json --package E:\\workspace\\mir3-ui-work\\character-art-20261108-v1\\zl-final\\OfficialV1.Zl --recipe build/game-ui/composition-recipe.json --selection build/game-ui/reference-selection.json --source-libraries build/game-ui/selection-source-libraries.json --output Client/Envir/GameUiOfficialV1Catalog.g.cs --check",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/catalog-compile-check.log",
+      "logSha256": "6d48c473ab7b25912c35575eae3629a6bb046c2400a0052263879949940e77f8"
+    },
+    {
+      "command": "C:\\Users\\shuai\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe build/game-ui/Prepare-CharacterBindings.py",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/character-draft-check.log",
+      "logSha256": "d46d3fb965f725b580aa525c877f2ffbae8bc7ccf7a3a3b0330e2413c0661e92"
+    },
+    {
+      "command": "C:\\Users\\shuai\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe build/game-ui/Assemble-CharacterBindings.py --check",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/character-contract-check.log",
+      "logSha256": "5932bc5269e5c6e34910ecd3f36fca9797c3ba463775aafeaf2ec6cd4131e437"
+    },
+    {
+      "command": "C:\\Users\\shuai\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe build/game-ui/Validate-OfficialUiLayout.py --guards",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/layout-check.log",
+      "logSha256": "daf54465b490a35d68188f8d4f13fdc11bda5e451254a0f3a4f45644bad2b452"
+    }
+  ],
+  "package": {
+    "path": "E:\\workspace\\mir3-ui-work\\character-art-20261108-v1\\zl-final\\OfficialV1.Zl",
+    "sha256": "b7e648b077be93af3fad03772571f07bf338288310623e8d95f3062e91138c57",
+    "byteLength": 457400,
+    "frameCount": 92,
+    "buttonGroupCount": 19,
+    "runtimeReady": false,
+    "sourceRole": "character",
+    "newRole": "character-main-background",
+    "pageSize": [
+      412,
+      498
+    ]
+  },
+  "verification": {
+    "pythonTests": 138,
+    "compositionTestsIncluded": 53,
+    "catalogChecks": 4069,
+    "startupChecks": 351,
+    "windowSetChecks": 9267,
+    "fullSceneChecks": 180,
+    "fullScenePresentedFrames": 17,
+    "fullSceneDeviceResets": 7,
+    "itemInteractionChecks": 7519,
+    "coordinateHits": 1149,
+    "itemInteractionPresentedFrames": 15,
+    "itemInteractionDeviceResets": 6,
+    "d3dFrames": 92,
+    "d3dCompositions": 3,
+    "d3dPixels": 1030655,
+    "maximumRgbDifference": 5,
+    "rgbTolerance": 8
+  },
+  "visualInspection": {
+    "result": "candidate-reviewed-not-live-accepted",
+    "beforeReference": "docs/design/assets/official-ingame-ui/acceptance/full-scene/captures/official-panels.png",
+    "beforeReferenceSha256": "92e0c2577c05b8c319a915198c3e1937606d030c7f2f05d974a05ad07c8ffcf4",
+    "after": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/scene/official-CharacterTab.png",
+    "observations": [
+      "Dragon motif, inset border and readout wells restored on character page.",
+      "Original avatar and equipment/labels render above the backdrop.",
+      "Other three pages do not display the character backdrop.",
+      "Repaired old slot areas remain adaptation artwork requiring final fidelity review."
+    ]
+  },
+  "correctedDuringDevelopment": [
+    "Button source reuse was restricted to prevent weakening state provenance; non-button page-layer reuse is explicit.",
+    "Joined binding contract was regenerated with deterministic LF bytes after source-hash refresh.",
+    "Initial broad texture repairs showed seams; final explicit regions use illumination-preserving RGB blending."
+  ],
+  "limitations": [
+    "Offline synthetic users/map/items and injected responses; no login, live server or IME acceptance.",
+    "RuntimeReady=false; default Legacy; all G0 gates remain open.",
+    "NPC cards, secondary popups, display settings and login screens excluded.",
+    "Old slot repair does not recover original hidden dragon pixels."
+  ],
+  "evidenceFiles": [
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/art/character-main-background-d3d.png",
+      "sha256": "ecaad96cc4e4fb41bf20b0e01b0c80ee54efd8b03cacabf3cca8f13ece8d870d"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/art/character-main-background.png",
+      "sha256": "68dc19806111eaf932ffe56a277c2251837fff0639a08533347b2013c4524260"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/bc1/verification.json",
+      "sha256": "e191c4a28873b967016fd958b01445583c04130e4256011b101f6b2c0ea4dcfd"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/bc1.log",
+      "sha256": "5035110bd74c7ab7eb8653d21e0063f4b46fe2e0264a4d9d52cccc883e4fcc1d"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/build-debug.log",
+      "sha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/build-release.log",
+      "sha256": "c9e24428be1e56c8408af17aacfea3413de3953bfe426d10eb768782f5005ebc"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/catalog-compile-check.log",
+      "sha256": "6d48c473ab7b25912c35575eae3629a6bb046c2400a0052263879949940e77f8"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/catalog-tests.log",
+      "sha256": "2eee26e017914144a6e92043909273c63efc0db17a9388b0a8f0df5bc443b09a"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/character-before-after.png",
+      "sha256": "73e6dea9166632cf3f24bc29a06c4e280428f80e868912160ab431b0bb4bec29"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/character-contract-check.log",
+      "sha256": "5932bc5269e5c6e34910ecd3f36fca9797c3ba463775aafeaf2ec6cd4131e437"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/character-draft-check.log",
+      "sha256": "d46d3fb965f725b580aa525c877f2ffbae8bc7ccf7a3a3b0330e2413c0661e92"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/compose-final.log",
+      "sha256": "a54fd9a966fb83e2bd09fa4a2f41bd38fd25ad73e01f1fff1ce9df247297fccc"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/compose-repeat.log",
+      "sha256": "a54fd9a966fb83e2bd09fa4a2f41bd38fd25ad73e01f1fff1ce9df247297fccc"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/composition-tests.log",
+      "sha256": "a4e3e149a6b983c1e7c7069acf8f206b919b291e98dd8ed739a2026e1ebcc61c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/determinism.json",
+      "sha256": "74317dc100cd9790a477f7965efcf15352fe586c5bedf1a5d054c043226d7ac4"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/determinism.log",
+      "sha256": "adcf96a72d3127edbe4925fd003dff3a8e6aa68e9fbdbf6728e8598e2ff4ed8d"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/item-regression/assertions.txt",
+      "sha256": "9cb3328b9aa80e38b692da1e5910593e6b5c17766e5b454bb28e6ff503ec57ad"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/item-regression/coordinate-hits.txt",
+      "sha256": "a42bb4e870f92d2184bc4bb4ffe3c4bf9f150d15cfdbe2f1043599abb80be9cf"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/item-regression/legacy-packet-trace.txt",
+      "sha256": "2616428afb2fc1488d5a1123ba5066899b1115f9a7901986dd2ca6637713906d"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/item-regression/metrics.json",
+      "sha256": "4b8a42b819e12cd95e4f9caab8fbd2c622b4541454cfe03ad922ee75be1c1311"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/item-regression/official-filled-equipment.png",
+      "sha256": "ddc94ad79f1975768b9a33942d025c7d7fb970a4c04fcd4b95a915b89af43908"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/item-regression/official-filled-extra.png",
+      "sha256": "979db6f4cb108e31373b87803f30f8629fb4b1e9d4ebc6d7a16b2bd5b85675d8"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/item-regression/official-packet-trace.txt",
+      "sha256": "2616428afb2fc1488d5a1123ba5066899b1115f9a7901986dd2ca6637713906d"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/item-regression/official-reentry-packet-trace.txt",
+      "sha256": "2616428afb2fc1488d5a1123ba5066899b1115f9a7901986dd2ca6637713906d"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/item-regression/tested-runtime.json",
+      "sha256": "76e849d126cdb03789ac2eb6aa600ce0bb7aa39474754d583462ef56e2218dbf"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/item-regression.log",
+      "sha256": "ab9c87311be86e46702bd4397142393e28f9dd184bc5dcb5d1274cd8458620a5"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/layout-check.log",
+      "sha256": "daf54465b490a35d68188f8d4f13fdc11bda5e451254a0f3a4f45644bad2b452"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/package/composed-manifest.json",
+      "sha256": "e1012f36d3f228c7d4afbbb5ca24867c57245f3c7e046913700394e1d61a490a"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/package/prepared-manifest.json",
+      "sha256": "5d3254f2d708f67e4c44ef8eb215835722976c5d06e61168372f019b11a48454"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/python-regression.log",
+      "sha256": "5f639257cd034e516cf4da4a9c4f560f605f044be722daff797924335e9fb139"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/README.md",
+      "sha256": "eed3d6a1b3d5dec5de201d10c3db30cf16588c1746d9d8bd27b41082222ce3d7"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/registered-sources-before.json",
+      "sha256": "fa57d2ce40d873fb4d8102b0e8620844b5168df02b01a11d284eaf62528c06db"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/release-debug.json",
+      "sha256": "8d0ed483e7b6796b018e9606c782f6ace4b3d135b3e389f6e907f0257064285a"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/release-debug.log",
+      "sha256": "e84eac4be2e3d7e7d902fbd301e7751ba7701b0851d85c6d94b08bd857e34775"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/release-release.json",
+      "sha256": "27d617258e642f4def2976a218457b096ddf53c2cfdc6493fd902b1323aa7104"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/release-release.log",
+      "sha256": "2c287047465555362e09e17259bbd113b5a818ca4b191f05a0d4e80f77dd7d1a"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/render.log",
+      "sha256": "8ee65c819d8c871cc5735a2d0cdf1568ac0af1b2a84c974ca0de82f08213f9fa"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/scene/official-CharacterTab.png",
+      "sha256": "575f37d7956736f5421aab664bdc073e17f5e9b2158d0ed1abd42260e3ecceea"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/scene/official-extraEquipmentTab.png",
+      "sha256": "07f5b1dfdf1423e68bbb053839d10ab99021195e28776c629ba80e27129dfdb3"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/scene/official-HermitTab.png",
+      "sha256": "cdf73d3c2cb3b8f2cab067dcf1b789d9f4c635b7ab13a604d55537f4e565b830"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/scene/official-reentry-panels.png",
+      "sha256": "50ec636930cc447f73074fe8c9971bbea98b2b6b8053b15b31f2cf493abe9586"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/scene/official-reset-1024x768.png",
+      "sha256": "575f37d7956736f5421aab664bdc073e17f5e9b2158d0ed1abd42260e3ecceea"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/scene/official-reset-1920x1080.png",
+      "sha256": "148a2c8e8293eab0d2324ac4e117f64411151aa39690e2c3dbc25966c29e56b9"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/scene/official-StatsTab.png",
+      "sha256": "5617577f5b27bfde501f055f39eb5238e60764b7406956d4da05b6657a933ba8"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/scene/reset-pixel-probes.txt",
+      "sha256": "2c236cd844574b74b6d502b13ffed99b5cb29783fc53ea00587ca1543a18ac67"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/scene/tested-runtime.json",
+      "sha256": "76e849d126cdb03789ac2eb6aa600ce0bb7aa39474754d583462ef56e2218dbf"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/scene-final.log",
+      "sha256": "0d85d4de7905eb608acc989200b5dfcc19842b35b62586889490caf606d4a988"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/startup-tests.log",
+      "sha256": "9c69c072b79c3e362371df0ef87f46a17d6ab9959c7d62a4b7bf4d746a5bd3ff"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/window-set/legacy-glyph-restored.png",
+      "sha256": "0a53fff02c059efc67e4808ccfbd669c8560f8a164c6da2f2f6970301adcf2ff"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/window-set/legacy-glyph-suppressed.png",
+      "sha256": "5a739a1abe0ce2f11461d1c429810d6256b07eabeb58321d7f9ba821f84b2cab"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/character-backdrop/window-set.log",
+      "sha256": "2d22e601a523fd4d1b3aeeeee1695e0362b21f8e942eb157fa9438819bf07f29"
+    }
+  ]
+}

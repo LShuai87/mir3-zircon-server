@@ -1,0 +1,7 @@
+{
+  "originalBuilderBodyUnchanged": true,
+  "builderSha256": "764834ec5b58a454bd9d9c3831eb22c9359653115caf7989f6fc159696cb7845",
+  "changes": "Presentation and wheel routing only; item data and original label text, fonts, quality/condition colours retained.",
+  "overflow": "Viewport-sized texture, original labels preserved but hidden during overflow; continuous wheel reading with partial notch carry, refresh/resize retention and immediate owner rollback.",
+  "unlimitedInputAccepted": false
+}

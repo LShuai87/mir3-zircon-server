@@ -1,0 +1,229 @@
+{
+  "schemaVersion": 1,
+  "kind": "official-ui-optional-minimap-layout-verification",
+  "checkedAtLocalDate": "2026-11-08",
+  "referenceResolution": [
+    1024,
+    768
+  ],
+  "releaseAccepted": false,
+  "sourceChanges": [
+    {
+      "path": "Client/Client.csproj",
+      "beforeSha256": "5310f52443490fe1cc19fe334cc44aa3625d918625ae09ce31a8ba1960b5526b",
+      "afterSha256": "6a6ccab684d43a9b64a463669944bdeebdbd64567436c1a9241d67a186abe427"
+    },
+    {
+      "path": "Client/Controls/DXWindow.cs",
+      "beforeSha256": "9d8159ed7621b473ca15b054907a0cff5f7ed62cb70381e8ed3b42d376eaf95f",
+      "afterSha256": "4d210da6477c03d85aec9e68b2b40e4c7a51e96a7521c51082eddf3159e55ca8"
+    }
+  ],
+  "sourceHashes": [
+    {
+      "path": "Client/Client.csproj",
+      "sha256": "6a6ccab684d43a9b64a463669944bdeebdbd64567436c1a9241d67a186abe427"
+    },
+    {
+      "path": "Client/Controls/DXWindow.cs",
+      "sha256": "4d210da6477c03d85aec9e68b2b40e4c7a51e96a7521c51082eddf3159e55ca8"
+    },
+    {
+      "path": "Client/Scenes/Views/MiniMapDialog.cs",
+      "sha256": "2d35d998b1c96564bc7071d3c636c861d195ea21956822ebc26b2210cb66e644"
+    },
+    {
+      "path": "Client/Envir/GameUiMiniMapLayout.cs",
+      "sha256": "3e0ec21cdb1956b072afd38749c99020aabc6bf3a134c79432bfe22166fb595c"
+    },
+    {
+      "path": "Client/Scenes/Views/MiniMapDialog.GameUi.cs",
+      "sha256": "b6e604cda017684a11d6a76b40bc978a73e366f257d3de36261a4dd120e44c99"
+    },
+    {
+      "path": "tests/Run-GameUiMiniMapLayoutTests.ps1",
+      "sha256": "a03f9ffe214e8a6102e947d79d85b0ea4d29db3e295b98be6d01a494f3f2166f"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiMiniMapLayoutTests.cs",
+      "sha256": "354e3688d2bce8f4ef5c579de8ca2f7ca1ccfaa548337fd7e8cbee23898af039"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiMiniMapRenderTests.cs",
+      "sha256": "129fb88068ae0eba7006da053e6181777e985e2fbb3886dd60d8efa489d6f1e9"
+    },
+    {
+      "path": "build/game-ui/layout-official-v1.json",
+      "sha256": "b39fa17ba46f9424a7c5b713a1c77cf7d16b31570a1320232f747239ccd8f509"
+    }
+  ],
+  "priorSourceHashes": [
+    {
+      "path": "Client/Client.csproj",
+      "sha256": "5310f52443490fe1cc19fe334cc44aa3625d918625ae09ce31a8ba1960b5526b"
+    },
+    {
+      "path": "Client/Controls/DXWindow.cs",
+      "sha256": "9d8159ed7621b473ca15b054907a0cff5f7ed62cb70381e8ed3b42d376eaf95f"
+    },
+    {
+      "path": "Client/Scenes/Views/MiniMapDialog.cs",
+      "sha256": "bfa3fcee860c19afc3e9f4e32fa38fdbdd1428270d2a0e47789e5ac30e244791"
+    }
+  ],
+  "newlyRegisteredSourceChanges": [
+    {
+      "path": "Client/Scenes/Views/MiniMapDialog.cs",
+      "beforeSha256": "bfa3fcee860c19afc3e9f4e32fa38fdbdd1428270d2a0e47789e5ac30e244791",
+      "afterSha256": "2d35d998b1c96564bc7071d3c636c861d195ea21956822ebc26b2210cb66e644"
+    }
+  ],
+  "commands": [
+    {
+      "command": "MSBuild.exe Client/Client.csproj /t:Build /p:Configuration=Debug /p:Platform=AnyCPU /nologo /v:minimal",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/minimap-layout/build-debug.log",
+      "logSha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "command": "powershell -NoProfile -File tests/Run-GameUiMiniMapLayoutTests.ps1 -RenderPath E:/workspace/mir3-zircon-server/docs/design/assets/official-ingame-ui/acceptance/preparatory/minimap-layout/render",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/minimap-layout/minimap.log",
+      "logSha256": "54c857b41246ae652acbc918c3a97a677caeaaf49feec32fd93f9dd6f4b8d691"
+    },
+    {
+      "command": "powershell -NoProfile -File tests/Run-GameUiTests.ps1 -Suite Controls -RenderPath E:/workspace/mir3-zircon-server/docs/design/assets/official-ingame-ui/acceptance/preparatory/minimap-layout/render/common-controls",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/minimap-layout/controls.log",
+      "logSha256": "3457e407a9f55f52dae7d3ff59625382122358e6edaf722c4aacfadab5f5f55e"
+    },
+    {
+      "command": "powershell -NoProfile -File tests/Run-GameUiInventoryLayoutTests.ps1",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/minimap-layout/inventory.log",
+      "logSha256": "35697536193c3522b1b1289b0efa40be97a77fde7e15d70e414f17451d6756ee"
+    },
+    {
+      "command": "powershell -NoProfile -File tests/Run-GameUiBeltLayoutTests.ps1",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/minimap-layout/belt.log",
+      "logSha256": "f10513866a32dfb52540bfb4eea1e2e07594ede5571bd9140828968d8ae0cf66"
+    },
+    {
+      "command": "powershell -NoProfile -File tests/Run-GameUiLayoutContractTests.ps1 -PythonPath C:/Users/shuai/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/minimap-layout/layout.log",
+      "logSha256": "73bbd53121dc7e8a9628ecf8fe0f957dd50c7943e80cf6a1a7bc8c3c50eaa31c"
+    },
+    {
+      "command": "MSBuild.exe Client/Client.csproj /t:Build /p:Configuration=Release /p:Platform=AnyCPU /nologo /v:minimal",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/minimap-layout/build-release.log",
+      "logSha256": "c9e24428be1e56c8408af17aacfea3413de3953bfe426d10eb768782f5005ebc"
+    },
+    {
+      "command": "git -c core.whitespace=cr-at-eol diff --check",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/minimap-layout/diff-check.log",
+      "logSha256": "01c4e31cb2ef40cc6b4e4fc39478b8bcac51e36fdd1bf2e539b481c13c917b9d"
+    }
+  ],
+  "renderedArtifacts": [
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/minimap-layout/render/viewport-1.png",
+      "sha256": "eaed5ed5c01c933f92f215957c9da65b446f16651bfbda8d1166d3b20309c4d0",
+      "resolution": [
+        1024,
+        768
+      ]
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/minimap-layout/render/viewport-2.png",
+      "sha256": "110aaf2104212a07807fb968c721379f12bc3bf242f011849092e0fb9d4804f4",
+      "resolution": [
+        1024,
+        768
+      ]
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/minimap-layout/render/viewport-3.png",
+      "sha256": "307755fc78d262ec8f7c889a7d385f6c4f56d7a19d1840f14d437b572b41c0e2",
+      "resolution": [
+        1024,
+        768
+      ]
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/minimap-layout/render/viewport-4.png",
+      "sha256": "5d9743d50053ce561b56cb0795fb379201a9d20415506fea16d88398f1d80b10",
+      "resolution": [
+        1024,
+        768
+      ]
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/minimap-layout/render/viewport-5.png",
+      "sha256": "281779fceb80c80044d53690ac0ff1a87931dd02a4d2b228c04fb26a3eb7739b",
+      "resolution": [
+        1024,
+        768
+      ]
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/preparatory/minimap-layout/render/viewport-6.png",
+      "sha256": "073d6eea89a59925118079db9c5a4bedd92a4a6a37df90e6b766459f14ab7647",
+      "resolution": [
+        1024,
+        768
+      ]
+    }
+  ],
+  "results": {
+    "minimapAssertions": 538,
+    "gpuPixelComparisons": 206040,
+    "gpuWindowPlacements": 2,
+    "gpuMapStates": [
+      "large-panned",
+      "small-on-black",
+      "missing-on-black"
+    ],
+    "originalPanelAndImagePreserved": true,
+    "originalMarkerControlsPreserved": true,
+    "originalCloseActionPreserved": true,
+    "liveCoordinatesRefreshed": true,
+    "mapSubscriberTransitionsTested": true,
+    "initialAndReplacementObserverFailureRecoveryTested": true,
+    "skinChangeHookRegressionTested": true,
+    "commonWindowSkinAssertions": 60,
+    "commonGpuAssertions": 14,
+    "commonControlsAssertions": 26,
+    "inventoryRegressionAssertions": 6349,
+    "beltRegressionAssertions": 6157,
+    "layoutNodeCount": 234,
+    "layoutInteractiveCount": 109,
+    "layoutPlacements": 60,
+    "deterministicGeneratedFiles": 12,
+    "invalidLayoutContractsRejected": 11,
+    "debugBuild": "pass",
+    "releaseBuild": "pass",
+    "runtimeEnabled": false,
+    "gameAcceptanceExecuted": false
+  },
+  "limitations": [
+    "GameScene does not invoke this optional adapter. OfficialV1 remains incomplete and disabled; UI-16 and G0 are not complete.",
+    "Bind UseGameUiMiniMap before applying a compatible fixed-size skin or loading settings. Window 166x198; viewport [11,21,150,152]; coordinates [24,177,118,16]; collapse [146,2,20,16]. Compiled geometry is checked against the layout JSON.",
+    "Reuse original Panel, Image, map library, marker dictionary and marker controls, ScaleX/Y, panning and CloseButton handler. The added coordinate label is noninteractive. Disable restores captured skin, window size, panel flags/bounds and close button, then recenters on the current native marker.",
+    "OnWindowSkinChanged is an empty protected DXWindow hook invoked after generic skin/client/button geometry restoration; only the minimap override reapplies its active fixed layout. Common window, GPU, inventory and belt regressions passed.",
+    "Isolated tests invoke the real map-change subscriber with stub metadata; no map-file loading, lighting, audio, live map transition, networking or game login was executed. External replacement/disposal of original controls is unsupported and replacement binding rejects identity mismatches.",
+    "GPU evidence uses hardware SlimDX D3D9, native window Draw and synthetic solid-colour Zl images at 1024x768. It checks clipping/order/backdrop and state restoration; final official artwork, live marker appearance, actual input dispatch, performance, settings persistence and A01..A20 acceptance remain unverified.",
+    "1024x768 is the user-confirmed logical baseline; archived captures are reused. No further login, screenshots, chat sending or display-setting changes requested. NPC interaction cards and secondary popups retain existing styles."
+  ]
+}

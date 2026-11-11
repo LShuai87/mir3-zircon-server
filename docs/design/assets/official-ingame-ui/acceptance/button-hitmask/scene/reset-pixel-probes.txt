@@ -1,0 +1,5 @@
+name|x|y|width|height|identicalPixels
+character panel|8|4|412|562|231544
+inventory panel|740|56|276|412|113712
+character panel|8|4|412|562|231544
+inventory panel|740|56|276|412|113712

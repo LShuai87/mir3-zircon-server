@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-07T08:18:46.654Z",
+  "captureId": "06-chat-chinese-input",
+  "timing": "Source hashes read after screenshot; no pre-capture check was made.",
+  "files": [
+    {
+      "library": "UI",
+      "extension": "mix",
+      "sha256": "0c065bb6af826689704de5ef5cabec6768703fcc71dc82574f68b7822b617ea2",
+      "snapshotSha256": "0c065bb6af826689704de5ef5cabec6768703fcc71dc82574f68b7822b617ea2",
+      "matchesSnapshot": true
+    },
+    {
+      "library": "UI",
+      "extension": "miz",
+      "sha256": "6adab7f361cdd76d91d025821bddeba20d5d5e588e09cb6fa19f5106caec7201",
+      "snapshotSha256": "6adab7f361cdd76d91d025821bddeba20d5d5e588e09cb6fa19f5106caec7201",
+      "matchesSnapshot": true
+    },
+    {
+      "library": "Interface",
+      "extension": "mix",
+      "sha256": "7c44f857fbc614e7ba9a5a52c1882e097a1157c6819697a37617952c7053d912",
+      "snapshotSha256": "7c44f857fbc614e7ba9a5a52c1882e097a1157c6819697a37617952c7053d912",
+      "matchesSnapshot": true
+    },
+    {
+      "library": "Interface",
+      "extension": "miz",
+      "sha256": "f4a726ec4a1e95428548de676fcccb32b84487b616c891a8c1070d8ffed1494e",
+      "snapshotSha256": "f4a726ec4a1e95428548de676fcccb32b84487b616c891a8c1070d8ffed1494e",
+      "matchesSnapshot": true
+    },
+    {
+      "library": "GameInter",
+      "extension": "mix",
+      "sha256": "7e42a6007b393ddfa2478ad47f5253192b8a5990d7d34baf11a87a1f48f058ce",
+      "snapshotSha256": "7e42a6007b393ddfa2478ad47f5253192b8a5990d7d34baf11a87a1f48f058ce",
+      "matchesSnapshot": true
+    },
+    {
+      "library": "GameInter",
+      "extension": "miz",
+      "sha256": "69a74d00a21b62f3441e4f455e195b33ceba4f90fffe5a582e17daef10af6305",
+      "snapshotSha256": "69a74d00a21b62f3441e4f455e195b33ceba4f90fffe5a582e17daef10af6305",
+      "matchesSnapshot": true
+    },
+    {
+      "library": "ProgUse",
+      "extension": "mix",
+      "sha256": "900b55c2053da277635c0ea2e825d4de009e0e99d54328296f3de55d1781ef9e",
+      "snapshotSha256": "900b55c2053da277635c0ea2e825d4de009e0e99d54328296f3de55d1781ef9e",
+      "matchesSnapshot": true
+    },
+    {
+      "library": "ProgUse",
+      "extension": "miz",
+      "sha256": "4fe6978a46b2e8af3a1b64115e339664c6fbd30e12caec6e8a2c225d6a4c1f71",
+      "snapshotSha256": "4fe6978a46b2e8af3a1b64115e339664c6fbd30e12caec6e8a2c225d6a4c1f71",
+      "matchesSnapshot": true
+    }
+  ]
+}

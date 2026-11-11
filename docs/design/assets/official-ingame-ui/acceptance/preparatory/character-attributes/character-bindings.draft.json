@@ -1,0 +1,1573 @@
+{
+  "schemaVersion": 1,
+  "kind": "draft-character-binding-contract",
+  "status": "draft",
+  "productionBindingAllowed": false,
+  "releaseAccepted": false,
+  "layoutFrozen": false,
+  "tabs": [
+    {
+      "id": "character",
+      "label": "角色"
+    },
+    {
+      "id": "extraEquipment",
+      "label": "扩展装备"
+    },
+    {
+      "id": "status",
+      "label": "状态"
+    },
+    {
+      "id": "hermit",
+      "label": "修炼"
+    }
+  ],
+  "sourceHashes": [
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/baseline/implementation-start/baseline.json",
+      "sha256": "f12b9f10b7a20607c8f9938cb389ccd79e1ba97cb1472d3d1e34a4949e2977a9"
+    },
+    {
+      "path": "docs/design/official-ingame-ui-implementation-plan.md",
+      "sha256": "f8c0a002b3821fabb54993792c354c4eff35eec51f9cfdc418535017c13069e9"
+    },
+    {
+      "path": "Client/Scenes/Views/CharacterDialog.cs",
+      "sha256": "5a9ba738c8f2c3de23438861bc74f3014fd19076aa69fd1f294f7ce1d6ae3cdd"
+    },
+    {
+      "path": "Library/Enum.cs",
+      "sha256": "c08f31eb7cb590eab4a0622305461535f7b2f0d0faf8dfc8d039378f711d70cb"
+    },
+    {
+      "path": "Client/Scenes/GameScene.cs",
+      "sha256": "2a663876bfe103bd55e52afaf74f370b87f2c0ece99e3505b61dfd82dcc56ee4"
+    },
+    {
+      "path": "Client/Models/UserObject.cs",
+      "sha256": "62ea8a130ab9567f803ef1420b0865aed99cc8ddcf6f76b42c4cafef2ae06abc"
+    },
+    {
+      "path": "Client/Envir/CConnection.cs",
+      "sha256": "423e46eeb1a01089ddc211cc0ebfaf5c79144a1da3bd7b0c981e44d9fe7d1fbc"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/reference/panel-matching.json",
+      "sha256": "0395f9c379f24126b3b00f3d5ef531b5a87441bae29b5205188986e634d5a1f0"
+    },
+    {
+      "path": "Client/Envir/GameUiCharacterReadouts.cs",
+      "sha256": "56fd4c059048078f20332c7f506d9ba5443388fc912749983774603a626df015"
+    },
+    {
+      "path": "Client/Scenes/Views/MainPanel.cs",
+      "sha256": "9dc5d908e47aba577e12f8f3b45c5f0fd920c021ce8731769b5655c557f17df2"
+    },
+    {
+      "path": "Client/Scenes/Views/CharacterDialog.GameUi.cs",
+      "sha256": "659654c2f008f9322f990aca54a07cbdca93143312d6adbbe77da6fc614635e2"
+    },
+    {
+      "path": "Client/Envir/GameUiCharacterEquipmentLayout.cs",
+      "sha256": "26b4b94e2bd15a853b9af0f41ee7eedd84f9ce529d43c56a452a2ea3b330d7af"
+    },
+    {
+      "path": "Client/Controls/DXTabControl.cs",
+      "sha256": "4682cc0df089564b768be676312309ce5bf05409a5a1cf770ee78534aa4fb624"
+    },
+    {
+      "path": "Client/Envir/GameUiCharacterAttributeLayout.cs",
+      "sha256": "07912f4730181ed887976e93e5f4cf5306b73d6b0af98b0f3cb4fb00e6ba6d40"
+    },
+    {
+      "path": "Client/Scenes/Views/CharacterDialog.GameUiAttributes.cs",
+      "sha256": "e430ee90de813001438adc108d8d3c3635b020a7a53ef26b96a140db998e720b"
+    }
+  ],
+  "historicalTargetText": {
+    "authoritativeForRouting": false,
+    "replacementCharacterCount": 0,
+    "reason": "Historical target-page text contains decoding replacement characters; routes are re-derived from frozen plan section 6.3 using stable IDs."
+  },
+  "equipmentPageImplementation": {
+    "status": "implemented_opt_in",
+    "runtimeEnabled": false,
+    "entrypoint": {
+      "path": "Client/Scenes/Views/CharacterDialog.GameUi.cs",
+      "line": 16,
+      "anchor": "public void UseGameUiEquipmentPages(GameUiCharacterEquipmentLayout layout)"
+    },
+    "catalog": {
+      "path": "Client/Envir/GameUiCharacterEquipmentLayout.cs",
+      "line": 68,
+      "anchor": "public static GameUiCharacterEquipmentLayout CreateOfficialCandidate()"
+    },
+    "test": "tests/game-ui/OfficialUiCharacterPageTests.cs",
+    "verification": "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-pages/verification.json",
+    "scope": "Four headers/pages and original 16 equipment cells. Attribute placement has its own opt-in API below; preview pivot and final art remain pending."
+  },
+  "attributePlacementImplementation": {
+    "status": "implemented_opt_in",
+    "runtimeEnabled": false,
+    "entrypoint": {
+      "path": "Client/Scenes/Views/CharacterDialog.GameUiAttributes.cs",
+      "line": 20,
+      "anchor": "public void UseGameUiAttributes(GameUiCharacterAttributeLayout layout)"
+    },
+    "catalog": {
+      "path": "Client/Envir/GameUiCharacterAttributeLayout.cs",
+      "line": 60,
+      "anchor": "public static GameUiCharacterAttributeLayout CreateOfficialCandidate()"
+    },
+    "test": "tests/game-ui/OfficialUiCharacterAttributeTests.cs",
+    "verification": "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-attributes/verification.json",
+    "originalValues": 57,
+    "originalCaptions": 27,
+    "originalTagIcons": 30,
+    "scope": "Reuse and route all 57 dictionary values, original captions and Tag icons; fixed overflow bounds and complete value tooltips; preserve UpdateStats and restore legacy geometry/z-order/subscriptions. Named labels, controls, preview and artwork remain pending."
+  },
+  "equipment": [
+    {
+      "id": "equipment.Weapon",
+      "slotId": 0,
+      "enumName": "Weapon",
+      "label": "武器",
+      "control": "Grid[0]",
+      "targetTab": "character",
+      "orderInTab": 0,
+      "visualRect": null,
+      "hitRect": null,
+      "iconRect": null
+    },
+    {
+      "id": "equipment.Armour",
+      "slotId": 1,
+      "enumName": "Armour",
+      "label": "盔甲",
+      "control": "Grid[1]",
+      "targetTab": "character",
+      "orderInTab": 1,
+      "visualRect": null,
+      "hitRect": null,
+      "iconRect": null
+    },
+    {
+      "id": "equipment.Helmet",
+      "slotId": 2,
+      "enumName": "Helmet",
+      "label": "头盔",
+      "control": "Grid[2]",
+      "targetTab": "character",
+      "orderInTab": 2,
+      "visualRect": null,
+      "hitRect": null,
+      "iconRect": null
+    },
+    {
+      "id": "equipment.Torch",
+      "slotId": 3,
+      "enumName": "Torch",
+      "label": "火把",
+      "control": "Grid[3]",
+      "targetTab": "extraEquipment",
+      "orderInTab": 0,
+      "visualRect": null,
+      "hitRect": null,
+      "iconRect": null
+    },
+    {
+      "id": "equipment.Necklace",
+      "slotId": 4,
+      "enumName": "Necklace",
+      "label": "项链",
+      "control": "Grid[4]",
+      "targetTab": "character",
+      "orderInTab": 3,
+      "visualRect": null,
+      "hitRect": null,
+      "iconRect": null
+    },
+    {
+      "id": "equipment.BraceletL",
+      "slotId": 5,
+      "enumName": "BraceletL",
+      "label": "左手镯",
+      "control": "Grid[5]",
+      "targetTab": "character",
+      "orderInTab": 4,
+      "visualRect": null,
+      "hitRect": null,
+      "iconRect": null
+    },
+    {
+      "id": "equipment.BraceletR",
+      "slotId": 6,
+      "enumName": "BraceletR",
+      "label": "右手镯",
+      "control": "Grid[6]",
+      "targetTab": "character",
+      "orderInTab": 5,
+      "visualRect": null,
+      "hitRect": null,
+      "iconRect": null
+    },
+    {
+      "id": "equipment.RingL",
+      "slotId": 7,
+      "enumName": "RingL",
+      "label": "左戒指",
+      "control": "Grid[7]",
+      "targetTab": "character",
+      "orderInTab": 6,
+      "visualRect": null,
+      "hitRect": null,
+      "iconRect": null
+    },
+    {
+      "id": "equipment.RingR",
+      "slotId": 8,
+      "enumName": "RingR",
+      "label": "右戒指",
+      "control": "Grid[8]",
+      "targetTab": "character",
+      "orderInTab": 7,
+      "visualRect": null,
+      "hitRect": null,
+      "iconRect": null
+    },
+    {
+      "id": "equipment.Shoes",
+      "slotId": 9,
+      "enumName": "Shoes",
+      "label": "鞋子",
+      "control": "Grid[9]",
+      "targetTab": "character",
+      "orderInTab": 8,
+      "visualRect": null,
+      "hitRect": null,
+      "iconRect": null
+    },
+    {
+      "id": "equipment.Poison",
+      "slotId": 10,
+      "enumName": "Poison",
+      "label": "药品",
+      "control": "Grid[10]",
+      "targetTab": "extraEquipment",
+      "orderInTab": 1,
+      "visualRect": null,
+      "hitRect": null,
+      "iconRect": null
+    },
+    {
+      "id": "equipment.Amulet",
+      "slotId": 11,
+      "enumName": "Amulet",
+      "label": "护符",
+      "control": "Grid[11]",
+      "targetTab": "extraEquipment",
+      "orderInTab": 2,
+      "visualRect": null,
+      "hitRect": null,
+      "iconRect": null
+    },
+    {
+      "id": "equipment.Flower",
+      "slotId": 12,
+      "enumName": "Flower",
+      "label": "鲜花",
+      "control": "Grid[12]",
+      "targetTab": "extraEquipment",
+      "orderInTab": 3,
+      "visualRect": null,
+      "hitRect": null,
+      "iconRect": null
+    },
+    {
+      "id": "equipment.HorseArmour",
+      "slotId": 13,
+      "enumName": "HorseArmour",
+      "label": "马护甲",
+      "control": "Grid[13]",
+      "targetTab": "extraEquipment",
+      "orderInTab": 4,
+      "visualRect": null,
+      "hitRect": null,
+      "iconRect": null
+    },
+    {
+      "id": "equipment.Emblem",
+      "slotId": 14,
+      "enumName": "Emblem",
+      "label": "徽章",
+      "control": "Grid[14]",
+      "targetTab": "extraEquipment",
+      "orderInTab": 5,
+      "visualRect": null,
+      "hitRect": null,
+      "iconRect": null
+    },
+    {
+      "id": "equipment.Shield",
+      "slotId": 15,
+      "enumName": "Shield",
+      "label": "盾牌",
+      "control": "Grid[15]",
+      "targetTab": "extraEquipment",
+      "orderInTab": 6,
+      "visualRect": null,
+      "hitRect": null,
+      "iconRect": null
+    }
+  ],
+  "statBindings": [
+    {
+      "id": "DisplayStats.MaxAC",
+      "control": "DisplayStats[Stat.MaxAC]",
+      "stat": "MaxAC",
+      "targetTab": "character",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-get-format",
+      "refreshAt": "CharacterDialog.UpdateStats",
+      "keepTagIcon": false,
+      "sourceEvidence": {
+        "path": "Client/Scenes/Views/CharacterDialog.cs",
+        "line": 356,
+        "anchor": "            DisplayStats[Stat.MaxAC] = new DXLabel"
+      }
+    },
+    {
+      "id": "DisplayStats.MaxMR",
+      "control": "DisplayStats[Stat.MaxMR]",
+      "stat": "MaxMR",
+      "targetTab": "character",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-get-format",
+      "refreshAt": "CharacterDialog.UpdateStats",
+      "keepTagIcon": false,
+      "sourceEvidence": {
+        "path": "Client/Scenes/Views/CharacterDialog.cs",
+        "line": 372,
+        "anchor": "            DisplayStats[Stat.MaxMR] = new DXLabel"
+      }
+    },
+    {
+      "id": "DisplayStats.MaxDC",
+      "control": "DisplayStats[Stat.MaxDC]",
+      "stat": "MaxDC",
+      "targetTab": "character",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-get-format",
+      "refreshAt": "CharacterDialog.UpdateStats",
+      "keepTagIcon": false,
+      "sourceEvidence": {
+        "path": "Client/Scenes/Views/CharacterDialog.cs",
+        "line": 388,
+        "anchor": "            DisplayStats[Stat.MaxDC] = new DXLabel"
+      }
+    },
+    {
+      "id": "DisplayStats.MaxMC",
+      "control": "DisplayStats[Stat.MaxMC]",
+      "stat": "MaxMC",
+      "targetTab": "character",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-get-format",
+      "refreshAt": "CharacterDialog.UpdateStats",
+      "keepTagIcon": false,
+      "sourceEvidence": {
+        "path": "Client/Scenes/Views/CharacterDialog.cs",
+        "line": 404,
+        "anchor": "            DisplayStats[Stat.MaxMC] = new DXLabel"
+      }
+    },
+    {
+      "id": "DisplayStats.MaxSC",
+      "control": "DisplayStats[Stat.MaxSC]",
+      "stat": "MaxSC",
+      "targetTab": "character",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-get-format",
+      "refreshAt": "CharacterDialog.UpdateStats",
+      "keepTagIcon": false,
+      "sourceEvidence": {
+        "path": "Client/Scenes/Views/CharacterDialog.cs",
+        "line": 420,
+        "anchor": "            DisplayStats[Stat.MaxSC] = new DXLabel"
+      }
+    },
+    {
+      "id": "DisplayStats.Accuracy",
+      "control": "DisplayStats[Stat.Accuracy]",
+      "stat": "Accuracy",
+      "targetTab": "character",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-get-format",
+      "refreshAt": "CharacterDialog.UpdateStats",
+      "keepTagIcon": false,
+      "sourceEvidence": {
+        "path": "Client/Scenes/Views/CharacterDialog.cs",
+        "line": 437,
+        "anchor": "            DisplayStats[Stat.Accuracy] = new DXLabel"
+      }
+    },
+    {
+      "id": "DisplayStats.Agility",
+      "control": "DisplayStats[Stat.Agility]",
+      "stat": "Agility",
+      "targetTab": "character",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-get-format",
+      "refreshAt": "CharacterDialog.UpdateStats",
+      "keepTagIcon": false,
+      "sourceEvidence": {
+        "path": "Client/Scenes/Views/CharacterDialog.cs",
+        "line": 454,
+        "anchor": "            DisplayStats[Stat.Agility] = new DXLabel"
+      }
+    },
+    {
+      "id": "DisplayStats.AttackSpeed",
+      "control": "DisplayStats[Stat.AttackSpeed]",
+      "stat": "AttackSpeed",
+      "targetTab": "status",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-get-format",
+      "refreshAt": "CharacterDialog.UpdateStats",
+      "keepTagIcon": false,
+      "sourceEvidence": {
+        "path": "Client/Scenes/Views/CharacterDialog.cs",
+        "line": 502,
+        "anchor": "            DisplayStats[Stat.AttackSpeed] = new DXLabel"
+      }
+    },
+    {
+      "id": "DisplayStats.Luck",
+      "control": "DisplayStats[Stat.Luck]",
+      "stat": "Luck",
+      "targetTab": "character",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-get-format",
+      "refreshAt": "CharacterDialog.UpdateStats",
+      "keepTagIcon": false,
+      "sourceEvidence": {
+        "path": "Client/Scenes/Views/CharacterDialog.cs",
+        "line": 519,
+        "anchor": "            DisplayStats[Stat.Luck] = new DXLabel"
+      }
+    },
+    {
+      "id": "DisplayStats.Comfort",
+      "control": "DisplayStats[Stat.Comfort]",
+      "stat": "Comfort",
+      "targetTab": "character",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-get-format",
+      "refreshAt": "CharacterDialog.UpdateStats",
+      "keepTagIcon": false,
+      "sourceEvidence": {
+        "path": "Client/Scenes/Views/CharacterDialog.cs",
+        "line": 535,
+        "anchor": "            DisplayStats[Stat.Comfort] = new DXLabel"
+      }
+    },
+    {
+      "id": "DisplayStats.LifeSteal",
+      "control": "DisplayStats[Stat.LifeSteal]",
+      "stat": "LifeSteal",
+      "targetTab": "status",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-get-format",
+      "refreshAt": "CharacterDialog.UpdateStats",
+      "keepTagIcon": false,
+      "sourceEvidence": {
+        "path": "Client/Scenes/Views/CharacterDialog.cs",
+        "line": 553,
+        "anchor": "            DisplayStats[Stat.LifeSteal] = new DXLabel"
+      }
+    },
+    {
+      "id": "DisplayStats.GoldRate",
+      "control": "DisplayStats[Stat.GoldRate]",
+      "stat": "GoldRate",
+      "targetTab": "status",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-get-format",
+      "refreshAt": "CharacterDialog.UpdateStats",
+      "keepTagIcon": false,
+      "sourceEvidence": {
+        "path": "Client/Scenes/Views/CharacterDialog.cs",
+        "line": 569,
+        "anchor": "            DisplayStats[Stat.GoldRate] = new DXLabel"
+      }
+    },
+    {
+      "id": "DisplayStats.CriticalChance",
+      "control": "DisplayStats[Stat.CriticalChance]",
+      "stat": "CriticalChance",
+      "targetTab": "status",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-get-format",
+      "refreshAt": "CharacterDialog.UpdateStats",
+      "keepTagIcon": false,
+      "sourceEvidence": {
+        "path": "Client/Scenes/Views/CharacterDialog.cs",
+        "line": 585,
+        "anchor": "            DisplayStats[Stat.CriticalChance] = new DXLabel"
+      }
+    },
+    {
+      "id": "DisplayStats.DropRate",
+      "control": "DisplayStats[Stat.DropRate]",
+      "stat": "DropRate",
+      "targetTab": "status",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-get-format",
+      "refreshAt": "CharacterDialog.UpdateStats",
+      "keepTagIcon": false,
+      "sourceEvidence": {
+        "path": "Client/Scenes/Views/CharacterDialog.cs",
+        "line": 601,
+        "anchor": "            DisplayStats[Stat.DropRate] = new DXLabel"
+      }
+    },
+    {
+      "id": "DisplayStats.PickUpRadius",
+      "control": "DisplayStats[Stat.PickUpRadius]",
+      "stat": "PickUpRadius",
+      "targetTab": "status",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-get-format",
+      "refreshAt": "CharacterDialog.UpdateStats",
+      "keepTagIcon": false,
+      "sourceEvidence": {
+        "path": "Client/Scenes/Views/CharacterDialog.cs",
+        "line": 617,
+        "anchor": "            DisplayStats[Stat.PickUpRadius] = new DXLabel"
+      }
+    },
+    {
+      "id": "DisplayStats.ExperienceRate",
+      "control": "DisplayStats[Stat.ExperienceRate]",
+      "stat": "ExperienceRate",
+      "targetTab": "status",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-get-format",
+      "refreshAt": "CharacterDialog.UpdateStats",
+      "keepTagIcon": false,
+      "sourceEvidence": {
+        "path": "Client/Scenes/Views/CharacterDialog.cs",
+        "line": 634,
+        "anchor": "            DisplayStats[Stat.ExperienceRate] = new DXLabel"
+      }
+    },
+    {
+      "id": "DisplayStats.CriticalDamage",
+      "control": "DisplayStats[Stat.CriticalDamage]",
+      "stat": "CriticalDamage",
+      "targetTab": "status",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-get-format",
+      "refreshAt": "CharacterDialog.UpdateStats",
+      "keepTagIcon": false,
+      "sourceEvidence": {
+        "path": "Client/Scenes/Views/CharacterDialog.cs",
+        "line": 650,
+        "anchor": "            DisplayStats[Stat.CriticalDamage] = new DXLabel"
+      }
+    },
+    {
+      "id": "DisplayStats.Rebirth",
+      "control": "DisplayStats[Stat.Rebirth]",
+      "stat": "Rebirth",
+      "targetTab": "status",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-get-format",
+      "refreshAt": "CharacterDialog.UpdateStats",
+      "keepTagIcon": false,
+      "sourceEvidence": {
+        "path": "Client/Scenes/Views/CharacterDialog.cs",
+        "line": 667,
+        "anchor": "            DisplayStats[Stat.Rebirth] = new DXLabel"
+      }
+    },
+    {
+      "id": "DisplayStats.BlockChance",
+      "control": "DisplayStats[Stat.BlockChance]",
+      "stat": "BlockChance",
+      "targetTab": "status",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-get-format",
+      "refreshAt": "CharacterDialog.UpdateStats",
+      "keepTagIcon": false,
+      "sourceEvidence": {
+        "path": "Client/Scenes/Views/CharacterDialog.cs",
+        "line": 683,
+        "anchor": "            DisplayStats[Stat.BlockChance] = new DXLabel"
+      }
+    },
+    {
+      "id": "DisplayStats.EvasionChance",
+      "control": "DisplayStats[Stat.EvasionChance]",
+      "stat": "EvasionChance",
+      "targetTab": "status",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-get-format",
+      "refreshAt": "CharacterDialog.UpdateStats",
+      "keepTagIcon": false,
+      "sourceEvidence": {
+        "path": "Client/Scenes/Views/CharacterDialog.cs",
+        "line": 700,
+        "anchor": "            DisplayStats[Stat.EvasionChance] = new DXLabel"
+      }
+    },
+    {
+      "id": "AttackStats.FireAttack",
+      "control": "AttackStats[Stat.FireAttack]",
+      "stat": "FireAttack",
+      "targetTab": "character",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-positive-attack",
+      "refreshAt": "CharacterDialog.UpdateStats",
+      "keepTagIcon": true,
+      "sourceEvidence": {
+        "path": "Client/Scenes/Views/CharacterDialog.cs",
+        "line": 731,
+        "anchor": "            AttackStats[Stat.FireAttack] = new DXLabel"
+      }
+    },
+    {
+      "id": "AttackStats.IceAttack",
+      "control": "AttackStats[Stat.IceAttack]",
+      "stat": "IceAttack",
+      "targetTab": "character",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-positive-attack",
+      "refreshAt": "CharacterDialog.UpdateStats",
+      "keepTagIcon": true,
+      "sourceEvidence": {
+        "path": "Client/Scenes/Views/CharacterDialog.cs",
+        "line": 750,
+        "anchor": "            AttackStats[Stat.IceAttack] = new DXLabel"
+      }
+    },
+    {
+      "id": "AttackStats.LightningAttack",
+      "control": "AttackStats[Stat.LightningAttack]",
+      "stat": "LightningAttack",
+      "targetTab": "character",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-positive-attack",
+      "refreshAt": "CharacterDialog.UpdateStats",
+      "keepTagIcon": true,
+      "sourceEvidence": {
+        "path": "Client/Scenes/Views/CharacterDialog.cs",
+        "line": 769,
+        "anchor": "            AttackStats[Stat.LightningAttack] = new DXLabel"
+      }
+    },
+    {
+      "id": "AttackStats.WindAttack",
+      "control": "AttackStats[Stat.WindAttack]",
+      "stat": "WindAttack",
+      "targetTab": "character",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-positive-attack",
+      "refreshAt": "CharacterDialog.UpdateStats",
+      "keepTagIcon": true,
+      "sourceEvidence": {
+        "path": "Client/Scenes/Views/CharacterDialog.cs",
+        "line": 788,
+        "anchor": "            AttackStats[Stat.WindAttack] = new DXLabel"
+      }
+    },
+    {
+      "id": "AttackStats.HolyAttack",
+      "control": "AttackStats[Stat.HolyAttack]",
+      "stat": "HolyAttack",
+      "targetTab": "character",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-positive-attack",
+      "refreshAt": "CharacterDialog.UpdateStats",
+      "keepTagIcon": true,
+      "sourceEvidence": {
+        "path": "Client/Scenes/Views/CharacterDialog.cs",
+        "line": 807,
+        "anchor": "            AttackStats[Stat.HolyAttack] = new DXLabel"
+      }
+    },
+    {
+      "id": "AttackStats.DarkAttack",
+      "control": "AttackStats[Stat.DarkAttack]",
+      "stat": "DarkAttack",
+      "targetTab": "character",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-positive-attack",
+      "refreshAt": "CharacterDialog.UpdateStats",
+      "keepTagIcon": true,
+      "sourceEvidence": {
+        "path": "Client/Scenes/Views/CharacterDialog.cs",
+        "line": 826,
+        "anchor": "            AttackStats[Stat.DarkAttack] = new DXLabel"
+      }
+    },
+    {
+      "id": "AttackStats.PhantomAttack",
+      "control": "AttackStats[Stat.PhantomAttack]",
+      "stat": "PhantomAttack",
+      "targetTab": "character",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-positive-attack",
+      "refreshAt": "CharacterDialog.UpdateStats",
+      "keepTagIcon": true,
+      "sourceEvidence": {
+        "path": "Client/Scenes/Views/CharacterDialog.cs",
+        "line": 845,
+        "anchor": "            AttackStats[Stat.PhantomAttack] = new DXLabel"
+      }
+    },
+    {
+      "id": "AdvantageStats.FireResistance",
+      "control": "AdvantageStats[Stat.FireResistance]",
+      "stat": "FireResistance",
+      "targetTab": "character",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-positive-resistance",
+      "refreshAt": "CharacterDialog.UpdateStats",
+      "keepTagIcon": true,
+      "sourceEvidence": {
+        "path": "Client/Scenes/Views/CharacterDialog.cs",
+        "line": 878,
+        "anchor": "            AdvantageStats[Stat.FireResistance] = new DXLabel"
+      }
+    },
+    {
+      "id": "AdvantageStats.IceResistance",
+      "control": "AdvantageStats[Stat.IceResistance]",
+      "stat": "IceResistance",
+      "targetTab": "character",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-positive-resistance",
+      "refreshAt": "CharacterDialog.UpdateStats",
+      "keepTagIcon": true,
+      "sourceEvidence": {
+        "path": "Client/Scenes/Views/CharacterDialog.cs",
+        "line": 897,
+        "anchor": "            AdvantageStats[Stat.IceResistance] = new DXLabel"
+      }
+    },
+    {
+      "id": "AdvantageStats.LightningResistance",
+      "control": "AdvantageStats[Stat.LightningResistance]",
+      "stat": "LightningResistance",
+      "targetTab": "character",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-positive-resistance",
+      "refreshAt": "CharacterDialog.UpdateStats",
+      "keepTagIcon": true,
+      "sourceEvidence": {
+        "path": "Client/Scenes/Views/CharacterDialog.cs",
+        "line": 916,
+        "anchor": "            AdvantageStats[Stat.LightningResistance] = new DXLabel"
+      }
+    },
+    {
+      "id": "AdvantageStats.WindResistance",
+      "control": "AdvantageStats[Stat.WindResistance]",
+      "stat": "WindResistance",
+      "targetTab": "character",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-positive-resistance",
+      "refreshAt": "CharacterDialog.UpdateStats",
+      "keepTagIcon": true,
+      "sourceEvidence": {
+        "path": "Client/Scenes/Views/CharacterDialog.cs",
+        "line": 935,
+        "anchor": "            AdvantageStats[Stat.WindResistance] = new DXLabel"
+      }
+    },
+    {
+      "id": "AdvantageStats.HolyResistance",
+      "control": "AdvantageStats[Stat.HolyResistance]",
+      "stat": "HolyResistance",
+      "targetTab": "character",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-positive-resistance",
+      "refreshAt": "CharacterDialog.UpdateStats",
+      "keepTagIcon": true,
+      "sourceEvidence": {
+        "path": "Client/Scenes/Views/CharacterDialog.cs",
+        "line": 954,
+        "anchor": "            AdvantageStats[Stat.HolyResistance] = new DXLabel"
+      }
+    },
+    {
+      "id": "AdvantageStats.DarkResistance",
+      "control": "AdvantageStats[Stat.DarkResistance]",
+      "stat": "DarkResistance",
+      "targetTab": "character",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-positive-resistance",
+      "refreshAt": "CharacterDialog.UpdateStats",
+      "keepTagIcon": true,
+      "sourceEvidence": {
+        "path": "Client/Scenes/Views/CharacterDialog.cs",
+        "line": 973,
+        "anchor": "            AdvantageStats[Stat.DarkResistance] = new DXLabel"
+      }
+    },
+    {
+      "id": "AdvantageStats.PhantomResistance",
+      "control": "AdvantageStats[Stat.PhantomResistance]",
+      "stat": "PhantomResistance",
+      "targetTab": "character",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-positive-resistance",
+      "refreshAt": "CharacterDialog.UpdateStats",
+      "keepTagIcon": true,
+      "sourceEvidence": {
+        "path": "Client/Scenes/Views/CharacterDialog.cs",
+        "line": 992,
+        "anchor": "            AdvantageStats[Stat.PhantomResistance] = new DXLabel"
+      }
+    },
+    {
+      "id": "AdvantageStats.PhysicalResistance",
+      "control": "AdvantageStats[Stat.PhysicalResistance]",
+      "stat": "PhysicalResistance",
+      "targetTab": "status",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-positive-resistance",
+      "refreshAt": "CharacterDialog.UpdateStats",
+      "keepTagIcon": true,
+      "sourceEvidence": {
+        "path": "Client/Scenes/Views/CharacterDialog.cs",
+        "line": 1011,
+        "anchor": "            AdvantageStats[Stat.PhysicalResistance] = new DXLabel"
+      }
+    },
+    {
+      "id": "DisadvantageStats.FireResistance",
+      "control": "DisadvantageStats[Stat.FireResistance]",
+      "stat": "FireResistance",
+      "targetTab": "character",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-negative-resistance",
+      "refreshAt": "CharacterDialog.UpdateStats",
+      "keepTagIcon": true,
+      "sourceEvidence": {
+        "path": "Client/Scenes/Views/CharacterDialog.cs",
+        "line": 1043,
+        "anchor": "            DisadvantageStats[Stat.FireResistance] = new DXLabel"
+      }
+    },
+    {
+      "id": "DisadvantageStats.IceResistance",
+      "control": "DisadvantageStats[Stat.IceResistance]",
+      "stat": "IceResistance",
+      "targetTab": "character",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-negative-resistance",
+      "refreshAt": "CharacterDialog.UpdateStats",
+      "keepTagIcon": true,
+      "sourceEvidence": {
+        "path": "Client/Scenes/Views/CharacterDialog.cs",
+        "line": 1062,
+        "anchor": "            DisadvantageStats[Stat.IceResistance] = new DXLabel"
+      }
+    },
+    {
+      "id": "DisadvantageStats.LightningResistance",
+      "control": "DisadvantageStats[Stat.LightningResistance]",
+      "stat": "LightningResistance",
+      "targetTab": "character",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-negative-resistance",
+      "refreshAt": "CharacterDialog.UpdateStats",
+      "keepTagIcon": true,
+      "sourceEvidence": {
+        "path": "Client/Scenes/Views/CharacterDialog.cs",
+        "line": 1081,
+        "anchor": "            DisadvantageStats[Stat.LightningResistance] = new DXLabel"
+      }
+    },
+    {
+      "id": "DisadvantageStats.WindResistance",
+      "control": "DisadvantageStats[Stat.WindResistance]",
+      "stat": "WindResistance",
+      "targetTab": "character",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-negative-resistance",
+      "refreshAt": "CharacterDialog.UpdateStats",
+      "keepTagIcon": true,
+      "sourceEvidence": {
+        "path": "Client/Scenes/Views/CharacterDialog.cs",
+        "line": 1100,
+        "anchor": "            DisadvantageStats[Stat.WindResistance] = new DXLabel"
+      }
+    },
+    {
+      "id": "DisadvantageStats.HolyResistance",
+      "control": "DisadvantageStats[Stat.HolyResistance]",
+      "stat": "HolyResistance",
+      "targetTab": "character",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-negative-resistance",
+      "refreshAt": "CharacterDialog.UpdateStats",
+      "keepTagIcon": true,
+      "sourceEvidence": {
+        "path": "Client/Scenes/Views/CharacterDialog.cs",
+        "line": 1119,
+        "anchor": "            DisadvantageStats[Stat.HolyResistance] = new DXLabel"
+      }
+    },
+    {
+      "id": "DisadvantageStats.DarkResistance",
+      "control": "DisadvantageStats[Stat.DarkResistance]",
+      "stat": "DarkResistance",
+      "targetTab": "character",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-negative-resistance",
+      "refreshAt": "CharacterDialog.UpdateStats",
+      "keepTagIcon": true,
+      "sourceEvidence": {
+        "path": "Client/Scenes/Views/CharacterDialog.cs",
+        "line": 1138,
+        "anchor": "            DisadvantageStats[Stat.DarkResistance] = new DXLabel"
+      }
+    },
+    {
+      "id": "DisadvantageStats.PhantomResistance",
+      "control": "DisadvantageStats[Stat.PhantomResistance]",
+      "stat": "PhantomResistance",
+      "targetTab": "character",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-negative-resistance",
+      "refreshAt": "CharacterDialog.UpdateStats",
+      "keepTagIcon": true,
+      "sourceEvidence": {
+        "path": "Client/Scenes/Views/CharacterDialog.cs",
+        "line": 1157,
+        "anchor": "            DisadvantageStats[Stat.PhantomResistance] = new DXLabel"
+      }
+    },
+    {
+      "id": "DisadvantageStats.PhysicalResistance",
+      "control": "DisadvantageStats[Stat.PhysicalResistance]",
+      "stat": "PhysicalResistance",
+      "targetTab": "status",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-negative-resistance",
+      "refreshAt": "CharacterDialog.UpdateStats",
+      "keepTagIcon": true,
+      "sourceEvidence": {
+        "path": "Client/Scenes/Views/CharacterDialog.cs",
+        "line": 1176,
+        "anchor": "            DisadvantageStats[Stat.PhysicalResistance] = new DXLabel"
+      }
+    },
+    {
+      "id": "HermitDisplayStats.MaxAC",
+      "control": "HermitDisplayStats[Stat.MaxAC]",
+      "stat": "MaxAC",
+      "targetTab": "hermit",
+      "dataSource": "User.HermitStats",
+      "formatPolicy": "existing-get-format",
+      "refreshAt": "CharacterDialog.UpdateStats",
+      "keepTagIcon": false,
+      "sourceEvidence": {
+        "path": "Client/Scenes/Views/CharacterDialog.cs",
+        "line": 1196,
+        "anchor": "            HermitDisplayStats[Stat.MaxAC] = new DXLabel"
+      }
+    },
+    {
+      "id": "HermitDisplayStats.MaxMR",
+      "control": "HermitDisplayStats[Stat.MaxMR]",
+      "stat": "MaxMR",
+      "targetTab": "hermit",
+      "dataSource": "User.HermitStats",
+      "formatPolicy": "existing-get-format",
+      "refreshAt": "CharacterDialog.UpdateStats",
+      "keepTagIcon": false,
+      "sourceEvidence": {
+        "path": "Client/Scenes/Views/CharacterDialog.cs",
+        "line": 1212,
+        "anchor": "            HermitDisplayStats[Stat.MaxMR] = new DXLabel"
+      }
+    },
+    {
+      "id": "HermitDisplayStats.MaxDC",
+      "control": "HermitDisplayStats[Stat.MaxDC]",
+      "stat": "MaxDC",
+      "targetTab": "hermit",
+      "dataSource": "User.HermitStats",
+      "formatPolicy": "existing-get-format",
+      "refreshAt": "CharacterDialog.UpdateStats",
+      "keepTagIcon": false,
+      "sourceEvidence": {
+        "path": "Client/Scenes/Views/CharacterDialog.cs",
+        "line": 1228,
+        "anchor": "            HermitDisplayStats[Stat.MaxDC] = new DXLabel"
+      }
+    },
+    {
+      "id": "HermitDisplayStats.MaxMC",
+      "control": "HermitDisplayStats[Stat.MaxMC]",
+      "stat": "MaxMC",
+      "targetTab": "hermit",
+      "dataSource": "User.HermitStats",
+      "formatPolicy": "existing-get-format",
+      "refreshAt": "CharacterDialog.UpdateStats",
+      "keepTagIcon": false,
+      "sourceEvidence": {
+        "path": "Client/Scenes/Views/CharacterDialog.cs",
+        "line": 1244,
+        "anchor": "            HermitDisplayStats[Stat.MaxMC] = new DXLabel"
+      }
+    },
+    {
+      "id": "HermitDisplayStats.MaxSC",
+      "control": "HermitDisplayStats[Stat.MaxSC]",
+      "stat": "MaxSC",
+      "targetTab": "hermit",
+      "dataSource": "User.HermitStats",
+      "formatPolicy": "existing-get-format",
+      "refreshAt": "CharacterDialog.UpdateStats",
+      "keepTagIcon": false,
+      "sourceEvidence": {
+        "path": "Client/Scenes/Views/CharacterDialog.cs",
+        "line": 1260,
+        "anchor": "            HermitDisplayStats[Stat.MaxSC] = new DXLabel"
+      }
+    },
+    {
+      "id": "HermitDisplayStats.Health",
+      "control": "HermitDisplayStats[Stat.Health]",
+      "stat": "Health",
+      "targetTab": "hermit",
+      "dataSource": "User.HermitStats",
+      "formatPolicy": "existing-get-format",
+      "refreshAt": "CharacterDialog.UpdateStats",
+      "keepTagIcon": false,
+      "sourceEvidence": {
+        "path": "Client/Scenes/Views/CharacterDialog.cs",
+        "line": 1276,
+        "anchor": "            HermitDisplayStats[Stat.Health] = new DXLabel"
+      }
+    },
+    {
+      "id": "HermitDisplayStats.Mana",
+      "control": "HermitDisplayStats[Stat.Mana]",
+      "stat": "Mana",
+      "targetTab": "hermit",
+      "dataSource": "User.HermitStats",
+      "formatPolicy": "existing-get-format",
+      "refreshAt": "CharacterDialog.UpdateStats",
+      "keepTagIcon": false,
+      "sourceEvidence": {
+        "path": "Client/Scenes/Views/CharacterDialog.cs",
+        "line": 1292,
+        "anchor": "            HermitDisplayStats[Stat.Mana] = new DXLabel"
+      }
+    },
+    {
+      "id": "HermitAttackStats.FireAttack",
+      "control": "HermitAttackStats[Stat.FireAttack]",
+      "stat": "FireAttack",
+      "targetTab": "hermit",
+      "dataSource": "User.HermitStats",
+      "formatPolicy": "existing-positive-hermit-attack",
+      "refreshAt": "CharacterDialog.UpdateStats",
+      "keepTagIcon": true,
+      "sourceEvidence": {
+        "path": "Client/Scenes/Views/CharacterDialog.cs",
+        "line": 1322,
+        "anchor": "            HermitAttackStats[Stat.FireAttack] = new DXLabel"
+      }
+    },
+    {
+      "id": "HermitAttackStats.IceAttack",
+      "control": "HermitAttackStats[Stat.IceAttack]",
+      "stat": "IceAttack",
+      "targetTab": "hermit",
+      "dataSource": "User.HermitStats",
+      "formatPolicy": "existing-positive-hermit-attack",
+      "refreshAt": "CharacterDialog.UpdateStats",
+      "keepTagIcon": true,
+      "sourceEvidence": {
+        "path": "Client/Scenes/Views/CharacterDialog.cs",
+        "line": 1341,
+        "anchor": "            HermitAttackStats[Stat.IceAttack] = new DXLabel"
+      }
+    },
+    {
+      "id": "HermitAttackStats.LightningAttack",
+      "control": "HermitAttackStats[Stat.LightningAttack]",
+      "stat": "LightningAttack",
+      "targetTab": "hermit",
+      "dataSource": "User.HermitStats",
+      "formatPolicy": "existing-positive-hermit-attack",
+      "refreshAt": "CharacterDialog.UpdateStats",
+      "keepTagIcon": true,
+      "sourceEvidence": {
+        "path": "Client/Scenes/Views/CharacterDialog.cs",
+        "line": 1360,
+        "anchor": "            HermitAttackStats[Stat.LightningAttack] = new DXLabel"
+      }
+    },
+    {
+      "id": "HermitAttackStats.WindAttack",
+      "control": "HermitAttackStats[Stat.WindAttack]",
+      "stat": "WindAttack",
+      "targetTab": "hermit",
+      "dataSource": "User.HermitStats",
+      "formatPolicy": "existing-positive-hermit-attack",
+      "refreshAt": "CharacterDialog.UpdateStats",
+      "keepTagIcon": true,
+      "sourceEvidence": {
+        "path": "Client/Scenes/Views/CharacterDialog.cs",
+        "line": 1379,
+        "anchor": "            HermitAttackStats[Stat.WindAttack] = new DXLabel"
+      }
+    },
+    {
+      "id": "HermitAttackStats.HolyAttack",
+      "control": "HermitAttackStats[Stat.HolyAttack]",
+      "stat": "HolyAttack",
+      "targetTab": "hermit",
+      "dataSource": "User.HermitStats",
+      "formatPolicy": "existing-positive-hermit-attack",
+      "refreshAt": "CharacterDialog.UpdateStats",
+      "keepTagIcon": true,
+      "sourceEvidence": {
+        "path": "Client/Scenes/Views/CharacterDialog.cs",
+        "line": 1398,
+        "anchor": "            HermitAttackStats[Stat.HolyAttack] = new DXLabel"
+      }
+    },
+    {
+      "id": "HermitAttackStats.DarkAttack",
+      "control": "HermitAttackStats[Stat.DarkAttack]",
+      "stat": "DarkAttack",
+      "targetTab": "hermit",
+      "dataSource": "User.HermitStats",
+      "formatPolicy": "existing-positive-hermit-attack",
+      "refreshAt": "CharacterDialog.UpdateStats",
+      "keepTagIcon": true,
+      "sourceEvidence": {
+        "path": "Client/Scenes/Views/CharacterDialog.cs",
+        "line": 1417,
+        "anchor": "            HermitAttackStats[Stat.DarkAttack] = new DXLabel"
+      }
+    },
+    {
+      "id": "HermitAttackStats.PhantomAttack",
+      "control": "HermitAttackStats[Stat.PhantomAttack]",
+      "stat": "PhantomAttack",
+      "targetTab": "hermit",
+      "dataSource": "User.HermitStats",
+      "formatPolicy": "existing-positive-hermit-attack",
+      "refreshAt": "CharacterDialog.UpdateStats",
+      "keepTagIcon": true,
+      "sourceEvidence": {
+        "path": "Client/Scenes/Views/CharacterDialog.cs",
+        "line": 1436,
+        "anchor": "            HermitAttackStats[Stat.PhantomAttack] = new DXLabel"
+      }
+    }
+  ],
+  "existingControls": [
+    {
+      "id": "existing.CharacterNameLabel",
+      "control": "CharacterNameLabel",
+      "targetTab": "character",
+      "dataSource": "User.Name",
+      "preserveReference": true,
+      "sourceEvidence": {
+        "path": "Client/Models/UserObject.cs",
+        "line": 688,
+        "anchor": "GameScene.Game.CharacterBox.CharacterNameLabel.Text = Name;"
+      }
+    },
+    {
+      "id": "existing.GuildNameLabel",
+      "control": "GuildNameLabel",
+      "targetTab": "character",
+      "dataSource": "User.Title",
+      "preserveReference": true,
+      "sourceEvidence": {
+        "path": "Client/Models/UserObject.cs",
+        "line": 685,
+        "anchor": "GameScene.Game.CharacterBox.GuildNameLabel.Text = Title;"
+      }
+    },
+    {
+      "id": "existing.GuildRankLabel",
+      "control": "GuildRankLabel",
+      "targetTab": "character",
+      "dataSource": "User.GuildRank",
+      "preserveReference": true,
+      "sourceEvidence": {
+        "path": "Client/Models/UserObject.cs",
+        "line": 686,
+        "anchor": "GameScene.Game.CharacterBox.GuildRankLabel.Text = GuildRank;"
+      }
+    },
+    {
+      "id": "existing.WearWeightLabel",
+      "control": "WearWeightLabel",
+      "targetTab": "character",
+      "dataSource": "User.WearWeight / User.Stats[Stat.WearWeight]",
+      "preserveReference": true,
+      "sourceEvidence": {
+        "path": "Client/Scenes/GameScene.cs",
+        "line": 3894,
+        "anchor": "CharacterBox.WearWeightLabel.Text ="
+      }
+    },
+    {
+      "id": "existing.HandWeightLabel",
+      "control": "HandWeightLabel",
+      "targetTab": "character",
+      "dataSource": "User.HandWeight / User.Stats[Stat.HandWeight]",
+      "preserveReference": true,
+      "sourceEvidence": {
+        "path": "Client/Scenes/GameScene.cs",
+        "line": 3895,
+        "anchor": "CharacterBox.HandWeightLabel.Text ="
+      }
+    },
+    {
+      "id": "existing.RemainingLabel",
+      "control": "RemainingLabel",
+      "targetTab": "hermit",
+      "dataSource": "User.HermitPoints",
+      "preserveReference": true,
+      "sourceEvidence": {
+        "path": "Client/Scenes/Views/CharacterDialog.cs",
+        "line": 2018,
+        "anchor": "RemainingLabel.Text = MapObject.User.HermitPoints.ToString();"
+      }
+    },
+    {
+      "id": "existing.MarriageIcon",
+      "control": "MarriageIcon",
+      "targetTab": "character",
+      "dataSource": "Partner.Name",
+      "preserveReference": true,
+      "sourceEvidence": {
+        "path": "Client/Scenes/GameScene.cs",
+        "line": 3908,
+        "anchor": "CharacterBox.MarriageIcon.Visible = !string.IsNullOrEmpty(Partner?.Name);"
+      }
+    },
+    {
+      "id": "existing.ShowHelmetBox",
+      "control": "ShowHelmetBox",
+      "targetTab": "character",
+      "dataSource": "!S.HelmetToggle.HideHelmet",
+      "preserveReference": true,
+      "sourceEvidence": {
+        "path": "Client/Envir/CConnection.cs",
+        "line": 3959,
+        "anchor": "GameScene.Game.CharacterBox.ShowHelmetBox.Checked = !p.HideHelmet;"
+      }
+    }
+  ],
+  "additionalBindings": [
+    {
+      "id": "new.level",
+      "targetTab": "character",
+      "dataSource": "User.Level",
+      "refreshAt": "GameScene.LevelChanged",
+      "status": "implemented_opt_in",
+      "runtimeEnabled": false,
+      "sourceControl": "MainPanel.LevelLabel",
+      "reuseHudFormatting": true,
+      "sourceEvidence": {
+        "path": "Client/Scenes/GameScene.cs",
+        "line": 3760,
+        "anchor": "MainPanel.LevelLabel.Text = User.Level.ToString();"
+      },
+      "implementationEvidence": {
+        "entrypoint": {
+          "path": "Client/Scenes/Views/CharacterDialog.cs",
+          "line": 40,
+          "anchor": "public void UseGameUiReadouts(MainPanel source, GameUiCharacterReadoutLayout layout)"
+        },
+        "target": {
+          "path": "Client/Envir/GameUiCharacterReadouts.cs",
+          "line": 53,
+          "anchor": "public DXLabel LevelLabel =>"
+        },
+        "copy": {
+          "path": "Client/Envir/GameUiCharacterReadouts.cs",
+          "line": 102,
+          "anchor": "labels[i].Text = sourceLabels[i].Text;"
+        },
+        "subscribe": {
+          "path": "Client/Envir/GameUiCharacterReadouts.cs",
+          "line": 87,
+          "anchor": "control.TextChanged += Refresh;"
+        },
+        "unsubscribe": {
+          "path": "Client/Envir/GameUiCharacterReadouts.cs",
+          "line": 117,
+          "anchor": "control.TextChanged -= Refresh;"
+        },
+        "test": "tests/game-ui/OfficialUiCharacterReadoutTests.cs",
+        "verification": "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-readouts/verification.json"
+      }
+    },
+    {
+      "id": "new.experience",
+      "targetTab": "character",
+      "dataSource": "User.Experience / User.MaxExperience",
+      "refreshAt": "GameScene.ExperienceChanged",
+      "status": "implemented_opt_in",
+      "runtimeEnabled": false,
+      "sourceControl": "MainPanel.ExperienceLabel",
+      "reuseHudFormatting": true,
+      "sourceEvidence": {
+        "path": "Client/Scenes/GameScene.cs",
+        "line": 3827,
+        "anchor": "MainPanel.ExperienceLabel.Text ="
+      },
+      "implementationEvidence": {
+        "entrypoint": {
+          "path": "Client/Scenes/Views/CharacterDialog.cs",
+          "line": 40,
+          "anchor": "public void UseGameUiReadouts(MainPanel source, GameUiCharacterReadoutLayout layout)"
+        },
+        "target": {
+          "path": "Client/Envir/GameUiCharacterReadouts.cs",
+          "line": 54,
+          "anchor": "public DXLabel ExperienceLabel =>"
+        },
+        "copy": {
+          "path": "Client/Envir/GameUiCharacterReadouts.cs",
+          "line": 102,
+          "anchor": "labels[i].Text = sourceLabels[i].Text;"
+        },
+        "subscribe": {
+          "path": "Client/Envir/GameUiCharacterReadouts.cs",
+          "line": 87,
+          "anchor": "control.TextChanged += Refresh;"
+        },
+        "unsubscribe": {
+          "path": "Client/Envir/GameUiCharacterReadouts.cs",
+          "line": 117,
+          "anchor": "control.TextChanged -= Refresh;"
+        },
+        "test": "tests/game-ui/OfficialUiCharacterReadoutTests.cs",
+        "verification": "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-readouts/verification.json"
+      }
+    },
+    {
+      "id": "new.health",
+      "targetTab": "character",
+      "dataSource": "User.CurrentHP / User.Stats[Stat.Health]",
+      "refreshAt": "GameScene.HealthChanged",
+      "status": "implemented_opt_in",
+      "runtimeEnabled": false,
+      "sourceControl": "MainPanel.HealthLabel",
+      "reuseHudFormatting": true,
+      "sourceEvidence": {
+        "path": "Client/Scenes/GameScene.cs",
+        "line": 3835,
+        "anchor": "MainPanel.HealthLabel.Text ="
+      },
+      "implementationEvidence": {
+        "entrypoint": {
+          "path": "Client/Scenes/Views/CharacterDialog.cs",
+          "line": 40,
+          "anchor": "public void UseGameUiReadouts(MainPanel source, GameUiCharacterReadoutLayout layout)"
+        },
+        "target": {
+          "path": "Client/Envir/GameUiCharacterReadouts.cs",
+          "line": 55,
+          "anchor": "public DXLabel HealthLabel =>"
+        },
+        "copy": {
+          "path": "Client/Envir/GameUiCharacterReadouts.cs",
+          "line": 102,
+          "anchor": "labels[i].Text = sourceLabels[i].Text;"
+        },
+        "subscribe": {
+          "path": "Client/Envir/GameUiCharacterReadouts.cs",
+          "line": 87,
+          "anchor": "control.TextChanged += Refresh;"
+        },
+        "unsubscribe": {
+          "path": "Client/Envir/GameUiCharacterReadouts.cs",
+          "line": 117,
+          "anchor": "control.TextChanged -= Refresh;"
+        },
+        "test": "tests/game-ui/OfficialUiCharacterReadoutTests.cs",
+        "verification": "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-readouts/verification.json"
+      }
+    },
+    {
+      "id": "new.mana",
+      "targetTab": "character",
+      "dataSource": "User.CurrentMP / User.Stats[Stat.Mana]",
+      "refreshAt": "GameScene.ManaChanged",
+      "status": "implemented_opt_in",
+      "runtimeEnabled": false,
+      "sourceControl": "MainPanel.ManaLabel",
+      "reuseHudFormatting": true,
+      "sourceEvidence": {
+        "path": "Client/Scenes/GameScene.cs",
+        "line": 3842,
+        "anchor": "MainPanel.ManaLabel.Text ="
+      },
+      "implementationEvidence": {
+        "entrypoint": {
+          "path": "Client/Scenes/Views/CharacterDialog.cs",
+          "line": 40,
+          "anchor": "public void UseGameUiReadouts(MainPanel source, GameUiCharacterReadoutLayout layout)"
+        },
+        "target": {
+          "path": "Client/Envir/GameUiCharacterReadouts.cs",
+          "line": 56,
+          "anchor": "public DXLabel ManaLabel =>"
+        },
+        "copy": {
+          "path": "Client/Envir/GameUiCharacterReadouts.cs",
+          "line": 102,
+          "anchor": "labels[i].Text = sourceLabels[i].Text;"
+        },
+        "subscribe": {
+          "path": "Client/Envir/GameUiCharacterReadouts.cs",
+          "line": 87,
+          "anchor": "control.TextChanged += Refresh;"
+        },
+        "unsubscribe": {
+          "path": "Client/Envir/GameUiCharacterReadouts.cs",
+          "line": 117,
+          "anchor": "control.TextChanged -= Refresh;"
+        },
+        "test": "tests/game-ui/OfficialUiCharacterReadoutTests.cs",
+        "verification": "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-readouts/verification.json"
+      }
+    }
+  ],
+  "actions": [
+    {
+      "id": "hermit.MaxAC",
+      "targetTab": "hermit",
+      "packet": "C.Hermit",
+      "stat": "MaxAC",
+      "reuseExistingHandler": true,
+      "preserveZeroPointGuard": true,
+      "preserveConfirmationAndCancel": true
+    },
+    {
+      "id": "hermit.MaxMR",
+      "targetTab": "hermit",
+      "packet": "C.Hermit",
+      "stat": "MaxMR",
+      "reuseExistingHandler": true,
+      "preserveZeroPointGuard": true,
+      "preserveConfirmationAndCancel": true
+    },
+    {
+      "id": "hermit.Health",
+      "targetTab": "hermit",
+      "packet": "C.Hermit",
+      "stat": "Health",
+      "reuseExistingHandler": true,
+      "preserveZeroPointGuard": true,
+      "preserveConfirmationAndCancel": true
+    },
+    {
+      "id": "hermit.Mana",
+      "targetTab": "hermit",
+      "packet": "C.Hermit",
+      "stat": "Mana",
+      "reuseExistingHandler": true,
+      "preserveZeroPointGuard": true,
+      "preserveConfirmationAndCancel": true
+    },
+    {
+      "id": "hermit.MaxDC",
+      "targetTab": "hermit",
+      "packet": "C.Hermit",
+      "stat": "MaxDC",
+      "reuseExistingHandler": true,
+      "preserveZeroPointGuard": true,
+      "preserveConfirmationAndCancel": true
+    },
+    {
+      "id": "hermit.MaxMC",
+      "targetTab": "hermit",
+      "packet": "C.Hermit",
+      "stat": "MaxMC",
+      "reuseExistingHandler": true,
+      "preserveZeroPointGuard": true,
+      "preserveConfirmationAndCancel": true
+    },
+    {
+      "id": "hermit.MaxSC",
+      "targetTab": "hermit",
+      "packet": "C.Hermit",
+      "stat": "MaxSC",
+      "reuseExistingHandler": true,
+      "preserveZeroPointGuard": true,
+      "preserveConfirmationAndCancel": true
+    },
+    {
+      "id": "hermit.WeaponElement",
+      "targetTab": "hermit",
+      "packet": "C.Hermit",
+      "stat": "WeaponElement",
+      "reuseExistingHandler": true,
+      "preserveZeroPointGuard": true,
+      "preserveConfirmationAndCancel": true
+    },
+    {
+      "id": "character.showHelmet",
+      "targetTab": "character",
+      "packet": "C.HelmetToggle",
+      "reuseExistingHandler": true,
+      "sourceEvidence": {
+        "path": "Client/Scenes/Views/CharacterDialog.cs",
+        "line": 345,
+        "anchor": "CEnvir.Enqueue(new C.HelmetToggle{ HideHelmet = ShowHelmetBox.Checked});"
+      }
+    }
+  ],
+  "refreshConstraints": [
+    "Keep StatsChanged -> CharacterBox.UpdateStats and existing public dictionary/control identities.",
+    "Keep User.Stats and User.HermitStats setters refreshing; S.StatsUpdate assigns HermitPoints, Stats, then HermitStats.",
+    "Refresh new health/mana labels on StatsChanged as well as current-value changes, since maxima can change.",
+    "Refresh new experience on LevelChanged as well as ExperienceChanged; MaxExperience changes through the existing setter.",
+    "Preserve original GetFormat ranges, resistance sign/color, overweight colors, icon Tag and confirmation/cancel handlers."
+  ],
+  "referenceDecision": {
+    "historicalPlanImage": {
+      "library": "UI",
+      "index": 100,
+      "width": 366,
+      "height": 484
+    },
+    "runtimeMatchedImage": {
+      "library": "UI",
+      "index": 2765,
+      "width": 412,
+      "height": 562
+    },
+    "sourceSelectionFrozen": false,
+    "decisionRequired": "Resolve current runtime image versus historical plan image in UI-05/06 before deriving final rectangles; never scale old slot coordinates wholesale."
+  },
+  "missingInputs": [
+    "Final asset selection and alpha/blend verification",
+    "Final 16 slot visual/hit/icon rectangles and character pivot",
+    "Field/button rectangles, overflow and scroll behavior",
+    "Six-resolution placement and combined-window checks",
+    "Runtime field/packet comparison and real IME checks"
+  ],
+  "verificationScope": "Static source/contract coverage; four readouts, four pages/equipment and all 57 dictionary attributes with original captions/Tag icons implemented via opt-in APIs. Named controls/readout composition, preview pivot and final art remain pending. No GameScene activation, rendering or A03/A05 acceptance is claimed."
+}

@@ -1,0 +1,9 @@
+
+clientDirectory : E:\workspace\Release\Client
+validatedOnly   : False
+packageSha256   : dd45cbf51d976a69d28269ee0d27a985def1ee1693cab2b509b74ae347a880a4
+frameCount      : 94
+runtimeReady    : False
+previewLauncher : E:\workspace\Release\Client\Start-OfficialUiPreview.cmd
+legacyLauncher  : E:\workspace\Release\Client\Start-LegacyUi.cmd
+

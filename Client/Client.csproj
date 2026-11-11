@@ -61,6 +61,7 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="System.Web.Extensions" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controls\DXInputWindow.cs" />
@@ -80,6 +81,45 @@
     <Compile Include="Envir\ItemListStorage.cs" />
     <Compile Include="Envir\CConnection.cs" />
     <Compile Include="Envir\CEnvir.cs" />
+    <Compile Include="Envir\GameUiLayoutStore.cs" />
+    <Compile Include="Envir\GameUiChatStore.cs" />
+    <Compile Include="Envir\GameUiLayoutCoordinator.cs" />
+    <Compile Include="Envir\GameUiNpcGroupLayout.cs" />
+    <Compile Include="Envir\GameUiSceneLayoutHost.cs" />
+    <Compile Include="Envir\GameUiOfficialV1WindowSet.cs" />
+    <Compile Include="Envir\GameUiNpcGoodsBinding.cs" />
+    <Compile Include="Envir\GameUiNpcItemServiceBinding.cs" />
+    <Compile Include="Envir\GameUiNpcRefineRetrieveBinding.cs" />
+    <Compile Include="Envir\GameUiNpcQuestBinding.cs" />
+    <Compile Include="Envir\GameUiChatLayout.cs" />
+    <Compile Include="Envir\GameUiChatGroupBinding.cs" />
+    <Compile Include="Envir\GameUiOfficialV1ChatSet.cs" />
+    <Compile Include="Envir\GameUiCharacterReadouts.cs" />
+    <Compile Include="Envir\GameUiCharacterEquipmentLayout.cs" />
+    <Compile Include="Envir\GameUiCharacterAttributeLayout.cs" />
+    <Compile Include="Envir\GameUiCharacterControlLayout.cs" />
+    <Compile Include="Envir\GameUiCharacterCompositionLayout.cs" />
+    <Compile Include="Envir\GameUiStorageLayout.cs" />
+    <Compile Include="Scenes\Views\StorageDialog.GameUi.cs" />
+    <Compile Include="Envir\GameUiInventoryLayout.cs" />
+    <Compile Include="Envir\GameUiBeltLayout.cs" />
+    <Compile Include="Envir\GameUiMiniMapLayout.cs" />
+    <Compile Include="Envir\GameUiButtonHitMask.cs" />
+    <Compile Include="Envir\GameUiHudLayout.cs" />
+    <Compile Include="Envir\GameUiItemTooltipLayout.cs" />
+    <Compile Include="Envir\GameUiPackagePreflight.cs" />
+    <Compile Include="Envir\GameUiStartupSession.cs" />
+    <Compile Include="Envir\GameUiOfficialV1Catalog.g.cs" />
+    <Compile Include="Controls\GameUiHudFill.cs" />
+    <Compile Include="Controls\GameUiHudOrbOverlay.cs" />
+    <Compile Include="Controls\GameUiChatArtwork.cs" />
+    <Compile Include="Scenes\Views\MainPanel.GameUi.cs" />
+    <Compile Include="Scenes\Views\CharacterDialog.GameUiComposition.cs" />
+    <Compile Include="Scenes\Views\InventoryDialog.GameUi.cs" />
+    <Compile Include="Scenes\Views\CharacterDialog.GameUiAttributes.cs" />
+    <Compile Include="Scenes\Views\CharacterDialog.GameUiControls.cs" />
+    <Compile Include="Scenes\Views\CharacterDialog.GameUi.cs" />
+    <Compile Include="Scenes\Views\CharacterDialog.GameUiCompanions.cs" />
     <Compile Include="Envir\Config.cs" />
     <Compile Include="Envir\DXManager.cs" />
     <Compile Include="Envir\DXSound.cs" />
@@ -87,6 +127,7 @@
     <Compile Include="Envir\Translations\ChineseMessages.cs" />
     <Compile Include="Envir\Translations\EnglishMessages.cs" />
     <Compile Include="Envir\Translations\StringMessages.cs" />
+    <Compile Include="Models\GameUi\GameUiFillGeometry.cs" />
     <Compile Include="Models\MirLibrary.cs" />
     <Compile Include="Models\DamageInfo.cs" />
     <Compile Include="Models\ItemObject.cs" />
@@ -110,6 +151,7 @@
     <Compile Include="Controls\DXTabControl.cs" />
     <Compile Include="Controls\DXTextBox.cs" />
     <Compile Include="Controls\DXWindow.cs" />
+    <Compile Include="Controls\GameUiWindowSkin.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -122,6 +164,7 @@
     <Compile Include="Scenes\SelectScene.cs" />
     <Compile Include="Scenes\Views\AutoPotionDialog.cs" />
     <Compile Include="Scenes\Views\BeltDialog.cs" />
+    <Compile Include="Scenes\Views\BeltDialog.GameUi.cs" />
     <Compile Include="Scenes\Views\BigMapDialog.cs" />
     <Compile Include="Scenes\Views\BuffDialog.cs" />
     <Compile Include="Scenes\Views\CharacterDialog.cs" />
@@ -144,6 +187,8 @@
     <Compile Include="Scenes\Views\MainPanel.cs" />
     <Compile Include="Scenes\Views\MapControl.cs" />
     <Compile Include="Scenes\Views\MiniMapDialog.cs" />
+    <Compile Include="Scenes\Views\MiniMapDialog.GameUi.cs" />
+    <Compile Include="Scenes\Views\MiniMapDialog.GameUiToolbar.cs" />
     <Compile Include="Scenes\Views\MonsterDialog.cs" />
     <Compile Include="Scenes\Views\MonsterDropItemsDialog.cs" />
     <Compile Include="Scenes\Views\MonsterDropListDialog.cs" />
@@ -160,6 +205,13 @@
     <Compile Include="UserModels\ChatTabPageSetting.cs" />
     <Compile Include="UserModels\WindowSetting.cs" />
     <Compile Include="UserModels\KeyBindInfo.cs" />
+    <EmbeddedResource Include="Resources\GameUi\inventory-button.png" />
+    <EmbeddedResource Include="Resources\GameUi\inventory-close.png" />
+    <EmbeddedResource Include="Resources\GameUi\inventory-gold.png" />
+    <EmbeddedResource Include="Resources\GameUi\inventory-weight.png" />
+    <EmbeddedResource Include="Resources\GameUi\hud-orb-overlay.png" />
+    <EmbeddedResource Include="Resources\GameUi\chat-artwork.png" />
+    <EmbeddedResource Include="Resources\GameUi\minimap-buttons.png" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>

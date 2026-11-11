@@ -1,0 +1,7 @@
+{
+  "Client/Client.csproj": "0f192eb59ccefed14732c62b705fb2922aad2ccf92344c403597622878bee745",
+  "Client/Envir/GameUiOfficialV1WindowSet.cs": "68d0e578ec0e22bb23db51ef4a4920be735b270d829d634db72093d77085f1dd",
+  "tests/Run-GameUiNpcTests.ps1": "bc1a1ed679f1915270b0d4601a6d1cea85d2fa78ef7a66aa7c0a449c11054791",
+  "tests/game-ui/OfficialUiNpcTests.cs": "ddd136b5ff299ee43ffbf10958c1fd3de3d36298d8b5641539b86192cdc9e8ce",
+  "Client/Scenes/Views/NPCDialog.cs": "a53ea5ae7c190537fa80b78b3c11cdd2f57909993b17c93cfc92c11eb60d033e"
+}

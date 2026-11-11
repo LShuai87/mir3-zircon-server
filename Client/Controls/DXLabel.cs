@@ -213,6 +213,10 @@ namespace Client.Controls
             Size = GetSize(Text, Font, Outline);
         }
 
+        // Derived viewport labels can translate text without allocating a texture for the entire document.
+        protected virtual Rectangle GetTextBounds(Rectangle bounds) => bounds;
+        protected virtual string GetRenderText() => Text;
+
         protected override void CreateTexture()
         {
             int width = DisplayArea.Width;
@@ -233,17 +237,18 @@ namespace Client.Controls
             {
                 DXManager.ConfigureGraphics(graphics);
                 graphics.Clear(BackColour);
+                string renderText = GetRenderText();
 
                 if (Outline)
                 {
-                    TextRenderer.DrawText(graphics, Text, Font, new Rectangle(1, 0, width, height), OutlineColour, DrawFormat);
-                    TextRenderer.DrawText(graphics, Text, Font, new Rectangle(0, 1, width, height), OutlineColour, DrawFormat);
-                    TextRenderer.DrawText(graphics, Text, Font, new Rectangle(2, 1, width, height), OutlineColour, DrawFormat);
-                    TextRenderer.DrawText(graphics, Text, Font, new Rectangle(1, 2, width, height), OutlineColour, DrawFormat);
-                    TextRenderer.DrawText(graphics, Text, Font, new Rectangle(1, 1, width, height), ForeColour, DrawFormat);
+                    TextRenderer.DrawText(graphics, renderText, Font, GetTextBounds(new Rectangle(1, 0, width, height)), OutlineColour, DrawFormat);
+                    TextRenderer.DrawText(graphics, renderText, Font, GetTextBounds(new Rectangle(0, 1, width, height)), OutlineColour, DrawFormat);
+                    TextRenderer.DrawText(graphics, renderText, Font, GetTextBounds(new Rectangle(2, 1, width, height)), OutlineColour, DrawFormat);
+                    TextRenderer.DrawText(graphics, renderText, Font, GetTextBounds(new Rectangle(1, 2, width, height)), OutlineColour, DrawFormat);
+                    TextRenderer.DrawText(graphics, renderText, Font, GetTextBounds(new Rectangle(1, 1, width, height)), ForeColour, DrawFormat);
                 }
                 else
-                    TextRenderer.DrawText(graphics, Text, Font, new Rectangle(1, 0, width, height), ForeColour, DrawFormat);
+                    TextRenderer.DrawText(graphics, renderText, Font, GetTextBounds(new Rectangle(1, 0, width, height)), ForeColour, DrawFormat);
             }
             ControlTexture.UnlockRectangle(0);
             rect.Data.Dispose();

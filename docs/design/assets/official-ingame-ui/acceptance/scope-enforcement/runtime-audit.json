@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "checkedAtLocalDate": "2026-11-08",
+  "releaseAccepted": false,
+  "runtimeReady": false,
+  "productionBindingAllowed": false,
+  "legacyDefault": true,
+  "builds": [
+    {
+      "configuration": "debug",
+      "buildId": "gameui-060bb9e64bcdcb8da655c78e9ad1de05a3b461c0d55a536041b7da6ad189ef79",
+      "clientSha256": "52f7770ca23c6677833e9409bc3cc9df73ed4703b262a2da78179dd6e3d6a548",
+      "dependenciesVerified": 11
+    },
+    {
+      "configuration": "release",
+      "buildId": "gameui-b76830f93be9639b1ede98c1f5f6fc70353f52a9378b861e407929af44464e7f",
+      "clientSha256": "d2cd660075e0377f61aff5c9e86e55d12f1c852c2c22804bd63937d58a7051e4",
+      "dependenciesVerified": 11
+    }
+  ],
+  "testedSuites": [
+    {
+      "suite": "npc",
+      "files": [
+        {
+          "name": "Zircon.exe",
+          "sha256": "52f7770ca23c6677833e9409bc3cc9df73ed4703b262a2da78179dd6e3d6a548"
+        },
+        {
+          "name": "Library.dll",
+          "sha256": "557ba4f45f3cb2db8bbbbb2a336289b0d3d535959190f86ec7efc2bfdd0b0c5b"
+        },
+        {
+          "name": "SlimDX.dll",
+          "sha256": "f23ec20aeaec149ba963d1fb03af3ea1585ccdf1ac207f315361a80ceaadcc05"
+        }
+      ],
+      "allMatchDebugManifest": true
+    },
+    {
+      "suite": "full-scene",
+      "files": [
+        {
+          "name": "Zircon.exe",
+          "sha256": "52f7770ca23c6677833e9409bc3cc9df73ed4703b262a2da78179dd6e3d6a548"
+        },
+        {
+          "name": "Library.dll",
+          "sha256": "557ba4f45f3cb2db8bbbbb2a336289b0d3d535959190f86ec7efc2bfdd0b0c5b"
+        },
+        {
+          "name": "SlimDX.dll",
+          "sha256": "f23ec20aeaec149ba963d1fb03af3ea1585ccdf1ac207f315361a80ceaadcc05"
+        }
+      ],
+      "allMatchDebugManifest": true
+    }
+  ],
+  "orderedTracesIdentical": true,
+  "deferredServiceGeometryAndCloseStyleCompared": true,
+  "traceSha256": "935d55ae7f56c801ef0403b2d4b4b150adf70ebee8d8abca7ff2684b8c001c4d"
+}

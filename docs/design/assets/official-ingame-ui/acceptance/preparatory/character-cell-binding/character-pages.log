@@ -1,0 +1,2 @@
+Equipment frame GPU: 36 frames, 4741812 pixel comparisons, maximum RGB error 0; real original cells, four pages, empty/item/selection order, scene/ancestor clipping and render-state restoration. Synthetic artwork; native outline edges excluded.
+Character pages: 17249 checks passed; original 16 cells/data/handlers; four pages, six placements, 25 enable/replace/disable cycles, legacy tab regression, equipment-frame lifecycle and disposal. Optional GPU results are reported separately; no packets or game acceptance.

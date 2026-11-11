@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "taskId": "UI-04",
+  "title": "实现显式透明编码与参考 Zl 转存",
+  "status": "done",
+  "checkedAtLocalDate": "2026-11-07",
+  "validationRunId": "official-ui-foundations-20261107-2cc5f7ece409",
+  "baselineCommit": "fc581d5cf96a81b49c557a15675a7386efac8825",
+  "implementationCommit": null,
+  "implementationInWorkingTree": true,
+  "sourcePlanSha256": "f8c0a002b3821fabb54993792c354c4eff35eec51f9cfdc418535017c13069e9",
+  "accomplishments": [
+    "实现显式 opaque/binary-mask DXT1 和 GUI 程序的自动化等待入口，旧 WTL 夹具哈希不变。",
+    "四个参考 Zl 重复构建相同；生产 MirLibrary 读取并上传 2,208 张 D3D9 纹理，压缩数据读回逐字节一致。",
+    "拒绝运行包、已有输出和源目录重叠；编码子进程失败后清理本次暂存并保留既有输出。"
+  ],
+  "evidence": [
+    "docs/design/assets/official-ingame-ui/acceptance/foundations/verification.json"
+  ],
+  "commandIds": [
+    "assets",
+    "controls-layout",
+    "reference-build",
+    "build-guards"
+  ],
+  "unresolved": [],
+  "acceptanceCases": [
+    {
+      "caseId": "A01",
+      "taskScope": "pass",
+      "fullGameResult": "not_run"
+    },
+    {
+      "caseId": "A02",
+      "taskScope": "pass",
+      "fullGameResult": "not_run"
+    }
+  ],
+  "releaseAccepted": false
+}

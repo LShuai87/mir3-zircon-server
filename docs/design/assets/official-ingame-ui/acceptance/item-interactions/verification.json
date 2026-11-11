@@ -1,0 +1,308 @@
+{
+  "schemaVersion": 1,
+  "kind": "official-ui-filled-item-coordinate-routing-and-semantic-packet-parity",
+  "checkedAtLocalDate": "2026-11-08",
+  "referenceResolution": [
+    1024,
+    768
+  ],
+  "windowMode": "windowed",
+  "releaseAccepted": false,
+  "sourceChanges": [
+    {
+      "path": "tests/game-ui/OfficialUiFullSceneTests.cs",
+      "beforeSha256": "dfd22b45f8b9f6cbd1eadb15b7fd3170ff2d6e316a295147526a55535148c659",
+      "afterSha256": "95e0b086a7ba20c631d30dab30079d09e683ea5672c61a1f762ac623af5cc306"
+    }
+  ],
+  "sourceHashes": [
+    {
+      "path": "tests/game-ui/OfficialUiFullSceneTests.cs",
+      "sha256": "95e0b086a7ba20c631d30dab30079d09e683ea5672c61a1f762ac623af5cc306"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiItemInteractionTests.cs",
+      "sha256": "60da0fe623f888c4a75f759301ee02ec7c5995528bae13f6a03efd73afb76cc3"
+    },
+    {
+      "path": "tests/Run-GameUiItemInteractionTests.ps1",
+      "sha256": "bf2896523ee2b1d1c025043a1a104c2cd3d8041d996fa311bfd0c796a91a8645"
+    }
+  ],
+  "registeredSourcesBefore": {
+    "path": "docs/design/assets/official-ingame-ui/acceptance/item-interactions/registered-sources-before.json",
+    "sha256": "9e46b9d0d81c86c8e27eccfcc9cf005fd7f3f4c088f810da33d91813c8c83cac",
+    "count": 155,
+    "allMatchedRegisteredHashes": true,
+    "unchangedCount": 154,
+    "changedWithExplicitTransitionCount": 1
+  },
+  "commands": [
+    {
+      "command": "pwsh -NoProfile -File tests/Run-GameUiItemInteractionTests.ps1 -PackagePath E:/workspace/mir3-ui-work/hud-progress-zl-20261108-v1/OfficialV1.Zl -EvidenceDirectory E:/workspace/mir3-ui-work/item-interactions-20261108-v1/final-powershell7",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/item-interactions/item-tests-powershell7.log",
+      "logSha256": "ab9c87311be86e46702bd4397142393e28f9dd184bc5dcb5d1274cd8458620a5"
+    },
+    {
+      "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File tests/Run-GameUiItemInteractionTests.ps1 -PackagePath E:/workspace/mir3-ui-work/hud-progress-zl-20261108-v1/OfficialV1.Zl -EvidenceDirectory E:/workspace/mir3-ui-work/item-interactions-20261108-v1/final-windows-powershell",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/item-interactions/item-tests-windows-powershell.log",
+      "logSha256": "ab9c87311be86e46702bd4397142393e28f9dd184bc5dcb5d1274cd8458620a5"
+    },
+    {
+      "command": "pwsh -NoProfile -File tests/Run-GameUiFullSceneTests.ps1 -PackagePath E:/workspace/mir3-ui-work/hud-progress-zl-20261108-v1/OfficialV1.Zl -EvidenceDirectory E:/workspace/mir3-ui-work/item-interactions-20261108-v1/full-scene-regression",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/item-interactions/full-scene-regression.log",
+      "logSha256": "0d85d4de7905eb608acc989200b5dfcc19842b35b62586889490caf606d4a988"
+    },
+    {
+      "command": "python build/game-ui/Validate-UiTasks.py",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/item-interactions/task-validation.log",
+      "logSha256": "a0bf6a8e0738de35b2e36e703a81f351d36919785b1be660f5f7e53773a413a9"
+    },
+    {
+      "command": "git -c core.whitespace=cr-at-eol diff --check",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/item-interactions/diff-check.log",
+      "logSha256": "79d6e102d3342502fc80ca42def8ff97f6642ce33398d5219dc2f3e921c23f6f"
+    }
+  ],
+  "verification": {
+    "checks": 7519,
+    "scenes": 3,
+    "presentedFrames": 15,
+    "deviceResets": 6,
+    "coordinateHits": 1149,
+    "fixtureImage": 1,
+    "serverConnected": false,
+    "releaseAccepted": false,
+    "runs": 2,
+    "shells": [
+      "PowerShell 7",
+      "Windows PowerShell 5.1"
+    ],
+    "perRun": {
+      "checks": 7519,
+      "coordinateHits": 1149,
+      "realGameScenes": 3,
+      "presentedFrames": 15,
+      "explicitDeviceResets": 6,
+      "semanticPacketTraceLengthPerScene": 112
+    },
+    "packetTraceEquality": "Legacy == OfficialV1 == OfficialV1 reentry, in each shell; link InfoIndex checked against actual definition then normalized to originating inventory slot",
+    "sourceChangesAreTestOnly": true,
+    "readOnlyOfficialInstallationUnmodified": true,
+    "registeredSourceCountAfter": 157,
+    "originalFullSceneRegression": {
+      "checks": 180,
+      "realGameScenes": 3,
+      "presentedFrames": 17,
+      "explicitDeviceResets": 7,
+      "identicalPanelPixels": 690512,
+      "distinctResolutions": 6
+    },
+    "developmentDefault": "Legacy",
+    "compiledRuntimeReady": false,
+    "completedAcceptanceCases": [],
+    "semanticTracesAlsoIdenticalAcrossShells": true
+  },
+  "package": {
+    "externalPath": "E:/workspace/mir3-ui-work/hud-progress-zl-20261108-v1/OfficialV1.Zl",
+    "sha256": "a67995c4a5d928da09b69b89ff199c9abb73821d6b620ad71bec4a62fd1df635",
+    "bytes": 354374,
+    "frames": 91,
+    "buttonGroups": 19
+  },
+  "limitations": [
+    "Synthetic blank map, level-35 user and items; one reused nonempty StoreItems icon is not final item/equipment/avatar artwork acceptance.",
+    "Socket-free CConnection fixture queues requests; ItemMove/ItemSplit replies injected into original handlers. No live server transaction, login or reconnect verified.",
+    "ItemUse only checks request/lock; test clears lock between gestures, no server consumption verified.",
+    "Clicks and same-cell double click go through TargetForm; held-button drag/release, dropping, selling and decomposition not exercised.",
+    "No live IME, true hardware device loss, final art acceptance, gate closure or release acceptance."
+  ],
+  "evidenceFiles": [
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-interactions/README.md",
+      "sha256": "eca26610881c7219e18b169731bdd088b454b62166f8430a9d147068f3a4e23f"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-interactions/diff-check.log",
+      "sha256": "79d6e102d3342502fc80ca42def8ff97f6642ce33398d5219dc2f3e921c23f6f"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-interactions/full-scene-regression.log",
+      "sha256": "0d85d4de7905eb608acc989200b5dfcc19842b35b62586889490caf606d4a988"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-interactions/full-scene-regression/legacy-resources.txt",
+      "sha256": "47713d590a1b9214abdef7a0fc33d6c28a2b5a73a0cff9794375a5083020b498"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-interactions/full-scene-regression/reset-pixel-probes.txt",
+      "sha256": "2c236cd844574b74b6d502b13ffed99b5cb29783fc53ea00587ca1543a18ac67"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-interactions/full-scene-regression/tested-runtime.json",
+      "sha256": "af2f1b91eb24458ec29ea7a9e683ea32e601c7a840c04eae3833acba1adc92ea"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-interactions/item-tests-powershell7.log",
+      "sha256": "ab9c87311be86e46702bd4397142393e28f9dd184bc5dcb5d1274cd8458620a5"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-interactions/item-tests-windows-powershell.log",
+      "sha256": "ab9c87311be86e46702bd4397142393e28f9dd184bc5dcb5d1274cd8458620a5"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-interactions/powershell7/assertions.txt",
+      "sha256": "9cb3328b9aa80e38b692da1e5910593e6b5c17766e5b454bb28e6ff503ec57ad"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-interactions/powershell7/coordinate-hits.txt",
+      "sha256": "a42bb4e870f92d2184bc4bb4ffe3c4bf9f150d15cfdbe2f1043599abb80be9cf"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-interactions/powershell7/legacy-filled-bag.png",
+      "sha256": "081d8ac11ab37bdcec0bd4646bed8812a587852fe3bf05e72f09ea939dddfc1b"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-interactions/powershell7/legacy-filled-equipment.png",
+      "sha256": "7613d2436951116adb5af332b5d81daaa1d70cb885dea8aa32d86461d0a1ce0e"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-interactions/powershell7/legacy-filled-extra.png",
+      "sha256": "7613d2436951116adb5af332b5d81daaa1d70cb885dea8aa32d86461d0a1ce0e"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-interactions/powershell7/legacy-packet-trace.txt",
+      "sha256": "2616428afb2fc1488d5a1123ba5066899b1115f9a7901986dd2ca6637713906d"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-interactions/powershell7/legacy-resources.txt",
+      "sha256": "47713d590a1b9214abdef7a0fc33d6c28a2b5a73a0cff9794375a5083020b498"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-interactions/powershell7/metrics.json",
+      "sha256": "4b8a42b819e12cd95e4f9caab8fbd2c622b4541454cfe03ad922ee75be1c1311"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-interactions/powershell7/official-filled-bag.png",
+      "sha256": "6495b319013de7bbe1b3e7892a8dc9f185a665f5efbd24938ad2cf65fef258b8"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-interactions/powershell7/official-filled-equipment.png",
+      "sha256": "89d340fede3a7549abaabe7bdbcf350b680a355c2d5424a28ba7abe6d7553645"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-interactions/powershell7/official-filled-extra.png",
+      "sha256": "979db6f4cb108e31373b87803f30f8629fb4b1e9d4ebc6d7a16b2bd5b85675d8"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-interactions/powershell7/official-packet-trace.txt",
+      "sha256": "2616428afb2fc1488d5a1123ba5066899b1115f9a7901986dd2ca6637713906d"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-interactions/powershell7/official-reentry-filled-bag.png",
+      "sha256": "fe9bf831b96752ee0a5276975d225a918ce080701908a84da8a3420dd59cf649"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-interactions/powershell7/official-reentry-filled-equipment.png",
+      "sha256": "89d340fede3a7549abaabe7bdbcf350b680a355c2d5424a28ba7abe6d7553645"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-interactions/powershell7/official-reentry-filled-extra.png",
+      "sha256": "979db6f4cb108e31373b87803f30f8629fb4b1e9d4ebc6d7a16b2bd5b85675d8"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-interactions/powershell7/official-reentry-packet-trace.txt",
+      "sha256": "2616428afb2fc1488d5a1123ba5066899b1115f9a7901986dd2ca6637713906d"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-interactions/powershell7/tested-runtime.json",
+      "sha256": "af2f1b91eb24458ec29ea7a9e683ea32e601c7a840c04eae3833acba1adc92ea"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-interactions/registered-sources-before.json",
+      "sha256": "9e46b9d0d81c86c8e27eccfcc9cf005fd7f3f4c088f810da33d91813c8c83cac"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-interactions/task-validation.log",
+      "sha256": "a0bf6a8e0738de35b2e36e703a81f351d36919785b1be660f5f7e53773a413a9"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-interactions/windows-powershell/assertions.txt",
+      "sha256": "9cb3328b9aa80e38b692da1e5910593e6b5c17766e5b454bb28e6ff503ec57ad"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-interactions/windows-powershell/coordinate-hits.txt",
+      "sha256": "a42bb4e870f92d2184bc4bb4ffe3c4bf9f150d15cfdbe2f1043599abb80be9cf"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-interactions/windows-powershell/legacy-filled-bag.png",
+      "sha256": "081d8ac11ab37bdcec0bd4646bed8812a587852fe3bf05e72f09ea939dddfc1b"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-interactions/windows-powershell/legacy-filled-equipment.png",
+      "sha256": "7613d2436951116adb5af332b5d81daaa1d70cb885dea8aa32d86461d0a1ce0e"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-interactions/windows-powershell/legacy-filled-extra.png",
+      "sha256": "7613d2436951116adb5af332b5d81daaa1d70cb885dea8aa32d86461d0a1ce0e"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-interactions/windows-powershell/legacy-packet-trace.txt",
+      "sha256": "2616428afb2fc1488d5a1123ba5066899b1115f9a7901986dd2ca6637713906d"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-interactions/windows-powershell/legacy-resources.txt",
+      "sha256": "47713d590a1b9214abdef7a0fc33d6c28a2b5a73a0cff9794375a5083020b498"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-interactions/windows-powershell/metrics.json",
+      "sha256": "4b8a42b819e12cd95e4f9caab8fbd2c622b4541454cfe03ad922ee75be1c1311"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-interactions/windows-powershell/official-filled-bag.png",
+      "sha256": "6495b319013de7bbe1b3e7892a8dc9f185a665f5efbd24938ad2cf65fef258b8"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-interactions/windows-powershell/official-filled-equipment.png",
+      "sha256": "89d340fede3a7549abaabe7bdbcf350b680a355c2d5424a28ba7abe6d7553645"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-interactions/windows-powershell/official-filled-extra.png",
+      "sha256": "979db6f4cb108e31373b87803f30f8629fb4b1e9d4ebc6d7a16b2bd5b85675d8"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-interactions/windows-powershell/official-packet-trace.txt",
+      "sha256": "2616428afb2fc1488d5a1123ba5066899b1115f9a7901986dd2ca6637713906d"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-interactions/windows-powershell/official-reentry-filled-bag.png",
+      "sha256": "fe9bf831b96752ee0a5276975d225a918ce080701908a84da8a3420dd59cf649"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-interactions/windows-powershell/official-reentry-filled-equipment.png",
+      "sha256": "89d340fede3a7549abaabe7bdbcf350b680a355c2d5424a28ba7abe6d7553645"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-interactions/windows-powershell/official-reentry-filled-extra.png",
+      "sha256": "979db6f4cb108e31373b87803f30f8629fb4b1e9d4ebc6d7a16b2bd5b85675d8"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-interactions/windows-powershell/official-reentry-packet-trace.txt",
+      "sha256": "2616428afb2fc1488d5a1123ba5066899b1115f9a7901986dd2ca6637713906d"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-interactions/windows-powershell/tested-runtime.json",
+      "sha256": "3010c70e9adf758a614c514e04cdced7b10304702f4086730a3718b7691d1d87"
+    }
+  ]
+}

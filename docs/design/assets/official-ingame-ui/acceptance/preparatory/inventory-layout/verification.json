@@ -1,0 +1,167 @@
+{
+  "schemaVersion": 1,
+  "kind": "official-ui-optional-inventory-layout-verification",
+  "checkedAtLocalDate": "2026-11-08",
+  "referenceResolution": [
+    1024,
+    768
+  ],
+  "releaseAccepted": false,
+  "sourceChanges": [
+    {
+      "path": "Client/Client.csproj",
+      "beforeSha256": "5b4ccfae1e843aa3f6d0e2e609514864de5f006c7a3086509aafe00ce239496b",
+      "afterSha256": "17f8d0a1992772a1bbe61228dbc26329d518fa3876c6296c95659a93fe0a8d91"
+    },
+    {
+      "path": "build/game-ui/layout-official-v1.json",
+      "beforeSha256": "1cbb7eb24e0201f940480fca60b8c9b463db8e9580b599fa9c6f46828989d8df",
+      "afterSha256": "b39fa17ba46f9424a7c5b713a1c77cf7d16b31570a1320232f747239ccd8f509"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiLayoutContractTests.cs",
+      "beforeSha256": "d812cef377d261555986e2780c889a083fe32580402f04066e0cb14202c8826b",
+      "afterSha256": "941de006dcc75c8e8d54bc4eb9c16a0bd37be769c85fb023822a9f8827562e3f"
+    }
+  ],
+  "sourceHashes": [
+    {
+      "path": "Client/Client.csproj",
+      "sha256": "17f8d0a1992772a1bbe61228dbc26329d518fa3876c6296c95659a93fe0a8d91"
+    },
+    {
+      "path": "Client/Scenes/Views/InventoryDialog.cs",
+      "sha256": "8c334156b799f495e8a4dba263330c6aef9433917c76d45303921f64a5171f14"
+    },
+    {
+      "path": "Client/Envir/GameUiInventoryLayout.cs",
+      "sha256": "30fcacabdd70fb7829ffdafe5586223a6bff966f4e64dd9e5ed0b2b5d476a6f2"
+    },
+    {
+      "path": "Client/Scenes/Views/InventoryDialog.GameUi.cs",
+      "sha256": "3e7790d4dd1fd8158d9b29cf07fc83d7b4b9bb6819ca4db1f18d07cd4accdf79"
+    },
+    {
+      "path": "build/game-ui/layout-official-v1.json",
+      "sha256": "b39fa17ba46f9424a7c5b713a1c77cf7d16b31570a1320232f747239ccd8f509"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiLayoutContractTests.cs",
+      "sha256": "941de006dcc75c8e8d54bc4eb9c16a0bd37be769c85fb023822a9f8827562e3f"
+    },
+    {
+      "path": "tests/Run-GameUiInventoryLayoutTests.ps1",
+      "sha256": "7908a603a6690a890d3847cb729bb8a7330cb799dc869ceadbaf7c08bd2418c0"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiInventoryLayoutTests.cs",
+      "sha256": "b728aaad0022234a425ac5d5ee6352bf916770305dac00035e5b039c4bd25d02"
+    }
+  ],
+  "priorSourceHashes": [
+    {
+      "path": "Client/Client.csproj",
+      "sha256": "5b4ccfae1e843aa3f6d0e2e609514864de5f006c7a3086509aafe00ce239496b"
+    },
+    {
+      "path": "build/game-ui/layout-official-v1.json",
+      "sha256": "1cbb7eb24e0201f940480fca60b8c9b463db8e9580b599fa9c6f46828989d8df"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiLayoutContractTests.cs",
+      "sha256": "d812cef377d261555986e2780c889a083fe32580402f04066e0cb14202c8826b"
+    },
+    {
+      "path": "Client/Scenes/Views/InventoryDialog.cs",
+      "sha256": "295a994be1178575ccd12b09739e679a0ee5c2aaca26772a82d845162176b81b"
+    }
+  ],
+  "newlyRegisteredSourceChanges": [
+    {
+      "path": "Client/Scenes/Views/InventoryDialog.cs",
+      "beforeSha256": "295a994be1178575ccd12b09739e679a0ee5c2aaca26772a82d845162176b81b",
+      "afterSha256": "8c334156b799f495e8a4dba263330c6aef9433917c76d45303921f64a5171f14"
+    }
+  ],
+  "commands": [
+    {
+      "command": "MSBuild.exe Client/Client.csproj /t:Build /p:Configuration=Debug /p:Platform=AnyCPU /nologo /v:minimal",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/inventory-layout/build-debug.log",
+      "logSha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "command": "powershell -NoProfile -File tests/Run-GameUiInventoryLayoutTests.ps1",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/inventory-layout/inventory.log",
+      "logSha256": "35697536193c3522b1b1289b0efa40be97a77fde7e15d70e414f17451d6756ee"
+    },
+    {
+      "command": "powershell -NoProfile -File tests/Run-GameUiLayoutContractTests.ps1 -PythonPath C:/Users/shuai/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/inventory-layout/layout.log",
+      "logSha256": "73bbd53121dc7e8a9628ecf8fe0f957dd50c7943e80cf6a1a7bc8c3c50eaa31c"
+    },
+    {
+      "command": "powershell -NoProfile -File tests/Run-GameUiCharacterCompositionTests.ps1",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/inventory-layout/composition.log",
+      "logSha256": "3b3c9390ac1ba8c55eb56f5f88e0b1dedd6e713a0cb5ebc5f3300179a5956581"
+    },
+    {
+      "command": "MSBuild.exe Client/Client.csproj /t:Build /p:Configuration=Release /p:Platform=AnyCPU /nologo /v:minimal",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/inventory-layout/build-release.log",
+      "logSha256": "c9e24428be1e56c8408af17aacfea3413de3953bfe426d10eb768782f5005ebc"
+    },
+    {
+      "command": "python build/game-ui/Prepare-CharacterBindings.py --report docs/design/assets/official-ingame-ui/acceptance/preparatory/inventory-layout/binding-validation.json",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/inventory-layout/bindings.log",
+      "logSha256": "594673be448053cd573cfb73476636c48466db6aad7d1b633f1a0faf51d44d36"
+    },
+    {
+      "command": "git -c core.whitespace=cr-at-eol diff --check",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/inventory-layout/diff-check.log",
+      "logSha256": "e6152b617fd78a357cdb28aa505147a500f21c5baf16655cdaad9642246e1bb8"
+    }
+  ],
+  "results": {
+    "inventoryAssertions": 6349,
+    "originalCellCount": 49,
+    "originalControlGroups": 8,
+    "enableReplaceDisableCycles": 8,
+    "windowPlacements": 6,
+    "compiledGeometryCheckedAgainstJson": true,
+    "originalMouseClickDelegatesRetained": true,
+    "gridDataAndSlotIdentitiesRetained": true,
+    "liveGoldPickupGuardTested": true,
+    "closeAndTradeLinkExceptionTested": true,
+    "popupGameAcceptanceExecuted": false,
+    "layoutNodeCount": 234,
+    "layoutInteractiveCount": 109,
+    "layoutPlacements": 60,
+    "deterministicGeneratedFiles": 12,
+    "invalidLayoutContractsRejected": 11,
+    "characterCompositionRegressionAssertions": 2115,
+    "debugBuild": "pass",
+    "releaseBuild": "pass",
+    "runtimeEnabled": false,
+    "gameAcceptanceExecuted": false
+  },
+  "limitations": [
+    "GameScene does not invoke this optional adapter. OfficialV1 remains incomplete and disabled.",
+    "49 existing cells retain their 36-pixel size, 35-pixel pitch, slot IDs, grid data, event handlers and original border hit behavior. This batch moves the grid as a whole and does not recreate it.",
+    "No rendered-artwork, in-game equipment/use/split operations, live networking, IME, performance or A01..A20 acceptance is claimed. Button handlers are retained by delegate identity; secondary popup rendering/behavior is not accepted by this isolated test.",
+    "Window skin sizing and title/close geometry are owned by DXWindow; install/size the skin before enabling this adapter and disable the adapter before restoring the legacy skin/size.",
+    "1024x768 is the user-confirmed logical baseline. Reuse existing screenshots; no extra login, capture, chat sending or display-setting changes. NPC cards and secondary popups retain legacy styling."
+  ]
+}

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
@@ -74,11 +74,73 @@ namespace Client.Scenes.Views
         public DXButton OptionsButton;
         public DXButton ChatModeButton;
 
+        public GameUiChatInputLayout GameUiInputLayout { get; private set; }
+        private Size legacyModeSize, legacyOptionsSize;
+        public override Size Size
+        {
+            get => base.Size;
+            set => base.Size = GameUiInputLayout?.ConstrainSize(value) ?? value;
+        }
+        public override Size GetAcceptableResize(Size size)
+            => GameUiInputLayout?.ConstrainSize(base.GetAcceptableResize(size)) ?? base.GetAcceptableResize(size);
+
+        public void UseGameUiInputLayout(GameUiChatInputLayout layout)
+        {
+            if (IsDisposed) throw new ObjectDisposedException(nameof(ChatTextBox));
+            if (layout != null && layout.ConstrainSize(Size) != Size)
+                throw new ArgumentException("Set the input row to a valid size before applying its geometry.", nameof(layout));
+            if (GameUiInputLayout == null && layout != null)
+            {
+                legacyModeSize = ChatModeButton.Size;
+                legacyOptionsSize = OptionsButton.Size;
+            }
+            else if (GameUiInputLayout != null && layout == null)
+            {
+                ChatModeButton.Size = legacyModeSize;
+                OptionsButton.Size = legacyOptionsSize;
+            }
+            GameUiInputLayout = layout;
+            LayoutInputControls();
+        }
+
+        private void LayoutInputControls()
+        {
+            if (TextBox == null || ChatModeButton == null || OptionsButton == null) return;
+            if (GameUiInputLayout != null)
+            {
+                Rectangle mode, input, options;
+                GameUiInputLayout.GetBounds(Size, out mode, out input, out options);
+                ChatModeButton.Location = mode.Location;
+                ChatModeButton.Size = mode.Size;
+                OptionsButton.Location = options.Location;
+                OptionsButton.Size = options.Size;
+                TextBox.Location = input.Location;
+                TextBox.Size = input.Size;
+                // Font-constrained native text height may differ from the requested height.
+                TextBox.TextBox.Bounds = TextBox.DisplayArea;
+                return;
+            }
+            ChatModeButton.Location = new Point(ClientArea.Location.X, ClientArea.Y - 1);
+            TextBox.Size = new Size(ClientArea.Width - ChatModeButton.Size.Width - 10 - OptionsButton.Size.Width, 20);
+            TextBox.Location = new Point(ClientArea.Location.X + ChatModeButton.Size.Width + 5, ClientArea.Y);
+            OptionsButton.Location = new Point(ClientArea.Location.X + TextBox.Size.Width + ChatModeButton.Size.Width + 10, ClientArea.Y - 1);
+        }
+
+
+        public override void OnDisplayAreaChanged(Rectangle oValue, Rectangle nValue)
+        {
+            base.OnDisplayAreaChanged(oValue, nValue);
+            // A hidden native editor skips DXTextBox's visible-only position refresh.
+            // Keep its future IME anchor correct even when only the parent moved.
+            if (GameUiInputLayout != null && TextBox?.TextBox != null)
+                TextBox.TextBox.Bounds = TextBox.DisplayArea;
+        }
+
         public override void OnParentChanged(DXControl oValue, DXControl nValue)
         {
             base.OnParentChanged(oValue, nValue);
 
-            if (GameScene.Game.MainPanel == null) return;
+            if (GameScene.Game?.MainPanel == null) return;
 
             Location = new Point(GameScene.Game.MainPanel.Location.X, (GameScene.Game.MainPanel.DisplayArea.Top - Size.Height));
         }
@@ -86,12 +148,7 @@ namespace Client.Scenes.Views
         {
             base.OnSizeChanged(oValue, nValue);
 
-            if (TextBox == null || ChatModeButton == null || OptionsButton == null) return;
-
-            ChatModeButton.Location = new Point(ClientArea.Location.X, ClientArea.Y - 1);
-            TextBox.Size = new Size(ClientArea.Width - ChatModeButton.Size.Width - 10 - OptionsButton.Size.Width, 20);
-            TextBox.Location = new Point(ClientArea.Location.X + ChatModeButton.Size.Width + 5, ClientArea.Y);
-            OptionsButton.Location = new Point(ClientArea.Location.X + TextBox.Size.Width + ChatModeButton.Size.Width + 10, ClientArea.Y - 1);
+            LayoutInputControls();
         }
 
         public override WindowType Type => WindowType.ChatTextBox;

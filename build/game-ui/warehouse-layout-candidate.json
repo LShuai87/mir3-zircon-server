@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "kind": "warehouse-candidate-layout",
+  "status": "candidate-uninstalled",
+  "layoutFrozen": false,
+  "runtimeReady": false,
+  "productionBindingAllowed": false,
+  "referenceResolution": [
+    1024,
+    768
+  ],
+  "sourceRole": "warehouse-background",
+  "windowSize": [
+    508,
+    480
+  ],
+  "title": [
+    24,
+    10,
+    440,
+    18
+  ],
+  "drag": [
+    8,
+    0,
+    460,
+    38
+  ],
+  "close": [
+    478,
+    10,
+    18,
+    18
+  ],
+  "filter": [
+    16,
+    48,
+    473,
+    26
+  ],
+  "grid": [
+    16,
+    78,
+    456,
+    351
+  ],
+  "scrollbar": [
+    478,
+    79,
+    14,
+    349
+  ],
+  "columns": 13,
+  "visibleRows": 10,
+  "cellSize": [
+    36,
+    36
+  ],
+  "step": [
+    35,
+    35
+  ],
+  "preserve": [
+    "Original filter children, callbacks and parent",
+    "Dynamic capacity from GameScene.Game.StorageSize",
+    "Original grid items, scroll value, mouse wheel and item-cell handlers",
+    "Original storage/retrieval packets and inventory linkage"
+  ],
+  "limitations": [
+    "No native warehouse screenshot match",
+    "No scene/catalog/package binding yet",
+    "Original control geometry must be verified before binding",
+    "Combination layout and live storage acceptance pending"
+  ]
+}

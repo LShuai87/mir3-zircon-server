@@ -1,0 +1,11 @@
+warning: in the working copy of '.gitignore', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Client/Controls/DXCheckBox.cs', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Client/Scenes/Views/ChatTab.cs', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'ImageManager/ImageManager.csproj', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'ImageManager/Program.cs', LF will be replaced by CRLF the next time Git touches it
+Client/Scenes/Views/ChatTab.cs:94: trailing whitespace.
++            
+Client/Scenes/Views/ChatTab.cs:462: trailing whitespace.
++                
+Client/Scenes/Views/ChatTab.cs:517: trailing whitespace.
++                    

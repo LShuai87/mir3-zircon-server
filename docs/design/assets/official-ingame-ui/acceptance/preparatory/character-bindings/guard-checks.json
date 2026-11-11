@@ -1,0 +1,46 @@
+{
+  "kind": "character-binding-draft-negative-and-reproducibility-checks",
+  "result": "pass",
+  "negativeCases": [
+    {
+      "name": "wrong-equipment-page",
+      "result": "pass",
+      "rejectedExitCode": 1,
+      "diagnostic": "Character binding draft rejected: Draft differs from current verified contract; review changes before regenerating"
+    },
+    {
+      "name": "missing-stat",
+      "result": "pass",
+      "rejectedExitCode": 1,
+      "diagnostic": "Character binding draft rejected: Draft differs from current verified contract; review changes before regenerating"
+    },
+    {
+      "name": "wrong-data-source",
+      "result": "pass",
+      "rejectedExitCode": 1,
+      "diagnostic": "Character binding draft rejected: Draft differs from current verified contract; review changes before regenerating"
+    },
+    {
+      "name": "production-flag",
+      "result": "pass",
+      "rejectedExitCode": 1,
+      "diagnostic": "Character binding draft rejected: Draft differs from current verified contract; review changes before regenerating"
+    },
+    {
+      "name": "duplicate-json-key",
+      "result": "pass",
+      "rejectedExitCode": 1,
+      "diagnostic": "Character binding draft rejected: Duplicate JSON key: schemaVersion"
+    },
+    {
+      "name": "wrong-slot-id",
+      "result": "pass",
+      "rejectedExitCode": 1,
+      "diagnostic": "Character binding draft rejected: Draft differs from current verified contract; review changes before regenerating"
+    }
+  ],
+  "regeneratedDraftByteIdentical": true,
+  "gameAcceptanceExecuted": false,
+  "toolSha256": "af6c6b66572e6f3ed885d87bb30f56211b94d4fcc95db14301fb6074dea8a437",
+  "manifestSha256": "e8dda15d91424a6b13a4258fa9f2c26de0858a73437d7e5def313d728e706b2e"
+}

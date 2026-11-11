@@ -1,0 +1,74 @@
+move|Inventory|0|Inventory|48|False
+drop|Inventory|0|20
+drop|Inventory|1|20
+drop|Inventory|2|20
+drop|Inventory|3|20
+drop|Inventory|4|20
+drop|Inventory|5|20
+drop|Inventory|6|20
+drop|Inventory|7|20
+drop|Inventory|8|20
+drop|Inventory|9|20
+drop|Inventory|10|20
+drop|Inventory|11|20
+drop|Inventory|12|20
+drop|Inventory|13|20
+drop|Inventory|14|20
+drop|Inventory|15|20
+drop|Inventory|16|20
+drop|Inventory|17|20
+drop|Inventory|18|20
+drop|Inventory|19|20
+drop|Inventory|20|20
+drop|Inventory|21|20
+drop|Inventory|22|20
+drop|Inventory|23|20
+drop|Inventory|24|20
+drop|Inventory|25|20
+drop|Inventory|26|20
+drop|Inventory|27|20
+drop|Inventory|28|20
+drop|Inventory|29|20
+drop|Inventory|30|20
+drop|Inventory|31|20
+drop|Inventory|32|20
+drop|Inventory|33|20
+drop|Inventory|34|20
+drop|Inventory|35|20
+drop|Inventory|36|20
+drop|Inventory|37|20
+drop|Inventory|38|20
+drop|Inventory|39|20
+drop|Inventory|40|20
+drop|Inventory|41|20
+drop|Inventory|42|20
+drop|Inventory|43|20
+drop|Inventory|44|20
+drop|Inventory|45|20
+drop|Inventory|46|20
+drop|Inventory|47|20
+drop|Inventory|48|20
+accepted-drop|20-to-7-to-0
+belt-unlink|0|-1|-1
+gold-drop|17
+popup-open-close|{Width=1024, Height=768}|RemoteSellButton
+popup-open-close|{Width=1024, Height=768}|RemoteFragmentButton
+popup-open-close|{Width=1024, Height=768}|MonsterDropListButton
+popup-open-close|{Width=800, Height=600}|RemoteSellButton
+popup-open-close|{Width=800, Height=600}|RemoteFragmentButton
+popup-open-close|{Width=800, Height=600}|MonsterDropListButton
+popup-open-close|{Width=1280, Height=720}|RemoteSellButton
+popup-open-close|{Width=1280, Height=720}|RemoteFragmentButton
+popup-open-close|{Width=1280, Height=720}|MonsterDropListButton
+popup-open-close|{Width=1280, Height=800}|RemoteSellButton
+popup-open-close|{Width=1280, Height=800}|RemoteFragmentButton
+popup-open-close|{Width=1280, Height=800}|MonsterDropListButton
+popup-open-close|{Width=1366, Height=768}|RemoteSellButton
+popup-open-close|{Width=1366, Height=768}|RemoteFragmentButton
+popup-open-close|{Width=1366, Height=768}|MonsterDropListButton
+popup-open-close|{Width=1920, Height=1080}|RemoteSellButton
+popup-open-close|{Width=1920, Height=1080}|RemoteFragmentButton
+popup-open-close|{Width=1920, Height=1080}|MonsterDropListButton
+popup-open-close|{Width=1024, Height=768}|RemoteSellButton
+popup-open-close|{Width=1024, Height=768}|RemoteFragmentButton
+popup-open-close|{Width=1024, Height=768}|MonsterDropListButton

@@ -1,0 +1,10 @@
+System.Exception: legacy: opened popup fits viewport MonsterDropListButton bounds={X=500,Y=377,Width=368,Height=396}
+   在 OfficialUiFullSceneTests.Check(Boolean condition, String message)
+   在 OfficialUiFullSceneTests.ItemCheck(Boolean condition, String message)
+   在 OfficialUiFullSceneTests.ExerciseDrops(GameUiStartupSession owner, MapInfo map, String evidence, String style)
+   在 OfficialUiFullSceneTests.RunItemDrops(String[] args)
+Exception: E:\workspace\mir3-zircon-server\tests\Run-GameUiItemDropTests.ps1:33
+Line |
+  33 |          if ($LASTEXITCODE -ne 0) { throw 'ItemDrop tests failed.' }
+     |                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | ItemDrop tests failed.

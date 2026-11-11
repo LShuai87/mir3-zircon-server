@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "E:\workspace\mir3-zircon-server\tests\game-ui\Verify-WarehouseCandidate.py", line 9, in <module>
+    import numpy as np
+ModuleNotFoundError: No module named 'numpy'

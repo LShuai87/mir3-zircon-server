@@ -1,0 +1,316 @@
+{
+  "schemaVersion": 1,
+  "kind": "official-ingame-ui-npc-item-services-candidate",
+  "checkedAtLocalDate": "2026-11-08",
+  "releaseAccepted": false,
+  "referenceResolution": [
+    1024,
+    768
+  ],
+  "results": {
+    "sell": {
+      "columns": 7,
+      "rows": 7,
+      "cells": 49,
+      "cellSize": [
+        36,
+        36
+      ],
+      "windowSize": [
+        294,
+        388
+      ],
+      "clientSize": [
+        246,
+        296
+      ]
+    },
+    "repair": {
+      "columns": 14,
+      "rows": 5,
+      "cells": 70,
+      "cellSize": [
+        36,
+        36
+      ],
+      "windowSize": [
+        539,
+        338
+      ],
+      "clientSize": [
+        491,
+        246
+      ]
+    },
+    "npcChecks": 5328,
+    "npcScenes": 3,
+    "npcCoordinateHits": 533,
+    "npcPresentedFrames": 42,
+    "npcDeviceResets": 33,
+    "identicalOriginalCardPixels": 2399935,
+    "orderedPacketAndActionTracesEqual": true,
+    "quantityPopupGeometryEqual": true,
+    "windowSetChecks": 159787,
+    "fullSceneChecks": 180,
+    "fullScenePresentedFrames": 17,
+    "fullSceneExplicitDeviceResets": 7,
+    "fullSceneIdenticalPanelPixels": 690512,
+    "originalControlIdentitiesRetained": true,
+    "retryableRestoreVerifiedForBothWindows": true,
+    "candidateFrames": 93,
+    "packageUnchanged": true,
+    "runtimeReady": false,
+    "productionBindingAllowed": false,
+    "legacyDefault": true
+  },
+  "sourceChanges": [
+    {
+      "path": "Client/Client.csproj",
+      "beforeSha256": "70cf7825d8ee207aca9b983cd51ec3f25c7e5999697c9c5de91185e474f0e10a",
+      "afterSha256": "869180c2c209b708eea68ccf2a29bc347f563be3e79e5905f1b90f93261540b6"
+    },
+    {
+      "path": "Client/Envir/GameUiOfficialV1WindowSet.cs",
+      "beforeSha256": "f83fc1fa5ed3461ba5640333dd5efa3ded5e7056a9a6ed9fa3ccd9edc1ad9825",
+      "afterSha256": "9c352965e341bbd0b326d9fa7866350c2ccfa4542386563b95f24068e12efa0c"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiNpcTests.cs",
+      "beforeSha256": "827a7f8bcabed73c1ef2b8e9cdaa3facd89141bc9aa48db27e71e3b041b8274d",
+      "afterSha256": "11fc31429e9092c9159fa577d0f0c9b460da6ac15c34f05e7708ae0bee70274a"
+    },
+    {
+      "path": "tests/Run-GameUiNpcTests.ps1",
+      "beforeSha256": "67257dea8e311099b222189ff816a97bbd4c31aa5e85279489b68fb20ac1f717",
+      "afterSha256": "9c7a71de1ddd0700c1492848f5a1c1a2069ed793293a7447ddbb0ee0eb728aaa"
+    }
+  ],
+  "sourceHashes": [
+    {
+      "path": "Client/Client.csproj",
+      "sha256": "869180c2c209b708eea68ccf2a29bc347f563be3e79e5905f1b90f93261540b6"
+    },
+    {
+      "path": "Client/Envir/GameUiOfficialV1WindowSet.cs",
+      "sha256": "9c352965e341bbd0b326d9fa7866350c2ccfa4542386563b95f24068e12efa0c"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiNpcTests.cs",
+      "sha256": "11fc31429e9092c9159fa577d0f0c9b460da6ac15c34f05e7708ae0bee70274a"
+    },
+    {
+      "path": "tests/Run-GameUiNpcTests.ps1",
+      "sha256": "9c7a71de1ddd0700c1492848f5a1c1a2069ed793293a7447ddbb0ee0eb728aaa"
+    },
+    {
+      "path": "Client/Envir/GameUiNpcItemServiceBinding.cs",
+      "sha256": "d3eae8e8a5d113f442655b2a476988096f866da66d09cfc08be6254610bf1111"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiNpcItemServiceTests.cs",
+      "sha256": "c2054e5286bfe38768ac0235b1d3951be8129f7f7712afa3a2c3f9f652d1a37e"
+    }
+  ],
+  "commands": [
+    {
+      "command": "\"D:/Program Files/Microsoft Visual Studio/2022/Enterprise/MSBuild/Current/Bin/MSBuild.exe\" Client/Client.csproj /t:Build /p:Configuration=Debug /p:Platform=AnyCPU /v:minimal /nologo",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-item-services/build-debug.log",
+      "logSha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "command": "\"D:/Program Files/Microsoft Visual Studio/2022/Enterprise/MSBuild/Current/Bin/MSBuild.exe\" Client/Client.csproj /t:Build /p:Configuration=Release /p:Platform=AnyCPU /v:minimal /nologo",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-item-services/build-release.log",
+      "logSha256": "c9e24428be1e56c8408af17aacfea3413de3953bfe426d10eb768782f5005ebc"
+    },
+    {
+      "command": "tests/Run-GameUiNpcTests.ps1 -CompilerPath \"D:/Program Files/Microsoft Visual Studio/2022/Enterprise/MSBuild/Current/Bin/Roslyn/csc.exe\" -PackagePath E:/workspace/mir3-ui-work/npc-shop-assets-20261108-v1/zl/OfficialV1.Zl -EvidenceDirectory E:/workspace/mir3-ui-work/npc-item-services-20261108-v3/npc",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-item-services/npc-test.log",
+      "logSha256": "2dce8bf13e5143c65b81c40014e630384ed1720d9b57738add7dbbe5645f4b55"
+    },
+    {
+      "command": "tests/Run-GameUiWindowSetTests.ps1 -CompilerPath \"D:/Program Files/Microsoft Visual Studio/2022/Enterprise/MSBuild/Current/Bin/Roslyn/csc.exe\" -PackagePath E:/workspace/mir3-ui-work/npc-shop-assets-20261108-v1/zl/OfficialV1.Zl -EvidenceDirectory E:/workspace/mir3-ui-work/npc-item-services-20261108-v2/window-set",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-item-services/window-set-test.log",
+      "logSha256": "c054dda8e876e3d8eeada36656bb5ebf0bf9d573beb3a05c234422a808bb4242"
+    },
+    {
+      "command": "tests/Run-GameUiFullSceneTests.ps1 -CompilerPath \"D:/Program Files/Microsoft Visual Studio/2022/Enterprise/MSBuild/Current/Bin/Roslyn/csc.exe\" -PackagePath E:/workspace/mir3-ui-work/npc-shop-assets-20261108-v1/zl/OfficialV1.Zl -EvidenceDirectory E:/workspace/mir3-ui-work/npc-item-services-20261108-v3/full-scene",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-item-services/full-scene-test.log",
+      "logSha256": "0d85d4de7905eb608acc989200b5dfcc19842b35b62586889490caf606d4a988"
+    },
+    {
+      "command": "build/game-ui/New-GameUiReleaseManifest.ps1 -ClientDirectory E:/workspace/Debug/Client -ResourceRoot E:/workspace/mir3-ui-work/npc-shop-binding-20261108-v1/staged-resources -OutputPath E:/workspace/mir3-ui-work/npc-item-services-20261108-v3/release-debug.json",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-item-services/manifest-debug.log",
+      "logSha256": "e3f531b6011e5decb2cc334f895dbf10568b97f5a0ff7bf83b0938537c656bc0"
+    },
+    {
+      "command": "build/game-ui/New-GameUiReleaseManifest.ps1 -ClientDirectory E:/workspace/Release/Client -ResourceRoot E:/workspace/mir3-ui-work/npc-shop-binding-20261108-v1/staged-resources -OutputPath E:/workspace/mir3-ui-work/npc-item-services-20261108-v3/release-release.json",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-item-services/manifest-release.log",
+      "logSha256": "fda53736f5361e57a87c54a6d97639911470ec2b5372c90133f6b0a0043dd32a"
+    },
+    {
+      "command": "git -c core.whitespace=cr-at-eol diff --check -- Client/Client.csproj Client/Envir/GameUiOfficialV1WindowSet.cs tests/game-ui/OfficialUiNpcTests.cs tests/Run-GameUiNpcTests.ps1",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-item-services/whitespace.log",
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": "python build/game-ui/Validate-UiTasks.py",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-item-services/task-validation.log",
+      "logSha256": "90e3ddffa807ef19523e77855653984be659ff7ab47ec66f04d41348c4cb85b3"
+    }
+  ],
+  "packageSha256": "50ec53a62c5b564c3e1bf736c5be01e6d86ebbd2cd08994578aafeb7ce031ddb",
+  "sourcePlanSha256": "f8c0a002b3821fabb54993792c354c4eff35eec51f9cfdc418535017c13069e9",
+  "limitations": [
+    "用户确认1024×768窗口设置；附件像素尺寸不用于推断DPI或客户区。",
+    "独立出售/修理是UI-21准备性候选工作；精炼/领取、窗口组合和真实服务尚未完成验收。",
+    "默认Legacy；G0-2/3/4/5、真实登录/服务器/中文IME/最终视觉及整包部署回退未验收。"
+  ],
+  "evidenceHashes": [
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-item-services/README.md",
+      "sha256": "fc22843e31bff8d4dcf6d3f52b5fff22f9bb4466fd2f22ff87aac7d3e5cbe168"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-item-services/build-debug.log",
+      "sha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-item-services/build-release.log",
+      "sha256": "c9e24428be1e56c8408af17aacfea3413de3953bfe426d10eb768782f5005ebc"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-item-services/full-scene-test.log",
+      "sha256": "0d85d4de7905eb608acc989200b5dfcc19842b35b62586889490caf606d4a988"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-item-services/full-scene/legacy-resources.txt",
+      "sha256": "47713d590a1b9214abdef7a0fc33d6c28a2b5a73a0cff9794375a5083020b498"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-item-services/full-scene/official-hud.png",
+      "sha256": "0d72ce7b9c9ed1d0c807333ef4c62517a0f9d90d6f49015ba946f1b0882384ac"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-item-services/full-scene/official-panels.png",
+      "sha256": "43a1af56f6c3bfd96763e2bdc70b81fcda2ad9bddce1aa09a95ffa0b5055eac8"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-item-services/full-scene/reset-pixel-probes.txt",
+      "sha256": "2c236cd844574b74b6d502b13ffed99b5cb29783fc53ea00587ca1543a18ac67"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-item-services/full-scene/tested-runtime.json",
+      "sha256": "efc89f43040a483145f5884dcbe2b156f37f871bde51dd0e9d1eab7beca9a4da"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-item-services/manifest-debug.log",
+      "sha256": "e3f531b6011e5decb2cc334f895dbf10568b97f5a0ff7bf83b0938537c656bc0"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-item-services/manifest-release.log",
+      "sha256": "fda53736f5361e57a87c54a6d97639911470ec2b5372c90133f6b0a0043dd32a"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-item-services/npc-test-v1.log",
+      "sha256": "c09396714a536ba514cb543e2e29054b94cbccfcd06d6d01ba417fde3402f6c2"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-item-services/npc-test-v2.log",
+      "sha256": "45071fbb8152f0102398a38af1b26b30fd2a13a361e61b018f780a9f6e02d889"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-item-services/npc-test.log",
+      "sha256": "2dce8bf13e5143c65b81c40014e630384ed1720d9b57738add7dbbe5645f4b55"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-item-services/npc/assertions.txt",
+      "sha256": "9ce60f4548b39b62de187a041e211955ad03682cdeec31ddda909a43142a81ad"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-item-services/npc/coordinate-hits.txt",
+      "sha256": "a5fd1274b17d2eb26f6b63f72f1ca057b92c750a01f8482eea675650c3905cb5"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-item-services/npc/legacy-repair-full.png",
+      "sha256": "c7733722ac20d86135c879e46aefd6cd530d80275fe45902c5ebab3fa6065379"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-item-services/npc/legacy-sell-full.png",
+      "sha256": "78b81311bb79aa207b13afd334aeb71de0ef227a133dc7cb331ac6cc1fddb224"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-item-services/npc/legacy-trace.txt",
+      "sha256": "4989da22238f133494fe49929d17a1abb77078e542cdbf99b401e80e1d9d9e2e"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-item-services/npc/metrics.json",
+      "sha256": "d5bd6892d43366979dd93d90ee135701730ccbda982013ad6ffb2b1a6b2d221a"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-item-services/npc/official-reentry-trace.txt",
+      "sha256": "4989da22238f133494fe49929d17a1abb77078e542cdbf99b401e80e1d9d9e2e"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-item-services/npc/official-repair-full.png",
+      "sha256": "08cedf114a47895cca5459cc837e4cfd6a440bfc9a0a91ec50a14efe59d54bd5"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-item-services/npc/official-sell-full.png",
+      "sha256": "30e713731d139e7f4c48312e39c429a8b74a732a474b058ce068644d7925e15f"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-item-services/npc/official-trace.txt",
+      "sha256": "4989da22238f133494fe49929d17a1abb77078e542cdbf99b401e80e1d9d9e2e"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-item-services/npc/tested-runtime.json",
+      "sha256": "efc89f43040a483145f5884dcbe2b156f37f871bde51dd0e9d1eab7beca9a4da"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-item-services/release-debug.json",
+      "sha256": "a280cf33abd3d58c7f4b40e01c04bf7739216a397e24e6cbe73fce862fb1d7d3"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-item-services/release-release.json",
+      "sha256": "c18a10be1f7183396a0368c5cd03d2a09b40cdd60b11f2c118735d3fcd0fc6cc"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-item-services/runtime-audit.json",
+      "sha256": "a44863c2e2e47355462f333e474f6c1090b440c8b644f68292faaaaf761e1177"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-item-services/source-before.json",
+      "sha256": "7c4eefa0048f477a55802fc8a5c448419ea526f0c4e1e789944f0eec30b3c02f"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-item-services/whitespace.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-item-services/window-set-test.log",
+      "sha256": "c054dda8e876e3d8eeada36656bb5ebf0bf9d573beb3a05c234422a808bb4242"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-item-services/task-validation.log",
+      "sha256": "90e3ddffa807ef19523e77855653984be659ff7ab47ec66f04d41348c4cb85b3"
+    }
+  ]
+}

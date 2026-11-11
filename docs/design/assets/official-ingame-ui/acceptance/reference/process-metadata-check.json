@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-07T12:18:28.020Z",
+  "expectedExecutable": "E:\\Program Files\\ShengquGames\\Mir3\\Mir3.dat",
+  "processFound": true,
+  "checks": [
+    {
+      "method": "@oai/sky list_apps/list_windows/get_window_state",
+      "returnedWindows": 1,
+      "window": {
+        "app": "process:E:\\Program Files\\ShengquGames\\Mir3\\Mir3.dat",
+        "id": 41289804,
+        "title": "传奇3"
+      }
+    },
+    {
+      "command": "Get-CimInstance Win32_Process -Filter \"Name='Mir3.dat' OR Name='Mir3.exe'\"",
+      "returnedProcesses": 2,
+      "evidence": "docs/design/assets/official-ingame-ui/acceptance/reference/runtime-processes-20261107T121828020Z.json"
+    }
+  ],
+  "dpiMeasured": false,
+  "clientRectMeasured": false,
+  "newScreenshotCaptured": true,
+  "postLoginGameUiAvailable": false,
+  "runtimeObservation": "docs/design/assets/official-ingame-ui/acceptance/reference/runtime-observation-20261107T121828020Z.json",
+  "previousCheck": {
+    "schemaVersion": 1,
+    "checkedAt": "2026-11-07T09:56:33.542Z",
+    "expectedExecutable": "E:\\Program Files\\ShengquGames\\Mir3\\Mir3.dat",
+    "processFound": false,
+    "checks": [
+      {
+        "returnedProcesses": 0,
+        "command": "Get-CimInstance Win32_Process -Filter \"Name='Mir3.dat' OR Name='Mir3.exe'\""
+      },
+      {
+        "returnedWindows": 0,
+        "method": "@oai/sky list_windows",
+        "expectedApp": "process:E:\\Program Files\\ShengquGames\\Mir3\\Mir3.dat",
+        "observation": "Only a Mir3 File Explorer window matched the broad title search; it is not the game."
+      }
+    ],
+    "dpiMeasured": false,
+    "clientRectMeasured": false,
+    "newScreenshotCaptured": false,
+    "previousCheck": {
+      "schemaVersion": 1,
+      "checkedAt": "2026-11-07T09:32:57.1978160Z",
+      "expectedExecutable": "E:\\Program Files\\ShengquGames\\Mir3\\Mir3.dat",
+      "processFound": false,
+      "checks": [
+        {
+          "returnedProcesses": 0,
+          "command": "Get-CimInstance Win32_Process -Filter \"Name='Mir3.dat' OR Name='Mir3.exe'\""
+        },
+        {
+          "returnedWindows": 0,
+          "method": "@oai/sky list_windows",
+          "expectedApp": "process:E:\\Program Files\\ShengquGames\\Mir3\\Mir3.dat",
+          "observation": "No matching official game window was returned during this continuation."
+        }
+      ],
+      "dpiMeasured": false,
+      "clientRectMeasured": false,
+      "newScreenshotCaptured": false,
+      "conclusion": "Official game process and window were not present during this check. The existing Chinese-input capture remains historical evidence; no new capture, IME behavior or live metadata is claimed."
+    },
+    "conclusion": "未检测到正式版 Mir3.dat/Mir3.exe 进程或游戏窗口，无法继续补测 DPI、客户区尺寸、透明边界、按钮状态和组合层级。"
+  },
+  "conclusion": "正式版游戏进程与窗口已恢复，但停在选择服务器页面并显示“与服务器失去链接...”，尚未进入登录后的主界面，无法补齐范围内运行参考。"
+}

@@ -1,0 +1,1917 @@
+{
+  "schemaVersion": 1,
+  "verifiedAt": "2026-11-10T17:57:19.946888+08:00",
+  "result": "pass",
+  "scope": "Native UI[2765] character page caption clipping, property placement, element alignment and prior equipment placement",
+  "reference": {
+    "file": "official-property-reference.png",
+    "sha256": "9c1ec480832932e02e82651af2d51340638e5c304e181405a7e17db320467fb5",
+    "panelOriginInReference": [
+      2,
+      1
+    ],
+    "coordinateSpace": "412x562 panel-relative pixels"
+  },
+  "captionFit": {
+    "cause": "Default TextRenderer padding and outline in narrowed caption controls triggered EndEllipsis.",
+    "fix": "Primary-page captions use NoPadding and corrected bounds; original font retained.",
+    "twoCharacterBoundsSize": [
+      28,
+      20
+    ],
+    "elementCaptionBoundsSize": [
+      52,
+      20
+    ],
+    "visualReview": "Current runtime screenshot reviewed; full two-character captions and attack-element caption visible."
+  },
+  "geometry": {
+    "rightCaptionX": 276,
+    "rightValueX": 306,
+    "rightValueWidth": 82,
+    "rightRowY": [
+      96,
+      120,
+      144,
+      168,
+      192,
+      216,
+      240,
+      264,
+      288,
+      312
+    ],
+    "lowerCaptionX": [
+      24,
+      150,
+      276
+    ],
+    "lowerValueX": [
+      54,
+      180,
+      306
+    ],
+    "lowerValueWidth": 70,
+    "lowerRowY": [
+      402,
+      426
+    ],
+    "attackSpeedPage": "character",
+    "elementCaptionX": 24,
+    "elementCaptionText": [
+      "攻击元素",
+      "强 元 素",
+      "弱 元 素"
+    ],
+    "elementIconX": [
+      76,
+      122,
+      168,
+      214,
+      260,
+      306,
+      352
+    ],
+    "elementRowY": [
+      450,
+      473,
+      496
+    ],
+    "elementIconSize": [
+      20,
+      20
+    ],
+    "elementValueSize": [
+      26,
+      20
+    ],
+    "numericValues": "centered",
+    "bodyPreview": [
+      54,
+      96,
+      134,
+      197
+    ],
+    "bodyPivot": [
+      88,
+      233
+    ]
+  },
+  "layoutContractSha256": "d35482f2f73288b2d9b3ac56a0cbad97df7ef47460fc35614bc1568c42920207",
+  "primaryPageNodes": [
+    {
+      "id": "character.preview",
+      "owner": "character",
+      "page": "character",
+      "kind": "preview",
+      "rect": [
+        54,
+        96,
+        134,
+        197
+      ],
+      "pivot": [
+        88,
+        233
+      ],
+      "binding": "CharacterTab_BeforeChildrenDraw",
+      "clip": true
+    },
+    {
+      "id": "character.equipment.Weapon",
+      "owner": "character",
+      "page": "character",
+      "kind": "control",
+      "rect": [
+        15,
+        97,
+        36,
+        36
+      ],
+      "hitRect": [
+        15,
+        97,
+        36,
+        36
+      ],
+      "slotId": 0,
+      "enumName": "Weapon",
+      "label": "武器",
+      "binding": "Grid[0]",
+      "iconRect": [
+        15,
+        97,
+        36,
+        36
+      ],
+      "action": "existing-equipment-cell"
+    },
+    {
+      "id": "character.equipment.Armour",
+      "owner": "character",
+      "page": "character",
+      "kind": "control",
+      "rect": [
+        103,
+        339,
+        36,
+        36
+      ],
+      "hitRect": [
+        103,
+        339,
+        36,
+        36
+      ],
+      "slotId": 1,
+      "enumName": "Armour",
+      "label": "盔甲",
+      "binding": "Grid[1]",
+      "iconRect": [
+        103,
+        339,
+        36,
+        36
+      ],
+      "action": "existing-equipment-cell"
+    },
+    {
+      "id": "character.equipment.Helmet",
+      "owner": "character",
+      "page": "character",
+      "kind": "control",
+      "rect": [
+        191,
+        146,
+        36,
+        36
+      ],
+      "hitRect": [
+        191,
+        146,
+        36,
+        36
+      ],
+      "slotId": 2,
+      "enumName": "Helmet",
+      "label": "头盔",
+      "binding": "Grid[2]",
+      "iconRect": [
+        191,
+        146,
+        36,
+        36
+      ],
+      "action": "existing-equipment-cell"
+    },
+    {
+      "id": "character.equipment.Torch",
+      "owner": "character",
+      "page": "character",
+      "kind": "control",
+      "rect": [
+        59,
+        293,
+        36,
+        36
+      ],
+      "hitRect": [
+        59,
+        293,
+        36,
+        36
+      ],
+      "slotId": 3,
+      "enumName": "Torch",
+      "label": "火把",
+      "binding": "Grid[3]",
+      "iconRect": [
+        59,
+        293,
+        36,
+        36
+      ],
+      "action": "existing-equipment-cell"
+    },
+    {
+      "id": "character.equipment.Necklace",
+      "owner": "character",
+      "page": "character",
+      "kind": "control",
+      "rect": [
+        191,
+        97,
+        36,
+        36
+      ],
+      "hitRect": [
+        191,
+        97,
+        36,
+        36
+      ],
+      "slotId": 4,
+      "enumName": "Necklace",
+      "label": "项链",
+      "binding": "Grid[4]",
+      "iconRect": [
+        191,
+        97,
+        36,
+        36
+      ],
+      "action": "existing-equipment-cell"
+    },
+    {
+      "id": "character.equipment.BraceletL",
+      "owner": "character",
+      "page": "character",
+      "kind": "control",
+      "rect": [
+        15,
+        195,
+        36,
+        36
+      ],
+      "hitRect": [
+        15,
+        195,
+        36,
+        36
+      ],
+      "slotId": 5,
+      "enumName": "BraceletL",
+      "label": "左手镯",
+      "binding": "Grid[5]",
+      "iconRect": [
+        15,
+        195,
+        36,
+        36
+      ],
+      "action": "existing-equipment-cell"
+    },
+    {
+      "id": "character.equipment.BraceletR",
+      "owner": "character",
+      "page": "character",
+      "kind": "control",
+      "rect": [
+        191,
+        195,
+        36,
+        36
+      ],
+      "hitRect": [
+        191,
+        195,
+        36,
+        36
+      ],
+      "slotId": 6,
+      "enumName": "BraceletR",
+      "label": "右手镯",
+      "binding": "Grid[6]",
+      "iconRect": [
+        191,
+        195,
+        36,
+        36
+      ],
+      "action": "existing-equipment-cell"
+    },
+    {
+      "id": "character.equipment.RingL",
+      "owner": "character",
+      "page": "character",
+      "kind": "control",
+      "rect": [
+        15,
+        244,
+        36,
+        36
+      ],
+      "hitRect": [
+        15,
+        244,
+        36,
+        36
+      ],
+      "slotId": 7,
+      "enumName": "RingL",
+      "label": "左戒指",
+      "binding": "Grid[7]",
+      "iconRect": [
+        15,
+        244,
+        36,
+        36
+      ],
+      "action": "existing-equipment-cell"
+    },
+    {
+      "id": "character.equipment.RingR",
+      "owner": "character",
+      "page": "character",
+      "kind": "control",
+      "rect": [
+        191,
+        244,
+        36,
+        36
+      ],
+      "hitRect": [
+        191,
+        244,
+        36,
+        36
+      ],
+      "slotId": 8,
+      "enumName": "RingR",
+      "label": "右戒指",
+      "binding": "Grid[8]",
+      "iconRect": [
+        191,
+        244,
+        36,
+        36
+      ],
+      "action": "existing-equipment-cell"
+    },
+    {
+      "id": "character.equipment.Shoes",
+      "owner": "character",
+      "page": "character",
+      "kind": "control",
+      "rect": [
+        15,
+        293,
+        36,
+        36
+      ],
+      "hitRect": [
+        15,
+        293,
+        36,
+        36
+      ],
+      "slotId": 9,
+      "enumName": "Shoes",
+      "label": "鞋子",
+      "binding": "Grid[9]",
+      "iconRect": [
+        15,
+        293,
+        36,
+        36
+      ],
+      "action": "existing-equipment-cell"
+    },
+    {
+      "id": "character.equipment.Poison",
+      "owner": "character",
+      "page": "character",
+      "kind": "control",
+      "rect": [
+        147,
+        293,
+        36,
+        36
+      ],
+      "hitRect": [
+        147,
+        293,
+        36,
+        36
+      ],
+      "slotId": 10,
+      "enumName": "Poison",
+      "label": "药品",
+      "binding": "Grid[10]",
+      "iconRect": [
+        147,
+        293,
+        36,
+        36
+      ],
+      "action": "existing-equipment-cell"
+    },
+    {
+      "id": "character.equipment.Amulet",
+      "owner": "character",
+      "page": "character",
+      "kind": "control",
+      "rect": [
+        147,
+        339,
+        36,
+        36
+      ],
+      "hitRect": [
+        147,
+        339,
+        36,
+        36
+      ],
+      "slotId": 11,
+      "enumName": "Amulet",
+      "label": "护符",
+      "binding": "Grid[11]",
+      "iconRect": [
+        147,
+        339,
+        36,
+        36
+      ],
+      "action": "existing-equipment-cell"
+    },
+    {
+      "id": "character.equipment.Flower",
+      "owner": "character",
+      "page": "character",
+      "kind": "control",
+      "rect": [
+        191,
+        293,
+        36,
+        36
+      ],
+      "hitRect": [
+        191,
+        293,
+        36,
+        36
+      ],
+      "slotId": 12,
+      "enumName": "Flower",
+      "label": "鲜花",
+      "binding": "Grid[12]",
+      "iconRect": [
+        191,
+        293,
+        36,
+        36
+      ],
+      "action": "existing-equipment-cell"
+    },
+    {
+      "id": "character.equipment.HorseArmour",
+      "owner": "character",
+      "page": "character",
+      "kind": "control",
+      "rect": [
+        103,
+        293,
+        36,
+        36
+      ],
+      "hitRect": [
+        103,
+        293,
+        36,
+        36
+      ],
+      "slotId": 13,
+      "enumName": "HorseArmour",
+      "label": "马护甲",
+      "binding": "Grid[13]",
+      "iconRect": [
+        103,
+        293,
+        36,
+        36
+      ],
+      "action": "existing-equipment-cell"
+    },
+    {
+      "id": "character.equipment.Emblem",
+      "owner": "character",
+      "page": "character",
+      "kind": "control",
+      "rect": [
+        191,
+        339,
+        36,
+        36
+      ],
+      "hitRect": [
+        191,
+        339,
+        36,
+        36
+      ],
+      "slotId": 14,
+      "enumName": "Emblem",
+      "label": "徽章",
+      "binding": "Grid[14]",
+      "iconRect": [
+        191,
+        339,
+        36,
+        36
+      ],
+      "action": "existing-equipment-cell"
+    },
+    {
+      "id": "character.equipment.Shield",
+      "owner": "character",
+      "page": "character",
+      "kind": "control",
+      "rect": [
+        59,
+        339,
+        36,
+        36
+      ],
+      "hitRect": [
+        59,
+        339,
+        36,
+        36
+      ],
+      "slotId": 15,
+      "enumName": "Shield",
+      "label": "盾牌",
+      "binding": "Grid[15]",
+      "iconRect": [
+        59,
+        339,
+        36,
+        36
+      ],
+      "action": "existing-equipment-cell"
+    },
+    {
+      "id": "character.caption.new.level",
+      "owner": "character",
+      "page": "character",
+      "kind": "caption",
+      "rect": [
+        276,
+        96,
+        28,
+        20
+      ],
+      "label": "等级"
+    },
+    {
+      "id": "character.caption.new.experience",
+      "owner": "character",
+      "page": "character",
+      "kind": "caption",
+      "rect": [
+        276,
+        120,
+        28,
+        20
+      ],
+      "label": "经验"
+    },
+    {
+      "id": "character.caption.new.health",
+      "owner": "character",
+      "page": "character",
+      "kind": "caption",
+      "rect": [
+        276,
+        144,
+        28,
+        20
+      ],
+      "label": "生命"
+    },
+    {
+      "id": "character.caption.new.mana",
+      "owner": "character",
+      "page": "character",
+      "kind": "caption",
+      "rect": [
+        276,
+        168,
+        28,
+        20
+      ],
+      "label": "魔法"
+    },
+    {
+      "id": "character.caption.existing.HandWeightLabel",
+      "owner": "character",
+      "page": "character",
+      "kind": "caption",
+      "rect": [
+        276,
+        192,
+        28,
+        20
+      ],
+      "label": "腕力"
+    },
+    {
+      "id": "character.caption.existing.WearWeightLabel",
+      "owner": "character",
+      "page": "character",
+      "kind": "caption",
+      "rect": [
+        276,
+        216,
+        28,
+        20
+      ],
+      "label": "肩力"
+    },
+    {
+      "id": "character.caption.DisplayStats.Accuracy",
+      "owner": "character",
+      "page": "character",
+      "kind": "caption",
+      "rect": [
+        276,
+        240,
+        28,
+        20
+      ],
+      "label": "准确"
+    },
+    {
+      "id": "character.caption.DisplayStats.Agility",
+      "owner": "character",
+      "page": "character",
+      "kind": "caption",
+      "rect": [
+        276,
+        264,
+        28,
+        20
+      ],
+      "label": "敏捷"
+    },
+    {
+      "id": "character.caption.DisplayStats.Comfort",
+      "owner": "character",
+      "page": "character",
+      "kind": "caption",
+      "rect": [
+        276,
+        288,
+        28,
+        20
+      ],
+      "label": "舒适"
+    },
+    {
+      "id": "character.caption.DisplayStats.Luck",
+      "owner": "character",
+      "page": "character",
+      "kind": "caption",
+      "rect": [
+        276,
+        312,
+        28,
+        20
+      ],
+      "label": "幸运"
+    },
+    {
+      "id": "character.caption.DisplayStats.MaxDC",
+      "owner": "character",
+      "page": "character",
+      "kind": "caption",
+      "rect": [
+        24,
+        402,
+        28,
+        20
+      ],
+      "label": "破坏"
+    },
+    {
+      "id": "character.caption.DisplayStats.MaxMC",
+      "owner": "character",
+      "page": "character",
+      "kind": "caption",
+      "rect": [
+        150,
+        402,
+        28,
+        20
+      ],
+      "label": "自然"
+    },
+    {
+      "id": "character.caption.DisplayStats.MaxSC",
+      "owner": "character",
+      "page": "character",
+      "kind": "caption",
+      "rect": [
+        276,
+        402,
+        28,
+        20
+      ],
+      "label": "灵魂"
+    },
+    {
+      "id": "character.caption.DisplayStats.MaxAC",
+      "owner": "character",
+      "page": "character",
+      "kind": "caption",
+      "rect": [
+        24,
+        426,
+        28,
+        20
+      ],
+      "label": "防御"
+    },
+    {
+      "id": "character.caption.DisplayStats.MaxMR",
+      "owner": "character",
+      "page": "character",
+      "kind": "caption",
+      "rect": [
+        150,
+        426,
+        28,
+        20
+      ],
+      "label": "魔防"
+    },
+    {
+      "id": "character.caption.AttackStats",
+      "owner": "character",
+      "page": "character",
+      "kind": "caption",
+      "rect": [
+        24,
+        450,
+        52,
+        20
+      ],
+      "label": "攻击元素"
+    },
+    {
+      "id": "character.caption.AdvantageStats",
+      "owner": "character",
+      "page": "character",
+      "kind": "caption",
+      "rect": [
+        24,
+        473,
+        52,
+        20
+      ],
+      "label": "强 元 素"
+    },
+    {
+      "id": "character.caption.DisadvantageStats",
+      "owner": "character",
+      "page": "character",
+      "kind": "caption",
+      "rect": [
+        24,
+        496,
+        52,
+        20
+      ],
+      "label": "弱 元 素"
+    },
+    {
+      "id": "character.stat.DisplayStats.MaxAC",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        54,
+        426,
+        70,
+        20
+      ],
+      "binding": "DisplayStats[Stat.MaxAC]",
+      "bindingId": "DisplayStats.MaxAC",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-get-format",
+      "preserveTag": false
+    },
+    {
+      "id": "character.stat.DisplayStats.MaxMR",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        180,
+        426,
+        70,
+        20
+      ],
+      "binding": "DisplayStats[Stat.MaxMR]",
+      "bindingId": "DisplayStats.MaxMR",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-get-format",
+      "preserveTag": false
+    },
+    {
+      "id": "character.stat.DisplayStats.MaxDC",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        54,
+        402,
+        70,
+        20
+      ],
+      "binding": "DisplayStats[Stat.MaxDC]",
+      "bindingId": "DisplayStats.MaxDC",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-get-format",
+      "preserveTag": false
+    },
+    {
+      "id": "character.stat.DisplayStats.MaxMC",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        180,
+        402,
+        70,
+        20
+      ],
+      "binding": "DisplayStats[Stat.MaxMC]",
+      "bindingId": "DisplayStats.MaxMC",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-get-format",
+      "preserveTag": false
+    },
+    {
+      "id": "character.stat.DisplayStats.MaxSC",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        306,
+        402,
+        70,
+        20
+      ],
+      "binding": "DisplayStats[Stat.MaxSC]",
+      "bindingId": "DisplayStats.MaxSC",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-get-format",
+      "preserveTag": false
+    },
+    {
+      "id": "character.stat.DisplayStats.Accuracy",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        306,
+        240,
+        82,
+        20
+      ],
+      "binding": "DisplayStats[Stat.Accuracy]",
+      "bindingId": "DisplayStats.Accuracy",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-get-format",
+      "preserveTag": false
+    },
+    {
+      "id": "character.stat.DisplayStats.Agility",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        306,
+        264,
+        82,
+        20
+      ],
+      "binding": "DisplayStats[Stat.Agility]",
+      "bindingId": "DisplayStats.Agility",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-get-format",
+      "preserveTag": false
+    },
+    {
+      "id": "character.stat.DisplayStats.AttackSpeed",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        276,
+        426,
+        100,
+        20
+      ],
+      "binding": "DisplayStats[Stat.AttackSpeed]",
+      "bindingId": "DisplayStats.AttackSpeed",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-get-format",
+      "preserveTag": false,
+      "captionRect": [
+        276,
+        426,
+        28,
+        20
+      ],
+      "valueRect": [
+        306,
+        426,
+        70,
+        20
+      ],
+      "captionPolicy": "Reuse associated original caption or physical-resistance icon.",
+      "captionText": "攻速"
+    },
+    {
+      "id": "character.stat.DisplayStats.Luck",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        306,
+        312,
+        82,
+        20
+      ],
+      "binding": "DisplayStats[Stat.Luck]",
+      "bindingId": "DisplayStats.Luck",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-get-format",
+      "preserveTag": false
+    },
+    {
+      "id": "character.stat.DisplayStats.Comfort",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        306,
+        288,
+        82,
+        20
+      ],
+      "binding": "DisplayStats[Stat.Comfort]",
+      "bindingId": "DisplayStats.Comfort",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-get-format",
+      "preserveTag": false
+    },
+    {
+      "id": "character.stat.AttackStats.FireAttack",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        76,
+        450,
+        46,
+        20
+      ],
+      "binding": "AttackStats[Stat.FireAttack]",
+      "bindingId": "AttackStats.FireAttack",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-positive-attack",
+      "preserveTag": true,
+      "iconRect": [
+        76,
+        450,
+        20,
+        20
+      ],
+      "valueRect": [
+        96,
+        450,
+        26,
+        20
+      ]
+    },
+    {
+      "id": "character.stat.AttackStats.IceAttack",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        122,
+        450,
+        46,
+        20
+      ],
+      "binding": "AttackStats[Stat.IceAttack]",
+      "bindingId": "AttackStats.IceAttack",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-positive-attack",
+      "preserveTag": true,
+      "iconRect": [
+        122,
+        450,
+        20,
+        20
+      ],
+      "valueRect": [
+        142,
+        450,
+        26,
+        20
+      ]
+    },
+    {
+      "id": "character.stat.AttackStats.LightningAttack",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        168,
+        450,
+        46,
+        20
+      ],
+      "binding": "AttackStats[Stat.LightningAttack]",
+      "bindingId": "AttackStats.LightningAttack",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-positive-attack",
+      "preserveTag": true,
+      "iconRect": [
+        168,
+        450,
+        20,
+        20
+      ],
+      "valueRect": [
+        188,
+        450,
+        26,
+        20
+      ]
+    },
+    {
+      "id": "character.stat.AttackStats.WindAttack",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        214,
+        450,
+        46,
+        20
+      ],
+      "binding": "AttackStats[Stat.WindAttack]",
+      "bindingId": "AttackStats.WindAttack",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-positive-attack",
+      "preserveTag": true,
+      "iconRect": [
+        214,
+        450,
+        20,
+        20
+      ],
+      "valueRect": [
+        234,
+        450,
+        26,
+        20
+      ]
+    },
+    {
+      "id": "character.stat.AttackStats.HolyAttack",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        260,
+        450,
+        46,
+        20
+      ],
+      "binding": "AttackStats[Stat.HolyAttack]",
+      "bindingId": "AttackStats.HolyAttack",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-positive-attack",
+      "preserveTag": true,
+      "iconRect": [
+        260,
+        450,
+        20,
+        20
+      ],
+      "valueRect": [
+        280,
+        450,
+        26,
+        20
+      ]
+    },
+    {
+      "id": "character.stat.AttackStats.DarkAttack",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        306,
+        450,
+        46,
+        20
+      ],
+      "binding": "AttackStats[Stat.DarkAttack]",
+      "bindingId": "AttackStats.DarkAttack",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-positive-attack",
+      "preserveTag": true,
+      "iconRect": [
+        306,
+        450,
+        20,
+        20
+      ],
+      "valueRect": [
+        326,
+        450,
+        26,
+        20
+      ]
+    },
+    {
+      "id": "character.stat.AttackStats.PhantomAttack",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        352,
+        450,
+        46,
+        20
+      ],
+      "binding": "AttackStats[Stat.PhantomAttack]",
+      "bindingId": "AttackStats.PhantomAttack",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-positive-attack",
+      "preserveTag": true,
+      "iconRect": [
+        352,
+        450,
+        20,
+        20
+      ],
+      "valueRect": [
+        372,
+        450,
+        26,
+        20
+      ]
+    },
+    {
+      "id": "character.stat.AdvantageStats.FireResistance",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        76,
+        473,
+        46,
+        20
+      ],
+      "binding": "AdvantageStats[Stat.FireResistance]",
+      "bindingId": "AdvantageStats.FireResistance",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-positive-resistance",
+      "preserveTag": true,
+      "iconRect": [
+        76,
+        473,
+        20,
+        20
+      ],
+      "valueRect": [
+        96,
+        473,
+        26,
+        20
+      ]
+    },
+    {
+      "id": "character.stat.AdvantageStats.IceResistance",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        122,
+        473,
+        46,
+        20
+      ],
+      "binding": "AdvantageStats[Stat.IceResistance]",
+      "bindingId": "AdvantageStats.IceResistance",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-positive-resistance",
+      "preserveTag": true,
+      "iconRect": [
+        122,
+        473,
+        20,
+        20
+      ],
+      "valueRect": [
+        142,
+        473,
+        26,
+        20
+      ]
+    },
+    {
+      "id": "character.stat.AdvantageStats.LightningResistance",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        168,
+        473,
+        46,
+        20
+      ],
+      "binding": "AdvantageStats[Stat.LightningResistance]",
+      "bindingId": "AdvantageStats.LightningResistance",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-positive-resistance",
+      "preserveTag": true,
+      "iconRect": [
+        168,
+        473,
+        20,
+        20
+      ],
+      "valueRect": [
+        188,
+        473,
+        26,
+        20
+      ]
+    },
+    {
+      "id": "character.stat.AdvantageStats.WindResistance",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        214,
+        473,
+        46,
+        20
+      ],
+      "binding": "AdvantageStats[Stat.WindResistance]",
+      "bindingId": "AdvantageStats.WindResistance",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-positive-resistance",
+      "preserveTag": true,
+      "iconRect": [
+        214,
+        473,
+        20,
+        20
+      ],
+      "valueRect": [
+        234,
+        473,
+        26,
+        20
+      ]
+    },
+    {
+      "id": "character.stat.AdvantageStats.HolyResistance",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        260,
+        473,
+        46,
+        20
+      ],
+      "binding": "AdvantageStats[Stat.HolyResistance]",
+      "bindingId": "AdvantageStats.HolyResistance",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-positive-resistance",
+      "preserveTag": true,
+      "iconRect": [
+        260,
+        473,
+        20,
+        20
+      ],
+      "valueRect": [
+        280,
+        473,
+        26,
+        20
+      ]
+    },
+    {
+      "id": "character.stat.AdvantageStats.DarkResistance",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        306,
+        473,
+        46,
+        20
+      ],
+      "binding": "AdvantageStats[Stat.DarkResistance]",
+      "bindingId": "AdvantageStats.DarkResistance",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-positive-resistance",
+      "preserveTag": true,
+      "iconRect": [
+        306,
+        473,
+        20,
+        20
+      ],
+      "valueRect": [
+        326,
+        473,
+        26,
+        20
+      ]
+    },
+    {
+      "id": "character.stat.AdvantageStats.PhantomResistance",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        352,
+        473,
+        46,
+        20
+      ],
+      "binding": "AdvantageStats[Stat.PhantomResistance]",
+      "bindingId": "AdvantageStats.PhantomResistance",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-positive-resistance",
+      "preserveTag": true,
+      "iconRect": [
+        352,
+        473,
+        20,
+        20
+      ],
+      "valueRect": [
+        372,
+        473,
+        26,
+        20
+      ]
+    },
+    {
+      "id": "character.stat.DisadvantageStats.FireResistance",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        76,
+        496,
+        46,
+        20
+      ],
+      "binding": "DisadvantageStats[Stat.FireResistance]",
+      "bindingId": "DisadvantageStats.FireResistance",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-negative-resistance",
+      "preserveTag": true,
+      "iconRect": [
+        76,
+        496,
+        20,
+        20
+      ],
+      "valueRect": [
+        96,
+        496,
+        26,
+        20
+      ]
+    },
+    {
+      "id": "character.stat.DisadvantageStats.IceResistance",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        122,
+        496,
+        46,
+        20
+      ],
+      "binding": "DisadvantageStats[Stat.IceResistance]",
+      "bindingId": "DisadvantageStats.IceResistance",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-negative-resistance",
+      "preserveTag": true,
+      "iconRect": [
+        122,
+        496,
+        20,
+        20
+      ],
+      "valueRect": [
+        142,
+        496,
+        26,
+        20
+      ]
+    },
+    {
+      "id": "character.stat.DisadvantageStats.LightningResistance",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        168,
+        496,
+        46,
+        20
+      ],
+      "binding": "DisadvantageStats[Stat.LightningResistance]",
+      "bindingId": "DisadvantageStats.LightningResistance",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-negative-resistance",
+      "preserveTag": true,
+      "iconRect": [
+        168,
+        496,
+        20,
+        20
+      ],
+      "valueRect": [
+        188,
+        496,
+        26,
+        20
+      ]
+    },
+    {
+      "id": "character.stat.DisadvantageStats.WindResistance",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        214,
+        496,
+        46,
+        20
+      ],
+      "binding": "DisadvantageStats[Stat.WindResistance]",
+      "bindingId": "DisadvantageStats.WindResistance",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-negative-resistance",
+      "preserveTag": true,
+      "iconRect": [
+        214,
+        496,
+        20,
+        20
+      ],
+      "valueRect": [
+        234,
+        496,
+        26,
+        20
+      ]
+    },
+    {
+      "id": "character.stat.DisadvantageStats.HolyResistance",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        260,
+        496,
+        46,
+        20
+      ],
+      "binding": "DisadvantageStats[Stat.HolyResistance]",
+      "bindingId": "DisadvantageStats.HolyResistance",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-negative-resistance",
+      "preserveTag": true,
+      "iconRect": [
+        260,
+        496,
+        20,
+        20
+      ],
+      "valueRect": [
+        280,
+        496,
+        26,
+        20
+      ]
+    },
+    {
+      "id": "character.stat.DisadvantageStats.DarkResistance",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        306,
+        496,
+        46,
+        20
+      ],
+      "binding": "DisadvantageStats[Stat.DarkResistance]",
+      "bindingId": "DisadvantageStats.DarkResistance",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-negative-resistance",
+      "preserveTag": true,
+      "iconRect": [
+        306,
+        496,
+        20,
+        20
+      ],
+      "valueRect": [
+        326,
+        496,
+        26,
+        20
+      ]
+    },
+    {
+      "id": "character.stat.DisadvantageStats.PhantomResistance",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        352,
+        496,
+        46,
+        20
+      ],
+      "binding": "DisadvantageStats[Stat.PhantomResistance]",
+      "bindingId": "DisadvantageStats.PhantomResistance",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-negative-resistance",
+      "preserveTag": true,
+      "iconRect": [
+        352,
+        496,
+        20,
+        20
+      ],
+      "valueRect": [
+        372,
+        496,
+        26,
+        20
+      ]
+    },
+    {
+      "id": "character.immediate.new.level",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        306,
+        96,
+        82,
+        20
+      ],
+      "bindingId": "new.level",
+      "dataSource": "User.Level",
+      "refreshAt": "GameScene.LevelChanged",
+      "implementationStatus": "implemented_opt_in"
+    },
+    {
+      "id": "character.immediate.new.experience",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        306,
+        120,
+        82,
+        20
+      ],
+      "bindingId": "new.experience",
+      "dataSource": "User.Experience / User.MaxExperience",
+      "refreshAt": "GameScene.ExperienceChanged",
+      "implementationStatus": "implemented_opt_in"
+    },
+    {
+      "id": "character.immediate.new.health",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        306,
+        144,
+        82,
+        20
+      ],
+      "bindingId": "new.health",
+      "dataSource": "User.CurrentHP / User.Stats[Stat.Health]",
+      "refreshAt": "GameScene.HealthChanged",
+      "implementationStatus": "implemented_opt_in"
+    },
+    {
+      "id": "character.immediate.new.mana",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        306,
+        168,
+        82,
+        20
+      ],
+      "bindingId": "new.mana",
+      "dataSource": "User.CurrentMP / User.Stats[Stat.Mana]",
+      "refreshAt": "GameScene.ManaChanged",
+      "implementationStatus": "implemented_opt_in"
+    },
+    {
+      "id": "character.control.CharacterNameLabel",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        22,
+        10,
+        348,
+        22
+      ],
+      "binding": "CharacterNameLabel",
+      "bindingId": "existing.CharacterNameLabel",
+      "dataSource": "User.Name"
+    },
+    {
+      "id": "character.control.GuildNameLabel",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        16,
+        66,
+        224,
+        22
+      ],
+      "binding": "GuildNameLabel",
+      "bindingId": "existing.GuildNameLabel",
+      "dataSource": "User.Title"
+    },
+    {
+      "id": "character.control.GuildRankLabel",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        254,
+        66,
+        142,
+        22
+      ],
+      "binding": "GuildRankLabel",
+      "bindingId": "existing.GuildRankLabel",
+      "dataSource": "User.GuildRank"
+    },
+    {
+      "id": "character.control.WearWeightLabel",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        306,
+        216,
+        82,
+        20
+      ],
+      "binding": "WearWeightLabel",
+      "bindingId": "existing.WearWeightLabel",
+      "dataSource": "User.WearWeight / User.Stats[Stat.WearWeight]"
+    },
+    {
+      "id": "character.control.HandWeightLabel",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        306,
+        192,
+        82,
+        20
+      ],
+      "binding": "HandWeightLabel",
+      "bindingId": "existing.HandWeightLabel",
+      "dataSource": "User.HandWeight / User.Stats[Stat.HandWeight]"
+    },
+    {
+      "id": "character.control.MarriageIcon",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        370,
+        12,
+        14,
+        16
+      ],
+      "binding": "MarriageIcon",
+      "bindingId": "existing.MarriageIcon",
+      "dataSource": "Partner.Name"
+    },
+    {
+      "id": "character.control.ShowHelmetBox",
+      "owner": "character",
+      "page": "character",
+      "kind": "control",
+      "rect": [
+        254,
+        340,
+        142,
+        22
+      ],
+      "binding": "ShowHelmetBox",
+      "bindingId": "existing.ShowHelmetBox",
+      "dataSource": "!S.HelmetToggle.HideHelmet",
+      "hitRect": [
+        254,
+        340,
+        142,
+        22
+      ],
+      "action": "existing-helmet-toggle",
+      "label": "显示头盔"
+    }
+  ],
+  "sourceHashes": [
+    {
+      "path": "Client/Envir/GameUiCharacterAttributeLayout.cs",
+      "sha256": "c9281595fbd65194a8d80a4b9383a7fe1bf4983f114e16adc756293b889e3fe2"
+    },
+    {
+      "path": "Client/Envir/GameUiCharacterControlLayout.cs",
+      "sha256": "320ddebfb5f34add1e73cac1f914bb40e95d254ca0870fa6f841bcc929977151"
+    },
+    {
+      "path": "Client/Envir/GameUiCharacterReadouts.cs",
+      "sha256": "9e4422b4dd90f5c37d389f18841eb30e11b75b454a2ee39f9dbc16a6ddb427db"
+    },
+    {
+      "path": "Client/Scenes/Views/CharacterDialog.GameUiAttributes.cs",
+      "sha256": "547ed14eed32861af014236e6705f957b816b547275ca942995e608707d4bb25"
+    },
+    {
+      "path": "Client/Scenes/Views/CharacterDialog.GameUiControls.cs",
+      "sha256": "e92d0728ad1e3212af6ede802b7604db32a91d4d71975a9290dac8b96b463568"
+    },
+    {
+      "path": "build/game-ui/character-routing.json",
+      "sha256": "ffcd71423438657f59a69b591e5424b09eb2c2f90181204e2a38383fc90b756c"
+    },
+    {
+      "path": "build/game-ui/character-bindings.json",
+      "sha256": "0f851ddddf5c223bd008865bbb0276173441cc02f83277b60d503bb58913738a"
+    }
+  ],
+  "tests": [
+    {
+      "suite": "CharacterAttribute",
+      "checksPassed": 20035,
+      "path": "E:\\workspace\\mir3-ui-work\\character-property-align-20261110\\test-CharacterAttribute-final.log",
+      "sha256": "eb77e673807dff1e839d3df4480ad1626ce75389f43df61a7af1a556e40565a9"
+    },
+    {
+      "suite": "CharacterControl",
+      "checksPassed": 3433,
+      "path": "E:\\workspace\\mir3-ui-work\\character-property-align-20261110\\test-CharacterControl-final.log",
+      "sha256": "443471b6fc545ea1295944a5e8bd789b48a9fd429e30e3e3303773e3a20dd5cf"
+    },
+    {
+      "suite": "CharacterComposition",
+      "checksPassed": 1923,
+      "path": "E:\\workspace\\mir3-ui-work\\character-property-align-20261110\\test-CharacterComposition-final.log",
+      "sha256": "72655d0740928e92af5f3112f6bb682426ac6cc9584e52012616cc9d40db0426"
+    },
+    {
+      "suite": "CharacterReadout",
+      "checksPassed": 2474,
+      "path": "E:\\workspace\\mir3-ui-work\\character-property-align-20261110\\test-CharacterReadout-final.log",
+      "sha256": "79f9189b1763809c1c6dfbd8abe8578038a9575bd92a0c9017a5299f1e33c06e"
+    },
+    {
+      "suite": "CharacterPage",
+      "checksPassed": 14790,
+      "path": "E:\\workspace\\mir3-ui-work\\character-property-align-20261110\\test-CharacterPage-final.log",
+      "sha256": "aa722123f658283e69d52f81461ba3d82944e36c96a3ef6e7e7effb4f3c6c9b0"
+    },
+    {
+      "suite": "LayoutContract",
+      "path": "E:\\workspace\\mir3-ui-work\\character-property-align-20261110\\test-layout-final.log",
+      "sha256": "539dd33fa769bac05988361e4b0037eb48e24b780baff672517b471095213a92",
+      "result": "pass"
+    },
+    {
+      "suite": "Bindings",
+      "path": "E:\\workspace\\mir3-ui-work\\character-property-align-20261110\\test-bindings-final.log",
+      "sha256": "5932bc5269e5c6e34910ecd3f36fca9797c3ba463775aafeaf2ec6cd4131e437",
+      "result": "pass"
+    },
+    {
+      "suite": "FullScene",
+      "path": "E:\\workspace\\mir3-ui-work\\character-property-align-20261110\\test-fullscene-caption-fit.log",
+      "sha256": "9c9bfc1c543fd6489f098b825ea26befab2302c840cf522d400a669e1f184008",
+      "result": "pass"
+    }
+  ],
+  "runtime": [
+    {
+      "configuration": "Debug",
+      "executable": "E:\\workspace\\Debug\\Client\\Zircon.exe",
+      "executableSha256": "ee77d09bcc4c7d9f02a88eddd07930f1981ece6624cc2688798c7d66b129ab75",
+      "packageSha256": "639a5b6762f22dfc6cd837d2765ff0a558068ffa5c89f1b58194f66003baba5d",
+      "buildLog": "E:\\workspace\\mir3-ui-work\\character-property-align-20261110\\build-debug.log",
+      "buildLogSha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "configuration": "Release",
+      "executable": "E:\\workspace\\Release\\Client\\Zircon.exe",
+      "executableSha256": "16434e4252c25ce97149460bf712063e48826051fcaed5b9fe6facdfdb4ecb32",
+      "packageSha256": "639a5b6762f22dfc6cd837d2765ff0a558068ffa5c89f1b58194f66003baba5d",
+      "buildLog": "E:\\workspace\\mir3-ui-work\\character-property-align-20261110\\build-release.log",
+      "buildLogSha256": "c9e24428be1e56c8408af17aacfea3413de3953bfe426d10eb768782f5005ebc"
+    }
+  ],
+  "testedDebugRuntime": [
+    {
+      "name": "Zircon.exe",
+      "sha256": "ee77d09bcc4c7d9f02a88eddd07930f1981ece6624cc2688798c7d66b129ab75"
+    },
+    {
+      "name": "Library.dll",
+      "sha256": "557ba4f45f3cb2db8bbbbb2a336289b0d3d535959190f86ec7efc2bfdd0b0c5b"
+    },
+    {
+      "name": "SlimDX.dll",
+      "sha256": "f23ec20aeaec149ba963d1fb03af3ea1585ccdf1ac207f315361a80ceaadcc05"
+    }
+  ],
+  "screenshot": {
+    "path": "character-properties-aligned-runtime.png",
+    "sha256": "23bce9e0bd4db9cbf5ba6a40f2550ab8708128c3acf72bf6ef3889f97b187690",
+    "source": "E:\\workspace\\mir3-ui-work\\character-property-align-20261110\\fullscene-caption-fit\\official-refresh-CharacterTab.png",
+    "crop": [
+      8,
+      4,
+      412,
+      562
+    ]
+  },
+  "equipmentPixelEvidence": "equipment-pixel-alignment.json",
+  "limitations": [
+    "Offline synthetic character and world; no real-server acceptance.",
+    "Production binding gates remain disabled."
+  ]
+}

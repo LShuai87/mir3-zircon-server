@@ -1,0 +1,3 @@
+tests\game-ui\OfficialUiNpcQuestTests.cs(97,39): error CS0122: “DXControl.Controls”不可访问，因为它具有一定的保护级别
+tests\game-ui\OfficialUiNpcQuestTests.cs(137,33): error CS0122: “DXControl.Controls”不可访问，因为它具有一定的保护级别
+tests\game-ui\OfficialUiNpcQuestTests.cs(150,45): error CS0122: “DXControl.Controls”不可访问，因为它具有一定的保护级别

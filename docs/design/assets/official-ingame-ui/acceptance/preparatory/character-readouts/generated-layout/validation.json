@@ -1,0 +1,81 @@
+{
+  "kind": "official-ui-layout-geometry-validation",
+  "releaseAccepted": false,
+  "sourceSha256": "176accf796f2616e5fac295490e4d59bc98f56493c1568d9dfdd3e78683e91bf",
+  "results": {
+    "nodeCount": 231,
+    "interactiveCount": 109,
+    "hitPairsChecked": 1757,
+    "equipmentSlots": 16,
+    "inventoryCells": 49,
+    "quickbarCells": 10,
+    "statBindings": 57,
+    "existingControlBindings": 8,
+    "additionalImmediateBindings": 4,
+    "hermitPacketActions": 8,
+    "hudEntries": 9,
+    "resolutionCount": 6
+  },
+  "guardChecks": [
+    {
+      "case": "missing-inventory-cell",
+      "result": "rejected",
+      "reason": "inventory.cell.: missing or duplicate cell"
+    },
+    {
+      "case": "duplicate-equipment-slot",
+      "result": "rejected",
+      "reason": "Must bind each of 16 equipment slots once"
+    },
+    {
+      "case": "missing-existing-stat",
+      "result": "rejected",
+      "reason": "Existing 57 stat bindings must remain complete"
+    },
+    {
+      "case": "overlapping-hud-buttons",
+      "result": "rejected",
+      "reason": "Overlapping hit rectangles: commands.CharacterButton, commands.InventoryButton"
+    },
+    {
+      "case": "off-screen-window",
+      "result": "rejected",
+      "reason": "inventory: screen bounds/size mismatch"
+    },
+    {
+      "case": "wrong-shared-grid-border",
+      "result": "rejected",
+      "reason": "Overlapping hit rectangles: inventory.cell.0, inventory.cell.1"
+    },
+    {
+      "case": "chat-recreated-on-resize",
+      "result": "rejected",
+      "reason": "Chat preservation policy changed"
+    },
+    {
+      "case": "scope-changed-to-npc",
+      "result": "rejected",
+      "reason": "Scope drift"
+    },
+    {
+      "case": "production-flag-only",
+      "result": "rejected",
+      "reason": "Proposed geometry cannot be promoted by changing a flag"
+    },
+    {
+      "case": "readout-status-drift",
+      "result": "rejected",
+      "reason": "Immediate data implementation status must match binding source"
+    },
+    {
+      "case": "readout-activation-claim",
+      "result": "rejected",
+      "reason": "Immediate data implementation status must match binding source"
+    }
+  ],
+  "limitations": [
+    "Geometry/coverage/overlap checks and design annotations only.",
+    "No actual renderer, preview pivot, native input, event or packet acceptance.",
+    "Generated C# is a proposed candidate, not registered with Client.csproj."
+  ]
+}

@@ -1,0 +1,604 @@
+{
+  "schemaVersion": 1,
+  "kind": "official-native-character-refresh-verification",
+  "checkedAtLocalDate": "2026-11-08",
+  "referenceResolution": [
+    1024,
+    768
+  ],
+  "releaseAccepted": false,
+  "results": {
+    "fullSceneChecks": 4328,
+    "realGameConstructors": 27,
+    "presentedFrames": 47,
+    "explicitDeviceResets": 9,
+    "identicalPanelPixels": 690512,
+    "nativeCharacterCheckpoints": 34,
+    "checkpointsPerStyle": 17,
+    "serializedCharacterSuitePackets": 52,
+    "originalAttributeLabels": 57,
+    "parityFieldsPerCheckpoint": 68,
+    "legacyParityFieldComparisons": 1156,
+    "styles": [
+      "Legacy",
+      "OfficialV1"
+    ],
+    "nativeAttributeReplacementVerified": true,
+    "nativeResistanceSignColorAndIconsVerified": true,
+    "nativeMaxHealthManaAndClampSequenceVerified": true,
+    "nativeWeightOverloadRecoveryVerified": true,
+    "nativeHermitClearingVerified": true,
+    "nativeLevelExperienceGainLossAndCapVerified": true,
+    "hintOnlyExperienceRefreshVerified": true,
+    "originalControlAndCellIdentityVerified": true,
+    "nativeChatEditorRetentionVerified": true,
+    "productionSourceChanged": false,
+    "realServerBehaviorVerified": false,
+    "finalVisualAcceptance": false
+  },
+  "implementation": [
+    "Add a partial real-scene harness driven by serialized loopback StatsUpdate, WeightUpdate, HealthChanged, ManaChanged, LevelChanged and GainedExperience packets, with normal login/start/logout packets and original client dispatch.",
+    "Compare all 57 native attribute labels, six named character text labels, inventory weight and four HUD strings at 17 checkpoints per style, including text, foreground and tagged element-icon colors. Independently assert sign/range/weight/HP/MP/experience boundary outcomes.",
+    "Verify four Official character readouts and full-value hints mirror their native HUD sources after updates, including an experience raw hint change while its rounded percentage string stays identical.",
+    "The full-scene runner compiles the new partial and saves tested SHA256 identities with .NET streams to work in Windows PowerShell without the Get-FileHash cmdlet."
+  ],
+  "verifiedBehaviors": [
+    "Positive resistance -> negative -> zero -> positive resets old text, foreground and icon colors in all original attack/resistance groups. Omitted base/Hermit fields in fresh serialized dictionaries clear old values without mutating the previous dictionary.",
+    "StatsUpdate -> WeightUpdate -> HP/MP deltas reproduces the server RefreshStats enqueue order. A transient current value above its newly reduced maximum is shown until the native clamp delta arrives; the UI does not invent server state.",
+    "Inventory/wear/hand weight capacities refresh through their native WeightUpdate, including overloaded red -> exactly at capacity white -> normal values.",
+    "Hermit attacks, other Hermit attributes and remaining points update and clear through their original controls. Original label/item-cell identity and native chat HWND/draft/selection survive every checkpoint.",
+    "Level and experience packets exercise gain, loss, a percentage-unchanged raw hint change, the no-next-level raw-value branch, and resumption of percentage display.",
+    "The scene renders character/stats/Hermit pages for both styles and the existing full-scene reset/reentry/native disconnect regressions continue to pass. Native logout releases each new suite scene.",
+    "No production source or game binary was changed. Debug/Release executable and three tested Debug runtime identities match the prior finalized build. Legacy default and all release gates remain unchanged."
+  ],
+  "sourceChanges": [
+    {
+      "path": "tests/game-ui/OfficialUiFullSceneTests.cs",
+      "beforeSha256": "5838a24cd926a6d04c849b2edd19f2c7ecc132d9e1aca02ec5222d8bbe2af3cb",
+      "afterSha256": "a4b607babe3891f061e63594df316a639dc1598aaa85a70d582200ae8489eefc"
+    },
+    {
+      "path": "tests/Run-GameUiFullSceneTests.ps1",
+      "beforeSha256": "d1beda854b779283d326bf5f7481de8f0e5db1912274e8d6b1c9d5452a2e849b",
+      "afterSha256": "0265097ae7ff97fdf326a6cfc1755d85cc19b6b6317cdf1aedc41c8077863b71"
+    }
+  ],
+  "firstTrackedSourceChanges": [],
+  "newlyTrackedSources": [
+    {
+      "path": "Server/Models/PlayerObject.cs",
+      "sha256": "eb58f417b9fa9a817a023c93b556734051c5426984ecd1287f01cb32a80ddeab",
+      "createdThisRound": false
+    },
+    {
+      "path": "tests/game-ui/OfficialUiNativeCharacterRefreshTests.cs",
+      "sha256": "b05ee80e1802d4481fd1668b9b1e18dc2b5bc31f047d0c70c4a6c04f3a8bc78a",
+      "createdThisRound": true
+    }
+  ],
+  "sourceHashes": [
+    {
+      "path": "tests/game-ui/OfficialUiFullSceneTests.cs",
+      "sha256": "a4b607babe3891f061e63594df316a639dc1598aaa85a70d582200ae8489eefc"
+    },
+    {
+      "path": "tests/Run-GameUiFullSceneTests.ps1",
+      "sha256": "0265097ae7ff97fdf326a6cfc1755d85cc19b6b6317cdf1aedc41c8077863b71"
+    },
+    {
+      "path": "Client/Envir/CConnection.cs",
+      "sha256": "c1fed150672060a0f87bb443eed33a6d52eae4511eddf6ed0ed6922f5e2fdc46"
+    },
+    {
+      "path": "Client/Scenes/GameScene.cs",
+      "sha256": "9e5ab5f140a301c895626a952c19983236ec8434985511aa3f6937a964d0f94e"
+    },
+    {
+      "path": "Client/Models/UserObject.cs",
+      "sha256": "62ea8a130ab9567f803ef1420b0865aed99cc8ddcf6f76b42c4cafef2ae06abc"
+    },
+    {
+      "path": "Client/Scenes/Views/CharacterDialog.cs",
+      "sha256": "e633b29bc866f12722af0434859ad40fda0f88dd70e74a87e3a7baf61e8cff74"
+    },
+    {
+      "path": "Client/Scenes/Views/CharacterDialog.GameUiAttributes.cs",
+      "sha256": "94bed40261e7248095af13238b7a88e543f86fe7d13e60c0dbe9c9b7e5fe0aa1"
+    },
+    {
+      "path": "Client/Scenes/Views/CharacterDialog.GameUiControls.cs",
+      "sha256": "7f8b58cc43a56eb959995b9c3da1517d073fe6118204d3f4d300738a7612d78f"
+    },
+    {
+      "path": "Client/Envir/GameUiCharacterReadouts.cs",
+      "sha256": "44074bba0e2d2f4ef6eea9bec2d1f0987dd00bf17e2a54dba5d9f11fa23d355b"
+    },
+    {
+      "path": "Server/Models/PlayerObject.cs",
+      "sha256": "eb58f417b9fa9a817a023c93b556734051c5426984ecd1287f01cb32a80ddeab"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiNativeCharacterRefreshTests.cs",
+      "sha256": "b05ee80e1802d4481fd1668b9b1e18dc2b5bc31f047d0c70c4a6c04f3a8bc78a"
+    }
+  ],
+  "commands": [
+    {
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "tests/Run-GameUiFullSceneTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/native-character-refresh-20261108-final"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/native-character-refresh/full-scene-final.log",
+      "logSha256": "6b372d6607e1c4a4258344ca081d356474851f73abf7d50bec43cada10fe58f2"
+    },
+    {
+      "command": [
+        "C:/Users/shuai/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+        "docs/design/assets/official-ingame-ui/acceptance/native-character-refresh/audit-history.py",
+        "--output",
+        "docs/design/assets/official-ingame-ui/acceptance/native-character-refresh/history-audit.json"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/native-character-refresh/history-audit.log",
+      "logSha256": "7e296011931398fd845773e356ce0c491700d53170bb8da067d21f9efcbcc0eb"
+    },
+    {
+      "command": [
+        "C:/Users/shuai/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+        "build/game-ui/Validate-UiTasks.py"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/native-character-refresh/tasks-validation.log",
+      "logSha256": "90e3ddffa807ef19523e77855653984be659ff7ab47ec66f04d41348c4cb85b3"
+    },
+    {
+      "command": [
+        "C:/Users/shuai/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+        "docs/design/assets/official-ingame-ui/acceptance/native-character-refresh/check-whitespace.py"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/native-character-refresh/whitespace.log",
+      "logSha256": "62ded4792066b4857101e2e62ea774212f10799c729622fa7c89234618e6a75b"
+    }
+  ],
+  "failedAttempts": [
+    {
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "tests/Run-GameUiFullSceneTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/native-character-refresh-20261108-v1"
+      ],
+      "result": "fail",
+      "exitCode": 1,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/native-character-refresh/full-scene.log",
+      "logSha256": "37aa9976c94c56d109ac38ab34d37a187c35c172c648871aa01f192973cb5b25",
+      "explanation": "All 4328 client checks passed, but Windows PowerShell lacked Get-FileHash when saving evidence. The test runner now uses an explicit SHA256 stream; a fresh complete run passed and saved binary hashes. The final fixture also preserves valid HP/MP/capacities when testing omitted attribute clearing."
+    }
+  ],
+  "regressionBaselineRuntime": {
+    "report": "docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/verification.json",
+    "builds": {
+      "debug": {
+        "buildId": "gameui-98846b0594bcc6e2761eba36f16fcfc4528487bf0fb101b7d4ac1af396583cc8",
+        "client": {
+          "path": "Zircon.exe",
+          "length": 1386496,
+          "sha256": "d00803a052f3288fe05c00d0cdba7299456525088aaadeb74650a2aeba594f5c"
+        }
+      },
+      "release": {
+        "buildId": "gameui-5edcc508681b937e5748795f3872048404f0111eacc748a45f7d0ca77d34859c",
+        "client": {
+          "path": "Zircon.exe",
+          "length": 1281536,
+          "sha256": "619d363c40aff09d448cd8aedfa39bc7fc492017f26202b48b806ef0f7d2aab9"
+        }
+      }
+    },
+    "testedRuntime": [
+      {
+        "name": "Zircon.exe",
+        "sha256": "d00803a052f3288fe05c00d0cdba7299456525088aaadeb74650a2aeba594f5c"
+      },
+      {
+        "name": "Library.dll",
+        "sha256": "557ba4f45f3cb2db8bbbbb2a336289b0d3d535959190f86ec7efc2bfdd0b0c5b"
+      },
+      {
+        "name": "SlimDX.dll",
+        "sha256": "f23ec20aeaec149ba963d1fb03af3ea1585ccdf1ac207f315361a80ceaadcc05"
+      }
+    ]
+  },
+  "builds": {
+    "debug": {
+      "buildId": "gameui-98846b0594bcc6e2761eba36f16fcfc4528487bf0fb101b7d4ac1af396583cc8",
+      "client": {
+        "path": "Zircon.exe",
+        "length": 1386496,
+        "sha256": "d00803a052f3288fe05c00d0cdba7299456525088aaadeb74650a2aeba594f5c"
+      }
+    },
+    "release": {
+      "buildId": "gameui-5edcc508681b937e5748795f3872048404f0111eacc748a45f7d0ca77d34859c",
+      "client": {
+        "path": "Zircon.exe",
+        "length": 1281536,
+        "sha256": "619d363c40aff09d448cd8aedfa39bc7fc492017f26202b48b806ef0f7d2aab9"
+      }
+    }
+  },
+  "runtimeRebuiltThisTurn": false,
+  "package": {
+    "path": "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+    "frameCount": 94,
+    "sha256": "dd45cbf51d976a69d28269ee0d27a985def1ee1693cab2b509b74ae347a880a4"
+  },
+  "candidate": {
+    "path": "E:/workspace/mir3-ui-work/warehouse-assets-20261108-v1/zl-v2/OfficialV1.Zl",
+    "frameCount": 1,
+    "sha256": "471169dfa093b521f3c700c5a993e4e763aa17a45b2e16f440d961c0c7bf4cec"
+  },
+  "sourcePlanSha256": "f8c0a002b3821fabb54993792c354c4eff35eec51f9cfdc418535017c13069e9",
+  "limitations": [
+    "Loopback peers use synthetic packets and isolated account/world data. Packet production by an actual server, item transactions, reconnect to a real account and final visual acceptance remain unverified.",
+    "This verifies 57 native attribute labels and four mirrors; it does not establish unsupported official field semantics or proof for every equipment-slot mapping. Labels such as character/guild identity are compared but their server-driven rename flow is not exercised here.",
+    "The no-next-level branch is a deterministic client boundary fixture based on ExperienceList.Count; it is not evidence that a live server permits this level.",
+    "Four character mirrors retain native text/hints; truncation visuals, physical fonts and live IME composition are outside this packet test. Hardware device-loss remains unverified.",
+    "Task counts remain 7 done / 3 in_progress / 18 not_started; G0-2/3/4/5 remain open. RuntimeReady=false, productionBindingAllowed=false, releaseAccepted=false. NPC interaction cards and secondary popup styles remain native. Official installation is read-only; no commit/push/deployment."
+  ],
+  "evidenceHashes": [
+    {
+      "path": "E:/workspace/mir3-ui-work/native-character-refresh-20261108-final/legacy-hud.png",
+      "sha256": "5fa69de2c6da4336331e9f837cd0ded6c24f9b714dda1e36432e8880dc050a09"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-character-refresh-20261108-final/legacy-panels.png",
+      "sha256": "d0723781ce5debe099e9ba58f4e2c999706872006bb0ec1594c651cea1634a46"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-character-refresh-20261108-final/legacy-refresh-CharacterTab.png",
+      "sha256": "f275d84b01b51afd1a5d523aca4205cf40d5078d2acee89ebe13d1732604ee7f"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-character-refresh-20261108-final/legacy-refresh-HermitTab.png",
+      "sha256": "611a16421a58f99f1656db318609fdc468197f2648d40d216a59abf1e40d97c8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-character-refresh-20261108-final/legacy-refresh-StatsTab.png",
+      "sha256": "8b0c35283e35c09b176768e7f9a8272208f7f209be3b6924a3cfb1b90fdbd57c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-character-refresh-20261108-final/legacy-resources.txt",
+      "sha256": "47713d590a1b9214abdef7a0fc33d6c28a2b5a73a0cff9794375a5083020b498"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-character-refresh-20261108-final/native-character-refresh-fields.txt",
+      "sha256": "564be2e5cdbdaedc1c4f4d10a6c9c013186f4efe3d3b161ab5086b2f82cb90d6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-character-refresh-20261108-final/native-character-refresh-summary.txt",
+      "sha256": "c4e0e7ea8074ebae2956c6573048c386db3524233e4288dabafc93e3d58cb32a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-character-refresh-20261108-final/native-transition-results.txt",
+      "sha256": "347dfa519804984941ffca7a2251cf69b55d3adf4ff97a29fecc597ac6a886a7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-character-refresh-20261108-final/official-CharacterTab.png",
+      "sha256": "43a1af56f6c3bfd96763e2bdc70b81fcda2ad9bddce1aa09a95ffa0b5055eac8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-character-refresh-20261108-final/official-extraEquipmentTab.png",
+      "sha256": "fd2f77d0befc66bba22a81f66c6636dd2b169066f24bb721f5170886176243ca"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-character-refresh-20261108-final/official-HermitTab.png",
+      "sha256": "4f638a46988d05fdf41f695893510dc4b19dc85b5ca24a8ef781e63a17fe6348"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-character-refresh-20261108-final/official-hud.png",
+      "sha256": "0d72ce7b9c9ed1d0c807333ef4c62517a0f9d90d6f49015ba946f1b0882384ac"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-character-refresh-20261108-final/official-panels.png",
+      "sha256": "43a1af56f6c3bfd96763e2bdc70b81fcda2ad9bddce1aa09a95ffa0b5055eac8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-character-refresh-20261108-final/official-reentry-hud.png",
+      "sha256": "39be0066510de06ba2465cc008c6379ffbc4c556c67be4870b3a750f99696f4b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-character-refresh-20261108-final/official-reentry-panels.png",
+      "sha256": "8a0a2644ac845d99ab8104c3cc9acdd0573cdff950c0706b3a8b1a2bd2d4d2a8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-character-refresh-20261108-final/official-refresh-CharacterTab.png",
+      "sha256": "00d7a3834353e44c198c068bde4c42f9b0edc7e6cc969fa4091fd86c37e3880e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-character-refresh-20261108-final/official-refresh-HermitTab.png",
+      "sha256": "38392ab36df0e8d8b196341f813c1d768d05337b390cb82e807fc0905731a356"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-character-refresh-20261108-final/official-refresh-StatsTab.png",
+      "sha256": "0daed4f8f7ec69dced6160ea366836202473373a1233dea16975b762fe683664"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-character-refresh-20261108-final/official-reset-1024x768.png",
+      "sha256": "43a1af56f6c3bfd96763e2bdc70b81fcda2ad9bddce1aa09a95ffa0b5055eac8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-character-refresh-20261108-final/official-reset-1280x800.png",
+      "sha256": "6da4d263d19f1aae323e49c0f41f848bd9fb075cb94dafb02df4e2f0749ef8a4"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-character-refresh-20261108-final/official-reset-1366x768.png",
+      "sha256": "bccd5d8071878413408790dbe90b5d5a1ea48d880be4cec00c916469bc30f495"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-character-refresh-20261108-final/official-reset-1440x900.png",
+      "sha256": "1b0be5742da74968aba14f74293e474a1324d346421cab3b9692607f90f43a06"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-character-refresh-20261108-final/official-reset-1600x900.png",
+      "sha256": "ddc79b57cfef144f95511d28a92a7ad2351a7a8d74ed73ca4e19a4a5f8f44ba7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-character-refresh-20261108-final/official-reset-1920x1080.png",
+      "sha256": "686e3cc1df80daea96d79cdb643655e960d5a1d3d48b39e03ad3ecfcac005f7a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-character-refresh-20261108-final/official-StatsTab.png",
+      "sha256": "dc665d7ec9343b3bdbdd2fd5bbc16f245d961d0ab217de3d7af7e82be17d8664"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-character-refresh-20261108-final/reset-pixel-probes.txt",
+      "sha256": "2c236cd844574b74b6d502b13ffed99b5cb29783fc53ea00587ca1543a18ac67"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-character-refresh-20261108-final/tested-runtime.json",
+      "sha256": "bb728929ef0bb7df4f2e5a5d9fe7f2811ab928ff039fa1dd1ea435dbdff6200c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-character-refresh-20261108-v1/legacy-hud.png",
+      "sha256": "5fa69de2c6da4336331e9f837cd0ded6c24f9b714dda1e36432e8880dc050a09"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-character-refresh-20261108-v1/legacy-panels.png",
+      "sha256": "d0723781ce5debe099e9ba58f4e2c999706872006bb0ec1594c651cea1634a46"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-character-refresh-20261108-v1/legacy-refresh-CharacterTab.png",
+      "sha256": "f275d84b01b51afd1a5d523aca4205cf40d5078d2acee89ebe13d1732604ee7f"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-character-refresh-20261108-v1/legacy-refresh-HermitTab.png",
+      "sha256": "611a16421a58f99f1656db318609fdc468197f2648d40d216a59abf1e40d97c8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-character-refresh-20261108-v1/legacy-refresh-StatsTab.png",
+      "sha256": "8b0c35283e35c09b176768e7f9a8272208f7f209be3b6924a3cfb1b90fdbd57c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-character-refresh-20261108-v1/legacy-resources.txt",
+      "sha256": "47713d590a1b9214abdef7a0fc33d6c28a2b5a73a0cff9794375a5083020b498"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-character-refresh-20261108-v1/native-character-refresh-fields.txt",
+      "sha256": "be58aee5b51c6dfe18034b6691c1bafc345550d9f0e82714e025d2691a8f420a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-character-refresh-20261108-v1/native-character-refresh-summary.txt",
+      "sha256": "c4e0e7ea8074ebae2956c6573048c386db3524233e4288dabafc93e3d58cb32a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-character-refresh-20261108-v1/native-transition-results.txt",
+      "sha256": "347dfa519804984941ffca7a2251cf69b55d3adf4ff97a29fecc597ac6a886a7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-character-refresh-20261108-v1/official-CharacterTab.png",
+      "sha256": "43a1af56f6c3bfd96763e2bdc70b81fcda2ad9bddce1aa09a95ffa0b5055eac8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-character-refresh-20261108-v1/official-extraEquipmentTab.png",
+      "sha256": "fd2f77d0befc66bba22a81f66c6636dd2b169066f24bb721f5170886176243ca"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-character-refresh-20261108-v1/official-HermitTab.png",
+      "sha256": "4f638a46988d05fdf41f695893510dc4b19dc85b5ca24a8ef781e63a17fe6348"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-character-refresh-20261108-v1/official-hud.png",
+      "sha256": "0d72ce7b9c9ed1d0c807333ef4c62517a0f9d90d6f49015ba946f1b0882384ac"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-character-refresh-20261108-v1/official-panels.png",
+      "sha256": "43a1af56f6c3bfd96763e2bdc70b81fcda2ad9bddce1aa09a95ffa0b5055eac8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-character-refresh-20261108-v1/official-reentry-hud.png",
+      "sha256": "39be0066510de06ba2465cc008c6379ffbc4c556c67be4870b3a750f99696f4b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-character-refresh-20261108-v1/official-reentry-panels.png",
+      "sha256": "8a0a2644ac845d99ab8104c3cc9acdd0573cdff950c0706b3a8b1a2bd2d4d2a8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-character-refresh-20261108-v1/official-refresh-CharacterTab.png",
+      "sha256": "00d7a3834353e44c198c068bde4c42f9b0edc7e6cc969fa4091fd86c37e3880e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-character-refresh-20261108-v1/official-refresh-HermitTab.png",
+      "sha256": "38392ab36df0e8d8b196341f813c1d768d05337b390cb82e807fc0905731a356"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-character-refresh-20261108-v1/official-refresh-StatsTab.png",
+      "sha256": "0daed4f8f7ec69dced6160ea366836202473373a1233dea16975b762fe683664"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-character-refresh-20261108-v1/official-reset-1024x768.png",
+      "sha256": "43a1af56f6c3bfd96763e2bdc70b81fcda2ad9bddce1aa09a95ffa0b5055eac8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-character-refresh-20261108-v1/official-reset-1280x800.png",
+      "sha256": "6da4d263d19f1aae323e49c0f41f848bd9fb075cb94dafb02df4e2f0749ef8a4"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-character-refresh-20261108-v1/official-reset-1366x768.png",
+      "sha256": "bccd5d8071878413408790dbe90b5d5a1ea48d880be4cec00c916469bc30f495"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-character-refresh-20261108-v1/official-reset-1440x900.png",
+      "sha256": "1b0be5742da74968aba14f74293e474a1324d346421cab3b9692607f90f43a06"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-character-refresh-20261108-v1/official-reset-1600x900.png",
+      "sha256": "ddc79b57cfef144f95511d28a92a7ad2351a7a8d74ed73ca4e19a4a5f8f44ba7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-character-refresh-20261108-v1/official-reset-1920x1080.png",
+      "sha256": "686e3cc1df80daea96d79cdb643655e960d5a1d3d48b39e03ad3ecfcac005f7a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-character-refresh-20261108-v1/official-StatsTab.png",
+      "sha256": "dc665d7ec9343b3bdbdd2fd5bbc16f245d961d0ab217de3d7af7e82be17d8664"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/native-character-refresh-20261108-v1/reset-pixel-probes.txt",
+      "sha256": "2c236cd844574b74b6d502b13ffed99b5cb29783fc53ea00587ca1543a18ac67"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-character-refresh/audit-history.py",
+      "sha256": "43b3dd93e1bb748275abd80d37a7d986d4016b83b72bd6cf2e0ed3bac1c1fd92"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-character-refresh/check-whitespace.py",
+      "sha256": "1266eac4015a950149b690232d5b9a9682138468f3da3c45ead667a6b3ff936c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-character-refresh/full-scene-final.log",
+      "sha256": "6b372d6607e1c4a4258344ca081d356474851f73abf7d50bec43cada10fe58f2"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-character-refresh/full-scene-final.receipt.json",
+      "sha256": "4d3889fc3f4a6c9d82a72687752a1a6479ae16e00989aee92f0178d0031c3a8d"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-character-refresh/full-scene.log",
+      "sha256": "37aa9976c94c56d109ac38ab34d37a187c35c172c648871aa01f192973cb5b25"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-character-refresh/full-scene.receipt.json",
+      "sha256": "d76bdc9d82b9a3afb89e02624f2ffb15383a6d9f4e9a2493e9c362fbed418d79"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-character-refresh/history-audit.json",
+      "sha256": "7e296011931398fd845773e356ce0c491700d53170bb8da067d21f9efcbcc0eb"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-character-refresh/history-audit.log",
+      "sha256": "7e296011931398fd845773e356ce0c491700d53170bb8da067d21f9efcbcc0eb"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-character-refresh/history-audit.receipt.json",
+      "sha256": "d008ad8bd8c490271ada0421c5fde77e5eab1548834827f22d43f63ab16e2358"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-character-refresh/prepare-report.py",
+      "sha256": "e262baaf67ec8cea750e4e3f428663a35345c13b4e3bdbaf80fa01fede410df8"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-character-refresh/README.md",
+      "sha256": "964ff14b7a0e6847a0fa11abd82616155af20ee818632651360c993622ada425"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-character-refresh/run-check.py",
+      "sha256": "8cea69f8c28d781722ec26876840ea3e6bb44ae5ed37e2d213fdab62d1a7c943"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-character-refresh/source-before/Client/Envir/CConnection.cs",
+      "sha256": "c1fed150672060a0f87bb443eed33a6d52eae4511eddf6ed0ed6922f5e2fdc46"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-character-refresh/source-before/Client/Envir/GameUiCharacterReadouts.cs",
+      "sha256": "44074bba0e2d2f4ef6eea9bec2d1f0987dd00bf17e2a54dba5d9f11fa23d355b"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-character-refresh/source-before/Client/Models/UserObject.cs",
+      "sha256": "62ea8a130ab9567f803ef1420b0865aed99cc8ddcf6f76b42c4cafef2ae06abc"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-character-refresh/source-before/Client/Scenes/GameScene.cs",
+      "sha256": "9e5ab5f140a301c895626a952c19983236ec8434985511aa3f6937a964d0f94e"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-character-refresh/source-before/Client/Scenes/Views/CharacterDialog.cs",
+      "sha256": "e633b29bc866f12722af0434859ad40fda0f88dd70e74a87e3a7baf61e8cff74"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-character-refresh/source-before/Client/Scenes/Views/CharacterDialog.GameUiAttributes.cs",
+      "sha256": "94bed40261e7248095af13238b7a88e543f86fe7d13e60c0dbe9c9b7e5fe0aa1"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-character-refresh/source-before/Client/Scenes/Views/CharacterDialog.GameUiControls.cs",
+      "sha256": "7f8b58cc43a56eb959995b9c3da1517d073fe6118204d3f4d300738a7612d78f"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-character-refresh/source-before/Server/Models/PlayerObject.cs",
+      "sha256": "eb58f417b9fa9a817a023c93b556734051c5426984ecd1287f01cb32a80ddeab"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-character-refresh/source-before/tests/game-ui/OfficialUiFullSceneTests.cs",
+      "sha256": "5838a24cd926a6d04c849b2edd19f2c7ecc132d9e1aca02ec5222d8bbe2af3cb"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-character-refresh/source-before/tests/Run-GameUiFullSceneTests.ps1",
+      "sha256": "d1beda854b779283d326bf5f7481de8f0e5db1912274e8d6b1c9d5452a2e849b"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-character-refresh/source-before.json",
+      "sha256": "78e5c5a78202fe553794a8e77821242b4eb44ddaf653a19fbe66a1248d884515"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-character-refresh/tasks-validation.log",
+      "sha256": "90e3ddffa807ef19523e77855653984be659ff7ab47ec66f04d41348c4cb85b3"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-character-refresh/tasks-validation.receipt.json",
+      "sha256": "6e56f0e42e998d21b8b1fe14ace0a5b498e68cde3125d6b244d2d41c62bc3364"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-character-refresh/tested-runtime.json",
+      "sha256": "c5f482911a680f18a6100ef8fad3b19b1380dcc5d9f7c33779615618ec1cc3d6"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-character-refresh/whitespace.log",
+      "sha256": "62ded4792066b4857101e2e62ea774212f10799c729622fa7c89234618e6a75b"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/native-character-refresh/whitespace.receipt.json",
+      "sha256": "4b1ffe8a81a5dcf587595be4b2fda1986763c9f16c4d72bdecac632def810bb1"
+    }
+  ]
+}

@@ -1,0 +1,485 @@
+{
+  "schemaVersion": 1,
+  "kind": "official-ui-item-drop-and-original-inventory-popup-viewport-regression",
+  "checkedAtLocalDate": "2026-11-08",
+  "referenceResolution": [
+    1024,
+    768
+  ],
+  "windowMode": "windowed",
+  "releaseAccepted": false,
+  "sourceChanges": [
+    {
+      "path": "Client/Scenes/Views/InventoryDialog.cs",
+      "beforeSha256": "8c334156b799f495e8a4dba263330c6aef9433917c76d45303921f64a5171f14",
+      "afterSha256": "5f21480727f03ef2ed7995badf876905307a9197ba7379fd6feab468cf7d1db8"
+    }
+  ],
+  "sourceHashes": [
+    {
+      "path": "Client/Scenes/Views/InventoryDialog.cs",
+      "sha256": "5f21480727f03ef2ed7995badf876905307a9197ba7379fd6feab468cf7d1db8"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiItemDropTests.cs",
+      "sha256": "35a7fef6acf17d0f1fddc4708b335fd1bc9db21b50f7e4a7ec7012e499fcc05e"
+    },
+    {
+      "path": "tests/Run-GameUiItemDropTests.ps1",
+      "sha256": "43cd81f755efbf9e183510b2e27a6620f0975ddc8982672ee930274dfde78b6a"
+    }
+  ],
+  "registeredSourcesBefore": {
+    "path": "docs/design/assets/official-ingame-ui/acceptance/item-drops/registered-sources-before.json",
+    "sha256": "79fee450700c0d40d5c0ef7432ac70ad8fbc5566f78a5a51346b8ed7984ab8d6",
+    "count": 157,
+    "allMatchedRegisteredHashes": true,
+    "unchangedCount": 156,
+    "changedWithExplicitTransitionCount": 1
+  },
+  "commands": [
+    {
+      "command": "MSBuild Client/Client.csproj /t:Build /p:Configuration=Debug /p:Platform=AnyCPU /verbosity:minimal /nologo",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/item-drops/build-debug.log",
+      "logSha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "command": "MSBuild Client/Client.csproj /t:Build /p:Configuration=Release /p:Platform=AnyCPU /verbosity:minimal /nologo",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/item-drops/build-release.log",
+      "logSha256": "c9e24428be1e56c8408af17aacfea3413de3953bfe426d10eb768782f5005ebc"
+    },
+    {
+      "command": "pwsh -NoProfile -File tests/Run-GameUiItemDropTests.ps1 -PackagePath E:/workspace/mir3-ui-work/hud-progress-zl-20261108-v1/OfficialV1.Zl -EvidenceDirectory E:\\workspace\\mir3-ui-work\\item-drops-20261108-v1\\final-powershell7",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/item-drops/item-drops-powershell7.log",
+      "logSha256": "eeae7a966e2bb531d349df0cd49c652131ef64eac2de47fd11ce133ab1273a70"
+    },
+    {
+      "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File tests/Run-GameUiItemDropTests.ps1 -PackagePath E:/workspace/mir3-ui-work/hud-progress-zl-20261108-v1/OfficialV1.Zl -EvidenceDirectory E:\\workspace\\mir3-ui-work\\item-drops-20261108-v1\\final-windows-powershell",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/item-drops/item-drops-windows-powershell.log",
+      "logSha256": "eeae7a966e2bb531d349df0cd49c652131ef64eac2de47fd11ce133ab1273a70"
+    },
+    {
+      "command": "pwsh -NoProfile -File tests/Run-GameUiItemInteractionTests.ps1 -PackagePath E:/workspace/mir3-ui-work/hud-progress-zl-20261108-v1/OfficialV1.Zl -EvidenceDirectory E:\\workspace\\mir3-ui-work\\item-drops-20261108-v1\\item-regression",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/item-drops/item-regression.log",
+      "logSha256": "ab9c87311be86e46702bd4397142393e28f9dd184bc5dcb5d1274cd8458620a5"
+    },
+    {
+      "command": "pwsh -NoProfile -File tests/Run-GameUiFullSceneTests.ps1 -PackagePath E:/workspace/mir3-ui-work/hud-progress-zl-20261108-v1/OfficialV1.Zl -EvidenceDirectory E:\\workspace\\mir3-ui-work\\item-drops-20261108-v1\\full-scene-regression",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/item-drops/full-scene-regression.log",
+      "logSha256": "0d85d4de7905eb608acc989200b5dfcc19842b35b62586889490caf606d4a988"
+    },
+    {
+      "command": "python build/game-ui/Validate-UiTasks.py",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/item-drops/task-validation.log",
+      "logSha256": "a0bf6a8e0738de35b2e36e703a81f351d36919785b1be660f5f7e53773a413a9"
+    },
+    {
+      "command": "git -c core.whitespace=cr-at-eol diff --check",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/item-drops/diff-check.log",
+      "logSha256": "79d6e102d3342502fc80ca42def8ff97f6642ce33398d5219dc2f3e921c23f6f"
+    }
+  ],
+  "verification": {
+    "checks": 3775,
+    "scenes": 3,
+    "presentedFrames": 63,
+    "deviceResets": 18,
+    "coordinateHits": 327,
+    "fixtureImage": 1,
+    "serverConnected": false,
+    "releaseAccepted": false,
+    "runs": 2,
+    "shells": [
+      "PowerShell 7",
+      "Windows PowerShell 5.1"
+    ],
+    "semanticEventTraceLengthPerScene": 74,
+    "semanticEventTraceEquality": "Legacy == OfficialV1 == OfficialV1 reentry in both shells; traces include local popup events, not only packets",
+    "assertionsAndCoordinateHitsAlsoIdenticalAcrossShells": true,
+    "distinctResolutions": 6,
+    "popupOpenCloseCyclesPerRun": 63,
+    "representedFinalScreenshots": 27,
+    "beforeFixScreenshots": 2,
+    "registeredSourceCountAfter": 159,
+    "developmentDefault": "Legacy",
+    "compiledRuntimeReady": false,
+    "completedAcceptanceCases": [],
+    "itemRegression": {
+      "checks": 7519,
+      "scenes": 3,
+      "coordinateHits": 1149,
+      "presentedFrames": 15,
+      "deviceResets": 6
+    },
+    "fullSceneRegression": {
+      "checks": 180,
+      "scenes": 3,
+      "presentedFrames": 17,
+      "deviceResets": 7,
+      "identicalPanelPixels": 690512
+    }
+  },
+  "defect": {
+    "control": "MonsterDropListBox",
+    "resolution": [
+      1024,
+      768
+    ],
+    "size": [
+      368,
+      396
+    ],
+    "beforeLegacy": [
+      500,
+      377
+    ],
+    "beforeOfficial": [
+      500,
+      412
+    ],
+    "afterBoth": [
+      500,
+      372
+    ],
+    "legacyOverflowPixels": 5,
+    "officialOverflowPixels": 40,
+    "behavior": "Clamp original popup position inside scene; preserve preferred location when it fits"
+  },
+  "testedDebugRuntime": [
+    {
+      "name": "Zircon.exe",
+      "sha256": "830f3d5bfb3de5e969a7c27fc6678c90b879011b24037338b51902fb6b3062d0"
+    },
+    {
+      "name": "Library.dll",
+      "sha256": "557ba4f45f3cb2db8bbbbb2a336289b0d3d535959190f86ec7efc2bfdd0b0c5b"
+    },
+    {
+      "name": "SlimDX.dll",
+      "sha256": "f23ec20aeaec149ba963d1fb03af3ea1585ccdf1ac207f315361a80ceaadcc05"
+    }
+  ],
+  "builtReleaseRuntime": [
+    {
+      "name": "Zircon.exe",
+      "sha256": "ffe6d56e8fa9deb226bac43c95ca8afcec495eacf4c5de5f0101d955e3b987d0"
+    },
+    {
+      "name": "Library.dll",
+      "sha256": "97b9a4c0e138b186f4e01c91ea855bf09bbb848ce23322d746ad790adee098d1"
+    },
+    {
+      "name": "SlimDX.dll",
+      "sha256": "f23ec20aeaec149ba963d1fb03af3ea1585ccdf1ac207f315361a80ceaadcc05"
+    }
+  ],
+  "package": {
+    "externalPath": "E:\\workspace\\mir3-ui-work\\hud-progress-zl-20261108-v1\\OfficialV1.Zl",
+    "sha256": "a67995c4a5d928da09b69b89ff199c9abb73821d6b620ad71bec4a62fd1df635",
+    "bytes": 354374,
+    "frames": 91,
+    "buttonGroups": 19
+  },
+  "limitations": [
+    "Synthetic map/user/items and socket-free queue; no live login, reconnect or transaction acceptance.",
+    "ItemChanged/GoldChanged injected into original handlers; no real item/gold discarded.",
+    "Sale/decomposition popups only opened/closed; actual sale/decomposition transaction remains unverified.",
+    "Only six supported viewport sizes tested; arbitrary smaller-than-popup viewports not covered.",
+    "No live IME, hardware device loss, final art, gate closure or release acceptance.",
+    "Earlier deployment evidence remains historical; new binary requires a freshly generated matching release manifest."
+  ],
+  "evidenceFiles": [
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-drops/before-fix/legacy-MonsterDropListButton.png",
+      "sha256": "2e19c5471d659cf1e549c60b66a41bd4584183dce4da6c7b80a37e44c5521441"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-drops/before-fix/official-MonsterDropListButton.png",
+      "sha256": "7e06a43cb963000c23b7b7140f744652dec3c3f028c9c2f2b0bb4b7f5b133582"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-drops/before-fix/tested-runtime.json",
+      "sha256": "af2f1b91eb24458ec29ea7a9e683ea32e601c7a840c04eae3833acba1adc92ea"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-drops/before-fix/viewport-assertion-failure.log",
+      "sha256": "5bdd901a28bb651f4298bcb61640738f9966c6cb476f1bcdd4336febb9f8d7c1"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-drops/before-location-fix.log",
+      "sha256": "1f82563fcd45c06f35a3076e40481a0ed8797178aa2ffdcd2306e21629a0e913"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-drops/build-debug.log",
+      "sha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-drops/build-release.log",
+      "sha256": "c9e24428be1e56c8408af17aacfea3413de3953bfe426d10eb768782f5005ebc"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-drops/diff-check.log",
+      "sha256": "79d6e102d3342502fc80ca42def8ff97f6642ce33398d5219dc2f3e921c23f6f"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-drops/full-scene-regression/legacy-resources.txt",
+      "sha256": "47713d590a1b9214abdef7a0fc33d6c28a2b5a73a0cff9794375a5083020b498"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-drops/full-scene-regression/reset-pixel-probes.txt",
+      "sha256": "2c236cd844574b74b6d502b13ffed99b5cb29783fc53ea00587ca1543a18ac67"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-drops/full-scene-regression/tested-runtime.json",
+      "sha256": "922672e7c5ce34e3eefdc5db2c546e60c9481eca27e900462942cf38bd360893"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-drops/full-scene-regression.log",
+      "sha256": "0d85d4de7905eb608acc989200b5dfcc19842b35b62586889490caf606d4a988"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-drops/item-drops-powershell7.log",
+      "sha256": "eeae7a966e2bb531d349df0cd49c652131ef64eac2de47fd11ce133ab1273a70"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-drops/item-drops-windows-powershell.log",
+      "sha256": "eeae7a966e2bb531d349df0cd49c652131ef64eac2de47fd11ce133ab1273a70"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-drops/item-regression/assertions.txt",
+      "sha256": "9cb3328b9aa80e38b692da1e5910593e6b5c17766e5b454bb28e6ff503ec57ad"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-drops/item-regression/coordinate-hits.txt",
+      "sha256": "a42bb4e870f92d2184bc4bb4ffe3c4bf9f150d15cfdbe2f1043599abb80be9cf"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-drops/item-regression/legacy-packet-trace.txt",
+      "sha256": "2616428afb2fc1488d5a1123ba5066899b1115f9a7901986dd2ca6637713906d"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-drops/item-regression/legacy-resources.txt",
+      "sha256": "47713d590a1b9214abdef7a0fc33d6c28a2b5a73a0cff9794375a5083020b498"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-drops/item-regression/metrics.json",
+      "sha256": "4b8a42b819e12cd95e4f9caab8fbd2c622b4541454cfe03ad922ee75be1c1311"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-drops/item-regression/official-packet-trace.txt",
+      "sha256": "2616428afb2fc1488d5a1123ba5066899b1115f9a7901986dd2ca6637713906d"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-drops/item-regression/official-reentry-packet-trace.txt",
+      "sha256": "2616428afb2fc1488d5a1123ba5066899b1115f9a7901986dd2ca6637713906d"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-drops/item-regression/tested-runtime.json",
+      "sha256": "922672e7c5ce34e3eefdc5db2c546e60c9481eca27e900462942cf38bd360893"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-drops/item-regression.log",
+      "sha256": "ab9c87311be86e46702bd4397142393e28f9dd184bc5dcb5d1274cd8458620a5"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-drops/powershell7/assertions.txt",
+      "sha256": "53953772d87d6c290951cafeb1d8cea16c6595879a89457c470ac9504edf07b2"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-drops/powershell7/coordinate-hits.txt",
+      "sha256": "590d31d3a14c9ac11cfa1f438f01fdc7f7281603b61b9c915ef40e8ab2c63682"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-drops/powershell7/legacy-packet-trace.txt",
+      "sha256": "3ed73818b96633cba7d2d5ce735bb5d015bc404577a6741f1b3a76c82536ec1c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-drops/powershell7/legacy-resources.txt",
+      "sha256": "47713d590a1b9214abdef7a0fc33d6c28a2b5a73a0cff9794375a5083020b498"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-drops/powershell7/legacy-v1-1024x768-MonsterDropListButton.png",
+      "sha256": "36644e2b45205409f22a52b722a2caa3a14a2fcb8afbb73026c2cb1265dfa218"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-drops/powershell7/legacy-v1-1024x768-RemoteFragmentButton.png",
+      "sha256": "161fa008cd67019765f19b7e12eddcdfb38adf07e324c5f5392f290563531928"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-drops/powershell7/legacy-v1-1024x768-RemoteSellButton.png",
+      "sha256": "dc1c22ec53a5d8ec46278c22f772e4238e8fcc5811d2cddea2e568f32e49f496"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-drops/powershell7/metrics.json",
+      "sha256": "c9a483bebdeadd20a6f50b6e1d4f0194f481671f72cbf2da0cd17f07e2195fc9"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-drops/powershell7/official-packet-trace.txt",
+      "sha256": "3ed73818b96633cba7d2d5ce735bb5d015bc404577a6741f1b3a76c82536ec1c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-drops/powershell7/official-reentry-packet-trace.txt",
+      "sha256": "3ed73818b96633cba7d2d5ce735bb5d015bc404577a6741f1b3a76c82536ec1c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-drops/powershell7/official-reentry-v7-1024x768-MonsterDropListButton.png",
+      "sha256": "c0b9c90a16cf9b03283cdc31f23b25b299585f9d9245d0b451c77d7f016cef6a"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-drops/powershell7/official-reentry-v7-1024x768-RemoteFragmentButton.png",
+      "sha256": "1aeb3b836b750710ac6d1343a8d3f8f6b6c65d74fc5b18b2042994db480346db"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-drops/powershell7/official-reentry-v7-1024x768-RemoteSellButton.png",
+      "sha256": "7aee40b4ee51c150c5cad9038a921025f34b38d1852e3f73ba5bfbf1688a6a8c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-drops/powershell7/official-v1-1024x768-MonsterDropListButton.png",
+      "sha256": "fab1237fcef0cc6cb2544492e167a1d181cbf90c0f01f1d78192fb9046366a70"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-drops/powershell7/official-v1-1024x768-RemoteFragmentButton.png",
+      "sha256": "a7b681f6bfd0e5eaf01ae116b1dc55a5dd8990cc997383722677b335490b6dfe"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-drops/powershell7/official-v1-1024x768-RemoteSellButton.png",
+      "sha256": "7aee40b4ee51c150c5cad9038a921025f34b38d1852e3f73ba5bfbf1688a6a8c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-drops/powershell7/official-v2-800x600-MonsterDropListButton.png",
+      "sha256": "171d7232e7e954c06b09ee1085b5fda0a7649b0378b459eb16d0313b95a64ad9"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-drops/powershell7/official-v2-800x600-RemoteFragmentButton.png",
+      "sha256": "c8a6b8d85f8951d63881062fe6ebe1a5bd4804e556b61eb51118ab703420965f"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-drops/powershell7/official-v2-800x600-RemoteSellButton.png",
+      "sha256": "1ddeb64ebab7442c7c45491585fbe2afec8b6672340fe7d4df057e98bb5fcc61"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-drops/powershell7/official-v3-1280x720-MonsterDropListButton.png",
+      "sha256": "8b29b7c77ac6a31f6e3b517e7e237048aa0c3daa4413dd2e831859e9be90b284"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-drops/powershell7/official-v3-1280x720-RemoteFragmentButton.png",
+      "sha256": "4f7c3d943cf21b6c57bf27ca1ba9ae9890b1fa2cad769647480224174553279c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-drops/powershell7/official-v3-1280x720-RemoteSellButton.png",
+      "sha256": "c6623eb287ebef61f7a7e0038c4a4e2a1a28a3ca1563c92dc56ddd9a24d39245"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-drops/powershell7/official-v4-1280x800-MonsterDropListButton.png",
+      "sha256": "7166c4b129172d68ce0d70f4843b0198652f7247affc7ab06602fd4d328c27cb"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-drops/powershell7/official-v4-1280x800-RemoteFragmentButton.png",
+      "sha256": "c8ffe920b6165ade66b30cd76a73cebff8e22a84f00a7cba25c5bf0ffe9053a8"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-drops/powershell7/official-v4-1280x800-RemoteSellButton.png",
+      "sha256": "dcfaefa3db7436f46c3ee10b1f48b7ca1d9f37e2df6ec79a99b3610c3f04c4ee"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-drops/powershell7/official-v5-1366x768-MonsterDropListButton.png",
+      "sha256": "4fbba6ba0c127b19ea619961e1eb1362255c85da3ddfe25b5658cb15520a84b4"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-drops/powershell7/official-v5-1366x768-RemoteFragmentButton.png",
+      "sha256": "81f54cb7d8582c36740317f415d39fe49fdbc64c9d1b2e88c98e36d061be1a33"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-drops/powershell7/official-v5-1366x768-RemoteSellButton.png",
+      "sha256": "56dbf9d3d47a5177e4b6ee4c1121b4545a576d8e1d3a620f7e0c13006b904088"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-drops/powershell7/official-v6-1920x1080-MonsterDropListButton.png",
+      "sha256": "6d9fa8831c341dffc0485185181d26f75ecb57da3dce968591b8d5fd6e08c977"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-drops/powershell7/official-v6-1920x1080-RemoteFragmentButton.png",
+      "sha256": "97e6ea54eb2ad9d4f3cf1ee0feb16e06c2c37ab899549509f5402daeb796be45"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-drops/powershell7/official-v6-1920x1080-RemoteSellButton.png",
+      "sha256": "a7ed194cba464194e4a648179e7247fe8a18242a8a38352bc842dbb3caef98bb"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-drops/powershell7/official-v7-1024x768-MonsterDropListButton.png",
+      "sha256": "fab1237fcef0cc6cb2544492e167a1d181cbf90c0f01f1d78192fb9046366a70"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-drops/powershell7/official-v7-1024x768-RemoteFragmentButton.png",
+      "sha256": "1aeb3b836b750710ac6d1343a8d3f8f6b6c65d74fc5b18b2042994db480346db"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-drops/powershell7/official-v7-1024x768-RemoteSellButton.png",
+      "sha256": "7aee40b4ee51c150c5cad9038a921025f34b38d1852e3f73ba5bfbf1688a6a8c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-drops/powershell7/tested-runtime.json",
+      "sha256": "922672e7c5ce34e3eefdc5db2c546e60c9481eca27e900462942cf38bd360893"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-drops/README.md",
+      "sha256": "ced6d0279eb15e08c3d3f90e0529ca4be51d7e119b588e95232f5dfe8cbe9ba6"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-drops/registered-sources-before.json",
+      "sha256": "79fee450700c0d40d5c0ef7432ac70ad8fbc5566f78a5a51346b8ed7984ab8d6"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-drops/task-validation.log",
+      "sha256": "a0bf6a8e0738de35b2e36e703a81f351d36919785b1be660f5f7e53773a413a9"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-drops/windows-powershell/assertions.txt",
+      "sha256": "53953772d87d6c290951cafeb1d8cea16c6595879a89457c470ac9504edf07b2"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-drops/windows-powershell/coordinate-hits.txt",
+      "sha256": "590d31d3a14c9ac11cfa1f438f01fdc7f7281603b61b9c915ef40e8ab2c63682"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-drops/windows-powershell/legacy-packet-trace.txt",
+      "sha256": "3ed73818b96633cba7d2d5ce735bb5d015bc404577a6741f1b3a76c82536ec1c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-drops/windows-powershell/legacy-resources.txt",
+      "sha256": "47713d590a1b9214abdef7a0fc33d6c28a2b5a73a0cff9794375a5083020b498"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-drops/windows-powershell/metrics.json",
+      "sha256": "c9a483bebdeadd20a6f50b6e1d4f0194f481671f72cbf2da0cd17f07e2195fc9"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-drops/windows-powershell/official-packet-trace.txt",
+      "sha256": "3ed73818b96633cba7d2d5ce735bb5d015bc404577a6741f1b3a76c82536ec1c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-drops/windows-powershell/official-reentry-packet-trace.txt",
+      "sha256": "3ed73818b96633cba7d2d5ce735bb5d015bc404577a6741f1b3a76c82536ec1c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/item-drops/windows-powershell/tested-runtime.json",
+      "sha256": "fc6a40af33dc864890f2f58412ce8caf94c19cd006364dbdcb52a58a8995329d"
+    }
+  ]
+}

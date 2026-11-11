@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "E:\workspace\mir3-zircon-server\build\game-ui\Validate-OfficialUiAssets.py", line 217, in <module>
+    main()
+    ~~~~^^
+  File "E:\workspace\mir3-zircon-server\build\game-ui\Validate-OfficialUiAssets.py", line 207, in main
+    report = audit(args.root.resolve(), args.artifacts)
+  File "E:\workspace\mir3-zircon-server\build\game-ui\Validate-OfficialUiAssets.py", line 194, in audit
+    report = validate_contract(usage, manifest, selection, recipe, lambda p: (root / p).read_text(encoding='utf-8-sig'))
+  File "E:\workspace\mir3-zircon-server\build\game-ui\Validate-OfficialUiAssets.py", line 91, in validate_contract
+    require(a['sourceRole'] in base, 'Missing composition recipe: ' + role)
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\workspace\mir3-zircon-server\build\game-ui\Validate-OfficialUiAssets.py", line 18, in require
+    raise ValueError(reason)
+ValueError: Missing composition recipe: hud-command-frame

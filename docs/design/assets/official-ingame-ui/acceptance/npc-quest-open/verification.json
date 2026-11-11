@@ -1,0 +1,3746 @@
+{
+  "schemaVersion": 1,
+  "kind": "native-npc-independent-quest-open-and-service-concurrency-verification",
+  "checkedAtLocalDate": "2026-11-08",
+  "referenceResolution": [
+    1024,
+    768
+  ],
+  "releaseAccepted": false,
+  "results": {
+    "npcChecks": 33049,
+    "npcScenes": 3,
+    "npcCoordinateHits": 773,
+    "npcFrames": 154,
+    "npcResets": 83,
+    "identicalNativeNpcPixels": 2399935,
+    "independentQuestLayoutRows": {
+      "official": 210,
+      "official-reentry": 210
+    },
+    "questBuySellConcurrentRows": 28,
+    "loadedWarehouseChecks": [
+      "legacy|opening NPC respects active warehouse layout ownership; loaded={X=269,Y=0}; actual={X=533,Y=377}",
+      "official|opening NPC respects active warehouse layout ownership; loaded={X=220,Y=86}; actual={X=220,Y=86}",
+      "official-reentry|opening NPC respects active warehouse layout ownership; loaded={X=0,Y=86}; actual={X=0,Y=86}"
+    ],
+    "windowSetSummary": "Window-set integration: 165921 checks passed with real catalog package, eight registered participants plus original chat groups/input and six resolutions, identity/chat retention, actual GameScene resize/disposal, startup scene entry/reentry, clean/dirty rollback, render-fault input containment, loopback heartbeat and teardown. Two glyph-path GPU probes only; no full-scene/live-game/IME acceptance.",
+    "fullSceneSummary": "Full-scene offline integration: 180 checks passed; 3 real constructors, 17 presented frames, 7 explicit Device.Reset calls; 690512 identical panel pixels. Real legacy resources, synthetic user/map, four character pages, six resolutions, scene reentry, cell/chat/native-input retention. No login, server behavior, hardware device-loss, live IME or final visual acceptance.",
+    "pythonTests": 172
+  },
+  "sourceChanges": [
+    {
+      "path": "Client/Envir/GameUiOfficialV1WindowSet.cs",
+      "beforeSha256": "0474ee862dc3a71aebdafe66af798cd44c48b843c885560c6a0c8556196593b5",
+      "afterSha256": "3c550824a1182664f13f2cbc4f18d66210c1aac2ccce5c50d814fe497c120dff"
+    },
+    {
+      "path": "Client/Envir/GameUiNpcGroupLayout.cs",
+      "beforeSha256": "aecfec37cda3dde4547b83ecbd8bde80b671f8054b6dec84c10b71a493781fb5",
+      "afterSha256": "7d435aee6a3064f952d363b86ac856091176c6270b091f0728b1fd4144966c8d"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiNpcTests.cs",
+      "beforeSha256": "ee3c1302c32a330768e31d81c947c33f79608436cd5b155a347268d1501d499c",
+      "afterSha256": "01f85e6ccbb2843767041ceb476c578e8c143ea20f029a41815b6edfd81b0d3c"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiNpcQuestTests.cs",
+      "beforeSha256": "5b7f36812b54da3801b96f000e2e6973c74b05c32aaccb5b612569d6ac539b55",
+      "afterSha256": "74e0fbf348e72a9ec55c62fb36dfce2608acdfbca712720b5a2a2e6be5caee7e"
+    }
+  ],
+  "sourceHashes": [
+    {
+      "path": "Client/Envir/GameUiOfficialV1WindowSet.cs",
+      "sha256": "3c550824a1182664f13f2cbc4f18d66210c1aac2ccce5c50d814fe497c120dff"
+    },
+    {
+      "path": "Client/Envir/GameUiNpcGroupLayout.cs",
+      "sha256": "7d435aee6a3064f952d363b86ac856091176c6270b091f0728b1fd4144966c8d"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiNpcTests.cs",
+      "sha256": "01f85e6ccbb2843767041ceb476c578e8c143ea20f029a41815b6edfd81b0d3c"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiNpcQuestTests.cs",
+      "sha256": "74e0fbf348e72a9ec55c62fb36dfce2608acdfbca712720b5a2a2e6be5caee7e"
+    }
+  ],
+  "commands": [
+    {
+      "command": [
+        "D:/Program Files/Microsoft Visual Studio/2022/Enterprise/MSBuild/Current/Bin/MSBuild.exe",
+        "Client/Client.csproj",
+        "/t:Build",
+        "/p:Configuration=Debug",
+        "/p:Platform=AnyCPU",
+        "/v:minimal",
+        "/nologo"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/build-debug-v2.log",
+      "logSha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "command": [
+        "D:/Program Files/Microsoft Visual Studio/2022/Enterprise/MSBuild/Current/Bin/MSBuild.exe",
+        "Client/Client.csproj",
+        "/t:Build",
+        "/p:Configuration=Debug",
+        "/p:Platform=AnyCPU",
+        "/v:minimal",
+        "/nologo"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/build-debug-v3.log",
+      "logSha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "command": [
+        "D:/Program Files/Microsoft Visual Studio/2022/Enterprise/MSBuild/Current/Bin/MSBuild.exe",
+        "Client/Client.csproj",
+        "/t:Build",
+        "/p:Configuration=Debug",
+        "/p:Platform=AnyCPU",
+        "/v:minimal",
+        "/nologo"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/build-debug-v4.log",
+      "logSha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "command": [
+        "D:/Program Files/Microsoft Visual Studio/2022/Enterprise/MSBuild/Current/Bin/MSBuild.exe",
+        "Client/Client.csproj",
+        "/t:Build",
+        "/p:Configuration=Debug",
+        "/p:Platform=AnyCPU",
+        "/v:minimal",
+        "/nologo"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/build-debug.log",
+      "logSha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "command": [
+        "D:/Program Files/Microsoft Visual Studio/2022/Enterprise/MSBuild/Current/Bin/MSBuild.exe",
+        "Client/Client.csproj",
+        "/t:Build",
+        "/p:Configuration=Release",
+        "/p:Platform=AnyCPU",
+        "/v:minimal",
+        "/nologo"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/build-release.log",
+      "logSha256": "c9e24428be1e56c8408af17aacfea3413de3953bfe426d10eb768782f5005ebc"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiFullSceneTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/npc-quest-open-full-scene-20261108-v1"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/full-scene.log",
+      "logSha256": "0d85d4de7905eb608acc989200b5dfcc19842b35b62586889490caf606d4a988"
+    },
+    {
+      "command": [
+        "python",
+        "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/audit-history.py",
+        "--output",
+        "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/history-audit.json"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/history-audit.log",
+      "logSha256": "458eddf244a5af012aa5d503945025888b5a04a8437f905222297029eae8b8a0"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "build/game-ui/New-GameUiReleaseManifest.ps1",
+        "-ClientDirectory",
+        "E:/workspace/Debug/Client",
+        "-ResourceRoot",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/staged-resources",
+        "-OutputPath",
+        "E:/workspace/mir3-zircon-server/docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/release-manifest-debug.json"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/manifest-debug.log",
+      "logSha256": "c4c7d2e411a55f77902012f68567d933384b52b40f07c6f6f76d94c774eb6b82"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "build/game-ui/New-GameUiReleaseManifest.ps1",
+        "-ClientDirectory",
+        "E:/workspace/Release/Client",
+        "-ResourceRoot",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/staged-resources",
+        "-OutputPath",
+        "E:/workspace/mir3-zircon-server/docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/release-manifest-release.json"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/manifest-release.log",
+      "logSha256": "2853ba3129fd374a4e2c42e527c1bd9a2a848d3147edbc98a3284702ee8825e7"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiNpcTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/npc-open-v5.log",
+      "logSha256": "c4064373b1fa3bd60a228f14138bc504053384b0a75613bb69c42ef4c75e74f0"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiNpcTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/npc-open-v6.log",
+      "logSha256": "450940d560e24cd78b83d03a45e5abd3e9bc62dc43c1d10108c04c479f7eea42"
+    },
+    {
+      "command": [
+        "C:/Users/shuai/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests/game-ui",
+        "-p",
+        "test_*.py"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/python-tests.log",
+      "logSha256": "38b9c04ad55919d564d1a0ed73f42555dcb0e512d5f5fc60aa8607697805d77e"
+    },
+    {
+      "command": [
+        "python",
+        "build/game-ui/Validate-UiTasks.py"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/task-validation.log",
+      "logSha256": "90e3ddffa807ef19523e77855653984be659ff7ab47ec66f04d41348c4cb85b3"
+    },
+    {
+      "command": [
+        "python",
+        "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/check-whitespace.py"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/whitespace-final.log",
+      "logSha256": "64e2015c7bd6d9c5d404f5eabaa1b6df7688ffa2e09af9729a699664f920639b"
+    },
+    {
+      "command": [
+        "python",
+        "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/check-whitespace.py"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/whitespace.log",
+      "logSha256": "e0443564231bd9d5fd31fd0d4130b7f9a489b544754839cce6329f520aa51527"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiWindowSetTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/npc-quest-open-window-set-20261108-v1"
+      ],
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/window-set.log",
+      "logSha256": "7268516005f09c2a1283c4de8f08e4192f9df4b73af2b019795f9bab1c1bb222"
+    }
+  ],
+  "failedAttempts": [
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiNpcTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v1",
+        "-LegacyDataDirectory",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/staged-resources"
+      ],
+      "result": "fail",
+      "exitCode": 1,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/npc-open-v1.log",
+      "logSha256": "188a065ac2366acb20ef992c13e321d5484f641981a4966f1291e08475603851"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiNpcTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2"
+      ],
+      "result": "fail",
+      "exitCode": 1,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/npc-open-v2.log",
+      "logSha256": "e613716e50b3cce8db6c57037824e1d9dd4cb8acf5f662e312e04ed10c882a48"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiNpcTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3"
+      ],
+      "result": "fail",
+      "exitCode": 1,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/npc-open-v3.log",
+      "logSha256": "9036544a4de76da405b3278dde6856d43ad7b3a2f30084d3b10bd0fb0eff6abd"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "tests/Run-GameUiNpcTests.ps1",
+        "-PackagePath",
+        "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+        "-EvidenceDirectory",
+        "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4"
+      ],
+      "result": "fail",
+      "exitCode": 1,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/npc-open-v4.log",
+      "logSha256": "9036544a4de76da405b3278dde6856d43ad7b3a2f30084d3b10bd0fb0eff6abd"
+    }
+  ],
+  "builds": {
+    "debug": {
+      "buildId": "gameui-9bb1aaf5a628f1465d8b06d25c28fe84e160d7070a46e146207a8c275bc5e39e",
+      "client": {
+        "path": "Zircon.exe",
+        "length": 1367040,
+        "sha256": "f51202c2e91b5b9b549dbb0491279613d850cd7665438de61bda3c2bf24416b2"
+      }
+    },
+    "release": {
+      "buildId": "gameui-1ab9bc284d9e1fc6963a27e6d87213d1ec3f6a66e2acbae2d1968539ecd2b738",
+      "client": {
+        "path": "Zircon.exe",
+        "length": 1263104,
+        "sha256": "be8f10863963de54428bf50b83da2ea6dc056cd14a2cb51ad630a91a3be08fd7"
+      }
+    }
+  },
+  "package": {
+    "path": "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/zl/OfficialV1.Zl",
+    "frameCount": 94,
+    "sha256": "dd45cbf51d976a69d28269ee0d27a985def1ee1693cab2b509b74ae347a880a4"
+  },
+  "candidate": {
+    "path": "E:/workspace/mir3-ui-work/warehouse-assets-20261108-v1/zl-v2/OfficialV1.Zl",
+    "frameCount": 1,
+    "sha256": "471169dfa093b521f3c700c5a993e4e763aa17a45b2e16f440d961c0c7bf4cec"
+  },
+  "sourcePlanSha256": "f8c0a002b3821fabb54993792c354c4eff35eec51f9cfdc418535017c13069e9",
+  "finalValidation": {
+    "npc": "npc-open-v6.log",
+    "debug": "build-debug-v4.log",
+    "release": "build-release.log",
+    "python": "python-tests.log",
+    "windowSet": "window-set.log",
+    "fullScene": "full-scene.log"
+  },
+  "limitations": [
+    "OfficialV1 only; native quest/NPC/secondary styles, original controls, sizes, visibility and packets retained. Legacy remains default; RuntimeReady=false, productionBindingAllowed=false, releaseAccepted=false.",
+    "Quest is independently packed like storage/inventory. Bodies may overlap when full windows cannot fit; default reflow preserves complete bounds and reachable close strips. Paired service bodies remain disjoint.",
+    "420 fixed layouts cover 15 response types, two opening orders, six unique resolutions and return to 1024x768 over two candidate scene entries. 28 rows contain actual visible buy/sell/quest windows.",
+    "Synthetic matrix runs under a test-only preference write suppression scope; it neither positions nor raises windows. Production visibility-preference semantics are not newly accepted by this report.",
+    "Reentry warehouse assertion compares the actual loaded position before opening with the position after opening; it no longer assumes the original default after earlier user-state fixtures.",
+    "Arbitrary foreground switching, all seventeen native window lifecycles and all fonts/paragraph shapes remain pending. Hardware device-loss boundary remains unclosed.",
+    "No real server, real service/storage transactions, live IME, target hardware, final visual or release/rollback acceptance. No commit, push or deployment. Official installation remains read-only."
+  ],
+  "evidenceHashes": [
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/legacy-card.png",
+      "sha256": "bbf533c95e714eb1b384a34ed7dde97083e54d67bca961844f3c9e9c8f2882d6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/legacy-goods-bottom.png",
+      "sha256": "923b0c68e8cf7a6a3c51de563999d0f24bb99b7a8c4382bb02c858b5637a435e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/legacy-goods-quantity.png",
+      "sha256": "203601bf8d8d27d816c2fce39ce93c2fe096e8103c81b8be023e9b3eae45bfc6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/legacy-goods-top.png",
+      "sha256": "771fbf5408ff1edc726b6888249f3c10491bc553f52a0e774199bac882bf60db"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/legacy-refine-retrieve.png",
+      "sha256": "1a98fdf9dc1b50c58a7c846b77ac00fd96ddd646f28e968a9d6b4c98663ce018"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/legacy-refine.png",
+      "sha256": "0743781638dc75bd0e871ff69a221e7c7cffdabc666ac4ed021bac0a0cae2551"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/legacy-repair-full.png",
+      "sha256": "c7733722ac20d86135c879e46aefd6cd530d80275fe45902c5ebab3fa6065379"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/legacy-reset-1024x768.png",
+      "sha256": "718e52a0df1079d77fab5dff0823b58b2d8d98cb7c5d319a4fb36d5893eaca4d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/legacy-reset-1280x800.png",
+      "sha256": "6ba4420ef13f0c9e3e11e94b0b510f0ef22e92014dd02cadc2da81c2e20918bf"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/legacy-reset-1366x768.png",
+      "sha256": "9307abd4893bee4b08268e04f81e8f8889f09be289f4703c0dd332384e396b42"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/legacy-reset-1440x900.png",
+      "sha256": "5d7a6e9c1c15173e85b1c06b094a5773c037c7c3e7d270d57818628ed4e3abdd"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/legacy-reset-1600x900.png",
+      "sha256": "0270ea3175f839c48f352f53a0057f3c9366895a424af520eddf7709fb8da65f"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/legacy-reset-1920x1080.png",
+      "sha256": "b024b69683e93b115d6d3973a578d2ea688b5090fe5ce983f352af2f1b7d50d3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/legacy-resources.txt",
+      "sha256": "47713d590a1b9214abdef7a0fc33d6c28a2b5a73a0cff9794375a5083020b498"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/legacy-sell-full.png",
+      "sha256": "0dbe4ebc1f380813c8f7b50ad7c1ebfc22265b86292876be0df25d41f52749e9"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/legacy-trace.txt",
+      "sha256": "91c82d2086833279a797ee32cca8872a03d8474feee7557aab631281914e6b8a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/legacy-wrapped-option.png",
+      "sha256": "ff0659f55ad69307331223cc4612065bd036ee8b8e2442c86a2c9a6a470714a3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-card.png",
+      "sha256": "0f2b78045205403779ab7c33e75a3c5f834e7a635c67aefc7e77d52e3dd92487"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-goods-bottom.png",
+      "sha256": "28126a2c308d877e5b8a12e34af35324a1f9eff570a94e0eb96494ae792d4210"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-goods-quantity.png",
+      "sha256": "64e83eca43cb5f9e009cbc84573a4d10311872e0c34954085fa3c47b35867bab"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-goods-top.png",
+      "sha256": "1699c23697fbe693c0e986963bc605e6f38fe5a8b959b1371e77ee07adfd2081"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-group-AccessoryRefineLevel.png",
+      "sha256": "511685d5f72355ffa80707ab7e2c07bbd65c920288002d9983fec83089df377c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-group-AccessoryRefineUpgrade.png",
+      "sha256": "63b1bdef1010516c8f19fa3e5a5d28ba164537649f385d19b8e5efab3ac798b6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-group-AccessoryReset.png",
+      "sha256": "6ba621631c614f06fd61f72babf77fe39e64123890905dcaa2349ebce2e76107"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-group-BuySell.png",
+      "sha256": "142cdcfa45f401a54b6c88c76a62ffb5bbdac26ba67c21d65c6a5f10179b6a09"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-group-CompanionManage.png",
+      "sha256": "edbceebdf415a23af0c441707c691541238d6662701ab9abde8b0348c7a8d763"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-group-ItemFragment.png",
+      "sha256": "dd3da9296f291dcdae2bb56243fc8e4ab25f393e3ef66c152ae9911d10696497"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-group-layouts.txt",
+      "sha256": "b06fed2e5755dcb5167a6c406c40715e7dd760744caa4b99081dd2544430f3ae"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-group-MasterRefine.png",
+      "sha256": "4e5a4349ac66f1a26bfff3466f9b775000a1544f7b0f5906dd2854dfe9a14745"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-group-None.png",
+      "sha256": "202213e86c15f790407a01b5aa5f8ed438b7ba5b3bef81989e1c6226d3aff5f6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-group-Refine.png",
+      "sha256": "2cd79cf36098f1a754f73a5b9facf6de858eddf9576ada426d751cd41c8f2390"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-group-RefinementStone.png",
+      "sha256": "0aac443250dea1e4eb81631823b40babf9d0c7b9075f02b4dcaabc9ea6181614"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-group-RefineRetrieve.png",
+      "sha256": "78e0361ac4176f016f81fc972264e3379b851a354d8218bffaabd681d9b04fd6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-group-Repair.png",
+      "sha256": "1abd5747f1546bbfb6d22d361ebd006647d541ed2d1084df30a6123122850d13"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-group-reset-BuySell-1024x768-14.png",
+      "sha256": "142cdcfa45f401a54b6c88c76a62ffb5bbdac26ba67c21d65c6a5f10179b6a09"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-group-reset-BuySell-1024x768-21.png",
+      "sha256": "142cdcfa45f401a54b6c88c76a62ffb5bbdac26ba67c21d65c6a5f10179b6a09"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-group-reset-BuySell-1280x800-17.png",
+      "sha256": "60019e050f20e88699723a239ba984c2715869bb53234a3ffe11f8d808b7a08d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-group-reset-BuySell-1366x768-16.png",
+      "sha256": "7289d4f835cab8517e0d113a30c8e091dc7988dae63e91c4becb71b19ade0b44"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-group-reset-BuySell-1440x900-18.png",
+      "sha256": "ec1c0e4905e7208a47479644b649721e0a5233777fbf746931ebbe962b6bf559"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-group-reset-BuySell-1600x900-19.png",
+      "sha256": "b5097aaf23ef40a484410d4bff3cecedaa706b1c5388b5965522abd7643341fc"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-group-reset-BuySell-1920x1080-20.png",
+      "sha256": "66b8bd38abd4726bc79dd9ae41a08cd4b4bb39419c5aa26c0d24c0b338036bda"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-group-reset-None-1024x768-12.png",
+      "sha256": "e137ea4e229f1f91aeefcd701cbb518c3e8d9ef2340a83f3d3187e3de21acd1d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-group-reset-None-1024x768-5.png",
+      "sha256": "a0aff43117abb5d71faf7019ce997b3d06ffbf20f1929d620c769de8900da7e6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-group-reset-None-1280x800-8.png",
+      "sha256": "d44339d4e6d8db1179e29f936dc31d23021ecea09d81e954b9d2f2950ceec51b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-group-reset-None-1366x768-7.png",
+      "sha256": "1ad3fe071bb79a43be8744953741e2cd9d0d5e7e1ddd5d0db0f8615de8c00e6a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-group-reset-None-1440x900-9.png",
+      "sha256": "087ad7ed609b972654f1fe47987ad95a022b0b841acdc1621c5d6c881684c5b0"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-group-reset-None-1600x900-10.png",
+      "sha256": "815c2db150346713786712f21505a8b9138d874503b738b20504d241aa86d30e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-group-reset-None-1920x1080-11.png",
+      "sha256": "6c387b1c6ea0334ce8509fca74a8b01484547172e25c6350f06d77e60ba519ac"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-group-WeaponCraft.png",
+      "sha256": "c39bdb95bc0e9717d30a3222fddef464c2abb744659f0cb1f61a201f7b626603"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-group-WeaponReset.png",
+      "sha256": "744cd9c5e3d8b46162bc5c87bc8d34e479603d6ceb7f3e750f31a967102a434d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-group-WeddingRing.png",
+      "sha256": "63098f3342fcab1bfa62c643beb0e976661bc31aa85fbc49877fa1f4c4869ae9"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-long-card-1024x768.png",
+      "sha256": "b54dbb90ee816caf7e8ce88e8938e58db9699ca746ac56619e537aabd29317d0"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-long-card-1280x800.png",
+      "sha256": "9af5d5190590baef30643a68935da1600322be27fe22afbcdefb99835486360a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-long-card-1366x768.png",
+      "sha256": "b55ab3338eb65b583ca33cfc58a937c5842bb00a363738de01796dd6b1d74b66"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-long-card-1440x900.png",
+      "sha256": "665a37a21a65083e4d3c0980408c08764ce82bf01a783998b3c71a108f3d5266"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-long-card-1600x900.png",
+      "sha256": "792dbd50a93b47560b02c8c1bd2a0d8aec1f8db6e7357e88cdc4c0cf9dd38d18"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-long-card-1920x1080.png",
+      "sha256": "343c8ce461c764e57c1b570bcd13674141d2b621d46778cc33e407c9ab477f7f"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-long-card-bottom.png",
+      "sha256": "b54dbb90ee816caf7e8ce88e8938e58db9699ca746ac56619e537aabd29317d0"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-long-card-open-ms.txt",
+      "sha256": "5313e5bf17148de844ff74be3663d47c6e361ca469b30a36337701233c89a15e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-long-card-partial-line.png",
+      "sha256": "382cf651c1bf649d422fcffa975b7021cb7a1485ab692cdf36fe17fb772cb58e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-long-card-top.png",
+      "sha256": "d154b3c83f92432d87fe900abb6fbb975094d02a2d6ed3fa6af781a6966f3b3d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-long-text-reference.png",
+      "sha256": "63ea7a263505137352f230f85a422f09e91ab97d20ca985316bf3e2865a92f02"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-long-text-texture.png",
+      "sha256": "63ea7a263505137352f230f85a422f09e91ab97d20ca985316bf3e2865a92f02"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-paragraph-0-bottom-long-text-reference.png",
+      "sha256": "540cf8ddf77fd1f66ffcc649f94881940f350239284b80e3216d05b32eadb668"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-paragraph-0-bottom-long-text-texture.png",
+      "sha256": "540cf8ddf77fd1f66ffcc649f94881940f350239284b80e3216d05b32eadb668"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-paragraph-0-top-long-text-reference.png",
+      "sha256": "540cf8ddf77fd1f66ffcc649f94881940f350239284b80e3216d05b32eadb668"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-paragraph-0-top-long-text-texture.png",
+      "sha256": "540cf8ddf77fd1f66ffcc649f94881940f350239284b80e3216d05b32eadb668"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-paragraph-1-bottom-long-text-reference.png",
+      "sha256": "3c877d05e4761b12e3f859ddcd81930155c8b2679c4142c6764fa24ed2e61bf1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-paragraph-1-bottom-long-text-texture.png",
+      "sha256": "3c877d05e4761b12e3f859ddcd81930155c8b2679c4142c6764fa24ed2e61bf1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-paragraph-1-top-long-text-reference.png",
+      "sha256": "3c877d05e4761b12e3f859ddcd81930155c8b2679c4142c6764fa24ed2e61bf1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-paragraph-1-top-long-text-texture.png",
+      "sha256": "3c877d05e4761b12e3f859ddcd81930155c8b2679c4142c6764fa24ed2e61bf1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-paragraph-2-bottom-long-text-reference.png",
+      "sha256": "76f9761631c924f05ee0b940de90650b0fdd8f6aafc690b16f6c44256a4d29c5"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-paragraph-2-bottom-long-text-texture.png",
+      "sha256": "76f9761631c924f05ee0b940de90650b0fdd8f6aafc690b16f6c44256a4d29c5"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-paragraph-2-top-long-text-reference.png",
+      "sha256": "fbd146c4875677e71b4aea14983e602bc6b6a30d7afec1da3b69ae006f9dd385"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-paragraph-2-top-long-text-texture.png",
+      "sha256": "fbd146c4875677e71b4aea14983e602bc6b6a30d7afec1da3b69ae006f9dd385"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-paragraph-3-bottom-long-text-reference.png",
+      "sha256": "bea194a346d02dcd2ef465ee055452165c9160e1e376cb9f231bded2a48bfb20"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-paragraph-3-bottom-long-text-texture.png",
+      "sha256": "bea194a346d02dcd2ef465ee055452165c9160e1e376cb9f231bded2a48bfb20"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-paragraph-3-top-long-text-reference.png",
+      "sha256": "bea194a346d02dcd2ef465ee055452165c9160e1e376cb9f231bded2a48bfb20"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-paragraph-3-top-long-text-texture.png",
+      "sha256": "bea194a346d02dcd2ef465ee055452165c9160e1e376cb9f231bded2a48bfb20"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-paragraph-4-bottom-long-text-reference.png",
+      "sha256": "52f16e5b87e95e1883fbb66b55b65a675e943facf62287f7e2ed0ad6ad9ec5a7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-paragraph-4-bottom-long-text-texture.png",
+      "sha256": "52f16e5b87e95e1883fbb66b55b65a675e943facf62287f7e2ed0ad6ad9ec5a7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-paragraph-4-top-long-text-reference.png",
+      "sha256": "52f16e5b87e95e1883fbb66b55b65a675e943facf62287f7e2ed0ad6ad9ec5a7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-paragraph-4-top-long-text-texture.png",
+      "sha256": "52f16e5b87e95e1883fbb66b55b65a675e943facf62287f7e2ed0ad6ad9ec5a7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-paragraph-native-geometry.txt",
+      "sha256": "685fc10cc9db4dc20dd5ac1cc8c20f1ce90e974bf7f7b658e4174573550bf14b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-paragraph-regions-0-bottom.png",
+      "sha256": "522ac7a3ff278d1d1eabe731a730c4392431862b7daa998893b20c067325f96f"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-paragraph-regions-0-top.png",
+      "sha256": "522ac7a3ff278d1d1eabe731a730c4392431862b7daa998893b20c067325f96f"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-paragraph-regions-1-bottom.png",
+      "sha256": "bcef7cb1dc99ba1af8a5d985e4456cdc0d98f7ff2781316c753417660b09cec5"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-paragraph-regions-1-top.png",
+      "sha256": "bcef7cb1dc99ba1af8a5d985e4456cdc0d98f7ff2781316c753417660b09cec5"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-paragraph-regions-2-bottom.png",
+      "sha256": "cae9dc7b5665b8b1ca018b6744b1f83560cc9a6a65f361c288cfcf58e8021237"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-paragraph-regions-2-top.png",
+      "sha256": "81488e09d89be939762cd891d237a74478a856990436f941d1795b4b173990f2"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-paragraph-regions-3-bottom.png",
+      "sha256": "4d8fc3d5d8203756594ae1ee9c0b25f9221ce50947baa426b78d97f2d28da171"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-paragraph-regions-3-top.png",
+      "sha256": "4d8fc3d5d8203756594ae1ee9c0b25f9221ce50947baa426b78d97f2d28da171"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-paragraph-regions-4-bottom.png",
+      "sha256": "06020eff21eccab57697bc154f4ba1fcc6eb491a9dbdafe25d69591ff1c737d3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-paragraph-regions-4-top.png",
+      "sha256": "06020eff21eccab57697bc154f4ba1fcc6eb491a9dbdafe25d69591ff1c737d3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-partial-line-long-text-reference.png",
+      "sha256": "966bb5e8cc0c4cc6428f93a50e5c86a2c4db0e33f84f4ecd89f8ac4913ad16aa"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-partial-line-long-text-texture.png",
+      "sha256": "966bb5e8cc0c4cc6428f93a50e5c86a2c4db0e33f84f4ecd89f8ac4913ad16aa"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-refine-retrieve.png",
+      "sha256": "3f7eb9a9f7340ceb814a555debee9cb55c1d0754284b4b0971d010da44cf59f3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-refine.png",
+      "sha256": "0777dc5bb26557845515406d9542c476eafe8579336d2f2105d4d7b0ca209a79"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-repair-full.png",
+      "sha256": "88db572245fc19774293834e687fa1b377f9a0f147e44ef8ff2dde6fd2211b31"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-reset-1024x768.png",
+      "sha256": "b23ebfbbf33922fe2f863509032d879ddf3d14bd569d57beadb417a02e0a15b8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-reset-1280x800.png",
+      "sha256": "d1ec9b51d29b2e5931cb48055f57c4e2e0229dc5d8ed2a950e5508d6f5773f5a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-reset-1366x768.png",
+      "sha256": "d7cea0b802505a77da7e495fa8dc1b092940b3088212f9f03b19d44cd9b3a4d2"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-reset-1440x900.png",
+      "sha256": "dfbceb3b8cfc600a6f8b707206f4b594a37417ad53a2b4628e2a787c992e4891"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-reset-1600x900.png",
+      "sha256": "217cce3ffb4be7a12b8b9dd80e29641a7c4d49251b2c6a3820f6c110beff3122"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-reset-1920x1080.png",
+      "sha256": "caf615323b22db269fd245c591d2fa2e9521f25e8fcadcf8f81f6d84bbd7406c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-sell-full.png",
+      "sha256": "fa4fb302ec719470b85aef401e43c5d5fb79a86a6e45e24ed08615e04705492a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v2/official-wrapped-option.png",
+      "sha256": "d26978a42c5b6bc4e2d0b20a25f3a364e07f877494efb454fb43c77ce64008d9"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/legacy-card.png",
+      "sha256": "bbf533c95e714eb1b384a34ed7dde97083e54d67bca961844f3c9e9c8f2882d6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/legacy-goods-bottom.png",
+      "sha256": "923b0c68e8cf7a6a3c51de563999d0f24bb99b7a8c4382bb02c858b5637a435e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/legacy-goods-quantity.png",
+      "sha256": "203601bf8d8d27d816c2fce39ce93c2fe096e8103c81b8be023e9b3eae45bfc6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/legacy-goods-top.png",
+      "sha256": "771fbf5408ff1edc726b6888249f3c10491bc553f52a0e774199bac882bf60db"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/legacy-refine-retrieve.png",
+      "sha256": "1a98fdf9dc1b50c58a7c846b77ac00fd96ddd646f28e968a9d6b4c98663ce018"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/legacy-refine.png",
+      "sha256": "0743781638dc75bd0e871ff69a221e7c7cffdabc666ac4ed021bac0a0cae2551"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/legacy-repair-full.png",
+      "sha256": "c7733722ac20d86135c879e46aefd6cd530d80275fe45902c5ebab3fa6065379"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/legacy-reset-1024x768.png",
+      "sha256": "718e52a0df1079d77fab5dff0823b58b2d8d98cb7c5d319a4fb36d5893eaca4d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/legacy-reset-1280x800.png",
+      "sha256": "6ba4420ef13f0c9e3e11e94b0b510f0ef22e92014dd02cadc2da81c2e20918bf"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/legacy-reset-1366x768.png",
+      "sha256": "9307abd4893bee4b08268e04f81e8f8889f09be289f4703c0dd332384e396b42"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/legacy-reset-1440x900.png",
+      "sha256": "5d7a6e9c1c15173e85b1c06b094a5773c037c7c3e7d270d57818628ed4e3abdd"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/legacy-reset-1600x900.png",
+      "sha256": "0270ea3175f839c48f352f53a0057f3c9366895a424af520eddf7709fb8da65f"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/legacy-reset-1920x1080.png",
+      "sha256": "b024b69683e93b115d6d3973a578d2ea688b5090fe5ce983f352af2f1b7d50d3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/legacy-resources.txt",
+      "sha256": "47713d590a1b9214abdef7a0fc33d6c28a2b5a73a0cff9794375a5083020b498"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/legacy-sell-full.png",
+      "sha256": "0dbe4ebc1f380813c8f7b50ad7c1ebfc22265b86292876be0df25d41f52749e9"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/legacy-trace.txt",
+      "sha256": "91c82d2086833279a797ee32cca8872a03d8474feee7557aab631281914e6b8a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/legacy-wrapped-option.png",
+      "sha256": "ff0659f55ad69307331223cc4612065bd036ee8b8e2442c86a2c9a6a470714a3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-card.png",
+      "sha256": "0f2b78045205403779ab7c33e75a3c5f834e7a635c67aefc7e77d52e3dd92487"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-goods-bottom.png",
+      "sha256": "88ffdede02fbf66d0cf8760c3b4540a9c0fe96c2c41c35924825a7b2075b5d91"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-goods-quantity.png",
+      "sha256": "64e83eca43cb5f9e009cbc84573a4d10311872e0c34954085fa3c47b35867bab"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-goods-top.png",
+      "sha256": "3776f583811604303e1f46b1cdf1b1539bde2a123418be51fe2b7bdb4e0dc513"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-group-AccessoryRefineLevel.png",
+      "sha256": "511685d5f72355ffa80707ab7e2c07bbd65c920288002d9983fec83089df377c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-group-AccessoryRefineUpgrade.png",
+      "sha256": "63b1bdef1010516c8f19fa3e5a5d28ba164537649f385d19b8e5efab3ac798b6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-group-AccessoryReset.png",
+      "sha256": "6ba621631c614f06fd61f72babf77fe39e64123890905dcaa2349ebce2e76107"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-group-BuySell.png",
+      "sha256": "142cdcfa45f401a54b6c88c76a62ffb5bbdac26ba67c21d65c6a5f10179b6a09"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-group-CompanionManage.png",
+      "sha256": "edbceebdf415a23af0c441707c691541238d6662701ab9abde8b0348c7a8d763"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-group-ItemFragment.png",
+      "sha256": "dd3da9296f291dcdae2bb56243fc8e4ab25f393e3ef66c152ae9911d10696497"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-group-layouts.txt",
+      "sha256": "f72e409c4e74ebc6c9af92fcc542d84935fe86b6016e1001a0f5d14ef7b99e58"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-group-MasterRefine.png",
+      "sha256": "4e5a4349ac66f1a26bfff3466f9b775000a1544f7b0f5906dd2854dfe9a14745"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-group-None.png",
+      "sha256": "202213e86c15f790407a01b5aa5f8ed438b7ba5b3bef81989e1c6226d3aff5f6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-group-Refine.png",
+      "sha256": "2cd79cf36098f1a754f73a5b9facf6de858eddf9576ada426d751cd41c8f2390"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-group-RefinementStone.png",
+      "sha256": "0aac443250dea1e4eb81631823b40babf9d0c7b9075f02b4dcaabc9ea6181614"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-group-RefineRetrieve.png",
+      "sha256": "78e0361ac4176f016f81fc972264e3379b851a354d8218bffaabd681d9b04fd6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-group-Repair.png",
+      "sha256": "1abd5747f1546bbfb6d22d361ebd006647d541ed2d1084df30a6123122850d13"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-group-reset-BuySell-1024x768-14.png",
+      "sha256": "142cdcfa45f401a54b6c88c76a62ffb5bbdac26ba67c21d65c6a5f10179b6a09"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-group-reset-BuySell-1024x768-21.png",
+      "sha256": "142cdcfa45f401a54b6c88c76a62ffb5bbdac26ba67c21d65c6a5f10179b6a09"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-group-reset-BuySell-1280x800-17.png",
+      "sha256": "60019e050f20e88699723a239ba984c2715869bb53234a3ffe11f8d808b7a08d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-group-reset-BuySell-1366x768-16.png",
+      "sha256": "7289d4f835cab8517e0d113a30c8e091dc7988dae63e91c4becb71b19ade0b44"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-group-reset-BuySell-1440x900-18.png",
+      "sha256": "ec1c0e4905e7208a47479644b649721e0a5233777fbf746931ebbe962b6bf559"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-group-reset-BuySell-1600x900-19.png",
+      "sha256": "b5097aaf23ef40a484410d4bff3cecedaa706b1c5388b5965522abd7643341fc"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-group-reset-BuySell-1920x1080-20.png",
+      "sha256": "66b8bd38abd4726bc79dd9ae41a08cd4b4bb39419c5aa26c0d24c0b338036bda"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-group-reset-None-1024x768-12.png",
+      "sha256": "a0aff43117abb5d71faf7019ce997b3d06ffbf20f1929d620c769de8900da7e6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-group-reset-None-1024x768-5.png",
+      "sha256": "a0aff43117abb5d71faf7019ce997b3d06ffbf20f1929d620c769de8900da7e6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-group-reset-None-1280x800-8.png",
+      "sha256": "d44339d4e6d8db1179e29f936dc31d23021ecea09d81e954b9d2f2950ceec51b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-group-reset-None-1366x768-7.png",
+      "sha256": "1ad3fe071bb79a43be8744953741e2cd9d0d5e7e1ddd5d0db0f8615de8c00e6a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-group-reset-None-1440x900-9.png",
+      "sha256": "087ad7ed609b972654f1fe47987ad95a022b0b841acdc1621c5d6c881684c5b0"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-group-reset-None-1600x900-10.png",
+      "sha256": "3368819317f8ad8b4bea7d59fc190ca6fc17b204ee36896661bcb69891636c44"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-group-reset-None-1920x1080-11.png",
+      "sha256": "6c387b1c6ea0334ce8509fca74a8b01484547172e25c6350f06d77e60ba519ac"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-group-WeaponCraft.png",
+      "sha256": "c39bdb95bc0e9717d30a3222fddef464c2abb744659f0cb1f61a201f7b626603"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-group-WeaponReset.png",
+      "sha256": "744cd9c5e3d8b46162bc5c87bc8d34e479603d6ceb7f3e750f31a967102a434d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-group-WeddingRing.png",
+      "sha256": "63098f3342fcab1bfa62c643beb0e976661bc31aa85fbc49877fa1f4c4869ae9"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-long-card-1024x768.png",
+      "sha256": "b54dbb90ee816caf7e8ce88e8938e58db9699ca746ac56619e537aabd29317d0"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-long-card-1280x800.png",
+      "sha256": "9af5d5190590baef30643a68935da1600322be27fe22afbcdefb99835486360a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-long-card-1366x768.png",
+      "sha256": "b55ab3338eb65b583ca33cfc58a937c5842bb00a363738de01796dd6b1d74b66"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-long-card-1440x900.png",
+      "sha256": "665a37a21a65083e4d3c0980408c08764ce82bf01a783998b3c71a108f3d5266"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-long-card-1600x900.png",
+      "sha256": "792dbd50a93b47560b02c8c1bd2a0d8aec1f8db6e7357e88cdc4c0cf9dd38d18"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-long-card-1920x1080.png",
+      "sha256": "343c8ce461c764e57c1b570bcd13674141d2b621d46778cc33e407c9ab477f7f"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-long-card-bottom.png",
+      "sha256": "b54dbb90ee816caf7e8ce88e8938e58db9699ca746ac56619e537aabd29317d0"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-long-card-open-ms.txt",
+      "sha256": "82887006d04d939ffca870bc268a940df6cf01dbdf12e228ccf476d07d7c9424"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-long-card-partial-line.png",
+      "sha256": "382cf651c1bf649d422fcffa975b7021cb7a1485ab692cdf36fe17fb772cb58e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-long-card-top.png",
+      "sha256": "d154b3c83f92432d87fe900abb6fbb975094d02a2d6ed3fa6af781a6966f3b3d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-long-text-reference.png",
+      "sha256": "63ea7a263505137352f230f85a422f09e91ab97d20ca985316bf3e2865a92f02"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-long-text-texture.png",
+      "sha256": "63ea7a263505137352f230f85a422f09e91ab97d20ca985316bf3e2865a92f02"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-paragraph-0-bottom-long-text-reference.png",
+      "sha256": "540cf8ddf77fd1f66ffcc649f94881940f350239284b80e3216d05b32eadb668"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-paragraph-0-bottom-long-text-texture.png",
+      "sha256": "540cf8ddf77fd1f66ffcc649f94881940f350239284b80e3216d05b32eadb668"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-paragraph-0-top-long-text-reference.png",
+      "sha256": "540cf8ddf77fd1f66ffcc649f94881940f350239284b80e3216d05b32eadb668"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-paragraph-0-top-long-text-texture.png",
+      "sha256": "540cf8ddf77fd1f66ffcc649f94881940f350239284b80e3216d05b32eadb668"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-paragraph-1-bottom-long-text-reference.png",
+      "sha256": "3c877d05e4761b12e3f859ddcd81930155c8b2679c4142c6764fa24ed2e61bf1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-paragraph-1-bottom-long-text-texture.png",
+      "sha256": "3c877d05e4761b12e3f859ddcd81930155c8b2679c4142c6764fa24ed2e61bf1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-paragraph-1-top-long-text-reference.png",
+      "sha256": "3c877d05e4761b12e3f859ddcd81930155c8b2679c4142c6764fa24ed2e61bf1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-paragraph-1-top-long-text-texture.png",
+      "sha256": "3c877d05e4761b12e3f859ddcd81930155c8b2679c4142c6764fa24ed2e61bf1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-paragraph-2-bottom-long-text-reference.png",
+      "sha256": "76f9761631c924f05ee0b940de90650b0fdd8f6aafc690b16f6c44256a4d29c5"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-paragraph-2-bottom-long-text-texture.png",
+      "sha256": "76f9761631c924f05ee0b940de90650b0fdd8f6aafc690b16f6c44256a4d29c5"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-paragraph-2-top-long-text-reference.png",
+      "sha256": "fbd146c4875677e71b4aea14983e602bc6b6a30d7afec1da3b69ae006f9dd385"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-paragraph-2-top-long-text-texture.png",
+      "sha256": "fbd146c4875677e71b4aea14983e602bc6b6a30d7afec1da3b69ae006f9dd385"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-paragraph-3-bottom-long-text-reference.png",
+      "sha256": "bea194a346d02dcd2ef465ee055452165c9160e1e376cb9f231bded2a48bfb20"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-paragraph-3-bottom-long-text-texture.png",
+      "sha256": "bea194a346d02dcd2ef465ee055452165c9160e1e376cb9f231bded2a48bfb20"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-paragraph-3-top-long-text-reference.png",
+      "sha256": "bea194a346d02dcd2ef465ee055452165c9160e1e376cb9f231bded2a48bfb20"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-paragraph-3-top-long-text-texture.png",
+      "sha256": "bea194a346d02dcd2ef465ee055452165c9160e1e376cb9f231bded2a48bfb20"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-paragraph-4-bottom-long-text-reference.png",
+      "sha256": "52f16e5b87e95e1883fbb66b55b65a675e943facf62287f7e2ed0ad6ad9ec5a7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-paragraph-4-bottom-long-text-texture.png",
+      "sha256": "52f16e5b87e95e1883fbb66b55b65a675e943facf62287f7e2ed0ad6ad9ec5a7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-paragraph-4-top-long-text-reference.png",
+      "sha256": "52f16e5b87e95e1883fbb66b55b65a675e943facf62287f7e2ed0ad6ad9ec5a7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-paragraph-4-top-long-text-texture.png",
+      "sha256": "52f16e5b87e95e1883fbb66b55b65a675e943facf62287f7e2ed0ad6ad9ec5a7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-paragraph-native-geometry.txt",
+      "sha256": "685fc10cc9db4dc20dd5ac1cc8c20f1ce90e974bf7f7b658e4174573550bf14b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-paragraph-regions-0-bottom.png",
+      "sha256": "0752888ee514617d8adc950b02b491bdcccd3dde61df703e4b109e17f04563d3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-paragraph-regions-0-top.png",
+      "sha256": "0752888ee514617d8adc950b02b491bdcccd3dde61df703e4b109e17f04563d3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-paragraph-regions-1-bottom.png",
+      "sha256": "01232ed4471cbd70cc61d322947b99f432f82081dc97c4cfcd258c0e69a4c56c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-paragraph-regions-1-top.png",
+      "sha256": "6cf4141602db2109c411ac89089dece740825c6eec308a0ae1920fea0f02166b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-paragraph-regions-2-bottom.png",
+      "sha256": "cae9dc7b5665b8b1ca018b6744b1f83560cc9a6a65f361c288cfcf58e8021237"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-paragraph-regions-2-top.png",
+      "sha256": "81488e09d89be939762cd891d237a74478a856990436f941d1795b4b173990f2"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-paragraph-regions-3-bottom.png",
+      "sha256": "4d8fc3d5d8203756594ae1ee9c0b25f9221ce50947baa426b78d97f2d28da171"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-paragraph-regions-3-top.png",
+      "sha256": "4d8fc3d5d8203756594ae1ee9c0b25f9221ce50947baa426b78d97f2d28da171"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-paragraph-regions-4-bottom.png",
+      "sha256": "06020eff21eccab57697bc154f4ba1fcc6eb491a9dbdafe25d69591ff1c737d3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-paragraph-regions-4-top.png",
+      "sha256": "06020eff21eccab57697bc154f4ba1fcc6eb491a9dbdafe25d69591ff1c737d3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-partial-line-long-text-reference.png",
+      "sha256": "966bb5e8cc0c4cc6428f93a50e5c86a2c4db0e33f84f4ecd89f8ac4913ad16aa"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-partial-line-long-text-texture.png",
+      "sha256": "966bb5e8cc0c4cc6428f93a50e5c86a2c4db0e33f84f4ecd89f8ac4913ad16aa"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-quest-open-layouts.txt",
+      "sha256": "e2ff5777087587140a88fe96401348d957ddbed2f483c88a39e3e2cf007ed77e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-refine-retrieve.png",
+      "sha256": "3f7eb9a9f7340ceb814a555debee9cb55c1d0754284b4b0971d010da44cf59f3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-refine.png",
+      "sha256": "b283b96b781370c034e03c05cd94fe5ebe6545eee4254e844a8bda7803ff496a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-repair-full.png",
+      "sha256": "88db572245fc19774293834e687fa1b377f9a0f147e44ef8ff2dde6fd2211b31"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-reset-1024x768.png",
+      "sha256": "b23ebfbbf33922fe2f863509032d879ddf3d14bd569d57beadb417a02e0a15b8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-reset-1280x800.png",
+      "sha256": "d1ec9b51d29b2e5931cb48055f57c4e2e0229dc5d8ed2a950e5508d6f5773f5a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-reset-1366x768.png",
+      "sha256": "d7cea0b802505a77da7e495fa8dc1b092940b3088212f9f03b19d44cd9b3a4d2"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-reset-1440x900.png",
+      "sha256": "dfbceb3b8cfc600a6f8b707206f4b594a37417ad53a2b4628e2a787c992e4891"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-reset-1600x900.png",
+      "sha256": "217cce3ffb4be7a12b8b9dd80e29641a7c4d49251b2c6a3820f6c110beff3122"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-reset-1920x1080.png",
+      "sha256": "caf615323b22db269fd245c591d2fa2e9521f25e8fcadcf8f81f6d84bbd7406c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-sell-full.png",
+      "sha256": "450da0a7987addea9fb883fcb83b7b9a652fdd3b5ef4b60620d9c1971275230b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-trace.txt",
+      "sha256": "91c82d2086833279a797ee32cca8872a03d8474feee7557aab631281914e6b8a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v3/official-wrapped-option.png",
+      "sha256": "d26978a42c5b6bc4e2d0b20a25f3a364e07f877494efb454fb43c77ce64008d9"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/legacy-card.png",
+      "sha256": "bbf533c95e714eb1b384a34ed7dde97083e54d67bca961844f3c9e9c8f2882d6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/legacy-goods-bottom.png",
+      "sha256": "923b0c68e8cf7a6a3c51de563999d0f24bb99b7a8c4382bb02c858b5637a435e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/legacy-goods-quantity.png",
+      "sha256": "203601bf8d8d27d816c2fce39ce93c2fe096e8103c81b8be023e9b3eae45bfc6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/legacy-goods-top.png",
+      "sha256": "771fbf5408ff1edc726b6888249f3c10491bc553f52a0e774199bac882bf60db"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/legacy-refine-retrieve.png",
+      "sha256": "b0ca02edebfb861c3e2375d08a0e4501ea545c975379bf3df9965c22f948cdac"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/legacy-refine.png",
+      "sha256": "0743781638dc75bd0e871ff69a221e7c7cffdabc666ac4ed021bac0a0cae2551"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/legacy-repair-full.png",
+      "sha256": "c7733722ac20d86135c879e46aefd6cd530d80275fe45902c5ebab3fa6065379"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/legacy-reset-1024x768.png",
+      "sha256": "718e52a0df1079d77fab5dff0823b58b2d8d98cb7c5d319a4fb36d5893eaca4d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/legacy-reset-1280x800.png",
+      "sha256": "6ba4420ef13f0c9e3e11e94b0b510f0ef22e92014dd02cadc2da81c2e20918bf"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/legacy-reset-1366x768.png",
+      "sha256": "9307abd4893bee4b08268e04f81e8f8889f09be289f4703c0dd332384e396b42"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/legacy-reset-1440x900.png",
+      "sha256": "5d7a6e9c1c15173e85b1c06b094a5773c037c7c3e7d270d57818628ed4e3abdd"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/legacy-reset-1600x900.png",
+      "sha256": "0270ea3175f839c48f352f53a0057f3c9366895a424af520eddf7709fb8da65f"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/legacy-reset-1920x1080.png",
+      "sha256": "b024b69683e93b115d6d3973a578d2ea688b5090fe5ce983f352af2f1b7d50d3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/legacy-resources.txt",
+      "sha256": "47713d590a1b9214abdef7a0fc33d6c28a2b5a73a0cff9794375a5083020b498"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/legacy-sell-full.png",
+      "sha256": "78b81311bb79aa207b13afd334aeb71de0ef227a133dc7cb331ac6cc1fddb224"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/legacy-trace.txt",
+      "sha256": "91c82d2086833279a797ee32cca8872a03d8474feee7557aab631281914e6b8a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/legacy-wrapped-option.png",
+      "sha256": "ff0659f55ad69307331223cc4612065bd036ee8b8e2442c86a2c9a6a470714a3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-card.png",
+      "sha256": "0f2b78045205403779ab7c33e75a3c5f834e7a635c67aefc7e77d52e3dd92487"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-goods-bottom.png",
+      "sha256": "28126a2c308d877e5b8a12e34af35324a1f9eff570a94e0eb96494ae792d4210"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-goods-quantity.png",
+      "sha256": "64e83eca43cb5f9e009cbc84573a4d10311872e0c34954085fa3c47b35867bab"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-goods-top.png",
+      "sha256": "3776f583811604303e1f46b1cdf1b1539bde2a123418be51fe2b7bdb4e0dc513"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-group-AccessoryRefineLevel.png",
+      "sha256": "511685d5f72355ffa80707ab7e2c07bbd65c920288002d9983fec83089df377c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-group-AccessoryRefineUpgrade.png",
+      "sha256": "63b1bdef1010516c8f19fa3e5a5d28ba164537649f385d19b8e5efab3ac798b6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-group-AccessoryReset.png",
+      "sha256": "6ba621631c614f06fd61f72babf77fe39e64123890905dcaa2349ebce2e76107"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-group-BuySell.png",
+      "sha256": "142cdcfa45f401a54b6c88c76a62ffb5bbdac26ba67c21d65c6a5f10179b6a09"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-group-CompanionManage.png",
+      "sha256": "edbceebdf415a23af0c441707c691541238d6662701ab9abde8b0348c7a8d763"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-group-ItemFragment.png",
+      "sha256": "dd3da9296f291dcdae2bb56243fc8e4ab25f393e3ef66c152ae9911d10696497"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-group-layouts.txt",
+      "sha256": "5f14a8dbddd3c05635fe5643178cb8295a6e626eed0965f4ab3dc815515447b8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-group-MasterRefine.png",
+      "sha256": "4e5a4349ac66f1a26bfff3466f9b775000a1544f7b0f5906dd2854dfe9a14745"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-group-None.png",
+      "sha256": "202213e86c15f790407a01b5aa5f8ed438b7ba5b3bef81989e1c6226d3aff5f6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-group-Refine.png",
+      "sha256": "2cd79cf36098f1a754f73a5b9facf6de858eddf9576ada426d751cd41c8f2390"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-group-RefinementStone.png",
+      "sha256": "0aac443250dea1e4eb81631823b40babf9d0c7b9075f02b4dcaabc9ea6181614"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-group-RefineRetrieve.png",
+      "sha256": "78e0361ac4176f016f81fc972264e3379b851a354d8218bffaabd681d9b04fd6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-group-Repair.png",
+      "sha256": "1abd5747f1546bbfb6d22d361ebd006647d541ed2d1084df30a6123122850d13"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-group-reset-BuySell-1024x768-14.png",
+      "sha256": "142cdcfa45f401a54b6c88c76a62ffb5bbdac26ba67c21d65c6a5f10179b6a09"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-group-reset-BuySell-1024x768-21.png",
+      "sha256": "142cdcfa45f401a54b6c88c76a62ffb5bbdac26ba67c21d65c6a5f10179b6a09"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-group-reset-BuySell-1280x800-17.png",
+      "sha256": "60019e050f20e88699723a239ba984c2715869bb53234a3ffe11f8d808b7a08d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-group-reset-BuySell-1366x768-16.png",
+      "sha256": "7289d4f835cab8517e0d113a30c8e091dc7988dae63e91c4becb71b19ade0b44"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-group-reset-BuySell-1440x900-18.png",
+      "sha256": "ec1c0e4905e7208a47479644b649721e0a5233777fbf746931ebbe962b6bf559"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-group-reset-BuySell-1600x900-19.png",
+      "sha256": "b5097aaf23ef40a484410d4bff3cecedaa706b1c5388b5965522abd7643341fc"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-group-reset-BuySell-1920x1080-20.png",
+      "sha256": "66b8bd38abd4726bc79dd9ae41a08cd4b4bb39419c5aa26c0d24c0b338036bda"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-group-reset-None-1024x768-12.png",
+      "sha256": "a0aff43117abb5d71faf7019ce997b3d06ffbf20f1929d620c769de8900da7e6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-group-reset-None-1024x768-5.png",
+      "sha256": "202213e86c15f790407a01b5aa5f8ed438b7ba5b3bef81989e1c6226d3aff5f6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-group-reset-None-1280x800-8.png",
+      "sha256": "d44339d4e6d8db1179e29f936dc31d23021ecea09d81e954b9d2f2950ceec51b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-group-reset-None-1366x768-7.png",
+      "sha256": "1ad3fe071bb79a43be8744953741e2cd9d0d5e7e1ddd5d0db0f8615de8c00e6a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-group-reset-None-1440x900-9.png",
+      "sha256": "087ad7ed609b972654f1fe47987ad95a022b0b841acdc1621c5d6c881684c5b0"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-group-reset-None-1600x900-10.png",
+      "sha256": "815c2db150346713786712f21505a8b9138d874503b738b20504d241aa86d30e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-group-reset-None-1920x1080-11.png",
+      "sha256": "6c387b1c6ea0334ce8509fca74a8b01484547172e25c6350f06d77e60ba519ac"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-group-WeaponCraft.png",
+      "sha256": "c39bdb95bc0e9717d30a3222fddef464c2abb744659f0cb1f61a201f7b626603"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-group-WeaponReset.png",
+      "sha256": "744cd9c5e3d8b46162bc5c87bc8d34e479603d6ceb7f3e750f31a967102a434d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-group-WeddingRing.png",
+      "sha256": "63098f3342fcab1bfa62c643beb0e976661bc31aa85fbc49877fa1f4c4869ae9"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-long-card-1024x768.png",
+      "sha256": "b54dbb90ee816caf7e8ce88e8938e58db9699ca746ac56619e537aabd29317d0"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-long-card-1280x800.png",
+      "sha256": "9af5d5190590baef30643a68935da1600322be27fe22afbcdefb99835486360a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-long-card-1366x768.png",
+      "sha256": "b55ab3338eb65b583ca33cfc58a937c5842bb00a363738de01796dd6b1d74b66"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-long-card-1440x900.png",
+      "sha256": "665a37a21a65083e4d3c0980408c08764ce82bf01a783998b3c71a108f3d5266"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-long-card-1600x900.png",
+      "sha256": "792dbd50a93b47560b02c8c1bd2a0d8aec1f8db6e7357e88cdc4c0cf9dd38d18"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-long-card-1920x1080.png",
+      "sha256": "343c8ce461c764e57c1b570bcd13674141d2b621d46778cc33e407c9ab477f7f"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-long-card-bottom.png",
+      "sha256": "b54dbb90ee816caf7e8ce88e8938e58db9699ca746ac56619e537aabd29317d0"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-long-card-open-ms.txt",
+      "sha256": "ad1f3889d0032e7c2791053060e4c044837353325fbd42cdeeef65638ed31c2a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-long-card-partial-line.png",
+      "sha256": "382cf651c1bf649d422fcffa975b7021cb7a1485ab692cdf36fe17fb772cb58e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-long-card-top.png",
+      "sha256": "d154b3c83f92432d87fe900abb6fbb975094d02a2d6ed3fa6af781a6966f3b3d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-long-text-reference.png",
+      "sha256": "63ea7a263505137352f230f85a422f09e91ab97d20ca985316bf3e2865a92f02"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-long-text-texture.png",
+      "sha256": "63ea7a263505137352f230f85a422f09e91ab97d20ca985316bf3e2865a92f02"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-paragraph-0-bottom-long-text-reference.png",
+      "sha256": "540cf8ddf77fd1f66ffcc649f94881940f350239284b80e3216d05b32eadb668"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-paragraph-0-bottom-long-text-texture.png",
+      "sha256": "540cf8ddf77fd1f66ffcc649f94881940f350239284b80e3216d05b32eadb668"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-paragraph-0-top-long-text-reference.png",
+      "sha256": "540cf8ddf77fd1f66ffcc649f94881940f350239284b80e3216d05b32eadb668"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-paragraph-0-top-long-text-texture.png",
+      "sha256": "540cf8ddf77fd1f66ffcc649f94881940f350239284b80e3216d05b32eadb668"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-paragraph-1-bottom-long-text-reference.png",
+      "sha256": "3c877d05e4761b12e3f859ddcd81930155c8b2679c4142c6764fa24ed2e61bf1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-paragraph-1-bottom-long-text-texture.png",
+      "sha256": "3c877d05e4761b12e3f859ddcd81930155c8b2679c4142c6764fa24ed2e61bf1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-paragraph-1-top-long-text-reference.png",
+      "sha256": "3c877d05e4761b12e3f859ddcd81930155c8b2679c4142c6764fa24ed2e61bf1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-paragraph-1-top-long-text-texture.png",
+      "sha256": "3c877d05e4761b12e3f859ddcd81930155c8b2679c4142c6764fa24ed2e61bf1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-paragraph-2-bottom-long-text-reference.png",
+      "sha256": "76f9761631c924f05ee0b940de90650b0fdd8f6aafc690b16f6c44256a4d29c5"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-paragraph-2-bottom-long-text-texture.png",
+      "sha256": "76f9761631c924f05ee0b940de90650b0fdd8f6aafc690b16f6c44256a4d29c5"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-paragraph-2-top-long-text-reference.png",
+      "sha256": "fbd146c4875677e71b4aea14983e602bc6b6a30d7afec1da3b69ae006f9dd385"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-paragraph-2-top-long-text-texture.png",
+      "sha256": "fbd146c4875677e71b4aea14983e602bc6b6a30d7afec1da3b69ae006f9dd385"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-paragraph-3-bottom-long-text-reference.png",
+      "sha256": "bea194a346d02dcd2ef465ee055452165c9160e1e376cb9f231bded2a48bfb20"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-paragraph-3-bottom-long-text-texture.png",
+      "sha256": "bea194a346d02dcd2ef465ee055452165c9160e1e376cb9f231bded2a48bfb20"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-paragraph-3-top-long-text-reference.png",
+      "sha256": "bea194a346d02dcd2ef465ee055452165c9160e1e376cb9f231bded2a48bfb20"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-paragraph-3-top-long-text-texture.png",
+      "sha256": "bea194a346d02dcd2ef465ee055452165c9160e1e376cb9f231bded2a48bfb20"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-paragraph-4-bottom-long-text-reference.png",
+      "sha256": "52f16e5b87e95e1883fbb66b55b65a675e943facf62287f7e2ed0ad6ad9ec5a7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-paragraph-4-bottom-long-text-texture.png",
+      "sha256": "52f16e5b87e95e1883fbb66b55b65a675e943facf62287f7e2ed0ad6ad9ec5a7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-paragraph-4-top-long-text-reference.png",
+      "sha256": "52f16e5b87e95e1883fbb66b55b65a675e943facf62287f7e2ed0ad6ad9ec5a7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-paragraph-4-top-long-text-texture.png",
+      "sha256": "52f16e5b87e95e1883fbb66b55b65a675e943facf62287f7e2ed0ad6ad9ec5a7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-paragraph-native-geometry.txt",
+      "sha256": "685fc10cc9db4dc20dd5ac1cc8c20f1ce90e974bf7f7b658e4174573550bf14b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-paragraph-regions-0-bottom.png",
+      "sha256": "0752888ee514617d8adc950b02b491bdcccd3dde61df703e4b109e17f04563d3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-paragraph-regions-0-top.png",
+      "sha256": "0752888ee514617d8adc950b02b491bdcccd3dde61df703e4b109e17f04563d3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-paragraph-regions-1-bottom.png",
+      "sha256": "01232ed4471cbd70cc61d322947b99f432f82081dc97c4cfcd258c0e69a4c56c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-paragraph-regions-1-top.png",
+      "sha256": "6cf4141602db2109c411ac89089dece740825c6eec308a0ae1920fea0f02166b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-paragraph-regions-2-bottom.png",
+      "sha256": "cae9dc7b5665b8b1ca018b6744b1f83560cc9a6a65f361c288cfcf58e8021237"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-paragraph-regions-2-top.png",
+      "sha256": "81488e09d89be939762cd891d237a74478a856990436f941d1795b4b173990f2"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-paragraph-regions-3-bottom.png",
+      "sha256": "79576c0b35162a80de7146a78da3d2348d8cadf584e85b4ec9ea486f6003f53b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-paragraph-regions-3-top.png",
+      "sha256": "4d8fc3d5d8203756594ae1ee9c0b25f9221ce50947baa426b78d97f2d28da171"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-paragraph-regions-4-bottom.png",
+      "sha256": "06020eff21eccab57697bc154f4ba1fcc6eb491a9dbdafe25d69591ff1c737d3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-paragraph-regions-4-top.png",
+      "sha256": "06020eff21eccab57697bc154f4ba1fcc6eb491a9dbdafe25d69591ff1c737d3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-partial-line-long-text-reference.png",
+      "sha256": "966bb5e8cc0c4cc6428f93a50e5c86a2c4db0e33f84f4ecd89f8ac4913ad16aa"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-partial-line-long-text-texture.png",
+      "sha256": "966bb5e8cc0c4cc6428f93a50e5c86a2c4db0e33f84f4ecd89f8ac4913ad16aa"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-quest-group-BuySell-False.png",
+      "sha256": "673755a4f062c588d535fae5c447d9ce1248fd0341d851fa625e311aae13b064"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-quest-group-BuySell-True.png",
+      "sha256": "673755a4f062c588d535fae5c447d9ce1248fd0341d851fa625e311aae13b064"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-quest-group-None-False.png",
+      "sha256": "3fc198b71b8ab8926a619f70b9ef0d9d77486695394b5acd42c1263b522bb497"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-quest-group-None-True.png",
+      "sha256": "3fc198b71b8ab8926a619f70b9ef0d9d77486695394b5acd42c1263b522bb497"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-quest-open-layouts.txt",
+      "sha256": "25d9d2f2974eb6167bb85b50f114450a5af7ea3bb09e15d184c5cba93344f964"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-refine-retrieve.png",
+      "sha256": "3f7eb9a9f7340ceb814a555debee9cb55c1d0754284b4b0971d010da44cf59f3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-refine.png",
+      "sha256": "b283b96b781370c034e03c05cd94fe5ebe6545eee4254e844a8bda7803ff496a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-repair-full.png",
+      "sha256": "88db572245fc19774293834e687fa1b377f9a0f147e44ef8ff2dde6fd2211b31"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-reset-1024x768.png",
+      "sha256": "b23ebfbbf33922fe2f863509032d879ddf3d14bd569d57beadb417a02e0a15b8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-reset-1280x800.png",
+      "sha256": "d1ec9b51d29b2e5931cb48055f57c4e2e0229dc5d8ed2a950e5508d6f5773f5a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-reset-1366x768.png",
+      "sha256": "d7cea0b802505a77da7e495fa8dc1b092940b3088212f9f03b19d44cd9b3a4d2"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-reset-1440x900.png",
+      "sha256": "dfbceb3b8cfc600a6f8b707206f4b594a37417ad53a2b4628e2a787c992e4891"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-reset-1600x900.png",
+      "sha256": "217cce3ffb4be7a12b8b9dd80e29641a7c4d49251b2c6a3820f6c110beff3122"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-reset-1920x1080.png",
+      "sha256": "caf615323b22db269fd245c591d2fa2e9521f25e8fcadcf8f81f6d84bbd7406c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-sell-full.png",
+      "sha256": "450da0a7987addea9fb883fcb83b7b9a652fdd3b5ef4b60620d9c1971275230b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-trace.txt",
+      "sha256": "91c82d2086833279a797ee32cca8872a03d8474feee7557aab631281914e6b8a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v4/official-wrapped-option.png",
+      "sha256": "d26978a42c5b6bc4e2d0b20a25f3a364e07f877494efb454fb43c77ce64008d9"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/assertions.txt",
+      "sha256": "092dcf73fd52c1d23ded57db80aa92531525c716d479a94d3bcff573e5a3f4f5"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/coordinate-hits.txt",
+      "sha256": "cdd6a2b339eec3c7874363da736be1c1a266f9bff3e74f34f0f8bcf26475a239"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/legacy-card.png",
+      "sha256": "bbf533c95e714eb1b384a34ed7dde97083e54d67bca961844f3c9e9c8f2882d6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/legacy-goods-bottom.png",
+      "sha256": "923b0c68e8cf7a6a3c51de563999d0f24bb99b7a8c4382bb02c858b5637a435e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/legacy-goods-quantity.png",
+      "sha256": "203601bf8d8d27d816c2fce39ce93c2fe096e8103c81b8be023e9b3eae45bfc6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/legacy-goods-top.png",
+      "sha256": "771fbf5408ff1edc726b6888249f3c10491bc553f52a0e774199bac882bf60db"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/legacy-refine-retrieve.png",
+      "sha256": "b0ca02edebfb861c3e2375d08a0e4501ea545c975379bf3df9965c22f948cdac"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/legacy-refine.png",
+      "sha256": "0743781638dc75bd0e871ff69a221e7c7cffdabc666ac4ed021bac0a0cae2551"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/legacy-repair-full.png",
+      "sha256": "c7733722ac20d86135c879e46aefd6cd530d80275fe45902c5ebab3fa6065379"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/legacy-reset-1024x768.png",
+      "sha256": "718e52a0df1079d77fab5dff0823b58b2d8d98cb7c5d319a4fb36d5893eaca4d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/legacy-reset-1280x800.png",
+      "sha256": "6ba4420ef13f0c9e3e11e94b0b510f0ef22e92014dd02cadc2da81c2e20918bf"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/legacy-reset-1366x768.png",
+      "sha256": "9307abd4893bee4b08268e04f81e8f8889f09be289f4703c0dd332384e396b42"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/legacy-reset-1440x900.png",
+      "sha256": "5d7a6e9c1c15173e85b1c06b094a5773c037c7c3e7d270d57818628ed4e3abdd"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/legacy-reset-1600x900.png",
+      "sha256": "0270ea3175f839c48f352f53a0057f3c9366895a424af520eddf7709fb8da65f"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/legacy-reset-1920x1080.png",
+      "sha256": "b024b69683e93b115d6d3973a578d2ea688b5090fe5ce983f352af2f1b7d50d3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/legacy-resources.txt",
+      "sha256": "47713d590a1b9214abdef7a0fc33d6c28a2b5a73a0cff9794375a5083020b498"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/legacy-sell-full.png",
+      "sha256": "78b81311bb79aa207b13afd334aeb71de0ef227a133dc7cb331ac6cc1fddb224"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/legacy-trace.txt",
+      "sha256": "91c82d2086833279a797ee32cca8872a03d8474feee7557aab631281914e6b8a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/legacy-wrapped-option.png",
+      "sha256": "ff0659f55ad69307331223cc4612065bd036ee8b8e2442c86a2c9a6a470714a3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/metrics.json",
+      "sha256": "fd8d5fd83188ce0b1432ec828bb4b6b8068e526e93938e87f01d54bbecaa6daa"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-card.png",
+      "sha256": "0f2b78045205403779ab7c33e75a3c5f834e7a635c67aefc7e77d52e3dd92487"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-goods-bottom.png",
+      "sha256": "28126a2c308d877e5b8a12e34af35324a1f9eff570a94e0eb96494ae792d4210"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-goods-quantity.png",
+      "sha256": "64e83eca43cb5f9e009cbc84573a4d10311872e0c34954085fa3c47b35867bab"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-goods-top.png",
+      "sha256": "1699c23697fbe693c0e986963bc605e6f38fe5a8b959b1371e77ee07adfd2081"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-group-AccessoryRefineLevel.png",
+      "sha256": "511685d5f72355ffa80707ab7e2c07bbd65c920288002d9983fec83089df377c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-group-AccessoryRefineUpgrade.png",
+      "sha256": "63b1bdef1010516c8f19fa3e5a5d28ba164537649f385d19b8e5efab3ac798b6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-group-AccessoryReset.png",
+      "sha256": "6ba621631c614f06fd61f72babf77fe39e64123890905dcaa2349ebce2e76107"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-group-BuySell.png",
+      "sha256": "142cdcfa45f401a54b6c88c76a62ffb5bbdac26ba67c21d65c6a5f10179b6a09"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-group-CompanionManage.png",
+      "sha256": "edbceebdf415a23af0c441707c691541238d6662701ab9abde8b0348c7a8d763"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-group-ItemFragment.png",
+      "sha256": "dd3da9296f291dcdae2bb56243fc8e4ab25f393e3ef66c152ae9911d10696497"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-group-layouts.txt",
+      "sha256": "6fa2941c174289871aa999f4b21056e880d2f3c58bbfa100592ccdba928f2dec"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-group-MasterRefine.png",
+      "sha256": "4e5a4349ac66f1a26bfff3466f9b775000a1544f7b0f5906dd2854dfe9a14745"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-group-None.png",
+      "sha256": "202213e86c15f790407a01b5aa5f8ed438b7ba5b3bef81989e1c6226d3aff5f6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-group-Refine.png",
+      "sha256": "2cd79cf36098f1a754f73a5b9facf6de858eddf9576ada426d751cd41c8f2390"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-group-RefinementStone.png",
+      "sha256": "0aac443250dea1e4eb81631823b40babf9d0c7b9075f02b4dcaabc9ea6181614"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-group-RefineRetrieve.png",
+      "sha256": "78e0361ac4176f016f81fc972264e3379b851a354d8218bffaabd681d9b04fd6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-group-Repair.png",
+      "sha256": "1abd5747f1546bbfb6d22d361ebd006647d541ed2d1084df30a6123122850d13"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-group-reset-BuySell-1024x768-14.png",
+      "sha256": "142cdcfa45f401a54b6c88c76a62ffb5bbdac26ba67c21d65c6a5f10179b6a09"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-group-reset-BuySell-1024x768-21.png",
+      "sha256": "142cdcfa45f401a54b6c88c76a62ffb5bbdac26ba67c21d65c6a5f10179b6a09"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-group-reset-BuySell-1280x800-17.png",
+      "sha256": "60019e050f20e88699723a239ba984c2715869bb53234a3ffe11f8d808b7a08d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-group-reset-BuySell-1366x768-16.png",
+      "sha256": "7289d4f835cab8517e0d113a30c8e091dc7988dae63e91c4becb71b19ade0b44"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-group-reset-BuySell-1440x900-18.png",
+      "sha256": "ec1c0e4905e7208a47479644b649721e0a5233777fbf746931ebbe962b6bf559"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-group-reset-BuySell-1600x900-19.png",
+      "sha256": "b5097aaf23ef40a484410d4bff3cecedaa706b1c5388b5965522abd7643341fc"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-group-reset-BuySell-1920x1080-20.png",
+      "sha256": "66b8bd38abd4726bc79dd9ae41a08cd4b4bb39419c5aa26c0d24c0b338036bda"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-group-reset-None-1024x768-12.png",
+      "sha256": "e137ea4e229f1f91aeefcd701cbb518c3e8d9ef2340a83f3d3187e3de21acd1d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-group-reset-None-1024x768-5.png",
+      "sha256": "a0aff43117abb5d71faf7019ce997b3d06ffbf20f1929d620c769de8900da7e6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-group-reset-None-1280x800-8.png",
+      "sha256": "d44339d4e6d8db1179e29f936dc31d23021ecea09d81e954b9d2f2950ceec51b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-group-reset-None-1366x768-7.png",
+      "sha256": "1ad3fe071bb79a43be8744953741e2cd9d0d5e7e1ddd5d0db0f8615de8c00e6a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-group-reset-None-1440x900-9.png",
+      "sha256": "087ad7ed609b972654f1fe47987ad95a022b0b841acdc1621c5d6c881684c5b0"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-group-reset-None-1600x900-10.png",
+      "sha256": "815c2db150346713786712f21505a8b9138d874503b738b20504d241aa86d30e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-group-reset-None-1920x1080-11.png",
+      "sha256": "6c387b1c6ea0334ce8509fca74a8b01484547172e25c6350f06d77e60ba519ac"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-group-WeaponCraft.png",
+      "sha256": "c39bdb95bc0e9717d30a3222fddef464c2abb744659f0cb1f61a201f7b626603"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-group-WeaponReset.png",
+      "sha256": "744cd9c5e3d8b46162bc5c87bc8d34e479603d6ceb7f3e750f31a967102a434d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-group-WeddingRing.png",
+      "sha256": "63098f3342fcab1bfa62c643beb0e976661bc31aa85fbc49877fa1f4c4869ae9"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-long-card-1024x768.png",
+      "sha256": "b54dbb90ee816caf7e8ce88e8938e58db9699ca746ac56619e537aabd29317d0"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-long-card-1280x800.png",
+      "sha256": "d5247047b57fc4a4ccfa941693378d05b8c9635d93c5014b025458b00649a9fc"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-long-card-1366x768.png",
+      "sha256": "b55ab3338eb65b583ca33cfc58a937c5842bb00a363738de01796dd6b1d74b66"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-long-card-1440x900.png",
+      "sha256": "665a37a21a65083e4d3c0980408c08764ce82bf01a783998b3c71a108f3d5266"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-long-card-1600x900.png",
+      "sha256": "f03ca94d4feceb28382b75e47043f774a5d763a52b1cc6e59548906ffcd0a3a4"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-long-card-1920x1080.png",
+      "sha256": "266742077100d1727cbe11211f2e1f9ab29c4ed83d62d3093b2e7cb4c882a397"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-long-card-bottom.png",
+      "sha256": "b54dbb90ee816caf7e8ce88e8938e58db9699ca746ac56619e537aabd29317d0"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-long-card-open-ms.txt",
+      "sha256": "f7ac69722a0706c533afa393b1574a761a073df0a8280094d3500a4bbc9c2877"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-long-card-partial-line.png",
+      "sha256": "382cf651c1bf649d422fcffa975b7021cb7a1485ab692cdf36fe17fb772cb58e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-long-card-top.png",
+      "sha256": "d154b3c83f92432d87fe900abb6fbb975094d02a2d6ed3fa6af781a6966f3b3d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-long-text-reference.png",
+      "sha256": "63ea7a263505137352f230f85a422f09e91ab97d20ca985316bf3e2865a92f02"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-long-text-texture.png",
+      "sha256": "63ea7a263505137352f230f85a422f09e91ab97d20ca985316bf3e2865a92f02"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-paragraph-0-bottom-long-text-reference.png",
+      "sha256": "540cf8ddf77fd1f66ffcc649f94881940f350239284b80e3216d05b32eadb668"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-paragraph-0-bottom-long-text-texture.png",
+      "sha256": "540cf8ddf77fd1f66ffcc649f94881940f350239284b80e3216d05b32eadb668"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-paragraph-0-top-long-text-reference.png",
+      "sha256": "540cf8ddf77fd1f66ffcc649f94881940f350239284b80e3216d05b32eadb668"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-paragraph-0-top-long-text-texture.png",
+      "sha256": "540cf8ddf77fd1f66ffcc649f94881940f350239284b80e3216d05b32eadb668"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-paragraph-1-bottom-long-text-reference.png",
+      "sha256": "3c877d05e4761b12e3f859ddcd81930155c8b2679c4142c6764fa24ed2e61bf1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-paragraph-1-bottom-long-text-texture.png",
+      "sha256": "3c877d05e4761b12e3f859ddcd81930155c8b2679c4142c6764fa24ed2e61bf1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-paragraph-1-top-long-text-reference.png",
+      "sha256": "3c877d05e4761b12e3f859ddcd81930155c8b2679c4142c6764fa24ed2e61bf1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-paragraph-1-top-long-text-texture.png",
+      "sha256": "3c877d05e4761b12e3f859ddcd81930155c8b2679c4142c6764fa24ed2e61bf1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-paragraph-2-bottom-long-text-reference.png",
+      "sha256": "76f9761631c924f05ee0b940de90650b0fdd8f6aafc690b16f6c44256a4d29c5"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-paragraph-2-bottom-long-text-texture.png",
+      "sha256": "76f9761631c924f05ee0b940de90650b0fdd8f6aafc690b16f6c44256a4d29c5"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-paragraph-2-top-long-text-reference.png",
+      "sha256": "fbd146c4875677e71b4aea14983e602bc6b6a30d7afec1da3b69ae006f9dd385"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-paragraph-2-top-long-text-texture.png",
+      "sha256": "fbd146c4875677e71b4aea14983e602bc6b6a30d7afec1da3b69ae006f9dd385"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-paragraph-3-bottom-long-text-reference.png",
+      "sha256": "bea194a346d02dcd2ef465ee055452165c9160e1e376cb9f231bded2a48bfb20"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-paragraph-3-bottom-long-text-texture.png",
+      "sha256": "bea194a346d02dcd2ef465ee055452165c9160e1e376cb9f231bded2a48bfb20"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-paragraph-3-top-long-text-reference.png",
+      "sha256": "bea194a346d02dcd2ef465ee055452165c9160e1e376cb9f231bded2a48bfb20"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-paragraph-3-top-long-text-texture.png",
+      "sha256": "bea194a346d02dcd2ef465ee055452165c9160e1e376cb9f231bded2a48bfb20"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-paragraph-4-bottom-long-text-reference.png",
+      "sha256": "52f16e5b87e95e1883fbb66b55b65a675e943facf62287f7e2ed0ad6ad9ec5a7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-paragraph-4-bottom-long-text-texture.png",
+      "sha256": "52f16e5b87e95e1883fbb66b55b65a675e943facf62287f7e2ed0ad6ad9ec5a7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-paragraph-4-top-long-text-reference.png",
+      "sha256": "52f16e5b87e95e1883fbb66b55b65a675e943facf62287f7e2ed0ad6ad9ec5a7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-paragraph-4-top-long-text-texture.png",
+      "sha256": "52f16e5b87e95e1883fbb66b55b65a675e943facf62287f7e2ed0ad6ad9ec5a7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-paragraph-native-geometry.txt",
+      "sha256": "685fc10cc9db4dc20dd5ac1cc8c20f1ce90e974bf7f7b658e4174573550bf14b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-paragraph-regions-0-bottom.png",
+      "sha256": "0752888ee514617d8adc950b02b491bdcccd3dde61df703e4b109e17f04563d3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-paragraph-regions-0-top.png",
+      "sha256": "0752888ee514617d8adc950b02b491bdcccd3dde61df703e4b109e17f04563d3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-paragraph-regions-1-bottom.png",
+      "sha256": "01232ed4471cbd70cc61d322947b99f432f82081dc97c4cfcd258c0e69a4c56c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-paragraph-regions-1-top.png",
+      "sha256": "6cf4141602db2109c411ac89089dece740825c6eec308a0ae1920fea0f02166b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-paragraph-regions-2-bottom.png",
+      "sha256": "cae9dc7b5665b8b1ca018b6744b1f83560cc9a6a65f361c288cfcf58e8021237"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-paragraph-regions-2-top.png",
+      "sha256": "81488e09d89be939762cd891d237a74478a856990436f941d1795b4b173990f2"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-paragraph-regions-3-bottom.png",
+      "sha256": "4d8fc3d5d8203756594ae1ee9c0b25f9221ce50947baa426b78d97f2d28da171"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-paragraph-regions-3-top.png",
+      "sha256": "4d8fc3d5d8203756594ae1ee9c0b25f9221ce50947baa426b78d97f2d28da171"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-paragraph-regions-4-bottom.png",
+      "sha256": "06020eff21eccab57697bc154f4ba1fcc6eb491a9dbdafe25d69591ff1c737d3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-paragraph-regions-4-top.png",
+      "sha256": "06020eff21eccab57697bc154f4ba1fcc6eb491a9dbdafe25d69591ff1c737d3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-partial-line-long-text-reference.png",
+      "sha256": "966bb5e8cc0c4cc6428f93a50e5c86a2c4db0e33f84f4ecd89f8ac4913ad16aa"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-partial-line-long-text-texture.png",
+      "sha256": "966bb5e8cc0c4cc6428f93a50e5c86a2c4db0e33f84f4ecd89f8ac4913ad16aa"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-quest-group-BuySell-False.png",
+      "sha256": "3aea6e0e97762437397b2fcee7ba8f15c411b4ba295dc26c55e36effb644cddb"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-quest-group-BuySell-True.png",
+      "sha256": "26a2d767d6e92cd3b47d0d313a6f17ff7b816b5f66275e529373d127396c3815"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-quest-group-None-False.png",
+      "sha256": "9475e2c37b1b062512bb37ba4833c76e8019ad076716bb5ee4951dfd7ee2d3c8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-quest-group-None-True.png",
+      "sha256": "3fc198b71b8ab8926a619f70b9ef0d9d77486695394b5acd42c1263b522bb497"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-quest-open-layouts.txt",
+      "sha256": "25d9d2f2974eb6167bb85b50f114450a5af7ea3bb09e15d184c5cba93344f964"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-card.png",
+      "sha256": "0f2b78045205403779ab7c33e75a3c5f834e7a635c67aefc7e77d52e3dd92487"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-goods-bottom.png",
+      "sha256": "28126a2c308d877e5b8a12e34af35324a1f9eff570a94e0eb96494ae792d4210"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-goods-quantity.png",
+      "sha256": "64e83eca43cb5f9e009cbc84573a4d10311872e0c34954085fa3c47b35867bab"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-goods-top.png",
+      "sha256": "1699c23697fbe693c0e986963bc605e6f38fe5a8b959b1371e77ee07adfd2081"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-group-AccessoryRefineLevel.png",
+      "sha256": "511685d5f72355ffa80707ab7e2c07bbd65c920288002d9983fec83089df377c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-group-AccessoryRefineUpgrade.png",
+      "sha256": "63b1bdef1010516c8f19fa3e5a5d28ba164537649f385d19b8e5efab3ac798b6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-group-AccessoryReset.png",
+      "sha256": "6ba621631c614f06fd61f72babf77fe39e64123890905dcaa2349ebce2e76107"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-group-BuySell.png",
+      "sha256": "142cdcfa45f401a54b6c88c76a62ffb5bbdac26ba67c21d65c6a5f10179b6a09"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-group-CompanionManage.png",
+      "sha256": "edbceebdf415a23af0c441707c691541238d6662701ab9abde8b0348c7a8d763"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-group-ItemFragment.png",
+      "sha256": "dd3da9296f291dcdae2bb56243fc8e4ab25f393e3ef66c152ae9911d10696497"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-group-layouts.txt",
+      "sha256": "83547272102e4879559ce2c9d6147d948f17eecd1e2661799d6930a2a14dd4d2"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-group-MasterRefine.png",
+      "sha256": "4e5a4349ac66f1a26bfff3466f9b775000a1544f7b0f5906dd2854dfe9a14745"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-group-None.png",
+      "sha256": "202213e86c15f790407a01b5aa5f8ed438b7ba5b3bef81989e1c6226d3aff5f6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-group-Refine.png",
+      "sha256": "2cd79cf36098f1a754f73a5b9facf6de858eddf9576ada426d751cd41c8f2390"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-group-RefinementStone.png",
+      "sha256": "0aac443250dea1e4eb81631823b40babf9d0c7b9075f02b4dcaabc9ea6181614"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-group-RefineRetrieve.png",
+      "sha256": "78e0361ac4176f016f81fc972264e3379b851a354d8218bffaabd681d9b04fd6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-group-Repair.png",
+      "sha256": "1abd5747f1546bbfb6d22d361ebd006647d541ed2d1084df30a6123122850d13"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-group-reset-BuySell-1024x768-14.png",
+      "sha256": "142cdcfa45f401a54b6c88c76a62ffb5bbdac26ba67c21d65c6a5f10179b6a09"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-group-reset-BuySell-1024x768-21.png",
+      "sha256": "142cdcfa45f401a54b6c88c76a62ffb5bbdac26ba67c21d65c6a5f10179b6a09"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-group-reset-BuySell-1280x800-17.png",
+      "sha256": "60019e050f20e88699723a239ba984c2715869bb53234a3ffe11f8d808b7a08d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-group-reset-BuySell-1366x768-16.png",
+      "sha256": "7289d4f835cab8517e0d113a30c8e091dc7988dae63e91c4becb71b19ade0b44"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-group-reset-BuySell-1440x900-18.png",
+      "sha256": "ec1c0e4905e7208a47479644b649721e0a5233777fbf746931ebbe962b6bf559"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-group-reset-BuySell-1600x900-19.png",
+      "sha256": "b5097aaf23ef40a484410d4bff3cecedaa706b1c5388b5965522abd7643341fc"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-group-reset-BuySell-1920x1080-20.png",
+      "sha256": "66b8bd38abd4726bc79dd9ae41a08cd4b4bb39419c5aa26c0d24c0b338036bda"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-group-reset-None-1024x768-12.png",
+      "sha256": "e137ea4e229f1f91aeefcd701cbb518c3e8d9ef2340a83f3d3187e3de21acd1d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-group-reset-None-1024x768-5.png",
+      "sha256": "a0aff43117abb5d71faf7019ce997b3d06ffbf20f1929d620c769de8900da7e6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-group-reset-None-1280x800-8.png",
+      "sha256": "d44339d4e6d8db1179e29f936dc31d23021ecea09d81e954b9d2f2950ceec51b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-group-reset-None-1366x768-7.png",
+      "sha256": "1ad3fe071bb79a43be8744953741e2cd9d0d5e7e1ddd5d0db0f8615de8c00e6a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-group-reset-None-1440x900-9.png",
+      "sha256": "087ad7ed609b972654f1fe47987ad95a022b0b841acdc1621c5d6c881684c5b0"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-group-reset-None-1600x900-10.png",
+      "sha256": "815c2db150346713786712f21505a8b9138d874503b738b20504d241aa86d30e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-group-reset-None-1920x1080-11.png",
+      "sha256": "6c387b1c6ea0334ce8509fca74a8b01484547172e25c6350f06d77e60ba519ac"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-group-WeaponCraft.png",
+      "sha256": "c39bdb95bc0e9717d30a3222fddef464c2abb744659f0cb1f61a201f7b626603"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-group-WeaponReset.png",
+      "sha256": "744cd9c5e3d8b46162bc5c87bc8d34e479603d6ceb7f3e750f31a967102a434d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-group-WeddingRing.png",
+      "sha256": "63098f3342fcab1bfa62c643beb0e976661bc31aa85fbc49877fa1f4c4869ae9"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-long-card-1024x768.png",
+      "sha256": "b54dbb90ee816caf7e8ce88e8938e58db9699ca746ac56619e537aabd29317d0"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-long-card-1280x800.png",
+      "sha256": "9af5d5190590baef30643a68935da1600322be27fe22afbcdefb99835486360a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-long-card-1366x768.png",
+      "sha256": "b55ab3338eb65b583ca33cfc58a937c5842bb00a363738de01796dd6b1d74b66"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-long-card-1440x900.png",
+      "sha256": "665a37a21a65083e4d3c0980408c08764ce82bf01a783998b3c71a108f3d5266"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-long-card-1600x900.png",
+      "sha256": "792dbd50a93b47560b02c8c1bd2a0d8aec1f8db6e7357e88cdc4c0cf9dd38d18"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-long-card-1920x1080.png",
+      "sha256": "343c8ce461c764e57c1b570bcd13674141d2b621d46778cc33e407c9ab477f7f"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-long-card-bottom.png",
+      "sha256": "b54dbb90ee816caf7e8ce88e8938e58db9699ca746ac56619e537aabd29317d0"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-long-card-open-ms.txt",
+      "sha256": "744b93f9950fc38dad705556931ea48193b99dcb191cc9bd77097f65fbe2f0b8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-long-card-partial-line.png",
+      "sha256": "382cf651c1bf649d422fcffa975b7021cb7a1485ab692cdf36fe17fb772cb58e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-long-card-top.png",
+      "sha256": "d154b3c83f92432d87fe900abb6fbb975094d02a2d6ed3fa6af781a6966f3b3d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-long-text-reference.png",
+      "sha256": "63ea7a263505137352f230f85a422f09e91ab97d20ca985316bf3e2865a92f02"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-long-text-texture.png",
+      "sha256": "63ea7a263505137352f230f85a422f09e91ab97d20ca985316bf3e2865a92f02"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-paragraph-0-bottom-long-text-reference.png",
+      "sha256": "540cf8ddf77fd1f66ffcc649f94881940f350239284b80e3216d05b32eadb668"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-paragraph-0-bottom-long-text-texture.png",
+      "sha256": "540cf8ddf77fd1f66ffcc649f94881940f350239284b80e3216d05b32eadb668"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-paragraph-0-top-long-text-reference.png",
+      "sha256": "540cf8ddf77fd1f66ffcc649f94881940f350239284b80e3216d05b32eadb668"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-paragraph-0-top-long-text-texture.png",
+      "sha256": "540cf8ddf77fd1f66ffcc649f94881940f350239284b80e3216d05b32eadb668"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-paragraph-1-bottom-long-text-reference.png",
+      "sha256": "3c877d05e4761b12e3f859ddcd81930155c8b2679c4142c6764fa24ed2e61bf1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-paragraph-1-bottom-long-text-texture.png",
+      "sha256": "3c877d05e4761b12e3f859ddcd81930155c8b2679c4142c6764fa24ed2e61bf1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-paragraph-1-top-long-text-reference.png",
+      "sha256": "3c877d05e4761b12e3f859ddcd81930155c8b2679c4142c6764fa24ed2e61bf1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-paragraph-1-top-long-text-texture.png",
+      "sha256": "3c877d05e4761b12e3f859ddcd81930155c8b2679c4142c6764fa24ed2e61bf1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-paragraph-2-bottom-long-text-reference.png",
+      "sha256": "76f9761631c924f05ee0b940de90650b0fdd8f6aafc690b16f6c44256a4d29c5"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-paragraph-2-bottom-long-text-texture.png",
+      "sha256": "76f9761631c924f05ee0b940de90650b0fdd8f6aafc690b16f6c44256a4d29c5"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-paragraph-2-top-long-text-reference.png",
+      "sha256": "fbd146c4875677e71b4aea14983e602bc6b6a30d7afec1da3b69ae006f9dd385"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-paragraph-2-top-long-text-texture.png",
+      "sha256": "fbd146c4875677e71b4aea14983e602bc6b6a30d7afec1da3b69ae006f9dd385"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-paragraph-3-bottom-long-text-reference.png",
+      "sha256": "bea194a346d02dcd2ef465ee055452165c9160e1e376cb9f231bded2a48bfb20"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-paragraph-3-bottom-long-text-texture.png",
+      "sha256": "bea194a346d02dcd2ef465ee055452165c9160e1e376cb9f231bded2a48bfb20"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-paragraph-3-top-long-text-reference.png",
+      "sha256": "bea194a346d02dcd2ef465ee055452165c9160e1e376cb9f231bded2a48bfb20"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-paragraph-3-top-long-text-texture.png",
+      "sha256": "bea194a346d02dcd2ef465ee055452165c9160e1e376cb9f231bded2a48bfb20"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-paragraph-4-bottom-long-text-reference.png",
+      "sha256": "52f16e5b87e95e1883fbb66b55b65a675e943facf62287f7e2ed0ad6ad9ec5a7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-paragraph-4-bottom-long-text-texture.png",
+      "sha256": "52f16e5b87e95e1883fbb66b55b65a675e943facf62287f7e2ed0ad6ad9ec5a7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-paragraph-4-top-long-text-reference.png",
+      "sha256": "52f16e5b87e95e1883fbb66b55b65a675e943facf62287f7e2ed0ad6ad9ec5a7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-paragraph-4-top-long-text-texture.png",
+      "sha256": "52f16e5b87e95e1883fbb66b55b65a675e943facf62287f7e2ed0ad6ad9ec5a7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-paragraph-native-geometry.txt",
+      "sha256": "685fc10cc9db4dc20dd5ac1cc8c20f1ce90e974bf7f7b658e4174573550bf14b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-paragraph-regions-0-bottom.png",
+      "sha256": "0752888ee514617d8adc950b02b491bdcccd3dde61df703e4b109e17f04563d3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-paragraph-regions-0-top.png",
+      "sha256": "0752888ee514617d8adc950b02b491bdcccd3dde61df703e4b109e17f04563d3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-paragraph-regions-1-bottom.png",
+      "sha256": "01232ed4471cbd70cc61d322947b99f432f82081dc97c4cfcd258c0e69a4c56c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-paragraph-regions-1-top.png",
+      "sha256": "6cf4141602db2109c411ac89089dece740825c6eec308a0ae1920fea0f02166b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-paragraph-regions-2-bottom.png",
+      "sha256": "cae9dc7b5665b8b1ca018b6744b1f83560cc9a6a65f361c288cfcf58e8021237"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-paragraph-regions-2-top.png",
+      "sha256": "81488e09d89be939762cd891d237a74478a856990436f941d1795b4b173990f2"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-paragraph-regions-3-bottom.png",
+      "sha256": "4d8fc3d5d8203756594ae1ee9c0b25f9221ce50947baa426b78d97f2d28da171"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-paragraph-regions-3-top.png",
+      "sha256": "4d8fc3d5d8203756594ae1ee9c0b25f9221ce50947baa426b78d97f2d28da171"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-paragraph-regions-4-bottom.png",
+      "sha256": "06020eff21eccab57697bc154f4ba1fcc6eb491a9dbdafe25d69591ff1c737d3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-paragraph-regions-4-top.png",
+      "sha256": "06020eff21eccab57697bc154f4ba1fcc6eb491a9dbdafe25d69591ff1c737d3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-partial-line-long-text-reference.png",
+      "sha256": "966bb5e8cc0c4cc6428f93a50e5c86a2c4db0e33f84f4ecd89f8ac4913ad16aa"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-partial-line-long-text-texture.png",
+      "sha256": "966bb5e8cc0c4cc6428f93a50e5c86a2c4db0e33f84f4ecd89f8ac4913ad16aa"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-quest-group-BuySell-False.png",
+      "sha256": "3aea6e0e97762437397b2fcee7ba8f15c411b4ba295dc26c55e36effb644cddb"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-quest-group-BuySell-True.png",
+      "sha256": "26a2d767d6e92cd3b47d0d313a6f17ff7b816b5f66275e529373d127396c3815"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-quest-group-None-False.png",
+      "sha256": "9475e2c37b1b062512bb37ba4833c76e8019ad076716bb5ee4951dfd7ee2d3c8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-quest-group-None-True.png",
+      "sha256": "3fc198b71b8ab8926a619f70b9ef0d9d77486695394b5acd42c1263b522bb497"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-quest-open-layouts.txt",
+      "sha256": "25d9d2f2974eb6167bb85b50f114450a5af7ea3bb09e15d184c5cba93344f964"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-refine-retrieve.png",
+      "sha256": "3f7eb9a9f7340ceb814a555debee9cb55c1d0754284b4b0971d010da44cf59f3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-refine.png",
+      "sha256": "0777dc5bb26557845515406d9542c476eafe8579336d2f2105d4d7b0ca209a79"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-repair-full.png",
+      "sha256": "88db572245fc19774293834e687fa1b377f9a0f147e44ef8ff2dde6fd2211b31"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-reset-1024x768.png",
+      "sha256": "b23ebfbbf33922fe2f863509032d879ddf3d14bd569d57beadb417a02e0a15b8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-reset-1280x800.png",
+      "sha256": "d1ec9b51d29b2e5931cb48055f57c4e2e0229dc5d8ed2a950e5508d6f5773f5a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-reset-1366x768.png",
+      "sha256": "d7cea0b802505a77da7e495fa8dc1b092940b3088212f9f03b19d44cd9b3a4d2"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-reset-1440x900.png",
+      "sha256": "dfbceb3b8cfc600a6f8b707206f4b594a37417ad53a2b4628e2a787c992e4891"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-reset-1600x900.png",
+      "sha256": "217cce3ffb4be7a12b8b9dd80e29641a7c4d49251b2c6a3820f6c110beff3122"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-reset-1920x1080.png",
+      "sha256": "caf615323b22db269fd245c591d2fa2e9521f25e8fcadcf8f81f6d84bbd7406c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-sell-full.png",
+      "sha256": "fa4fb302ec719470b85aef401e43c5d5fb79a86a6e45e24ed08615e04705492a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-trace.txt",
+      "sha256": "91c82d2086833279a797ee32cca8872a03d8474feee7557aab631281914e6b8a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reentry-wrapped-option.png",
+      "sha256": "d26978a42c5b6bc4e2d0b20a25f3a364e07f877494efb454fb43c77ce64008d9"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-refine-retrieve.png",
+      "sha256": "3f7eb9a9f7340ceb814a555debee9cb55c1d0754284b4b0971d010da44cf59f3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-refine.png",
+      "sha256": "0777dc5bb26557845515406d9542c476eafe8579336d2f2105d4d7b0ca209a79"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-repair-full.png",
+      "sha256": "88db572245fc19774293834e687fa1b377f9a0f147e44ef8ff2dde6fd2211b31"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reset-1024x768.png",
+      "sha256": "b23ebfbbf33922fe2f863509032d879ddf3d14bd569d57beadb417a02e0a15b8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reset-1280x800.png",
+      "sha256": "d1ec9b51d29b2e5931cb48055f57c4e2e0229dc5d8ed2a950e5508d6f5773f5a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reset-1366x768.png",
+      "sha256": "d7cea0b802505a77da7e495fa8dc1b092940b3088212f9f03b19d44cd9b3a4d2"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reset-1440x900.png",
+      "sha256": "dfbceb3b8cfc600a6f8b707206f4b594a37417ad53a2b4628e2a787c992e4891"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reset-1600x900.png",
+      "sha256": "217cce3ffb4be7a12b8b9dd80e29641a7c4d49251b2c6a3820f6c110beff3122"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-reset-1920x1080.png",
+      "sha256": "caf615323b22db269fd245c591d2fa2e9521f25e8fcadcf8f81f6d84bbd7406c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-sell-full.png",
+      "sha256": "fa4fb302ec719470b85aef401e43c5d5fb79a86a6e45e24ed08615e04705492a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-trace.txt",
+      "sha256": "91c82d2086833279a797ee32cca8872a03d8474feee7557aab631281914e6b8a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/official-wrapped-option.png",
+      "sha256": "d26978a42c5b6bc4e2d0b20a25f3a364e07f877494efb454fb43c77ce64008d9"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v5/tested-runtime.json",
+      "sha256": "b42ac69a4fa648fab7da5583cde6b102360a5aa5deb4cb126ec8fe05179dfb6c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/assertions.txt",
+      "sha256": "fbab01578640382dd4ebe75ef250c320f6000666e9d137dac7fa4d6db64f07c2"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/coordinate-hits.txt",
+      "sha256": "cdd6a2b339eec3c7874363da736be1c1a266f9bff3e74f34f0f8bcf26475a239"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/legacy-card.png",
+      "sha256": "bbf533c95e714eb1b384a34ed7dde97083e54d67bca961844f3c9e9c8f2882d6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/legacy-goods-bottom.png",
+      "sha256": "923b0c68e8cf7a6a3c51de563999d0f24bb99b7a8c4382bb02c858b5637a435e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/legacy-goods-quantity.png",
+      "sha256": "203601bf8d8d27d816c2fce39ce93c2fe096e8103c81b8be023e9b3eae45bfc6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/legacy-goods-top.png",
+      "sha256": "771fbf5408ff1edc726b6888249f3c10491bc553f52a0e774199bac882bf60db"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/legacy-refine-retrieve.png",
+      "sha256": "b0ca02edebfb861c3e2375d08a0e4501ea545c975379bf3df9965c22f948cdac"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/legacy-refine.png",
+      "sha256": "0743781638dc75bd0e871ff69a221e7c7cffdabc666ac4ed021bac0a0cae2551"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/legacy-repair-full.png",
+      "sha256": "c7733722ac20d86135c879e46aefd6cd530d80275fe45902c5ebab3fa6065379"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/legacy-reset-1024x768.png",
+      "sha256": "718e52a0df1079d77fab5dff0823b58b2d8d98cb7c5d319a4fb36d5893eaca4d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/legacy-reset-1280x800.png",
+      "sha256": "6ba4420ef13f0c9e3e11e94b0b510f0ef22e92014dd02cadc2da81c2e20918bf"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/legacy-reset-1366x768.png",
+      "sha256": "9307abd4893bee4b08268e04f81e8f8889f09be289f4703c0dd332384e396b42"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/legacy-reset-1440x900.png",
+      "sha256": "5d7a6e9c1c15173e85b1c06b094a5773c037c7c3e7d270d57818628ed4e3abdd"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/legacy-reset-1600x900.png",
+      "sha256": "0270ea3175f839c48f352f53a0057f3c9366895a424af520eddf7709fb8da65f"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/legacy-reset-1920x1080.png",
+      "sha256": "b024b69683e93b115d6d3973a578d2ea688b5090fe5ce983f352af2f1b7d50d3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/legacy-resources.txt",
+      "sha256": "47713d590a1b9214abdef7a0fc33d6c28a2b5a73a0cff9794375a5083020b498"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/legacy-sell-full.png",
+      "sha256": "78b81311bb79aa207b13afd334aeb71de0ef227a133dc7cb331ac6cc1fddb224"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/legacy-trace.txt",
+      "sha256": "91c82d2086833279a797ee32cca8872a03d8474feee7557aab631281914e6b8a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/legacy-wrapped-option.png",
+      "sha256": "ff0659f55ad69307331223cc4612065bd036ee8b8e2442c86a2c9a6a470714a3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/metrics.json",
+      "sha256": "7723ea26809d07d3425f2b1949cd91f33f5dce9a02b7d603b1b5fc27014f2d55"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-card.png",
+      "sha256": "0f2b78045205403779ab7c33e75a3c5f834e7a635c67aefc7e77d52e3dd92487"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-goods-bottom.png",
+      "sha256": "28126a2c308d877e5b8a12e34af35324a1f9eff570a94e0eb96494ae792d4210"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-goods-quantity.png",
+      "sha256": "64e83eca43cb5f9e009cbc84573a4d10311872e0c34954085fa3c47b35867bab"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-goods-top.png",
+      "sha256": "1699c23697fbe693c0e986963bc605e6f38fe5a8b959b1371e77ee07adfd2081"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-group-AccessoryRefineLevel.png",
+      "sha256": "511685d5f72355ffa80707ab7e2c07bbd65c920288002d9983fec83089df377c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-group-AccessoryRefineUpgrade.png",
+      "sha256": "63b1bdef1010516c8f19fa3e5a5d28ba164537649f385d19b8e5efab3ac798b6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-group-AccessoryReset.png",
+      "sha256": "6ba621631c614f06fd61f72babf77fe39e64123890905dcaa2349ebce2e76107"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-group-BuySell.png",
+      "sha256": "142cdcfa45f401a54b6c88c76a62ffb5bbdac26ba67c21d65c6a5f10179b6a09"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-group-CompanionManage.png",
+      "sha256": "edbceebdf415a23af0c441707c691541238d6662701ab9abde8b0348c7a8d763"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-group-ItemFragment.png",
+      "sha256": "dd3da9296f291dcdae2bb56243fc8e4ab25f393e3ef66c152ae9911d10696497"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-group-layouts.txt",
+      "sha256": "82d171d52537418d3db6667a6dfb59d661407bf59787be17e7fa008a59e3d8e5"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-group-MasterRefine.png",
+      "sha256": "4e5a4349ac66f1a26bfff3466f9b775000a1544f7b0f5906dd2854dfe9a14745"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-group-None.png",
+      "sha256": "202213e86c15f790407a01b5aa5f8ed438b7ba5b3bef81989e1c6226d3aff5f6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-group-Refine.png",
+      "sha256": "2cd79cf36098f1a754f73a5b9facf6de858eddf9576ada426d751cd41c8f2390"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-group-RefinementStone.png",
+      "sha256": "0aac443250dea1e4eb81631823b40babf9d0c7b9075f02b4dcaabc9ea6181614"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-group-RefineRetrieve.png",
+      "sha256": "78e0361ac4176f016f81fc972264e3379b851a354d8218bffaabd681d9b04fd6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-group-Repair.png",
+      "sha256": "1abd5747f1546bbfb6d22d361ebd006647d541ed2d1084df30a6123122850d13"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-group-reset-BuySell-1024x768-14.png",
+      "sha256": "142cdcfa45f401a54b6c88c76a62ffb5bbdac26ba67c21d65c6a5f10179b6a09"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-group-reset-BuySell-1024x768-21.png",
+      "sha256": "142cdcfa45f401a54b6c88c76a62ffb5bbdac26ba67c21d65c6a5f10179b6a09"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-group-reset-BuySell-1280x800-17.png",
+      "sha256": "60019e050f20e88699723a239ba984c2715869bb53234a3ffe11f8d808b7a08d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-group-reset-BuySell-1366x768-16.png",
+      "sha256": "7289d4f835cab8517e0d113a30c8e091dc7988dae63e91c4becb71b19ade0b44"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-group-reset-BuySell-1440x900-18.png",
+      "sha256": "ec1c0e4905e7208a47479644b649721e0a5233777fbf746931ebbe962b6bf559"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-group-reset-BuySell-1600x900-19.png",
+      "sha256": "b5097aaf23ef40a484410d4bff3cecedaa706b1c5388b5965522abd7643341fc"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-group-reset-BuySell-1920x1080-20.png",
+      "sha256": "66b8bd38abd4726bc79dd9ae41a08cd4b4bb39419c5aa26c0d24c0b338036bda"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-group-reset-None-1024x768-12.png",
+      "sha256": "e137ea4e229f1f91aeefcd701cbb518c3e8d9ef2340a83f3d3187e3de21acd1d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-group-reset-None-1024x768-5.png",
+      "sha256": "a0aff43117abb5d71faf7019ce997b3d06ffbf20f1929d620c769de8900da7e6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-group-reset-None-1280x800-8.png",
+      "sha256": "d44339d4e6d8db1179e29f936dc31d23021ecea09d81e954b9d2f2950ceec51b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-group-reset-None-1366x768-7.png",
+      "sha256": "1ad3fe071bb79a43be8744953741e2cd9d0d5e7e1ddd5d0db0f8615de8c00e6a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-group-reset-None-1440x900-9.png",
+      "sha256": "087ad7ed609b972654f1fe47987ad95a022b0b841acdc1621c5d6c881684c5b0"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-group-reset-None-1600x900-10.png",
+      "sha256": "815c2db150346713786712f21505a8b9138d874503b738b20504d241aa86d30e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-group-reset-None-1920x1080-11.png",
+      "sha256": "6c387b1c6ea0334ce8509fca74a8b01484547172e25c6350f06d77e60ba519ac"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-group-WeaponCraft.png",
+      "sha256": "c39bdb95bc0e9717d30a3222fddef464c2abb744659f0cb1f61a201f7b626603"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-group-WeaponReset.png",
+      "sha256": "744cd9c5e3d8b46162bc5c87bc8d34e479603d6ceb7f3e750f31a967102a434d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-group-WeddingRing.png",
+      "sha256": "63098f3342fcab1bfa62c643beb0e976661bc31aa85fbc49877fa1f4c4869ae9"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-long-card-1024x768.png",
+      "sha256": "b54dbb90ee816caf7e8ce88e8938e58db9699ca746ac56619e537aabd29317d0"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-long-card-1280x800.png",
+      "sha256": "d5247047b57fc4a4ccfa941693378d05b8c9635d93c5014b025458b00649a9fc"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-long-card-1366x768.png",
+      "sha256": "b55ab3338eb65b583ca33cfc58a937c5842bb00a363738de01796dd6b1d74b66"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-long-card-1440x900.png",
+      "sha256": "665a37a21a65083e4d3c0980408c08764ce82bf01a783998b3c71a108f3d5266"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-long-card-1600x900.png",
+      "sha256": "f03ca94d4feceb28382b75e47043f774a5d763a52b1cc6e59548906ffcd0a3a4"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-long-card-1920x1080.png",
+      "sha256": "266742077100d1727cbe11211f2e1f9ab29c4ed83d62d3093b2e7cb4c882a397"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-long-card-bottom.png",
+      "sha256": "b54dbb90ee816caf7e8ce88e8938e58db9699ca746ac56619e537aabd29317d0"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-long-card-open-ms.txt",
+      "sha256": "98f3aaa79f6ba1759e046f873955785d869eec78b60ff7ad2f1bb62d50ea8a0a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-long-card-partial-line.png",
+      "sha256": "382cf651c1bf649d422fcffa975b7021cb7a1485ab692cdf36fe17fb772cb58e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-long-card-top.png",
+      "sha256": "d154b3c83f92432d87fe900abb6fbb975094d02a2d6ed3fa6af781a6966f3b3d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-long-text-reference.png",
+      "sha256": "63ea7a263505137352f230f85a422f09e91ab97d20ca985316bf3e2865a92f02"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-long-text-texture.png",
+      "sha256": "63ea7a263505137352f230f85a422f09e91ab97d20ca985316bf3e2865a92f02"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-paragraph-0-bottom-long-text-reference.png",
+      "sha256": "540cf8ddf77fd1f66ffcc649f94881940f350239284b80e3216d05b32eadb668"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-paragraph-0-bottom-long-text-texture.png",
+      "sha256": "540cf8ddf77fd1f66ffcc649f94881940f350239284b80e3216d05b32eadb668"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-paragraph-0-top-long-text-reference.png",
+      "sha256": "540cf8ddf77fd1f66ffcc649f94881940f350239284b80e3216d05b32eadb668"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-paragraph-0-top-long-text-texture.png",
+      "sha256": "540cf8ddf77fd1f66ffcc649f94881940f350239284b80e3216d05b32eadb668"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-paragraph-1-bottom-long-text-reference.png",
+      "sha256": "3c877d05e4761b12e3f859ddcd81930155c8b2679c4142c6764fa24ed2e61bf1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-paragraph-1-bottom-long-text-texture.png",
+      "sha256": "3c877d05e4761b12e3f859ddcd81930155c8b2679c4142c6764fa24ed2e61bf1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-paragraph-1-top-long-text-reference.png",
+      "sha256": "3c877d05e4761b12e3f859ddcd81930155c8b2679c4142c6764fa24ed2e61bf1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-paragraph-1-top-long-text-texture.png",
+      "sha256": "3c877d05e4761b12e3f859ddcd81930155c8b2679c4142c6764fa24ed2e61bf1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-paragraph-2-bottom-long-text-reference.png",
+      "sha256": "76f9761631c924f05ee0b940de90650b0fdd8f6aafc690b16f6c44256a4d29c5"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-paragraph-2-bottom-long-text-texture.png",
+      "sha256": "76f9761631c924f05ee0b940de90650b0fdd8f6aafc690b16f6c44256a4d29c5"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-paragraph-2-top-long-text-reference.png",
+      "sha256": "fbd146c4875677e71b4aea14983e602bc6b6a30d7afec1da3b69ae006f9dd385"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-paragraph-2-top-long-text-texture.png",
+      "sha256": "fbd146c4875677e71b4aea14983e602bc6b6a30d7afec1da3b69ae006f9dd385"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-paragraph-3-bottom-long-text-reference.png",
+      "sha256": "bea194a346d02dcd2ef465ee055452165c9160e1e376cb9f231bded2a48bfb20"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-paragraph-3-bottom-long-text-texture.png",
+      "sha256": "bea194a346d02dcd2ef465ee055452165c9160e1e376cb9f231bded2a48bfb20"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-paragraph-3-top-long-text-reference.png",
+      "sha256": "bea194a346d02dcd2ef465ee055452165c9160e1e376cb9f231bded2a48bfb20"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-paragraph-3-top-long-text-texture.png",
+      "sha256": "bea194a346d02dcd2ef465ee055452165c9160e1e376cb9f231bded2a48bfb20"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-paragraph-4-bottom-long-text-reference.png",
+      "sha256": "52f16e5b87e95e1883fbb66b55b65a675e943facf62287f7e2ed0ad6ad9ec5a7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-paragraph-4-bottom-long-text-texture.png",
+      "sha256": "52f16e5b87e95e1883fbb66b55b65a675e943facf62287f7e2ed0ad6ad9ec5a7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-paragraph-4-top-long-text-reference.png",
+      "sha256": "52f16e5b87e95e1883fbb66b55b65a675e943facf62287f7e2ed0ad6ad9ec5a7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-paragraph-4-top-long-text-texture.png",
+      "sha256": "52f16e5b87e95e1883fbb66b55b65a675e943facf62287f7e2ed0ad6ad9ec5a7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-paragraph-native-geometry.txt",
+      "sha256": "685fc10cc9db4dc20dd5ac1cc8c20f1ce90e974bf7f7b658e4174573550bf14b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-paragraph-regions-0-bottom.png",
+      "sha256": "0752888ee514617d8adc950b02b491bdcccd3dde61df703e4b109e17f04563d3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-paragraph-regions-0-top.png",
+      "sha256": "0752888ee514617d8adc950b02b491bdcccd3dde61df703e4b109e17f04563d3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-paragraph-regions-1-bottom.png",
+      "sha256": "01232ed4471cbd70cc61d322947b99f432f82081dc97c4cfcd258c0e69a4c56c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-paragraph-regions-1-top.png",
+      "sha256": "6cf4141602db2109c411ac89089dece740825c6eec308a0ae1920fea0f02166b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-paragraph-regions-2-bottom.png",
+      "sha256": "cae9dc7b5665b8b1ca018b6744b1f83560cc9a6a65f361c288cfcf58e8021237"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-paragraph-regions-2-top.png",
+      "sha256": "81488e09d89be939762cd891d237a74478a856990436f941d1795b4b173990f2"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-paragraph-regions-3-bottom.png",
+      "sha256": "4d8fc3d5d8203756594ae1ee9c0b25f9221ce50947baa426b78d97f2d28da171"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-paragraph-regions-3-top.png",
+      "sha256": "4d8fc3d5d8203756594ae1ee9c0b25f9221ce50947baa426b78d97f2d28da171"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-paragraph-regions-4-bottom.png",
+      "sha256": "06020eff21eccab57697bc154f4ba1fcc6eb491a9dbdafe25d69591ff1c737d3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-paragraph-regions-4-top.png",
+      "sha256": "06020eff21eccab57697bc154f4ba1fcc6eb491a9dbdafe25d69591ff1c737d3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-partial-line-long-text-reference.png",
+      "sha256": "966bb5e8cc0c4cc6428f93a50e5c86a2c4db0e33f84f4ecd89f8ac4913ad16aa"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-partial-line-long-text-texture.png",
+      "sha256": "966bb5e8cc0c4cc6428f93a50e5c86a2c4db0e33f84f4ecd89f8ac4913ad16aa"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-quest-group-BuySell-False.png",
+      "sha256": "8ba19c518f2a7e821234e97c212348a24b8b37e5e2b184d3302df5bbeb68ec34"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-quest-group-BuySell-True.png",
+      "sha256": "2a5ca1207d7b0dec7c8bb8e04d03704b3b28ee32d5e53329ecb64dec57eb7342"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-quest-group-None-False.png",
+      "sha256": "9475e2c37b1b062512bb37ba4833c76e8019ad076716bb5ee4951dfd7ee2d3c8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-quest-group-None-True.png",
+      "sha256": "9475e2c37b1b062512bb37ba4833c76e8019ad076716bb5ee4951dfd7ee2d3c8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-quest-open-layouts.txt",
+      "sha256": "3b9186363a3f621d173f5a5435d3427fc6cb8353c036f714d802f3eacf645179"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-card.png",
+      "sha256": "0f2b78045205403779ab7c33e75a3c5f834e7a635c67aefc7e77d52e3dd92487"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-goods-bottom.png",
+      "sha256": "28126a2c308d877e5b8a12e34af35324a1f9eff570a94e0eb96494ae792d4210"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-goods-quantity.png",
+      "sha256": "64e83eca43cb5f9e009cbc84573a4d10311872e0c34954085fa3c47b35867bab"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-goods-top.png",
+      "sha256": "1699c23697fbe693c0e986963bc605e6f38fe5a8b959b1371e77ee07adfd2081"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-group-AccessoryRefineLevel.png",
+      "sha256": "511685d5f72355ffa80707ab7e2c07bbd65c920288002d9983fec83089df377c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-group-AccessoryRefineUpgrade.png",
+      "sha256": "63b1bdef1010516c8f19fa3e5a5d28ba164537649f385d19b8e5efab3ac798b6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-group-AccessoryReset.png",
+      "sha256": "6ba621631c614f06fd61f72babf77fe39e64123890905dcaa2349ebce2e76107"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-group-BuySell.png",
+      "sha256": "142cdcfa45f401a54b6c88c76a62ffb5bbdac26ba67c21d65c6a5f10179b6a09"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-group-CompanionManage.png",
+      "sha256": "edbceebdf415a23af0c441707c691541238d6662701ab9abde8b0348c7a8d763"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-group-ItemFragment.png",
+      "sha256": "dd3da9296f291dcdae2bb56243fc8e4ab25f393e3ef66c152ae9911d10696497"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-group-layouts.txt",
+      "sha256": "707f8ee0af580515042b804464bd48e99a5faf0dd3ff1abee8480ef95cb74d7a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-group-MasterRefine.png",
+      "sha256": "4e5a4349ac66f1a26bfff3466f9b775000a1544f7b0f5906dd2854dfe9a14745"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-group-None.png",
+      "sha256": "202213e86c15f790407a01b5aa5f8ed438b7ba5b3bef81989e1c6226d3aff5f6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-group-Refine.png",
+      "sha256": "2cd79cf36098f1a754f73a5b9facf6de858eddf9576ada426d751cd41c8f2390"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-group-RefinementStone.png",
+      "sha256": "0aac443250dea1e4eb81631823b40babf9d0c7b9075f02b4dcaabc9ea6181614"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-group-RefineRetrieve.png",
+      "sha256": "78e0361ac4176f016f81fc972264e3379b851a354d8218bffaabd681d9b04fd6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-group-Repair.png",
+      "sha256": "1abd5747f1546bbfb6d22d361ebd006647d541ed2d1084df30a6123122850d13"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-group-reset-BuySell-1024x768-14.png",
+      "sha256": "142cdcfa45f401a54b6c88c76a62ffb5bbdac26ba67c21d65c6a5f10179b6a09"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-group-reset-BuySell-1024x768-21.png",
+      "sha256": "142cdcfa45f401a54b6c88c76a62ffb5bbdac26ba67c21d65c6a5f10179b6a09"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-group-reset-BuySell-1280x800-17.png",
+      "sha256": "60019e050f20e88699723a239ba984c2715869bb53234a3ffe11f8d808b7a08d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-group-reset-BuySell-1366x768-16.png",
+      "sha256": "7289d4f835cab8517e0d113a30c8e091dc7988dae63e91c4becb71b19ade0b44"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-group-reset-BuySell-1440x900-18.png",
+      "sha256": "ec1c0e4905e7208a47479644b649721e0a5233777fbf746931ebbe962b6bf559"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-group-reset-BuySell-1600x900-19.png",
+      "sha256": "b5097aaf23ef40a484410d4bff3cecedaa706b1c5388b5965522abd7643341fc"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-group-reset-BuySell-1920x1080-20.png",
+      "sha256": "66b8bd38abd4726bc79dd9ae41a08cd4b4bb39419c5aa26c0d24c0b338036bda"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-group-reset-None-1024x768-12.png",
+      "sha256": "e137ea4e229f1f91aeefcd701cbb518c3e8d9ef2340a83f3d3187e3de21acd1d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-group-reset-None-1024x768-5.png",
+      "sha256": "a0aff43117abb5d71faf7019ce997b3d06ffbf20f1929d620c769de8900da7e6"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-group-reset-None-1280x800-8.png",
+      "sha256": "d44339d4e6d8db1179e29f936dc31d23021ecea09d81e954b9d2f2950ceec51b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-group-reset-None-1366x768-7.png",
+      "sha256": "1ad3fe071bb79a43be8744953741e2cd9d0d5e7e1ddd5d0db0f8615de8c00e6a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-group-reset-None-1440x900-9.png",
+      "sha256": "087ad7ed609b972654f1fe47987ad95a022b0b841acdc1621c5d6c881684c5b0"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-group-reset-None-1600x900-10.png",
+      "sha256": "815c2db150346713786712f21505a8b9138d874503b738b20504d241aa86d30e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-group-reset-None-1920x1080-11.png",
+      "sha256": "6c387b1c6ea0334ce8509fca74a8b01484547172e25c6350f06d77e60ba519ac"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-group-WeaponCraft.png",
+      "sha256": "c39bdb95bc0e9717d30a3222fddef464c2abb744659f0cb1f61a201f7b626603"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-group-WeaponReset.png",
+      "sha256": "744cd9c5e3d8b46162bc5c87bc8d34e479603d6ceb7f3e750f31a967102a434d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-group-WeddingRing.png",
+      "sha256": "63098f3342fcab1bfa62c643beb0e976661bc31aa85fbc49877fa1f4c4869ae9"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-long-card-1024x768.png",
+      "sha256": "b54dbb90ee816caf7e8ce88e8938e58db9699ca746ac56619e537aabd29317d0"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-long-card-1280x800.png",
+      "sha256": "9af5d5190590baef30643a68935da1600322be27fe22afbcdefb99835486360a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-long-card-1366x768.png",
+      "sha256": "b55ab3338eb65b583ca33cfc58a937c5842bb00a363738de01796dd6b1d74b66"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-long-card-1440x900.png",
+      "sha256": "665a37a21a65083e4d3c0980408c08764ce82bf01a783998b3c71a108f3d5266"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-long-card-1600x900.png",
+      "sha256": "792dbd50a93b47560b02c8c1bd2a0d8aec1f8db6e7357e88cdc4c0cf9dd38d18"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-long-card-1920x1080.png",
+      "sha256": "343c8ce461c764e57c1b570bcd13674141d2b621d46778cc33e407c9ab477f7f"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-long-card-bottom.png",
+      "sha256": "b54dbb90ee816caf7e8ce88e8938e58db9699ca746ac56619e537aabd29317d0"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-long-card-open-ms.txt",
+      "sha256": "72d1b5da6eeaf1789df86487da50ad5e9dadb5ffaecb56b6de592aa286c9c1b8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-long-card-partial-line.png",
+      "sha256": "382cf651c1bf649d422fcffa975b7021cb7a1485ab692cdf36fe17fb772cb58e"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-long-card-top.png",
+      "sha256": "d154b3c83f92432d87fe900abb6fbb975094d02a2d6ed3fa6af781a6966f3b3d"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-long-text-reference.png",
+      "sha256": "63ea7a263505137352f230f85a422f09e91ab97d20ca985316bf3e2865a92f02"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-long-text-texture.png",
+      "sha256": "63ea7a263505137352f230f85a422f09e91ab97d20ca985316bf3e2865a92f02"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-paragraph-0-bottom-long-text-reference.png",
+      "sha256": "540cf8ddf77fd1f66ffcc649f94881940f350239284b80e3216d05b32eadb668"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-paragraph-0-bottom-long-text-texture.png",
+      "sha256": "540cf8ddf77fd1f66ffcc649f94881940f350239284b80e3216d05b32eadb668"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-paragraph-0-top-long-text-reference.png",
+      "sha256": "540cf8ddf77fd1f66ffcc649f94881940f350239284b80e3216d05b32eadb668"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-paragraph-0-top-long-text-texture.png",
+      "sha256": "540cf8ddf77fd1f66ffcc649f94881940f350239284b80e3216d05b32eadb668"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-paragraph-1-bottom-long-text-reference.png",
+      "sha256": "3c877d05e4761b12e3f859ddcd81930155c8b2679c4142c6764fa24ed2e61bf1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-paragraph-1-bottom-long-text-texture.png",
+      "sha256": "3c877d05e4761b12e3f859ddcd81930155c8b2679c4142c6764fa24ed2e61bf1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-paragraph-1-top-long-text-reference.png",
+      "sha256": "3c877d05e4761b12e3f859ddcd81930155c8b2679c4142c6764fa24ed2e61bf1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-paragraph-1-top-long-text-texture.png",
+      "sha256": "3c877d05e4761b12e3f859ddcd81930155c8b2679c4142c6764fa24ed2e61bf1"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-paragraph-2-bottom-long-text-reference.png",
+      "sha256": "76f9761631c924f05ee0b940de90650b0fdd8f6aafc690b16f6c44256a4d29c5"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-paragraph-2-bottom-long-text-texture.png",
+      "sha256": "76f9761631c924f05ee0b940de90650b0fdd8f6aafc690b16f6c44256a4d29c5"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-paragraph-2-top-long-text-reference.png",
+      "sha256": "fbd146c4875677e71b4aea14983e602bc6b6a30d7afec1da3b69ae006f9dd385"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-paragraph-2-top-long-text-texture.png",
+      "sha256": "fbd146c4875677e71b4aea14983e602bc6b6a30d7afec1da3b69ae006f9dd385"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-paragraph-3-bottom-long-text-reference.png",
+      "sha256": "bea194a346d02dcd2ef465ee055452165c9160e1e376cb9f231bded2a48bfb20"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-paragraph-3-bottom-long-text-texture.png",
+      "sha256": "bea194a346d02dcd2ef465ee055452165c9160e1e376cb9f231bded2a48bfb20"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-paragraph-3-top-long-text-reference.png",
+      "sha256": "bea194a346d02dcd2ef465ee055452165c9160e1e376cb9f231bded2a48bfb20"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-paragraph-3-top-long-text-texture.png",
+      "sha256": "bea194a346d02dcd2ef465ee055452165c9160e1e376cb9f231bded2a48bfb20"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-paragraph-4-bottom-long-text-reference.png",
+      "sha256": "52f16e5b87e95e1883fbb66b55b65a675e943facf62287f7e2ed0ad6ad9ec5a7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-paragraph-4-bottom-long-text-texture.png",
+      "sha256": "52f16e5b87e95e1883fbb66b55b65a675e943facf62287f7e2ed0ad6ad9ec5a7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-paragraph-4-top-long-text-reference.png",
+      "sha256": "52f16e5b87e95e1883fbb66b55b65a675e943facf62287f7e2ed0ad6ad9ec5a7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-paragraph-4-top-long-text-texture.png",
+      "sha256": "52f16e5b87e95e1883fbb66b55b65a675e943facf62287f7e2ed0ad6ad9ec5a7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-paragraph-native-geometry.txt",
+      "sha256": "685fc10cc9db4dc20dd5ac1cc8c20f1ce90e974bf7f7b658e4174573550bf14b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-paragraph-regions-0-bottom.png",
+      "sha256": "0752888ee514617d8adc950b02b491bdcccd3dde61df703e4b109e17f04563d3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-paragraph-regions-0-top.png",
+      "sha256": "0752888ee514617d8adc950b02b491bdcccd3dde61df703e4b109e17f04563d3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-paragraph-regions-1-bottom.png",
+      "sha256": "01232ed4471cbd70cc61d322947b99f432f82081dc97c4cfcd258c0e69a4c56c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-paragraph-regions-1-top.png",
+      "sha256": "6cf4141602db2109c411ac89089dece740825c6eec308a0ae1920fea0f02166b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-paragraph-regions-2-bottom.png",
+      "sha256": "cae9dc7b5665b8b1ca018b6744b1f83560cc9a6a65f361c288cfcf58e8021237"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-paragraph-regions-2-top.png",
+      "sha256": "81488e09d89be939762cd891d237a74478a856990436f941d1795b4b173990f2"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-paragraph-regions-3-bottom.png",
+      "sha256": "4d8fc3d5d8203756594ae1ee9c0b25f9221ce50947baa426b78d97f2d28da171"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-paragraph-regions-3-top.png",
+      "sha256": "4d8fc3d5d8203756594ae1ee9c0b25f9221ce50947baa426b78d97f2d28da171"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-paragraph-regions-4-bottom.png",
+      "sha256": "06020eff21eccab57697bc154f4ba1fcc6eb491a9dbdafe25d69591ff1c737d3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-paragraph-regions-4-top.png",
+      "sha256": "06020eff21eccab57697bc154f4ba1fcc6eb491a9dbdafe25d69591ff1c737d3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-partial-line-long-text-reference.png",
+      "sha256": "966bb5e8cc0c4cc6428f93a50e5c86a2c4db0e33f84f4ecd89f8ac4913ad16aa"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-partial-line-long-text-texture.png",
+      "sha256": "966bb5e8cc0c4cc6428f93a50e5c86a2c4db0e33f84f4ecd89f8ac4913ad16aa"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-quest-group-BuySell-False.png",
+      "sha256": "8ba19c518f2a7e821234e97c212348a24b8b37e5e2b184d3302df5bbeb68ec34"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-quest-group-BuySell-True.png",
+      "sha256": "2a5ca1207d7b0dec7c8bb8e04d03704b3b28ee32d5e53329ecb64dec57eb7342"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-quest-group-None-False.png",
+      "sha256": "9475e2c37b1b062512bb37ba4833c76e8019ad076716bb5ee4951dfd7ee2d3c8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-quest-group-None-True.png",
+      "sha256": "3fc198b71b8ab8926a619f70b9ef0d9d77486695394b5acd42c1263b522bb497"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-quest-open-layouts.txt",
+      "sha256": "3b9186363a3f621d173f5a5435d3427fc6cb8353c036f714d802f3eacf645179"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-refine-retrieve.png",
+      "sha256": "3f7eb9a9f7340ceb814a555debee9cb55c1d0754284b4b0971d010da44cf59f3"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-refine.png",
+      "sha256": "0777dc5bb26557845515406d9542c476eafe8579336d2f2105d4d7b0ca209a79"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-repair-full.png",
+      "sha256": "88db572245fc19774293834e687fa1b377f9a0f147e44ef8ff2dde6fd2211b31"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-reset-1024x768.png",
+      "sha256": "b23ebfbbf33922fe2f863509032d879ddf3d14bd569d57beadb417a02e0a15b8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-reset-1280x800.png",
+      "sha256": "d1ec9b51d29b2e5931cb48055f57c4e2e0229dc5d8ed2a950e5508d6f5773f5a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-reset-1366x768.png",
+      "sha256": "d7cea0b802505a77da7e495fa8dc1b092940b3088212f9f03b19d44cd9b3a4d2"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-reset-1440x900.png",
+      "sha256": "dfbceb3b8cfc600a6f8b707206f4b594a37417ad53a2b4628e2a787c992e4891"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-reset-1600x900.png",
+      "sha256": "217cce3ffb4be7a12b8b9dd80e29641a7c4d49251b2c6a3820f6c110beff3122"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-reset-1920x1080.png",
+      "sha256": "caf615323b22db269fd245c591d2fa2e9521f25e8fcadcf8f81f6d84bbd7406c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-sell-full.png",
+      "sha256": "fa4fb302ec719470b85aef401e43c5d5fb79a86a6e45e24ed08615e04705492a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-trace.txt",
+      "sha256": "91c82d2086833279a797ee32cca8872a03d8474feee7557aab631281914e6b8a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reentry-wrapped-option.png",
+      "sha256": "d26978a42c5b6bc4e2d0b20a25f3a364e07f877494efb454fb43c77ce64008d9"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-refine-retrieve.png",
+      "sha256": "5b9c906204dcd451cec022556cf62ceeb38ea74de0b53d8f742506ac5523a93c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-refine.png",
+      "sha256": "0777dc5bb26557845515406d9542c476eafe8579336d2f2105d4d7b0ca209a79"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-repair-full.png",
+      "sha256": "88db572245fc19774293834e687fa1b377f9a0f147e44ef8ff2dde6fd2211b31"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reset-1024x768.png",
+      "sha256": "b23ebfbbf33922fe2f863509032d879ddf3d14bd569d57beadb417a02e0a15b8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reset-1280x800.png",
+      "sha256": "d1ec9b51d29b2e5931cb48055f57c4e2e0229dc5d8ed2a950e5508d6f5773f5a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reset-1366x768.png",
+      "sha256": "d7cea0b802505a77da7e495fa8dc1b092940b3088212f9f03b19d44cd9b3a4d2"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reset-1440x900.png",
+      "sha256": "dfbceb3b8cfc600a6f8b707206f4b594a37417ad53a2b4628e2a787c992e4891"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reset-1600x900.png",
+      "sha256": "217cce3ffb4be7a12b8b9dd80e29641a7c4d49251b2c6a3820f6c110beff3122"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-reset-1920x1080.png",
+      "sha256": "caf615323b22db269fd245c591d2fa2e9521f25e8fcadcf8f81f6d84bbd7406c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-sell-full.png",
+      "sha256": "fa4fb302ec719470b85aef401e43c5d5fb79a86a6e45e24ed08615e04705492a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-trace.txt",
+      "sha256": "91c82d2086833279a797ee32cca8872a03d8474feee7557aab631281914e6b8a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/official-wrapped-option.png",
+      "sha256": "d26978a42c5b6bc4e2d0b20a25f3a364e07f877494efb454fb43c77ce64008d9"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-20261108-v6/tested-runtime.json",
+      "sha256": "b42ac69a4fa648fab7da5583cde6b102360a5aa5deb4cb126ec8fe05179dfb6c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-full-scene-20261108-v1/legacy-hud.png",
+      "sha256": "5fa69de2c6da4336331e9f837cd0ded6c24f9b714dda1e36432e8880dc050a09"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-full-scene-20261108-v1/legacy-panels.png",
+      "sha256": "d0723781ce5debe099e9ba58f4e2c999706872006bb0ec1594c651cea1634a46"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-full-scene-20261108-v1/legacy-resources.txt",
+      "sha256": "47713d590a1b9214abdef7a0fc33d6c28a2b5a73a0cff9794375a5083020b498"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-full-scene-20261108-v1/official-CharacterTab.png",
+      "sha256": "43a1af56f6c3bfd96763e2bdc70b81fcda2ad9bddce1aa09a95ffa0b5055eac8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-full-scene-20261108-v1/official-extraEquipmentTab.png",
+      "sha256": "fd2f77d0befc66bba22a81f66c6636dd2b169066f24bb721f5170886176243ca"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-full-scene-20261108-v1/official-HermitTab.png",
+      "sha256": "0bb2f47907de068dd949e5a6e35913be047868970d2da053ff4d83516c1971df"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-full-scene-20261108-v1/official-hud.png",
+      "sha256": "0d72ce7b9c9ed1d0c807333ef4c62517a0f9d90d6f49015ba946f1b0882384ac"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-full-scene-20261108-v1/official-panels.png",
+      "sha256": "43a1af56f6c3bfd96763e2bdc70b81fcda2ad9bddce1aa09a95ffa0b5055eac8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-full-scene-20261108-v1/official-reentry-hud.png",
+      "sha256": "39be0066510de06ba2465cc008c6379ffbc4c556c67be4870b3a750f99696f4b"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-full-scene-20261108-v1/official-reentry-panels.png",
+      "sha256": "8a0a2644ac845d99ab8104c3cc9acdd0573cdff950c0706b3a8b1a2bd2d4d2a8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-full-scene-20261108-v1/official-reset-1024x768.png",
+      "sha256": "43a1af56f6c3bfd96763e2bdc70b81fcda2ad9bddce1aa09a95ffa0b5055eac8"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-full-scene-20261108-v1/official-reset-1280x800.png",
+      "sha256": "6da4d263d19f1aae323e49c0f41f848bd9fb075cb94dafb02df4e2f0749ef8a4"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-full-scene-20261108-v1/official-reset-1366x768.png",
+      "sha256": "bccd5d8071878413408790dbe90b5d5a1ea48d880be4cec00c916469bc30f495"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-full-scene-20261108-v1/official-reset-1440x900.png",
+      "sha256": "1b0be5742da74968aba14f74293e474a1324d346421cab3b9692607f90f43a06"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-full-scene-20261108-v1/official-reset-1600x900.png",
+      "sha256": "ddc79b57cfef144f95511d28a92a7ad2351a7a8d74ed73ca4e19a4a5f8f44ba7"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-full-scene-20261108-v1/official-reset-1920x1080.png",
+      "sha256": "686e3cc1df80daea96d79cdb643655e960d5a1d3d48b39e03ad3ecfcac005f7a"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-full-scene-20261108-v1/official-StatsTab.png",
+      "sha256": "dc665d7ec9343b3bdbdd2fd5bbc16f245d961d0ab217de3d7af7e82be17d8664"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-full-scene-20261108-v1/reset-pixel-probes.txt",
+      "sha256": "2c236cd844574b74b6d502b13ffed99b5cb29783fc53ea00587ca1543a18ac67"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-full-scene-20261108-v1/tested-runtime.json",
+      "sha256": "b42ac69a4fa648fab7da5583cde6b102360a5aa5deb4cb126ec8fe05179dfb6c"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-window-set-20261108-v1/button-hitmask-cpu.txt",
+      "sha256": "8c02ba0d543cdf1f7ebeb48c8e6f52a83dde10de6fcca3b43899d8982e666927"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-window-set-20261108-v1/legacy-glyph-restored.png",
+      "sha256": "0a53fff02c059efc67e4808ccfbd669c8560f8a164c6da2f2f6970301adcf2ff"
+    },
+    {
+      "path": "E:/workspace/mir3-ui-work/npc-quest-open-window-set-20261108-v1/legacy-glyph-suppressed.png",
+      "sha256": "5a739a1abe0ce2f11461d1c429810d6256b07eabeb58321d7f9ba821f84b2cab"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/audit-history.py",
+      "sha256": "43b3dd93e1bb748275abd80d37a7d986d4016b83b72bd6cf2e0ed3bac1c1fd92"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/build-debug-v2.log",
+      "sha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/build-debug-v2.receipt.json",
+      "sha256": "93ae1f97148c3236439ddb816113f2febf492c12f559fd2e1f7e24aa3e819877"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/build-debug-v3.log",
+      "sha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/build-debug-v3.receipt.json",
+      "sha256": "642e8cfce923b638ccd2854f9c96ee0eb3a6666866aae788a178b30a12330f02"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/build-debug-v4.log",
+      "sha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/build-debug-v4.receipt.json",
+      "sha256": "ebaefb8a7ef5ffdce2b7f93f8ff2573c3cdade41f127bdd604cd7409631d3038"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/build-debug.log",
+      "sha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/build-debug.receipt.json",
+      "sha256": "0d4f0cd119db89110a95175daf33edbf705acfaaee3fa2f956a91de9fbbfc0db"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/build-release.log",
+      "sha256": "c9e24428be1e56c8408af17aacfea3413de3953bfe426d10eb768782f5005ebc"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/build-release.receipt.json",
+      "sha256": "ea8e46d9012e3e0eedef020591f755dbcd1c54b41cc0997288b5db9c176f6003"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/check-whitespace.py",
+      "sha256": "b0a86f69a0f4d2d1028cf29ec177b27a0b21d80f60d2f17ed9eaf8f84c6a104f"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/full-scene.log",
+      "sha256": "0d85d4de7905eb608acc989200b5dfcc19842b35b62586889490caf606d4a988"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/full-scene.receipt.json",
+      "sha256": "a699112559e2100e33b952e8bbeba31a032261c747ada074faa21bcbf6a7b2e6"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/history-audit.json",
+      "sha256": "458eddf244a5af012aa5d503945025888b5a04a8437f905222297029eae8b8a0"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/history-audit.log",
+      "sha256": "458eddf244a5af012aa5d503945025888b5a04a8437f905222297029eae8b8a0"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/history-audit.receipt.json",
+      "sha256": "08fac0fd2ed8eb37b508c916d601fffef228f250181bd2d3d6363e54a47b9283"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/manifest-debug.log",
+      "sha256": "c4c7d2e411a55f77902012f68567d933384b52b40f07c6f6f76d94c774eb6b82"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/manifest-debug.receipt.json",
+      "sha256": "583535dd311876d37d361545323ba784b1ab4190b65ee85a7b71e5deedead8ce"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/manifest-release.log",
+      "sha256": "2853ba3129fd374a4e2c42e527c1bd9a2a848d3147edbc98a3284702ee8825e7"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/manifest-release.receipt.json",
+      "sha256": "964f23885ee066b6a32b42ced2b445ed89e55066cf090c3602c0c49c7a41f714"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/npc-open-v1.log",
+      "sha256": "188a065ac2366acb20ef992c13e321d5484f641981a4966f1291e08475603851"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/npc-open-v1.receipt.json",
+      "sha256": "1461fb229db580a6390605ffafe54f7210d13fc211239a7aaee2a0ede36075dc"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/npc-open-v2.log",
+      "sha256": "e613716e50b3cce8db6c57037824e1d9dd4cb8acf5f662e312e04ed10c882a48"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/npc-open-v2.receipt.json",
+      "sha256": "bc65291ca8833717e42b0898435b7920c78b09037a36f97f7524f7a0544ce41a"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/npc-open-v3.log",
+      "sha256": "9036544a4de76da405b3278dde6856d43ad7b3a2f30084d3b10bd0fb0eff6abd"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/npc-open-v3.receipt.json",
+      "sha256": "298955e4c8aaa74654172f938a9ea873e6ff4f0e57b4b43a5f579cfc76c6c690"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/npc-open-v4.log",
+      "sha256": "9036544a4de76da405b3278dde6856d43ad7b3a2f30084d3b10bd0fb0eff6abd"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/npc-open-v4.receipt.json",
+      "sha256": "c10dea3f737ac323978696b2a76936ecfae101c03e02a96551aff2dd4db76fd7"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/npc-open-v5.log",
+      "sha256": "c4064373b1fa3bd60a228f14138bc504053384b0a75613bb69c42ef4c75e74f0"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/npc-open-v5.receipt.json",
+      "sha256": "321e9a85b720bf3f1148d3403fc36b991272a7fcebb12610b855966aa48cda97"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/npc-open-v6.log",
+      "sha256": "450940d560e24cd78b83d03a45e5abd3e9bc62dc43c1d10108c04c479f7eea42"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/npc-open-v6.receipt.json",
+      "sha256": "9d66a8e3c396148c6f3fdf8e197a7cd0e80428cd041d72c7892d4a2cbc682a60"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/prepare-report.py",
+      "sha256": "8f37672a8ac7b589626fdcb4ec4f4cd75b03ae7a63a32c050bc51b27a19724e8"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/python-tests.log",
+      "sha256": "38b9c04ad55919d564d1a0ed73f42555dcb0e512d5f5fc60aa8607697805d77e"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/python-tests.receipt.json",
+      "sha256": "2c5c0ae76a1f236245f432f02f13f00eea0caf7ee475167ac961f2e67738726b"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/README.md",
+      "sha256": "bd3dd456e5cd4b505cc09968a055d6d6c3ee649c86d3dcc6a26ee3b8755ec6dc"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/release-manifest-debug.json",
+      "sha256": "fdfd4a9617e0b2438f0442199ef0deb94a02d3b68a6e65ceb76749b92610792e"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/release-manifest-release.json",
+      "sha256": "be9c7752fe2aeb7fcafc91a94eea756f0c5def498f358811625b4db1ac6a32fc"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/run-check.py",
+      "sha256": "8cea69f8c28d781722ec26876840ea3e6bb44ae5ed37e2d213fdab62d1a7c943"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/source-before/Client/Envir/GameUiNpcGroupLayout.cs",
+      "sha256": "aecfec37cda3dde4547b83ecbd8bde80b671f8054b6dec84c10b71a493781fb5"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/source-before/Client/Envir/GameUiOfficialV1WindowSet.cs",
+      "sha256": "0474ee862dc3a71aebdafe66af798cd44c48b843c885560c6a0c8556196593b5"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/source-before/tests/game-ui/OfficialUiNpcQuestTests.cs",
+      "sha256": "5b7f36812b54da3801b96f000e2e6973c74b05c32aaccb5b612569d6ac539b55"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/source-before/tests/game-ui/OfficialUiNpcTests.cs",
+      "sha256": "ee3c1302c32a330768e31d81c947c33f79608436cd5b155a347268d1501d499c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/source-before.json",
+      "sha256": "228c3b69ecbd3b89e515fb2980137a9b760395a2257a226c371193ee17fe4325"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/task-validation.log",
+      "sha256": "90e3ddffa807ef19523e77855653984be659ff7ab47ec66f04d41348c4cb85b3"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/task-validation.receipt.json",
+      "sha256": "80435086d5a6aa23bd6e337a76a9be59c3001d17f25f70ecc0968f58889f3a02"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/tested-runtime.json",
+      "sha256": "b42ac69a4fa648fab7da5583cde6b102360a5aa5deb4cb126ec8fe05179dfb6c"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/whitespace-final.log",
+      "sha256": "64e2015c7bd6d9c5d404f5eabaa1b6df7688ffa2e09af9729a699664f920639b"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/whitespace-final.receipt.json",
+      "sha256": "cf1fc46f6b27153ece5dc0172f7a33f0db6ac7591f6b5f9815c7fe3c57382901"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/whitespace.log",
+      "sha256": "e0443564231bd9d5fd31fd0d4130b7f9a489b544754839cce6329f520aa51527"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/whitespace.receipt.json",
+      "sha256": "e64e3c1f0829b6d4fc7c6e08b7256c14191537fec20747c3de3883a208d6c98f"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/window-set.log",
+      "sha256": "7268516005f09c2a1283c4de8f08e4192f9df4b73af2b019795f9bab1c1bb222"
+    },
+    {
+      "path": "docs/design/assets/official-ingame-ui/acceptance/npc-quest-open/window-set.receipt.json",
+      "sha256": "bea9e5bcc1a4d71cbed8dbb24fb01bac8ff845d9455064f7344f96c1c495adc9"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "kind": "character-material-selection-review",
+  "reviewDate": "2026-11-10",
+  "selectedLibrary": "UI",
+  "selectedIndex": 2765,
+  "logicalSize": [
+    412,
+    562
+  ],
+  "sourceOffset": [
+    0,
+    0
+  ],
+  "rawPng": "raw/UI/2765.png",
+  "basis": "User identified UI[2765] as closest. Native dimensions and existing character layout agree; source pixels match the previously selected reference exactly.",
+  "sourceHashes": {
+    "mixSha256": "fed07d576cceefead51bfa5ddb6caf99787684491c1a60483e5192fe858eb23b",
+    "mizSha256": "22a395e909c7261a0f3d51f124313ca56af23cc73a2d45e1d933bd2ac0fdea8f"
+  },
+  "runtimeModified": false,
+  "finding": "Current source selection is already UI[2765]. The composition recipe covers the inner panel, repairs former slots, relocates readout frames and overlays independent equipment cells. These transformations explain visible differences from the raw asset.",
+  "comparison": "confirmed-2765-comparison.png",
+  "comparisonNote": "First three panels are native decoded source images. Fourth is existing composed base plus character-page backdrop; no runtime character, controls or equipment overlays.",
+  "limitations": [
+    "No new user target screenshot was supplied; this confirms source suitability and transformation differences, not pixel-perfect acceptance.",
+    "UI[5107] and UI[5322] failed strict decode during panel survey; failures retained in inventory.json."
+  ]
+}

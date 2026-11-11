@@ -1,0 +1,10 @@
+[
+  {
+    "path": "Client/Envir/GameUiNpcGoodsBinding.cs",
+    "sha256": "1f8cf4d07a054f7890ea70a97fe0b9c34803b4e1988a53504182d8243492d4cf"
+  },
+  {
+    "path": "tests/game-ui/OfficialUiNpcGoodsTests.cs",
+    "sha256": "f0788cee5c5a86637c9a361a50d1f92be69e81fd9cb95521a7c02131de955b96"
+  }
+]

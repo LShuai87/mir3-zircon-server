@@ -1,0 +1,61 @@
+{
+  "date": "2026-11-11",
+  "scope": "minimap footer toolbar: big map, opacity, coordinates, viewport size",
+  "builds": {
+    "Debug": "pass",
+    "Release": "pass"
+  },
+  "minimap": {
+    "status": "pass",
+    "checks": 433651,
+    "viewportPixelComparisons": 206040,
+    "outsideTitlePixelsUnchanged": 195480,
+    "titleFrames": 6,
+    "coordinateWellPixelsPreserved": 1850,
+    "renderDirectory": "verified-render"
+  },
+  "windowSet": {
+    "status": "pass",
+    "checks": 562065,
+    "resolutionCount": 6,
+    "enlargedAndCollapsedResolutionTransitions": true
+  },
+  "sharedControls": {
+    "status": "pass",
+    "skinChecks": 60,
+    "controlsReaderChecks": 26
+  },
+  "embeddedArt": {
+    "status": "pass",
+    "frameCount": 16,
+    "sha256": "61ce4e340e93893c38b77142c95a5e6cd9552c3076eb7b50750ee323bd8e71f9",
+    "command": "python build/game-ui/Prepare-MiniMapButtonArt.py --source 'E:/Program Files/ShengquGames/Mir3/Data' --check"
+  },
+  "routingContract": {
+    "status": "pass",
+    "command": "python build/game-ui/Prepare-CharacterBindings.py --manifest build/game-ui/character-routing.json"
+  },
+  "fullLayoutContract": {
+    "status": "blocked-existing",
+    "error": "Overlap outside alpha-tested wheel edges: commands.CharacterButton, commands.BeltButton",
+    "control": "Reproduced in memory with all minimap.footer.* nodes removed. Joined contract check encounters the same error."
+  },
+  "limitations": [
+    "No live server login or real map loading.",
+    "Preview uses actual official artwork with an empty map area; synthetic GPU maps verify clipping and opacity.",
+    "Window frame grows by slicing the reviewed normal frame rather than adding native UI[340] to the sealed package.",
+    "Opacity retains the existing renderer layer blending; it is not a single composited group.",
+    "Enlarged/collapsed state is session-only.",
+    "Full joined contract generation remains blocked by the existing command wheel overlap rule."
+  ],
+  "runtime": [
+    {
+      "path": "E:\\workspace\\Debug\\Client\\Zircon.exe",
+      "sha256": "46ea92e487b842c26875cc19050434398f962a090d9bc7bccc29b0abf82582a3"
+    },
+    {
+      "path": "E:\\workspace\\Release\\Client\\Zircon.exe",
+      "sha256": "be3e4d992856841657ae03878510784d2fda49b68408c9e4931675b90326024c"
+    }
+  ]
+}

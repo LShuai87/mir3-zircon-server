@@ -9,7 +9,7 @@ using Library;
 //Cleaned
 namespace Client.Scenes.Views
 {
-    public sealed class BeltDialog : DXWindow
+    public sealed partial class BeltDialog : DXWindow
     {
         #region Properties
 
@@ -22,6 +22,9 @@ namespace Client.Scenes.Views
             base.OnClientAreaChanged(oValue, nValue);
 
             if (Links == null) return;
+
+            // During binding and rollback the original ten cells must survive client-area changes.
+            if (gameUiBeltSnapshot != null) { ApplyGameUiBeltGrid(); return; }
 
             Grid?.Dispose();
 
@@ -55,7 +58,10 @@ namespace Client.Scenes.Views
 
         #endregion
 
-        public BeltDialog()
+        public BeltDialog() : this(false) { }
+
+        // Opt in at startup, before loading window settings or installing a skin.
+        public BeltDialog(bool initializeTenSlots)
         {
             HasTitle = false;
             HasFooter = false;
@@ -69,7 +75,7 @@ namespace Client.Scenes.Views
             for (int i = 0; i < Globals.MaxBeltCount; i++)
                 Links[i] = new ClientBeltLink { Slot = i };
 
-            Size = GetAcceptableResize(Size.Empty);
+            Size = GetAcceptableResize(initializeTenSlots ? GetSize(new Size(361, 36)) : Size.Empty);
         }
 
         #region Methods
@@ -88,6 +94,8 @@ namespace Client.Scenes.Views
         }
         public override Size GetAcceptableResize(Size size)
         {
+            if (GameUiBeltLayout != null) return GameUiBeltLayout.WindowSize;
+
             Rectangle area = GetClientArea(size);
 
             int x = (int)Math.Ceiling((area.Width - 10) / (float)DXItemCell.CellWidth);
@@ -114,6 +122,7 @@ namespace Client.Scenes.Views
 
         protected override void Dispose(bool disposing)
         {
+            if (disposing) DisableGameUiBelt();
             base.Dispose(disposing);
 
             if (disposing)

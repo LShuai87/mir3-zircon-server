@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "releaseAccepted": false,
+  "frames": 1,
+  "logicalAlphaPixelsChecked": 243840,
+  "transparentPixels": 5222,
+  "zlBytes": 121954,
+  "zlSha256": "471169dfa093b521f3c700c5a993e4e763aa17a45b2e16f440d961c0c7bf4cec",
+  "sourcePngSha256": "f574ddf094e5f1a0b4d78ccd31da1f9e9b3402ec6be8f9fb9b025358239c85d1",
+  "pngSha256": "363e83de884dbd0346c7bd1f5924965c4c3f385bb8646772d215bed60039fa38",
+  "bc1PayloadSha256": "720a1a70a050a1c6f1fdccfd7613a084d6cac976b3824a97653c251336cc0dbc",
+  "maxPngToBc1ChannelError": 47,
+  "meanPngToBc1ChannelError": 0.8961,
+  "gpuValidated": false
+}

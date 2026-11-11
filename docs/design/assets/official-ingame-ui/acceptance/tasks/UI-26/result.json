@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "taskId": "UI-26",
+  "status": "in_progress",
+  "checkedAtLocalDate": "2026-11-08",
+  "releaseAccepted": false,
+  "commits": [],
+  "implemented": [
+    "清单生成、EXE/依赖/包/编译目录契约与buildId核对",
+    "部署前全目标预检、文件句柄固定输入、复制后哈希与清单原子写入",
+    "两个PowerShell版本各41项检查及原Legacy回归通过"
+  ],
+  "evidence": [
+    "docs/design/assets/official-ingame-ui/acceptance/deployment/README.md",
+    "docs/design/assets/official-ingame-ui/acceptance/deployment/powershell7/results.json",
+    "docs/design/assets/official-ingame-ui/acceptance/deployment/windows-powershell/results.json"
+  ],
+  "unresolved": [
+    "UI-07/UI-12前置任务未验收",
+    "实际RuntimeReady=true客户端的成功部署未验收",
+    "A01/A20及最终游戏交互与视觉验收未完成",
+    "整包回退未验收"
+  ],
+  "acceptanceCases": []
+}

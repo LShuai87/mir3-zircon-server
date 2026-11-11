@@ -1,0 +1,22 @@
+Manifest ready: gameui-0db78408cf0902281bd553377505f684a70aef211f4d711a909b655aed22298b; RuntimeReady=False
+Inspection artifact only: OfficialV1 deployment remains blocked by the compiled readiness gate.
+Manifest ready: gameui-0db78408cf0902281bd553377505f684a70aef211f4d711a909b655aed22298b; RuntimeReady=False
+Inspection artifact only: OfficialV1 deployment remains blocked by the compiled readiness gate.
+Manifest ready: gameui-d45a7888292eae68b018ff365ac8c862b11b83dc719f03f560089eaf548ca67a; RuntimeReady=True
+Preparing C:\Users\shuai\AppData\Local\Temp\ZirconUiReleaseTests-726d9615d26446d4aabdbdc686b8aec7\deployed client\Data
+Verified 6 files in C:\Users\shuai\AppData\Local\Temp\ZirconUiReleaseTests-726d9615d26446d4aabdbdc686b8aec7\deployed client\Data
+Preparing C:\Users\shuai\AppData\Local\Temp\ZirconUiReleaseTests-726d9615d26446d4aabdbdc686b8aec7\deployed client\Map
+Verified 2 files in C:\Users\shuai\AppData\Local\Temp\ZirconUiReleaseTests-726d9615d26446d4aabdbdc686b8aec7\deployed client\Map
+Preparing C:\Users\shuai\AppData\Local\Temp\ZirconUiReleaseTests-726d9615d26446d4aabdbdc686b8aec7\deployed client\Sound
+Verified 1 files in C:\Users\shuai\AppData\Local\Temp\ZirconUiReleaseTests-726d9615d26446d4aabdbdc686b8aec7\deployed client\Sound
+Verified OfficialV1 build: gameui-d45a7888292eae68b018ff365ac8c862b11b83dc719f03f560089eaf548ca67a
+Assets ready. Start Zircon.exe with working directory: C:\Users\shuai\AppData\Local\Temp\ZirconUiReleaseTests-726d9615d26446d4aabdbdc686b8aec7\deployed client
+Preparing C:\Users\shuai\AppData\Local\Temp\ZirconUiReleaseTests-726d9615d26446d4aabdbdc686b8aec7\deployed client\Data
+Verified 6 files in C:\Users\shuai\AppData\Local\Temp\ZirconUiReleaseTests-726d9615d26446d4aabdbdc686b8aec7\deployed client\Data
+Preparing C:\Users\shuai\AppData\Local\Temp\ZirconUiReleaseTests-726d9615d26446d4aabdbdc686b8aec7\deployed client\Map
+Verified 2 files in C:\Users\shuai\AppData\Local\Temp\ZirconUiReleaseTests-726d9615d26446d4aabdbdc686b8aec7\deployed client\Map
+Preparing C:\Users\shuai\AppData\Local\Temp\ZirconUiReleaseTests-726d9615d26446d4aabdbdc686b8aec7\deployed client\Sound
+Verified 1 files in C:\Users\shuai\AppData\Local\Temp\ZirconUiReleaseTests-726d9615d26446d4aabdbdc686b8aec7\deployed client\Sound
+Verified OfficialV1 build: gameui-d45a7888292eae68b018ff365ac8c862b11b83dc719f03f560089eaf548ca67a
+Assets ready. Start Zircon.exe with working directory: C:\Users\shuai\AppData\Local\Temp\ZirconUiReleaseTests-726d9615d26446d4aabdbdc686b8aec7\deployed client
+PASS: 41 release/deployment checks; real catalog remains blocked; Official success is a test-only fixture.

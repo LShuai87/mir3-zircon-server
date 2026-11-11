@@ -12,12 +12,13 @@ using Library.SystemModels;
 //Cleaned
 namespace Client.Scenes.Views
 {
-    public sealed class MiniMapDialog : DXWindow
+    public sealed partial class MiniMapDialog : DXWindow
     { 
         #region Properties
 
         public Rectangle Area;
         private DXImageControl Image;
+        private readonly MapControl mapSource;
         public DXControl Panel;
 
         public Dictionary<object, DXControl> MapInfoObjects = new Dictionary<object, DXControl>();
@@ -34,6 +35,9 @@ namespace Client.Scenes.Views
             foreach (DXControl control in MapInfoObjects.Values)
                 control.Opacity = Opacity;
 
+            if (gameUiExpandStroke != null) gameUiExpandStroke.Opacity = Opacity;
+            RefreshGameUiTransparencyHint();
+
             if (Image != null)
             {
                 Image.Opacity = Opacity;
@@ -43,6 +47,12 @@ namespace Client.Scenes.Views
         public override void OnClientAreaChanged(Rectangle oValue, Rectangle nValue)
         {
             base.OnClientAreaChanged(oValue, nValue);
+
+            if (gameUiMiniMapSnapshot != null)
+            {
+                ApplyGameUiMiniMap();
+                return;
+            }
 
             Area = ClientArea;
             Area.Inflate(6,6);
@@ -58,8 +68,9 @@ namespace Client.Scenes.Views
 
 
         public override WindowType Type => WindowType.MiniMapBox;
-        public override bool CustomSize => true;
-        public override bool AutomaticVisiblity => true;
+        public override bool CustomSize => GameUiMiniMapLayout == null;
+        // OfficialV1 keeps its header available and uses collapse instead of hiding.
+        public override bool AutomaticVisiblity => GameUiMiniMapLayout == null;
 
         #endregion
 
@@ -87,14 +98,42 @@ namespace Client.Scenes.Views
                 Movable = true,
                 IgnoreMoveBounds =  true,
             };
-            GameScene.Game.MapControl.MapInfoChanged += MapControl_MapInfoChanged;
+            mapSource = GameScene.Game.MapControl;
+            mapSource.MapInfoChanged += MapControl_MapInfoChanged;
             Image.Moving += Image_Moving;
         }
 
         #region Methods
 
+        public void ToggleDisplay()
+        {
+            if (GameUiMiniMapLayout != null)
+            {
+                bool collapse = Visible && !GameUiMiniMapCollapsed;
+                Visible = true;
+                SetGameUiMiniMapCollapsed(collapse);
+                return;
+            }
+
+            if (!Visible)
+            {
+                Opacity = 1F;
+                Visible = true;
+            }
+            else if (Opacity == 1F)
+                Opacity = 0.5F;
+            else
+                Visible = false;
+        }
+
         private void Image_Moving(object sender, System.Windows.Forms.MouseEventArgs e)
         {
+            if (GameUiMiniMapLayout != null)
+            {
+                Image.Location = ConstrainMapLocation(Image.Location);
+                return;
+            }
+
             int x = Image.Location.X;
 
             if (x + Image.Size.Width < Panel.Size.Width)
@@ -121,13 +160,26 @@ namespace Client.Scenes.Views
 
             MapInfoObjects.Clear();
 
-            if (GameScene.Game.MapControl.MapInfo == null) return;
+            RefreshGameUiCoordinates();
+            RefreshGameUiSafety();
+            ScaleX = ScaleY = 0;
+            Image.Visible = false;
+            Image.Location = Point.Empty;
+            if (mapSource.MapInfo == null)
+            {
+                TitleLabel.Text = string.Empty;
+                Image.Index = -1;
+                return;
+            }
 
-            TitleLabel.Text = GameScene.Game.MapControl.MapInfo.Description;
-            Image.Index = GameScene.Game.MapControl.MapInfo.MiniMap;
+            TitleLabel.Text = mapSource.MapInfo.Description;
+            Image.Index = mapSource.MapInfo.MiniMap;
+            if (Image.Index < 0 || Image.Library == null || Image.Size.Width <= 0 || Image.Size.Height <= 0 ||
+                mapSource.Width <= 0 || mapSource.Height <= 0) return;
 
-            ScaleX = Image.Size.Width/(float) GameScene.Game.MapControl.Width;
-            ScaleY = Image.Size.Height/(float) GameScene.Game.MapControl.Height;
+            ScaleX = Image.Size.Width / (float)mapSource.Width;
+            ScaleY = Image.Size.Height / (float)mapSource.Height;
+            Image.Visible = true;
             
             foreach (NPCInfo ob in Globals.NPCInfoList.Binding)
                 Update(ob);
@@ -138,11 +190,12 @@ namespace Client.Scenes.Views
             foreach (ClientObjectData ob in GameScene.Game.DataDictionary.Values)
                 Update(ob);
 
+            UpdateMapPosition();
         }
 
         public void Update(NPCInfo ob)
         {
-            if (GameScene.Game.MapControl.MapInfo == null) return;
+            if (mapSource.MapInfo == null || ScaleX <= 0 || ScaleY <= 0) return;
 
             DXControl control;
 
@@ -193,6 +246,7 @@ namespace Client.Scenes.Views
         }
         public void Update(MovementInfo ob)
         {
+            if (mapSource.MapInfo == null || ScaleX <= 0 || ScaleY <= 0) return;
             if (ob.SourceRegion == null || ob.SourceRegion.Map != GameScene.Game.MapControl.MapInfo) return;
             if (ob.DestinationRegion?.Map == null || ob.Icon == MapIcon.None) return;
             
@@ -261,7 +315,7 @@ namespace Client.Scenes.Views
         }
         public void Update(ClientObjectData ob)
         {
-            if (GameScene.Game.MapControl.MapInfo == null) return;
+            if (mapSource.MapInfo == null || ScaleX <= 0 || ScaleY <= 0) return;
             DXControl control;
 
             if (!MapInfoObjects.TryGetValue(ob, out control))
@@ -344,7 +398,7 @@ namespace Client.Scenes.Views
             }
             else 
             {
-                if (MapObject.User.ObjectID == ob.ObjectID)
+                if (MapObject.User?.ObjectID == ob.ObjectID)
                 {
                     colour = Color.Cyan;
                 }
@@ -371,24 +425,46 @@ namespace Client.Scenes.Views
             control.Size = size;
             control.Location = new Point((int)(ScaleX * ob.Location.X) - size.Width / 2, (int)(ScaleY * ob.Location.Y) - size.Height / 2);
 
-            if (MapObject.User.ObjectID != ob.ObjectID) return;
+            if (MapObject.User?.ObjectID != ob.ObjectID) return;
 
-            Image.Location = new Point(-control.Location.X + Area.Width / 2, -control.Location.Y + Area.Height / 2);
+            FollowMapMarker(control);
         }
         
+        // The source image and its children keep their native pixel scale in both viewports.
+        // Centre an undersized axis; otherwise clamp every positioning path to the map edges.
+        private Point ConstrainMapLocation(Point desired)
+        {
+            return new Point(ConstrainMapAxis(desired.X, Image.Size.Width, Panel.Size.Width),
+                ConstrainMapAxis(desired.Y, Image.Size.Height, Panel.Size.Height));
+        }
+
+        private static int ConstrainMapAxis(int desired, int image, int viewport)
+        {
+            return image <= viewport ? (viewport - image) / 2 : Math.Max(viewport - image, Math.Min(0, desired));
+        }
+
+        private void FollowMapMarker(DXControl marker)
+        {
+            Point location = new Point(-marker.Location.X + Area.Width / 2, -marker.Location.Y + Area.Height / 2);
+            if (GameUiMiniMapLayout != null)
+            {
+                location.Offset(-marker.Size.Width / 2, -marker.Size.Height / 2);
+                location = ConstrainMapLocation(location);
+            }
+            Image.Location = location;
+        }
+
         public void UpdateMapPosition()
         {
-            if (MapObject.User == null) return;
-
+            if (Image == null || !Image.Visible) return;
             ClientObjectData data;
-
-            if (!GameScene.Game.DataDictionary.TryGetValue(MapObject.User.ObjectID, out data)) return;
-
             DXControl control;
-            if (!MapInfoObjects.TryGetValue(data, out control)) return;
-
-            Point location = control.Location;
-            Image.Location = new Point(-location.X + Area.Width / 2, -location.Y + Area.Height / 2);
+            if (MapObject.User != null && GameScene.Game.DataDictionary.TryGetValue(MapObject.User.ObjectID, out data) &&
+                MapInfoObjects.TryGetValue(data, out control))
+                FollowMapMarker(control);
+            else if (GameUiMiniMapLayout != null)
+                Image.Location = ConstrainMapLocation(new Point((Panel.Size.Width - Image.Size.Width) / 2,
+                    (Panel.Size.Height - Image.Size.Height) / 2));
         }
 
         public void Remove(object ob)
@@ -403,6 +479,12 @@ namespace Client.Scenes.Views
         
         public override void Draw()
         {
+            if (GameUiMiniMapLayout != null && WindowSkin != null)
+            {
+                base.Draw();
+                return;
+            }
+
             if (!IsVisible || Size.Width == 0 || Size.Height == 0) return;
 
             OnBeforeDraw();
@@ -420,6 +502,12 @@ namespace Client.Scenes.Views
 
         protected override void Dispose(bool disposing)
         {
+            if (disposing)
+            {
+                mapSource.MapInfoChanged -= MapControl_MapInfoChanged;
+                if (Image != null) Image.Moving -= Image_Moving;
+                DisableGameUiMiniMap();
+            }
             base.Dispose(disposing);
 
             if (disposing)

@@ -1,0 +1,12 @@
+{
+  "command": [
+    "C:/Users/shuai/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+    "build/game-ui/Validate-OfficialUiAssets.py",
+    "--artifacts",
+    "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2",
+    "--output",
+    "docs/design/assets/official-ingame-ui/acceptance/warehouse-window-set/usage-audit.json"
+  ],
+  "exitCode": 0,
+  "log": "E:/workspace/mir3-zircon-server/docs/design/assets/official-ingame-ui/acceptance/warehouse-window-set/usage-audit.log"
+}

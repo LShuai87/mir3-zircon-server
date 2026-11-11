@@ -57,10 +57,13 @@ namespace Client.Scenes.Views
 
                 box.YesButton.MouseClick += (o1, e1) =>
                 {
-                    for (int i = ChatTab.Tabs.Count - 1; i >= 0; i--)
-                        ChatTab.Tabs[i].Panel.RemoveButton.InvokeMouseClick();
+                    GameScene.Game.RebuildChatTabs(() =>
+                    {
+                        for (int i = ChatTab.Tabs.Count - 1; i >= 0; i--)
+                            ChatTab.Tabs[i].Panel.RemoveButton.InvokeMouseClick();
 
-                    CreateDefaultWindows();
+                        CreateDefaultWindows();
+                    });
                 };
             };
 
@@ -77,8 +80,8 @@ namespace Client.Scenes.Views
             {
                 // DXMessageBox box = new DXMessageBox("Are you sure you want to reset ALL chat windows", "Chat Reset", DXMessageBoxButtons.YesNo);
 
-                GameScene.Game.SaveChatTabs();
-                GameScene.Game.ReceiveChat("保存布局", MessageType.Announcement);
+                bool saved = GameScene.Game.SaveChatTabs();
+                GameScene.Game.ReceiveChat(saved ? "保存布局" : "聊天布局保存失败，请结束拖动并检查配置目录权限。", MessageType.Announcement);
             };
 
             button = new DXButton
@@ -187,12 +190,13 @@ namespace Client.Scenes.Views
                 ListBox.SelectedItem = nextItem;
 
                 item.Dispose();
-                panel.Dispose();
                 ListBox.UpdateItems();
 
-
+                // Native tab disposal may select another page or refresh the chat group.
+                // Keep its filter controls alive until those callbacks have finished.
                 tabControl = tab.Parent as DXTabControl;
                 tab.Dispose();
+                if (!panel.IsDisposed) panel.Dispose();
 
                 if (tabControl?.Controls.Count == 0)
                     tabControl.Dispose();

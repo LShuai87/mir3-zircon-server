@@ -1,0 +1,15 @@
+{
+  "kind": "warehouse-merged-package-content-verification",
+  "originalFramesUnchanged": 93,
+  "appendedWarehouseIndex": 93,
+  "packageFrames": 94,
+  "package": {
+    "path": "E:\\workspace\\mir3-ui-work\\warehouse-combined-20261108-v2\\zl\\OfficialV1.Zl",
+    "sha256": "dd45cbf51d976a69d28269ee0d27a985def1ee1693cab2b509b74ae347a880a4",
+    "byteLength": 655052
+  },
+  "warehouseSource": "Explicit reuse of UI[511] shop trim, not identified native warehouse artwork.",
+  "runtimeReady": false,
+  "productionBindingAllowed": false,
+  "gpuComparisonExecuted": false
+}

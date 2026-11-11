@@ -1,0 +1,7 @@
+PASS existing-output: Output must be a new directory: E:\workspace\mir3-ui-work\reference-build-v1
+PASS runtime-not-ready: Runtime packaging is unavailable until G0-1..G0-5, semantic roles and layouts are frozen. Reference packages cannot be deployed as OfficialV1.Zl.
+PASS source-overlap: Source and output directories must be disjoint.
+PASS builder-process-failure: Reference Zl conversion failed (exit 2): Unknown option: --official-ui
+usage: C:\Users\shuai\AppData\Local\Python\pythoncore-3.14-64\python.exe [option] ... [-c cmd | -m mod | file | -] [arg] ...
+Try `python -h' for more information.
+

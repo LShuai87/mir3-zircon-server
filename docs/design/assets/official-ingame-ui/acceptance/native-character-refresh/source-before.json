@@ -1,0 +1,42 @@
+[
+  {
+    "path": "tests/game-ui/OfficialUiFullSceneTests.cs",
+    "sha256": "5838a24cd926a6d04c849b2edd19f2c7ecc132d9e1aca02ec5222d8bbe2af3cb"
+  },
+  {
+    "path": "tests/Run-GameUiFullSceneTests.ps1",
+    "sha256": "d1beda854b779283d326bf5f7481de8f0e5db1912274e8d6b1c9d5452a2e849b"
+  },
+  {
+    "path": "Client/Envir/CConnection.cs",
+    "sha256": "c1fed150672060a0f87bb443eed33a6d52eae4511eddf6ed0ed6922f5e2fdc46"
+  },
+  {
+    "path": "Client/Scenes/GameScene.cs",
+    "sha256": "9e5ab5f140a301c895626a952c19983236ec8434985511aa3f6937a964d0f94e"
+  },
+  {
+    "path": "Client/Models/UserObject.cs",
+    "sha256": "62ea8a130ab9567f803ef1420b0865aed99cc8ddcf6f76b42c4cafef2ae06abc"
+  },
+  {
+    "path": "Client/Scenes/Views/CharacterDialog.cs",
+    "sha256": "e633b29bc866f12722af0434859ad40fda0f88dd70e74a87e3a7baf61e8cff74"
+  },
+  {
+    "path": "Client/Scenes/Views/CharacterDialog.GameUiAttributes.cs",
+    "sha256": "94bed40261e7248095af13238b7a88e543f86fe7d13e60c0dbe9c9b7e5fe0aa1"
+  },
+  {
+    "path": "Client/Scenes/Views/CharacterDialog.GameUiControls.cs",
+    "sha256": "7f8b58cc43a56eb959995b9c3da1517d073fe6118204d3f4d300738a7612d78f"
+  },
+  {
+    "path": "Client/Envir/GameUiCharacterReadouts.cs",
+    "sha256": "44074bba0e2d2f4ef6eea9bec2d1f0987dd00bf17e2a54dba5d9f11fa23d355b"
+  },
+  {
+    "path": "Server/Models/PlayerObject.cs",
+    "sha256": "eb58f417b9fa9a817a023c93b556734051c5426984ecd1287f01cb32a80ddeab"
+  }
+]

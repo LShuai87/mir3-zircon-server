@@ -1,0 +1,18 @@
+[
+  {
+    "path": "Client/Client.csproj",
+    "sha256": "077ee6791a71a2aa049785da8af54322a82d404932bdb69f2563d83801fe2353"
+  },
+  {
+    "path": "Client/Scenes/Views/StorageDialog.cs",
+    "sha256": "ef6cdf86e06e62dcd270a3f3cd89c8313a6fd11a11f8d9745f7151ca65cf8f99"
+  },
+  {
+    "path": "docs/tasks/official-ingame-ui/tasks.json",
+    "sha256": "0de8c5ddccf05be04c659a96a43ffac3b995a6db04bc8dcff91667dc96a06178"
+  },
+  {
+    "path": "docs/tasks/official-ingame-ui/README.md",
+    "sha256": "c78916e8c44b8db8b5ab32436d4d9ceafdc9389374d909613229dee8678f7c00"
+  }
+]

@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "kind": "official-ui-composed-art",
+  "runtimeReady": false,
+  "productionBindingAllowed": false,
+  "alphaVerified": false,
+  "sourceManifestSha256": "d38aec646313ea20db4b9dced9acff6fc00d62be44d518f4a7a08f5686d7cc1e",
+  "recipeSha256": "45d7df4cbaed0eb9dc2f1eac35b36db8c60bd700c6ac520525ac4a51fbb157ec",
+  "assets": [
+    {
+      "role": "warehouse-background",
+      "outputIndex": 0,
+      "png": "Assets/warehouse-background.png",
+      "pngSha256": "363e83de884dbd0346c7bd1f5924965c4c3f385bb8646772d215bed60039fa38",
+      "rgbaSha256": "f9b39552556fbfeacdbf2f78748d9c497c24c860a500e011996d224485476233",
+      "logicalSize": [
+        508,
+        480
+      ],
+      "textureSize": [
+        508,
+        480
+      ],
+      "sourceLibrary": "UI",
+      "sourceIndex": 511,
+      "sourcePngSha256": "f574ddf094e5f1a0b4d78ccd31da1f9e9b3402ec6be8f9fb9b025358239c85d1",
+      "sourceOffset": [
+        0,
+        0
+      ],
+      "outputOffset": [
+        0,
+        0
+      ],
+      "pivot": [
+        0,
+        0
+      ],
+      "offsetMode": "baked",
+      "alphaMode": "BinaryMask",
+      "blendMode": "Normal",
+      "sourceRole": "warehouse-background",
+      "state": null
+    }
+  ],
+  "buttons": {},
+  "grids": {},
+  "derivedFrames": [],
+  "compositions": []
+}

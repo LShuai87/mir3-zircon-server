@@ -1,0 +1,54 @@
+{
+  "kind": "two-clean-generation-comparison",
+  "files": [
+    {
+      "path": "OfficialUiLayout.Generated.cs",
+      "sha256": "944eadc093e05bebc741fd96d7c4b528e483e8e54c646db343bcd364f091ef3f"
+    },
+    {
+      "path": "annotations/1024x768-character-inventory.png",
+      "sha256": "786d5571626d269e6ebc297ee7bb3874d3d43e93141f7dc0b5ddffe069295723"
+    },
+    {
+      "path": "annotations/1280x800-character-inventory.png",
+      "sha256": "5f20c4a475d9ea42ce7ea02fe93f79576df8c380f96b5988af793c5113cd0b0a"
+    },
+    {
+      "path": "annotations/1366x768-character-inventory.png",
+      "sha256": "174cbc6b139e92ec5a3a25460b04f7280334735c6ec0afd81ad1ad513d7785c1"
+    },
+    {
+      "path": "annotations/1440x900-character-inventory.png",
+      "sha256": "84c115054cbddaed9ff11aafb355936e7d81b42fd4db54cfc548e95a55d0383e"
+    },
+    {
+      "path": "annotations/1600x900-character-inventory.png",
+      "sha256": "cdbb91c3d7671f7014eef40b91ac8bf38fc4f18680db2339d8df6945c1232f0d"
+    },
+    {
+      "path": "annotations/1920x1080-character-inventory.png",
+      "sha256": "a67c8d4aa8eb6e30327755bface6df60459de8dc9314beea08d27df6dc9cb444"
+    },
+    {
+      "path": "annotations/character-character.png",
+      "sha256": "1393e4d1d4b3fcb9d2f6c7655295d3b19a939987d00996419078c3611018d120"
+    },
+    {
+      "path": "annotations/character-extraEquipment.png",
+      "sha256": "87e66013834d1d34c2cf11b8f7fd78cd70f2d58c844f2de7127e9e885d0e0aff"
+    },
+    {
+      "path": "annotations/character-hermit.png",
+      "sha256": "1750f089fe9fde1e9307116cf37e2ca2e12934fdb425f6a0c18f9235aec2202f"
+    },
+    {
+      "path": "annotations/character-status.png",
+      "sha256": "4e872d839d025e8086101ef4f8a921ef7c75e99041ead7ea067c634cf79ce8c6"
+    },
+    {
+      "path": "validation.json",
+      "sha256": "f0597d276bd003086266bf6ed2f4d5ad26693b63a5113ed8591dd06b5a562e42"
+    }
+  ],
+  "allByteIdentical": true
+}

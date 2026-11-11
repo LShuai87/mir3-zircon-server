@@ -1,0 +1,10 @@
+System.Exception: Cell frame pixel mismatch frame 1 at 40,126 expected Color [Red] actual Color [A=255, R=99, G=83, B=50]
+   在 OfficialUiCharacterPageTests.RenderCellFrames(String output)
+   在 OfficialUiCharacterPageTests.Main(String[] args)
+Character page tests failed.
+At E:\workspace\mir3-zircon-server\tests\Run-GameUiCharacterPageTests.ps1:37 char:127
++ ... ; if ($LASTEXITCODE -ne 0) { throw 'Character page tests failed.' } }
++                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (Character page tests failed.:String) [], RuntimeException
+    + FullyQualifiedErrorId : Character page tests failed.
+ 

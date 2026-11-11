@@ -1,0 +1,149 @@
+{
+  "schemaVersion": 1,
+  "kind": "official-ui-real-control-layout-host-preparatory-verification",
+  "releaseAccepted": false,
+  "scope": "Concrete DXControl/DXWindow/ChatTab/DXTextBox adapter for the coordinator, with scene-scoped persistence suppression. GameScene is not yet wired; no runtime style activation or final-coordinate acceptance.",
+  "sourceChanges": [
+    {
+      "path": "Client/Controls/DXWindow.cs",
+      "beforeSha256": "5aa71251b1d268bb8c1bf5f04ac1d7e29887ea7e411dd8b14f82979e89197b42",
+      "afterSha256": "9d8159ed7621b473ca15b054907a0cff5f7ed62cb70381e8ed3b42d376eaf95f"
+    },
+    {
+      "path": "Client/Client.csproj",
+      "beforeSha256": "8a78a722a79086dbac11a4f93c45272cfa88575ddda05136665fa09176ca76a3",
+      "afterSha256": "ed20567a74a2962000d50041acef549f01b2c9824f443546e44200ee2ee45a6f"
+    },
+    {
+      "path": "ImageManager/Program.cs",
+      "beforeSha256": "653dcb5972d6b3daaeffa380a05fa131ebb657a269cfcabe7ea74bb177ab82db",
+      "afterSha256": "25d4c4e33583f1303512db36e97e9d73ba6b6a06c8e8bf46a253d3b390f42c60"
+    }
+  ],
+  "sourceHashes": [
+    {
+      "path": "Client/Controls/DXWindow.cs",
+      "sha256": "9d8159ed7621b473ca15b054907a0cff5f7ed62cb70381e8ed3b42d376eaf95f"
+    },
+    {
+      "path": "Client/Client.csproj",
+      "sha256": "ed20567a74a2962000d50041acef549f01b2c9824f443546e44200ee2ee45a6f"
+    },
+    {
+      "path": "ImageManager/Program.cs",
+      "sha256": "25d4c4e33583f1303512db36e97e9d73ba6b6a06c8e8bf46a253d3b390f42c60"
+    },
+    {
+      "path": "Client/Envir/GameUiSceneLayoutHost.cs",
+      "sha256": "dd0192909f1211e0b70b6a5092a8367b76a1f03e45abfbcbc107e1f864fa5f17"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiSceneLayoutHostTests.cs",
+      "sha256": "05ae88c2023069dde8f51a55f17be5de6de6693faee82a82503d85b4d441acab"
+    },
+    {
+      "path": "tests/Run-GameUiSceneLayoutHostTests.ps1",
+      "sha256": "3bf9f402f676b1626569f71acb83e8ebceac85b35254af102a9f15c9c7b2f194"
+    }
+  ],
+  "commands": [
+    {
+      "command": "\"D:/Program Files/Microsoft Visual Studio/2022/Enterprise/MSBuild/Current/Bin/MSBuild.exe\" Client/Client.csproj /t:Build /p:Configuration=Debug /p:Platform=AnyCPU /nologo /v:minimal",
+      "exitCode": 0,
+      "result": "pass",
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/scene-layout-host/client-debug-build.log",
+      "logSha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "command": "\"D:/Program Files/Microsoft Visual Studio/2022/Enterprise/MSBuild/Current/Bin/MSBuild.exe\" Client/Client.csproj /t:Build /p:Configuration=Release /p:Platform=AnyCPU /nologo /v:minimal",
+      "exitCode": 0,
+      "result": "pass",
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/scene-layout-host/client-release-build.log",
+      "logSha256": "c9e24428be1e56c8408af17aacfea3413de3953bfe426d10eb768782f5005ebc"
+    },
+    {
+      "command": "powershell -File tests/Run-GameUiSceneLayoutHostTests.ps1",
+      "exitCode": 0,
+      "result": "pass",
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/scene-layout-host/host-tests.log",
+      "logSha256": "ce6a3eebdc7571d073fd99ae5b81c4281844dc584ad2d87182dc7ab27bc9cc32"
+    },
+    {
+      "command": "powershell -File tests/Run-GameUiTests.ps1 -Suite Controls,Layout",
+      "exitCode": 0,
+      "result": "pass",
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/scene-layout-host/controls-layout-regression.log",
+      "logSha256": "95744feee4682e54f91fd470908faa6dbb09ec4a9a2eae6e192e40e3d40ed126"
+    },
+    {
+      "command": "powershell -File tests/Run-GameUiCoordinatorTests.ps1",
+      "exitCode": 0,
+      "result": "pass",
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/scene-layout-host/coordinator-regression.log",
+      "logSha256": "2348fb57b3b06d6b0b55262509a276f94617b23313093db60c421fe9ab62d6b0"
+    },
+    {
+      "command": "\"D:/Program Files/Microsoft Visual Studio/2022/Enterprise/MSBuild/Current/Bin/MSBuild.exe\" ImageManager/ImageManager.csproj /t:Build /p:Configuration=Debug /p:Platform=AnyCPU /nologo /v:minimal",
+      "exitCode": 0,
+      "result": "pass",
+      "log": "docs/design/assets/official-ingame-ui/acceptance/preparatory/scene-layout-host/image-manager-build.log",
+      "logSha256": "97a3fa7fefdb484f148d067cbda7a5cc436235d69b9b8486ce6e6f3e61848322"
+    }
+  ],
+  "results": {
+    "clientDebugBuild": "pass",
+    "clientReleaseBuild": "pass",
+    "imageManagerDebugBuild": "pass",
+    "hostAssertions": 1464,
+    "realControlLayoutPasses": 145,
+    "resolutions": [
+      [
+        1024,
+        768
+      ],
+      [
+        1366,
+        768
+      ],
+      [
+        1280,
+        800
+      ],
+      [
+        1440,
+        900
+      ],
+      [
+        1600,
+        900
+      ],
+      [
+        1920,
+        1080
+      ]
+    ],
+    "coordinatorAssertions": 25303,
+    "windowSkinAssertions": 60,
+    "controlsReaderAssertions": 26,
+    "layoutStoreAssertions": 35,
+    "chatIdentityHistoryColorsFontsSelectionPreserved": true,
+    "scrollTopMessageAndBottomFollowPreserved": true,
+    "inputHwndTextSelectionActiveTextBoxPreserved": true,
+    "nativeInputBoundsMatchDisplayArea": true,
+    "officialLayoutNotWrittenDuringAutomaticPasses": true,
+    "legacyUsersDbRegressionHashUnchanged": "890c13348dd10d14cb0118ec3fcea171c85face9739985a958f47d72b54cbc15",
+    "existingLateCreatedNestedSceneWindowWritesSuppressed": true,
+    "otherSceneUnaffected": true,
+    "writesResumeAfterScopeAndException": true,
+    "duplicateForeignDisposedAndUnimplementedScrollControlsRejected": "duplicate/foreign/unimplemented-scroll covered; disposed/reparented checks implemented but not separately exercised",
+    "initialChatRestoreOnlyOnce": true,
+    "programWhitespaceOnlyCleanup": true
+  },
+  "limitations": [
+    "GameScene construction/resize/reset callbacks still use the existing path. The new host is compiled and tested but is not activated by startup.",
+    "Final asset catalog, six-resolution production coordinates, character field binding and input gates remain unfinished.",
+    "The hidden WinForms test preserves HWND, draft, selection and ActiveTextBox; it does not prove live Windows IME composition or visible native keyboard focus.",
+    "Chat tests use existing ChatTab history labels and selected tabs; filtering/channel configuration, transport and explicit user reset remain for game integration acceptance.",
+    "A01..A20 game acceptance and final performance/interaction checks have not run; no bug-free or release-ready claim."
+  ]
+}

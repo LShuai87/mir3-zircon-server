@@ -1,0 +1,5704 @@
+{
+  "schemaVersion": 1,
+  "kind": "official-ui-layout-contract",
+  "style": "OfficialV1",
+  "status": "proposed-coordinates",
+  "runtimeReady": false,
+  "productionBindingAllowed": false,
+  "layoutFrozen": false,
+  "referenceResolution": [
+    1024,
+    768
+  ],
+  "coordinatePolicy": "integer client pixels; local rectangles relative to owner; half-open hit rectangles",
+  "referenceMetadata": "docs/design/assets/official-ingame-ui/acceptance/reference/resolution-confirmation.json",
+  "bindingSource": "docs/design/assets/official-ingame-ui/acceptance/preparatory/character-composition/character-bindings.draft.json",
+  "bindingSourceSha256": "b821dc4b762a99ae9e8f03010d093fae24c28090a73e4598d95453f992f4dc31",
+  "owners": {
+    "character": {
+      "size": [
+        412,
+        562
+      ]
+    },
+    "inventory": {
+      "size": [
+        276,
+        412
+      ]
+    },
+    "quickbar": {
+      "size": [
+        459,
+        44
+      ]
+    },
+    "minimap": {
+      "size": [
+        166,
+        198
+      ]
+    },
+    "chat": {
+      "size": [
+        574,
+        106
+      ]
+    },
+    "chatInput": {
+      "size": [
+        574,
+        22
+      ]
+    },
+    "orb": {
+      "size": [
+        225,
+        202
+      ]
+    },
+    "commands": {
+      "size": [
+        225,
+        202
+      ]
+    },
+    "readouts": {
+      "size": [
+        574,
+        16
+      ]
+    },
+    "experience": {
+      "size": [
+        574,
+        8
+      ]
+    }
+  },
+  "pages": [
+    {
+      "id": "character",
+      "label": "角色"
+    },
+    {
+      "id": "extraEquipment",
+      "label": "扩展装备"
+    },
+    {
+      "id": "status",
+      "label": "状态"
+    },
+    {
+      "id": "hermit",
+      "label": "修炼"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "character.close",
+      "owner": "character",
+      "page": "chrome",
+      "kind": "control",
+      "rect": [
+        386,
+        10,
+        18,
+        18
+      ],
+      "hitRect": [
+        386,
+        10,
+        18,
+        18
+      ],
+      "label": "X",
+      "binding": "CloseButton",
+      "action": "existing-window-close"
+    },
+    {
+      "id": "character.tab.character",
+      "owner": "character",
+      "page": "chrome",
+      "kind": "control",
+      "rect": [
+        8,
+        38,
+        97,
+        24
+      ],
+      "hitRect": [
+        8,
+        38,
+        97,
+        24
+      ],
+      "label": "角色",
+      "action": "select-local-tab",
+      "targetPage": "character"
+    },
+    {
+      "id": "character.tab.extraEquipment",
+      "owner": "character",
+      "page": "chrome",
+      "kind": "control",
+      "rect": [
+        107,
+        38,
+        97,
+        24
+      ],
+      "hitRect": [
+        107,
+        38,
+        97,
+        24
+      ],
+      "label": "扩展装备",
+      "action": "select-local-tab",
+      "targetPage": "extraEquipment"
+    },
+    {
+      "id": "character.tab.status",
+      "owner": "character",
+      "page": "chrome",
+      "kind": "control",
+      "rect": [
+        206,
+        38,
+        97,
+        24
+      ],
+      "hitRect": [
+        206,
+        38,
+        97,
+        24
+      ],
+      "label": "状态",
+      "action": "select-local-tab",
+      "targetPage": "status"
+    },
+    {
+      "id": "character.tab.hermit",
+      "owner": "character",
+      "page": "chrome",
+      "kind": "control",
+      "rect": [
+        305,
+        38,
+        97,
+        24
+      ],
+      "hitRect": [
+        305,
+        38,
+        97,
+        24
+      ],
+      "label": "修炼",
+      "action": "select-local-tab",
+      "targetPage": "hermit"
+    },
+    {
+      "id": "character.preview",
+      "owner": "character",
+      "page": "character",
+      "kind": "preview",
+      "rect": [
+        60,
+        138,
+        134,
+        193
+      ],
+      "pivot": [
+        127,
+        323
+      ],
+      "binding": "CharacterTab_BeforeChildrenDraw",
+      "clip": true
+    },
+    {
+      "id": "character.equipment.Weapon",
+      "owner": "character",
+      "page": "character",
+      "kind": "control",
+      "rect": [
+        16,
+        174,
+        36,
+        36
+      ],
+      "hitRect": [
+        16,
+        174,
+        36,
+        36
+      ],
+      "slotId": 0,
+      "enumName": "Weapon",
+      "label": "武器",
+      "binding": "Grid[0]",
+      "iconRect": [
+        16,
+        174,
+        36,
+        36
+      ],
+      "action": "existing-equipment-cell"
+    },
+    {
+      "id": "character.equipment.Armour",
+      "owner": "character",
+      "page": "character",
+      "kind": "control",
+      "rect": [
+        200,
+        174,
+        36,
+        36
+      ],
+      "hitRect": [
+        200,
+        174,
+        36,
+        36
+      ],
+      "slotId": 1,
+      "enumName": "Armour",
+      "label": "盔甲",
+      "binding": "Grid[1]",
+      "iconRect": [
+        200,
+        174,
+        36,
+        36
+      ],
+      "action": "existing-equipment-cell"
+    },
+    {
+      "id": "character.equipment.Helmet",
+      "owner": "character",
+      "page": "character",
+      "kind": "control",
+      "rect": [
+        110,
+        96,
+        36,
+        36
+      ],
+      "hitRect": [
+        110,
+        96,
+        36,
+        36
+      ],
+      "slotId": 2,
+      "enumName": "Helmet",
+      "label": "头盔",
+      "binding": "Grid[2]",
+      "iconRect": [
+        110,
+        96,
+        36,
+        36
+      ],
+      "action": "existing-equipment-cell"
+    },
+    {
+      "id": "character.equipment.Torch",
+      "owner": "character",
+      "page": "extraEquipment",
+      "kind": "control",
+      "rect": [
+        28,
+        130,
+        36,
+        36
+      ],
+      "hitRect": [
+        28,
+        130,
+        36,
+        36
+      ],
+      "slotId": 3,
+      "enumName": "Torch",
+      "label": "火把",
+      "binding": "Grid[3]",
+      "iconRect": [
+        28,
+        130,
+        36,
+        36
+      ],
+      "action": "existing-equipment-cell"
+    },
+    {
+      "id": "character.equipment.Torch.caption",
+      "owner": "character",
+      "page": "extraEquipment",
+      "kind": "caption",
+      "rect": [
+        14,
+        170,
+        64,
+        20
+      ],
+      "label": "火把"
+    },
+    {
+      "id": "character.equipment.Necklace",
+      "owner": "character",
+      "page": "character",
+      "kind": "control",
+      "rect": [
+        200,
+        96,
+        36,
+        36
+      ],
+      "hitRect": [
+        200,
+        96,
+        36,
+        36
+      ],
+      "slotId": 4,
+      "enumName": "Necklace",
+      "label": "项链",
+      "binding": "Grid[4]",
+      "iconRect": [
+        200,
+        96,
+        36,
+        36
+      ],
+      "action": "existing-equipment-cell"
+    },
+    {
+      "id": "character.equipment.BraceletL",
+      "owner": "character",
+      "page": "character",
+      "kind": "control",
+      "rect": [
+        16,
+        228,
+        36,
+        36
+      ],
+      "hitRect": [
+        16,
+        228,
+        36,
+        36
+      ],
+      "slotId": 5,
+      "enumName": "BraceletL",
+      "label": "左手镯",
+      "binding": "Grid[5]",
+      "iconRect": [
+        16,
+        228,
+        36,
+        36
+      ],
+      "action": "existing-equipment-cell"
+    },
+    {
+      "id": "character.equipment.BraceletR",
+      "owner": "character",
+      "page": "character",
+      "kind": "control",
+      "rect": [
+        200,
+        228,
+        36,
+        36
+      ],
+      "hitRect": [
+        200,
+        228,
+        36,
+        36
+      ],
+      "slotId": 6,
+      "enumName": "BraceletR",
+      "label": "右手镯",
+      "binding": "Grid[6]",
+      "iconRect": [
+        200,
+        228,
+        36,
+        36
+      ],
+      "action": "existing-equipment-cell"
+    },
+    {
+      "id": "character.equipment.RingL",
+      "owner": "character",
+      "page": "character",
+      "kind": "control",
+      "rect": [
+        16,
+        282,
+        36,
+        36
+      ],
+      "hitRect": [
+        16,
+        282,
+        36,
+        36
+      ],
+      "slotId": 7,
+      "enumName": "RingL",
+      "label": "左戒指",
+      "binding": "Grid[7]",
+      "iconRect": [
+        16,
+        282,
+        36,
+        36
+      ],
+      "action": "existing-equipment-cell"
+    },
+    {
+      "id": "character.equipment.RingR",
+      "owner": "character",
+      "page": "character",
+      "kind": "control",
+      "rect": [
+        200,
+        282,
+        36,
+        36
+      ],
+      "hitRect": [
+        200,
+        282,
+        36,
+        36
+      ],
+      "slotId": 8,
+      "enumName": "RingR",
+      "label": "右戒指",
+      "binding": "Grid[8]",
+      "iconRect": [
+        200,
+        282,
+        36,
+        36
+      ],
+      "action": "existing-equipment-cell"
+    },
+    {
+      "id": "character.equipment.Shoes",
+      "owner": "character",
+      "page": "character",
+      "kind": "control",
+      "rect": [
+        16,
+        340,
+        36,
+        36
+      ],
+      "hitRect": [
+        16,
+        340,
+        36,
+        36
+      ],
+      "slotId": 9,
+      "enumName": "Shoes",
+      "label": "鞋子",
+      "binding": "Grid[9]",
+      "iconRect": [
+        16,
+        340,
+        36,
+        36
+      ],
+      "action": "existing-equipment-cell"
+    },
+    {
+      "id": "character.equipment.Poison",
+      "owner": "character",
+      "page": "extraEquipment",
+      "kind": "control",
+      "rect": [
+        124,
+        130,
+        36,
+        36
+      ],
+      "hitRect": [
+        124,
+        130,
+        36,
+        36
+      ],
+      "slotId": 10,
+      "enumName": "Poison",
+      "label": "药品",
+      "binding": "Grid[10]",
+      "iconRect": [
+        124,
+        130,
+        36,
+        36
+      ],
+      "action": "existing-equipment-cell"
+    },
+    {
+      "id": "character.equipment.Poison.caption",
+      "owner": "character",
+      "page": "extraEquipment",
+      "kind": "caption",
+      "rect": [
+        110,
+        170,
+        64,
+        20
+      ],
+      "label": "药品"
+    },
+    {
+      "id": "character.equipment.Amulet",
+      "owner": "character",
+      "page": "extraEquipment",
+      "kind": "control",
+      "rect": [
+        220,
+        130,
+        36,
+        36
+      ],
+      "hitRect": [
+        220,
+        130,
+        36,
+        36
+      ],
+      "slotId": 11,
+      "enumName": "Amulet",
+      "label": "护符",
+      "binding": "Grid[11]",
+      "iconRect": [
+        220,
+        130,
+        36,
+        36
+      ],
+      "action": "existing-equipment-cell"
+    },
+    {
+      "id": "character.equipment.Amulet.caption",
+      "owner": "character",
+      "page": "extraEquipment",
+      "kind": "caption",
+      "rect": [
+        206,
+        170,
+        64,
+        20
+      ],
+      "label": "护符"
+    },
+    {
+      "id": "character.equipment.Flower",
+      "owner": "character",
+      "page": "extraEquipment",
+      "kind": "control",
+      "rect": [
+        316,
+        130,
+        36,
+        36
+      ],
+      "hitRect": [
+        316,
+        130,
+        36,
+        36
+      ],
+      "slotId": 12,
+      "enumName": "Flower",
+      "label": "鲜花",
+      "binding": "Grid[12]",
+      "iconRect": [
+        316,
+        130,
+        36,
+        36
+      ],
+      "action": "existing-equipment-cell"
+    },
+    {
+      "id": "character.equipment.Flower.caption",
+      "owner": "character",
+      "page": "extraEquipment",
+      "kind": "caption",
+      "rect": [
+        302,
+        170,
+        64,
+        20
+      ],
+      "label": "鲜花"
+    },
+    {
+      "id": "character.equipment.HorseArmour",
+      "owner": "character",
+      "page": "extraEquipment",
+      "kind": "control",
+      "rect": [
+        28,
+        230,
+        36,
+        36
+      ],
+      "hitRect": [
+        28,
+        230,
+        36,
+        36
+      ],
+      "slotId": 13,
+      "enumName": "HorseArmour",
+      "label": "马护甲",
+      "binding": "Grid[13]",
+      "iconRect": [
+        28,
+        230,
+        36,
+        36
+      ],
+      "action": "existing-equipment-cell"
+    },
+    {
+      "id": "character.equipment.HorseArmour.caption",
+      "owner": "character",
+      "page": "extraEquipment",
+      "kind": "caption",
+      "rect": [
+        14,
+        270,
+        64,
+        20
+      ],
+      "label": "马护甲"
+    },
+    {
+      "id": "character.equipment.Emblem",
+      "owner": "character",
+      "page": "extraEquipment",
+      "kind": "control",
+      "rect": [
+        124,
+        230,
+        36,
+        36
+      ],
+      "hitRect": [
+        124,
+        230,
+        36,
+        36
+      ],
+      "slotId": 14,
+      "enumName": "Emblem",
+      "label": "徽章",
+      "binding": "Grid[14]",
+      "iconRect": [
+        124,
+        230,
+        36,
+        36
+      ],
+      "action": "existing-equipment-cell"
+    },
+    {
+      "id": "character.equipment.Emblem.caption",
+      "owner": "character",
+      "page": "extraEquipment",
+      "kind": "caption",
+      "rect": [
+        110,
+        270,
+        64,
+        20
+      ],
+      "label": "徽章"
+    },
+    {
+      "id": "character.equipment.Shield",
+      "owner": "character",
+      "page": "extraEquipment",
+      "kind": "control",
+      "rect": [
+        220,
+        230,
+        36,
+        36
+      ],
+      "hitRect": [
+        220,
+        230,
+        36,
+        36
+      ],
+      "slotId": 15,
+      "enumName": "Shield",
+      "label": "盾牌",
+      "binding": "Grid[15]",
+      "iconRect": [
+        220,
+        230,
+        36,
+        36
+      ],
+      "action": "existing-equipment-cell"
+    },
+    {
+      "id": "character.equipment.Shield.caption",
+      "owner": "character",
+      "page": "extraEquipment",
+      "kind": "caption",
+      "rect": [
+        206,
+        270,
+        64,
+        20
+      ],
+      "label": "盾牌"
+    },
+    {
+      "id": "character.caption.new.level",
+      "owner": "character",
+      "page": "character",
+      "kind": "caption",
+      "rect": [
+        254,
+        98,
+        54,
+        20
+      ],
+      "label": "等级"
+    },
+    {
+      "id": "character.caption.new.experience",
+      "owner": "character",
+      "page": "character",
+      "kind": "caption",
+      "rect": [
+        254,
+        122,
+        54,
+        20
+      ],
+      "label": "经验"
+    },
+    {
+      "id": "character.caption.new.health",
+      "owner": "character",
+      "page": "character",
+      "kind": "caption",
+      "rect": [
+        254,
+        146,
+        54,
+        20
+      ],
+      "label": "生命"
+    },
+    {
+      "id": "character.caption.new.mana",
+      "owner": "character",
+      "page": "character",
+      "kind": "caption",
+      "rect": [
+        254,
+        170,
+        54,
+        20
+      ],
+      "label": "魔法"
+    },
+    {
+      "id": "character.caption.existing.HandWeightLabel",
+      "owner": "character",
+      "page": "character",
+      "kind": "caption",
+      "rect": [
+        254,
+        194,
+        54,
+        20
+      ],
+      "label": "腕力"
+    },
+    {
+      "id": "character.caption.existing.WearWeightLabel",
+      "owner": "character",
+      "page": "character",
+      "kind": "caption",
+      "rect": [
+        254,
+        218,
+        54,
+        20
+      ],
+      "label": "肩力"
+    },
+    {
+      "id": "character.caption.DisplayStats.Accuracy",
+      "owner": "character",
+      "page": "character",
+      "kind": "caption",
+      "rect": [
+        254,
+        242,
+        54,
+        20
+      ],
+      "label": "准确"
+    },
+    {
+      "id": "character.caption.DisplayStats.Agility",
+      "owner": "character",
+      "page": "character",
+      "kind": "caption",
+      "rect": [
+        254,
+        266,
+        54,
+        20
+      ],
+      "label": "敏捷"
+    },
+    {
+      "id": "character.caption.DisplayStats.Comfort",
+      "owner": "character",
+      "page": "character",
+      "kind": "caption",
+      "rect": [
+        254,
+        290,
+        54,
+        20
+      ],
+      "label": "舒适"
+    },
+    {
+      "id": "character.caption.DisplayStats.Luck",
+      "owner": "character",
+      "page": "character",
+      "kind": "caption",
+      "rect": [
+        254,
+        314,
+        54,
+        20
+      ],
+      "label": "幸运"
+    },
+    {
+      "id": "character.caption.DisplayStats.MaxDC",
+      "owner": "character",
+      "page": "character",
+      "kind": "caption",
+      "rect": [
+        16,
+        396,
+        42,
+        20
+      ],
+      "label": "破坏"
+    },
+    {
+      "id": "character.caption.DisplayStats.MaxMC",
+      "owner": "character",
+      "page": "character",
+      "kind": "caption",
+      "rect": [
+        142,
+        396,
+        42,
+        20
+      ],
+      "label": "自然"
+    },
+    {
+      "id": "character.caption.DisplayStats.MaxSC",
+      "owner": "character",
+      "page": "character",
+      "kind": "caption",
+      "rect": [
+        268,
+        396,
+        42,
+        20
+      ],
+      "label": "灵魂"
+    },
+    {
+      "id": "character.caption.DisplayStats.MaxAC",
+      "owner": "character",
+      "page": "character",
+      "kind": "caption",
+      "rect": [
+        16,
+        420,
+        42,
+        20
+      ],
+      "label": "防御"
+    },
+    {
+      "id": "character.caption.DisplayStats.MaxMR",
+      "owner": "character",
+      "page": "character",
+      "kind": "caption",
+      "rect": [
+        142,
+        420,
+        42,
+        20
+      ],
+      "label": "魔防"
+    },
+    {
+      "id": "character.caption.AttackStats",
+      "owner": "character",
+      "page": "character",
+      "kind": "caption",
+      "rect": [
+        16,
+        450,
+        60,
+        22
+      ],
+      "label": "攻击元素"
+    },
+    {
+      "id": "character.caption.AdvantageStats",
+      "owner": "character",
+      "page": "character",
+      "kind": "caption",
+      "rect": [
+        16,
+        476,
+        60,
+        22
+      ],
+      "label": "强元素"
+    },
+    {
+      "id": "character.caption.DisadvantageStats",
+      "owner": "character",
+      "page": "character",
+      "kind": "caption",
+      "rect": [
+        16,
+        502,
+        60,
+        22
+      ],
+      "label": "弱元素"
+    },
+    {
+      "id": "character.stat.DisplayStats.MaxAC",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        60,
+        420,
+        76,
+        20
+      ],
+      "binding": "DisplayStats[Stat.MaxAC]",
+      "bindingId": "DisplayStats.MaxAC",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-get-format",
+      "preserveTag": false
+    },
+    {
+      "id": "character.stat.DisplayStats.MaxMR",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        186,
+        420,
+        76,
+        20
+      ],
+      "binding": "DisplayStats[Stat.MaxMR]",
+      "bindingId": "DisplayStats.MaxMR",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-get-format",
+      "preserveTag": false
+    },
+    {
+      "id": "character.stat.DisplayStats.MaxDC",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        60,
+        396,
+        76,
+        20
+      ],
+      "binding": "DisplayStats[Stat.MaxDC]",
+      "bindingId": "DisplayStats.MaxDC",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-get-format",
+      "preserveTag": false
+    },
+    {
+      "id": "character.stat.DisplayStats.MaxMC",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        186,
+        396,
+        76,
+        20
+      ],
+      "binding": "DisplayStats[Stat.MaxMC]",
+      "bindingId": "DisplayStats.MaxMC",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-get-format",
+      "preserveTag": false
+    },
+    {
+      "id": "character.stat.DisplayStats.MaxSC",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        312,
+        396,
+        76,
+        20
+      ],
+      "binding": "DisplayStats[Stat.MaxSC]",
+      "bindingId": "DisplayStats.MaxSC",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-get-format",
+      "preserveTag": false
+    },
+    {
+      "id": "character.stat.DisplayStats.Accuracy",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        310,
+        242,
+        86,
+        20
+      ],
+      "binding": "DisplayStats[Stat.Accuracy]",
+      "bindingId": "DisplayStats.Accuracy",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-get-format",
+      "preserveTag": false
+    },
+    {
+      "id": "character.stat.DisplayStats.Agility",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        310,
+        266,
+        86,
+        20
+      ],
+      "binding": "DisplayStats[Stat.Agility]",
+      "bindingId": "DisplayStats.Agility",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-get-format",
+      "preserveTag": false
+    },
+    {
+      "id": "character.stat.DisplayStats.AttackSpeed",
+      "owner": "character",
+      "page": "status",
+      "kind": "stat",
+      "rect": [
+        16,
+        94,
+        180,
+        28
+      ],
+      "binding": "DisplayStats[Stat.AttackSpeed]",
+      "bindingId": "DisplayStats.AttackSpeed",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-get-format",
+      "preserveTag": false,
+      "captionRect": [
+        16,
+        94,
+        104,
+        28
+      ],
+      "valueRect": [
+        120,
+        94,
+        76,
+        28
+      ],
+      "captionPolicy": "Reuse associated original caption or physical-resistance icon."
+    },
+    {
+      "id": "character.stat.DisplayStats.Luck",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        310,
+        314,
+        86,
+        20
+      ],
+      "binding": "DisplayStats[Stat.Luck]",
+      "bindingId": "DisplayStats.Luck",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-get-format",
+      "preserveTag": false
+    },
+    {
+      "id": "character.stat.DisplayStats.Comfort",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        310,
+        290,
+        86,
+        20
+      ],
+      "binding": "DisplayStats[Stat.Comfort]",
+      "bindingId": "DisplayStats.Comfort",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-get-format",
+      "preserveTag": false
+    },
+    {
+      "id": "character.stat.DisplayStats.LifeSteal",
+      "owner": "character",
+      "page": "status",
+      "kind": "stat",
+      "rect": [
+        16,
+        130,
+        180,
+        28
+      ],
+      "binding": "DisplayStats[Stat.LifeSteal]",
+      "bindingId": "DisplayStats.LifeSteal",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-get-format",
+      "preserveTag": false,
+      "captionRect": [
+        16,
+        130,
+        104,
+        28
+      ],
+      "valueRect": [
+        120,
+        130,
+        76,
+        28
+      ],
+      "captionPolicy": "Reuse associated original caption or physical-resistance icon."
+    },
+    {
+      "id": "character.stat.DisplayStats.GoldRate",
+      "owner": "character",
+      "page": "status",
+      "kind": "stat",
+      "rect": [
+        16,
+        166,
+        180,
+        28
+      ],
+      "binding": "DisplayStats[Stat.GoldRate]",
+      "bindingId": "DisplayStats.GoldRate",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-get-format",
+      "preserveTag": false,
+      "captionRect": [
+        16,
+        166,
+        104,
+        28
+      ],
+      "valueRect": [
+        120,
+        166,
+        76,
+        28
+      ],
+      "captionPolicy": "Reuse associated original caption or physical-resistance icon."
+    },
+    {
+      "id": "character.stat.DisplayStats.CriticalChance",
+      "owner": "character",
+      "page": "status",
+      "kind": "stat",
+      "rect": [
+        16,
+        202,
+        180,
+        28
+      ],
+      "binding": "DisplayStats[Stat.CriticalChance]",
+      "bindingId": "DisplayStats.CriticalChance",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-get-format",
+      "preserveTag": false,
+      "captionRect": [
+        16,
+        202,
+        104,
+        28
+      ],
+      "valueRect": [
+        120,
+        202,
+        76,
+        28
+      ],
+      "captionPolicy": "Reuse associated original caption or physical-resistance icon."
+    },
+    {
+      "id": "character.stat.DisplayStats.DropRate",
+      "owner": "character",
+      "page": "status",
+      "kind": "stat",
+      "rect": [
+        16,
+        238,
+        180,
+        28
+      ],
+      "binding": "DisplayStats[Stat.DropRate]",
+      "bindingId": "DisplayStats.DropRate",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-get-format",
+      "preserveTag": false,
+      "captionRect": [
+        16,
+        238,
+        104,
+        28
+      ],
+      "valueRect": [
+        120,
+        238,
+        76,
+        28
+      ],
+      "captionPolicy": "Reuse associated original caption or physical-resistance icon."
+    },
+    {
+      "id": "character.stat.DisplayStats.PickUpRadius",
+      "owner": "character",
+      "page": "status",
+      "kind": "stat",
+      "rect": [
+        16,
+        274,
+        180,
+        28
+      ],
+      "binding": "DisplayStats[Stat.PickUpRadius]",
+      "bindingId": "DisplayStats.PickUpRadius",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-get-format",
+      "preserveTag": false,
+      "captionRect": [
+        16,
+        274,
+        104,
+        28
+      ],
+      "valueRect": [
+        120,
+        274,
+        76,
+        28
+      ],
+      "captionPolicy": "Reuse associated original caption or physical-resistance icon."
+    },
+    {
+      "id": "character.stat.DisplayStats.ExperienceRate",
+      "owner": "character",
+      "page": "status",
+      "kind": "stat",
+      "rect": [
+        16,
+        310,
+        180,
+        28
+      ],
+      "binding": "DisplayStats[Stat.ExperienceRate]",
+      "bindingId": "DisplayStats.ExperienceRate",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-get-format",
+      "preserveTag": false,
+      "captionRect": [
+        16,
+        310,
+        104,
+        28
+      ],
+      "valueRect": [
+        120,
+        310,
+        76,
+        28
+      ],
+      "captionPolicy": "Reuse associated original caption or physical-resistance icon."
+    },
+    {
+      "id": "character.stat.DisplayStats.CriticalDamage",
+      "owner": "character",
+      "page": "status",
+      "kind": "stat",
+      "rect": [
+        210,
+        94,
+        180,
+        28
+      ],
+      "binding": "DisplayStats[Stat.CriticalDamage]",
+      "bindingId": "DisplayStats.CriticalDamage",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-get-format",
+      "preserveTag": false,
+      "captionRect": [
+        210,
+        94,
+        104,
+        28
+      ],
+      "valueRect": [
+        314,
+        94,
+        76,
+        28
+      ],
+      "captionPolicy": "Reuse associated original caption or physical-resistance icon."
+    },
+    {
+      "id": "character.stat.DisplayStats.Rebirth",
+      "owner": "character",
+      "page": "status",
+      "kind": "stat",
+      "rect": [
+        210,
+        130,
+        180,
+        28
+      ],
+      "binding": "DisplayStats[Stat.Rebirth]",
+      "bindingId": "DisplayStats.Rebirth",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-get-format",
+      "preserveTag": false,
+      "captionRect": [
+        210,
+        130,
+        104,
+        28
+      ],
+      "valueRect": [
+        314,
+        130,
+        76,
+        28
+      ],
+      "captionPolicy": "Reuse associated original caption or physical-resistance icon."
+    },
+    {
+      "id": "character.stat.DisplayStats.BlockChance",
+      "owner": "character",
+      "page": "status",
+      "kind": "stat",
+      "rect": [
+        210,
+        166,
+        180,
+        28
+      ],
+      "binding": "DisplayStats[Stat.BlockChance]",
+      "bindingId": "DisplayStats.BlockChance",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-get-format",
+      "preserveTag": false,
+      "captionRect": [
+        210,
+        166,
+        104,
+        28
+      ],
+      "valueRect": [
+        314,
+        166,
+        76,
+        28
+      ],
+      "captionPolicy": "Reuse associated original caption or physical-resistance icon."
+    },
+    {
+      "id": "character.stat.DisplayStats.EvasionChance",
+      "owner": "character",
+      "page": "status",
+      "kind": "stat",
+      "rect": [
+        210,
+        202,
+        180,
+        28
+      ],
+      "binding": "DisplayStats[Stat.EvasionChance]",
+      "bindingId": "DisplayStats.EvasionChance",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-get-format",
+      "preserveTag": false,
+      "captionRect": [
+        210,
+        202,
+        104,
+        28
+      ],
+      "valueRect": [
+        314,
+        202,
+        76,
+        28
+      ],
+      "captionPolicy": "Reuse associated original caption or physical-resistance icon."
+    },
+    {
+      "id": "character.stat.AttackStats.FireAttack",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        80,
+        450,
+        40,
+        22
+      ],
+      "binding": "AttackStats[Stat.FireAttack]",
+      "bindingId": "AttackStats.FireAttack",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-positive-attack",
+      "preserveTag": true,
+      "iconRect": [
+        80,
+        450,
+        16,
+        22
+      ],
+      "valueRect": [
+        96,
+        450,
+        24,
+        22
+      ]
+    },
+    {
+      "id": "character.stat.AttackStats.IceAttack",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        124,
+        450,
+        40,
+        22
+      ],
+      "binding": "AttackStats[Stat.IceAttack]",
+      "bindingId": "AttackStats.IceAttack",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-positive-attack",
+      "preserveTag": true,
+      "iconRect": [
+        124,
+        450,
+        16,
+        22
+      ],
+      "valueRect": [
+        140,
+        450,
+        24,
+        22
+      ]
+    },
+    {
+      "id": "character.stat.AttackStats.LightningAttack",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        168,
+        450,
+        40,
+        22
+      ],
+      "binding": "AttackStats[Stat.LightningAttack]",
+      "bindingId": "AttackStats.LightningAttack",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-positive-attack",
+      "preserveTag": true,
+      "iconRect": [
+        168,
+        450,
+        16,
+        22
+      ],
+      "valueRect": [
+        184,
+        450,
+        24,
+        22
+      ]
+    },
+    {
+      "id": "character.stat.AttackStats.WindAttack",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        212,
+        450,
+        40,
+        22
+      ],
+      "binding": "AttackStats[Stat.WindAttack]",
+      "bindingId": "AttackStats.WindAttack",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-positive-attack",
+      "preserveTag": true,
+      "iconRect": [
+        212,
+        450,
+        16,
+        22
+      ],
+      "valueRect": [
+        228,
+        450,
+        24,
+        22
+      ]
+    },
+    {
+      "id": "character.stat.AttackStats.HolyAttack",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        256,
+        450,
+        40,
+        22
+      ],
+      "binding": "AttackStats[Stat.HolyAttack]",
+      "bindingId": "AttackStats.HolyAttack",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-positive-attack",
+      "preserveTag": true,
+      "iconRect": [
+        256,
+        450,
+        16,
+        22
+      ],
+      "valueRect": [
+        272,
+        450,
+        24,
+        22
+      ]
+    },
+    {
+      "id": "character.stat.AttackStats.DarkAttack",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        300,
+        450,
+        40,
+        22
+      ],
+      "binding": "AttackStats[Stat.DarkAttack]",
+      "bindingId": "AttackStats.DarkAttack",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-positive-attack",
+      "preserveTag": true,
+      "iconRect": [
+        300,
+        450,
+        16,
+        22
+      ],
+      "valueRect": [
+        316,
+        450,
+        24,
+        22
+      ]
+    },
+    {
+      "id": "character.stat.AttackStats.PhantomAttack",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        344,
+        450,
+        40,
+        22
+      ],
+      "binding": "AttackStats[Stat.PhantomAttack]",
+      "bindingId": "AttackStats.PhantomAttack",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-positive-attack",
+      "preserveTag": true,
+      "iconRect": [
+        344,
+        450,
+        16,
+        22
+      ],
+      "valueRect": [
+        360,
+        450,
+        24,
+        22
+      ]
+    },
+    {
+      "id": "character.stat.AdvantageStats.FireResistance",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        80,
+        476,
+        40,
+        22
+      ],
+      "binding": "AdvantageStats[Stat.FireResistance]",
+      "bindingId": "AdvantageStats.FireResistance",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-positive-resistance",
+      "preserveTag": true,
+      "iconRect": [
+        80,
+        476,
+        16,
+        22
+      ],
+      "valueRect": [
+        96,
+        476,
+        24,
+        22
+      ]
+    },
+    {
+      "id": "character.stat.AdvantageStats.IceResistance",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        124,
+        476,
+        40,
+        22
+      ],
+      "binding": "AdvantageStats[Stat.IceResistance]",
+      "bindingId": "AdvantageStats.IceResistance",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-positive-resistance",
+      "preserveTag": true,
+      "iconRect": [
+        124,
+        476,
+        16,
+        22
+      ],
+      "valueRect": [
+        140,
+        476,
+        24,
+        22
+      ]
+    },
+    {
+      "id": "character.stat.AdvantageStats.LightningResistance",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        168,
+        476,
+        40,
+        22
+      ],
+      "binding": "AdvantageStats[Stat.LightningResistance]",
+      "bindingId": "AdvantageStats.LightningResistance",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-positive-resistance",
+      "preserveTag": true,
+      "iconRect": [
+        168,
+        476,
+        16,
+        22
+      ],
+      "valueRect": [
+        184,
+        476,
+        24,
+        22
+      ]
+    },
+    {
+      "id": "character.stat.AdvantageStats.WindResistance",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        212,
+        476,
+        40,
+        22
+      ],
+      "binding": "AdvantageStats[Stat.WindResistance]",
+      "bindingId": "AdvantageStats.WindResistance",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-positive-resistance",
+      "preserveTag": true,
+      "iconRect": [
+        212,
+        476,
+        16,
+        22
+      ],
+      "valueRect": [
+        228,
+        476,
+        24,
+        22
+      ]
+    },
+    {
+      "id": "character.stat.AdvantageStats.HolyResistance",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        256,
+        476,
+        40,
+        22
+      ],
+      "binding": "AdvantageStats[Stat.HolyResistance]",
+      "bindingId": "AdvantageStats.HolyResistance",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-positive-resistance",
+      "preserveTag": true,
+      "iconRect": [
+        256,
+        476,
+        16,
+        22
+      ],
+      "valueRect": [
+        272,
+        476,
+        24,
+        22
+      ]
+    },
+    {
+      "id": "character.stat.AdvantageStats.DarkResistance",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        300,
+        476,
+        40,
+        22
+      ],
+      "binding": "AdvantageStats[Stat.DarkResistance]",
+      "bindingId": "AdvantageStats.DarkResistance",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-positive-resistance",
+      "preserveTag": true,
+      "iconRect": [
+        300,
+        476,
+        16,
+        22
+      ],
+      "valueRect": [
+        316,
+        476,
+        24,
+        22
+      ]
+    },
+    {
+      "id": "character.stat.AdvantageStats.PhantomResistance",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        344,
+        476,
+        40,
+        22
+      ],
+      "binding": "AdvantageStats[Stat.PhantomResistance]",
+      "bindingId": "AdvantageStats.PhantomResistance",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-positive-resistance",
+      "preserveTag": true,
+      "iconRect": [
+        344,
+        476,
+        16,
+        22
+      ],
+      "valueRect": [
+        360,
+        476,
+        24,
+        22
+      ]
+    },
+    {
+      "id": "character.stat.AdvantageStats.PhysicalResistance",
+      "owner": "character",
+      "page": "status",
+      "kind": "stat",
+      "rect": [
+        210,
+        238,
+        180,
+        28
+      ],
+      "binding": "AdvantageStats[Stat.PhysicalResistance]",
+      "bindingId": "AdvantageStats.PhysicalResistance",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-positive-resistance",
+      "preserveTag": true,
+      "captionRect": [
+        210,
+        238,
+        104,
+        28
+      ],
+      "valueRect": [
+        314,
+        238,
+        76,
+        28
+      ],
+      "captionPolicy": "Reuse associated original caption or physical-resistance icon."
+    },
+    {
+      "id": "character.stat.DisadvantageStats.FireResistance",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        80,
+        502,
+        40,
+        22
+      ],
+      "binding": "DisadvantageStats[Stat.FireResistance]",
+      "bindingId": "DisadvantageStats.FireResistance",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-negative-resistance",
+      "preserveTag": true,
+      "iconRect": [
+        80,
+        502,
+        16,
+        22
+      ],
+      "valueRect": [
+        96,
+        502,
+        24,
+        22
+      ]
+    },
+    {
+      "id": "character.stat.DisadvantageStats.IceResistance",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        124,
+        502,
+        40,
+        22
+      ],
+      "binding": "DisadvantageStats[Stat.IceResistance]",
+      "bindingId": "DisadvantageStats.IceResistance",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-negative-resistance",
+      "preserveTag": true,
+      "iconRect": [
+        124,
+        502,
+        16,
+        22
+      ],
+      "valueRect": [
+        140,
+        502,
+        24,
+        22
+      ]
+    },
+    {
+      "id": "character.stat.DisadvantageStats.LightningResistance",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        168,
+        502,
+        40,
+        22
+      ],
+      "binding": "DisadvantageStats[Stat.LightningResistance]",
+      "bindingId": "DisadvantageStats.LightningResistance",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-negative-resistance",
+      "preserveTag": true,
+      "iconRect": [
+        168,
+        502,
+        16,
+        22
+      ],
+      "valueRect": [
+        184,
+        502,
+        24,
+        22
+      ]
+    },
+    {
+      "id": "character.stat.DisadvantageStats.WindResistance",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        212,
+        502,
+        40,
+        22
+      ],
+      "binding": "DisadvantageStats[Stat.WindResistance]",
+      "bindingId": "DisadvantageStats.WindResistance",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-negative-resistance",
+      "preserveTag": true,
+      "iconRect": [
+        212,
+        502,
+        16,
+        22
+      ],
+      "valueRect": [
+        228,
+        502,
+        24,
+        22
+      ]
+    },
+    {
+      "id": "character.stat.DisadvantageStats.HolyResistance",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        256,
+        502,
+        40,
+        22
+      ],
+      "binding": "DisadvantageStats[Stat.HolyResistance]",
+      "bindingId": "DisadvantageStats.HolyResistance",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-negative-resistance",
+      "preserveTag": true,
+      "iconRect": [
+        256,
+        502,
+        16,
+        22
+      ],
+      "valueRect": [
+        272,
+        502,
+        24,
+        22
+      ]
+    },
+    {
+      "id": "character.stat.DisadvantageStats.DarkResistance",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        300,
+        502,
+        40,
+        22
+      ],
+      "binding": "DisadvantageStats[Stat.DarkResistance]",
+      "bindingId": "DisadvantageStats.DarkResistance",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-negative-resistance",
+      "preserveTag": true,
+      "iconRect": [
+        300,
+        502,
+        16,
+        22
+      ],
+      "valueRect": [
+        316,
+        502,
+        24,
+        22
+      ]
+    },
+    {
+      "id": "character.stat.DisadvantageStats.PhantomResistance",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        344,
+        502,
+        40,
+        22
+      ],
+      "binding": "DisadvantageStats[Stat.PhantomResistance]",
+      "bindingId": "DisadvantageStats.PhantomResistance",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-negative-resistance",
+      "preserveTag": true,
+      "iconRect": [
+        344,
+        502,
+        16,
+        22
+      ],
+      "valueRect": [
+        360,
+        502,
+        24,
+        22
+      ]
+    },
+    {
+      "id": "character.stat.DisadvantageStats.PhysicalResistance",
+      "owner": "character",
+      "page": "status",
+      "kind": "stat",
+      "rect": [
+        210,
+        274,
+        180,
+        28
+      ],
+      "binding": "DisadvantageStats[Stat.PhysicalResistance]",
+      "bindingId": "DisadvantageStats.PhysicalResistance",
+      "dataSource": "User.Stats",
+      "formatPolicy": "existing-negative-resistance",
+      "preserveTag": true,
+      "captionRect": [
+        210,
+        274,
+        104,
+        28
+      ],
+      "valueRect": [
+        314,
+        274,
+        76,
+        28
+      ],
+      "captionPolicy": "Reuse associated original caption or physical-resistance icon."
+    },
+    {
+      "id": "character.stat.HermitDisplayStats.MaxAC",
+      "owner": "character",
+      "page": "hermit",
+      "kind": "stat",
+      "rect": [
+        16,
+        94,
+        154,
+        26
+      ],
+      "binding": "HermitDisplayStats[Stat.MaxAC]",
+      "bindingId": "HermitDisplayStats.MaxAC",
+      "dataSource": "User.HermitStats",
+      "formatPolicy": "existing-get-format",
+      "preserveTag": false,
+      "captionRect": [
+        16,
+        94,
+        80,
+        26
+      ],
+      "valueRect": [
+        96,
+        94,
+        74,
+        26
+      ],
+      "captionPolicy": "Reuse associated original caption or elemental Tag icon."
+    },
+    {
+      "id": "character.stat.HermitDisplayStats.MaxMR",
+      "owner": "character",
+      "page": "hermit",
+      "kind": "stat",
+      "rect": [
+        16,
+        128,
+        154,
+        26
+      ],
+      "binding": "HermitDisplayStats[Stat.MaxMR]",
+      "bindingId": "HermitDisplayStats.MaxMR",
+      "dataSource": "User.HermitStats",
+      "formatPolicy": "existing-get-format",
+      "preserveTag": false,
+      "captionRect": [
+        16,
+        128,
+        80,
+        26
+      ],
+      "valueRect": [
+        96,
+        128,
+        74,
+        26
+      ],
+      "captionPolicy": "Reuse associated original caption or elemental Tag icon."
+    },
+    {
+      "id": "character.stat.HermitDisplayStats.MaxDC",
+      "owner": "character",
+      "page": "hermit",
+      "kind": "stat",
+      "rect": [
+        16,
+        162,
+        154,
+        26
+      ],
+      "binding": "HermitDisplayStats[Stat.MaxDC]",
+      "bindingId": "HermitDisplayStats.MaxDC",
+      "dataSource": "User.HermitStats",
+      "formatPolicy": "existing-get-format",
+      "preserveTag": false,
+      "captionRect": [
+        16,
+        162,
+        80,
+        26
+      ],
+      "valueRect": [
+        96,
+        162,
+        74,
+        26
+      ],
+      "captionPolicy": "Reuse associated original caption or elemental Tag icon."
+    },
+    {
+      "id": "character.stat.HermitDisplayStats.MaxMC",
+      "owner": "character",
+      "page": "hermit",
+      "kind": "stat",
+      "rect": [
+        16,
+        196,
+        154,
+        26
+      ],
+      "binding": "HermitDisplayStats[Stat.MaxMC]",
+      "bindingId": "HermitDisplayStats.MaxMC",
+      "dataSource": "User.HermitStats",
+      "formatPolicy": "existing-get-format",
+      "preserveTag": false,
+      "captionRect": [
+        16,
+        196,
+        80,
+        26
+      ],
+      "valueRect": [
+        96,
+        196,
+        74,
+        26
+      ],
+      "captionPolicy": "Reuse associated original caption or elemental Tag icon."
+    },
+    {
+      "id": "character.stat.HermitDisplayStats.MaxSC",
+      "owner": "character",
+      "page": "hermit",
+      "kind": "stat",
+      "rect": [
+        16,
+        230,
+        154,
+        26
+      ],
+      "binding": "HermitDisplayStats[Stat.MaxSC]",
+      "bindingId": "HermitDisplayStats.MaxSC",
+      "dataSource": "User.HermitStats",
+      "formatPolicy": "existing-get-format",
+      "preserveTag": false,
+      "captionRect": [
+        16,
+        230,
+        80,
+        26
+      ],
+      "valueRect": [
+        96,
+        230,
+        74,
+        26
+      ],
+      "captionPolicy": "Reuse associated original caption or elemental Tag icon."
+    },
+    {
+      "id": "character.stat.HermitDisplayStats.Health",
+      "owner": "character",
+      "page": "hermit",
+      "kind": "stat",
+      "rect": [
+        16,
+        264,
+        154,
+        26
+      ],
+      "binding": "HermitDisplayStats[Stat.Health]",
+      "bindingId": "HermitDisplayStats.Health",
+      "dataSource": "User.HermitStats",
+      "formatPolicy": "existing-get-format",
+      "preserveTag": false,
+      "captionRect": [
+        16,
+        264,
+        80,
+        26
+      ],
+      "valueRect": [
+        96,
+        264,
+        74,
+        26
+      ],
+      "captionPolicy": "Reuse associated original caption or elemental Tag icon."
+    },
+    {
+      "id": "character.stat.HermitDisplayStats.Mana",
+      "owner": "character",
+      "page": "hermit",
+      "kind": "stat",
+      "rect": [
+        16,
+        298,
+        154,
+        26
+      ],
+      "binding": "HermitDisplayStats[Stat.Mana]",
+      "bindingId": "HermitDisplayStats.Mana",
+      "dataSource": "User.HermitStats",
+      "formatPolicy": "existing-get-format",
+      "preserveTag": false,
+      "captionRect": [
+        16,
+        298,
+        80,
+        26
+      ],
+      "valueRect": [
+        96,
+        298,
+        74,
+        26
+      ],
+      "captionPolicy": "Reuse associated original caption or elemental Tag icon."
+    },
+    {
+      "id": "character.stat.HermitAttackStats.FireAttack",
+      "owner": "character",
+      "page": "hermit",
+      "kind": "stat",
+      "rect": [
+        224,
+        94,
+        170,
+        26
+      ],
+      "binding": "HermitAttackStats[Stat.FireAttack]",
+      "bindingId": "HermitAttackStats.FireAttack",
+      "dataSource": "User.HermitStats",
+      "formatPolicy": "existing-positive-hermit-attack",
+      "preserveTag": true,
+      "captionRect": [
+        224,
+        94,
+        80,
+        26
+      ],
+      "valueRect": [
+        304,
+        94,
+        90,
+        26
+      ],
+      "captionPolicy": "Reuse associated original caption or elemental Tag icon."
+    },
+    {
+      "id": "character.stat.HermitAttackStats.IceAttack",
+      "owner": "character",
+      "page": "hermit",
+      "kind": "stat",
+      "rect": [
+        224,
+        128,
+        170,
+        26
+      ],
+      "binding": "HermitAttackStats[Stat.IceAttack]",
+      "bindingId": "HermitAttackStats.IceAttack",
+      "dataSource": "User.HermitStats",
+      "formatPolicy": "existing-positive-hermit-attack",
+      "preserveTag": true,
+      "captionRect": [
+        224,
+        128,
+        80,
+        26
+      ],
+      "valueRect": [
+        304,
+        128,
+        90,
+        26
+      ],
+      "captionPolicy": "Reuse associated original caption or elemental Tag icon."
+    },
+    {
+      "id": "character.stat.HermitAttackStats.LightningAttack",
+      "owner": "character",
+      "page": "hermit",
+      "kind": "stat",
+      "rect": [
+        224,
+        162,
+        170,
+        26
+      ],
+      "binding": "HermitAttackStats[Stat.LightningAttack]",
+      "bindingId": "HermitAttackStats.LightningAttack",
+      "dataSource": "User.HermitStats",
+      "formatPolicy": "existing-positive-hermit-attack",
+      "preserveTag": true,
+      "captionRect": [
+        224,
+        162,
+        80,
+        26
+      ],
+      "valueRect": [
+        304,
+        162,
+        90,
+        26
+      ],
+      "captionPolicy": "Reuse associated original caption or elemental Tag icon."
+    },
+    {
+      "id": "character.stat.HermitAttackStats.WindAttack",
+      "owner": "character",
+      "page": "hermit",
+      "kind": "stat",
+      "rect": [
+        224,
+        196,
+        170,
+        26
+      ],
+      "binding": "HermitAttackStats[Stat.WindAttack]",
+      "bindingId": "HermitAttackStats.WindAttack",
+      "dataSource": "User.HermitStats",
+      "formatPolicy": "existing-positive-hermit-attack",
+      "preserveTag": true,
+      "captionRect": [
+        224,
+        196,
+        80,
+        26
+      ],
+      "valueRect": [
+        304,
+        196,
+        90,
+        26
+      ],
+      "captionPolicy": "Reuse associated original caption or elemental Tag icon."
+    },
+    {
+      "id": "character.stat.HermitAttackStats.HolyAttack",
+      "owner": "character",
+      "page": "hermit",
+      "kind": "stat",
+      "rect": [
+        224,
+        230,
+        170,
+        26
+      ],
+      "binding": "HermitAttackStats[Stat.HolyAttack]",
+      "bindingId": "HermitAttackStats.HolyAttack",
+      "dataSource": "User.HermitStats",
+      "formatPolicy": "existing-positive-hermit-attack",
+      "preserveTag": true,
+      "captionRect": [
+        224,
+        230,
+        80,
+        26
+      ],
+      "valueRect": [
+        304,
+        230,
+        90,
+        26
+      ],
+      "captionPolicy": "Reuse associated original caption or elemental Tag icon."
+    },
+    {
+      "id": "character.stat.HermitAttackStats.DarkAttack",
+      "owner": "character",
+      "page": "hermit",
+      "kind": "stat",
+      "rect": [
+        224,
+        264,
+        170,
+        26
+      ],
+      "binding": "HermitAttackStats[Stat.DarkAttack]",
+      "bindingId": "HermitAttackStats.DarkAttack",
+      "dataSource": "User.HermitStats",
+      "formatPolicy": "existing-positive-hermit-attack",
+      "preserveTag": true,
+      "captionRect": [
+        224,
+        264,
+        80,
+        26
+      ],
+      "valueRect": [
+        304,
+        264,
+        90,
+        26
+      ],
+      "captionPolicy": "Reuse associated original caption or elemental Tag icon."
+    },
+    {
+      "id": "character.stat.HermitAttackStats.PhantomAttack",
+      "owner": "character",
+      "page": "hermit",
+      "kind": "stat",
+      "rect": [
+        224,
+        298,
+        170,
+        26
+      ],
+      "binding": "HermitAttackStats[Stat.PhantomAttack]",
+      "bindingId": "HermitAttackStats.PhantomAttack",
+      "dataSource": "User.HermitStats",
+      "formatPolicy": "existing-positive-hermit-attack",
+      "preserveTag": true,
+      "captionRect": [
+        224,
+        298,
+        80,
+        26
+      ],
+      "valueRect": [
+        304,
+        298,
+        90,
+        26
+      ],
+      "captionPolicy": "Reuse associated original caption or elemental Tag icon."
+    },
+    {
+      "id": "character.immediate.new.level",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        310,
+        98,
+        86,
+        20
+      ],
+      "bindingId": "new.level",
+      "dataSource": "User.Level",
+      "refreshAt": "GameScene.LevelChanged",
+      "implementationStatus": "implemented_opt_in"
+    },
+    {
+      "id": "character.immediate.new.experience",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        310,
+        122,
+        86,
+        20
+      ],
+      "bindingId": "new.experience",
+      "dataSource": "User.Experience / User.MaxExperience",
+      "refreshAt": "GameScene.ExperienceChanged",
+      "implementationStatus": "implemented_opt_in"
+    },
+    {
+      "id": "character.immediate.new.health",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        310,
+        146,
+        86,
+        20
+      ],
+      "bindingId": "new.health",
+      "dataSource": "User.CurrentHP / User.Stats[Stat.Health]",
+      "refreshAt": "GameScene.HealthChanged",
+      "implementationStatus": "implemented_opt_in"
+    },
+    {
+      "id": "character.immediate.new.mana",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        310,
+        170,
+        86,
+        20
+      ],
+      "bindingId": "new.mana",
+      "dataSource": "User.CurrentMP / User.Stats[Stat.Mana]",
+      "refreshAt": "GameScene.ManaChanged",
+      "implementationStatus": "implemented_opt_in"
+    },
+    {
+      "id": "character.control.CharacterNameLabel",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        22,
+        10,
+        348,
+        22
+      ],
+      "binding": "CharacterNameLabel",
+      "bindingId": "existing.CharacterNameLabel",
+      "dataSource": "User.Name"
+    },
+    {
+      "id": "character.control.GuildNameLabel",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        16,
+        66,
+        224,
+        22
+      ],
+      "binding": "GuildNameLabel",
+      "bindingId": "existing.GuildNameLabel",
+      "dataSource": "User.Title"
+    },
+    {
+      "id": "character.control.GuildRankLabel",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        254,
+        66,
+        142,
+        22
+      ],
+      "binding": "GuildRankLabel",
+      "bindingId": "existing.GuildRankLabel",
+      "dataSource": "User.GuildRank"
+    },
+    {
+      "id": "character.control.WearWeightLabel",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        310,
+        218,
+        86,
+        20
+      ],
+      "binding": "WearWeightLabel",
+      "bindingId": "existing.WearWeightLabel",
+      "dataSource": "User.WearWeight / User.Stats[Stat.WearWeight]"
+    },
+    {
+      "id": "character.control.HandWeightLabel",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        310,
+        194,
+        86,
+        20
+      ],
+      "binding": "HandWeightLabel",
+      "bindingId": "existing.HandWeightLabel",
+      "dataSource": "User.HandWeight / User.Stats[Stat.HandWeight]"
+    },
+    {
+      "id": "character.caption.existing.RemainingLabel",
+      "owner": "character",
+      "page": "hermit",
+      "kind": "caption",
+      "rect": [
+        16,
+        370,
+        100,
+        24
+      ],
+      "label": "未分配点数"
+    },
+    {
+      "id": "character.control.RemainingLabel",
+      "owner": "character",
+      "page": "hermit",
+      "kind": "stat",
+      "rect": [
+        116,
+        370,
+        80,
+        24
+      ],
+      "binding": "RemainingLabel",
+      "bindingId": "existing.RemainingLabel",
+      "dataSource": "User.HermitPoints"
+    },
+    {
+      "id": "character.control.MarriageIcon",
+      "owner": "character",
+      "page": "character",
+      "kind": "stat",
+      "rect": [
+        370,
+        12,
+        14,
+        16
+      ],
+      "binding": "MarriageIcon",
+      "bindingId": "existing.MarriageIcon",
+      "dataSource": "Partner.Name"
+    },
+    {
+      "id": "character.control.ShowHelmetBox",
+      "owner": "character",
+      "page": "character",
+      "kind": "control",
+      "rect": [
+        254,
+        340,
+        142,
+        22
+      ],
+      "binding": "ShowHelmetBox",
+      "bindingId": "existing.ShowHelmetBox",
+      "dataSource": "!S.HelmetToggle.HideHelmet",
+      "hitRect": [
+        254,
+        340,
+        142,
+        22
+      ],
+      "action": "existing-helmet-toggle",
+      "label": "显示头盔"
+    },
+    {
+      "id": "character.action.hermit.MaxAC",
+      "owner": "character",
+      "page": "hermit",
+      "kind": "control",
+      "rect": [
+        174,
+        94,
+        24,
+        26
+      ],
+      "hitRect": [
+        174,
+        94,
+        24,
+        26
+      ],
+      "label": "+",
+      "action": "hermit.MaxAC",
+      "packet": "C.Hermit",
+      "stat": "MaxAC",
+      "reuseExistingHandler": true
+    },
+    {
+      "id": "character.action.hermit.MaxMR",
+      "owner": "character",
+      "page": "hermit",
+      "kind": "control",
+      "rect": [
+        174,
+        128,
+        24,
+        26
+      ],
+      "hitRect": [
+        174,
+        128,
+        24,
+        26
+      ],
+      "label": "+",
+      "action": "hermit.MaxMR",
+      "packet": "C.Hermit",
+      "stat": "MaxMR",
+      "reuseExistingHandler": true
+    },
+    {
+      "id": "character.action.hermit.Health",
+      "owner": "character",
+      "page": "hermit",
+      "kind": "control",
+      "rect": [
+        174,
+        264,
+        24,
+        26
+      ],
+      "hitRect": [
+        174,
+        264,
+        24,
+        26
+      ],
+      "label": "+",
+      "action": "hermit.Health",
+      "packet": "C.Hermit",
+      "stat": "Health",
+      "reuseExistingHandler": true
+    },
+    {
+      "id": "character.action.hermit.Mana",
+      "owner": "character",
+      "page": "hermit",
+      "kind": "control",
+      "rect": [
+        174,
+        298,
+        24,
+        26
+      ],
+      "hitRect": [
+        174,
+        298,
+        24,
+        26
+      ],
+      "label": "+",
+      "action": "hermit.Mana",
+      "packet": "C.Hermit",
+      "stat": "Mana",
+      "reuseExistingHandler": true
+    },
+    {
+      "id": "character.action.hermit.MaxDC",
+      "owner": "character",
+      "page": "hermit",
+      "kind": "control",
+      "rect": [
+        174,
+        162,
+        24,
+        26
+      ],
+      "hitRect": [
+        174,
+        162,
+        24,
+        26
+      ],
+      "label": "+",
+      "action": "hermit.MaxDC",
+      "packet": "C.Hermit",
+      "stat": "MaxDC",
+      "reuseExistingHandler": true
+    },
+    {
+      "id": "character.action.hermit.MaxMC",
+      "owner": "character",
+      "page": "hermit",
+      "kind": "control",
+      "rect": [
+        174,
+        196,
+        24,
+        26
+      ],
+      "hitRect": [
+        174,
+        196,
+        24,
+        26
+      ],
+      "label": "+",
+      "action": "hermit.MaxMC",
+      "packet": "C.Hermit",
+      "stat": "MaxMC",
+      "reuseExistingHandler": true
+    },
+    {
+      "id": "character.action.hermit.MaxSC",
+      "owner": "character",
+      "page": "hermit",
+      "kind": "control",
+      "rect": [
+        174,
+        230,
+        24,
+        26
+      ],
+      "hitRect": [
+        174,
+        230,
+        24,
+        26
+      ],
+      "label": "+",
+      "action": "hermit.MaxSC",
+      "packet": "C.Hermit",
+      "stat": "MaxSC",
+      "reuseExistingHandler": true
+    },
+    {
+      "id": "character.action.hermit.WeaponElement",
+      "owner": "character",
+      "page": "hermit",
+      "kind": "control",
+      "rect": [
+        174,
+        332,
+        24,
+        26
+      ],
+      "hitRect": [
+        174,
+        332,
+        24,
+        26
+      ],
+      "label": "+",
+      "action": "hermit.WeaponElement",
+      "packet": "C.Hermit",
+      "stat": "WeaponElement",
+      "reuseExistingHandler": true
+    },
+    {
+      "id": "character.hermit.confirmation",
+      "owner": "character",
+      "page": "hermit",
+      "kind": "control",
+      "rect": [
+        16,
+        402,
+        180,
+        24
+      ],
+      "hitRect": [
+        16,
+        402,
+        180,
+        24
+      ],
+      "binding": "existing local DXCheckBox check in CharacterDialog constructor",
+      "action": "existing-confirmation-option",
+      "label": "加点前确认",
+      "sourceEvidence": {
+        "path": "Client/Scenes/Views/CharacterDialog.cs",
+        "anchor": "DXCheckBox check = new DXCheckBox"
+      },
+      "bindingChangeRequired": "Promote the existing local checkbox reference; do not recreate it or reattach its handler."
+    },
+    {
+      "id": "inventory.close",
+      "owner": "inventory",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        250,
+        10,
+        18,
+        18
+      ],
+      "hitRect": [
+        250,
+        10,
+        18,
+        18
+      ],
+      "label": "X",
+      "binding": "CloseButton",
+      "action": "existing-window-close"
+    },
+    {
+      "id": "inventory.cell.0",
+      "owner": "inventory",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        15,
+        49,
+        36,
+        36
+      ],
+      "hitRect": [
+        15,
+        49,
+        35,
+        35
+      ],
+      "binding": "Grid.Grid[0]",
+      "slotId": 0,
+      "action": "existing-inventory-cell"
+    },
+    {
+      "id": "inventory.cell.1",
+      "owner": "inventory",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        50,
+        49,
+        36,
+        36
+      ],
+      "hitRect": [
+        50,
+        49,
+        35,
+        35
+      ],
+      "binding": "Grid.Grid[1]",
+      "slotId": 1,
+      "action": "existing-inventory-cell"
+    },
+    {
+      "id": "inventory.cell.2",
+      "owner": "inventory",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        85,
+        49,
+        36,
+        36
+      ],
+      "hitRect": [
+        85,
+        49,
+        35,
+        35
+      ],
+      "binding": "Grid.Grid[2]",
+      "slotId": 2,
+      "action": "existing-inventory-cell"
+    },
+    {
+      "id": "inventory.cell.3",
+      "owner": "inventory",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        120,
+        49,
+        36,
+        36
+      ],
+      "hitRect": [
+        120,
+        49,
+        35,
+        35
+      ],
+      "binding": "Grid.Grid[3]",
+      "slotId": 3,
+      "action": "existing-inventory-cell"
+    },
+    {
+      "id": "inventory.cell.4",
+      "owner": "inventory",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        155,
+        49,
+        36,
+        36
+      ],
+      "hitRect": [
+        155,
+        49,
+        35,
+        35
+      ],
+      "binding": "Grid.Grid[4]",
+      "slotId": 4,
+      "action": "existing-inventory-cell"
+    },
+    {
+      "id": "inventory.cell.5",
+      "owner": "inventory",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        190,
+        49,
+        36,
+        36
+      ],
+      "hitRect": [
+        190,
+        49,
+        35,
+        35
+      ],
+      "binding": "Grid.Grid[5]",
+      "slotId": 5,
+      "action": "existing-inventory-cell"
+    },
+    {
+      "id": "inventory.cell.6",
+      "owner": "inventory",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        225,
+        49,
+        36,
+        36
+      ],
+      "hitRect": [
+        225,
+        49,
+        36,
+        35
+      ],
+      "binding": "Grid.Grid[6]",
+      "slotId": 6,
+      "action": "existing-inventory-cell"
+    },
+    {
+      "id": "inventory.cell.7",
+      "owner": "inventory",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        15,
+        84,
+        36,
+        36
+      ],
+      "hitRect": [
+        15,
+        84,
+        35,
+        35
+      ],
+      "binding": "Grid.Grid[7]",
+      "slotId": 7,
+      "action": "existing-inventory-cell"
+    },
+    {
+      "id": "inventory.cell.8",
+      "owner": "inventory",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        50,
+        84,
+        36,
+        36
+      ],
+      "hitRect": [
+        50,
+        84,
+        35,
+        35
+      ],
+      "binding": "Grid.Grid[8]",
+      "slotId": 8,
+      "action": "existing-inventory-cell"
+    },
+    {
+      "id": "inventory.cell.9",
+      "owner": "inventory",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        85,
+        84,
+        36,
+        36
+      ],
+      "hitRect": [
+        85,
+        84,
+        35,
+        35
+      ],
+      "binding": "Grid.Grid[9]",
+      "slotId": 9,
+      "action": "existing-inventory-cell"
+    },
+    {
+      "id": "inventory.cell.10",
+      "owner": "inventory",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        120,
+        84,
+        36,
+        36
+      ],
+      "hitRect": [
+        120,
+        84,
+        35,
+        35
+      ],
+      "binding": "Grid.Grid[10]",
+      "slotId": 10,
+      "action": "existing-inventory-cell"
+    },
+    {
+      "id": "inventory.cell.11",
+      "owner": "inventory",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        155,
+        84,
+        36,
+        36
+      ],
+      "hitRect": [
+        155,
+        84,
+        35,
+        35
+      ],
+      "binding": "Grid.Grid[11]",
+      "slotId": 11,
+      "action": "existing-inventory-cell"
+    },
+    {
+      "id": "inventory.cell.12",
+      "owner": "inventory",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        190,
+        84,
+        36,
+        36
+      ],
+      "hitRect": [
+        190,
+        84,
+        35,
+        35
+      ],
+      "binding": "Grid.Grid[12]",
+      "slotId": 12,
+      "action": "existing-inventory-cell"
+    },
+    {
+      "id": "inventory.cell.13",
+      "owner": "inventory",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        225,
+        84,
+        36,
+        36
+      ],
+      "hitRect": [
+        225,
+        84,
+        36,
+        35
+      ],
+      "binding": "Grid.Grid[13]",
+      "slotId": 13,
+      "action": "existing-inventory-cell"
+    },
+    {
+      "id": "inventory.cell.14",
+      "owner": "inventory",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        15,
+        119,
+        36,
+        36
+      ],
+      "hitRect": [
+        15,
+        119,
+        35,
+        35
+      ],
+      "binding": "Grid.Grid[14]",
+      "slotId": 14,
+      "action": "existing-inventory-cell"
+    },
+    {
+      "id": "inventory.cell.15",
+      "owner": "inventory",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        50,
+        119,
+        36,
+        36
+      ],
+      "hitRect": [
+        50,
+        119,
+        35,
+        35
+      ],
+      "binding": "Grid.Grid[15]",
+      "slotId": 15,
+      "action": "existing-inventory-cell"
+    },
+    {
+      "id": "inventory.cell.16",
+      "owner": "inventory",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        85,
+        119,
+        36,
+        36
+      ],
+      "hitRect": [
+        85,
+        119,
+        35,
+        35
+      ],
+      "binding": "Grid.Grid[16]",
+      "slotId": 16,
+      "action": "existing-inventory-cell"
+    },
+    {
+      "id": "inventory.cell.17",
+      "owner": "inventory",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        120,
+        119,
+        36,
+        36
+      ],
+      "hitRect": [
+        120,
+        119,
+        35,
+        35
+      ],
+      "binding": "Grid.Grid[17]",
+      "slotId": 17,
+      "action": "existing-inventory-cell"
+    },
+    {
+      "id": "inventory.cell.18",
+      "owner": "inventory",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        155,
+        119,
+        36,
+        36
+      ],
+      "hitRect": [
+        155,
+        119,
+        35,
+        35
+      ],
+      "binding": "Grid.Grid[18]",
+      "slotId": 18,
+      "action": "existing-inventory-cell"
+    },
+    {
+      "id": "inventory.cell.19",
+      "owner": "inventory",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        190,
+        119,
+        36,
+        36
+      ],
+      "hitRect": [
+        190,
+        119,
+        35,
+        35
+      ],
+      "binding": "Grid.Grid[19]",
+      "slotId": 19,
+      "action": "existing-inventory-cell"
+    },
+    {
+      "id": "inventory.cell.20",
+      "owner": "inventory",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        225,
+        119,
+        36,
+        36
+      ],
+      "hitRect": [
+        225,
+        119,
+        36,
+        35
+      ],
+      "binding": "Grid.Grid[20]",
+      "slotId": 20,
+      "action": "existing-inventory-cell"
+    },
+    {
+      "id": "inventory.cell.21",
+      "owner": "inventory",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        15,
+        154,
+        36,
+        36
+      ],
+      "hitRect": [
+        15,
+        154,
+        35,
+        35
+      ],
+      "binding": "Grid.Grid[21]",
+      "slotId": 21,
+      "action": "existing-inventory-cell"
+    },
+    {
+      "id": "inventory.cell.22",
+      "owner": "inventory",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        50,
+        154,
+        36,
+        36
+      ],
+      "hitRect": [
+        50,
+        154,
+        35,
+        35
+      ],
+      "binding": "Grid.Grid[22]",
+      "slotId": 22,
+      "action": "existing-inventory-cell"
+    },
+    {
+      "id": "inventory.cell.23",
+      "owner": "inventory",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        85,
+        154,
+        36,
+        36
+      ],
+      "hitRect": [
+        85,
+        154,
+        35,
+        35
+      ],
+      "binding": "Grid.Grid[23]",
+      "slotId": 23,
+      "action": "existing-inventory-cell"
+    },
+    {
+      "id": "inventory.cell.24",
+      "owner": "inventory",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        120,
+        154,
+        36,
+        36
+      ],
+      "hitRect": [
+        120,
+        154,
+        35,
+        35
+      ],
+      "binding": "Grid.Grid[24]",
+      "slotId": 24,
+      "action": "existing-inventory-cell"
+    },
+    {
+      "id": "inventory.cell.25",
+      "owner": "inventory",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        155,
+        154,
+        36,
+        36
+      ],
+      "hitRect": [
+        155,
+        154,
+        35,
+        35
+      ],
+      "binding": "Grid.Grid[25]",
+      "slotId": 25,
+      "action": "existing-inventory-cell"
+    },
+    {
+      "id": "inventory.cell.26",
+      "owner": "inventory",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        190,
+        154,
+        36,
+        36
+      ],
+      "hitRect": [
+        190,
+        154,
+        35,
+        35
+      ],
+      "binding": "Grid.Grid[26]",
+      "slotId": 26,
+      "action": "existing-inventory-cell"
+    },
+    {
+      "id": "inventory.cell.27",
+      "owner": "inventory",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        225,
+        154,
+        36,
+        36
+      ],
+      "hitRect": [
+        225,
+        154,
+        36,
+        35
+      ],
+      "binding": "Grid.Grid[27]",
+      "slotId": 27,
+      "action": "existing-inventory-cell"
+    },
+    {
+      "id": "inventory.cell.28",
+      "owner": "inventory",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        15,
+        189,
+        36,
+        36
+      ],
+      "hitRect": [
+        15,
+        189,
+        35,
+        35
+      ],
+      "binding": "Grid.Grid[28]",
+      "slotId": 28,
+      "action": "existing-inventory-cell"
+    },
+    {
+      "id": "inventory.cell.29",
+      "owner": "inventory",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        50,
+        189,
+        36,
+        36
+      ],
+      "hitRect": [
+        50,
+        189,
+        35,
+        35
+      ],
+      "binding": "Grid.Grid[29]",
+      "slotId": 29,
+      "action": "existing-inventory-cell"
+    },
+    {
+      "id": "inventory.cell.30",
+      "owner": "inventory",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        85,
+        189,
+        36,
+        36
+      ],
+      "hitRect": [
+        85,
+        189,
+        35,
+        35
+      ],
+      "binding": "Grid.Grid[30]",
+      "slotId": 30,
+      "action": "existing-inventory-cell"
+    },
+    {
+      "id": "inventory.cell.31",
+      "owner": "inventory",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        120,
+        189,
+        36,
+        36
+      ],
+      "hitRect": [
+        120,
+        189,
+        35,
+        35
+      ],
+      "binding": "Grid.Grid[31]",
+      "slotId": 31,
+      "action": "existing-inventory-cell"
+    },
+    {
+      "id": "inventory.cell.32",
+      "owner": "inventory",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        155,
+        189,
+        36,
+        36
+      ],
+      "hitRect": [
+        155,
+        189,
+        35,
+        35
+      ],
+      "binding": "Grid.Grid[32]",
+      "slotId": 32,
+      "action": "existing-inventory-cell"
+    },
+    {
+      "id": "inventory.cell.33",
+      "owner": "inventory",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        190,
+        189,
+        36,
+        36
+      ],
+      "hitRect": [
+        190,
+        189,
+        35,
+        35
+      ],
+      "binding": "Grid.Grid[33]",
+      "slotId": 33,
+      "action": "existing-inventory-cell"
+    },
+    {
+      "id": "inventory.cell.34",
+      "owner": "inventory",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        225,
+        189,
+        36,
+        36
+      ],
+      "hitRect": [
+        225,
+        189,
+        36,
+        35
+      ],
+      "binding": "Grid.Grid[34]",
+      "slotId": 34,
+      "action": "existing-inventory-cell"
+    },
+    {
+      "id": "inventory.cell.35",
+      "owner": "inventory",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        15,
+        224,
+        36,
+        36
+      ],
+      "hitRect": [
+        15,
+        224,
+        35,
+        35
+      ],
+      "binding": "Grid.Grid[35]",
+      "slotId": 35,
+      "action": "existing-inventory-cell"
+    },
+    {
+      "id": "inventory.cell.36",
+      "owner": "inventory",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        50,
+        224,
+        36,
+        36
+      ],
+      "hitRect": [
+        50,
+        224,
+        35,
+        35
+      ],
+      "binding": "Grid.Grid[36]",
+      "slotId": 36,
+      "action": "existing-inventory-cell"
+    },
+    {
+      "id": "inventory.cell.37",
+      "owner": "inventory",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        85,
+        224,
+        36,
+        36
+      ],
+      "hitRect": [
+        85,
+        224,
+        35,
+        35
+      ],
+      "binding": "Grid.Grid[37]",
+      "slotId": 37,
+      "action": "existing-inventory-cell"
+    },
+    {
+      "id": "inventory.cell.38",
+      "owner": "inventory",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        120,
+        224,
+        36,
+        36
+      ],
+      "hitRect": [
+        120,
+        224,
+        35,
+        35
+      ],
+      "binding": "Grid.Grid[38]",
+      "slotId": 38,
+      "action": "existing-inventory-cell"
+    },
+    {
+      "id": "inventory.cell.39",
+      "owner": "inventory",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        155,
+        224,
+        36,
+        36
+      ],
+      "hitRect": [
+        155,
+        224,
+        35,
+        35
+      ],
+      "binding": "Grid.Grid[39]",
+      "slotId": 39,
+      "action": "existing-inventory-cell"
+    },
+    {
+      "id": "inventory.cell.40",
+      "owner": "inventory",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        190,
+        224,
+        36,
+        36
+      ],
+      "hitRect": [
+        190,
+        224,
+        35,
+        35
+      ],
+      "binding": "Grid.Grid[40]",
+      "slotId": 40,
+      "action": "existing-inventory-cell"
+    },
+    {
+      "id": "inventory.cell.41",
+      "owner": "inventory",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        225,
+        224,
+        36,
+        36
+      ],
+      "hitRect": [
+        225,
+        224,
+        36,
+        35
+      ],
+      "binding": "Grid.Grid[41]",
+      "slotId": 41,
+      "action": "existing-inventory-cell"
+    },
+    {
+      "id": "inventory.cell.42",
+      "owner": "inventory",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        15,
+        259,
+        36,
+        36
+      ],
+      "hitRect": [
+        15,
+        259,
+        35,
+        36
+      ],
+      "binding": "Grid.Grid[42]",
+      "slotId": 42,
+      "action": "existing-inventory-cell"
+    },
+    {
+      "id": "inventory.cell.43",
+      "owner": "inventory",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        50,
+        259,
+        36,
+        36
+      ],
+      "hitRect": [
+        50,
+        259,
+        35,
+        36
+      ],
+      "binding": "Grid.Grid[43]",
+      "slotId": 43,
+      "action": "existing-inventory-cell"
+    },
+    {
+      "id": "inventory.cell.44",
+      "owner": "inventory",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        85,
+        259,
+        36,
+        36
+      ],
+      "hitRect": [
+        85,
+        259,
+        35,
+        36
+      ],
+      "binding": "Grid.Grid[44]",
+      "slotId": 44,
+      "action": "existing-inventory-cell"
+    },
+    {
+      "id": "inventory.cell.45",
+      "owner": "inventory",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        120,
+        259,
+        36,
+        36
+      ],
+      "hitRect": [
+        120,
+        259,
+        35,
+        36
+      ],
+      "binding": "Grid.Grid[45]",
+      "slotId": 45,
+      "action": "existing-inventory-cell"
+    },
+    {
+      "id": "inventory.cell.46",
+      "owner": "inventory",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        155,
+        259,
+        36,
+        36
+      ],
+      "hitRect": [
+        155,
+        259,
+        35,
+        36
+      ],
+      "binding": "Grid.Grid[46]",
+      "slotId": 46,
+      "action": "existing-inventory-cell"
+    },
+    {
+      "id": "inventory.cell.47",
+      "owner": "inventory",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        190,
+        259,
+        36,
+        36
+      ],
+      "hitRect": [
+        190,
+        259,
+        35,
+        36
+      ],
+      "binding": "Grid.Grid[47]",
+      "slotId": 47,
+      "action": "existing-inventory-cell"
+    },
+    {
+      "id": "inventory.cell.48",
+      "owner": "inventory",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        225,
+        259,
+        36,
+        36
+      ],
+      "hitRect": [
+        225,
+        259,
+        36,
+        36
+      ],
+      "binding": "Grid.Grid[48]",
+      "slotId": 48,
+      "action": "existing-inventory-cell"
+    },
+    {
+      "id": "inventory.caption.weight",
+      "owner": "inventory",
+      "page": "all",
+      "kind": "caption",
+      "rect": [
+        16,
+        304,
+        52,
+        20
+      ],
+      "label": "重量",
+      "binding": "gameUiWeightCaption"
+    },
+    {
+      "id": "inventory.caption.gold",
+      "owner": "inventory",
+      "page": "all",
+      "kind": "caption",
+      "rect": [
+        16,
+        328,
+        52,
+        20
+      ],
+      "label": "金币",
+      "binding": "gameUiGoldCaption"
+    },
+    {
+      "id": "inventory.weight",
+      "owner": "inventory",
+      "page": "all",
+      "kind": "stat",
+      "rect": [
+        70,
+        304,
+        190,
+        20
+      ],
+      "binding": "WeightLabel",
+      "label": "重量"
+    },
+    {
+      "id": "inventory.gold",
+      "owner": "inventory",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        70,
+        328,
+        190,
+        20
+      ],
+      "hitRect": [
+        70,
+        328,
+        190,
+        20
+      ],
+      "binding": "GoldLabel",
+      "action": "GoldLabel_MouseClick",
+      "label": "金币"
+    },
+    {
+      "id": "inventory.action.sell",
+      "owner": "inventory",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        16,
+        354,
+        78,
+        24
+      ],
+      "hitRect": [
+        16,
+        354,
+        78,
+        24
+      ],
+      "label": "远程出售",
+      "action": "OpenSellGoodsDialog",
+      "popupSkin": "Legacy"
+    },
+    {
+      "id": "inventory.action.fragment",
+      "owner": "inventory",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        95,
+        354,
+        78,
+        24
+      ],
+      "hitRect": [
+        95,
+        354,
+        78,
+        24
+      ],
+      "label": "远程拆解",
+      "action": "OpenFragmentDialog",
+      "popupSkin": "Legacy"
+    },
+    {
+      "id": "inventory.action.drops",
+      "owner": "inventory",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        174,
+        354,
+        78,
+        24
+      ],
+      "hitRect": [
+        174,
+        354,
+        78,
+        24
+      ],
+      "label": "爆率查询",
+      "action": "OpenMonsterDropListDialog",
+      "popupSkin": "Legacy"
+    },
+    {
+      "id": "quickbar.cell.0",
+      "owner": "quickbar",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        60,
+        4,
+        36,
+        36
+      ],
+      "hitRect": [
+        60,
+        4,
+        35,
+        36
+      ],
+      "binding": "Grid.Grid[0]",
+      "slotId": 0,
+      "action": "existing-belt-link"
+    },
+    {
+      "id": "quickbar.cell.1",
+      "owner": "quickbar",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        95,
+        4,
+        36,
+        36
+      ],
+      "hitRect": [
+        95,
+        4,
+        35,
+        36
+      ],
+      "binding": "Grid.Grid[1]",
+      "slotId": 1,
+      "action": "existing-belt-link"
+    },
+    {
+      "id": "quickbar.cell.2",
+      "owner": "quickbar",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        130,
+        4,
+        36,
+        36
+      ],
+      "hitRect": [
+        130,
+        4,
+        35,
+        36
+      ],
+      "binding": "Grid.Grid[2]",
+      "slotId": 2,
+      "action": "existing-belt-link"
+    },
+    {
+      "id": "quickbar.cell.3",
+      "owner": "quickbar",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        165,
+        4,
+        36,
+        36
+      ],
+      "hitRect": [
+        165,
+        4,
+        35,
+        36
+      ],
+      "binding": "Grid.Grid[3]",
+      "slotId": 3,
+      "action": "existing-belt-link"
+    },
+    {
+      "id": "quickbar.cell.4",
+      "owner": "quickbar",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        200,
+        4,
+        36,
+        36
+      ],
+      "hitRect": [
+        200,
+        4,
+        35,
+        36
+      ],
+      "binding": "Grid.Grid[4]",
+      "slotId": 4,
+      "action": "existing-belt-link"
+    },
+    {
+      "id": "quickbar.cell.5",
+      "owner": "quickbar",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        235,
+        4,
+        36,
+        36
+      ],
+      "hitRect": [
+        235,
+        4,
+        35,
+        36
+      ],
+      "binding": "Grid.Grid[5]",
+      "slotId": 5,
+      "action": "existing-belt-link"
+    },
+    {
+      "id": "quickbar.cell.6",
+      "owner": "quickbar",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        270,
+        4,
+        36,
+        36
+      ],
+      "hitRect": [
+        270,
+        4,
+        35,
+        36
+      ],
+      "binding": "Grid.Grid[6]",
+      "slotId": 6,
+      "action": "existing-belt-link"
+    },
+    {
+      "id": "quickbar.cell.7",
+      "owner": "quickbar",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        305,
+        4,
+        36,
+        36
+      ],
+      "hitRect": [
+        305,
+        4,
+        35,
+        36
+      ],
+      "binding": "Grid.Grid[7]",
+      "slotId": 7,
+      "action": "existing-belt-link"
+    },
+    {
+      "id": "quickbar.cell.8",
+      "owner": "quickbar",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        340,
+        4,
+        36,
+        36
+      ],
+      "hitRect": [
+        340,
+        4,
+        35,
+        36
+      ],
+      "binding": "Grid.Grid[8]",
+      "slotId": 8,
+      "action": "existing-belt-link"
+    },
+    {
+      "id": "quickbar.cell.9",
+      "owner": "quickbar",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        375,
+        4,
+        36,
+        36
+      ],
+      "hitRect": [
+        375,
+        4,
+        36,
+        36
+      ],
+      "binding": "Grid.Grid[9]",
+      "slotId": 9,
+      "action": "existing-belt-link"
+    },
+    {
+      "id": "minimap.viewport",
+      "owner": "minimap",
+      "page": "all",
+      "kind": "viewport",
+      "rect": [
+        11,
+        21,
+        150,
+        152
+      ],
+      "binding": "Panel/Area",
+      "clip": true,
+      "action": "existing-map-pan-and-objects"
+    },
+    {
+      "id": "minimap.coordinates",
+      "owner": "minimap",
+      "page": "all",
+      "kind": "stat",
+      "rect": [
+        24,
+        177,
+        118,
+        16
+      ],
+      "dataSource": "existing-map-coordinates"
+    },
+    {
+      "id": "minimap.collapse",
+      "owner": "minimap",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        146,
+        2,
+        20,
+        16
+      ],
+      "hitRect": [
+        146,
+        2,
+        20,
+        16
+      ],
+      "action": "existing-minimap-visibility",
+      "role": "minimap-collapse-button"
+    },
+    {
+      "id": "minimap.footer.ornament",
+      "owner": "minimap",
+      "page": "all",
+      "kind": "decoration",
+      "rect": [
+        4,
+        177,
+        20,
+        16
+      ],
+      "role": "minimap-mountain-button"
+    },
+    {
+      "id": "chat.tabs",
+      "owner": "chat",
+      "page": "all",
+      "kind": "dynamic-tabs",
+      "rect": [
+        4,
+        2,
+        566,
+        22
+      ],
+      "binding": "existing-ChatTab.TabButton",
+      "preserveInstances": true,
+      "overflow": "horizontal-scroll"
+    },
+    {
+      "id": "chat.history",
+      "owner": "chat",
+      "page": "all",
+      "kind": "viewport",
+      "rect": [
+        4,
+        26,
+        548,
+        76
+      ],
+      "binding": "ChatTab.TextPanel",
+      "preserveInstances": true,
+      "preserveFontsColoursAndHistory": true
+    },
+    {
+      "id": "chat.scrollbar",
+      "owner": "chat",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        554,
+        26,
+        16,
+        76
+      ],
+      "hitRect": [
+        554,
+        26,
+        16,
+        76
+      ],
+      "binding": "ChatTab.ScrollBar",
+      "action": "existing-scrollbar"
+    },
+    {
+      "id": "chatInput.mode",
+      "owner": "chatInput",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        4,
+        1,
+        56,
+        20
+      ],
+      "hitRect": [
+        4,
+        1,
+        56,
+        20
+      ],
+      "binding": "ChatModeButton",
+      "action": "existing-channel-selector"
+    },
+    {
+      "id": "chatInput.text",
+      "owner": "chatInput",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        64,
+        1,
+        480,
+        20
+      ],
+      "hitRect": [
+        64,
+        1,
+        480,
+        20
+      ],
+      "binding": "TextBox",
+      "action": "existing-chat-input",
+      "nativeBounds": "DXTextBox.DisplayArea",
+      "preserveHandle": true
+    },
+    {
+      "id": "chatInput.options",
+      "owner": "chatInput",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        548,
+        1,
+        22,
+        20
+      ],
+      "hitRect": [
+        548,
+        1,
+        22,
+        20
+      ],
+      "binding": "OptionsButton",
+      "action": "existing-chat-options",
+      "popupSkin": "Legacy"
+    },
+    {
+      "id": "commands.CharacterButton",
+      "owner": "commands",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        85,
+        94,
+        58,
+        58
+      ],
+      "hitRect": [
+        85,
+        94,
+        58,
+        58
+      ],
+      "binding": "CharacterButton",
+      "role": "hud-command-center",
+      "action": "reuse-existing-handler",
+      "popupSkin": "Legacy",
+      "hitTest": "normal-frame-alpha"
+    },
+    {
+      "id": "commands.InventoryButton",
+      "owner": "commands",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        88,
+        67,
+        54,
+        32
+      ],
+      "hitRect": [
+        88,
+        67,
+        54,
+        32
+      ],
+      "binding": "InventoryButton",
+      "role": "hud-command-top",
+      "action": "reuse-existing-handler",
+      "popupSkin": "Legacy",
+      "hitTest": "normal-frame-alpha"
+    },
+    {
+      "id": "commands.SpellButton",
+      "owner": "commands",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        55,
+        76,
+        42,
+        50
+      ],
+      "hitRect": [
+        55,
+        76,
+        42,
+        50
+      ],
+      "binding": "SpellButton",
+      "role": "hud-command-upper-left",
+      "action": "reuse-existing-handler",
+      "popupSkin": "Legacy",
+      "hitTest": "normal-frame-alpha"
+    },
+    {
+      "id": "commands.QuestButton",
+      "owner": "commands",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        130,
+        74,
+        42,
+        50
+      ],
+      "hitRect": [
+        130,
+        74,
+        42,
+        50
+      ],
+      "binding": "QuestButton",
+      "role": "hud-command-upper-right",
+      "action": "reuse-existing-handler",
+      "popupSkin": "Legacy",
+      "hitTest": "normal-frame-alpha"
+    },
+    {
+      "id": "commands.MailButton",
+      "owner": "commands",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        56,
+        126,
+        42,
+        50
+      ],
+      "hitRect": [
+        56,
+        126,
+        42,
+        50
+      ],
+      "binding": "MailButton",
+      "role": "hud-command-lower-left",
+      "action": "reuse-existing-handler",
+      "popupSkin": "Legacy",
+      "hitTest": "normal-frame-alpha"
+    },
+    {
+      "id": "commands.GroupButton",
+      "owner": "commands",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        131,
+        125,
+        42,
+        50
+      ],
+      "hitRect": [
+        131,
+        125,
+        42,
+        50
+      ],
+      "binding": "GroupButton",
+      "role": "hud-command-lower-right",
+      "action": "reuse-existing-handler",
+      "popupSkin": "Legacy",
+      "hitTest": "normal-frame-alpha"
+    },
+    {
+      "id": "commands.ConfigButton",
+      "owner": "commands",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        85,
+        152,
+        54,
+        32
+      ],
+      "hitRect": [
+        85,
+        152,
+        54,
+        32
+      ],
+      "binding": "ConfigButton",
+      "role": "hud-command-bottom",
+      "action": "reuse-existing-handler",
+      "popupSkin": "Legacy",
+      "hitTest": "normal-frame-alpha"
+    },
+    {
+      "id": "commands.CashShopButton",
+      "owner": "commands",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        180,
+        23,
+        40,
+        40
+      ],
+      "hitRect": [
+        180,
+        23,
+        40,
+        40
+      ],
+      "binding": "CashShopButton",
+      "role": "hud-shop-icon",
+      "action": "reuse-existing-handler",
+      "popupSkin": "Legacy",
+      "hitTest": "normal-frame-alpha"
+    },
+    {
+      "id": "commands.BeltButton",
+      "owner": "commands",
+      "page": "all",
+      "kind": "control",
+      "rect": [
+        5,
+        111,
+        31,
+        24
+      ],
+      "hitRect": [
+        5,
+        111,
+        31,
+        24
+      ],
+      "binding": "BeltButton",
+      "role": null,
+      "action": "reuse-existing-handler",
+      "popupSkin": "Legacy",
+      "render": "neutral-labelled-button",
+      "label": "栏",
+      "hint": "reuse-existing-Z-hint"
+    },
+    {
+      "id": "commands.attackMode",
+      "owner": "commands",
+      "page": "all",
+      "kind": "stat",
+      "rect": [
+        4,
+        4,
+        172,
+        16
+      ],
+      "binding": "AttackModeLabel"
+    },
+    {
+      "id": "commands.petMode",
+      "owner": "commands",
+      "page": "all",
+      "kind": "stat",
+      "rect": [
+        4,
+        21,
+        172,
+        16
+      ],
+      "binding": "PetModeLabel"
+    },
+    {
+      "id": "orb.shell",
+      "owner": "orb",
+      "page": "all",
+      "kind": "decoration",
+      "rect": [
+        0,
+        0,
+        225,
+        202
+      ],
+      "role": "hud-orb-shell"
+    },
+    {
+      "id": "orb.fill.health",
+      "owner": "orb",
+      "page": "all",
+      "kind": "fill",
+      "rect": [
+        43,
+        75,
+        53,
+        101
+      ],
+      "role": "hud-hp-fill",
+      "fillDirection": "vertical-bottom",
+      "clamp": true
+    },
+    {
+      "id": "orb.fill.mana",
+      "owner": "orb",
+      "page": "all",
+      "kind": "fill",
+      "rect": [
+        96,
+        75,
+        48,
+        101
+      ],
+      "role": "hud-mp-fill",
+      "fillDirection": "vertical-bottom",
+      "clamp": true
+    },
+    {
+      "id": "orb.ClassLabel",
+      "owner": "orb",
+      "page": "all",
+      "kind": "stat",
+      "rect": [
+        4,
+        4,
+        84,
+        16
+      ],
+      "binding": "ClassLabel",
+      "fullTextInHint": true
+    },
+    {
+      "id": "orb.LevelLabel",
+      "owner": "orb",
+      "page": "all",
+      "kind": "stat",
+      "rect": [
+        90,
+        4,
+        84,
+        16
+      ],
+      "binding": "LevelLabel",
+      "fullTextInHint": true
+    },
+    {
+      "id": "orb.HealthLabel",
+      "owner": "orb",
+      "page": "all",
+      "kind": "stat",
+      "rect": [
+        20,
+        150,
+        70,
+        18
+      ],
+      "binding": "HealthLabel",
+      "fullTextInHint": true
+    },
+    {
+      "id": "orb.ManaLabel",
+      "owner": "orb",
+      "page": "all",
+      "kind": "stat",
+      "rect": [
+        96,
+        150,
+        70,
+        18
+      ],
+      "binding": "ManaLabel",
+      "fullTextInHint": true
+    },
+    {
+      "id": "readouts.ACLabel",
+      "owner": "readouts",
+      "page": "all",
+      "kind": "stat",
+      "rect": [
+        28,
+        0,
+        52,
+        16
+      ],
+      "binding": "ACLabel",
+      "fullTextInHint": true
+    },
+    {
+      "id": "readouts.MRLabel",
+      "owner": "readouts",
+      "page": "all",
+      "kind": "stat",
+      "rect": [
+        110,
+        0,
+        52,
+        16
+      ],
+      "binding": "MRLabel",
+      "fullTextInHint": true
+    },
+    {
+      "id": "readouts.DCLabel",
+      "owner": "readouts",
+      "page": "all",
+      "kind": "stat",
+      "rect": [
+        192,
+        0,
+        52,
+        16
+      ],
+      "binding": "DCLabel",
+      "fullTextInHint": true
+    },
+    {
+      "id": "readouts.MCLabel",
+      "owner": "readouts",
+      "page": "all",
+      "kind": "stat",
+      "rect": [
+        274,
+        0,
+        52,
+        16
+      ],
+      "binding": "MCLabel",
+      "fullTextInHint": true
+    },
+    {
+      "id": "readouts.SCLabel",
+      "owner": "readouts",
+      "page": "all",
+      "kind": "stat",
+      "rect": [
+        356,
+        0,
+        52,
+        16
+      ],
+      "binding": "SCLabel",
+      "fullTextInHint": true
+    },
+    {
+      "id": "readouts.AccuracyLabel",
+      "owner": "readouts",
+      "page": "all",
+      "kind": "stat",
+      "rect": [
+        438,
+        0,
+        52,
+        16
+      ],
+      "binding": "AccuracyLabel",
+      "fullTextInHint": true
+    },
+    {
+      "id": "readouts.AgilityLabel",
+      "owner": "readouts",
+      "page": "all",
+      "kind": "stat",
+      "rect": [
+        520,
+        0,
+        52,
+        16
+      ],
+      "binding": "AgilityLabel",
+      "fullTextInHint": true
+    },
+    {
+      "id": "experience.fill",
+      "owner": "experience",
+      "page": "all",
+      "kind": "fill",
+      "rect": [
+        0,
+        0,
+        574,
+        8
+      ],
+      "binding": "ExperienceBar",
+      "fillDirection": "horizontal-left",
+      "clamp": true
+    },
+    {
+      "id": "experience.label",
+      "owner": "experience",
+      "page": "all",
+      "kind": "stat",
+      "rect": [
+        0,
+        0,
+        574,
+        8
+      ],
+      "binding": "ExperienceLabel",
+      "fullTextInHint": true,
+      "render": "hint-only"
+    },
+    {
+      "id": "commands.alert.NewMailIcon",
+      "owner": "commands",
+      "page": "all",
+      "kind": "decoration",
+      "rect": [
+        58,
+        128,
+        14,
+        14
+      ],
+      "binding": "NewMailIcon",
+      "passThrough": true
+    },
+    {
+      "id": "commands.alert.CompletedQuestIcon",
+      "owner": "commands",
+      "page": "all",
+      "kind": "decoration",
+      "rect": [
+        132,
+        76,
+        14,
+        14
+      ],
+      "binding": "CompletedQuestIcon",
+      "passThrough": true,
+      "whenAvailableQuestVisible": [
+        132,
+        110,
+        14,
+        14
+      ]
+    },
+    {
+      "id": "commands.alert.AvailableQuestIcon",
+      "owner": "commands",
+      "page": "all",
+      "kind": "decoration",
+      "rect": [
+        132,
+        76,
+        14,
+        14
+      ],
+      "binding": "AvailableQuestIcon",
+      "passThrough": true
+    },
+    {
+      "id": "character.hermit.weaponElement.caption",
+      "owner": "character",
+      "page": "hermit",
+      "kind": "caption",
+      "rect": [
+        16,
+        332,
+        154,
+        26
+      ],
+      "label": "武器元素"
+    },
+    {
+      "id": "readouts.ACLabel.caption",
+      "owner": "readouts",
+      "page": "all",
+      "kind": "decoration",
+      "rect": [
+        0,
+        0,
+        28,
+        16
+      ],
+      "text": "防御",
+      "visibleWith": "ACLabel",
+      "passThrough": true
+    },
+    {
+      "id": "readouts.MRLabel.caption",
+      "owner": "readouts",
+      "page": "all",
+      "kind": "decoration",
+      "rect": [
+        82,
+        0,
+        28,
+        16
+      ],
+      "text": "魔防",
+      "visibleWith": "MRLabel",
+      "passThrough": true
+    },
+    {
+      "id": "readouts.DCLabel.caption",
+      "owner": "readouts",
+      "page": "all",
+      "kind": "decoration",
+      "rect": [
+        164,
+        0,
+        28,
+        16
+      ],
+      "text": "攻击",
+      "visibleWith": "DCLabel",
+      "passThrough": true
+    },
+    {
+      "id": "readouts.MCLabel.caption",
+      "owner": "readouts",
+      "page": "all",
+      "kind": "decoration",
+      "rect": [
+        246,
+        0,
+        28,
+        16
+      ],
+      "text": "魔法",
+      "visibleWith": "MCLabel",
+      "passThrough": true
+    },
+    {
+      "id": "readouts.SCLabel.caption",
+      "owner": "readouts",
+      "page": "all",
+      "kind": "decoration",
+      "rect": [
+        328,
+        0,
+        28,
+        16
+      ],
+      "text": "道术",
+      "visibleWith": "SCLabel",
+      "passThrough": true
+    },
+    {
+      "id": "readouts.AccuracyLabel.caption",
+      "owner": "readouts",
+      "page": "all",
+      "kind": "decoration",
+      "rect": [
+        410,
+        0,
+        28,
+        16
+      ],
+      "text": "准确",
+      "visibleWith": "AccuracyLabel",
+      "passThrough": true
+    },
+    {
+      "id": "readouts.AgilityLabel.caption",
+      "owner": "readouts",
+      "page": "all",
+      "kind": "decoration",
+      "rect": [
+        492,
+        0,
+        28,
+        16
+      ],
+      "text": "敏捷",
+      "visibleWith": "AgilityLabel",
+      "passThrough": true
+    }
+  ],
+  "resolutions": [
+    {
+      "width": 1024,
+      "height": 768,
+      "safeRect": [
+        0,
+        0,
+        1024,
+        566
+      ],
+      "placements": {
+        "character": [
+          8,
+          4,
+          412,
+          562
+        ],
+        "inventory": [
+          740,
+          56,
+          276,
+          412
+        ],
+        "orb": [
+          0,
+          566,
+          225,
+          202
+        ],
+        "commands": [
+          799,
+          566,
+          225,
+          202
+        ],
+        "quickbar": [
+          282,
+          570,
+          459,
+          44
+        ],
+        "readouts": [
+          225,
+          614,
+          574,
+          16
+        ],
+        "chat": [
+          225,
+          630,
+          574,
+          106
+        ],
+        "chatInput": [
+          225,
+          738,
+          574,
+          22
+        ],
+        "experience": [
+          225,
+          760,
+          574,
+          8
+        ],
+        "minimap": [
+          858,
+          0,
+          166,
+          198
+        ]
+      },
+      "defaultCombination": "character-and-inventory",
+      "intentionalOverlays": [
+        "inventory-may-cover-minimap-like-reference"
+      ]
+    },
+    {
+      "width": 1366,
+      "height": 768,
+      "safeRect": [
+        0,
+        0,
+        1366,
+        566
+      ],
+      "placements": {
+        "character": [
+          8,
+          4,
+          412,
+          562
+        ],
+        "inventory": [
+          1082,
+          56,
+          276,
+          412
+        ],
+        "orb": [
+          171,
+          566,
+          225,
+          202
+        ],
+        "commands": [
+          970,
+          566,
+          225,
+          202
+        ],
+        "quickbar": [
+          453,
+          570,
+          459,
+          44
+        ],
+        "readouts": [
+          396,
+          614,
+          574,
+          16
+        ],
+        "chat": [
+          396,
+          630,
+          574,
+          106
+        ],
+        "chatInput": [
+          396,
+          738,
+          574,
+          22
+        ],
+        "experience": [
+          396,
+          760,
+          574,
+          8
+        ],
+        "minimap": [
+          1200,
+          0,
+          166,
+          198
+        ]
+      },
+      "defaultCombination": "character-and-inventory",
+      "intentionalOverlays": [
+        "inventory-may-cover-minimap-like-reference"
+      ]
+    },
+    {
+      "width": 1280,
+      "height": 800,
+      "safeRect": [
+        0,
+        0,
+        1280,
+        598
+      ],
+      "placements": {
+        "character": [
+          8,
+          4,
+          412,
+          562
+        ],
+        "inventory": [
+          996,
+          56,
+          276,
+          412
+        ],
+        "orb": [
+          128,
+          598,
+          225,
+          202
+        ],
+        "commands": [
+          927,
+          598,
+          225,
+          202
+        ],
+        "quickbar": [
+          410,
+          602,
+          459,
+          44
+        ],
+        "readouts": [
+          353,
+          646,
+          574,
+          16
+        ],
+        "chat": [
+          353,
+          662,
+          574,
+          106
+        ],
+        "chatInput": [
+          353,
+          770,
+          574,
+          22
+        ],
+        "experience": [
+          353,
+          792,
+          574,
+          8
+        ],
+        "minimap": [
+          1114,
+          0,
+          166,
+          198
+        ]
+      },
+      "defaultCombination": "character-and-inventory",
+      "intentionalOverlays": [
+        "inventory-may-cover-minimap-like-reference"
+      ]
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "safeRect": [
+        0,
+        0,
+        1440,
+        698
+      ],
+      "placements": {
+        "character": [
+          8,
+          4,
+          412,
+          562
+        ],
+        "inventory": [
+          1156,
+          56,
+          276,
+          412
+        ],
+        "orb": [
+          208,
+          698,
+          225,
+          202
+        ],
+        "commands": [
+          1007,
+          698,
+          225,
+          202
+        ],
+        "quickbar": [
+          490,
+          702,
+          459,
+          44
+        ],
+        "readouts": [
+          433,
+          746,
+          574,
+          16
+        ],
+        "chat": [
+          433,
+          762,
+          574,
+          106
+        ],
+        "chatInput": [
+          433,
+          870,
+          574,
+          22
+        ],
+        "experience": [
+          433,
+          892,
+          574,
+          8
+        ],
+        "minimap": [
+          1274,
+          0,
+          166,
+          198
+        ]
+      },
+      "defaultCombination": "character-and-inventory",
+      "intentionalOverlays": [
+        "inventory-may-cover-minimap-like-reference"
+      ]
+    },
+    {
+      "width": 1600,
+      "height": 900,
+      "safeRect": [
+        0,
+        0,
+        1600,
+        698
+      ],
+      "placements": {
+        "character": [
+          8,
+          4,
+          412,
+          562
+        ],
+        "inventory": [
+          1316,
+          56,
+          276,
+          412
+        ],
+        "orb": [
+          288,
+          698,
+          225,
+          202
+        ],
+        "commands": [
+          1087,
+          698,
+          225,
+          202
+        ],
+        "quickbar": [
+          570,
+          702,
+          459,
+          44
+        ],
+        "readouts": [
+          513,
+          746,
+          574,
+          16
+        ],
+        "chat": [
+          513,
+          762,
+          574,
+          106
+        ],
+        "chatInput": [
+          513,
+          870,
+          574,
+          22
+        ],
+        "experience": [
+          513,
+          892,
+          574,
+          8
+        ],
+        "minimap": [
+          1434,
+          0,
+          166,
+          198
+        ]
+      },
+      "defaultCombination": "character-and-inventory",
+      "intentionalOverlays": [
+        "inventory-may-cover-minimap-like-reference"
+      ]
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "safeRect": [
+        0,
+        0,
+        1920,
+        878
+      ],
+      "placements": {
+        "character": [
+          8,
+          4,
+          412,
+          562
+        ],
+        "inventory": [
+          1636,
+          56,
+          276,
+          412
+        ],
+        "orb": [
+          448,
+          878,
+          225,
+          202
+        ],
+        "commands": [
+          1247,
+          878,
+          225,
+          202
+        ],
+        "quickbar": [
+          730,
+          882,
+          459,
+          44
+        ],
+        "readouts": [
+          673,
+          926,
+          574,
+          16
+        ],
+        "chat": [
+          673,
+          942,
+          574,
+          106
+        ],
+        "chatInput": [
+          673,
+          1050,
+          574,
+          22
+        ],
+        "experience": [
+          673,
+          1072,
+          574,
+          8
+        ],
+        "minimap": [
+          1754,
+          0,
+          166,
+          198
+        ]
+      },
+      "defaultCombination": "character-and-inventory",
+      "intentionalOverlays": [
+        "inventory-may-cover-minimap-like-reference"
+      ]
+    }
+  ],
+  "gridPolicy": {
+    "visualCellSize": [
+      36,
+      36
+    ],
+    "stride": [
+      35,
+      35
+    ],
+    "sharedBorderHitOwner": "right/bottom neighbour; last column/row retains outer pixel",
+    "changeGlobalCellSize": false
+  },
+  "chatPolicy": {
+    "preserveInstances": true,
+    "restoreSavedTabsOnce": true,
+    "rebuildOnResize": false,
+    "preserveFontsColoursChannelsHistoryAndScroll": true,
+    "separateInputRow": true,
+    "nativeInputBounds": "DXTextBox.DisplayArea",
+    "dynamicTabs": "preserve saved count and order; scroll tab header when needed"
+  },
+  "scope": {
+    "npcCards": "Legacy",
+    "secondaryPopups": "Legacy",
+    "displaySettings": "unchanged",
+    "loginAndCharacterSelection": "unchanged"
+  },
+  "artworkAdaptations": [
+    "Character: cover unused baked slots, old right-hand wells and bottom wells with matching texture before drawing new cells and labels; never keep decorative hit areas.",
+    "Inventory: use adapted 7x7 asset, repaint unsupported currency and sort labels; retain existing three action buttons, gold pickup and weight only.",
+    "Command area: bottom-align the native shell; use relative screenshot placements for the compact wheel, normal-frame alpha, explicit back-to-front order and exclusive command centres. These are adapted coordinates, not measured original hit polygons; unsupported horse/exit icons remain unbound.",
+    "Chat: preserve existing text rendering; apply a thin official-style frame around the existing history viewport and separate input.",
+    "Minimap: preserve original map calculations and pan behavior, use explicit viewport. Zoom artwork is not a new zoom action."
+  ],
+  "remainingAcceptance": [
+    "Freeze artwork and complete source manifest before enabling runtime bindings.",
+    "Measure text and preview clipping with actual client controls, including long names and large signed values.",
+    "Implement viewport/tab overflow and all lifecycle bindings; hidden-window geometry tests do not prove IME.",
+    "Verify unchanged NPC/service/storage combinations, gameplay actions, event counts and packets in the client."
+  ],
+  "commandPolicy": {
+    "imageDrawOrder": [
+      "SpellButton",
+      "QuestButton",
+      "MailButton",
+      "GroupButton",
+      "InventoryButton",
+      "ConfigButton",
+      "CharacterButton",
+      "CashShopButton"
+    ],
+    "overlap": "normal-alpha-frontmost",
+    "centreMustRemainExclusive": true,
+    "lockImageOrderOnInput": true,
+    "shellOrigin": [
+      0,
+      27
+    ],
+    "geometrySource": "adapted-relative-screenshot-matching"
+  }
+}

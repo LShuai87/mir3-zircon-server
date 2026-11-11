@@ -1,0 +1,13 @@
+{
+  "command": [
+    "D:/Program Files/Microsoft Visual Studio/2022/Enterprise/MSBuild/Current/Bin/MSBuild.exe",
+    "Client/Client.csproj",
+    "/t:Build",
+    "/p:Configuration=Debug",
+    "/p:Platform=AnyCPU",
+    "/v:minimal",
+    "/nologo"
+  ],
+  "exitCode": 0,
+  "log": "E:/workspace/mir3-zircon-server/docs/design/assets/official-ingame-ui/acceptance/native-scene-transitions/build-debug-final.log"
+}

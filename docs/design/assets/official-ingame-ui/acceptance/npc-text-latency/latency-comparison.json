@@ -1,0 +1,278 @@
+[
+  {
+    "phase": "before",
+    "scene": "official",
+    "responses": [
+      {
+        "type": "None",
+        "milliseconds": 3236
+      },
+      {
+        "type": "BuySell",
+        "milliseconds": 3097
+      },
+      {
+        "type": "Repair",
+        "milliseconds": 3043
+      },
+      {
+        "type": "Refine",
+        "milliseconds": 3010
+      },
+      {
+        "type": "RefineRetrieve",
+        "milliseconds": 3005
+      },
+      {
+        "type": "CompanionManage",
+        "milliseconds": 3082
+      },
+      {
+        "type": "WeddingRing",
+        "milliseconds": 2937
+      },
+      {
+        "type": "RefinementStone",
+        "milliseconds": 3065
+      },
+      {
+        "type": "MasterRefine",
+        "milliseconds": 3179
+      },
+      {
+        "type": "WeaponReset",
+        "milliseconds": 2931
+      },
+      {
+        "type": "ItemFragment",
+        "milliseconds": 3074
+      },
+      {
+        "type": "AccessoryRefineUpgrade",
+        "milliseconds": 3066
+      },
+      {
+        "type": "AccessoryRefineLevel",
+        "milliseconds": 3157
+      },
+      {
+        "type": "AccessoryReset",
+        "milliseconds": 3039
+      },
+      {
+        "type": "WeaponCraft",
+        "milliseconds": 2957
+      }
+    ],
+    "optionLayoutMs": 3053,
+    "cachedViewportMs": 0,
+    "groupLayoutMs": 0
+  },
+  {
+    "phase": "before",
+    "scene": "official-reentry",
+    "responses": [
+      {
+        "type": "None",
+        "milliseconds": 3041
+      },
+      {
+        "type": "BuySell",
+        "milliseconds": 3118
+      },
+      {
+        "type": "Repair",
+        "milliseconds": 3063
+      },
+      {
+        "type": "Refine",
+        "milliseconds": 2940
+      },
+      {
+        "type": "RefineRetrieve",
+        "milliseconds": 2981
+      },
+      {
+        "type": "CompanionManage",
+        "milliseconds": 3044
+      },
+      {
+        "type": "WeddingRing",
+        "milliseconds": 2994
+      },
+      {
+        "type": "RefinementStone",
+        "milliseconds": 2955
+      },
+      {
+        "type": "MasterRefine",
+        "milliseconds": 3011
+      },
+      {
+        "type": "WeaponReset",
+        "milliseconds": 2903
+      },
+      {
+        "type": "ItemFragment",
+        "milliseconds": 3044
+      },
+      {
+        "type": "AccessoryRefineUpgrade",
+        "milliseconds": 3001
+      },
+      {
+        "type": "AccessoryRefineLevel",
+        "milliseconds": 3156
+      },
+      {
+        "type": "AccessoryReset",
+        "milliseconds": 3090
+      },
+      {
+        "type": "WeaponCraft",
+        "milliseconds": 2919
+      }
+    ],
+    "optionLayoutMs": 3038,
+    "cachedViewportMs": 0,
+    "groupLayoutMs": 0
+  },
+  {
+    "phase": "after",
+    "scene": "official",
+    "responses": [
+      {
+        "type": "None",
+        "milliseconds": 52
+      },
+      {
+        "type": "BuySell",
+        "milliseconds": 2
+      },
+      {
+        "type": "Repair",
+        "milliseconds": 8
+      },
+      {
+        "type": "Refine",
+        "milliseconds": 2
+      },
+      {
+        "type": "RefineRetrieve",
+        "milliseconds": 2
+      },
+      {
+        "type": "CompanionManage",
+        "milliseconds": 2
+      },
+      {
+        "type": "WeddingRing",
+        "milliseconds": 2
+      },
+      {
+        "type": "RefinementStone",
+        "milliseconds": 1
+      },
+      {
+        "type": "MasterRefine",
+        "milliseconds": 2
+      },
+      {
+        "type": "WeaponReset",
+        "milliseconds": 2
+      },
+      {
+        "type": "ItemFragment",
+        "milliseconds": 2
+      },
+      {
+        "type": "AccessoryRefineUpgrade",
+        "milliseconds": 2
+      },
+      {
+        "type": "AccessoryRefineLevel",
+        "milliseconds": 2
+      },
+      {
+        "type": "AccessoryReset",
+        "milliseconds": 2
+      },
+      {
+        "type": "WeaponCraft",
+        "milliseconds": 1
+      }
+    ],
+    "optionLayoutMs": 1,
+    "cachedViewportMs": 0,
+    "groupLayoutMs": 0
+  },
+  {
+    "phase": "after",
+    "scene": "official-reentry",
+    "responses": [
+      {
+        "type": "None",
+        "milliseconds": 45
+      },
+      {
+        "type": "BuySell",
+        "milliseconds": 3
+      },
+      {
+        "type": "Repair",
+        "milliseconds": 9
+      },
+      {
+        "type": "Refine",
+        "milliseconds": 2
+      },
+      {
+        "type": "RefineRetrieve",
+        "milliseconds": 1
+      },
+      {
+        "type": "CompanionManage",
+        "milliseconds": 1
+      },
+      {
+        "type": "WeddingRing",
+        "milliseconds": 2
+      },
+      {
+        "type": "RefinementStone",
+        "milliseconds": 1
+      },
+      {
+        "type": "MasterRefine",
+        "milliseconds": 2
+      },
+      {
+        "type": "WeaponReset",
+        "milliseconds": 2
+      },
+      {
+        "type": "ItemFragment",
+        "milliseconds": 2
+      },
+      {
+        "type": "AccessoryRefineUpgrade",
+        "milliseconds": 1
+      },
+      {
+        "type": "AccessoryRefineLevel",
+        "milliseconds": 2
+      },
+      {
+        "type": "AccessoryReset",
+        "milliseconds": 2
+      },
+      {
+        "type": "WeaponCraft",
+        "milliseconds": 2
+      }
+    ],
+    "optionLayoutMs": 1,
+    "cachedViewportMs": 0,
+    "groupLayoutMs": 0
+  }
+]

@@ -1,0 +1,6 @@
+tests\game-ui\OfficialUiNpcTests.cs(336,27): error CS0122: “DXControl.Controls”不可访问，因为它具有一定的保护级别
+Exception: E:\workspace\mir3-zircon-server\tests\Run-GameUiNpcTests.ps1:28
+Line |
+  28 |      if ($LASTEXITCODE -ne 0) { throw 'Npc test compilation failed.' }
+     |                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Npc test compilation failed.

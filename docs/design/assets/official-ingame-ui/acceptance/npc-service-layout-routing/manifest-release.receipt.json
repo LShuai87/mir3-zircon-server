@@ -1,0 +1,16 @@
+{
+  "command": [
+    "pwsh",
+    "-NoProfile",
+    "-File",
+    "build/game-ui/New-GameUiReleaseManifest.ps1",
+    "-ClientDirectory",
+    "E:/workspace/Release/Client",
+    "-ResourceRoot",
+    "E:/workspace/mir3-ui-work/warehouse-combined-20261108-v2/staged-resources",
+    "-OutputPath",
+    "E:/workspace/mir3-zircon-server/docs/design/assets/official-ingame-ui/acceptance/npc-service-layout-routing/release-manifest-release.json"
+  ],
+  "exitCode": 0,
+  "log": "E:/workspace/mir3-zircon-server/docs/design/assets/official-ingame-ui/acceptance/npc-service-layout-routing/manifest-release.log"
+}

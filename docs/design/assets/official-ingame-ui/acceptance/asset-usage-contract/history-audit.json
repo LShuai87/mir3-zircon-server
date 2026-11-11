@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "checkedAtLocalDate": "2026-11-08",
+  "reportsVerified": 51,
+  "supplementalReportsVerified": 50,
+  "commandRecordsVerified": 428,
+  "evidenceHashesVerified": 579,
+  "currentSourceHashesVerified": 188,
+  "mismatches": [],
+  "sourcePlanUnchanged": true,
+  "scope": "Audit snapshot before attaching this audit receipt to report50; no self-hash recursion."
+}

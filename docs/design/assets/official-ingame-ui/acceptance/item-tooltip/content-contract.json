@@ -1,0 +1,7 @@
+{
+  "originalBuilderBodyUnchanged": true,
+  "sha256": "89492d0d9b2391e56e268b2bc796b4fe362e2387529a96abb41542b2746db29a",
+  "qualityAndEligibilitySourceUnchanged": true,
+  "unsupportedIdentificationState": "No identification flag exists in current UserItemFlags; no synthetic field or state was added.",
+  "unboundedOverflow": "If no readable column layout fits the viewport, retain all rows without shrinking or eliding; UI-19 remains unaccepted."
+}

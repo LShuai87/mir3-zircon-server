@@ -1,0 +1,242 @@
+{
+  "schemaVersion": 1,
+  "kind": "official-ui-scene-startup-and-runtime-fault-containment",
+  "checkedAtLocalDate": "2026-11-08",
+  "referenceResolution": [
+    1024,
+    768
+  ],
+  "releaseAccepted": false,
+  "sourceChanges": [
+    {
+      "path": "Client/Scenes/GameScene.cs",
+      "beforeSha256": "957f9fafab11d8a7c5c9b9e057a7d3702a6853f356e4c9dde39bffa369e76ed7",
+      "afterSha256": "ad6d502552ea7e4c9e77323da4ee7f2841efd5253fd670e40399152562f32edc"
+    },
+    {
+      "path": "build/game-ui/character-bindings.json",
+      "beforeSha256": "0a3be8331189612980cf03659d171e662c3b6f042aa932a2f3e4d49d7a2a3a37",
+      "afterSha256": "2e3bc26da7b77e02e15484ccd7e924cb171d982950ef6426cf374bd3a5b3e36c"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiWindowSetTests.cs",
+      "beforeSha256": "aad4c6424426f4eb2da6292667c14061c62911f8d5c5117af7061e969754fe77",
+      "afterSha256": "d0cca444648931f75e2855d2b6131817d02b9bace723b1af797e4cb14f4613fd"
+    },
+    {
+      "path": "tests/Run-GameUiWindowSetTests.ps1",
+      "beforeSha256": "d6c834438a8649b06624e7e3cc916890e898d74bb246ed44f95c58385952ee3d",
+      "afterSha256": "f60132e18012376bae6228bcabfafb89a5e1032e57f50c8c0d85fa603089a8fa"
+    },
+    {
+      "path": "Client/Program.cs",
+      "beforeSha256": "9f8510f5370e5ccc466e5ffff0ef036bcd484abd9ca8485b81c693617914e522",
+      "afterSha256": "a62866c951f6dfc6967377d1146941a79a07003e116c0d67df7d75640db73312"
+    },
+    {
+      "path": "Client/Envir/GameUiStartupSession.cs",
+      "beforeSha256": "a6c9558d8f88c076686604405000e4ccc73c49c42d4144a1e95b1aba50c80f5f",
+      "afterSha256": "54de8a04f3e195402173ed97726d1e52e102b1afb5017d6c6891d402741765ab"
+    }
+  ],
+  "sourceHashes": [
+    {
+      "path": "Client/Scenes/GameScene.cs",
+      "sha256": "ad6d502552ea7e4c9e77323da4ee7f2841efd5253fd670e40399152562f32edc"
+    },
+    {
+      "path": "build/game-ui/character-bindings.json",
+      "sha256": "2e3bc26da7b77e02e15484ccd7e924cb171d982950ef6426cf374bd3a5b3e36c"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiWindowSetTests.cs",
+      "sha256": "d0cca444648931f75e2855d2b6131817d02b9bace723b1af797e4cb14f4613fd"
+    },
+    {
+      "path": "tests/Run-GameUiWindowSetTests.ps1",
+      "sha256": "f60132e18012376bae6228bcabfafb89a5e1032e57f50c8c0d85fa603089a8fa"
+    },
+    {
+      "path": "Client/Program.cs",
+      "sha256": "a62866c951f6dfc6967377d1146941a79a07003e116c0d67df7d75640db73312"
+    },
+    {
+      "path": "Client/Envir/GameUiStartupSession.cs",
+      "sha256": "54de8a04f3e195402173ed97726d1e52e102b1afb5017d6c6891d402741765ab"
+    },
+    {
+      "path": "Client/Envir/CEnvir.cs",
+      "sha256": "0ee69c9035ae21a9486cfc4bca99ec4435ca31c39cc94df3995ebb9527ce4919"
+    },
+    {
+      "path": "Client/TargetForm.cs",
+      "sha256": "d4eca225a29221b9ce2ac2881f1c621243d196ee4ea7c9692bcf81e839a5f393"
+    },
+    {
+      "path": "Client/Controls/DXTextBox.cs",
+      "sha256": "304d792c07e0012c74ef8591424f136ef3d9044962f729d5d2a8d9e0a7d6fbfd"
+    },
+    {
+      "path": "tests/game-ui/OfficialUiSceneStartupTests.cs",
+      "sha256": "158261f5662e8e86dad944ed4a2d71a1570431171ce656622328ba1492c37e36"
+    },
+    {
+      "path": "Client/Controls/DXControl.cs",
+      "sha256": "1eb06f8d057dc6143948bfc64ea22c31e332f58790832ad57563e0e687570e4d"
+    }
+  ],
+  "newlyRegisteredSourcesPriorState": [
+    {
+      "path": "Client/Envir/CEnvir.cs",
+      "revision": "fc581d5cf96a81b49c557a15675a7386efac8825",
+      "sha256": "5fea5bc2314aef5b70fcc08d3a3ce1ec176c91198a7dc342ac136db840d368f1",
+      "meaning": "Git HEAD source; not a registered pre-edit snapshot for this turn."
+    },
+    {
+      "path": "Client/TargetForm.cs",
+      "revision": "fc581d5cf96a81b49c557a15675a7386efac8825",
+      "sha256": "50d27957e69f32210758c698529ea6516df1b27ca29867a20d1df31694b69f2d",
+      "meaning": "Git HEAD source; not a registered pre-edit snapshot for this turn."
+    },
+    {
+      "path": "Client/Controls/DXTextBox.cs",
+      "revision": "fc581d5cf96a81b49c557a15675a7386efac8825",
+      "sha256": "3b42635deb0d150072db185c8471c96c3496547997e7028e8263f6f0cafc7acb",
+      "meaning": "Git HEAD source; not a registered pre-edit snapshot for this turn."
+    },
+    {
+      "path": "Client/Controls/DXControl.cs",
+      "revision": "fc581d5cf96a81b49c557a15675a7386efac8825",
+      "sha256": "6a7fb5cb29ce0000bdad2e97c270f7ea683c72a95dd23574832083a1bbefc8e2",
+      "meaning": "Git HEAD source; not a registered pre-edit snapshot for this turn."
+    }
+  ],
+  "registeredSourcesBefore": {
+    "path": "docs/design/assets/official-ingame-ui/acceptance/scene-startup/registered-sources-before.json",
+    "sha256": "5013186fe7474b4d53ef3143b201a9cc0c4759ab9db77ecc818c0cc448fa2f13",
+    "count": 139,
+    "allMatchedRegisteredHashes": true
+  },
+  "commands": [
+    {
+      "command": "MSBuild Client/Client.csproj /t:Build /p:Configuration=Debug /p:Platform=AnyCPU /verbosity:minimal /nologo",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/scene-startup/build-debug.log",
+      "logSha256": "14dcc8b62f6b5cb1ee02603515fbe4981e374ea468eabdbbb0dd49509b0fb81c"
+    },
+    {
+      "command": "MSBuild Client/Client.csproj /t:Build /p:Configuration=Release /p:Platform=AnyCPU /verbosity:minimal /nologo",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/scene-startup/build-release.log",
+      "logSha256": "c9e24428be1e56c8408af17aacfea3413de3953bfe426d10eb768782f5005ebc"
+    },
+    {
+      "command": "tests/Run-GameUiWindowSetTests.ps1 -PackagePath E:/workspace/mir3-ui-work/hud-progress-zl-20261108-v1/OfficialV1.Zl",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/scene-startup/window-set-tests.log",
+      "logSha256": "158fcc8442b874fd0ebce935b245273a586c65a303ca7118ce4a687aa5653a1c"
+    },
+    {
+      "command": "tests/Run-GameUiStartupTests.ps1 -PackagePath E:/workspace/mir3-ui-work/hud-progress-zl-20261108-v1/OfficialV1.Zl",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/scene-startup/startup-tests.log",
+      "logSha256": "f1d0b5e5e849bca4abf90111475ee0ef0041fa954225f7b191f6c2862cb47197"
+    },
+    {
+      "command": "tests/Run-GameUiPackagePreflightTests.ps1",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/scene-startup/package-tests.log",
+      "logSha256": "9ff6563b70a6999cbfdfdc7a39dd5ce86ce024413bbfe40650a8b969081930ea"
+    },
+    {
+      "command": "python build/game-ui/Compile-UiCatalog.py --manifest build/game-ui/asset-manifest.json --prepared E:/workspace/mir3-ui-work/hud-progress-zl-20261108-v1/prepared-manifest.json --package E:/workspace/mir3-ui-work/hud-progress-zl-20261108-v1/OfficialV1.Zl --recipe build/game-ui/composition-recipe.json --selection build/game-ui/reference-selection.json --source-libraries build/game-ui/selection-source-libraries.json --output Client/Envir/GameUiOfficialV1Catalog.g.cs --check",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/scene-startup/catalog-check.log",
+      "logSha256": "134c535b198348073a6785ce8b6fd9f8a13e39799bfd784161d3dd02bcb6dee1"
+    },
+    {
+      "command": "python build/game-ui/Assemble-CharacterBindings.py --check",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/scene-startup/character-bindings-check.log",
+      "logSha256": "5932bc5269e5c6e34910ecd3f36fca9797c3ba463775aafeaf2ec6cd4131e437"
+    },
+    {
+      "command": "git -c core.whitespace=cr-at-eol diff --check",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/scene-startup/diff-check.log",
+      "logSha256": "79d6e102d3342502fc80ca42def8ff97f6642ce33398d5219dc2f3e921c23f6f"
+    },
+    {
+      "command": "python build/game-ui/Validate-UiTasks.py",
+      "result": "pass",
+      "exitCode": 0,
+      "log": "docs/design/assets/official-ingame-ui/acceptance/scene-startup/task-validation.log",
+      "logSha256": "bd97b8da7f45e591c2200fdbc89f96f1d2e842c6e2c4a7637b8eb6b75c58d56a"
+    }
+  ],
+  "verification": {
+    "windowSetChecks": 9261,
+    "startupChecks": 348,
+    "packagePreflightChecks": 418,
+    "packageGpuPixelComparisons": 288,
+    "catalogFrames": 91,
+    "catalogButtonGroups": 19,
+    "developmentDefault": "Legacy",
+    "compiledRuntimeReady": false,
+    "sceneStartupCallerWired": true,
+    "productionOfficialActivation": false,
+    "allFiveG0Gates": "open",
+    "taskStatusesUnchanged": true,
+    "registeredSourceCount": 144,
+    "supplementalReportCount": 29
+  },
+  "applicationWiring": {
+    "startup": "Program publishes the frozen session during message pump; GameScene completes scoped installation at constructor tail before CConnection assigns User/game data.",
+    "configurationDirectory": "Captured at startup from ConfigPath on Config, resolved against startup working directory; shared layout store reused across sequential scenes. Package remains relative to Application.StartupPath.",
+    "ownership": "Session registers the borrowing scene before controls mutate. Package disposal rejects a live borrower. Scene detaches all official controls before unregistering; failed rollback keeps owner and package for retry during disposal.",
+    "cleanInstallFailure": "After complete candidate detach, restore native belt/default locations and native settings for the four adapted windows; choose Legacy for the remainder of this process, including later scene entry.",
+    "incompleteRollback": "Retain ownership and package, clear held movement/modifiers and enter restart-required state; never release textures still referenced by controls.",
+    "runtimeFailure": "Attached-scene mouse/process/render/native textbox failures stop new UI operations, keep network Process running and show one native restart/exit panel. Existing send queue is neither removed nor replayed.",
+    "deviceErrors": "DeviceLost/DeviceNotReset retain native recovery path; other D3D rendering errors in an attached official scene require restart.",
+    "input": "Guard TargetForm dispatch, DXControl.InvokeMouseClick, and native edit keyboard/IME/mouse/paste/cut/clear/undo paths before original handlers; retain draft/selection/HWND.",
+    "shutdown": "Dispose active scene, unload connection, clear global session, release application package, unload D3D, unload sound."
+  },
+  "tests": {
+    "sceneFixture": "Uninitialized GameScene fixture bypasses full constructor; exercises real CompleteStartupUi, existing window-set installation, resize, dispose, native controls and real render loop.",
+    "startupCases": [
+      "Normal install and sequential reentry with second Observer=true; cached application layout store, original cells/links and native draft/selection/HWND retained.",
+      "Duplicate attachment/package release while borrowed rejected; config edit cannot hot-switch.",
+      "One-shot late installation failure restores whole Legacy and prevents retry on later scene entry.",
+      "Persistent rollback failure retains package and rejects scene disposal until injected observer is removed."
+    ],
+    "faultCases": [
+      "Actual RenderGame BeforeDraw exception logs/notifies once, clears held actions/modifiers and prevents subsequent drawing/input.",
+      "Native WndProc probes and key subscriber probes preserve draft, selection and HWND.",
+      "Real CConnection over loopback socket processes decoded PingResponse/Ping; queued pre-fault chat plus heartbeat sent exactly once; new chat suppressed.",
+      "Synthetic DeviceLost, DeviceNotReset and InvalidCall HRESULTs take the expected recovery/restart branches; actual hardware device loss is not tested."
+    ]
+  },
+  "package": {
+    "path": "E:/workspace/mir3-ui-work/hud-progress-zl-20261108-v1/OfficialV1.Zl",
+    "sha256": "a67995c4a5d928da09b69b89ff199c9abb73821d6b620ad71bec4a62fd1df635",
+    "bytes": 354374,
+    "frames": 91
+  },
+  "limitations": [
+    "Full GameScene constructor, actual login/logout/relogin and observer gameplay have not been exercised.",
+    "No full-scene rendering or final visual acceptance from this isolated fixture; existing 1024x768 references are reused.",
+    "Synthetic HRESULT injection is not actual device loss, resource Reset or device recovery acceptance.",
+    "Native message probes are not real Chinese IME acceptance.",
+    "Real server-driven business packets, drag/drop/purchase flows, excluded-window interaction and performance remain pending.",
+    "NPC cards, secondary popups and display settings are excluded from reskinning.",
+    "Legacy remains default, RuntimeReady=false and all five G0 gates remain open; this report does not complete UI-12 or release acceptance."
+  ]
+}

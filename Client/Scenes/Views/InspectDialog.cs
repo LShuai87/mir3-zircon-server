@@ -193,6 +193,7 @@ namespace Client.Scenes.Views
                 Location = new Point(215, 140),
                 Parent = CharacterTab,
                 FixedBorder = true,
+                Visible = false,
                 Border = true,
                 Slot = (int)EquipmentSlot.Torch,
                 ItemGrid = Equipment,

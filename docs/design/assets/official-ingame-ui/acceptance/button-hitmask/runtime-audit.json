@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "checkedAtLocalDate": "2026-11-08",
+  "releaseAccepted": false,
+  "package": {
+    "path": "E:/workspace/mir3-ui-work/button-hitmask-20261108-v1/resources/Data/GameUI/OfficialV1.Zl",
+    "sha256": "29c580d3ccf3eef9196fa098e0f45ff7239b314085f520eaa81f2fa6562eb756",
+    "frameCount": 92,
+    "bytes": 457400,
+    "unchangedFrom": "docs/design/assets/official-ingame-ui/acceptance/command-wheel/runtime-audit.json"
+  },
+  "builds": [
+    {
+      "configuration": "Debug",
+      "clientPath": "E:/workspace/Debug/Client/Zircon.exe",
+      "clientSha256": "2f951c6fec2c197ab8cb786540ac4650ac5c85c064e9759487c2b0df5cec0370",
+      "releaseManifest": "release-debug.json",
+      "dependencyCount": 11,
+      "buildId": "gameui-3276d09c836e87e18bbbe3f8c3639577c0ab2897361c6649e9b597e8b8b0ee14"
+    },
+    {
+      "configuration": "Release",
+      "clientPath": "E:/workspace/Release/Client/Zircon.exe",
+      "clientSha256": "532df5559e8320545c0c3856d36a0fc4dabbba5e69ec4e9114b37e07f5bbc125",
+      "releaseManifest": "release-release.json",
+      "dependencyCount": 11,
+      "buildId": "gameui-b7083f4c40b8507fc6a6d853ee4b01588bd18532f601d20280bc23bf8627fa90"
+    }
+  ],
+  "runtimeReady": false,
+  "legacyDefault": true,
+  "limitations": [
+    "Matching inspection manifests only; no production install performed.",
+    "GPU/preflight, full-scene and input routing tests are offline; real login, server, live IME and final visual acceptance remain pending."
+  ]
+}
